@@ -21,7 +21,7 @@ The already-created private configuration is owner/SYSTEM protected and contains
 
 ## Enrollment and immutable tests
 
-Before native assignment, the owner must configure policy version1, enabled:true, scope:approved-mgr-snapshot, hostId, runtimeSha256, launcherSha256, qualificationDigest, allowedSourceDigests, allowedCandidateDigests and allowedTestManifestDigests. The three allowlists contain1–32unique exactSHA256values. Actual qualification must match the exact runtime and aggregate launcher; a label alone grants nothing.
+Before native assignment, the owner must configure policy version1, enabled:true, scope:approved-mgr-snapshot, hostId, runtimeSha256, launcherSha256, qualificationDigest, allowedSourceDigests, allowedCandidateDigests and allowedTestManifestDigests. The three allowlists contain1â€“32unique exactSHA256values. Actual qualification must match the exact runtime and aggregate launcher; a label alone grants nothing.
 
 The fixed native command is:
 
@@ -49,4 +49,22 @@ A recovery exercise restored a genuine already-accepted receipt to pending, then
 
 Central workspace wave3 contains native-worker/qualification/qualification-receipt.json (23actual checks), omni-native-live-flow-state.json (22actual workflow checks and raw receipts), omni-native-actual-http-execute.log, omni-native-actual-http-restart-readback.log, omni-native-once-worker.log, omni-native-once-receipt-recovery.log and omni-native-once-job.json. live-candidate/model-result.json preserves the real CLI response identity/usage; independent-review.json binds the allowed patch and unchanged oracle. Source, command and receipt hashes are recorded. Private configuration and tokens stay outside exports.
 
-Tevin's engineering MCP tool is not added by this lane. The proven path is an owner-authorized local adapter and native worker. Existing API catalog and ONE owner approval/runtime remain the authority; adding a general engineering tool requires its own scoped integration proof.
+Wave3 established the operator path. Wave4 adds the bounded local engineering verification adapter described below. ONE owner approval and the API gateway remain the authority; no new model dispatcher or Git write path is introduced.
+
+## Bounded engineering verification service (wave4)
+
+Launch the existing local adapter with an explicit private configuration containing a dedicated engineeringToken, fixed actorId/tenantId, the qualified workerPolicy, nativePolicyPath, nativeReceiptRoot, nativeWorkerRoot and a fresh named laboratory SQLite database. The same owner and engineering principal must be used by ONE/API. Keep every token private.
+
+```text
+node scripts/local-worker-api.mjs <private-config-path>
+```
+
+The engineering credential permits only metadata binding, verification admission, status, cancellation and accepted report readback. It cannot import source, submit model output, apply patches, sign in, publish, create PRs or access raw owner routes. Authorization requires Bearer plus fixed x-tenant-id and x-actor-id. Duplicate security headers and cross-origin requests are rejected. Startup rejects requests until recovery finishes.
+
+GET /v1/engineering/workspaces/:workspaceId/jobs/:jobId/binding returns only the actual job/project hashes and qualified policy identity. POST /v1/engineering/verifications accepts exactly requestId, workspaceId, jobId, sourceDigest, candidateDigest and testManifestDigest. GET /v1/engineering/verifications/:requestId returns persisted status. POST the exact same binding to /:requestId/cancel. GET /:requestId/report returns canonical JSON evidence only after a genuine accepted native verdict, including failed tests. These endpoints are asynchronous: queued/running are not completion.
+
+A request binds fixed principal, source, candidate, immutable test command and qualified policy. Exact retries reuse the persisted result; changed retries fail. The service claims the exact admitted job rather than the first queue entry, checks current workspace data before the claim and compares returned assignment policy before launch. It uses the existing native poller.lock for the entire execution/cleanup period. A held or stale lock is never cleared automatically.
+
+Persistence uses existing records and jobs. A claim surviving a crash without a saved verdict becomes unknown and cannot dispatch again automatically, including after assignment expiry. Queued cancellation cancels the underlying job. Running cancellation retains native ownership until cleanup returns. If only cleanup is established, the result stays unknown with separate cancellation evidence; it does not invent a failed worker test report. Unknown reservations block owner mutation and general worker claims.
+
+Accepted reports remain historical evidence if current source or policy changes. currentBindingVerified must be true before a caller presents the report as a current workspace result. No snapshot patch is applied by verification. General worker operation, arbitrary repositories, hard disk quotas, Cloudflare deployment and unattended production qualification remain outside this narrow local proof.
