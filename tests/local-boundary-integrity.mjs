@@ -71,3 +71,23 @@ test('concurrent specialist admission cannot overwrite the winning objective bin
   assert.equal(row.status,'completed');assert.deepEqual(row.candidate.candidate.findings,[requests[winner].objective]);assert.equal(row.requestDigest,requestIdentity(requests[winner],settings));assert.equal(calls,1);
  }finally{release();if(app){app.server.closeAllConnections();await new Promise(resolve=>app.server.close(resolve));}await rm(dir,{recursive:true,force:true});}
 });
+
+test('fatal review waits for accepted repair admission before finalizing its queued receipt',async()=>{
+ const dir=await mkdtemp(join(tmpdir(),'omni-append-integrity-'));let app,releaseInference,releaseAppend,appendReached,inferenceReached;
+ const inferenceGate=new Promise(resolve=>releaseInference=resolve),appendGate=new Promise(resolve=>releaseAppend=resolve);
+ const appended=new Promise(resolve=>appendReached=resolve),inference=new Promise(resolve=>inferenceReached=resolve);
+ const settings={model:'fixture',effort:'default',profile:'codex'},base={format:'omnidev-account-request',parentJobId:'parent',sourceDigest:'a'.repeat(64),objective:'Review',files:[]};let calls=0;
+ try{
+  await writeFile(join(dir,'account.json'),JSON.stringify({subject:'fixture-owner'}));
+  app=await createDashboard({port:0,stateDir:dir,memoryFactory:async path=>{const memory=await jobMemory(path);return {...memory,save:async job=>{if(job.id==='repair'&&job.status==='queued'){appendReached();await appendGate;}return memory.save(job);}};},execute:async args=>{if(args[0]==='models')return JSON.stringify([{id:'fixture',reasoning:['default']}]);calls++;inferenceReached();await inferenceGate;throw Error('OpenAI returned HTTP 429');}});
+  const headers={Origin:app.origin,'X-Omni-Session':app.session,'Content-Type':'application/json'};
+  const post=(path,body)=>fetch(app.origin+path,{method:'POST',headers,body:JSON.stringify(body)});
+  await fetch(app.origin+'/state',{headers});assert.equal((await post('/start-reviews',{settings,requests:[{...base,jobId:'review',kind:'specialist-review'}]})).status,202);await inference;
+  const admission=post('/append-work',{requests:[{...base,jobId:'repair',kind:'repair-generation'}]});await appended;
+  releaseInference();let review;for(let n=0;n<100;n++){review=await(await fetch(app.origin+'/jobs/review',{headers})).json();if(review.status==='failed')break;await new Promise(resolve=>setTimeout(resolve,10));}assert.equal(review.status,'failed');
+  assert.equal((await(await fetch(app.origin+'/status',{headers})).json()).running,true,'batch retains ownership while append persistence is pending');
+  releaseAppend();assert.equal((await admission).status,202);
+  let status;for(let n=0;n<100;n++){status=await(await fetch(app.origin+'/status',{headers})).json();if(!status.running)break;await new Promise(resolve=>setTimeout(resolve,10));}assert.equal(status.running,false);assert.equal(status.activeJobs,0);
+  const repair=await(await fetch(app.origin+'/jobs/repair',{headers})).json();assert.equal(repair.status,'failed');assert.equal(calls,1,'queued repair never sent inference after fatal review');
+ }finally{releaseInference();releaseAppend();if(app){app.server.closeAllConnections();await new Promise(resolve=>app.server.close(resolve));}await rm(dir,{recursive:true,force:true});}
+});
