@@ -42,3 +42,17 @@ test('actual runtime local mutation gateway rejects disconnect or unmount before
  for(const path of ['/start','/start-reviews','/append-work'])await assert.rejects(()=>f.context.local(path,{request:{}}),/Engine disconnected/);assert.equal(f.requests.length,0);
  f.context.engineDisconnected.current=false;f.context.runtimeLife.current.alive=false;await assert.rejects(()=>f.context.local('/start',{request:{}}),/Engine disconnected/);assert.equal(f.requests.length,0);
 });
+
+test('actual automatic review connection cannot undo disconnect, pause or unmount during its await',async()=>{
+ const source=readFileSync(new URL('../components/runtime-workspace.tsx',import.meta.url),'utf8'),start=source.indexOf(' async function coordinateReviews('),end=source.indexOf(' useEffect(()=>{if(busy||localBusy||coordinating.current',start);
+ for(const stop of ['disconnect','pause','unmount']){
+  const gate=deferred(),actions=[],events=[],requests=[];let connecting;
+  const reached=new Promise(resolve=>connecting=resolve),job={id:'parent',payload:{automaticRepair:false},result:{reviews:[],reviewPlan:{budget:1,tasks:[{index:0}],control:{status:'playing'}}}};
+  const context={AbortSignal,coordinating:{current:false},runtimeLife:{current:{alive:true,epoch:0}},engineDisconnected:{current:false},haltRequested:{current:null},reviewHalted:id=>context.engineDisconnected.current||context.haltRequested.current?.id===id,fairReviewTasks:x=>x,reviewConcurrency:1,localConnection:null,localModel:'',localEffort:'default',localProfile:'codex',stage:()=>{},setLocalBusy:()=>{},setLocalJob:()=>{},setCompanionModal:()=>{},setReviewTelemetry:()=>{},setLocalConnection:()=>{},setActiveReviewIndex:()=>{},setError:()=>{},onUpdate:()=>{},setTimeout,companionOrigin:'http://127.0.0.1:8765',CustomEvent:class{constructor(type,{detail}){this.type=type;this.detail=detail;}},window:{dispatchEvent:event=>{events.push(event.type);context.engineDisconnected.current=false;context.runtimeLife.current.epoch++;}},fetch:async url=>{requests.push(url);if(url.endsWith('/connect')){connecting();return gate.promise;}return {ok:true,json:async()=>({index:0,jobId:'review',brain:{kind:'account'}})};},localApi:async path=>{if(path.startsWith('/jobs/'))throw Error('No saved job');if(path==='/state')return {models:[{id:'fixture',reasoning:['default']}],preferences:{model:'fixture'}};actions.push(path);return {};},act:async payload=>{actions.push(payload.action);return {};}};
+  vm.createContext(context);vm.runInContext(transpile(source.slice(start,end))+'\nglobalThis.review=coordinateReviews;',context);
+  const work=context.review(job);await reached;
+  if(stop==='disconnect'){context.engineDisconnected.current=true;context.runtimeLife.current.epoch++;}else if(stop==='pause')context.haltRequested.current={id:'parent',command:'pause'};else{context.runtimeLife.current.alive=false;context.runtimeLife.current.epoch++;}
+  gate.resolve({ok:true,json:async()=>({session:'late'})});await work;
+  assert.deepEqual(events,[],stop+' cannot emit a connected event');assert.deepEqual(actions,[],stop+' cannot dispatch a new specialist/model action');assert.equal(context.coordinating.current,false);
+ }
+});
