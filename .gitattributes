@@ -1,0 +1,2 @@
+# Preserve exact signed-release public key text on Windows checkouts.
+companion/engine/public-key.pem text eol=lf

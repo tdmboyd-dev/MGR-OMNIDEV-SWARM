@@ -11,7 +11,7 @@ import {jobMemory} from '../companion/job-memory.mjs';
 test('worker refuses Windows source aliases and named/remote daemon contexts',()=>{
  for(const path of ['C:/escape','a:secret','NUL','src/CON.txt','x.','x ','a\0b','a?b','a|b','a<b','.ENV','.GIT/config'])assert.throws(()=>validateFiles([{path,content:'x'}]),/Unsafe/);
  assert.throws(()=>validateFiles([{path:'A.js',content:'a'},{path:'a.js',content:'b'}]),/Unsafe/);
- validateFiles([{path:'src/main.js',content:'safe'}]);
+ validateFiles([{path:'src/main.js',content:'safe'}]);assert.throws(()=>validateFiles([{path:'unicode.txt',content:'😀'.repeat(25001)}]),/Unsafe/);assert.throws(()=>validateFiles(Array.from({length:26},(_,i)=>({path:'file'+i+'.txt',content:'😀'.repeat(25000)}))),/Source exceeds budget/);
  const context=process.env.DOCKER_CONTEXT,host=process.env.DOCKER_HOST;
  try{process.env.DOCKER_CONTEXT='remote-production';assert.throws(()=>dockerEnvironment(),/Named/);delete process.env.DOCKER_CONTEXT;process.env.DOCKER_HOST='tcp://remote:2375';assert.throws(()=>dockerEnvironment(),/local/);process.env.DOCKER_HOST='npipe:////./pipe/docker_engine';assert.equal(dockerEnvironment().DOCKER_CONTEXT,'default');}
  finally{if(context===undefined)delete process.env.DOCKER_CONTEXT;else process.env.DOCKER_CONTEXT=context;if(host===undefined)delete process.env.DOCKER_HOST;else process.env.DOCKER_HOST=host;}
