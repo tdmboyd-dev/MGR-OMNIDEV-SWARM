@@ -49,3 +49,11 @@ Account inference wire requirements verified against official preview limitation
 
 ## Background generation
 Updated engine jobs run independently of the browser request. Keep the engine running; you may close the browser. Reopen the queued OmniDev job and click Start job to recover completed local output without another model call. Switching OmniDev pages keeps status alive. Turning off the computer or closing the engine interrupts unfinished work; it does not retry paid inference automatically. Job output is stored in the owner-local state jobs directory. Full cloud background execution remains separate.
+
+## Source audit continuation (2026-10-28)
+
+Durable generation/review retries now bind the complete canonical request and selected model/reasoning/profile settings, in addition to the account and source digest. Reusing a job ID for changed objectives, source payload or settings returns a conflict. Historical rows without this binding are preserved and readable; use a new job ID for an explicitly requested new run instead of silently replaying their inference. Local job memory serializes reads/writes and retries transient Windows rename locks without deleting the previous receipt. Provider JSON/error intake is bounded before parsing; a final oversized stream delta cannot bypass the text limit.
+
+The missing public verification key was restored from the pinned original signed bundle (SHA-256 `07a07587c27c481f5230c19cd6484d3103ca329fe6d0ced450fb06f235bd5b96`). This is a public key, not signing authority. The checked-in signed release still contains its historical source. These audit fixes qualify the current source runtime only; they do not alter or re-sign the installer update payload. A publisher-controlled signed release and actual Windows installation/upgrade qualification remain required. No installer, startup registration, account sign-in, model call or external repository write was performed for these checks.
+
+Specialist/repair admission is fenced before asynchronous setup, and review finalization finishes before execution ownership is released. Conflicting concurrent admissions cannot overwrite a winning request or clear its active state.

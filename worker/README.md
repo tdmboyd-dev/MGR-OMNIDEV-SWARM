@@ -18,7 +18,7 @@ The runner awaits removal and checks Docker inspect for explicit absence. Inconc
 
 ## Node application verification profile
 
-Select **Node application: typecheck, build and tests** when creating a job. Include package.json, package-lock.json, all relevant application source and tests. The runner validates a meaningful test script and executes declared typecheck, build and test scripts in that order. Existing snapshot-only jobs retain their original profile.
+Select **Node application: typecheck, build and tests** when creating a job. Include package.json, package-lock.json, all relevant application source and tests. The runner requires a declared test script and rejects the known "no test specified" placeholder, then executes declared typecheck, build and test scripts in that order. This is recipe validation; it does not establish that the project tests assert meaningful application behavior. Existing snapshot-only jobs retain their original profile.
 
 Application execution uses the same pinned image policy with 1 GB memory, 128 processes, two CPUs, a 180-second timeout and a 512 MB temporary workspace. Prepare the approved image with a read-only `/opt/omni-npm-cache` containing the exact lockfile dependencies, accessible to UID 65534. No credentials should be included in the image or source bundle. Offline npm ci suppresses install lifecycle scripts; explicit build/test scripts still execute inside the container. Cache misses and missing native build requirements fail visibly. Network-dependent integration services are not provisioned by this profile.
 
@@ -33,3 +33,7 @@ Run `node worker/doctor.mjs` before starting. It checks daemon reachability, ima
 Set `OMNI_WORKER_SLOTS` from 1 to 10. Admission reserves 30% of host CPU and memory and allocates up to two CPUs and 1 GB per slot. A 32-CPU, 16-GB host can admit ten slots under this model. This is a concurrency configuration, not a measured tenfold throughput claim. Use one worker process per host; each job is claimed once by a digest-bound expiring assignment. Additional hosts share the queue and claim different work. The platform still admits at most ten active generation jobs at once; pending reviews can feed the execution pool.
 
 The fleet drains a bounded queue, records per-job outcomes, and stops admitting work if cleanup becomes uncertain. Cache misses, absent manifests, daemon failure and denied capacity never become passing reports. No Docker socket is exposed to application containers. Local Unix/Windows named-pipe daemon configuration is supported; remote untrusted Docker TCP endpoints are rejected.
+
+## Source audit continuation (2026-10-28)
+
+Source imports now reject Windows drive/alternate-stream/device aliases, control characters, trailing dot/space aliases and case-insensitive duplicate paths. Named Docker contexts are unqualified and refused; select the default local daemon. Docker host overrides must use a local Unix socket or local Windows named pipe. Doctor uses the same environment restrictions as execution, preventing a successful check of a different remote context from implying local readiness. Actual container execution remains unqualified on this machine because Docker is unavailable.
