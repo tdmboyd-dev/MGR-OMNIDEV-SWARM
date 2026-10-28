@@ -1,3 +1,4 @@
+import {safePath} from '@/lib/runtime-contract';
 import {fileLedger} from '@/lib/file-ledger';
 import {db,list,record,insert} from "@/db/store";
 import {domains,exampleFiles} from "@/lib/catalog";
@@ -14,7 +15,7 @@ export async function POST(request:Request){
  try{
   const origin=request.headers.get("origin");if(origin&&origin!==new URL(request.url).origin)return Response.json({error:"Cross-origin request refused"},{status:403});
   check(Number(request.headers.get("content-length")||0)<2200000,"Import exceeds the 2 MB limit");
-  const raw=await request.text();check(raw.length<2200000,"Import exceeds the 2 MB limit");const p=JSON.parse(raw);let out:any={};const existing=await list();const ops:any[]=[];
+  const raw=await request.text();check(raw.length<2200000,"Import exceeds the 2 MB limit");const p=JSON.parse(raw);check(p&&typeof p==="object"&&!Array.isArray(p),"Input must be an action object");let out:any={};const existing=await list();const ops:any[]=[];
   check(existing.length<9000,"Workspace record limit reached");
   const audit=(title:string,data:any={},pid="")=>ops.push(insert(record("memory",title,{type:"Activity",...data},pid)));
   if(p.action==="initialize"){
@@ -23,8 +24,9 @@ export async function POST(request:Request){
    let snapshot:any=null; if(p.action==="github"||p.action==="githubAccount"){try{snapshot=await githubSnapshot(text(p.location,500),p.action==="githubAccount");}catch(e:any){throw new InputError(e.message)}}
    const files:SourceFile[]=p.action==="example"?exampleFiles:snapshot?snapshot.files:p.files;const name=p.action==="example"?"Atlas Commerce":snapshot?snapshot.title:text(p.title);
    check(Array.isArray(files)&&files.length>0&&files.length<=300,"Import 1–300 files");
-   check(files.every(f=>typeof f.path==="string"&&f.path.length<300&&typeof f.content==="string"&&f.content.length<100000),"Invalid files; each file must be text under 100 KB");
-   check(new Set(files.map(f=>f.path)).size===files.length,"File paths must be unique");
+   check(files.every(f=>f&&safePath(f.path)&&typeof f.content==="string"&&new TextEncoder().encode(f.content).byteLength<100000),"Invalid files; each file must be text under 100 KB");
+   check(new Set(files.map(f=>f.path.toLowerCase())).size===files.length,"File paths must be unique");
+   check(files.reduce((total,f)=>total+new TextEncoder().encode(f.content).byteLength,0)<=2000000,"Snapshot content exceeds the 2 MB limit");
    const result=analyze(files);const project=record("project",name,{source:p.action==="example"?"Example dataset":snapshot?snapshot.authenticated?"Authorized GitHub snapshot":"Public GitHub snapshot":"Imported snapshot",origin:snapshot?{url:snapshot.url,ref:snapshot.ref,partial:snapshot.partial,coverage:snapshot.coverage}:null,fileLedger:await fileLedger(files.map(f=>({path:f.path,content:redact(f.content)}))),files:files.map(f=>({path:f.path,content:redact(f.content)})),analysis:result,scanCount:1},"","analyzed");ops.push(insert(project));
    for(const f of result.findings)ops.push(insert(record("finding",f.title,f,project.id,"open")));
    audit("Snapshot analyzed: "+name,{content:files.length+" files mapped; "+result.findings.length+" rule-based findings. "+result.scope},project.id);out={projectId:project.id};

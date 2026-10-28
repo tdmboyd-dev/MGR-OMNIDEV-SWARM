@@ -1,14 +1,18 @@
 import {analyze,type SourceFile} from "./analyzer";
 export type Patch={path:string;before:string|null;after:string};
 export type Candidate={summary:string;patches:Patch[];experts:{domain:string;task:string;parent:string|null}[];tests:any[];scope:string};
-export function safePath(path:unknown):path is string{return typeof path==="string"&&path.length>0&&path.length<250&&!path.includes("\\")&&!path.startsWith("/")&&!path.split("/").some(x=>x===".."||x==="."||!x)&&!/(^|\/)(\.git|\.env[^/]*|id_rsa|id_ed25519)(\/|$)/.test(path)}
+export function safePath(path:unknown):path is string {
+ if(typeof path!=="string"||path.length===0||path.length>=250||/[\\:\u0000-\u001f<>"|?*]/.test(path)||path.startsWith("/"))return false;
+ const parts=path.split("/");
+ return !parts.some(part=>!part||part==="."||part===".."||/[. ]$/.test(part)||/^(?:CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])(?:\.|$)/i.test(part)||/^(?:\.git|\.env[^/]*|id_rsa|id_ed25519)$/i.test(part));
+}
 export function candidate(input:any,files:SourceFile[]):Candidate{
  if(!input||typeof input.summary!=="string")throw new Error("Agent response has an invalid candidate contract: the explanation must be text");
  if(input.summary.length>4000)throw new Error("Agent response has an invalid candidate contract: the explanation exceeds 4000 characters");
  if(!Array.isArray(input.patches))throw new Error("Agent response has an invalid candidate contract: the proposed file changes list is missing");
  if(input.patches.length>12)throw new Error("Agent response has an invalid candidate contract: more than 12 file changes require separate proposals");
  const paths=new Set();let size=0;
- for(const patch of input.patches){if(!safePath(patch.path)||paths.has(patch.path)||typeof patch.after!=="string"||patch.after.length>100000)throw new Error("Invalid, duplicate, or unsafe patch path");paths.add(patch.path);const original=files.find(f=>f.path===patch.path)?.content??null;if(patch.before!==original)throw new Error("Patch baseline does not match the snapshot");if(/(?:sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|AKIA[A-Z0-9]{16})/.test(patch.after)||/(?:password|api[_-]?key|secret)\s*[:=]\s*["'][^"']{8,}["']/i.test(patch.after))throw new Error("Candidate contains a potential credential");size+=patch.after.length;}
+ for(const patch of input.patches){if(!safePath(patch.path)||paths.has(patch.path.toLowerCase())||files.some(f=>f.path!==patch.path&&f.path.toLowerCase()===patch.path.toLowerCase())||typeof patch.after!=="string"||patch.after.length>100000)throw new Error("Invalid, duplicate, or unsafe patch path");paths.add(patch.path.toLowerCase());const original=files.find(f=>f.path===patch.path)?.content??null;if(patch.before!==original)throw new Error("Patch baseline does not match the snapshot");if(/(?:sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|AKIA[A-Z0-9]{16})/.test(patch.after)||/(?:password|api[_-]?key|secret)\s*[:=]\s*["'][^"']{8,}["']/i.test(patch.after))throw new Error("Candidate contains a potential credential");size+=patch.after.length;}
  if(size>500000)throw new Error("Candidate exceeds patch budget");
  const experts=Array.isArray(input.experts)?input.experts.slice(0,8).filter((e:any)=>typeof e.domain==="string"&&e.domain.length<=100&&typeof e.task==="string"&&e.task.length<=1000).map((e:any)=>({domain:e.domain,task:e.task,parent:typeof e.parent==="string"?e.parent.slice(0,100):null})):[];
  return {summary:input.summary,patches:input.patches,experts,tests:[],scope:"Candidate only. No repository or production system changed."};

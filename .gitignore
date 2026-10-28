@@ -46,3 +46,8 @@ next-env.d.ts
 /work/
 
 .test-runtime/
+
+# Public engine verification key; private keys remain ignored.
+!/companion/engine/public-key.pem
+
+*.tsbuildinfo
