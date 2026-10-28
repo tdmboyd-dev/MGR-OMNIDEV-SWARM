@@ -27,3 +27,18 @@ test('actual engine status and reconnect cannot undo an explicit disconnect',asy
 test('actual engine unmount fences late reconnect and clears the deferred launcher',async()=>{
  const f=engineFixture();f.engine.launchInstalled();assert.equal(f.timeouts.size,1);const pending=f.engine.reconnect();f.effects[0]();assert.equal(f.timeouts.size,0);f.requests[0].resolve({ok:true,json:async()=>({session:'late'})});await pending;assert.equal(f.requests.length,1);assert.equal(f.events.includes('omnidev-engine-connected'),false);
 });
+
+function runtimeFixture(){const source=readFileSync(new URL('../components/runtime-workspace.tsx',import.meta.url),'utf8'),start=source.indexOf(' async function localApi('),end=source.indexOf(' async function generateInsideOmni(',start),gate=deferred();const events=[],requests=[];let generations=0;
+ const view={models:[{id:'fixture',reasoning:['default']}],preferences:{model:'fixture',effort:'default',profile:'codex'}};
+ const context={localBusy:false,localJob:null,localConnection:null,selectionKey:'fixture',companionOrigin:'http://127.0.0.1:8765',runtimeLife:{current:{alive:true,epoch:0,connecting:false}},engineDisconnected:{current:false},sessionStorage:{setItem:()=>{},removeItem:()=>{}},stage:()=>{},setCompanionModal:()=>{},setLocalCandidate:()=>{},setLocalJob:()=>{},setLocalBusy:()=>{},setLocalError:()=>{},setLocalConnection:()=>{},setLocalModels:()=>{},setLocalModel:()=>{},setLocalEffort:()=>{},setLocalProfile:()=>{},generateInsideOmni:async()=>{generations++;},window:{dispatchEvent:e=>events.push(e.type)},CustomEvent:class{constructor(type,{detail}){this.type=type;this.detail=detail;}},fetch:async(url,options)=>{requests.push({url,options});if(url.endsWith('/connect'))return gate.promise;if(url==='/engine-release.json')return {ok:false};return {ok:true,json:async()=>view};}};
+ vm.createContext(context);vm.runInContext(transpile(source.slice(start,end))+'\nglobalThis.local=localApi;globalThis.connect=connectInsideOmni;',context);return {context,requests,events,gate,get generations(){return generations;}};}
+test('actual runtime late connection cannot reenable a disconnected engine or start model work',async()=>{
+ const f=runtimeFixture(),pending=f.context.connect({id:'job'},true);f.context.engineDisconnected.current=true;f.context.runtimeLife.current.epoch++;f.gate.resolve({ok:true,json:async()=>({session:'fixture-session'})});await pending;
+ assert.equal(f.requests.length,1);assert.equal(f.generations,0);assert.equal(f.events.length,0);assert.equal(f.context.runtimeLife.current.connecting,false);
+ f.context.engineDisconnected.current=false;await f.context.connect({id:'job'},true);assert.equal(f.generations,1);assert.deepEqual(f.events,['omnidev-engine-connected']);assert.equal(f.context.runtimeLife.current.connecting,false);
+});
+test('actual runtime local mutation gateway rejects disconnect or unmount before any new model dispatch',async()=>{
+ const f=runtimeFixture();f.context.engineDisconnected.current=true;
+ for(const path of ['/start','/start-reviews','/append-work'])await assert.rejects(()=>f.context.local(path,{request:{}}),/Engine disconnected/);assert.equal(f.requests.length,0);
+ f.context.engineDisconnected.current=false;f.context.runtimeLife.current.alive=false;await assert.rejects(()=>f.context.local('/start',{request:{}}),/Engine disconnected/);assert.equal(f.requests.length,0);
+});
