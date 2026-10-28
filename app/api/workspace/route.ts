@@ -1,3 +1,4 @@
+import {boundedRequestText} from '@/lib/request-body';
 import {safePath} from '@/lib/runtime-contract';
 import {fileLedger} from '@/lib/file-ledger';
 import {db,list,record,insert} from "@/db/store";
@@ -15,7 +16,7 @@ export async function POST(request:Request){
  try{
   const origin=request.headers.get("origin");if(origin&&origin!==new URL(request.url).origin)return Response.json({error:"Cross-origin request refused"},{status:403});
   check(Number(request.headers.get("content-length")||0)<2200000,"Import exceeds the 2 MB limit");
-  const raw=await request.text();check(raw.length<2200000,"Import exceeds the 2 MB limit");const p=JSON.parse(raw);check(p&&typeof p==="object"&&!Array.isArray(p),"Input must be an action object");let out:any={};const existing=await list();const ops:any[]=[];
+  const raw=await boundedRequestText(request,2200000);check(raw.length<2200000,"Import exceeds the 2 MB limit");const p=JSON.parse(raw);check(p&&typeof p==="object"&&!Array.isArray(p),"Input must be an action object");let out:any={};const existing=await list();const ops:any[]=[];
   check(existing.length<9000,"Workspace record limit reached");
   const audit=(title:string,data:any={},pid="")=>ops.push(insert(record("memory",title,{type:"Activity",...data},pid)));
   if(p.action==="initialize"){

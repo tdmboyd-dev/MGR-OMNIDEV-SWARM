@@ -6,13 +6,13 @@ Storage: db/store.ts uses env.DB and prepared D1 statements. drizzle/0000_orange
 
 Routes: /api/workspace handles import/static analysis/projects; /api/runtime jobs/providers/decisions; /api/worker bearer-scoped execution dispatch/report; /api/intelligence durable intelligence records; /api/agents specialist state; /api/accounts/github cookie-bound OAuth. Production user routes rely on the external Sites gateway; local preview mock identity is not production authentication. Never expose that preview publicly or infer owner authorization from the Origin header.
 
-New app repairs: safePath in lib/runtime-contract.ts is the shared import/candidate path policy. Workspace import validates action/file object shapes, case-insensitive uniqueness,100000-byte per-file exclusive limit and2000000-byte total maximum. Candidate paths preserve existing exact-before validation and reject casing collisions. Job cancel uses WHERE id=? AND status=? and requires an affected row; retry/reject similarly require a successful conditional update; retry also checks attempts<3 in SQL. GitHub snapshot/audit classifiers exclude secret and Git path case aliases. Failure means stale decision, not permission to replay automatically.
+New app repairs: lib/request-body.ts bounds UTF8 stream bytes before decoding across workspace/runtime/agents/intelligence/worker POST handlers. Tests cover stream cancellation, false content lengths, split codepoints and invalid UTF8. Early oversized Content-Length rejection does not consume the body; connection deadlines remain hosting responsibilities. Enqueue stores enqueueRequestDigest over canonical source/settings intent, compares both prior read and concurrent-insert loser, conflicts409 for changed/undigested legacy intent, and preserves exact replays. safePath in lib/runtime-contract.ts is the shared import/candidate path policy. Workspace import validates action/file object shapes, case-insensitive uniqueness,100000-byte per-file exclusive limit and2000000-byte total maximum. Candidate paths preserve existing exact-before validation and reject casing collisions. Job cancel uses WHERE id=? AND status=? and requires an affected row; retry/reject similarly require a successful conditional update; retry also checks attempts<3 in SQL. GitHub snapshot/audit classifiers exclude secret and Git path case aliases. Failure means stale decision, not permission to replay automatically.
 
 Safe reproduction:
 
     corepack pnpm install --frozen-lockfile --ignore-scripts --prefer-offline
     node tests/prepare.mjs
-    node --test tests/snapshot-paths.mjs tests/job-decision-races.mjs
+    node --test tests/snapshot-paths.mjs tests/job-decision-races.mjs tests/request-body.mjs tests/ui-lifecycle-integrity.mjs
     node tests/acceptance.mjs
     node node_modules/typescript/bin/tsc --noEmit
     node scripts/run-framework.mjs build

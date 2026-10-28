@@ -47,3 +47,22 @@ test('GitHub snapshot selection and full-audit classification exclude case alias
  assert.equal(classification('.GIT/config.json',20,'100644'),'generated-or-dependency');
  const blobs=['.ENV.json','src/.ENV.production.json','.GIT/config.json','src/safe.ts'].map(path=>({path,type:'blob',size:20}));assert.deepEqual(selectSnapshotFiles(blobs).map(x=>x.path),['src/safe.ts']);
 });
+const {enqueue}=await import('../.test-runtime/jobs.mjs');
+const runtime=await import('../.test-runtime/runtime-route.mjs');
+test('full enqueue intent is durable, exact concurrent replay shares one job, changed settings/source conflict',async()=>{
+ const row=sqlite.prepare("SELECT * FROM records WHERE kind='project' LIMIT 1").get();const projectId=row.id;
+ const request={projectId,mode:'native',objective:'Bounded fixture repair',idempotencyKey:'full-intent',automaticReview:true,runControl:{mode:'all',minutes:30,callLimit:100}};
+ const results=await Promise.all(Array.from({length:4},()=>enqueue(request)));assert.equal(new Set(results.map(j=>j.id)).size,1);const saved=results[0];assert.match(saved.payload.enqueueRequestDigest,/^[0-9a-f]{64}$/);
+ for(const change of [{brainId:'different'},{specialistId:'testing'},{testProfile:'node-application'},{automaticReview:false},{automaticRepair:true},{reviewBudget:2},{recommendSpecialists:true},{kind:'heal'},{runControl:{callLimit:2,minutes:30,mode:'calls'}}])await assert.rejects(enqueue({...request,...change}),error=>error.statusCode===409);
+ assert.equal((await enqueue({...request,runControl:{callLimit:100,minutes:30,mode:'all'}})).id,saved.id,'JSON key order is not a different intent');
+ const changed=await runtime.POST(new Request('https://omni.example/api/runtime',{method:'POST',headers:{Origin:'https://omni.example','Content-Type':'application/json'},body:JSON.stringify({...request,action:'enqueue',automaticReview:false})}));assert.equal(changed.status,409);
+ const data=JSON.parse(row.data);data.files[0].content+='\nchanged';sqlite.prepare('UPDATE records SET data=? WHERE id=?').run(JSON.stringify(data),projectId);await assert.rejects(enqueue(request),error=>error.statusCode===409);
+ sqlite.prepare('UPDATE records SET data=? WHERE id=?').run(row.data,projectId);const payload=JSON.parse(sqlite.prepare('SELECT payload FROM jobs WHERE id=?').get(saved.id).payload);delete payload.enqueueRequestDigest;sqlite.prepare('UPDATE jobs SET payload=? WHERE id=?').run(JSON.stringify(payload),saved.id);await assert.rejects(enqueue(request),error=>error.statusCode===409);
+ assert.equal(sqlite.prepare('SELECT COUNT(*) n FROM jobs').get().n,1);
+});
+
+test('candidate budgets measure actual UTF8 bytes for each patch and their sum',()=>{
+ assert.throws(()=>candidate({summary:'bytes',patches:[{path:'large.ts',before:null,after:'😀'.repeat(25001)}]},[]),/unsafe patch/);
+ const patches=Array.from({length:6},(_,i)=>({path:`part${i}.ts`,before:null,after:'😀'.repeat(22500)}));assert.throws(()=>candidate({summary:'total bytes',patches},[]),/patch budget/);
+ assert.equal(candidate({summary:'boundary',patches:[{path:'ok.ts',before:null,after:'😀'.repeat(25000)}]},[]).patches.length,1);
+});
