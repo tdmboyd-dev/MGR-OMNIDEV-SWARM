@@ -1,0 +1,13 @@
+import {readFileSync} from 'node:fs';
+import {runInNewContext} from 'node:vm';
+import {transpileModule,ModuleKind} from 'typescript';
+import assert from 'node:assert/strict';
+const source=readFileSync('components/engine-connection.tsx','utf8');
+const fn=source.slice(source.indexOf(' async function reconnect('),source.indexOf('\n return <>'));
+const code=transpileModule(fn,{compilerOptions:{module:ModuleKind.ESNext}}).outputText;
+let status,error,open;const requests=[],events=[];
+const context={sessionStorage:{removeItem(){},setItem(){}},companionOrigin:'http://127.0.0.1:8765',connection:{current:null},setStatus:v=>status=v,setError:v=>error=v,setOpen:v=>open=v,AbortSignal,window:{dispatchEvent:e=>events.push(e)},CustomEvent:class{constructor(type,options){this.type=type;this.detail=options.detail;}},fetch:async(url,options)=>{requests.push({url,options});return Response.json(url.endsWith('/connect')?{session:'temporary-session'}:{models:[],preferences:{}});}};
+runInNewContext(code+';globalThis.reconnect=reconnect;',context);
+await context.reconnect();assert.equal(status,'connected');assert.equal(open,false);assert.equal(requests.length,2);assert.equal(requests[1].options.headers['X-Omni-Session'],'temporary-session');assert.equal(events[0].type,'omnidev-engine-connected');assert.ok(requests.every(r=>!r.url.includes('/start')));
+context.fetch=async()=>{throw new Error('Failed to fetch');};await context.reconnect();assert.equal(status,'offline');assert.equal(context.connection.current,null);assert.equal(open,true);assert.match(error,/Start the installed OmniDev Engine/);assert.equal(events.length,1);
+console.log('PASS header reconnect shares a verified session without inference; offline failure clears connection and opens actionable help');

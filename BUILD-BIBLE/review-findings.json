@@ -1,0 +1,395 @@
+[
+  {
+    "id": "AK-01",
+    "title": "lifecycle table, diagram and learning execution disagree",
+    "parent_task": "AUD-23",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** A / \u201cRequired lifecycle states\u201d; AL / `transitions` and `activity_allowed_in`.\n\nThe prose/table and JSON permit Created\u2192Archived, Learning\u2192Dormant, Active\u2192Learning and Active\u2192Archived, while the diagram omits these edges. More importantly, Learning requires an approved training/evaluation objective, but AL allows execution activities only in Active. An engineer following that contract can prevent a Learning principal from doing the very work needed to qualify.\n\n**Resolution:** durable Learning permits only learning/evaluation activity classes under separate narrow grants. Busy/Reviewing/Collaborating remain display activities; their eligibility must include lifecycle plus task class, not an unconditional Active-only list. Training orchestration may alternatively be performed by an Active evaluator on an inactive candidate principal; select and document that pattern per learning mode. Generate diagram/table/API transitions from a canonical transition-and-guard registry. Every permitted edge needs entry, exit, effects, compensation and quiescence requirements.\n\n**Gate:** enumerate all allowed and forbidden transitions; execute learning qualification without granting ordinary production work; prove concurrent retirement blocks new learning dispatch; test diagram/contract parity."
+  },
+  {
+    "id": "AK-02",
+    "title": "global pattern admission is stronger than the propagation reference guard",
+    "parent_task": "AUD-03",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** K / \u201cWrite, consolidate, promote and correct\u201d; E / \u201cLibraries\u201d; EG / `canPropagate`.\n\nThe documented policy requires source rights, confidentiality review, current object access, recipient purpose, opt-in where applicable and withdrawal lineage. The helper accepts same-tenant transfer solely from `rightsCurrent`, or cross-tenant transfer from two booleans. Same-tenant is not the same as same-project/classification/purpose authorization. A global-consent flag is not an approved publication receipt or permission to send to any recipient.\n\n**Resolution:** treat the helper strictly as an incomplete illustrative fixture. Production propagation requires a signed publication/admission receipt, current source-access evaluation, destination scope/purpose policy, restricted lineage compatibility and withdrawal generation. Authorization must run on the receiving side too. Retain raw-source restrictions even when an artifact is generalized.\n\n**Gate:** deny same-tenant cross-project secrets; deny withdrawn patterns despite stale consent; deny approved-publication reuse for an incompatible purpose; prove denied content never enters receiving model context."
+  },
+  {
+    "id": "AK-03",
+    "title": "credits cannot fund actual exploration independently of money",
+    "parent_task": "AUD-12",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** A / \u201cEconomy semantics\u201d; E / \u201cAgent economy\u201d.\n\nA correctly states nonfinancial credits are not real usage/billing authority. E says credits fund exploration inside fixed budgets. That wording can be implemented as an exchange rate that authorizes spend through reputation.\n\n**Resolution:** credits influence allocation priority for already authorized and reserved budget; they never create, increase or transfer financial entitlement. A policy-controlled budget allocator may consider credit as one advisory input. Exact money reservations and tenant spending caps remain separate authoritative ledgers.\n\n**Gate:** arbitrarily inflate credits and verify no grant, vote slot, model call or spend cap increases; show allocation receipt references a pre-existing money reservation."
+  },
+  {
+    "id": "AK-04",
+    "title": "assertions need one canonical modality taxonomy",
+    "parent_task": "AUD-23",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** K / \u201cProvenance and epistemic states\u201d; E / \u201cProvenance and contradictions\u201d; K / \u201cAnswer contract\u201d.\n\nK uses observed/human_asserted/inferred/predicted; E uses observed/inferred/simulated/forecast; answer labels additionally include recorded_decision/hypothesis. These are related concepts but not interchangeable schema enumerations.\n\n**Resolution:** separate epistemic modality (observation, human assertion, inference, hypothesis, forecast), evidence environment (real, sandbox-real, synthetic-simulation), and admission lifecycle. `recorded_decision` is an answer presentation type sourced from an accepted decision. Map old enumerations through explicit versioned adapters. Synthetic evidence never becomes a real observation through migration.\n\n**Gate:** round-trip all old examples; reject simulated forecasts from factual-current projections; verify exact timestamps and original modality survive export/import.\n\n## Supreme swarm hostile review"
+  },
+  {
+    "id": "AK-05",
+    "title": "cross-cell budget and sponsorship transfers lack a crash-safe protocol",
+    "parent_task": "AUD-12",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** A / \u201cDynamic swarm graph\u201d, \u201cScheduler policy\u201d, \u201cCapacity and partitioning\u201d.\n\nExactly one financial root and conserved budgets are correct requirements. The documents do not define how a delegating cell reserves and transfers budget when the receiving cell accepts but the acknowledgement is lost. Ordinary outbox delivery alone cannot decide whether money may be refunded.\n\n**Resolution:** allocate unique transfer IDs and non-overlapping child reservation ceilings. Sender records prepared reservation, receiver records accepted allocation, sender records committed delegation; duplicates converge to the same receipt. Until reconciliation resolves unknown acceptance, funds remain unavailable to new work. Refund only after receiver proves cancellation/fence or no acceptance. The receiving cell cannot enlarge the root budget. This is an application protocol with ledger reconciliation, not a claim of universal distributed exactly-once delivery.\n\n**Gate:** fault-inject each boundary, duplicate requests, stale epochs and lost acknowledgements; assert total settled plus reserved usage never exceeds authorized root ceiling; assert one charge root per attempt."
+  },
+  {
+    "id": "AK-06",
+    "title": "review independence is necessary but lacks an enforceable dependency model",
+    "parent_task": "AUD-05",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** A / \u201cDebate record and roles\u201d, \u201cBounded debate algorithm\u201d; E / \u201cExperimental contract\u201d.\n\nDifferent identities do not establish independence. Agents sharing prompts, weights, training data, upstream summaries and incentives can produce strongly correlated errors. A role-slot rule prevents vote flooding but does not make four correlated reviewers a security argument.\n\n**Resolution:** record reviewer dependency manifests: author involvement, template lineage, model family/revision, retrieval evidence origin, evaluation ownership and financial incentives. Maintain action-class independence policies with qualified deterministic checks and external evidence where possible. Require at least one materially different verification mechanism for high-risk changes; inability to satisfy the policy yields inconclusive/escalated. Never multiply confidence by reviewer count without a measured correlation model.\n\n**Gate:** cloned reviewers cannot fill independent slots; test a shared misleading source; require a compiler/test/control check to refute a unanimous model error; display unqualified independence honestly."
+  },
+  {
+    "id": "AK-07",
+    "title": "fairness policy needs starvation and incident-abuse bounds",
+    "parent_task": "QA-03",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** A / \u201cScheduler policy\u201d, \u201cIncident admission and emergency swarms\u201d; E / \u201cOrganization optimization\u201d.\n\nWeighted deficit round robin and aging are starting mechanisms. They do not yet define the service class, maximum queue delay objective, incident admission rate or behavior when an abusive tenant continually emits urgent objectives. Infinite incident preemption can starve ordinary tenants.\n\n**Resolution:** publish per-class quota, admission and borrowing rules; reserve bounded incident capacity; apply authenticated severity corroboration and per-tenant incident ceilings. Scheduling fairness is measured in resource-normalized work, not task count. Preserve nonpreemptable safety reconciliation capacity. Expose rejected/infeasible deadlines rather than disguising them as slow agents.\n\n**Gate:** mixed short/long/GPU/model workloads, hot tenant, fabricated incidents and provider outage; measure starvation, cost fairness, queue delay and protected recovery progress."
+  },
+  {
+    "id": "AK-08",
+    "title": "topology optimization can violate accountability during a live handoff",
+    "parent_task": "RUN-02",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** A / \u201cFractal operations\u201d; E / \u201cOrganization optimization\u201d.\n\nDraining and singular ownership are stated, but task ownership, review ownership, message subscriptions and financial allocation can transition at different times. A late accepted result after a department merge can have no authorized reviewer or two conflicting owners.\n\n**Resolution:** topology migration plan includes source/destination generation, ownership transfer points, frozen tasks, reviewer continuity, allocation references and rollback. Use fenced ownership compare-and-swap per task; reorganization status becomes complete only when orphan/duplicate ownership checks pass. Keep dissent and appeal handlers independent of the reorganized subject.\n\n**Gate:** late result, active review, cancelled transfer and rollback during handoff; every task has exactly one effective owner, no duplicated authority and a valid reviewer path."
+  },
+  {
+    "id": "AK-09",
+    "title": "marketplace skill inheritance must not imply verified competence",
+    "parent_task": "AUD-01",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** A / \u201cMarketplace packs\u201d; E / \u201cSelection\u201d, \u201cAutonomous creation workflow\u201d.\n\nA says agents inherit declared skills automatically after successful installation. A signature and compatible install do not establish competence in the customer's version, workload or jurisdiction.\n\n**Resolution:** distinguish declared, installed, evaluated and production-qualified skills. Import claims and publisher benchmarks with provenance; only local qualification grants eligibility for the task/environment/risk class. Revocation removes dispatch eligibility first; draining and receipt reconciliation remain explicit.\n\n**Gate:** install a signed but incorrect skill; verify it cannot execute privileged tasks until customer-environment qualification; test dependency revocation on pinned in-flight work.\n\n## Knowledge and memory hostile review"
+  },
+  {
+    "id": "AK-10",
+    "title": "supported parser and inference envelope must become a product contract",
+    "parent_task": "AUD-01",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** K / \u201cCollection pipeline\u201d, \u201cRelationship semantics and constraints\u201d, \u201cMigration from current app\u201d.\n\nThe ontology spans virtually everything, but parsers and collectors do not. Without an explicit capability matrix, customers will interpret a beautiful graph as comprehensive mapping even when reflection, generated code, macros, dynamic imports, databases or proprietary tools are unobserved.\n\n**Resolution:** maintain a connector/language/version/analysis-mode matrix stating supported syntax, evidence method, limits, required execution, quality slices and unavailable domains. Every graph/map and health score carries that matrix revision and coverage. Do not advertise complete vulnerability analysis from regex observations. Surface unsound and incomplete static analysis separately.\n\n**Gate:** representative reflection/generated-code/polyglot repositories; unsupported syntax cannot silently disappear or produce confirmed missing-dependency findings; product copy matches actual qualified scope."
+  },
+  {
+    "id": "AK-11",
+    "title": "withdrawal and retraction require a convergence contract",
+    "parent_task": "AUD-03",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** K / \u201cLongevity, forgetting and recovery\u201d, \u201cConsistency and recovery\u201d; E / \u201cLibraries\u201d, \u201cDecades of stewardship\u201d.\n\nThe design correctly follows lineage but does not quantify the period in which dependent summaries, exports, cold indexes or trained variants remain usable. At billions of relationships, complete descendant recomputation cannot be instantaneous.\n\n**Resolution:** maintain a small authoritative denied-source/withdrawal generation checked at evidence assembly and release dispatch. Immediately block use of affected references; background purge tracks stores, caches, exports, training manifests and required third-party requests with receipts. Set a measurable deny-enforcement target and separate physical cleanup objective per storage class. Model retirement/retraining obligations are explicit before any training on revocable data. Never promise deleting a source can erase externally downloaded copies.\n\n**Gate:** inject withdrawal during query, cached answer, index rebuild, forecast generation and backup restore; no subsequent authorized delivery uses revoked content; report residual external obligations."
+  },
+  {
+    "id": "AK-12",
+    "title": "derivation invalidation can become a graph-wide denial-of-service",
+    "parent_task": "AUD-11",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** K / \u201cScaling, security, resilience and production acceptance\u201d / \u201cBillion-relationship scaling\u201d; E / \u201cCollective intelligence and graph evolution\u201d.\n\nA widely used erroneous lesson or public dependency may have enormous descendant fanout. Immediate recomputation competes with incident work, while serving stale derivations can enable unsafe effects.\n\n**Resolution:** priority lanes for authorization invalidation, critical safety retraction and ordinary freshness; compact dependency manifests; lazy validity checking plus bounded recompute. Pin effect prerequisites to fresh admitted evidence. Rate-limit adversarial revise/retract churn without delaying access denial. Isolate blast radius by library release and consumer cohort.\n\n**Gate:** revoke a million-dependent pattern under load; prove protected operations fail closed, unaffected tenants remain available and progress/lag metrics stay truthful."
+  },
+  {
+    "id": "AK-13",
+    "title": "identity merge and split need downstream revision semantics",
+    "parent_task": "GRAPH-01",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** K / \u201cCanonical objects\u201d, \u201cRelationship semantics and constraints\u201d, \u201cKnowledge APIs\u201d.\n\nReversible mappings are specified but not how accepted decisions, citation selectors, external references and task targets behave after a split. Repointing all historical references can falsify which entity an earlier decision targeted.\n\n**Resolution:** identity mappings are temporal assertions; historic references remain bound to original IDs and versions. New current queries resolve through reviewed maps with ambiguity flags. Split impact plan invalidates affected projections and decision/task assumptions; an external-action target is always re-resolved and approved at exact revision.\n\n**Gate:** wrong merge then split; historical answers retain original evidence; tasks targeting an ambiguous merged entity cannot execute; current citations resolve without misleading attribution."
+  },
+  {
+    "id": "AK-14",
+    "title": "authorization-sensitive ranking needs side-channel qualification",
+    "parent_task": "SEC-02",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** K / \u201cAuthorization, confidentiality and abuse\u201d, \u201cAnswer contract\u201d.\n\nThe design names count/timing leakage but does not define the attacker model or tolerable behavioral differences. Ranking changes can disclose denied sources even if content and names are filtered.\n\n**Resolution:** isolate private indexes/partitions by policy class where appropriate; derive candidate filters before search; avoid denominator/degree statistics influenced by denied entities. Publish a threat model for content, existence, timing and membership leakage. Use controlled presence/absence differential testing and bounded response shaping where appropriate; do not claim perfect timing noninterference on shared cloud hardware.\n\n**Gate:** paired datasets differing only in denied objects; compare ranks, errors, counts, cursor behavior and timing distributions across tenants and revoked grants."
+  },
+  {
+    "id": "AK-15",
+    "title": "answer-quality targets need risk-specific confidence and abstention policy",
+    "parent_task": "QA-03",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** K / \u201cObservability and evaluation\u201d, \u201cAnswer contract\u201d; A / \u201cEconomy semantics\u201d.\n\n98% citation support is not 98% answer correctness or safe remediation. Precision targets can be met by abstaining on every difficult question, while a zero observed leak in a finite corpus does not prove zero possible leaks.\n\n**Resolution:** release reports include support correctness, completeness, contradiction detection, causal validity, useful coverage and abstention by domain/risk. Publish sample counts and uncertainty. High-impact recommendations require stronger executable evidence than informational answers. Treat no observed forbidden disclosure as the release-corpus result, not universal security proof.\n\n**Gate:** answerable/unanswerable balanced corpus, rare severe risks, conflicting sources, citations that support only part of a claim and intentionally wrong causal links; measure useful coverage and harm jointly."
+  },
+  {
+    "id": "AK-16",
+    "title": "decision memory needs authority expiration and reversal effects",
+    "parent_task": "DATA-02",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** K / \u201cDecision schema and lifecycle\u201d; A / \u201cBounded debate algorithm\u201d.\n\nAn accepted historic decision remains searchable, but must not authorize a later action after source, target, regulation, budget or accountable signer changes.\n\n**Resolution:** separate historic accepted-decision record from current effective policy/action authorization. Decision applicability has version, expiry/review date and dependency conditions. Reversal creates a new decision plus implementation obligations; do not silently erase the old rationale or assume reversal compensates deployed effects.\n\n**Gate:** expired accepted decision, withdrawn approver authority, target revision change and superseded architecture; historical display remains accurate while new dispatch requires current authorization.\n\n## Research and evolution hostile review"
+  },
+  {
+    "id": "AK-17",
+    "title": "release fixture booleans are not verifiable attestations",
+    "parent_task": "AUD-02",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** EG / `evaluatePromotion`; E / \u201cExperimental contract\u201d, \u201cAutonomy boundary\u201d.\n\nThe helper accepts caller-supplied booleans for independent evaluation, policy, rights and hard constraints. It does not verify signatures, expiry, evaluated candidate hash, cohort, metric thresholds, evaluator role or baseline still being deployed. Missing arrays can throw rather than deny. This is fine as a fixture but dangerous if promoted into production.\n\n**Resolution:** production controller validates typed signed evaluation and policy receipts; exact candidate/baseline/evaluator/dataset hashes; freshness; scope; minimum cohort; prespecified improvement/noninferiority; authority epoch; compatibility and rollback readiness. All malformed inputs fail closed with typed error. Distinguish fixture checks from integration/security qualification in reports.\n\n**Gate:** forged true flags, valid signature for different candidate, stale baseline, expired rights, absent arrays, NaN/overflow amounts and evaluator-role mismatch all deny without dispatch."
+  },
+  {
+    "id": "AK-18",
+    "title": "continual search needs a portfolio-level false-discovery budget",
+    "parent_task": "AUD-05",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** E / \u201cExperimental contract\u201d, \u201cPrompt system\u201d, \u201cSelection\u201d.\n\nMultiplicity control is mentioned, but millions of agents optimizing thousands of variants can repeatedly reuse test sets and promote noise. A passing individual test is insufficient when the selection process itself adaptively inspects outcomes.\n\n**Resolution:** evaluation registry tracks candidate search family, data exposure and test-set reuse; hold independent sealed final-confirmation cohorts. Apply prespecified sequential/multiple-comparison methods suited to the metric and allocation unit. Require durable improvements on realistic matched cohorts and a stable reference, not only a recently weakened baseline. Maintain diversity and rare-slice regression gates.\n\n**Gate:** null-effect candidate swarm cannot produce uncontrolled promotions; repeated holdout access is denied; benchmark overfit and regression on rare frameworks are detected."
+  },
+  {
+    "id": "AK-19",
+    "title": "self-created expertise can launder an unverified vendor claim into a capability",
+    "parent_task": "AUD-01",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** E / \u201cPermanent research division\u201d, \u201cAutonomous creation workflow\u201d; A / \u201cMarketplace packs\u201d.\n\nA paper, README or threat alert may be authentic yet wrong. Dossier generation and a specialist name can produce false institutional authority if the UI implies the subject is solved.\n\n**Resolution:** research maturity states: sourced claim, independently corroborated, reproduced, environment-qualified, adopted and monitored. Research experts remain research-only until competence qualification. Preserve negative replication and source limitations; prioritize user need rather than novelty volume. Do not auto-install tool dependencies from source text.\n\n**Gate:** fabricated method with credible source formatting, real paper with nonreproducing result and unsupported customer version; no production eligibility until appropriate tests pass."
+  },
+  {
+    "id": "AK-20",
+    "title": "evolution rollback is not sufficient for delayed or irreversible harm",
+    "parent_task": "AUD-27",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** E / \u201cSelection\u201d, \u201cExperimental contract\u201d, \u201cOmega governing protocol\u201d; A / \u201cCancellation, preemption and recovery\u201d.\n\nChanging a prompt back cannot undo leaked data, a bad migration or an external message. Short canaries may miss delayed harm, customer churn and recurring failures.\n\n**Resolution:** distinguish code/config rollback, external compensation, data repair and irrecoverable harm. Canary release plan includes attribution window, delayed monitoring, maximum blast radius and adverse-outcome ownership. Security fixes may have justified noninferiority exceptions but cannot weaken current grants. Uncertain effect outcomes remain reconciliation blockers.\n\n**Gate:** delayed regression, leaked-secret event, irreversible migration and provider call that timed out after accepting a change; no false recovered status from restoring an old genome alone."
+  },
+  {
+    "id": "AK-21",
+    "title": "genome compatibility solver needs explicit constraint semantics",
+    "parent_task": "AUD-23",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** E / \u201cGenome record\u201d, \u201cSelection\u201d; A / \u201cMarketplace packs\u201d.\n\nFive module families and hashes support provenance, but no defined compatibility language decides conflicting decision rules, incompatible retrieval schemas, license combinations or tool behavior changes.\n\n**Resolution:** manifest includes typed interface versions, environmental predicates, dependency ranges resolved to hashes, data-right constraints, policy requirements and resource envelope. Solver returns a reproducible compatibility proof or unsatisfied constraints; unresolved behavioral compatibility requires environment tests. Never resolve a security/policy conflict by weighted fitness.\n\n**Gate:** contradictory decision modules, incompatible schema/embedding generation, withdrawn dependency and conflicting source rights fail admission; compatible recombination still undergoes behavior qualification."
+  },
+  {
+    "id": "AK-22",
+    "title": "future exploration needs falsifiability and no hindsight rewriting",
+    "parent_task": "FUT-01",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** E / \u201cScenario engine\u201d; K / \u201cBitemporal and scenario semantics\u201d.\n\nMany scenarios can appear insightful without ever being resolved. Strategic forecasts with vague outcomes cannot earn an accuracy score and can bias roadmaps through narrative confidence.\n\n**Resolution:** each scoreable forecast freezes event definition, horizon, probability/range, source time, resolution source and missing-data rules. Separate scored probabilistic forecasts, structural stress scenarios and speculative inventions. Report coverage and unresolved forecasts. Robust/reversible decisions may be useful without assigning unreliable probabilities to decade-scale AGI or quantum futures.\n\n**Gate:** backtest with source cutoffs; detect future-information leakage; unresolved predictions do not count as successes; original issued forecasts remain immutable."
+  },
+  {
+    "id": "AK-23",
+    "title": "civilization metrics must reward user outcomes rather than organizational expansion",
+    "parent_task": "AUD-20",
+    "source": "BUILD-BIBLE/reviews/agents-knowledge.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Sources:** E / \u201cCivilization model\u201d, \u201cScorecard\u201d, \u201cAgent economy\u201d; A / \u201cAutonomous-company simulation\u201d.\n\nA complex agent economy may consume more coordination than it saves. Simulated emergence or rising agent population can be mistaken for platform value.\n\n**Resolution:** compare dynamic swarms against single-agent, deterministic automation and human-assisted baselines at equivalent budgets. Retain swarm structure only where measured quality, cost, resilience or speed improves. Expose verified deliverables per dollar, user-benefit outcomes, dissent resolution, recurrence and concentration alongside internal scores. Simplification and safe retirement count as improvements.\n\n**Gate:** matched workload experiments; coordination overhead and failure correlation included; raw agent/idea/message count cannot increase the headline score."
+  },
+  {
+    "id": "SI-01",
+    "title": "Tenant authorization is target architecture, not current application enforcement",
+    "parent_task": "SEC-02",
+    "source": "BUILD-BIBLE/reviews/security-infrastructure.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Priority:** P0 before any multi-user release. **Sources:** `db/schema.ts`, `db/store.ts`, `architecture/STATUS.md`, `UNFINISHED-WORK/06-security-and-verification.md` SEC-02; `PRODUCTION-ARCHITECTURE/05-security-auth-and-isolation.md`.\n\nCurrent records/jobs/runtime settings do not carry an organization tenant key or app-level principal permissions. `list()` returns up to 10,000 records without tenant filtering. The current owner-private gateway is a valid stated boundary for a single owner's prototype; it cannot be repurposed into public sharing merely by changing Site audience. This is a missing release prerequisite, not evidence of a cross-tenant leak in an already deployed multi-tenant product.\n\n**Resolved design:** Identity derives tenant membership; route resource IDs remain selectors. Every service operation checks tenant, project, action and source classification. Add tenant-aware immutable IDs, composite foreign keys, project-specific policy and revisioned grants before sharing. RLS provides a secondary SQL boundary; graph/vector caches, object URLs, exports, event subscriptions and support tooling enforce the same policy independently. Migration credentials stay separate from application roles. Dedicated tenant infrastructure still requires resource authorization.\n\n**Proof required:** Two synthetic tenants plus two projects with different grants; cross-tenant known/unknown IDs; pooled DB context; forbidden graph counts/suggestions; filtered vector retrieval; revoked exports and object links; event subscription revocation; shared memory and historical summaries. Assert no content or existence side channel beyond a documented generic denial. SEC-02 stays open until those implemented paths and deployed gateway-to-service assertions are verified."
+  },
+  {
+    "id": "SI-02",
+    "title": "Worker results lack immutable execution/evidence binding",
+    "parent_task": "AUD-02",
+    "source": "BUILD-BIBLE/reviews/security-infrastructure.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Priority:** P0 before treating worker results as a release gate. **Sources:** `lib/jobs.ts` functions `workerJob()` and `report()`; `app/api/worker/route.ts`; `worker/runner.mjs`.\n\nThe worker API uses a shared configured bearer secret. A accepted report supplies job ID, boolean result, output string and literal worker label `docker-isolated`. The report does not carry candidate digest, source digest, command/toolchain/image digest, assigned worker identity, execution attempt, fencing token or single-use report grant. The supplied label is a claim. No independent verification proves the named isolation boundary actually existed. Two workers can overwrite result state while the candidate remains awaiting review; the handler reads then replaces JSON rather than compare-and-setting an execution revision. This is especially important when later designs introduce real behavioral tests.\n\n**Resolved design:** Create a separate durable execution assignment before handing off artifacts. Bind `{tenant, project, job, candidate_digest, source_digest, test_manifest_digest, image_digest, worker_principal, attempt, fence, authority_epoch, grant_epoch, expires_at}` to a narrow capability and execution ID. The report returns measured tool exit codes, manifest/result hashes, execution receipt and upload references. Broker validates identity, assignment freshness, digests, state and schema atomically; duplicate identical receipts are idempotent; conflicting receipts quarantine. A attestation authenticates the execution environment's claim but does not prove tests covered product behavior. Independent verification remains necessary for sensitive releases.\n\n**Proof required:** Tampered digest, stale attempt/fence, wrong worker, replayed capability, copied report, unsupported image, canceled assignment, changed tests, concurrent conflicting completion and unavailable attestation root. No candidate can inherit evidence from a different artifact. Record this as implementation work under SEC-03, RUN-01 and QA-02."
+  },
+  {
+    "id": "SI-03",
+    "title": "Snapshot apply can proceed with no external test result",
+    "parent_task": "AUD-24",
+    "source": "BUILD-BIBLE/reviews/security-infrastructure.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Priority:** P0 for future PR/deployment policy; current snapshot-only behavior must remain explicitly labeled. **Source:** `lib/jobs.ts` `decide()` apply guard; `architecture/STATUS.md`; `PRODUCTION-ARCHITECTURE/10-autonomous-development-and-healing.md`.\n\nThe current apply guard blocks explicit `externalTests.passed === false` but permits null/missing external tests. Passing static checks and bounded model review can therefore authorize a stored snapshot change. That is consistent only with the documented prototype integrity workflow; it does not satisfy the target release contract for behaviorally tested code.\n\n**Resolved design:** Distinguish snapshot experimentation, repository delivery, staging deployment and production release in action policy. A snapshot-only change can use its stated low-risk policy. Repository/deployment actions evaluate mandatory evidence by risk and affected behavior. Required evidence cannot pass through null, unsupported, stale, partial or unrelated results. Review consensus cannot waive a hard test/security veto. Display missing evidence clearly instead of treating absence as success.\n\n**Proof required:** For each action tier test missing/failed/expired/wrong-digest tests, partial scanner coverage, changed base revision and missing required reviewer role. A low-risk snapshot action must never silently become an external release permission."
+  },
+  {
+    "id": "SI-04",
+    "title": "Active-job count is not atomic admission or financial reservation",
+    "parent_task": "AUD-25",
+    "source": "BUILD-BIBLE/reviews/security-infrastructure.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Priority:** P1 in the prototype; P0 before paid concurrent usage. **Source:** `lib/jobs.ts` `enqueue()`; `PRODUCTION-ARCHITECTURE/16-relational-schema-and-data-lifecycle.md`.\n\nThe current ten-job guard reads COUNT before insertion. Concurrent requests can all observe a permitted count and exceed it. The fixed attempts/context/patch budgets remain useful but do not establish a transactional organization-wide compute or currency ceiling.\n\n**Resolved design:** Atomically acquire a quota slot and a maximum-cost reservation under the owning authority before accepting work. Split root budgets into conserved child allocations; never let recursive agent creation open a fresh unlimited balance. Explicitly reserve worst-case uncertain provider charges until reconciled. Fairness applies to tenant/project/provider/work class independently. Cancellation releases undispatched reservations and reconciles dispatched consumption rather than refunding blindly.\n\n**Proof required:** Barrier-synchronized concurrent admissions; crash before/after reservation; duplicate admission key; canceled queued task; exhausted root budget; child allocation conservation; provider timeout with later usage receipt; retry without double reservation. No accepted task may lack reserved authority."
+  },
+  {
+    "id": "SI-05",
+    "title": "Docker cleanup and image identity require stronger guarantees",
+    "parent_task": "AUD-26",
+    "source": "BUILD-BIBLE/reviews/security-infrastructure.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Priority:** P1 for a supervised trusted-maintenance runner; P0 before hostile multi-tenant execution. **Sources:** `worker/runner.mjs`, `worker/README.md`; production ADR-009 and security chapter.\n\nThe runner constrains commands, filesystem, network, user and resources; these are useful controls. It uses a mutable image tag with `--pull=never`; absence of pulling does not bind a particular preinstalled image digest. Output/time limits invoke `docker rm -f` as an unawaited child process. The source directory is removed in finally, but successful container destruction is not awaited or independently read back. No authoring-environment Docker run established actual isolation or cleanup. Rootless/daemon configuration, host patching and mount semantics remain unspecified operational inputs.\n\n**Resolved design:** Pin verified image digest and toolchain manifest. Await supervised destruction, read back container/VM absence, preserve sanitized cleanup receipt, and quarantine a host with uncertain cleanup. Lease-scoped jobs cannot continue consuming resources after cancellation or report completion. Production hostile repository code moves to an independently reviewed microVM-equivalent boundary in separate account/network/node pools; ordinary hardened containers remain a declared trusted lower-risk profile. Never mount cloud/write credentials into job execution. Record host and runtime versions and define patch rollout/revocation.\n\n**Proof required:** Timeout/output overflow, daemon crash, process spawn failure, signal interruption, delayed cleanup, escaped child process/resource pressure, stale worker, mutable-tag substitution and artifact poisoning. Host reuse is denied while cleanup is inconclusive."
+  },
+  {
+    "id": "SI-06",
+    "title": "Placement consensus must fit residency and failure domains",
+    "parent_task": "AUD-13",
+    "source": "BUILD-BIBLE/reviews/security-infrastructure.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Priority:** P0 design clarification before global infrastructure. **Sources:** production chapters 01, 09 and 17.\n\nThe architecture correctly chooses single home writers and a consensus-backed placement authority. It leaves exact quorum geography and global-versus-regional ownership scope to implementation. A global quorum holding private membership/ownership records across prohibited jurisdictions could violate residency; a quorum with an effective single-region majority could prevent disaster promotion; cached routing cannot safely grant ownership.\n\n**Resolved design:** Use a separate ownership authority domain per contracted residency boundary. Each domain owns routing epochs/write leases for its permitted cells and has an explicitly tested quorum placement. Global routing contains only reviewed minimal locator metadata or opaque tenant routing handles; it delegates ownership to the domain. A residency policy permitting only one region cannot claim regional-disaster promotion outside that region. Its contracted mode offers zone resilience and controlled outage/restore until a permitted DR location exists. Dedicated disconnected enterprise deployments run local authority and do not participate as another writable cloud master.\n\nConsensus partitions never create a second authority. Old-home lease expiry plus bounded monotonic time/skew checks and explicit fencing governs promotion. Sixty-second lease, twenty-second renewal and five-second skew bounds are experiment targets from ADR clarification; they must be adjusted from measured infrastructure and target-adapter behavior. A stale region cannot dispatch new privileged operations through a cached epoch. Remote targets that cannot validate epochs require exclusive broker authority and a documented limit on already-dispatched effects; epoch fencing does not unsend a request already accepted by a cloud API.\n\n**Proof required:** Partition every majority/minority shape; old region isolation; clock jump/skew beyond bound; delayed renewals; authority recovery from backup; conflicting migration; adapter unable to check epoch; delayed provider completion after promotion. Show state transitions and zero double-writer privileged dispatch. Report actual loss windows and unresolved remote operations."
+  },
+  {
+    "id": "SI-07",
+    "title": "Reference SQL has service-level obligations that cannot be mistaken for database guarantees",
+    "parent_task": "DATA-01",
+    "source": "BUILD-BIBLE/reviews/security-infrastructure.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Priority:** P0 before schema implementation acceptance. **Source:** `PRODUCTION-ARCHITECTURE/contracts/core-schema.sql` and chapter 16.\n\nThe SQL deliberately does not implement a complete ledger posting procedure or project authorization model. Same-tenant foreign keys alone permit references between different projects/runs inside a tenant unless service checks reject them. Parent-agent/task checks prevent self-links but not longer cycles. Reservation currency equality, settled-versus-maximum policy, valid states and balanced immutable journal groups require further constraints/procedures. A schema-file validator is not a PostgreSQL integration test and does not prove RLS under real service roles.\n\n**Resolved design:** Each owning service supplies complete migrations, restricted roles and cross-entity invariants. Validate same-project/run lineage where required; use transactional cycle/fence checks; constrain state transitions; implement currency-consistent reservations and immutable balanced posting. Cost above the reserved maximum becomes a reconciliation/debt incident governed by billing policy rather than silently violating a ceiling or discarding a real provider bill. Create migration/backfill roles separately and test their limited use. Keep the reference SQL labeled until real migrations run on the supported PostgreSQL version.\n\n**Proof required:** Execute migrations from empty and prior schema; role/BYPASSRLS/owner checks; same-tenant wrong-project links; cycle race; invalid state; mismatched currency; duplicate receipt; immutable correction postings; group imbalance; transaction-local context leakage. The service review must identify exactly which invariants live in SQL and which in code."
+  },
+  {
+    "id": "SI-08",
+    "title": "Recovery is a multi-store and external-effect workflow",
+    "parent_task": "AUD-04",
+    "source": "BUILD-BIBLE/reviews/security-infrastructure.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Priority:** P0 before any sold recovery objective. **Sources:** production chapters 09, 16, 18; DATA-03.\n\nA restored PostgreSQL primary with stale object manifests, missing decryption keys, incorrect Temporal history or resurrected permissions is not successful recovery. Rebuilding graph/vector stores must not resurrect deleted or revoked sources. The present snapshot rollback is not database disaster recovery.\n\n**Resolved design:** A versioned recovery manifest binds control-store checkpoint, object manifest, event archive offsets, compatible workflow code, schema/policy versions, key custody and tombstone ledger. Restore into a quarantined environment with dispatch disabled. Apply deletion/revocation records before making data queryable. Reconcile operation intents and receipts before enabling writes. Validate source availability and projection watermarks; serve only current authorized evidence. Zero-RPO means acknowledged durability under the exact replication topology, not a generic architecture phrase. Measure RTO through customer-visible service restoration, including security/ledger readiness.\n\n**Proof required:** Corrupt/missing backups, inaccessible keys, incompatible workflow replay, deleted tenant resurrection, revoked connection, archive gap, committed-but-unacknowledged provider operation, old grant and missing source object. Restore from an independent clean account is required where the DR contract includes control-account compromise. Exercise both platform-owned and customer-managed-key recovery responsibilities."
+  },
+  {
+    "id": "SI-09",
+    "title": "Capacity and observability thresholds need workload contracts",
+    "parent_task": "QA-03",
+    "source": "BUILD-BIBLE/reviews/security-infrastructure.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Priority:** P1 before beta; P0 before scale/SLA promises. **Sources:** production chapters 01, 04, 09, 15 and 18.\n\nThe reference byte arithmetic is useful but not a performance measurement. One hundred cells do not automatically yield a million reliable interactive connections or twenty billion queryable edges. Multi-store fanout, monorepo skew, symbol churn, ACL filters, embedding generation coexistence and burst incident workloads need explicit capacity envelopes. A delta for a 100K-file repository is underspecified without changed-file/byte/language counts and toolchain mix.\n\n**Resolved design:** Define named benchmark profiles with source bytes/file counts/change rate, entity/edge/vector counts, tenant-size distribution, ACL selectivity, query mix, hot-key share, subscription churn, event size and provider latency. Report p50/p95/p99, backlog age, cost, recall, failure and recovery. Use sustained queue growth and forecast exhaustion as split signals; thresholds are per measured resource, not one global utilization percentage. Reserve control/cancellation/incident capacity. During saturation throttle background ingestion/research before status/policy functions. Projection lag produces unknown/stale, not healthy.\n\nProposed initial operational experiment: warn when measured capacity headroom for loss of one zone is less than 30%; begin placement/split planning when a critical resource sustains more than 70% of its tested safe envelope for thirty minutes or projected growth exhausts headroom within thirty days. These starting values are hypotheses, not contractual guarantees. A stricter workload safety bound overrides them. Multi-window SLO burn alerts must separate user-visible API failures from provider waits and expose both where relevant. Cardinality quotas keep per-task IDs in traces, not global metric labels.\n\n**Proof required:** Hot tenant consumes its quota without starving others; incident storm with provider outage; slow websocket consumers; graph-query fanout; vector rebuild double-storage; drain/migrate while jobs exist; costly repeated embedding refresh. Relate commercial included usage and overage limits to measured unit costs."
+  },
+  {
+    "id": "SI-10",
+    "title": "Enterprise compliance and support are operating systems, not swarm names",
+    "parent_task": "AUD-19",
+    "source": "BUILD-BIBLE/reviews/security-infrastructure.md",
+    "status": "open",
+    "resolution_and_acceptance": "**Priority:** P1 discovery/program work; P0 for any regulated customer contract. **Sources:** production security/operations chapters; LEGAL-01 and SEC-03.\n\nLegal and compliance departments are catalog definitions. Hash chains, encryption and audit retention alone do not establish a compliance program. Applicable law, contracts, regulated data classes, subprocessors, source licenses and qualified review ownership depend on actual customers and deployments.\n\n**Resolved design:** Maintain scoped control inventory, system/data inventory, processing purpose, owner, evidence cadence, exception expiry, contract/subprocessor mapping, incident obligations and independent review records. Customer support uses case-bound time-limited grants, stronger reauthentication, recorded reason and customer-visible access. E2EE support cannot promise server-side plaintext inspection. Account closure/export/deletion, billing disputes, abuse reporting, source rights, vulnerability disclosure and customer-owned disaster recovery need explicit journeys/runbooks. Retention defaults cannot override a legal hold or promise literal perpetual storage. No legal conclusion or certification is generated solely by an agent.\n\n**Proof required:** Simulated support misuse, expired support grant, customer key revocation, retention hold conflict, deletion after export, incident notification exercise, subprocessor change, connector consent withdrawal and marketplace license mismatch. Qualified accountable humans determine applicable requirements and disposition."
+  },
+  {
+    "id": "BP-01",
+    "title": "Overage revenue was counted without incremental overage jobs. Forecast margin and financing confidence were overstated.",
+    "parent_task": "AUD-09",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P0; financial-model.mjs\nResolution: Model v2 calculates overage workload from explicit assumed retail job price and charges supplier model/runtime costs on total workload. Preserve v1 history.\nAcceptance: Current generated results reconcile every month; zero-overage, invalid-price and price/workload sensitivity checks pass. This is an arithmetic correction, not commercial validation.",
+    "reference_correction": "passed; commercial validation remains open"
+  },
+  {
+    "id": "BP-02",
+    "title": "Account-first UI can be mistaken for approved hosted model usage or live GitHub write integration.",
+    "parent_task": "AUTH-02",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P0; chapter 1 MVP/current state\nResolution: Present an access matrix separating OmniDev identity, repository grant, model entitlement and worker execution. Unsupported pathways stay named blockers. No fallback silently increases cost or sends data to a new provider.\nAcceptance: Real owner-consented repository import, revoke, model receipt, worker isolation receipt and exact-target draft PR in the same scenario."
+  },
+  {
+    "id": "BP-03",
+    "title": "Retail-value allowances, expected monthly jobs and provider/BYO-account charges are not one entitlement contract.",
+    "parent_task": "AUD-22",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P0; chapters 4/8\nResolution: Included jobs in forecast are utilization hypotheses. Production allowances use immutable tariff versions and monetary/quantity ledger, distinguish external provider charges, and reserve actual maximum cost before dispatch.\nAcceptance: Trial receipts demonstrate included allowance consumption, overage opt-in, hard cap, refund/credit, downgrade and no double billing."
+  },
+  {
+    "id": "BP-04",
+    "title": "Seed envelopes and six-month budgets can be read as enough capital for the five-year expansion. Even corrected Base exhausts assumed cash before annual profitability.",
+    "parent_task": "AUD-28",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P0; chapters 7/8\nResolution: Fund the next evidence milestone, not all projected hiring. Use monthly liquidity, committed obligations and stop-hiring gates; cash is not automatically replenished by financing.\nAcceptance: Board forecast shows planned raise dates, collection delays, downside staffing response and signed funding/available cash separately from target round sizes."
+  },
+  {
+    "id": "BP-05",
+    "title": "Market hypotheses lack comparative outcome and paid cohort evidence.",
+    "parent_task": "AUD-10",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P1; chapters 5/6\nResolution: Pre-register a task sample with difficulty, eligible exclusions, human baseline, current customer tool stack and blind acceptance. Pair coding benefit with retained-memory benefit.\nAcceptance: At least ten design-partner teams and repeated use by five, with raw counts, cost, failures and buyer willingness to pay; no claim of statistical market leadership from that sample."
+  },
+  {
+    "id": "BP-06",
+    "title": "Seventeen screen families may become navigation scope before the first workflow is usable.",
+    "parent_task": "UX-01",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P1; experience chapters 1/3/8\nResolution: MVP exposes Focus, Projects, Work, Decisions and Connections; advanced centers remain discoverable but labeled planned/limited. Product density expands after successful user journeys.\nAcceptance: Beginner completes connect \u2192 evidence \u2192 candidate \u2192 review without developer coaching; executive can explain unknown score and next action."
+  },
+  {
+    "id": "BP-07",
+    "title": "\u201cConsent pending\u201d does not fully specify delayed admin approvals, organizational ownership transfer or partner installation handoff.",
+    "parent_task": "AUTH-04",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P1; experience onboarding/core flows\nResolution: A resumable connection state machine records requested scopes, initiating user, organization owner, provider application, pending admin and expiry. Tenant admin handoff never sends credentials.\nAcceptance: Different requester/approver users finish or deny setup; abandoned callback, removed owner, changed scope and revoked app preserve clear status."
+  },
+  {
+    "id": "BP-08",
+    "title": "Client segmentation is named but responsibility, entitlement billing and agency offboarding need enforceable contracts.",
+    "parent_task": "SEC-02",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P1; pricing/agency packaging\nResolution: Each agency client is an isolated tenant or explicitly scoped workspace with its own source rights, approver and cost center. Agency portfolio aggregates authorized summaries only.\nAcceptance: Remove agency access without deleting client data, transfer retained history with authority, export approved artifacts and demonstrate no cross-client search/count leakage."
+  },
+  {
+    "id": "BP-09",
+    "title": "Founder-led support can hide unpriced service labor and on-call dependence.",
+    "parent_task": "AUD-19",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P1; chapters 6/7\nResolution: Log onboarding, customization and support minutes by account; separate product revenue from service contracts; define escalation owner and replacement.\nAcceptance: Mature cohort contribution includes support and direct delivery costs; founder absence drill and support backlog trigger work."
+  },
+  {
+    "id": "BP-10",
+    "title": "Early marketplace storefront can outpace pack quality, rights and liquidity.",
+    "parent_task": "AUD-21",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P1; roadmap phase 3/7\nResolution: Launch curated first-party registry first. Open submission requires signing, staging, entitlement isolation, provenance/license, revocation and support accountability.\nAcceptance: Real outside developer publishes a qualified pack, user receives measurable outcome, withdrawal disables unsafe versions and settlement reconciles."
+  },
+  {
+    "id": "BP-11",
+    "title": "Many agent discussions and risk scores can create approval fatigue and duplicate interruptions.",
+    "parent_task": "UX-01",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P1; UI action/notifications\nResolution: Group by underlying decision/effect, make dissent/evidence concise, preserve critical risk separately from default score; cap optional notifications.\nAcceptance: Operator correctly distinguishes pending proposal, pending effect and reconciled outcome under incident load; false/misleading approvals tracked."
+  },
+  {
+    "id": "BP-12",
+    "title": "Standards and token contrast do not prove live authentication, graph/table parity or high-impact review accessibility.",
+    "parent_task": "UX-02",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P1; accessibility/mobile\nResolution: Release by complete journey, not isolated component. Evaluate real keyboard, screen reader, zoom, touch and poor-network paths, with stop conditions for dangerous confusion.\nAcceptance: Independent evaluation across connect, inspect, review, cancel/reconcile and budget change; no critical blockers."
+  },
+  {
+    "id": "BP-13",
+    "title": "Weekly retained outcome and eligible acceptance can be gamed by selecting easy tasks or generating needless \u201cfixes.\u201d",
+    "parent_task": "AUD-10",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P1; product metrics\nResolution: Include all submitted task outcomes, excluded reason, task difficulty, actual regression/harm, useful rejected analysis and baseline time. Outcome utility is customer-rated, not agent self-voted.\nAcceptance: Cohort metrics reproduce from immutable event receipts; denominator changes versioned; independently sampled harmful outcomes reported."
+  },
+  {
+    "id": "BP-14",
+    "title": "Large generated invention volumes may create value claims with no buyer, novelty or execution path.",
+    "parent_task": "BIZ-02",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P2; future/innovation strategy\nResolution: Every opportunity has problem owner, evidence, experiment cost, rights and stop criterion. Generated ideas are hypotheses, not patentability or revenue.\nAcceptance: Customer/research validation changes stage; rejected ideas retain rationale; no pipeline monetary totals without defined probability/valuation basis."
+  },
+  {
+    "id": "BP-15",
+    "title": "Enterprise badges and promised SLAs can precede operationally qualified service.",
+    "parent_task": "AUD-19",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P1; enterprise strategy\nResolution: Contract only a demonstrated region/data mode/action class; maintain responsibility matrix for customer-owned workers, provider failures and support access.\nAcceptance: Signed testable SLO/SLA scope, restore rehearsal, escalation, access review, procurement evidence and separately costed deployment."
+  },
+  {
+    "id": "BP-16",
+    "title": "\u201cMillions of users\u201d design target is not a funded business forecast or proof of scale.",
+    "parent_task": "QA-03",
+    "source": "BUILD-BIBLE/reviews/business-product.md",
+    "status": "open",
+    "resolution_and_acceptance": "Source/severity: P2; future readiness\nResolution: Capacity expansion follows actual load and unit economics. Version numbers, elapsed years and market rank are separate axes.\nAcceptance: Quarterly decision records show observed demand, capacity threshold, approved cost and rollback rather than automatic phase progression."
+  }
+]

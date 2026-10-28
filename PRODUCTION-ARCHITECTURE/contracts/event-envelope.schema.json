@@ -1,0 +1,159 @@
+{
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "type": {
+      "type": "string",
+      "pattern": "^[a-z_]+\\.[a-z_]+\\.v[1-9][0-9]*$"
+    },
+    "schema_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "tenant_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "project_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "aggregate_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "aggregate_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "authority_epoch": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "producer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actor": {
+      "type": "object",
+      "properties": {
+        "principal_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "kind": {
+          "enum": [
+            "human",
+            "agent",
+            "service"
+          ]
+        }
+      },
+      "required": [
+        "principal_id",
+        "kind"
+      ],
+      "additionalProperties": false
+    },
+    "correlation_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "causation_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "classification": {
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted"
+      ]
+    },
+    "residency": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload": {
+      "type": "object"
+    },
+    "payload_ref": {
+      "type": "object",
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "artifact_id",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "trace_context": {
+      "type": "string",
+      "maxLength": 256
+    }
+  },
+  "required": [
+    "event_id",
+    "type",
+    "schema_version",
+    "tenant_id",
+    "project_id",
+    "aggregate_id",
+    "aggregate_version",
+    "authority_epoch",
+    "occurred_at",
+    "recorded_at",
+    "producer",
+    "actor",
+    "correlation_id",
+    "causation_id",
+    "classification",
+    "residency"
+  ],
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "required": [
+        "payload"
+      ],
+      "not": {
+        "required": [
+          "payload_ref"
+        ]
+      }
+    },
+    {
+      "required": [
+        "payload_ref"
+      ],
+      "not": {
+        "required": [
+          "payload"
+        ]
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.omnidev.example/event-envelope.v1.schema.json",
+  "title": "OmniDev committed event envelope"
+}

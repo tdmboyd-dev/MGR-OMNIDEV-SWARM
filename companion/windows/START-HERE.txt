@@ -1,0 +1,12 @@
+OmniDev Maintained Engine - Windows
+
+1. Close any old OPEN-COMPANION.cmd window.
+2. Extract All from the ZIP. Do not launch from inside the ZIP.
+3. Double-click INSTALL-ENGINE.cmd once. Node.js 22 or newer is required.
+4. Return to OmniDev and reconnect your account brain.
+5. The engine starts automatically at Windows sign-in. You no longer need to keep a console open.
+6. Signed updates arrive when you connect inside OmniDev and activate after active jobs finish and one idle minute.
+
+Windows may require approval for downloaded scripts. Do not disable Windows security protections. Report the exact message if installation is blocked.
+UNINSTALL-ENGINE.cmd disables startup and stops this engine while preserving your account sign-in and job memory.
+Legacy OPEN-COMPANION.cmd remains available for diagnostics; do not run both engines together.

@@ -1,0 +1,9 @@
+# Design verification
+
+4969 checks passed; all 40 requested entity types covered.
+
+Ontology coverage/range references, JSON parsing, compatible schema validation, positive/negative fixtures, eight memory layer bounds, reference interval semantics, documentation links and SQL security declarations.
+
+- AJV 6 validates the draft-7-compatible keywords used, not full draft 2020-12 conformance.
+- Temporal checks exercise a reference function, not deployed journal/query services.
+- SQL is not executed against PostgreSQL; no live graph, vector, provider, reasoning, scale or recovery certification.

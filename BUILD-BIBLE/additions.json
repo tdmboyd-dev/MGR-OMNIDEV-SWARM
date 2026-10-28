@@ -1,0 +1,162 @@
+[
+  {
+    "id": "A01",
+    "title": "Capability certification envelope",
+    "gap": "A platform can look universal while supporting only one language and test command.",
+    "resolution": "Publish per connector/language/model/tool supported versions, permitted operations, parser coverage, evaluation cohort and expiry. Unsupported requests become explicit gaps.",
+    "owner": "QA platform lead",
+    "acceptance": "Reference unsupported cases fail without silent fallback."
+  },
+  {
+    "id": "A02",
+    "title": "Evidence trust root",
+    "gap": "A signed report can still be signed by the same compromised worker that created the artifact.",
+    "resolution": "Separate workload identity, attestation verification, artifact hashing and evaluation identity. Bind evidence to exact attempt, candidate, image and test manifest.",
+    "owner": "Security lead",
+    "acceptance": "Forged/stale/mismatched reports cannot authorize effects."
+  },
+  {
+    "id": "A03",
+    "title": "Data withdrawal convergence",
+    "gap": "Deleting a source can leave summaries, vectors, caches, backups and model weights carrying it.",
+    "resolution": "Use a derivation registry, immediate deny tombstones, bounded purge workflow, subscriber receipts and restore-time deletion replay. Training contracts declare model withdrawal strategy.",
+    "owner": "Data lead",
+    "acceptance": "Deleted material is denied immediately; purge convergence and restored-copy denial are measured."
+  },
+  {
+    "id": "A04",
+    "title": "Control-plane bootstrap recovery",
+    "gap": "Policy, KMS and directory services can become mutually dependent during a total recovery.",
+    "resolution": "Maintain independently protected recovery identities, ordered restore runbooks, signed last-known-good manifests and tested key recovery.",
+    "owner": "SRE lead",
+    "acceptance": "Cold-region restore succeeds without relying on the failed control plane."
+  },
+  {
+    "id": "A05",
+    "title": "Evaluator independence and capture",
+    "gap": "Millions of agents can manufacture consensus through cloned reviewers or a poisoned grader.",
+    "resolution": "Assign independent role slots; freeze evaluator/dataset versions; measure lineage/provider correlation; keep adversarial challenge sets and human calibration.",
+    "owner": "Research lead",
+    "acceptance": "Clone votes do not increase effective independence; evaluator tampering is rejected."
+  },
+  {
+    "id": "A06",
+    "title": "Human accountability and appeals",
+    "gap": "Autonomous mistakes can leave no person responsible or no correction channel.",
+    "resolution": "Every action class has accountable owner, appeal/correction workflow, understandable evidence and reversible authority. Design workforce/privacy impact review.",
+    "owner": "Product lead",
+    "acceptance": "A user can challenge a finding, stop a run and track resolution without exposing hidden data."
+  },
+  {
+    "id": "A07",
+    "title": "Supply-chain build provenance",
+    "gap": "Package scripts and mutable images can subvert perfectly reviewed source.",
+    "resolution": "Pin build inputs, attest builder and materials, quarantine imports, isolate approved mirrors and verify provenance before release.",
+    "owner": "Security lead",
+    "acceptance": "Poisoned image/package/attestation fails admission."
+  },
+  {
+    "id": "A08",
+    "title": "Support and incident access",
+    "gap": "Enterprise isolation can be bypassed by support tooling and telemetry.",
+    "resolution": "Use just-in-time scoped support sessions with owner authorization where required, dual review for sensitive access and redacted observability.",
+    "owner": "Enterprise lead",
+    "acceptance": "Support access is denied without valid ticket/scope and appears in audit."
+  },
+  {
+    "id": "A09",
+    "title": "Independent economy and demand model",
+    "gap": "ARR targets can hide free-user inference, failed-run costs, working capital and consumption workload.",
+    "resolution": "Link paid execution units to actual workload, include quality-adjusted successful-task margin, customer acquisition capacity, cash collection and liabilities.",
+    "owner": "Finance lead",
+    "acceptance": "Overage workload raises costs; cash and earned revenue reconcile separately."
+  },
+  {
+    "id": "A10",
+    "title": "Competitive outcome benchmark",
+    "gap": "Feature count does not show a reason to switch from established tools.",
+    "resolution": "Measure time to validated repair, recurrence, audit preparation, context reconstruction and total cost on matched workflows.",
+    "owner": "Founder",
+    "acceptance": "A paid pilot demonstrates incremental value beyond an existing coding agent."
+  },
+  {
+    "id": "A11",
+    "title": "Blast-radius containment of learning",
+    "gap": "A popular but incorrect lesson can propagate globally faster than it is corrected.",
+    "resolution": "Limit lesson rollout by scope and rate, track affected releases, quarantine disputed knowledge and propagate signed withdrawal.",
+    "owner": "Evolution lead",
+    "acceptance": "Poisoned lesson cannot reach every tenant before detection; rollback is demonstrated."
+  },
+  {
+    "id": "A12",
+    "title": "Cross-cell budget conservation",
+    "gap": "Parent and child workflows in separate regions can reserve the same remaining spend.",
+    "resolution": "Keep a root reservation authority; transfer signed allocations with durable debit before credit and reconcile uncertain handoff.",
+    "owner": "Runtime lead",
+    "acceptance": "Network partition cannot multiply available funds or release unresolved liability."
+  },
+  {
+    "id": "A13",
+    "title": "Residency-local placement authority",
+    "gap": "A global quorum can violate residency or block independent regional operation.",
+    "resolution": "Separate global non-content locator from per-residency ownership authority. Transfer across boundaries only under explicit policy with fencing.",
+    "owner": "Infrastructure lead",
+    "acceptance": "Loss of another residency domain does not grant or revoke local authority incorrectly."
+  },
+  {
+    "id": "A14",
+    "title": "Disconnected and local mode contract",
+    "gap": "Offline enterprise or desktop features can imply stale privileged authority.",
+    "resolution": "Declare read-only cached mode by default; scoped expiring offline grants and local budgets are opt-in; reconcile conflicts on reconnect.",
+    "owner": "Enterprise lead",
+    "acceptance": "Expired/offline credentials cannot authorize cloud effects."
+  },
+  {
+    "id": "A15",
+    "title": "Licensed content and export feasibility",
+    "gap": "3D/CAD datasets, proprietary sources and market feeds may forbid the proposed processing.",
+    "resolution": "Registry for code/model/dataset/content/tool licenses and permitted inference/training/export. Unsupported licensed runtime stays unavailable.",
+    "owner": "Compliance lead",
+    "acceptance": "Artifact export and training check rights independently."
+  },
+  {
+    "id": "A16",
+    "title": "Long-lived compatibility and ownership succession",
+    "gap": "Decades of jobs can outlive vendors, signatures and maintainers.",
+    "resolution": "Contract deprecation windows, migration replay, cryptographic inventory, portable exports, key rotation and successor stewardship.",
+    "owner": "Architecture lead",
+    "acceptance": "Historical releases can be reconstructed and verified after provider replacement."
+  },
+  {
+    "id": "A17",
+    "title": "Customer concentration and provider collapse",
+    "gap": "One model, cloud, customer or marketplace publisher can dominate economics and uptime.",
+    "resolution": "Measure concentration; maintain tested alternatives, cash stress scenarios, model outage routing and export pathways.",
+    "owner": "CEO",
+    "acceptance": "Loss of largest provider/customer has a bounded documented response."
+  },
+  {
+    "id": "A18",
+    "title": "Experiment interference and causal claims",
+    "gap": "Concurrent repairs and business experiments confound apparent improvements.",
+    "resolution": "Track assignment units, simultaneous interventions, treatment provenance, holdouts and outcomes; suspend causal claims when interference is unresolved.",
+    "owner": "Research lead",
+    "acceptance": "Revenue/latency attribution reports known confounders."
+  },
+  {
+    "id": "A19",
+    "title": "Operational readiness of the company",
+    "gap": "A technical platform still fails without support, procurement, contracts and escalation coverage.",
+    "resolution": "Create trust center, customer onboarding/offboarding, vendor assessment, insurance/procurement review, incident communications and support staffing.",
+    "owner": "Operations lead",
+    "acceptance": "A real pilot rehearses escalation, export, billing dispute and incident notification."
+  },
+  {
+    "id": "A20",
+    "title": "Option-based future readiness",
+    "gap": "No design is future-proof against AGI or paradigm shifts.",
+    "resolution": "Fund reversible options with invalidation triggers; test model/tool/compiler/schema replacement instead of predicting inevitable dominance.",
+    "owner": "Strategy lead",
+    "acceptance": "Each future scenario maps to a reversible experiment and stop rule."
+  }
+]

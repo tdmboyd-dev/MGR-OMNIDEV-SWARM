@@ -1,0 +1,13 @@
+# Build on a dedicated preparation host. Pass an approved, digest-pinned Node image.
+ARG NODE_IMAGE
+FROM ${NODE_IMAGE} AS cache
+WORKDIR /prepare
+COPY package.json package-lock.json ./
+RUN npm ci --ignore-scripts --cache=/opt/omni-npm-cache && \
+    chmod -R a+rX /opt/omni-npm-cache
+ARG NODE_IMAGE
+FROM ${NODE_IMAGE}
+COPY --from=cache /opt/omni-npm-cache /opt/omni-npm-cache
+USER 65534:65534
+ENV HOME=/tmp CI=true
+# Application source is mounted read-only by the runner, never baked into this image.

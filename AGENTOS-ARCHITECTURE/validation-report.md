@@ -1,0 +1,9 @@
+# AgentOS design verification
+
+94 automated contract/documentation checks passed.
+
+JSON/schema positive-negative fixtures, required agent fields, lifecycle references/activity composition, reference spawn conservation/fencing/voting guards, capacity arithmetic, documentation links and SQL declarations.
+
+- AJV 6 validates compatible schema keywords, not complete JSON Schema 2020-12 conformance.
+- Reference guard functions demonstrate design rules; they do not test deployed scheduler, financial authority or tool broker.
+- SQL was not executed; no live model/worker, emergency healing, evolution, marketplace or million-agent load qualification is claimed.

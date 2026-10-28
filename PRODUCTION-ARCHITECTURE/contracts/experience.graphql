@@ -1,0 +1,33 @@
+# Target composition schema excerpt; every resolver enforces current tenant/project policy.
+scalar DateTime
+scalar Cursor
+scalar Digest
+
+type Query {
+  workspace(id: ID!): Workspace
+  project(id: ID!): Project
+  run(id: ID!): Run
+  operation(id: ID!): Operation
+}
+type Workspace { id: ID!, name: String!, projects(first: Int = 50, after: Cursor): ProjectConnection! }
+type ProjectConnection { nodes: [Project!]!, cursor: Cursor, partial: Boolean!, watermark: String! }
+type Project {
+  id: ID!, name: String!, sourceRevision: Digest!, coverage: Float!, observedAt: DateTime!
+  agents(first: Int = 50, after: Cursor): AgentConnection!
+  runs(first: Int = 50, after: Cursor): RunConnection!
+  scores: [Score!]!
+  graph(input: GraphQueryInput!): GraphResult!
+}
+type AgentConnection { nodes: [Agent!]!, cursor: Cursor, partial: Boolean! }
+type RunConnection { nodes: [Run!]!, cursor: Cursor, partial: Boolean! }
+type Agent { id: ID!, parentId: ID, specialization: String!, state: String!, runId: ID!, templateDigest: Digest! }
+type Run { id: ID!, revision: Int!, state: String!, objective: String!, sourceDigest: Digest!, spentMicro: String!, reservedMicro: String!, currency: String! }
+type Operation { id: ID!, revision: Int!, state: String!, providerReceiptRef: String, observedAt: DateTime }
+type Score { dimension: String!, value: Float, coverage: Float!, confidence: String!, methodologyDigest: Digest!, evidenceIds: [ID!]!, criticalFlags: [String!]! }
+input GraphQueryInput { operation: GraphOperation!, entityIds: [ID!], depth: Int = 2, nodeLimit: Int = 1000, edgeLimit: Int = 5000, cursor: Cursor }
+enum GraphOperation { NEIGHBORHOOD DEPENDENCY_PATH IMPACT ENTITY_SEARCH }
+type GraphResult { nodes: [GraphNode!]!, edges: [GraphEdge!]!, cursor: Cursor, partial: Boolean!, watermark: String! }
+type GraphNode { id: ID!, kind: String!, label: String!, sourceDigest: Digest!, confidence: String! }
+type GraphEdge { id: ID!, source: ID!, target: ID!, relation: String!, evidenceDigest: Digest!, confidence: String! }
+# Effectful commands are REST operations in the core reference contract.
+# Realtime subscriptions are issued only with scoped auth and resumable cursors.

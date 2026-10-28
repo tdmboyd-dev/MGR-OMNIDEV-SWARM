@@ -1,0 +1,276 @@
+{
+  "screens": [
+    {
+      "id": "home",
+      "title": "Command Center",
+      "route": "/focus",
+      "regions": [
+        "Focus now / ranked issues",
+        "Project and executive health",
+        "Active projects / current work",
+        "Swarm activity / approvals",
+        "Discoveries and opportunities",
+        "Future signals / recommendations"
+      ],
+      "primary_action": "Inspect focus item",
+      "wireframe": "wireframes/home.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "project",
+      "title": "Project Intelligence",
+      "route": "/project",
+      "regions": [
+        "Architecture map / bounded scope",
+        "Security, performance, innovation",
+        "Dependencies / source coverage",
+        "Debt and missing features",
+        "Revenue opportunities",
+        "Recommendations / future scenarios"
+      ],
+      "primary_action": "Open evidence",
+      "wireframe": "wireframes/project.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "repository",
+      "title": "Repository Intelligence",
+      "route": "/repository",
+      "regions": [
+        "File / symbol tree",
+        "Pinned source or candidate diff",
+        "Tests / review / source receipts",
+        "Calls, dependencies and owners",
+        "Findings / exact source spans",
+        "Decision and change history"
+      ],
+      "primary_action": "Review candidate",
+      "wireframe": "wireframes/repository.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "agent",
+      "title": "Agent Control",
+      "route": "/agent",
+      "regions": [
+        "Lifecycle / observed activities",
+        "Task queue and current blocker",
+        "Skills, modules and sources",
+        "Grants / exact target scopes",
+        "Trust, performance and health",
+        "Resource limits / history"
+      ],
+      "primary_action": "Pause and drain",
+      "wireframe": "wireframes/agent.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "swarm",
+      "title": "Swarm Visualization",
+      "route": "/swarm",
+      "regions": [
+        "Scoped clusters and members",
+        "Task ownership / dependency DAG",
+        "Conversations / debate and dissent",
+        "Knowledge flow / evidence",
+        "Resources / actual and reserved",
+        "Coordinator / incidents / blockers"
+      ],
+      "primary_action": "Inspect task",
+      "wireframe": "wireframes/swarm.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture Explorer",
+      "route": "/architecture",
+      "regions": [
+        "System landscape / environments",
+        "Dependencies / data flows",
+        "Source and decision evidence",
+        "Baseline / candidate comparison",
+        "Potential impact / unresolved links",
+        "Migration alternatives / fitness"
+      ],
+      "primary_action": "Compare manifests",
+      "wireframe": "wireframes/architecture.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "graph",
+      "title": "Knowledge Graph Explorer",
+      "route": "/graph",
+      "regions": [
+        "Entity map / typed relationships",
+        "Search / layers / scoped filters",
+        "Selected entity and provenance",
+        "Observed / inferred / forecast",
+        "Time and snapshot selection",
+        "Equivalent relationship table"
+      ],
+      "primary_action": "Inspect relationship",
+      "wireframe": "wireframes/graph.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "twin",
+      "title": "Digital Twin Center",
+      "route": "/twin",
+      "regions": [
+        "Baseline / candidate scenario",
+        "Inputs / assumptions / units",
+        "Fidelity and excluded coverage",
+        "Cost, revenue and performance",
+        "Security / scaling / failures",
+        "Result evidence and uncertainty"
+      ],
+      "primary_action": "Run scoped simulation",
+      "wireframe": "wireframes/twin.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "innovation",
+      "title": "Innovation Lab",
+      "route": "/innovation",
+      "regions": [
+        "Features and product hypotheses",
+        "New startup / revenue concepts",
+        "Market and technology evidence",
+        "Prototype / experiment pipeline",
+        "Novelty / rights / patent review",
+        "Validated outcomes / decisions"
+      ],
+      "primary_action": "Plan experiment",
+      "wireframe": "wireframes/innovation.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "future",
+      "title": "Future Dashboard",
+      "route": "/future",
+      "regions": [
+        "Observed baseline and assumptions",
+        "Technical evolution",
+        "Market / business expansion",
+        "Opportunities and threats",
+        "Conditional projected outcomes",
+        "Roadmap / version milestones"
+      ],
+      "primary_action": "Compare scenarios",
+      "wireframe": "wireframes/future.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "security",
+      "title": "Security Command Center",
+      "route": "/security",
+      "regions": [
+        "Threat / attack-surface map",
+        "Risk heat map / confidence",
+        "Vulnerabilities / credential findings",
+        "Dependencies / compliance controls",
+        "Remediation evidence and plans",
+        "Autonomous action receipts"
+      ],
+      "primary_action": "Inspect critical finding",
+      "wireframe": "wireframes/security.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "devops",
+      "title": "Developer Operations",
+      "route": "/devops",
+      "regions": [
+        "SLOs / active incidents",
+        "Deployment and candidate pipeline",
+        "Tests, canaries and migrations",
+        "Workers / provider availability",
+        "Traces and root-cause hypotheses",
+        "Cost / rollback / effect receipts"
+      ],
+      "primary_action": "Review release",
+      "wireframe": "wireframes/devops.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "strategy",
+      "title": "Product Strategy Center",
+      "route": "/strategy",
+      "regions": [
+        "Objectives / customer evidence",
+        "Requirements / opportunities",
+        "Competitive position / sources",
+        "Roadmap / dependencies",
+        "Prioritization and uncertainty",
+        "Experiments / measured outcomes"
+      ],
+      "primary_action": "Propose roadmap",
+      "wireframe": "wireframes/strategy.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "research",
+      "title": "Research Center",
+      "route": "/research",
+      "regions": [
+        "Questions / source coverage",
+        "Evidence and source rights",
+        "Findings / disputes / unknowns",
+        "Methods / freshness / review",
+        "Research memory / decisions",
+        "Scoped promotion / sharing"
+      ],
+      "primary_action": "Inspect source",
+      "wireframe": "wireframes/research.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "executive",
+      "title": "Executive War Room",
+      "route": "/executive",
+      "regions": [
+        "Leadership focus / impact",
+        "Company and product health",
+        "Revenue / innovation pipeline",
+        "Security / strategic risks",
+        "Growth / competitive position",
+        "Future roadmap / assumptions"
+      ],
+      "primary_action": "Open decision brief",
+      "wireframe": "wireframes/executive.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "command",
+      "title": "Omni Command",
+      "route": "/command",
+      "regions": [
+        "Search / intent examples",
+        "Active project / environment",
+        "Interpretation / clarification",
+        "Bounded plan / prerequisites",
+        "Expected outcome / cost / risk",
+        "Evidence or exact-target review"
+      ],
+      "primary_action": "Review plan",
+      "wireframe": "wireframes/command.svg",
+      "data": "synthetic static wireframe; no live execution"
+    },
+    {
+      "id": "mobile",
+      "title": "Mobile Focus",
+      "route": "/focus",
+      "regions": [
+        "Focus now / primary issue",
+        "Project health / coverage",
+        "Waiting tasks / approvals",
+        "Evidence and next action",
+        "Recent discovery",
+        "Focus / Projects / Swarms / Inbox"
+      ],
+      "primary_action": "Open evidence",
+      "wireframe": "wireframes/mobile.svg",
+      "data": "synthetic static wireframe; no live execution"
+    }
+  ]
+}

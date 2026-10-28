@@ -1,0 +1,181 @@
+{
+  "type": "object",
+  "properties": {
+    "tenant_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assertion_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "subject_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "predicate": {
+      "type": "string",
+      "enum": [
+        "CONTAINS",
+        "DEFINES",
+        "CALLS",
+        "IMPORTS",
+        "DEPENDS_ON",
+        "READS",
+        "WRITES",
+        "EXPOSES",
+        "RUNS_ON",
+        "GENERATED_BY",
+        "RESPONSIBLE_FOR",
+        "DECIDES",
+        "DERIVED_FROM",
+        "OBSERVED_IN",
+        "PREDICTS",
+        "SUPPORTS",
+        "REFUTES",
+        "SUPERSEDES",
+        "MENTIONS",
+        "OWNS",
+        "MEMBER_OF",
+        "USES",
+        "DEPLOYS_TO",
+        "COMMUNICATES_WITH",
+        "CONFIGURES",
+        "INDEXES",
+        "MIGRATES",
+        "IMPLEMENTS",
+        "EMITS",
+        "CONSUMES",
+        "DISCUSSES",
+        "RESOLVES",
+        "DOCUMENTS",
+        "GENERATES_REVENUE",
+        "COMPETES_WITH",
+        "AFFECTS",
+        "REFERENCES",
+        "ANIMATES",
+        "USED_BY",
+        "REVIEWED_BY",
+        "USES_MODEL",
+        "VALIDATED_BY",
+        "TESTS",
+        "APPLIES_TO",
+        "REQUIRES",
+        "BLOCKS",
+        "GOVERNED_BY",
+        "POSSIBLE_SUCCESSOR",
+        "CHANGED_BY",
+        "CONSIDERED",
+        "MOTIVATED_BY",
+        "ACCEPTS_RISK",
+        "EVALUATED_BY"
+      ]
+    },
+    "object_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "context_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "modality": {
+      "enum": [
+        "observed",
+        "human_asserted",
+        "inferred",
+        "predicted"
+      ]
+    },
+    "status": {
+      "enum": [
+        "proposed",
+        "accepted",
+        "disputed",
+        "superseded",
+        "retracted"
+      ]
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "valid_range": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false
+    },
+    "recorded_range": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false
+    },
+    "access_policy_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confidence_method": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "tenant_id",
+    "assertion_id",
+    "subject_id",
+    "predicate",
+    "object_id",
+    "context_id",
+    "modality",
+    "status",
+    "evidence_ids",
+    "valid_range",
+    "recorded_range",
+    "access_policy_id",
+    "source_revision",
+    "confidence_method"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {jobPresentation,groupCapabilityGaps} from '../.test-runtime/job-presentation.mjs';
+const job={id:'root',status:'queued',result:{}};
+assert.equal(jobPresentation(job,{jobs:[{id:'root',status:'running'}]}).label,'Working');
+assert.equal(jobPresentation(job,{jobs:[{id:'root',status:'completed'}]}).label,'Result ready');
+assert.equal(jobPresentation({...job,status:'applied'}).label,'Saved to project');
+assert.equal(jobPresentation({...job,result:{reviewPlan:{control:{status:'paused'}}}}).label,'Paused');
+assert.equal(jobPresentation(job,{jobs:[{id:'child',status:'running'}]}).active,true);
+const gaps=[{id:'a',title:'Backend implementation not provided',projectId:'p1',data:{kind:'specialist-reported-gap',needed:'Source not supplied'}},{id:'b',title:'Tests not included',projectId:'p2',data:{kind:'specialist-reported-gap',needed:'Implementation files not available'}},{id:'c',title:'Runtime required',projectId:'p1',data:{kind:'execution',needed:'Isolated runner'}}];
+const groups=groupCapabilityGaps(gaps);assert.equal(groups.length,2);assert.equal(groups[0].items.length,2);assert.deepEqual(groups[0].projects,['p1','p2']);assert.equal(groups.flatMap(g=>g.items).length,3);assert.equal(gaps.length,3);
+console.log('Job states and evidence-gap grouping passed; original records preserved.');

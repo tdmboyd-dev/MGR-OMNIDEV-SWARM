@@ -1,0 +1,172 @@
+{
+  "type": "object",
+  "properties": {
+    "tenant_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "memory_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "layer": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "scope_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "memory_kind": {
+      "enum": [
+        "episode",
+        "semantic_fact",
+        "procedural_lesson",
+        "decision",
+        "hypothesis",
+        "preference",
+        "outcome",
+        "innovation",
+        "forecast"
+      ]
+    },
+    "modality": {
+      "enum": [
+        "observed",
+        "human_asserted",
+        "inferred",
+        "predicted"
+      ]
+    },
+    "state": {
+      "enum": [
+        "proposed",
+        "accepted",
+        "disputed",
+        "superseded",
+        "retracted"
+      ]
+    },
+    "subject_entity_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "content_artifact": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "source_assertion_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "created_by": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "valid_range": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false
+    },
+    "recorded_range": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false
+    },
+    "access_policy_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "retention_policy_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "consent_basis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "retrieval_generation": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "tenant_id",
+    "memory_id",
+    "layer",
+    "scope_id",
+    "memory_kind",
+    "modality",
+    "state",
+    "subject_entity_ids",
+    "content_artifact",
+    "evidence_ids",
+    "source_assertion_ids",
+    "created_by",
+    "created_at",
+    "valid_range",
+    "recorded_range",
+    "access_policy_id",
+    "retention_policy_id",
+    "consent_basis",
+    "retrieval_generation"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

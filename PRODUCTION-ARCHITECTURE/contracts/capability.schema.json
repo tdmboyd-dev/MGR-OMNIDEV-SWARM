@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "properties": {
+    "capability_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenant_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "principal_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "project_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "audience": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "maxItems": 100
+    },
+    "input_digest": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "authority_epoch": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "policy_digest": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "grant_epoch": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "reservation_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "nonce": {
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "required": [
+    "capability_id",
+    "tenant_id",
+    "principal_id",
+    "project_id",
+    "audience",
+    "action",
+    "targets",
+    "input_digest",
+    "authority_epoch",
+    "policy_digest",
+    "grant_epoch",
+    "reservation_id",
+    "expires_at",
+    "nonce"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.omnidev.example/capability.v1.schema.json",
+  "title": "Unsigned capability claims; signed transport is required"
+}

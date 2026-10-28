@@ -1,0 +1,11 @@
+# Background jobs, project UX and optional experts
+
+The companion now accepts /start immediately, owns execution, and stores candidate output and timestamped completion under owner-only local job files. GET /jobs/:id recovers status/output, bound to the signed-in account and source digest. Duplicate active/completed starts reuse the same job. After an engine restart, an unfinished job is interrupted, not falsely running. No automatic paid retry. Local output survives page close; staging into the hosted workspace resumes when the owner opens the queued job. The local engine must remain running. This is not cloud execution while the computer is off.
+
+Runtime/healing controls remain mounted during internal navigation; local status and events survive switching pages. Specialist recommendations are optional model-output proposals; they do not claim execution. Account specialist review and full Omni Core autonomous decomposition remain unfinished. Existing API specialist reviews work for API routes.
+
+New project is visible in mobile and desktop headers. Existing repository imports create separate project records; they do not merge into the selected project. No existing owner data has been moved. Coverage records show imported/total file counts, tree truncation and exclusions; GitHub snapshots now prioritize up to 100 files within the byte budget. This is still partial source inspection, not a complete repository audit.
+
+Runner blocker: current Docker worker implements bounded snapshot-integrity tests only. It is not a generic package-install/build/integration-test worker. Docker is unavailable in the build environment; no pinned worker image, runtime-host attachment or live isolation qualification is established. Additional AI agents cannot supply these execution prerequisites. Do not mark runtime tests passed until measured execution reports exist.
+
+Required next engineering: whole-repo paginated traversal and content-addressed source storage; full dependency/lockfile context; qualified build/test recipes with controlled dependency egress; signed isolated worker evidence; local account specialist protocol; typed Omni Core planning and optional specialist selection; live streaming agent messages with provenance; job output retention/deletion UI and native protected credential storage.

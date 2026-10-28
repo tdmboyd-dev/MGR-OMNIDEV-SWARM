@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "durable_states": [
+    "Created",
+    "Learning",
+    "Active",
+    "Dormant",
+    "Archived",
+    "Retired",
+    "Destroyed"
+  ],
+  "transitions": {
+    "Created": [
+      "Learning",
+      "Archived",
+      "Retired"
+    ],
+    "Learning": [
+      "Active",
+      "Dormant",
+      "Retired"
+    ],
+    "Active": [
+      "Learning",
+      "Dormant",
+      "Archived",
+      "Retired"
+    ],
+    "Dormant": [
+      "Active",
+      "Archived",
+      "Retired"
+    ],
+    "Archived": [
+      "Dormant",
+      "Retired"
+    ],
+    "Retired": [
+      "Destroyed"
+    ],
+    "Destroyed": []
+  },
+  "activity_states": [
+    "Busy",
+    "Reviewing",
+    "Collaborating"
+  ],
+  "activity_allowed_in": [
+    "Active"
+  ],
+  "guards": {
+    "all": "expected revision, current generation, authorized caller",
+    "Active": "admission valid and current grants",
+    "Dormant": "quiesced; effects reconciled separately",
+    "Archived": "no active attempts; retention policy",
+    "Retired": "drained, grants revoked, objectives reassigned",
+    "Destroyed": "eligible purge authorized and complete"
+  },
+  "display_precedence": [
+    "Reviewing",
+    "Collaborating",
+    "Busy"
+  ]
+}

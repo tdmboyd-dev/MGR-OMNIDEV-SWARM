@@ -1,0 +1,155 @@
+{
+  "type": "object",
+  "properties": {
+    "tenant_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "project_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "agent_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "parent_agent_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "root_run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "template_digest": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "specialization": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "working_memory_ref": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "long_term_memory_selectors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "task_queue_ref": {
+      "type": "string"
+    },
+    "communication_channels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "knowledge_scope_ref": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "capability_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "reservation_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "authority_epoch": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "state": {
+      "enum": [
+        "defined",
+        "admitted",
+        "ready",
+        "leased",
+        "executing",
+        "checkpointed",
+        "reviewing",
+        "completed",
+        "failed",
+        "canceled",
+        "retired"
+      ]
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "evaluation_ref": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "performance_ref": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "health_ref": {
+          "type": "string",
+          "format": "uuid"
+        }
+      },
+      "required": [
+        "evaluation_ref",
+        "performance_ref",
+        "health_ref"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "tenant_id",
+    "project_id",
+    "agent_id",
+    "root_run_id",
+    "template_digest",
+    "specialization",
+    "goals",
+    "objectives",
+    "working_memory_ref",
+    "long_term_memory_selectors",
+    "task_queue_ref",
+    "communication_channels",
+    "knowledge_scope_ref",
+    "capability_ids",
+    "reservation_id",
+    "deadline",
+    "authority_epoch",
+    "state",
+    "metrics"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.omnidev.example/agent.v1.schema.json",
+  "title": "OmniDev agent identity and operating contract"
+}

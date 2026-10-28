@@ -1,0 +1,53 @@
+{
+  "release": "bounded development runtime",
+  "completed": [
+    "durable job queue and recovery",
+    "encrypted provider and repository adapters",
+    "native generation and bounded AI reviews",
+    "candidate validation and atomic snapshot apply/rollback",
+    "findings reconciliation",
+    "draft PR handoff",
+    "authenticated Docker runner",
+    "runtime UI",
+    "SQLite route tests and trusted generated test execution",
+    "account-first UI without API-key entry",
+    "GitHub private app registration and OAuth consent",
+    "encrypted account refresh and private repository import"
+  ],
+  "blocked": [
+    "owner GitHub consent",
+    "approved registration for hosted ChatGPT plan usage",
+    "authorized isolated worker host"
+  ],
+  "future": [
+    "production telemetry and deployment adapters",
+    "universal live integrations",
+    "measured digital twins",
+    "domain-specific 3D execution",
+    "evaluated innovation engine"
+  ],
+  "completion_v2": {
+    "status": "local-hardening-tested; production-open",
+    "changes": [
+      "atomic active-job admission",
+      "digest-bound expiring worker assignments",
+      "immutable report acceptance",
+      "pinned-image and awaited cleanup"
+    ],
+    "checks": {
+      "acceptance": 31,
+      "runtime_account": 72,
+      "simulated_docker_subprocess": 6
+    },
+    "evidence": [
+      "evidence/acceptance.txt",
+      "evidence/runtime.txt",
+      "evidence/worker-cleanup.txt"
+    ],
+    "limits": [
+      "HTTP stubbed",
+      "No real Docker execution or independent attestation",
+      "No live account/deployed journey qualification"
+    ]
+  }
+}

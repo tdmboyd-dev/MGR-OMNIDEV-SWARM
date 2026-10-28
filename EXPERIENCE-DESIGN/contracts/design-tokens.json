@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "themes": {
+    "dark": {
+      "canvas": "#0C1110",
+      "surface": "#121916",
+      "elevated": "#18211C",
+      "text": "#E7ECE8",
+      "secondary": "#B5C3B9",
+      "primary": "#C9F58C",
+      "primaryText": "#172113",
+      "interactiveBorder": "#708879",
+      "focus": "#D8FFAD",
+      "success": "#B8E99A",
+      "warning": "#F1C17A",
+      "danger": "#FFA5A5",
+      "info": "#94D7CB",
+      "forecast": "#C8B7F0"
+    },
+    "light": {
+      "canvas": "#F5F8F6",
+      "surface": "#FFFFFF",
+      "elevated": "#EAF1EC",
+      "text": "#15251B",
+      "secondary": "#445A4B",
+      "primary": "#245A39",
+      "primaryText": "#FFFFFF",
+      "interactiveBorder": "#728476",
+      "focus": "#245A39",
+      "success": "#245A39",
+      "warning": "#785009",
+      "danger": "#9A2525",
+      "info": "#1C5B52",
+      "forecast": "#65428B"
+    },
+    "highContrast": {
+      "canvas": "#000000",
+      "surface": "#000000",
+      "elevated": "#101010",
+      "text": "#FFFFFF",
+      "secondary": "#FFFFFF",
+      "primary": "#FFFFFF",
+      "primaryText": "#000000",
+      "interactiveBorder": "#FFFFFF",
+      "focus": "#FFFF00",
+      "success": "#FFFFFF",
+      "warning": "#FFFF00",
+      "danger": "#FFFFFF",
+      "info": "#FFFFFF",
+      "forecast": "#FFFFFF"
+    }
+  },
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "fontSize": {
+    "caption": 12,
+    "secondary": 14,
+    "body": 16,
+    "section": 20,
+    "page": 28,
+    "display": 36
+  },
+  "radius": {
+    "small": 4,
+    "control": 8,
+    "panel": 12
+  },
+  "motionMs": {
+    "feedback": 120,
+    "panel": 180,
+    "scope": 240,
+    "reducedMotion": 0
+  },
+  "layout": {
+    "railExpanded": 240,
+    "railCollapsed": 72,
+    "header": 56,
+    "inspector": 360,
+    "mobileBreakpoint": 768,
+    "tabletBreakpoint": 1024,
+    "inspectorBreakpoint": 1280
+  },
+  "targetSize": {
+    "preferredTouch": 44,
+    "minimumDense": 24
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "type": "object",
+  "properties": {
+    "answer_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenant_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "snapshot_manifest": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "valid_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "known_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "observed",
+              "recorded_decision",
+              "inferred",
+              "hypothesis",
+              "forecast"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "confidence_method": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "claim_id",
+          "text",
+          "kind",
+          "evidence_ids",
+          "confidence_method"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "coverage": {
+      "enum": [
+        "complete_within_scope",
+        "partial",
+        "unknown"
+      ]
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "answer_id",
+    "tenant_id",
+    "snapshot_manifest",
+    "valid_at",
+    "known_at",
+    "claims",
+    "unknowns",
+    "coverage",
+    "expires_at"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

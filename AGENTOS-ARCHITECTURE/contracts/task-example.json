@@ -1,0 +1,36 @@
+{
+  "tenant_id": "11111111-1111-4111-8111-111111111111",
+  "task_id": "11111111-1111-4111-8111-111111111111",
+  "objective_id": "11111111-1111-4111-8111-111111111111",
+  "root_run_id": "11111111-1111-4111-8111-111111111111",
+  "task_class": "review",
+  "priority": 70,
+  "urgency": "soon",
+  "complexity": 3,
+  "required_skills": [
+    "test.review@1"
+  ],
+  "dependencies": [],
+  "risk_level": "read_only",
+  "expected_outcome": "Independent evidence review",
+  "success_criteria": [
+    "Findings cite exact pinned artifact"
+  ],
+  "input_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "required_capabilities": [
+    "source.read",
+    "artifact.review"
+  ],
+  "resource_limits": {
+    "max_turns": 20,
+    "max_concurrency": 4,
+    "max_spawned_agents": 12,
+    "maximum_cost_micro": "10000000",
+    "currency": "USD",
+    "deadline": "2026-10-10T00:00:00Z",
+    "cpu_millicores": 2000,
+    "ram_mib": 4096,
+    "max_context_tokens": 24000
+  },
+  "deadline": "2026-10-10T00:00:00Z"
+}

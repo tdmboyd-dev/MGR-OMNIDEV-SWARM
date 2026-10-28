@@ -1,0 +1,61 @@
+{
+  "intents": [
+    {
+      "example": "Find every security issue",
+      "intent": "security.analysis",
+      "class": "plan",
+      "scope_required": true,
+      "effect_approval": "separate exact-target policy if external action proposed"
+    },
+    {
+      "example": "Map my architecture",
+      "intent": "architecture.map",
+      "class": "plan",
+      "scope_required": true,
+      "effect_approval": "separate exact-target policy if external action proposed"
+    },
+    {
+      "example": "Show future risks",
+      "intent": "future.risks",
+      "class": "read",
+      "scope_required": true,
+      "effect_approval": "separate exact-target policy if external action proposed"
+    },
+    {
+      "example": "Generate version 2 roadmap",
+      "intent": "roadmap.propose",
+      "class": "plan",
+      "scope_required": true,
+      "effect_approval": "separate exact-target policy if external action proposed"
+    },
+    {
+      "example": "Analyze competitors",
+      "intent": "competitive.research",
+      "class": "plan",
+      "scope_required": true,
+      "effect_approval": "separate exact-target policy if external action proposed"
+    },
+    {
+      "example": "Improve performance",
+      "intent": "performance.investigate",
+      "class": "plan",
+      "scope_required": true,
+      "effect_approval": "separate exact-target policy if external action proposed"
+    },
+    {
+      "example": "Create missing tests",
+      "intent": "tests.propose",
+      "class": "build_proposal",
+      "scope_required": true,
+      "effect_approval": "separate exact-target policy if external action proposed"
+    },
+    {
+      "example": "Build feature proposals",
+      "intent": "features.propose",
+      "class": "plan",
+      "scope_required": true,
+      "effect_approval": "separate exact-target policy if external action proposed"
+    }
+  ],
+  "unsupported_intent": "related capabilities or honest unavailable state"
+}

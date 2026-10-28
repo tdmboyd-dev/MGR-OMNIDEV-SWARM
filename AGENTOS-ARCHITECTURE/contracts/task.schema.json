@@ -1,0 +1,168 @@
+{
+  "type": "object",
+  "properties": {
+    "tenant_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "task_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "objective_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "root_run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "task_class": {
+      "type": "string",
+      "minLength": 1
+    },
+    "priority": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "urgency": {
+      "enum": [
+        "routine",
+        "soon",
+        "urgent",
+        "incident"
+      ]
+    },
+    "complexity": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "required_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "uniqueItems": true
+    },
+    "risk_level": {
+      "enum": [
+        "read_only",
+        "proposal",
+        "isolated_execution",
+        "reversible_effect",
+        "high_impact"
+      ]
+    },
+    "expected_outcome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "success_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "input_digest": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "required_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "resource_limits": {
+      "type": "object",
+      "properties": {
+        "max_turns": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_concurrency": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_spawned_agents": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "maximum_cost_micro": {
+          "type": "string",
+          "pattern": "^[0-9]+$"
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "cpu_millicores": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ram_mib": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_context_tokens": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "max_turns",
+        "max_concurrency",
+        "max_spawned_agents",
+        "maximum_cost_micro",
+        "currency",
+        "deadline",
+        "cpu_millicores",
+        "ram_mib",
+        "max_context_tokens"
+      ],
+      "additionalProperties": false
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "tenant_id",
+    "task_id",
+    "objective_id",
+    "root_run_id",
+    "task_class",
+    "priority",
+    "urgency",
+    "complexity",
+    "required_skills",
+    "dependencies",
+    "risk_level",
+    "expected_outcome",
+    "success_criteria",
+    "input_digest",
+    "required_capabilities",
+    "resource_limits",
+    "deadline"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,7 @@
+126 unique task IDs validated.
+40 platform items; 39 integration items; 47 specialist-domain items.
+All dependency IDs resolve.
+All Markdown navigation links resolve.
+All tasks have current state, work, completion criteria, priority and ownership fields.
+All 47 domain tasks have domain-specific deliverables.
+Documentation-only checkpoint: application tests were not rerun; baseline evidence remains 31 acceptance + 63 runtime = 94 passed.

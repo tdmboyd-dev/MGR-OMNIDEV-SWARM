@@ -1,0 +1,3 @@
+import {fingerprint} from './control-plane';
+import {analyze} from './analyzer';
+export async function fileLedger(files:any[],previous:any[]=[],changed:string[]=[],jobId:string|null=null){const findings=analyze(files).findings;return Promise.all(files.map(async f=>{const contentDigest=await fingerprint(f.content),old=previous.find(x=>x.path===f.path&&x.contentDigest===contentDigest);return old||{path:f.path,contentDigest,status:changed.includes(f.path)?'changed-awaiting-runtime-verification':'inspected-static-only',findingCount:findings.filter((x:any)=>x.file===f.path||x.path===f.path).length,jobId,lastInspectedAt:new Date().toISOString(),runtimeVerified:false};}));}

@@ -1,0 +1,317 @@
+[
+  {
+    "id": "C01",
+    "conflict": "Infinite nesting versus finite execution",
+    "sources": "Founder vision; production/AgentOS limits",
+    "resolution": "Schema extensibility is unlimited; runtime fanout, depth, time and spend are bounded.",
+    "implementation_task": "RUN-02",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C02",
+    "conflict": "Never forget versus deletion and consent",
+    "sources": "Knowledge/evolution memory",
+    "resolution": "Retain permitted history; immediate access denial and tracked purge/withdrawal override retention aspirations.",
+    "implementation_task": "DATA-02",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C03",
+    "conflict": "Global knowledge versus private tenant strategy",
+    "sources": "Knowledge/evolution propagation",
+    "resolution": "Private data stays scoped; global patterns require rights and privacy-reviewed consent or public/licensed evidence.",
+    "implementation_task": "AUD-03",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C04",
+    "conflict": "Server E2EE versus server-side reasoning",
+    "sources": "Production security; experience",
+    "resolution": "Provide distinct local/client E2EE and server-assisted modes with truthful plaintext boundaries.",
+    "implementation_task": "SEC-02",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C05",
+    "conflict": "Identity sign-in versus model entitlement",
+    "sources": "Account-first requirement; providers.ts",
+    "resolution": "Provider-supported identity/resource/model grants are distinct; no fake universal Google inference grant.",
+    "implementation_task": "AUTH-02",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C06",
+    "conflict": "Multi-cloud HA versus single writer",
+    "sources": "Production regional design",
+    "resolution": "One authority per aggregate; per-residency quorum grants fenced epochs; uncertain writes stop.",
+    "implementation_task": "AUD-13",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C07",
+    "conflict": "Consensus versus independent correctness",
+    "sources": "AgentOS debate; evolution",
+    "resolution": "Votes are assigned role slots, not clone counts; independent outcomes and policy veto govern.",
+    "implementation_task": "AUD-05",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C08",
+    "conflict": "Autonomous evolution versus immutable governance",
+    "sources": "Evolution Omega",
+    "resolution": "Agents may improve scoped capabilities, not rewrite constitutional policy or expand grants.",
+    "implementation_task": "AUD-11",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C09",
+    "conflict": "Snapshot repair versus production self-healing",
+    "sources": "Current code; production healing",
+    "resolution": "Snapshot maintenance remains labeled; production healing requires target telemetry, grants, tests and health receipts.",
+    "implementation_task": "OPS-02",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C10",
+    "conflict": "Catalog connector versus functioning integration",
+    "sources": "Catalog; universal connectivity",
+    "resolution": "Capability envelope reports versioned authorized operations and actual evidence.",
+    "implementation_task": "AUD-01",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C11",
+    "conflict": "Graph everything versus browser complexity",
+    "sources": "Knowledge; experience",
+    "resolution": "Use partitioned bounded queries, summaries and accessible neighborhoods, not all-node rendering.",
+    "implementation_task": "GRAPH-01",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C12",
+    "conflict": "Twin descriptor versus real-time simulation",
+    "sources": "Production twins; current scenarios",
+    "resolution": "Declare fidelity/calibration and unsupported questions; descriptor alone is not a calibrated twin.",
+    "implementation_task": "TWIN-01",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C13",
+    "conflict": "Version number versus calendar year",
+    "sources": "Strategy; future engine",
+    "resolution": "Version gates and year horizons are separate axes; no automatic V10 at year10.",
+    "implementation_task": "FUT-01",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C14",
+    "conflict": "Agent lifecycle versus activity states",
+    "sources": "Original prompt; AgentOS",
+    "resolution": "Durable lifecycle plus concurrent activity overlays; flattened status compatibility mapping explicit.",
+    "implementation_task": "RUN-02",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C15",
+    "conflict": "Reference SQL versus deployed database",
+    "sources": "Production/knowledge contracts; db/schema.ts",
+    "resolution": "Reference contracts are design; D1 remains current until tested single-writer migration.",
+    "implementation_task": "DATA-01",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C16",
+    "conflict": "Microservices versus minimum team",
+    "sources": "Production service catalog; MVP team",
+    "resolution": "Logical contracts can co-deploy in a modular monolith; separate execution/isolation immediately and split by evidence.",
+    "implementation_task": "OPS-04",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C17",
+    "conflict": "Trust inheritance versus clone expertise",
+    "sources": "AgentOS; genetics",
+    "resolution": "Copy validated modules, never credentials, trust, grants, consent or vote eligibility.",
+    "implementation_task": "AUD-05",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C18",
+    "conflict": "Successful checks versus proved product",
+    "sources": "Validation reports; runtime evidence",
+    "resolution": "Keep design/reference, stubbed route, live integration, isolation and production outcomes as separate evidence classes.",
+    "implementation_task": "QA-01",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C19",
+    "conflict": "Every interaction improves versus noisy learning",
+    "sources": "Evolution mission; engineering reality",
+    "resolution": "Each authorized interaction may yield evidence; promotion requires regression/harm evaluation.",
+    "implementation_task": "AUD-11",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C20",
+    "conflict": "Always rollback versus irreversible writes",
+    "sources": "Development/twin/healing",
+    "resolution": "Require forward recovery and explicit irreversible-state handling where rollback cannot restore safety.",
+    "implementation_task": "OPS-03",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C21",
+    "conflict": "Open marketplace versus security economics",
+    "sources": "Launch strategy; marketplace architecture",
+    "resolution": "Ship curated/private evaluated packs first; open supply after review/revocation/settlement costs are viable.",
+    "implementation_task": "AUD-21",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C22",
+    "conflict": "Overage revenue versus unchanged workload",
+    "sources": "Strategy model original",
+    "resolution": "Link consumption to explicit additional paid jobs and apply model/worker costs to total workload; preserve old forecast version.",
+    "implementation_task": "AUD-09",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C23",
+    "conflict": "Account plan versus double-billed API usage",
+    "sources": "Provider access; pricing",
+    "resolution": "Display actual model billing path and charge only authorized separate platform resources; no silent fallback.",
+    "implementation_task": "AUD-22",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C24",
+    "conflict": "Immutable source versus new target baseline",
+    "sources": "Candidate/delivery",
+    "resolution": "Bind review/test to exact digests; stale target requires regeneration and renewed evidence.",
+    "implementation_task": "DEV-02",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C25",
+    "conflict": "Canceled job versus already dispatched effect",
+    "sources": "Workflow; provider effects",
+    "resolution": "Cancel future authority and reconcile receipts/compensations; never claim all effects undone.",
+    "implementation_task": "RUN-03",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C26",
+    "conflict": "Evolution routes versus /v1 public API",
+    "sources": "Evolution shorthand; production API",
+    "resolution": "All public resources use /v1; unprefixed examples are shorthand only.",
+    "implementation_task": "AUD-23",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C27",
+    "conflict": "Global quorum versus residency autonomy",
+    "sources": "Production placement",
+    "resolution": "Non-content global locator separate from per-residency write authority.",
+    "implementation_task": "AUD-13",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C28",
+    "conflict": "Declared no increase in heuristics versus behavioral correctness",
+    "sources": "lib/runtime-contract.ts",
+    "resolution": "Static heuristic checks do not satisfy application tests; evidence requirements vary by action class.",
+    "implementation_task": "QA-02",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C29",
+    "conflict": "Financial target customers versus measured acquisition",
+    "sources": "Strategy model",
+    "resolution": "End-customer targets define an illustrative scenario; independent funnel/capacity forecast must validate demand.",
+    "implementation_task": "AUD-09",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C30",
+    "conflict": "Future-proof and uncopyable versus uncertainty",
+    "sources": "Moat/future requirements",
+    "resolution": "Build tested replacement options and earned evidence moats; no guarantee against copying or paradigm change.",
+    "implementation_task": "AUD-20",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C31",
+    "conflict": "Learning qualification versus Active-only activity contract",
+    "sources": "Agent lifecycle prose/diagram/JSON",
+    "resolution": "The default learning pattern uses an Active independent evaluator on a Learning candidate that cannot claim production tasks. Specialized Learning execution is allowed only through a separately versioned training/evaluation grant and task-class registry. Generate lifecycle table/diagram/API from the same transition registry.",
+    "implementation_task": "AUD-23",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C32",
+    "conflict": "Global publication policy versus weak propagation helper",
+    "sources": "Knowledge/Evolution reference canPropagate",
+    "resolution": "Reference helper is illustrative, not production authorization. Require signed publication receipt, current object access, destination scope/purpose, withdrawal generation and receiving-side admission even within one tenant.",
+    "implementation_task": "AUD-03",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C33",
+    "conflict": "Nonfinancial credits versus spending authority",
+    "sources": "AgentOS/evolution economy",
+    "resolution": "Credits advise allocation priority within already authorized/reserved money; they cannot create, enlarge or transfer monetary entitlement or permission.",
+    "implementation_task": "AUD-12",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C34",
+    "conflict": "Inconsistent assertion modality enums",
+    "sources": "Knowledge/Evolution answer and fact schemas",
+    "resolution": "Separate epistemic modality, evidence environment and admission state. Versioned legacy adapters preserve original labels and synthetic provenance; recorded_decision is presentation sourced from a decision record.",
+    "implementation_task": "AUD-23",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  },
+  {
+    "id": "C35",
+    "conflict": "Forecast job usage versus production monetary allowance",
+    "sources": "Strategy pricing/model; billing design",
+    "resolution": "Expected monthly jobs are utilization hypotheses; production entitlements use immutable quantity/money tariffs with explicit provider billing path, overage consent and reserved ceilings.",
+    "implementation_task": "AUD-22",
+    "design_status": "resolved",
+    "runtime_status": "requires-task-evidence"
+  }
+]

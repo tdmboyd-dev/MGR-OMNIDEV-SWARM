@@ -1,0 +1,99 @@
+{
+  "version": "1.0.0",
+  "status": "target-design",
+  "public_api_prefix": "/v1",
+  "authority": {
+    "global_locator": "non-content-routing-only",
+    "write_owner": "per-residency-fenced-home-cell",
+    "uncertain_authority": "deny-sensitive-dispatch"
+  },
+  "action_classes": {
+    "snapshot_edit": [
+      "current-scope",
+      "exact-base",
+      "owner-review",
+      "truthful-static-test-label"
+    ],
+    "validated_change": [
+      "current-scope",
+      "exact-base",
+      "behavior-evidence",
+      "verified-worker-identity",
+      "independent-evaluation",
+      "resource-reservation"
+    ],
+    "deployment": [
+      "validated-change",
+      "target-grant",
+      "digest-bound-review",
+      "recovery-plan",
+      "fresh-health-baseline",
+      "provider-read-back"
+    ]
+  },
+  "evidence_binding": [
+    "tenant",
+    "project",
+    "run",
+    "task",
+    "attempt",
+    "candidate_digest",
+    "source_digest",
+    "image_digest",
+    "test_manifest_digest",
+    "fence_epoch",
+    "cancellation_generation",
+    "execution_identity"
+  ],
+  "withdrawal_states": [
+    "requested",
+    "denied_for_use",
+    "enumerating_derivations",
+    "purging",
+    "verifying",
+    "completed",
+    "blocked_by_named_obligation"
+  ],
+  "forbidden_inheritance": [
+    "credentials",
+    "permissions",
+    "consent",
+    "trust",
+    "vote_eligibility"
+  ],
+  "release_vetoes": [
+    "critical-access-flaw",
+    "secret-exposure",
+    "unverified-isolation",
+    "financial-integrity-failure",
+    "stale-ownership",
+    "missing-required-evidence"
+  ],
+  "claim_evidence_classes": [
+    "design-reference",
+    "stubbed-route-test",
+    "live-integration",
+    "isolated-execution",
+    "measured-production-outcome"
+  ],
+  "epistemic_modalities": [
+    "observation",
+    "human_assertion",
+    "inference",
+    "hypothesis",
+    "forecast"
+  ],
+  "evidence_environments": [
+    "real",
+    "sandbox_real",
+    "synthetic_simulation"
+  ],
+  "legacy_assertion_adapter": {
+    "observed": "observation",
+    "human_asserted": "human_assertion",
+    "inferred": "inference",
+    "predicted": "forecast",
+    "forecast": "forecast",
+    "simulated": "hypothesis plus mandatory synthetic_simulation environment"
+  }
+}

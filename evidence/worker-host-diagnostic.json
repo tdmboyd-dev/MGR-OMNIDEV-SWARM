@@ -1,0 +1,18 @@
+{
+  "engine": "Docker Engine Community",
+  "installed": false,
+  "daemonReachable": false,
+  "pinnedImageReady": false,
+  "capacity": {
+    "slots": 1,
+    "requested": 1,
+    "cpuSlots": 3,
+    "memorySlots": 6,
+    "reserve": 0.3,
+    "scope": "Per worker process; use one process per host. Performance requires measurement."
+  },
+  "issues": [
+    "Docker is not installed"
+  ],
+  "ready": false
+}

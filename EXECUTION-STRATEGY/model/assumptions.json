@@ -1,0 +1,370 @@
+{
+  "currency": "USD",
+  "period": "Five rolling operating years from funded start; 60 months",
+  "assumption_status": "Planning hypotheses, no actual customers or receipts",
+  "prices_monthly": {
+    "Pro": 29,
+    "Team": 149,
+    "Business": 499,
+    "Enterprise": 5000
+  },
+  "jobs_monthly": {
+    "Pro": 8,
+    "Team": 35,
+    "Business": 100,
+    "Enterprise": 350
+  },
+  "initial_cash": 1000000,
+  "setup_cost": 30000,
+  "reserve_target": 250000,
+  "scenarios": {
+    "Downside": {
+      "end_customers": {
+        "Pro": [
+          150,
+          450,
+          900,
+          1800,
+          3000
+        ],
+        "Team": [
+          25,
+          75,
+          150,
+          300,
+          500
+        ],
+        "Business": [
+          5,
+          15,
+          35,
+          75,
+          130
+        ],
+        "Enterprise": [
+          0,
+          2,
+          5,
+          12,
+          25
+        ]
+      },
+      "monthly_churn": 0.025,
+      "average_fte": [
+        4,
+        7,
+        10,
+        15,
+        22
+      ],
+      "support_fte": [
+        0.5,
+        1,
+        1.5,
+        2,
+        3
+      ],
+      "compensation": [
+        190000,
+        195000,
+        200000,
+        205000,
+        210000
+      ],
+      "model_cost_per_job": [
+        0.8,
+        0.8,
+        0.75,
+        0.7,
+        0.7
+      ],
+      "worker_cost_per_job": [
+        0.3,
+        0.3,
+        0.3,
+        0.28,
+        0.28
+      ],
+      "storage_per_account_month": 3,
+      "overage_revenue_fraction": 0.15,
+      "cloud_monthly": [
+        2500,
+        4500,
+        7000,
+        12000,
+        20000
+      ],
+      "free_budget_monthly": [
+        500,
+        800,
+        1200,
+        1800,
+        2500
+      ],
+      "growth_annual": [
+        20000,
+        40000,
+        75000,
+        120000,
+        180000
+      ],
+      "ga_annual": [
+        40000,
+        60000,
+        90000,
+        130000,
+        180000
+      ],
+      "services_annual": [
+        60000,
+        90000,
+        120000,
+        120000,
+        100000
+      ],
+      "marketplace_gmv_annual": [
+        0,
+        0,
+        0,
+        100000,
+        250000
+      ],
+      "payment_rate": 0.03,
+      "marketplace_take_rate": 0.15,
+      "services_direct_cost_rate": 0.65
+    },
+    "Base": {
+      "end_customers": {
+        "Pro": [
+          300,
+          1200,
+          4000,
+          10000,
+          20000
+        ],
+        "Team": [
+          50,
+          250,
+          1000,
+          2500,
+          5000
+        ],
+        "Business": [
+          10,
+          50,
+          250,
+          800,
+          1800
+        ],
+        "Enterprise": [
+          2,
+          12,
+          45,
+          110,
+          220
+        ]
+      },
+      "monthly_churn": 0.015,
+      "average_fte": [
+        5,
+        12,
+        25,
+        50,
+        90
+      ],
+      "support_fte": [
+        0.5,
+        1.5,
+        3,
+        6,
+        10
+      ],
+      "compensation": [
+        200000,
+        205000,
+        210000,
+        215000,
+        220000
+      ],
+      "model_cost_per_job": [
+        0.6,
+        0.55,
+        0.5,
+        0.45,
+        0.4
+      ],
+      "worker_cost_per_job": [
+        0.25,
+        0.24,
+        0.23,
+        0.22,
+        0.2
+      ],
+      "storage_per_account_month": 2,
+      "overage_revenue_fraction": 0.3,
+      "cloud_monthly": [
+        3000,
+        8000,
+        20000,
+        50000,
+        110000
+      ],
+      "free_budget_monthly": [
+        1000,
+        2500,
+        6000,
+        15000,
+        30000
+      ],
+      "growth_annual": [
+        40000,
+        150000,
+        600000,
+        1800000,
+        4000000
+      ],
+      "ga_annual": [
+        60000,
+        120000,
+        250000,
+        500000,
+        900000
+      ],
+      "services_annual": [
+        40000,
+        80000,
+        120000,
+        200000,
+        250000
+      ],
+      "marketplace_gmv_annual": [
+        0,
+        0,
+        250000,
+        1500000,
+        5000000
+      ],
+      "payment_rate": 0.03,
+      "marketplace_take_rate": 0.15,
+      "services_direct_cost_rate": 0.65
+    },
+    "Upside": {
+      "end_customers": {
+        "Pro": [
+          600,
+          3000,
+          12000,
+          35000,
+          75000
+        ],
+        "Team": [
+          100,
+          600,
+          2500,
+          8000,
+          18000
+        ],
+        "Business": [
+          20,
+          150,
+          800,
+          2500,
+          6500
+        ],
+        "Enterprise": [
+          3,
+          25,
+          100,
+          300,
+          650
+        ]
+      },
+      "monthly_churn": 0.01,
+      "average_fte": [
+        6,
+        18,
+        40,
+        85,
+        170
+      ],
+      "support_fte": [
+        1,
+        2,
+        5,
+        10,
+        20
+      ],
+      "compensation": [
+        210000,
+        215000,
+        220000,
+        225000,
+        230000
+      ],
+      "model_cost_per_job": [
+        0.6,
+        0.5,
+        0.42,
+        0.36,
+        0.3
+      ],
+      "worker_cost_per_job": [
+        0.25,
+        0.23,
+        0.2,
+        0.18,
+        0.16
+      ],
+      "storage_per_account_month": 2,
+      "overage_revenue_fraction": 0.4,
+      "cloud_monthly": [
+        4000,
+        15000,
+        45000,
+        120000,
+        300000
+      ],
+      "free_budget_monthly": [
+        1500,
+        5000,
+        15000,
+        45000,
+        100000
+      ],
+      "growth_annual": [
+        75000,
+        500000,
+        2000000,
+        6500000,
+        15000000
+      ],
+      "ga_annual": [
+        70000,
+        180000,
+        450000,
+        1000000,
+        2000000
+      ],
+      "services_annual": [
+        30000,
+        60000,
+        100000,
+        150000,
+        200000
+      ],
+      "marketplace_gmv_annual": [
+        0,
+        0,
+        750000,
+        5000000,
+        20000000
+      ],
+      "payment_rate": 0.03,
+      "marketplace_take_rate": 0.15,
+      "services_direct_cost_rate": 0.65
+    }
+  },
+  "model_version": "2-overage-workload-linked",
+  "overage_retail_per_job": 1.5,
+  "overage_pricing_status": "USD 1.50 per equivalent bounded job; internally authored scenario assumption, not offered or provider price. Included jobs are expected utilization, not contractual allowance caps."
+}

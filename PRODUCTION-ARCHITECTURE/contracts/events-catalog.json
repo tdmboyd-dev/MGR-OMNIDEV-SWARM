@@ -1,0 +1,210 @@
+{
+  "delivery": "at-least-once; application effects idempotent",
+  "envelope_schema": "event-envelope.schema.json",
+  "topics": [
+    {
+      "family": "identity",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "identity.session_revoked.v1",
+        "identity.membership_changed.v1"
+      ]
+    },
+    {
+      "family": "connection",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "connection.authorized.v1",
+        "connection.revoked.v1",
+        "connection.sync_failed.v1"
+      ]
+    },
+    {
+      "family": "ingestion",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "ingestion.snapshot_committed.v1",
+        "ingestion.extraction_completed.v1"
+      ]
+    },
+    {
+      "family": "graph",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "graph.projection_updated.v1"
+      ]
+    },
+    {
+      "family": "memory",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "memory.assertion_added.v1",
+        "memory.decision_superseded.v1"
+      ]
+    },
+    {
+      "family": "agent",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "agent.admitted.v1",
+        "agent.retired.v1"
+      ]
+    },
+    {
+      "family": "task",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "task.admitted.v1",
+        "task.checkpointed.v1",
+        "task.completed.v1",
+        "task.failed.v1",
+        "task.canceled.v1"
+      ]
+    },
+    {
+      "family": "operation",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "operation.accepted.v1",
+        "operation.dispatched.v1",
+        "operation.outcome_unknown.v1",
+        "operation.reconciled.v1"
+      ]
+    },
+    {
+      "family": "artifact",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "artifact.validated.v1"
+      ]
+    },
+    {
+      "family": "finding",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "finding.opened.v1",
+        "finding.verified_fixed.v1"
+      ]
+    },
+    {
+      "family": "incident",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "incident.detected.v1",
+        "incident.diagnosed.v1",
+        "incident.resolved.v1"
+      ]
+    },
+    {
+      "family": "deployment",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "deployment.planned.v1",
+        "deployment.completed.v1",
+        "deployment.health_failed.v1",
+        "deployment.rolled_back.v1"
+      ]
+    },
+    {
+      "family": "twin",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "twin.scenario_completed.v1",
+        "twin.calibration_updated.v1"
+      ]
+    },
+    {
+      "family": "research",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "research.evidence_added.v1"
+      ]
+    },
+    {
+      "family": "score",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "score.snapshot_created.v1"
+      ]
+    },
+    {
+      "family": "usage",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "usage.reserved.v1",
+        "usage.recorded.v1",
+        "usage.settled.v1"
+      ]
+    },
+    {
+      "family": "billing",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "billing.invoice_issued.v1",
+        "billing.adjustment_posted.v1"
+      ]
+    },
+    {
+      "family": "marketplace",
+      "partition_key": [
+        "tenant_id",
+        "aggregate_id"
+      ],
+      "types": [
+        "marketplace.release_published.v1",
+        "marketplace.release_revoked.v1"
+      ]
+    }
+  ]
+}

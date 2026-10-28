@@ -1,0 +1,1074 @@
+{
+  "baseline_commit": "e071ee6bc1d964a5eba035e93e0a2529ce99f340",
+  "snapshot": "pre-review",
+  "files": [
+    {
+      "path": "PRODUCTION-ARCHITECTURE/01-system-and-scale.md",
+      "sha256": "335a35f812ccecc9f2329cabc3b5deebe66156f07b497a4a83d6abf9991292e6",
+      "bytes": 7833,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/02-services-and-boundaries.md",
+      "sha256": "a87242ddffd032ac417eb07a6378a1f54b7786bf984241bf44ac822f2d8d78b0",
+      "bytes": 7106,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/03-agent-os-and-orchestration.md",
+      "sha256": "e48f196e5033ddafdf2d3b61f07e0342de68869b69d0e02ffd80ac3f1e50e7be",
+      "bytes": 6546,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/04-data-graph-memory-vector.md",
+      "sha256": "822c9333f4ff991920e856c31bef13cbbba091693c1193629b55dcf83dfd7ca2",
+      "bytes": 8320,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/05-security-auth-and-isolation.md",
+      "sha256": "0135f7e7fa1b6524bc32ca42ae649c25cf5e6ed1bb12ae736260ca42a1a10136",
+      "bytes": 9389,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/06-events-messaging-and-workflows.md",
+      "sha256": "1280ce12bca40b064abe26b6f034c3ff3f00412e14e2d4d0a2d175a084c682e1",
+      "bytes": 6127,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/07-api-and-sdk.md",
+      "sha256": "443d5fc7faed4eba3c00c4608496d6a169aecbf6f5001b454fe1569416c6d21d",
+      "bytes": 7584,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/08-ingestion-repository-and-gaps.md",
+      "sha256": "b59fb6dce567a39a046b203b0932e82cada441bf4f9076ce8088ea68f9ef0a2f",
+      "bytes": 7209,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/09-cloud-deployment-and-recovery.md",
+      "sha256": "799ff3db3106eadc4583aa044defbded1bb6c3db6fa14da50cc854953c6026af",
+      "bytes": 6429,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/10-autonomous-development-and-healing.md",
+      "sha256": "7724aed4f14a39a8fb54088b9c8ba528075a95e6e54993c7cfd985c3049bfaf2",
+      "bytes": 5451,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/11-digital-twins-futures-and-innovation.md",
+      "sha256": "fab7379fdaaf93ede6ab30114fe47f9ef125bab888437537609ea57bb0547d3a",
+      "bytes": 5965,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/12-experience-workspace-and-dashboards.md",
+      "sha256": "25174b7d760a29a15996f2fb7142812ddd659b4eae1f935ffe885cff87f7e8b3",
+      "bytes": 6278,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/13-plugins-marketplace-and-domain-framework.md",
+      "sha256": "2e4dd1e5ec8d39b0a53b21cae3b739341fffd82982ff016972ef6a1ef3e1d33b",
+      "bytes": 5090,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/14-cost-metering-billing-and-analytics.md",
+      "sha256": "3e6f8196b94b80fa4146a92ca427d19bdd6b757076be5299ffc2c5a636aa02de",
+      "bytes": 6176,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/15-observability-scores-and-operations.md",
+      "sha256": "169910a82b84e9296ab4d2fc90bd140f339bc3903d69bdb20d1e60377abf09c2",
+      "bytes": 6890,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/16-relational-schema-and-data-lifecycle.md",
+      "sha256": "ab79b9cd133d657a5954f35f50174857160938ac28844d928be93a8b2ce19d1a",
+      "bytes": 8604,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/17-decisions-evolution-and-migration.md",
+      "sha256": "17d52d85c479cc032a6b6b33d6ce51a9a4b8f916df0eb5799f1441f2c914b694",
+      "bytes": 9061,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/18-verification-and-production-gates.md",
+      "sha256": "c1e554d541636372a48dad8e01e5077b27d75ac8536d98c66a7bf8deff309331",
+      "bytes": 5654,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/FULL-ARCHITECTURE.md",
+      "sha256": "d4cce977c78e1ed16f67b622c7beab24cb1b779755a5b91b7675f76cfebf3663",
+      "bytes": 126022,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/README.md",
+      "sha256": "799d26d78c83803d8cab75e0aaef131b944f87598d34037c0f6c4675520def10",
+      "bytes": 4325,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/contracts/agent.schema.json",
+      "sha256": "d9880006b25f48ac54d1af43ab17a441b9f1ea7eedca6da3c61d8be9e7a63ec8",
+      "bytes": 3064,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/contracts/capability.schema.json",
+      "sha256": "51c0b1c4cf23e807d1ac49cb60791f6235a35e3c9d04a54e0723c631c7c72613",
+      "bytes": 1655,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/contracts/core-schema.sql",
+      "sha256": "338a259dfa2be7006de4f32d6bc1fb8964a47af7af961004203f963d575c77b8",
+      "bytes": 8431,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/contracts/event-envelope.schema.json",
+      "sha256": "36fbd0c90bdb712f9f958b0a807871ddc08f7dd2aaee10da58f4182b06dfedd3",
+      "bytes": 2995,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/contracts/event-example.json",
+      "sha256": "9f4e2856d9ba7ff9e89cd8026348fd70febbf857e9907e0320108f48a8dc5113",
+      "bytes": 887,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/contracts/events-catalog.json",
+      "sha256": "7c2c05f76ac0e7ceea6198afcefd299528c1a6eadc7d57a029fd0cb01dd5d07a",
+      "bytes": 4170,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/contracts/experience.graphql",
+      "sha256": "7fc870b0e0940b1b028f32f89fa941a541aa278ae2082bf2215b167d7c2b2266",
+      "bytes": 2171,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/contracts/openapi.json",
+      "sha256": "d97a466bef8c0e2a092d88e6726494e1d482acbdd0619c6837c08767855a093f",
+      "bytes": 29155,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/contracts/run-example.json",
+      "sha256": "adfe4cc2707e6fbdacd30fd92d74754da3ecd4171cca2367da29ded2d993aab3",
+      "bytes": 568,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/coverage-map.md",
+      "sha256": "934d157edf88540e2ecaec4410a7ba4c327cb99d6a94f8888e43149eb76b77dc",
+      "bytes": 3690,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/source-references.md",
+      "sha256": "e1e743f575fcd8e55d1e64d75ff089e28bd33009bb757eb1306acc8301dc881f",
+      "bytes": 1864,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/validate.mjs",
+      "sha256": "9c7db9676085e83489a1f9a6acba1f4f5c3061cf3033ecbdc29111e04d44f648",
+      "bytes": 3796,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/validation-report.json",
+      "sha256": "b8b0bb9cab0c7c6cdaa06e419ed96d8f9ad233d68946129d4241721fb5172f42",
+      "bytes": 671,
+      "scope": "design"
+    },
+    {
+      "path": "PRODUCTION-ARCHITECTURE/validation-report.md",
+      "sha256": "7bda4f09a9e70a3a7226914e742c7d52c6569f62488babb0237207e28bdc318a",
+      "bytes": 672,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/01-intelligence-model.md",
+      "sha256": "3a04991fef0f02dce383d249c183b50f4d9b2ee56d6646f33cf4eb91f2a53299",
+      "bytes": 9301,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/02-memory-and-decisions.md",
+      "sha256": "335ed79793ec9c24d13e7b6a45005fe6d02a3dc5fb3ad48c9ab7313c91d33e68",
+      "bytes": 8171,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/03-time-and-indexing.md",
+      "sha256": "3863c1d719c435093f69622c5f29d27491cc9d438ef5354bd017d6d6c3bcda35",
+      "bytes": 7308,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/04-reasoning-and-retrieval.md",
+      "sha256": "2b541c699753df43fdafd1f49c226991fcce0003a380088bfbe76537687a8f7f",
+      "bytes": 9030,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/05-gaps-and-organizational-intelligence.md",
+      "sha256": "33b80b6be7209e7f254a8c8ba76d9874086064ce6abbb2dec4ffb8490b8866a5",
+      "bytes": 5156,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/06-scale-security-and-operations.md",
+      "sha256": "5d59f7e25872d99767da9a55aa36fb457b19b14130dd6b38e7f6a457a178fc1f",
+      "bytes": 10112,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/07-contracts-and-delivery.md",
+      "sha256": "525ca7adc6f6f791bd09e692babda6a54cfb7928506396bdc93b5ad3ad8e72c2",
+      "bytes": 7575,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/FULL-KNOWLEDGE-ARCHITECTURE.md",
+      "sha256": "491be8225a097b3ce60d17a7a4405392e679c2629ebba4a51abc402282513ae7",
+      "bytes": 63865,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/README.md",
+      "sha256": "1e9f21c00c93127a19cdf88e535c035d2f3f6a685423d4b2eee8a0db61f93d56",
+      "bytes": 1357,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/contracts/answer-example.json",
+      "sha256": "91f05d9341f255f2a697763808bca2125ddd1a4c5288857faa040dee70e1b436",
+      "bytes": 693,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/contracts/answer.schema.json",
+      "sha256": "aafc8b63a502ec0782bc535019ea75b370cb4261e518784915867fe6fd90fa51",
+      "bytes": 2035,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/contracts/assertion-example.json",
+      "sha256": "d6b5ca34360493c91f6210d93d3737a94f9e9f74d88636d609db00aca93d0173",
+      "bytes": 764,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/contracts/knowledge-schema.sql",
+      "sha256": "a0b0e15fe54e029c2510521c45b4a6ddbcab99c4e4c41ae9d780b5a0ab2bbff5",
+      "bytes": 4950,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/contracts/memory-example.json",
+      "sha256": "002b0782fb71d597bd73cfbda10cc8e790316dc397555c8809031e0ffc1cf59c",
+      "bytes": 1012,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/contracts/memory.schema.json",
+      "sha256": "ed26419962c87da1518f07066b23ac6651539b3f978947f562f542c3fb732ee7",
+      "bytes": 3282,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/contracts/ontology.json",
+      "sha256": "6ec4c8c6d95de962358f2d3644a5779d129e78f6dd596458bbdedd9eb961046c",
+      "bytes": 108143,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/contracts/relationship-assertion.schema.json",
+      "sha256": "58dcdedcde956ef6311988a48c528311a4585a04d8b955f4f10ce2cf27ac4f73",
+      "bytes": 3498,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/research-and-decisions.md",
+      "sha256": "e6a65a304fbaaf9edd802f5abfcb570c432d31e1c4ce2a52d878db936f46a011",
+      "bytes": 7049,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/validate.mjs",
+      "sha256": "cf794b378864eeb096da9758be84580118fbe0a9e48e090a8c6b5909e0da7db5",
+      "bytes": 4644,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/validation-report.json",
+      "sha256": "87a92e54683982297973cb18e21d5ab26aa90fce2461045b36d9dbfd432b25ed",
+      "bytes": 639,
+      "scope": "design"
+    },
+    {
+      "path": "KNOWLEDGE-ARCHITECTURE/validation-report.md",
+      "sha256": "5aa0fe89372a706f49049ef83c6b0e081171372c39312094c7cafd490cac675c",
+      "bytes": 597,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/01-system-and-agent-contract.md",
+      "sha256": "2734c2af8f365bc346906841cf999d9258d9db14c046f079f9386189fe233506",
+      "bytes": 8036,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/02-lifecycle-and-fractal-swarms.md",
+      "sha256": "34ff3dd9167e27e800730d15aefe6fbe600503540254ce2ed3ac00a1b2a8e68f",
+      "bytes": 7252,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/03-tasks-scheduling-and-execution.md",
+      "sha256": "343a6da68753b36aaa692c6861afddee060a6f564aa241163b53c123a645eef8",
+      "bytes": 6791,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/04-communication-and-debate.md",
+      "sha256": "d730b3ee64a4ba173b3ada7ad01dc6a78115d606c332247123d3035d4116fa01",
+      "bytes": 6487,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/05-evolution-economy-and-marketplace.md",
+      "sha256": "f1c375c18e8a91b510413508ec620c722842d1948c2511ecb38620bfd9f5c6e8",
+      "bytes": 7122,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/06-incidents-and-command-center.md",
+      "sha256": "b37756b514531cffc9e461ed9e8157d3581bb87c82fb4edaf83e2f7fb06cd3a7",
+      "bytes": 5949,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/07-scale-resilience-and-company-simulation.md",
+      "sha256": "236352b1fb1aae7c8dc6f19617a486f7c8dbfcf8d4cd5cb9cbabfff8e772aa5a",
+      "bytes": 7825,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/08-apis-decisions-and-migration.md",
+      "sha256": "9af79902cb656fff26b80cf8a304485f06d9c28de20297c998741e569e82aaef",
+      "bytes": 6692,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/FULL-AGENTOS-ARCHITECTURE.md",
+      "sha256": "502f8821fef9299a3e68ba8c6d5655a1cf244a73bbd78eec85be5fa15d1f46dd",
+      "bytes": 62359,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/README.md",
+      "sha256": "be2303c5a611774e93124625a9ded02277b8384d7d0e7bb8557f28eede502971",
+      "bytes": 1489,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/contracts/agent-example.json",
+      "sha256": "5f508c1ff7796a6fc94a9cefee3d350e575fb58a7d8d9b2bf637c0ac0695965a",
+      "bytes": 1693,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/contracts/agent.schema.json",
+      "sha256": "64ad398914d82b622defdcd9bdf3d851ebab0aea2c3bf104ba860a304d97b6a9",
+      "bytes": 6979,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/contracts/agentos-schema.sql",
+      "sha256": "c3e9e8e41e4f5afaf1d9533973c9f00e15439b68514fea5279ea3966518abde8",
+      "bytes": 4834,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/contracts/lifecycle.json",
+      "sha256": "3686845aa1749d7b38553769073b06a30c0d64368a9503cd82ff6b76cef7c2f4",
+      "bytes": 1194,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/contracts/message-example.json",
+      "sha256": "562e6917133b2518620cb2a24b8133a1875a9daea0f2bfd4319fbda693b36dc4",
+      "bytes": 860,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/contracts/message.schema.json",
+      "sha256": "fc38927468d1d9c5f5634629396b295928894da8f3c9f49a265c243e182575c2",
+      "bytes": 2252,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/contracts/task-example.json",
+      "sha256": "731a457c26b9e1203ca552fb14c1af94ede9b9327d33c40a729cf258a0629b68",
+      "bytes": 1026,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/contracts/task.schema.json",
+      "sha256": "cfaeea3a1fd1d75361286056214bbfd37bf685b3cfa53dff434e5393824ee742",
+      "bytes": 3369,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/research-and-coverage.md",
+      "sha256": "d0a6f0c65a5a63958ab1ebb1fe1cf7ddc0f3d7e0711e8f0ed812110f137458f2",
+      "bytes": 6006,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/validate.mjs",
+      "sha256": "796538cde2996a55f5c5bee0c2a9471f890e29f9d700b83d9b5da387b5b43d80",
+      "bytes": 5610,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/validation-report.json",
+      "sha256": "fedc5a42047832169e1725594342492c1b7363057c142d3f3047f9236fd9c829",
+      "bytes": 668,
+      "scope": "design"
+    },
+    {
+      "path": "AGENTOS-ARCHITECTURE/validation-report.md",
+      "sha256": "6b58c419737b7a279e161c2f80d29bdf5fcc8d0832b8ccdb883e7bdcdcb41b42",
+      "bytes": 660,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/01-experience-and-navigation.md",
+      "sha256": "cf07af1099a459c7c0fd92628776553d359e197cb7da7975d2f889aa906da774",
+      "bytes": 6870,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/02-onboarding-command-and-user-flows.md",
+      "sha256": "b64b9c767e4ee3cc06d7bf7b9e1207fb6f39fa6dbbe5c45b2ab9b10dd50c85bc",
+      "bytes": 8070,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/03-home-project-and-repository.md",
+      "sha256": "decf96752f3699306023af8592a1332196a4b7aa4a8a9b3dbaae8c4ae1629245",
+      "bytes": 5746,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/04-spatial-explorers-and-agent-management.md",
+      "sha256": "cd2797534530b8f66dfe7337c7b10a806b1393ca224ee02f1233e3ab6a3572a6",
+      "bytes": 5877,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/05-specialized-centers.md",
+      "sha256": "69b43f944f9fa747a3272fd3f98c2d3d150da94859771666c31ea5cb3bcd8abb",
+      "bytes": 6671,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/06-design-system-and-interactions.md",
+      "sha256": "73aa907eecf23993a71eca49e99aad61875e893412ea2c1af98629dda098da64",
+      "bytes": 6935,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/07-accessibility-mobile-and-modes.md",
+      "sha256": "8adb5a6c5a8fa6cbff9a1c5988f1fbcbaea41282402d28449b29efe88bd1ae22",
+      "bytes": 7048,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/08-expansion-handoff-and-verification.md",
+      "sha256": "4164ce80671ec916cb70da479200b4bb237ac1620de622bde5352416e376acfd",
+      "bytes": 7559,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/FULL-EXPERIENCE-DESIGN.md",
+      "sha256": "d086f19a115bc77890ed46ce1006163ab4d7bcefe7dae852be204f2812d34b11",
+      "bytes": 55068,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/README.md",
+      "sha256": "aba97787ad00e3a9554d541c11136bd680e6db329c9a2b424ef8ed6bba96a8b9",
+      "bytes": 1292,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/contracts/command-catalog.json",
+      "sha256": "f29d9525f5203afc4251b19909508ecee14f34c0a3589c04f5ceee993a5905b0",
+      "bytes": 1936,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/contracts/design-tokens.json",
+      "sha256": "43c298278e2be46b92cf615f14dbbb0b96b7fde4609debcf46e80f92482effca",
+      "bytes": 1963,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/contracts/screen-catalog.json",
+      "sha256": "0240d6e53ac37eeb6db97a66710b54b17157a497bc21d5d695c8b0527eba47be",
+      "bytes": 8904,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/validate.mjs",
+      "sha256": "41e3918d78a2cdaa922e0643921ad4762520ca28b6389bcaab388190dbf2d2f0",
+      "bytes": 3426,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/validation-report.json",
+      "sha256": "94b820d25c7de3c012512f45fd0cab27b7ae24c6ea31b1b7bcab68a2f522b523",
+      "bytes": 9717,
+      "scope": "design"
+    },
+    {
+      "path": "EXPERIENCE-DESIGN/validation-report.md",
+      "sha256": "77631b29dfb6b4c4a6f950924dbc23ed3a0245b0e6bfc90b09cfc7b0991048f0",
+      "bytes": 587,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/01-company-thesis-and-mvp.md",
+      "sha256": "6f59a672629dba0f743b7575093d4af26d0627859bf208b65b027ec806cb69b4",
+      "bytes": 7120,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/02-ten-phase-master-roadmap.md",
+      "sha256": "e68daeb4cc9b0a5bc2712c0a21e3dc09a2a7e2502c818ee8bfbd640dfd58d1db",
+      "bytes": 6857,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/03-first-year-execution-and-technical-horizons.md",
+      "sha256": "bf3172f00c3957bb339099b7dee8e5a6a56d6b49225d31b275ed40239ef0bcf8",
+      "bytes": 6250,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/04-product-tiers-and-pricing.md",
+      "sha256": "b09b3d8cbeead0934dd03e84115026c3cbdb3194350420632f62ca386f3c4e70",
+      "bytes": 5909,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/05-market-competition-and-moats.md",
+      "sha256": "236bf56c7ddf0625a6fbf9fd823c2329da9efc5bd7894917ed4135b1649a2257",
+      "bytes": 6938,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/06-growth-and-launch.md",
+      "sha256": "492e586efe81e758f9eee10375dfed65e2bca2c53241af72db96c9434d13b6a3",
+      "bytes": 6025,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/07-team-funding-and-board.md",
+      "sha256": "b3bbd3fb52f09800c883c6ea8c0ce7ee1ab7c3bee295dca27f3249f177e3d32c",
+      "bytes": 6713,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/08-financial-plan.md",
+      "sha256": "3973e6538a6920fbb061aec74429ff1cc25152ab68cc606d0a816f371b6de8ce",
+      "bytes": 9454,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/09-risks-and-ten-year-blueprint.md",
+      "sha256": "d58a905ab2d2e046c8023770b51f62231eb58ff92ed4d69ad4350f5fc13a694e",
+      "bytes": 6680,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/FULL-EXECUTION-STRATEGY.md",
+      "sha256": "be74a0ca9e57c603865e31f3eceb81847cdc0d487f07f5852569bd35573239c9",
+      "bytes": 67435,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/README.md",
+      "sha256": "728983113b025a91387d49d879706a66e8abb3b3553a3149909edcac609932e5",
+      "bytes": 1320,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/model/MODEL-RESULTS.md",
+      "sha256": "412c47d78eab23f64fbdfed8cfd0395d286a45ed69162d150189b07696a970b5",
+      "bytes": 2934,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/model/assumptions.json",
+      "sha256": "8f794c60bbd5452ecc06974c9ca092870f2a5147373d45480fd1ce0665f799a4",
+      "bytes": 6044,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/model/financial-model.mjs",
+      "sha256": "9c2fc39ed7345bb1b0cedce23d21f3f87f81df327b0f9d2e96c219e4d925a195",
+      "bytes": 4899,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/model/results.json",
+      "sha256": "c66ea7b3056a3b565b30404c5cc00c7140b9b5c53d8b07459afb9cb1a9511488",
+      "bytes": 195771,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/phase-gates.json",
+      "sha256": "9aa3caec91e6e8a7e3c0a6a01d223c369bb42930184a258baf74e21ff07df037",
+      "bytes": 2656,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/source-references.md",
+      "sha256": "7f5b12f2c715e462bad989f79c86a89fee898f785f3492cb3ec22997f6905e06",
+      "bytes": 2291,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/validate.mjs",
+      "sha256": "0860293e35de1a5391664fefe11acc592490a3e044c7221c7cb4cbda5e257e66",
+      "bytes": 4118,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/validation-report.json",
+      "sha256": "f9783024c11655091b22865e13f7098f5ed48f17cc82b8ab45fe38414a0877f3",
+      "bytes": 572,
+      "scope": "design"
+    },
+    {
+      "path": "EXECUTION-STRATEGY/validation-report.md",
+      "sha256": "88ec8ba5e473e2acaf08ef9c97702aeca92bd10e5737beb9195a62a9f13cc3da",
+      "bytes": 546,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/01-system-and-evolution-kernel.md",
+      "sha256": "5dd2ac8afcbfe04003494a1bb37fda728ba2e314a2a2cb100f4bedeff2594b17",
+      "bytes": 4623,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/02-learning-and-adaptive-expertise.md",
+      "sha256": "0b44c9d4c16910ce176e504d90a2f07dc72e3096289af45c51e93a9b9b917f26",
+      "bytes": 3835,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/03-agent-genetics-and-creation.md",
+      "sha256": "b8a0367540de08b72427a3047a54c23e338f99aeeb6fe44827b83611f54f8d38",
+      "bytes": 3688,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/04-knowledge-propagation-and-graph-evolution.md",
+      "sha256": "cd116908bea43b27e11b168ba82932ea2c883a295a672457347277257c9be2e7",
+      "bytes": 3447,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/05-experiments-meta-reasoning-and-prompts.md",
+      "sha256": "e8a105f2291bdfd4b6d725491d1473c38c7c2693d6c163976fadea3a46192656",
+      "bytes": 3486,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/06-research-invention-and-future-exploration.md",
+      "sha256": "c7036591ab0bfa844b198a874456e57720154335000e3537307262ea7dd721d9",
+      "bytes": 3042,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/07-organization-and-civilization-simulation.md",
+      "sha256": "4cc0291763095f3df9be336127993c1cf44c0858bb5926f791a1c52dcc13a18a",
+      "bytes": 2910,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/08-scores-omega-and-long-term-stewardship.md",
+      "sha256": "5101688db1b5f5ce515374a42def3d3cd7d019b6f52c18be9c565444e371b661",
+      "bytes": 4020,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/09-contracts-scaling-and-implementation.md",
+      "sha256": "4d7da0765c1de188f96703e784dc41dad577fd2af91e0a0093bb23e40af12476",
+      "bytes": 4265,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/FULL-EVOLUTION-ARCHITECTURE.md",
+      "sha256": "5d589b100b8ed2c0914aa97550d13f8e21fa7c71efc0af8ef7bf0a030a739ad1",
+      "bytes": 33480,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/README.md",
+      "sha256": "5eacd21fe470fdae27fdfc9e36ab9515c2d765faee780c8f762e9e01ead00c33",
+      "bytes": 1482,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/contracts/evolution-contracts.json",
+      "sha256": "87a786c65dfba069890d7fe9a28ab1838a1733ee818074a960cec8da9b355ab4",
+      "bytes": 1784,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/contracts/release-guard.mjs",
+      "sha256": "98c0968b3f4c3cd2be8f77003d40659966e72f9fbb16dc1aeab12522e8f9e6aa",
+      "bytes": 1548,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/source-references.md",
+      "sha256": "534cbe5f95ec6af900b60c9109f6624d2a4ad09b86fa160e4d4e1c0d60a71168",
+      "bytes": 925,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/validate.mjs",
+      "sha256": "86ec150c4c569d1901ad1ee2719f83efde9d0976145fb06767624224b3c13309",
+      "bytes": 3656,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/validation-report.json",
+      "sha256": "d8d6e3d3f101775fb451a0252687d33102e10d5833b74e90b87934f947be7f0b",
+      "bytes": 457,
+      "scope": "design"
+    },
+    {
+      "path": "EVOLUTION-ARCHITECTURE/validation-report.md",
+      "sha256": "40afbef9ff7a9808580e53685a21eeecc05be9ce17999f7c9c007f28870a7800",
+      "bytes": 439,
+      "scope": "design"
+    },
+    {
+      "path": "UNFINISHED-WORK/02-agent-runtime.md",
+      "sha256": "8c8fb81dff01d6d1f4b0d4411abdf3b7075f1d40811021e063a15866691ccc29",
+      "bytes": 6457,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/03-account-connections.md",
+      "sha256": "5e3fe73c33779e765a3fd466e0260ab7649e9787d6682ee8ba25ba784e161c5d",
+      "bytes": 4779,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/04-integration-inventory.md",
+      "sha256": "1375fab282b9aa35bada9b57196e857fc82d53d33baf7ddcec992c525878f0ab",
+      "bytes": 34882,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/05-knowledge-and-gaps.md",
+      "sha256": "6bdf74a099c7951cbd25a120930973a72af636490653972a70560943cb54aa4c",
+      "bytes": 3289,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/06-security-and-verification.md",
+      "sha256": "680bd5df5ac993383042dfdc9b84c02072939fb4bf2e33f57c3d6d41275bdd23",
+      "bytes": 6860,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/07-production-and-self-healing.md",
+      "sha256": "0b383a5b9e33fd0365db3f452aadc194be244dc7e0eebead30af44a35560b7c5",
+      "bytes": 3672,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/08-digital-twins-and-futures.md",
+      "sha256": "6637119198eddd45dd45f6ebd594cb6acfddfe42f27a5621381223f5c6866fbc",
+      "bytes": 2679,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/09-design-and-user-experience.md",
+      "sha256": "dc2923ed91ed80c389faa6c39cf3b69e76f37284a6b4cc5ddbcb37bf31867475",
+      "bytes": 3116,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/10-business-and-innovation.md",
+      "sha256": "e6f4097a013b076f86b5157a63df2d5ba66fd85c6e3204166aa6214703179ac8",
+      "bytes": 2989,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/11-specialist-domains.md",
+      "sha256": "1bcba1a0b67313dff157a26ddec9f770f2ad8a04da9221bf64233a0c51e14dcf",
+      "bytes": 55093,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/12-data-memory-and-platform.md",
+      "sha256": "0e81871f035e1a98fd656e2d57973fe4958ffdcb48e8fb2609253e9882753250",
+      "bytes": 2867,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/13-release-and-github-handoff.md",
+      "sha256": "5f050b6848c247049b6c9dc058c433eca2a4f31b6ded84f8f7a82e787ac16ee2",
+      "bytes": 3140,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/README.md",
+      "sha256": "e21e50952983df6ef88582c2bcc6205064dad59c25982b1eb9b4bc31d37c9498",
+      "bytes": 5352,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/RESUME.md",
+      "sha256": "ac86f0cf97dac02cdb74c5e630235a7bd66638d9ff2f656cbeff8e7a298b409c",
+      "bytes": 1572,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/backlog.json",
+      "sha256": "e6a4d21e451d0d787bf7f82afc5b53279e4521bb4d7162555eb7c01587f54b14",
+      "bytes": 143081,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/current-state.md",
+      "sha256": "d1975105af1aba29c068f78f9f3121160c2d28147062d51254777ad08d699655",
+      "bytes": 2563,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/decisions.md",
+      "sha256": "c26dce9595c581ea7e1c21218b2c31cc4980dcb5e3c075a11e4f2838cb2694df",
+      "bytes": 1614,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/implementation-order.md",
+      "sha256": "08edb6f36a6c83d6daab835f0f1a72b9588a7b117e663cc9fc5390909437fc19",
+      "bytes": 1502,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "UNFINISHED-WORK/requirements-map.md",
+      "sha256": "e6e67ddd51904460ca63afabe93851a0a52e24aae76f484b4d7040f1cd5f1d39",
+      "bytes": 2510,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "architecture/COMPLETION.md",
+      "sha256": "f647234d3cb3fa65616c9000a4bd0501a87610f9ba7275a93c91519a76fbdb35",
+      "bytes": 1810,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "architecture/STATUS.md",
+      "sha256": "d13d7c65e099c9972f4392a0bb76956d87131dae1f799674c5d8ef3547688d95",
+      "bytes": 6255,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/analyzer.ts",
+      "sha256": "0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709",
+      "bytes": 5716,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/catalog.ts",
+      "sha256": "708dba1b8f78d1147815d6f4003edd7ad72425d7785207a6c07b6a19c176277d",
+      "bytes": 2904,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/connector-context.ts",
+      "sha256": "bbddff68689cb0f6926fecd4b8b96f12f2054277c296e97b0df07d4ad5ece24e",
+      "bytes": 612,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/connector-contract.mts",
+      "sha256": "e1a7b24a8793af34b595690d9b1300c897c7321c14f215cedf58ad95799d7c3e",
+      "bytes": 5362,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/connector-errors.mts",
+      "sha256": "a22edf13d6873ae832c4a2a0d579fc666c73ec996ef0722d39172649d38f0871",
+      "bytes": 2717,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/connector-preview.d.ts",
+      "sha256": "abd69a94f7f61f1359063bb557574faae35e8ff5a028cc4c04b9ee248ef52642",
+      "bytes": 433,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/connectors.ts",
+      "sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c",
+      "bytes": 416,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/github-account.ts",
+      "sha256": "7e08778fd77ea2b04ea87cf8a2f07a66dc71b8b85f8826d0bdf6d9f35a6b8b9d",
+      "bytes": 6155,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/github.ts",
+      "sha256": "3441698fe3af45bcce94a67f718193910c8aaa54534400c63574ff943ab1f10b",
+      "bytes": 2753,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/jobs.ts",
+      "sha256": "a2e497a715721b688005aec9b13b1a8d0717bd02e69e98f3db02c62f43d54cbe",
+      "bytes": 15247,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/providers.ts",
+      "sha256": "b1134c207e9dfc18bab74d149ebb2e39f796f627ec7c0ca97d115d09a4c83849",
+      "bytes": 4196,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/repository.ts",
+      "sha256": "a29647cef43317afcb218a6d94dde64f82c0c2bf73e5e8c8f336b23ec18602c0",
+      "bytes": 7565,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/runtime-contract.ts",
+      "sha256": "4c9f890af9857d089433ddb73ceaf5f2ec347f4723264374c4856156b93b9d75",
+      "bytes": 5208,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "lib/utils.ts",
+      "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68",
+      "bytes": 177,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "db/index.ts",
+      "sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd",
+      "bytes": 423,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "db/schema.ts",
+      "sha256": "f7f0a03eaecd2fd6285b033fa41a69c15f481a5f0583b093e73a97ef29023f31",
+      "bytes": 1237,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "db/store.ts",
+      "sha256": "4ce8f7f58de76a6f309bfc2927e2ee4c82ad9d745e70b4b7c8d9308cfd095b80",
+      "bytes": 1033,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "app/api/accounts/github/route.ts",
+      "sha256": "f5bf9753d7bdcc7422757ba90aa84aece6eafb9ae77c446533febbe603c3db84",
+      "bytes": 3837,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "app/api/runtime/route.ts",
+      "sha256": "d4947407b872c69adcd446adbbc909753899959998bd92336b1ec02e40a51924",
+      "bytes": 2276,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "app/api/worker/route.ts",
+      "sha256": "4ea821c69b77bc9bd2f6c5c3c98b2c930e55d51f4584b721d0431ab653c7c65c",
+      "bytes": 1617,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "app/api/workspace/route.ts",
+      "sha256": "f65d6c07fe469efd38bf31d7d4eeb493566ea00b14af6d7fa01c49d80497c1a8",
+      "bytes": 9159,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "worker/README.md",
+      "sha256": "877b768dfc2548e111eecdead85a9638c3d07b1fef59589b973a90ec7bfc9881",
+      "bytes": 1440,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "worker/runner.mjs",
+      "sha256": "98ac9f9d818085aac3681d52aae48f3ab3af799b82d29b7c0086f5bca7088265",
+      "bytes": 4327,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "tests/acceptance.mjs",
+      "sha256": "eeb392cc44bbe841a4f552859df3679c3be745d69b563802b1074da83d426179",
+      "bytes": 7902,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "tests/prepare.mjs",
+      "sha256": "7a95da26d474faf1476a56b5c9185922a1430f5eb65ffc21fa38e3d504fb2639",
+      "bytes": 1806,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "tests/runtime.mjs",
+      "sha256": "1eed381755fa67528092bee0bfd01593cb84b19ea2dc838209668b339321bdda",
+      "bytes": 21070,
+      "scope": "implementation-or-status"
+    },
+    {
+      "path": "evidence/task-ledger.json",
+      "sha256": "fe77fcd8b1acd183f75dcca5dab5f5c0144b95172e43e8d67170811d86977d46",
+      "bytes": 954,
+      "scope": "implementation-or-status"
+    }
+  ]
+}

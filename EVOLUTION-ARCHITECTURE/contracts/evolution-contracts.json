@@ -1,0 +1,96 @@
+{
+  "version": "1.0.0",
+  "status": "target-design",
+  "genome_families": [
+    "knowledge",
+    "reasoning",
+    "skill",
+    "workflow",
+    "decision"
+  ],
+  "non_inheritable": [
+    "credentials",
+    "permissions",
+    "trust",
+    "vote_eligibility",
+    "user_consent"
+  ],
+  "candidate_states": [
+    "observed",
+    "proposed",
+    "curated",
+    "sandboxed",
+    "evaluated",
+    "approved",
+    "canary",
+    "promoted",
+    "rejected",
+    "expired",
+    "rolled_back",
+    "suspended"
+  ],
+  "memory_boundaries": [
+    "tenant",
+    "project",
+    "organization",
+    "consented_global"
+  ],
+  "score_dimensions": [
+    "learning_rate",
+    "knowledge_growth",
+    "innovation_rate",
+    "prediction_accuracy",
+    "automation_growth",
+    "agent_growth",
+    "resolution_speed",
+    "discovery_speed",
+    "adaptability",
+    "future_readiness"
+  ],
+  "promotion_requires": [
+    "current_policy",
+    "current_rights",
+    "independent_evaluation",
+    "baseline_match",
+    "hard_constraints_pass",
+    "scope_authorized",
+    "budget_within_limit",
+    "rollback_available"
+  ],
+  "events": [
+    "evidence.accepted",
+    "candidate.proposed",
+    "evaluation.completed",
+    "release.canary_started",
+    "release.promoted",
+    "release.rolled_back",
+    "discovery.withdrawn",
+    "ontology.generation_ready"
+  ],
+  "candidate_required": [
+    "id",
+    "tenant_id",
+    "state",
+    "version",
+    "baseline_hash",
+    "candidate_hash",
+    "policy_version",
+    "evidence_ids",
+    "scope",
+    "budget_limit",
+    "owner"
+  ],
+  "genome_required": [
+    "id",
+    "version",
+    "content_hash",
+    "parent_hashes",
+    "modules",
+    "applicability",
+    "rights",
+    "compatibility",
+    "evaluation_manifest",
+    "resource_envelope",
+    "signature"
+  ]
+}

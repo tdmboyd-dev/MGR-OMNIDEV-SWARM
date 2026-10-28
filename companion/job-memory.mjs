@@ -1,0 +1,4 @@
+import {mkdir,readFile,writeFile,rename,readdir} from 'node:fs/promises';
+import {join} from 'node:path';
+import {createHash,randomUUID} from 'node:crypto';
+export async function jobMemory(directory){await mkdir(directory,{recursive:true,mode:0o700});const file=id=>join(directory,createHash('sha256').update(id).digest('hex')+'.json');return {async list(){const names=await readdir(directory);const rows=[];for(const name of names.filter(n=>/^[a-f0-9]{64}\.json$/.test(n)).slice(-2000)){try{rows.push(JSON.parse(await readFile(join(directory,name),'utf8')));}catch{}}return rows;},async get(id){try{return JSON.parse(await readFile(file(id),'utf8'))}catch(e){if(e.code==='ENOENT')return null;throw e}},async save(job){const temp=file(job.id)+'.'+randomUUID();await writeFile(temp,JSON.stringify(job),{mode:0o600,flag:'wx'});await rename(temp,file(job.id));}};}

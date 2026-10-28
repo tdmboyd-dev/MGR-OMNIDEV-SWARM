@@ -1,0 +1,84 @@
+{
+  "phases": [
+    {
+      "phase": 1,
+      "name": "MVP",
+      "status": "planned",
+      "gate_owner": "Founder and technical lead / assigned domain owner",
+      "gate_reference": "02-ten-phase-master-roadmap.md",
+      "implementation_evidence_required": true
+    },
+    {
+      "phase": 2,
+      "name": "Beta",
+      "status": "planned",
+      "gate_owner": "Founder and technical lead / assigned domain owner",
+      "gate_reference": "02-ten-phase-master-roadmap.md",
+      "implementation_evidence_required": true
+    },
+    {
+      "phase": 3,
+      "name": "Launch",
+      "status": "planned",
+      "gate_owner": "Founder and technical lead / assigned domain owner",
+      "gate_reference": "02-ten-phase-master-roadmap.md",
+      "implementation_evidence_required": true
+    },
+    {
+      "phase": 4,
+      "name": "Growth",
+      "status": "planned",
+      "gate_owner": "Founder and technical lead / assigned domain owner",
+      "gate_reference": "02-ten-phase-master-roadmap.md",
+      "implementation_evidence_required": true
+    },
+    {
+      "phase": 5,
+      "name": "Scale",
+      "status": "planned",
+      "gate_owner": "Founder and technical lead / assigned domain owner",
+      "gate_reference": "02-ten-phase-master-roadmap.md",
+      "implementation_evidence_required": true
+    },
+    {
+      "phase": 6,
+      "name": "Enterprise",
+      "status": "planned",
+      "gate_owner": "Founder and technical lead / assigned domain owner",
+      "gate_reference": "02-ten-phase-master-roadmap.md",
+      "implementation_evidence_required": true
+    },
+    {
+      "phase": 7,
+      "name": "Platform",
+      "status": "planned",
+      "gate_owner": "Founder and technical lead / assigned domain owner",
+      "gate_reference": "02-ten-phase-master-roadmap.md",
+      "implementation_evidence_required": true
+    },
+    {
+      "phase": 8,
+      "name": "Ecosystem",
+      "status": "planned",
+      "gate_owner": "Founder and technical lead / assigned domain owner",
+      "gate_reference": "02-ten-phase-master-roadmap.md",
+      "implementation_evidence_required": true
+    },
+    {
+      "phase": 9,
+      "name": "Market Leader",
+      "status": "planned",
+      "gate_owner": "Founder and technical lead / assigned domain owner",
+      "gate_reference": "02-ten-phase-master-roadmap.md",
+      "implementation_evidence_required": true
+    },
+    {
+      "phase": 10,
+      "name": "Digital Civilization",
+      "status": "planned",
+      "gate_owner": "Founder and technical lead / assigned domain owner",
+      "gate_reference": "02-ten-phase-master-roadmap.md",
+      "implementation_evidence_required": true
+    }
+  ]
+}

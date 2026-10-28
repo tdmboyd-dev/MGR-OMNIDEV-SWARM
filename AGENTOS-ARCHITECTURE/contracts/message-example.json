@@ -1,0 +1,21 @@
+{
+  "protocol_version": 1,
+  "message_id": "11111111-1111-4111-8111-111111111111",
+  "tenant_id": "11111111-1111-4111-8111-111111111111",
+  "root_run_id": "11111111-1111-4111-8111-111111111111",
+  "sender_id": "11111111-1111-4111-8111-111111111111",
+  "sender_generation": 1,
+  "recipient_channel": "fixture/reviews",
+  "kind": "review",
+  "correlation_id": "11111111-1111-4111-8111-111111111111",
+  "causation_id": null,
+  "sequence": 1,
+  "occurred_at": "2026-10-09T04:00:00Z",
+  "expires_at": "2026-10-09T05:00:00Z",
+  "classification": "confidential",
+  "context_manifest": "11111111-1111-4111-8111-111111111111",
+  "capability_reference": "11111111-1111-4111-8111-111111111111",
+  "artifact_ref": "11111111-1111-4111-8111-111111111111",
+  "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "trace_context": "fixture"
+}

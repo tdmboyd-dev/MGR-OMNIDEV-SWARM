@@ -1,0 +1,597 @@
+{
+  "version": "2.0.0",
+  "upgrades": [
+    {
+      "id": "V2-01",
+      "title": "Systemic Risk and Accountability Plane",
+      "owner": "Platform risk owner",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "effect intent",
+        "exposure vector",
+        "current policy",
+        "common-failure lineage"
+      ],
+      "outputs": [
+        "exposure reservation",
+        "dispatch verdict",
+        "quarantine receipt"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Duplicate/stale authority denies; unknown effects retain exposure; independent recovery is protected.",
+      "acceptance": "Concurrent correlated releases cannot exceed aggregate ceilings; compromised runtime cannot remove veto or recovery evidence.",
+      "dependencies": [
+        "AUD-12",
+        "AUD-13",
+        "AUD-02"
+      ]
+    },
+    {
+      "id": "V2-02",
+      "title": "Intent and Commitment Registry",
+      "owner": "Product/runtime lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "user objective",
+        "clarification",
+        "plan",
+        "approved action digest"
+      ],
+      "outputs": [
+        "versioned commitment",
+        "scope delta",
+        "renewed-approval requirement"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Material objective drift suspends effects pending appropriate authorization.",
+      "acceptance": "A bug-fix objective cannot silently become a migration; ambiguous revisions preserve original intent and review.",
+      "dependencies": [
+        "AUD-24"
+      ]
+    },
+    {
+      "id": "V2-03",
+      "title": "Rights and Responsibility Registry",
+      "owner": "Security/compliance lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "rights issuer",
+        "purpose",
+        "artifact provenance",
+        "accountable actor"
+      ],
+      "outputs": [
+        "rights receipt",
+        "obligation lineage",
+        "transfer verdict"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Unknown/withdrawn rights deny use; changing owner does not preserve stale grants.",
+      "acceptance": "Revocation/transfer/export tests preserve provenance and prevent purpose escalation.",
+      "dependencies": [
+        "AUD-03",
+        "LEGAL-01"
+      ]
+    },
+    {
+      "id": "V2-04",
+      "title": "Cross-Company Collaboration Rooms",
+      "owner": "Enterprise/product lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "participants",
+        "shared scope",
+        "purpose",
+        "IP/derivative terms",
+        "expiry"
+      ],
+      "outputs": [
+        "room grant",
+        "shared artifact",
+        "exit receipts"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Deny ambient organization access; expire/revoke room scope and retain permitted evidence.",
+      "acceptance": "Participant exit, conflicting rights, derived-artifact use and cross-room leakage tests pass.",
+      "dependencies": [
+        "SEC-02",
+        "V2-03"
+      ]
+    },
+    {
+      "id": "V2-05",
+      "title": "Marketplace Integrity and Dispute System",
+      "owner": "Marketplace operations lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "publisher claims",
+        "task outcomes",
+        "case evidence",
+        "conflicts"
+      ],
+      "outputs": [
+        "qualified reputation",
+        "case disposition",
+        "enforced remedy"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Quarantine affected versions; assign independent reviewer; protect unrelated installs.",
+      "acceptance": "Sybil/reciprocal reputation, conflicted reviewer, appeal and licensing dispute tests pass.",
+      "dependencies": [
+        "AUD-21",
+        "V2-03"
+      ]
+    },
+    {
+      "id": "V2-06",
+      "title": "Enterprise Assurance Passport",
+      "owner": "Enterprise/security lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "customer promises",
+        "deployed configuration",
+        "evidence validity",
+        "exceptions"
+      ],
+      "outputs": [
+        "versioned assurance bundle",
+        "unqualified-claim warnings"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Configuration drift or expired evidence invalidates claim; cannot sell certification from self-review.",
+      "acceptance": "A residency/DR promise is marked unqualified after incompatible deployment drift.",
+      "dependencies": [
+        "AUD-19",
+        "REL-01"
+      ]
+    },
+    {
+      "id": "V2-07",
+      "title": "Coordinated Change Admission",
+      "owner": "Runtime/operations lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "shared target graph",
+        "candidate changes",
+        "time windows",
+        "business invariants"
+      ],
+      "outputs": [
+        "compatible batch",
+        "serialization requirements",
+        "denied overlap"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Unknown interaction blocks high-risk combined rollout; protect reconciliation capacity.",
+      "acceptance": "Individually safe but jointly unsafe related changes cannot dispatch together.",
+      "dependencies": [
+        "RUN-03",
+        "V2-01"
+      ]
+    },
+    {
+      "id": "V2-08",
+      "title": "Business-Invariant Recovery Gate",
+      "owner": "SRE/domain lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "restored state",
+        "business invariant suite",
+        "rights/tombstones",
+        "unknown effects"
+      ],
+      "outputs": [
+        "recovery disposition",
+        "reconciliation backlog",
+        "restart grant"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Technical restore is insufficient; invariant failure prevents unsafe restart.",
+      "acceptance": "Restored but logically inconsistent data fails recovery; deletion and unresolved effects are reconciled.",
+      "dependencies": [
+        "AUD-04",
+        "AUD-27"
+      ]
+    },
+    {
+      "id": "V2-09",
+      "title": "Product Complexity Budget",
+      "owner": "Product/founder lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "value evidence",
+        "support capacity",
+        "compatibility cost",
+        "vertical proposal"
+      ],
+      "outputs": [
+        "admit/pilot/defer/retire decision",
+        "support allocation"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Expansion without named support/safety owner stays research-only.",
+      "acceptance": "An expensive feature without retained customer value cannot enter general release.",
+      "dependencies": [
+        "AUD-10",
+        "AUD-28"
+      ]
+    },
+    {
+      "id": "V2-10",
+      "title": "Customer Outcome Laboratory",
+      "owner": "Research/product lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "consented cohorts",
+        "baseline tools",
+        "task difficulty",
+        "independent outcomes"
+      ],
+      "outputs": [
+        "comparative outcome dossier",
+        "retained-demand evidence"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "No concealed exclusions or unconsented corpus pooling; inconclusive stays inconclusive.",
+      "acceptance": "Matched workflows include failures/review labor; source cutoff and denominator changes remain reproducible.",
+      "dependencies": [
+        "AUD-10",
+        "AUD-18"
+      ]
+    },
+    {
+      "id": "V2-11",
+      "title": "Supplier Exit and Substitution Contract",
+      "owner": "Platform/procurement lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "critical dependencies",
+        "rights/terms",
+        "portable formats",
+        "replacement candidates"
+      ],
+      "outputs": [
+        "tested exit plan",
+        "migration constraints",
+        "continuity verdict"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Unqualified fallback cannot export data or create new financial obligations.",
+      "acceptance": "Simulated supplier withdrawal preserves current rights, supported operations and customer export.",
+      "dependencies": [
+        "AUD-17",
+        "AUD-16"
+      ]
+    },
+    {
+      "id": "V2-12",
+      "title": "Workforce Knowledge Continuity",
+      "owner": "Enterprise/product lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "role ownership",
+        "authorized knowledge",
+        "succession policy"
+      ],
+      "outputs": [
+        "handoff manifest",
+        "new-owner authorization",
+        "knowledge gaps"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Departure revokes personal grants; private communications and credentials do not transfer automatically.",
+      "acceptance": "Key-person departure preserves permitted decisions and responsibilities without privacy escalation.",
+      "dependencies": [
+        "V2-03",
+        "AUD-19"
+      ]
+    },
+    {
+      "id": "V2-13",
+      "title": "Acquisition Assimilation Protocol",
+      "owner": "Enterprise/security lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "organization transfer authority",
+        "rights",
+        "policy differences",
+        "data maps"
+      ],
+      "outputs": [
+        "staged migration",
+        "regranted access",
+        "quarantined conflicts"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "No automatic tenant, credential, trust or IP union.",
+      "acceptance": "Conflicting acquired-company data rights remain isolated until qualified resolution.",
+      "dependencies": [
+        "V2-03",
+        "SEC-02"
+      ]
+    },
+    {
+      "id": "V2-14",
+      "title": "Interoperability Assurance Network",
+      "owner": "Architecture/marketplace lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "tool contracts",
+        "versions",
+        "signed evidence",
+        "compatibility tests"
+      ],
+      "outputs": [
+        "qualified compatibility certificate",
+        "portable evidence mapping"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Expired/incompatible certificates stop protected integrations; preserve historical provenance.",
+      "acceptance": "External tools exchange evidence without secret/internal access; permission/schema drift fails compatibility.",
+      "dependencies": [
+        "AUD-23",
+        "AUD-21"
+      ]
+    },
+    {
+      "id": "V2-15",
+      "title": "Vertical and Physical-World Safety Gate",
+      "owner": "Domain safety lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "domain use case",
+        "operator authority",
+        "hazard model",
+        "bounded test plan"
+      ],
+      "outputs": [
+        "domain qualification",
+        "research-only restriction",
+        "interlock requirements"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Physical or regulated action fails closed without independently qualified controls.",
+      "acceptance": "Simulation success alone cannot authorize a robot or other physical effect.",
+      "dependencies": [
+        "V2-09",
+        "QA-03",
+        "LEGAL-01"
+      ]
+    },
+    {
+      "id": "V2-16",
+      "title": "Governance Integrity and Recovery",
+      "owner": "Independent governance/security owners",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "policy proposal",
+        "conflict disclosures",
+        "reviewers",
+        "recovery roots"
+      ],
+      "outputs": [
+        "approved policy revision",
+        "appeal disposition",
+        "protected restart"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Candidate authors cannot approve their own privilege expansion; no audit erasure.",
+      "acceptance": "Compromised agents/evaluators cannot disable veto; legitimate scoped recovery is independently auditable.",
+      "dependencies": [
+        "SEC-03",
+        "V2-01"
+      ]
+    },
+    {
+      "id": "V2-17",
+      "title": "Sovereign Deployment Acceptance Profile",
+      "owner": "Enterprise infrastructure lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "customer jurisdiction",
+        "mode",
+        "residency/key responsibilities",
+        "qualification evidence"
+      ],
+      "outputs": [
+        "acceptance profile",
+        "contract gaps",
+        "permitted operating envelope"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Unmet procurement/region constraints deny the claim; no automatic government accreditation.",
+      "acceptance": "Dedicated/disconnected deployment is tested against its actual scoped responsibilities.",
+      "dependencies": [
+        "AUD-13",
+        "V2-06"
+      ]
+    },
+    {
+      "id": "V2-18",
+      "title": "Customer Continuity and Orderly Exit",
+      "owner": "Executive/customer operations lead",
+      "version": "2.0.0",
+      "status": "specified-not-integrated",
+      "inputs": [
+        "custody/export policy",
+        "contracts",
+        "customer obligations",
+        "distress trigger"
+      ],
+      "outputs": [
+        "continuity plan",
+        "permitted export",
+        "transition receipts"
+      ],
+      "authority": "Current scoped human/service grant; no model self-authorization.",
+      "states": [
+        "proposed",
+        "qualified",
+        "active",
+        "suspended",
+        "reconciling",
+        "retired"
+      ],
+      "failure_behavior": "Protect restricted records/keys; do not invent contractual or financial authority.",
+      "acceptance": "Payment interruption or operator shutdown preserves promised lawful exit paths and accountable handoff.",
+      "dependencies": [
+        "V2-03",
+        "V2-11",
+        "AUD-19"
+      ]
+    }
+  ]
+}

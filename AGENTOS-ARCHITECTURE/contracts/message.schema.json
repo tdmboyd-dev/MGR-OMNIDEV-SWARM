@@ -1,0 +1,120 @@
+{
+  "type": "object",
+  "properties": {
+    "protocol_version": {
+      "const": 1
+    },
+    "message_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenant_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "root_run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "sender_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "sender_generation": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "recipient_channel": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "event",
+        "message",
+        "task_offer",
+        "request",
+        "response",
+        "review",
+        "debate_argument",
+        "peer_evaluation",
+        "vote",
+        "escalation"
+      ]
+    },
+    "correlation_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "causation_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "classification": {
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted"
+      ]
+    },
+    "context_manifest": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "capability_reference": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "artifact_ref": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "trace_context": {
+      "type": "string",
+      "maxLength": 256
+    }
+  },
+  "required": [
+    "protocol_version",
+    "message_id",
+    "tenant_id",
+    "root_run_id",
+    "sender_id",
+    "sender_generation",
+    "recipient_channel",
+    "kind",
+    "correlation_id",
+    "causation_id",
+    "sequence",
+    "occurred_at",
+    "expires_at",
+    "classification",
+    "context_manifest",
+    "capability_reference",
+    "artifact_ref",
+    "digest",
+    "trace_context"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

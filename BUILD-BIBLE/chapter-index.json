@@ -1,0 +1,353 @@
+[
+  {
+    "number": 1,
+    "title": "Executive Summary",
+    "file": "chapters/01.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/18-verification-and-production-gates.md",
+      "UNFINISHED-WORK/current-state.md"
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Final Vision Statement",
+    "file": "chapters/02.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/01-system-and-scale.md",
+      "UNFINISHED-WORK/11-specialist-domains.md"
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Complete Platform Architecture",
+    "file": "chapters/03.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/02-services-and-boundaries.md",
+      "PRODUCTION-ARCHITECTURE/17-decisions-evolution-and-migration.md"
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Complete Infrastructure Architecture",
+    "file": "chapters/04.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/09-cloud-deployment-and-recovery.md"
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Complete AgentOS Design",
+    "file": "chapters/05.md",
+    "sources": [
+      "AGENTOS-ARCHITECTURE/FULL-AGENTOS-ARCHITECTURE.md"
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Complete Knowledge Graph Design",
+    "file": "chapters/06.md",
+    "sources": [
+      "KNOWLEDGE-ARCHITECTURE/01-intelligence-model.md",
+      "KNOWLEDGE-ARCHITECTURE/03-time-and-indexing.md"
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Complete Memory Design",
+    "file": "chapters/07.md",
+    "sources": [
+      "KNOWLEDGE-ARCHITECTURE/02-memory-and-decisions.md",
+      "EVOLUTION-ARCHITECTURE/04-knowledge-propagation-and-graph-evolution.md"
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Complete Security Architecture",
+    "file": "chapters/08.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/05-security-auth-and-isolation.md"
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Complete Swarm Architecture",
+    "file": "chapters/09.md",
+    "sources": [
+      "AGENTOS-ARCHITECTURE/04-communication-and-debate.md",
+      "AGENTOS-ARCHITECTURE/05-evolution-economy-and-marketplace.md"
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Complete Digital Twin Architecture",
+    "file": "chapters/10.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/11-digital-twins-futures-and-innovation.md"
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Complete Evolution Architecture",
+    "file": "chapters/11.md",
+    "sources": [
+      "EVOLUTION-ARCHITECTURE/FULL-EVOLUTION-ARCHITECTURE.md"
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Complete Research Architecture",
+    "file": "chapters/12.md",
+    "sources": [
+      "EVOLUTION-ARCHITECTURE/06-research-invention-and-future-exploration.md",
+      "KNOWLEDGE-ARCHITECTURE/research-and-decisions.md"
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Complete Innovation Architecture",
+    "file": "chapters/13.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/11-digital-twins-futures-and-innovation.md",
+      "EVOLUTION-ARCHITECTURE/06-research-invention-and-future-exploration.md"
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Complete Marketplace Architecture",
+    "file": "chapters/14.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/13-plugins-marketplace-and-domain-framework.md"
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Complete API Architecture",
+    "file": "chapters/15.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/07-api-and-sdk.md",
+      "AGENTOS-ARCHITECTURE/08-apis-decisions-and-migration.md"
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Complete Database Design",
+    "file": "chapters/16.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/16-relational-schema-and-data-lifecycle.md",
+      "KNOWLEDGE-ARCHITECTURE/07-contracts-and-delivery.md"
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Complete UI/UX Architecture",
+    "file": "chapters/17.md",
+    "sources": [
+      "EXPERIENCE-DESIGN/FULL-EXPERIENCE-DESIGN.md"
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Complete Dashboard Architecture",
+    "file": "chapters/18.md",
+    "sources": [
+      "EXPERIENCE-DESIGN/03-home-project-and-repository.md",
+      "EXPERIENCE-DESIGN/05-specialized-centers.md"
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Complete Product Roadmap",
+    "file": "chapters/19.md",
+    "sources": [
+      "EXECUTION-STRATEGY/02-ten-phase-master-roadmap.md",
+      "EXECUTION-STRATEGY/03-first-year-execution-and-technical-horizons.md"
+    ]
+  },
+  {
+    "number": 20,
+    "title": "MVP Specification",
+    "file": "chapters/20.md",
+    "sources": [
+      "EXECUTION-STRATEGY/01-company-thesis-and-mvp.md",
+      "UNFINISHED-WORK/implementation-order.md"
+    ]
+  },
+  {
+    "number": 21,
+    "title": "Version 1 Specification",
+    "file": "chapters/21.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/10-autonomous-development-and-healing.md",
+      "EXECUTION-STRATEGY/04-product-tiers-and-pricing.md"
+    ]
+  },
+  {
+    "number": 22,
+    "title": "Version 2 Specification",
+    "file": "chapters/22.md",
+    "sources": [
+      "KNOWLEDGE-ARCHITECTURE/04-reasoning-and-retrieval.md",
+      "AGENTOS-ARCHITECTURE/06-incidents-and-command-center.md"
+    ]
+  },
+  {
+    "number": 23,
+    "title": "Version 5 Specification",
+    "file": "chapters/23.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/09-cloud-deployment-and-recovery.md",
+      "EVOLUTION-ARCHITECTURE/09-contracts-scaling-and-implementation.md"
+    ]
+  },
+  {
+    "number": 24,
+    "title": "Version 10 Specification",
+    "file": "chapters/24.md",
+    "sources": [
+      "EVOLUTION-ARCHITECTURE/08-scores-omega-and-long-term-stewardship.md",
+      "EXECUTION-STRATEGY/09-risks-and-ten-year-blueprint.md"
+    ]
+  },
+  {
+    "number": 25,
+    "title": "Funding Strategy",
+    "file": "chapters/25.md",
+    "sources": [
+      "EXECUTION-STRATEGY/07-team-funding-and-board.md",
+      "EXECUTION-STRATEGY/08-financial-plan.md"
+    ]
+  },
+  {
+    "number": 26,
+    "title": "Scaling Strategy",
+    "file": "chapters/26.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/01-system-and-scale.md",
+      "AGENTOS-ARCHITECTURE/07-scale-resilience-and-company-simulation.md"
+    ]
+  },
+  {
+    "number": 27,
+    "title": "Profitability Strategy",
+    "file": "chapters/27.md",
+    "sources": [
+      "EXECUTION-STRATEGY/04-product-tiers-and-pricing.md",
+      "PRODUCTION-ARCHITECTURE/14-cost-metering-billing-and-analytics.md"
+    ]
+  },
+  {
+    "number": 28,
+    "title": "Competitive Moat Analysis",
+    "file": "chapters/28.md",
+    "sources": [
+      "EXECUTION-STRATEGY/05-market-competition-and-moats.md"
+    ]
+  },
+  {
+    "number": 29,
+    "title": "Risk Analysis",
+    "file": "chapters/29.md",
+    "sources": [
+      "EXECUTION-STRATEGY/09-risks-and-ten-year-blueprint.md",
+      "PRODUCTION-ARCHITECTURE/18-verification-and-production-gates.md"
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Security Analysis",
+    "file": "chapters/30.md",
+    "sources": [
+      "BUILD-BIBLE/reviews/security-infrastructure.md",
+      "PRODUCTION-ARCHITECTURE/05-security-auth-and-isolation.md"
+    ]
+  },
+  {
+    "number": 31,
+    "title": "Compliance Analysis",
+    "file": "chapters/31.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/05-security-auth-and-isolation.md",
+      "UNFINISHED-WORK/06-security-and-verification.md"
+    ]
+  },
+  {
+    "number": 32,
+    "title": "Future Readiness Analysis",
+    "file": "chapters/32.md",
+    "sources": [
+      "EVOLUTION-ARCHITECTURE/06-research-invention-and-future-exploration.md",
+      "EVOLUTION-ARCHITECTURE/08-scores-omega-and-long-term-stewardship.md"
+    ]
+  },
+  {
+    "number": 33,
+    "title": "Global Deployment Strategy",
+    "file": "chapters/33.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/09-cloud-deployment-and-recovery.md",
+      "UNFINISHED-WORK/decisions.md"
+    ]
+  },
+  {
+    "number": 34,
+    "title": "Civilization-Level Intelligence Strategy",
+    "file": "chapters/34.md",
+    "sources": [
+      "EVOLUTION-ARCHITECTURE/07-organization-and-civilization-simulation.md"
+    ]
+  },
+  {
+    "number": 35,
+    "title": "Unknown Unknowns Report",
+    "file": "chapters/35.md",
+    "sources": [
+      "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "BUILD-BIBLE/01-FINAL-SUPER-AUDIT.md"
+    ]
+  },
+  {
+    "number": 36,
+    "title": "Missing Systems Report",
+    "file": "chapters/36.md",
+    "sources": [
+      "UNFINISHED-WORK/backlog.json",
+      "BUILD-BIBLE/additions.json"
+    ]
+  },
+  {
+    "number": 37,
+    "title": "Improvement Recommendations",
+    "file": "chapters/37.md",
+    "sources": [
+      "BUILD-BIBLE/reviews/agents-knowledge.md",
+      "BUILD-BIBLE/reviews/business-product.md"
+    ]
+  },
+  {
+    "number": 38,
+    "title": "Final Build Bible",
+    "file": "chapters/38.md",
+    "sources": [
+      "PRODUCTION-ARCHITECTURE/FULL-ARCHITECTURE.md",
+      "BUILD-BIBLE/contradictions.json"
+    ]
+  },
+  {
+    "number": 39,
+    "title": "Complete Development Task Backlog",
+    "file": "chapters/39.md",
+    "sources": [
+      "UNFINISHED-WORK/implementation-order.md",
+      "UNFINISHED-WORK/backlog.json"
+    ]
+  },
+  {
+    "number": 40,
+    "title": "Final Verdict",
+    "file": "chapters/40.md",
+    "sources": [
+      "UNFINISHED-WORK/current-state.md",
+      "BUILD-BIBLE/validation-report.md"
+    ]
+  }
+]

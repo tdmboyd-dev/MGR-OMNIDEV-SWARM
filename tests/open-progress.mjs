@@ -1,0 +1,10 @@
+import {readFileSync} from 'node:fs';import {runInNewContext} from 'node:vm';import {transpileModule,ModuleKind,ScriptTarget} from 'typescript';import assert from 'node:assert/strict';
+const source=readFileSync('components/runtime-workspace.tsx','utf8');const fn=source.slice(source.indexOf(' async function openProgress'),source.indexOf(' async function runSpecialist'));
+let selected,plays=0,starts=0;let fresh={id:'job',status:'awaiting review',result:{reviewPlan:{control:{status:'paused'}}}};
+const c={fetch:async()=>Response.json(fresh),setSelected:j=>selected=j,setError:()=>{},localBusy:false,busy:false,coordinating:{current:false},engineDisconnected:{current:false},failedAutomaticJobs:{current:new Set()},setReviewControl:async(j,command)=>{assert.equal(command,'play');plays++},coordinateReviews:()=>{},localConnection:{},localModel:'model',localEffort:'high',localProfile:'codex',generateInsideOmni:()=>starts++,connectInsideOmni:()=>starts++};
+runInNewContext(transpileModule(fn,{compilerOptions:{module:ModuleKind.ESNext,target:ScriptTarget.ES2022}}).outputText+';this.open=openProgress;',c);
+await c.open({id:'job'});assert.equal(plays,1);assert.equal(selected.id,'job');
+c.localBusy=true;fresh={id:'job',status:'queued',mode:'account',result:{}};await c.open({id:'job'});assert.equal(starts,0);assert.equal(selected.status,'queued');
+c.localBusy=false;c.engineDisconnected.current=true;await c.open({id:'job'});assert.equal(starts,0);
+c.engineDisconnected.current=false;await c.open({id:'job'});assert.equal(starts,1);
+console.log('PASS progress restores job, resumes paused work, and avoids duplicate work or disconnected starts');
