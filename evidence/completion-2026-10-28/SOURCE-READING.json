@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "path": "scripts/engineering-verifications.mjs",
+      "sha256": "765a03cf73def159aba8fde3b4b8b863fb3a5a7b4b775eb66a29a16e2fe967ba",
+      "scope": "partial",
+      "note": "Read in this continuation; partial includes located/contract-only inspection, not whole-file audit"
+    },
+    {
+      "path": "scripts/local-worker-api.mjs",
+      "sha256": "33bc19d31cb2060c254b80371d2a771e11237708ded4bbce698c4634693a8868",
+      "scope": "partial",
+      "note": "Read in this continuation; partial includes located/contract-only inspection, not whole-file audit"
+    },
+    {
+      "path": "lib/jobs.ts",
+      "sha256": "e2dff4b10f82165455e8b0b05c4d640241b75359c01036ae13f4569e92883bfd",
+      "scope": "partial",
+      "note": "Read in this continuation; partial includes located/contract-only inspection, not whole-file audit"
+    },
+    {
+      "path": "worker/windows-appcontainer.mjs",
+      "sha256": "cd8eff529732dbab9b967a09f05a2c7afee57f5f189d03da55567d684cea472f",
+      "scope": "partial",
+      "note": "Read in this continuation; partial includes located/contract-only inspection, not whole-file audit"
+    }
+  ],
+  "unread": "All other source, dependency internals, assets and broad research not freshly read in this continuation. Earlier ledgers retain historical scope."
+}
