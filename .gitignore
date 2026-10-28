@@ -51,3 +51,6 @@ next-env.d.ts
 !/companion/engine/public-key.pem
 
 *.tsbuildinfo
+
+# Explicit local Node/SQLite adapter compilation, not hosted Cloudflare output.
+/.local-worker-runtime/

@@ -37,3 +37,20 @@ The fleet drains a bounded queue, records per-job outcomes, and stops admitting 
 ## Source audit continuation (2026-10-28)
 
 Source imports now reject Windows drive/alternate-stream/device aliases, control characters, trailing dot/space aliases and case-insensitive duplicate paths. Named Docker contexts are unqualified and refused; select the default local daemon. Docker host overrides must use a local Unix socket or local Windows named pipe. Doctor uses the same environment restrictions as execution, preventing a successful check of a different remote context from implying local readiness. Actual container execution remains unqualified on this machine because Docker is unavailable.
+
+## Explicit Windows AppContainer snapshot worker (local acceptance,2026-10-28)
+
+A separate native Windows path now runs Node inside a real zero-capability AppContainer and Job Object without administrator access. Docker behavior remains separate. This native path is limited to owner-approved MGR source/candidate/command hashes; it is not a general Docker replacement or a hosted Cloudflare deployment.
+
+Actual evidence:23native OS qualification checks passed, then22actual owner HTTP/SQLite/worker/apply/restart checks passed using original MGR production code and an actual Codex-generated repair. The original module failed its security regression inside the contained process; the generated repair passed with unchanged tests. A separate actual queued job passed through the standalone once-entry. See docs/LOCAL-NATIVE-WORKER.md for commands, setup and precise boundaries.
+
+The native process has a384MiB configured job-memory policy with a measured qualification ceiling of512MiB; this is not an exact RSS ceiling. Its8MiB write guard polls scratch and AppContainer profile storage every25ms and can overshoot; it is not an OS hard disk quota. Actual process/child kill, private-file/source/network denials, output overflow and supervisor-death cleanup were exercised. The server still labels reports authenticated worker claims rather than independent remote attestation.
+
+From this repository, with the existing owner-private laboratory configuration and qualified policy:
+
+    node scripts/local-worker-api.mjs ../../wave3/omni-native-lab.private.json
+    node worker/windows-worker.mjs --config ../../wave3/omni-native-lab.private.json --once
+
+The first command starts the actual production-route logic through an explicitly labeled single-owner local SQLite adapter. The second drains pending receipt reconciliation, claims at most one approved native snapshot, runs it and submits its receipt. It installs no daemon or service. A receipt is saved before report delivery; an unresolved admitted-execution journal or uncertain acknowledgment stops further dispatch. Do not delete a stale lock/journal blindly.
+
+The configuration contains real private owner/native tokens and is intentionally excluded from exports. Do not paste or commit it. Native and Docker worker credentials must be distinct. Starting this entry requires an actual23-check qualification receipt matching the current runtime and aggregate launcher hashes, plus explicit source/candidate/test-manifest allowlists. A changed worker runtime or launcher requires requalification and owner enrollment.

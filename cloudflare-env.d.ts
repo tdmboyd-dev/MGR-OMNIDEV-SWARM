@@ -3,6 +3,8 @@ declare namespace Cloudflare {
     DB?: D1Database;
     OMNI_VAULT_KEY?: string;
     OMNI_WORKER_TOKEN?: string;
+    OMNI_WINDOWS_WORKER_TOKEN?: string;
+    OMNI_WINDOWS_WORKER_POLICY_JSON?: string;
     BUCKET?: R2Bucket;
   }
 }
