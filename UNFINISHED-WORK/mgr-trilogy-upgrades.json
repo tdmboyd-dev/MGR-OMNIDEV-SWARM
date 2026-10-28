@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "created_at": "2026-10-28",
+  "purpose": "Additive MGR Code Monster + OmniSight + OmniDev integration requirements. Preserve original 174 parent tasks and their historical statuses.",
+  "canonical_historical_backlog": "UNFINISHED-WORK/backlog.json",
+  "state_rule": "PLANNED does not mean implemented. Move only after code plus acceptance evidence is recorded.",
+  "items": [
+    {"id":"MGR-001","priority":"P0","title":"Audit all 174 historical parents against current code and acceptance evidence","status":"IN_PROGRESS","dependencies":[],"acceptance":"Every parent ID reconciled with source/test/operational receipts and no unsupported completion"},
+    {"id":"MGR-002","priority":"P0","title":"Optimize file ledger indexed lookups and preserve verification semantics","status":"TESTED_LOCAL","dependencies":[],"acceptance":"Regression + 500-file fixture passes; original unchanged evidence preserved","evidence":["tests/file-ledger-bench.mjs: 3,000-file synthetic ledger passed; 48ms cold / 27ms warm in current environment","pnpm exec tsc --noEmit passed"],"limits":"Production CI and live runtime verification still required"},
+    {"id":"MGR-003","priority":"P0","title":"Introduce versioned Code Monster snapshot/graph/evidence contracts","status":"PLANNED","dependencies":["MGR-001"],"acceptance":"Contract tests, privacy scoping, backwards compatibility"},
+    {"id":"MGR-004","priority":"P0","title":"Install Code Monster complete repository census and delta indexing","status":"PLANNED","dependencies":["MGR-003"],"acceptance":"100 percent path accounting including exclusions at pinned commit"},
+    {"id":"MGR-005","priority":"P0","title":"Add semantic symbol, dependency, API and test graph provider","status":"PLANNED","dependencies":["MGR-004"],"acceptance":"Language fixtures and impact correctness"},
+    {"id":"MGR-006","priority":"P0","title":"Embed OmniSight file tree and territory mission room","status":"PLANNED","dependencies":["MGR-003"],"acceptance":"Real repo file tree with source evidence and role-scoped projection"},
+    {"id":"MGR-007","priority":"P0","title":"Run three agents with non-overlapping write scopes and verification owner","status":"PLANNED","dependencies":["MGR-006"],"acceptance":"Concurrent frontend/backend/verifier integration fixture with conflict detection"},
+    {"id":"MGR-008","priority":"P0","title":"Continuous campaign state and crash-safe resume","status":"PLANNED","dependencies":["MGR-003"],"acceptance":"Restart after kill; all scoped tasks retain disposition and resume"},
+    {"id":"MGR-009","priority":"P0","title":"Evidence-linked independent repair and real draft-PR test","status":"PLANNED","dependencies":["MGR-008"],"acceptance":"Authorized real failing test to patch to CI verification to draft PR"},
+    {"id":"MGR-010","priority":"P1","title":"GitHub Actions workflow graph, failure trace and safe rerun","status":"PLANNED","dependencies":["MGR-005"],"acceptance":"Workflow failure accurately mapped and fixed with evidence"},
+    {"id":"MGR-011","priority":"P1","title":"REA/X-Ray authorized reverse-engineering adapter","status":"PLANNED","dependencies":["MGR-003"],"acceptance":"Qualified tool/license, authorized target, citations and scope enforcement"},
+    {"id":"MGR-012","priority":"P1","title":"Cross-repo contract/compatibility and release dependency map","status":"PLANNED","dependencies":["MGR-005"],"acceptance":"Versioned producer-consumer compatibility fixtures"},
+    {"id":"MGR-013","priority":"P1","title":"Opportunity/modernization engine with before-after benchmarks","status":"PLANNED","dependencies":["MGR-005"],"acceptance":"Measured benefit, cost, rollback and independent test"},
+    {"id":"MGR-014","priority":"P0","title":"Independent worker isolation, secrets and rollback certification","status":"PLANNED","dependencies":["MGR-009"],"acceptance":"Real Docker/worker/permissions/staging/rollback drill"},
+    {"id":"MGR-015","priority":"P0","title":"Automatic documentation/backlog reconciliation on verified code changes","status":"PLANNED","dependencies":["MGR-001"],"acceptance":"CI detects missing evidence and obsolete historical status"},
+    {"id":"MGR-016","priority":"P1","title":"Portfolio GodView temporal, risk and audit overlays","status":"PLANNED","dependencies":["MGR-006"],"acceptance":"Correct source/CI/agent event provenance and access control"},
+    {"id":"MGR-017","priority":"P1","title":"Provider-neutral inference budgets and context compiler","status":"PLANNED","dependencies":["MGR-005"],"acceptance":"Bounded spend, tested fallback, no source leakage"},
+    {"id":"MGR-018","priority":"P1","title":"Versioned MGR-native API/MCP/SDK shared with standalone products","status":"PLANNED","dependencies":["MGR-003"],"acceptance":"Auth, idempotency, schema compatibility and projection tests"}
+  ]
+}

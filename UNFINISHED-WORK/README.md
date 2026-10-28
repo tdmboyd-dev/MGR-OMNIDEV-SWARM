@@ -2,6 +2,12 @@
 
 This is the single starting point for all known unfinished engineering, design, authorization, activation and verification work. It covers the original platform request and the account-first direction accepted on October 8, 2026 (America/Chicago).
 
+## MGR Code Monster + OmniSight integration (2026-10-28)
+
+The historical 174 parents below are preserved; **18 newly approved additive MGR upgrade requirements** live in [mgr-trilogy-upgrades.json](mgr-trilogy-upgrades.json). The implementation and before/after contract is [mgr-omnidev-upgrade-bible.md](mgr-omnidev-upgrade-bible.md). A machine-generated, **non-certifying** source-reference audit of all 174 parent IDs is in [mgr-174-source-reconciliation.md](mgr-174-source-reconciliation.md) with detailed JSON alongside it. Run `node scripts/reconcile-backlog.mjs` from repo root to refresh evidence. Existing file references are not proof that acceptance tests pass.
+
+Do not merge the 18 new MGR IDs into the original count or mark historical items complete without per-item integration evidence. The owner has authorized source fixes; production, permission, credential, and destructive gates remain separate. Every verified change must update code, tests, evidence and the appropriate ledger entry together.
+
 **174 open work items:** the original 40 platform items, 39 individually tracked integrations and 47 executable specialist domains, plus 30 final-audit additions and 18 Version 2 completion upgrades. No item is marked complete merely because its UI or catalog entry exists. Future discoveries should be added here rather than kept only in chat.
 
 ## Start here
