@@ -1229,7 +1229,7 @@
       "status": "implemented_unverified",
       "priority": "P1",
       "kind": "future-user-instruction",
-      "current": "Owner-selected MGR-OMNIDEV-SWARM GitHub source transfer is complete at commit 26e230d052c45c1f42cb731ff095679497af045a and canonical SOURCE-IMPORT.md, UNFINISHED-WORK/README.md and worker/runner.mjs were read back through connected GitHub. Full secret-scanning and live deployment qualification are not established; do not mark verified.",
+      "current": "Original Sites version 45 source imported to the owner-designated GitHub repository at commit 26e230d052c45c1f42cb731ff095679497af045a. Byte-for-byte comparison of all 516 source-manifest entries passed (516/516). High-confidence credential-pattern scan of 516 imported files/9,199,629 bytes passed with zero recognized matches; no exhaustive secret-discovery or cross-repository modification proof. Source transfer criterion verified; second criterion requires independent security/scope review.",
       "work": [
         "Wait for the user's next explicit GitHub-copy instruction and destination/visibility.",
         "Verify the authenticated owner and repository permissions; choose create versus update explicitly.",
@@ -1249,11 +1249,15 @@
       "owner": "Unassigned",
       "evidence": [
         "SOURCE-IMPORT.md",
-        "evidence/github-source-import.json"
+        "evidence/github-source-import.json",
+        "UNFINISHED-WORK/mgr-original-source-secret-audit-20261029.json",
+        "scripts/verify-source-import.mjs",
+        "tests/verify-source-import.test.mjs",
+        "tests/scan-import-secrets.test.mjs"
       ],
       "historical_status": "open",
-      "implementation_state": "source-transfer-provider-readback",
-      "verification_gate": "REQUIRES_SECRET_SCAN_AND_SOURCE_INTEGRITY_REPRODUCTION"
+      "implementation_state": "source-transfer-byte-verified-security-review-pending",
+      "verification_gate": "SOURCE_TRANSFER_COMPLETE__EXHAUSTIVE_SECURITY_AND_SCOPE_REVIEW_PENDING"
     },
     {
       "id": "REL-03",
