@@ -1487,32 +1487,58 @@
       ],
       "claimedEvidence": [
         "SOURCE-IMPORT.md",
-        "evidence/github-source-import.json"
+        "evidence/github-source-import.json",
+        "UNFINISHED-WORK/mgr-original-source-secret-audit-20261029.json",
+        "scripts/verify-source-import.mjs",
+        "tests/verify-source-import.test.mjs",
+        "tests/scan-import-secrets.test.mjs"
       ],
       "acceptance": [
         {
           "criterionId": "REL-02/AC-01",
           "requirement": "User-designated GitHub repository contains the exact reviewed source and unfinished-work folder.",
-          "status": "UNVERIFIED",
-          "evidence": [],
-          "testCommand": null,
-          "sourceCommit": null,
-          "providerReceipt": null,
-          "reviewedBy": null,
-          "verifiedAt": null,
-          "blocker": "Exact acceptance not reproduced and reviewed yet"
+          "status": "VERIFIED",
+          "evidence": [
+            {
+              "kind": "pinned-import-manifest",
+              "path": "evidence/github-source-import.json",
+              "fileCount": 516,
+              "matched": 516
+            },
+            {
+              "kind": "provider-readback",
+              "repo": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+              "sourceRevision": "26e230d052c45c1f42cb731ff095679497af045a",
+              "path": "SOURCE-IMPORT.md"
+            }
+          ],
+          "testCommand": "node scripts/verify-source-import.mjs . 26e230d052c45c1f42cb731ff095679497af045a evidence/github-source-import.json",
+          "sourceCommit": "26e230d052c45c1f42cb731ff095679497af045a",
+          "providerReceipt": "GitHub designated repository import commit 26e230d052c45c1f42cb731ff095679497af045a, source inventory read back",
+          "reviewedBy": "MGR automated pinned-source byte comparator",
+          "verifiedAt": "2026-10-29T12:13:16.433Z",
+          "blocker": null,
+          "verificationLevel": "source-integrity-only"
         },
         {
           "criterionId": "REL-02/AC-02",
           "requirement": "No unrelated repository is modified and no secret is committed.",
-          "status": "UNVERIFIED",
-          "evidence": [],
-          "testCommand": null,
+          "status": "BLOCKED",
+          "evidence": [
+            {
+              "kind": "high-confidence-pattern-scan",
+              "path": "UNFINISHED-WORK/mgr-original-source-secret-audit-20261029.json",
+              "files": 516,
+              "bytes": 9199629,
+              "hits": 0
+            }
+          ],
+          "testCommand": "node scripts/scan-import-secrets.mjs . 26e230d052c45c1f42cb731ff095679497af045a",
           "sourceCommit": null,
           "providerReceipt": null,
           "reviewedBy": null,
           "verifiedAt": null,
-          "blocker": "Exact acceptance not reproduced and reviewed yet"
+          "blocker": "Pattern scan of 516 files found 0 high-confidence secret formats, but cannot prove absence of every possible embedded secret or non-target repository modifications; requires independent security/scope review"
         }
       ],
       "overall": "NOT_CERTIFIED",
