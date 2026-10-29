@@ -13,7 +13,7 @@
   "evidenceReferenceTasks": 62,
   "unknownImplementationState": 115,
   "verifiedFullAcceptanceByThisReport": 0,
-  "note": "Historical 174 original IDs retained; 47 specialist workflows proven source-present + local fixture-tested and moved to implemented_unverified, not completed. All 276 source paths across 108 tasks pinned to Git commit and present. No full acceptance criteria automatically passed.",
+  "note": "Historical 174 original IDs retained; 47 specialist workflows proven source-present + local fixture-tested and moved to implemented_unverified, not completed. All 276 source paths across 108 tasks pinned to Git commit and present. No full acceptance criteria automatically passed. Original Sites import 516/516 committed SHA-256 matched and credential patterns zero detected; REL-02 security/scope AC-02 not yet certified.",
   "items": [
     {
       "id": "AUTH-01",
@@ -479,8 +479,8 @@
       "source_refs": 3,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "SOURCE_TRANSFER_BYTE_VERIFIED_PENDING_SECRET_SCAN",
-      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
+      "classification": "PINNED_516_FILE_SOURCE_TRANSFER_VERIFIED_SECURITY_SCOPE_PENDING",
+      "action": "SECOND_ACCEPTANCE_CRITERION_REQUIRES_INDEPENDENT_SECURITY_REVIEW",
       "must_not_autoclose": true
     },
     {
@@ -2103,5 +2103,9 @@
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     }
+  ],
+  "verifiedCriteriaFromThisWave": 1,
+  "verifiedCriterionIds": [
+    "REL-02/AC-01"
   ]
 }
