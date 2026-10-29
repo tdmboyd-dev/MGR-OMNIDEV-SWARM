@@ -1,4 +1,4 @@
-import {readFile,writeFile,stat} from 'node:fs/promises';import {resolve,relative} from 'node:path';import {execFileSync} from 'node:child_process';import {createHash} from 'node:crypto';
+import {readFile,writeFile} from 'node:fs/promises';import {resolve,relative} from 'node:path';import {execFileSync} from 'node:child_process';import {createHash} from 'node:crypto';
 const digest=x=>createHash('sha256').update(x).digest('hex');
 const safe=p=>typeof p==='string'&&p&&!p.startsWith('/')&&!p.includes('\\')&&!p.split('/').some(x=>!x||x==='.'||x==='..');
 export async function reconcileExistingImplementation({root,backlog,limit=100}){
@@ -9,7 +9,7 @@ export async function reconcileExistingImplementation({root,backlog,limit=100}){
   const paths=[];for(const p of task.source_files){
    if(!safe(p)){paths.push({path:p,exists:false,reason:'unsafe-reference'});continue;}
    const target=resolve(base,p);if(relative(base,target).startsWith('..')){paths.push({path:p,exists:false,reason:'escape'});continue;}
-   try{const s=await stat(target);if(!s.isFile()){paths.push({path:p,exists:false,reason:'not-file'});continue;}const bytes=await readFile(target);paths.push({path:p,exists:true,size:bytes.length,sha256:digest(bytes)});}
+   try{const bytes=execFileSync('git',['-C',base,'show',sha+':'+p],{maxBuffer:20_000_000,stdio:['ignore','pipe','pipe']});paths.push({path:p,exists:true,size:bytes.length,sha256:digest(bytes),authority:'committed-git-object'});}
    catch(e){paths.push({path:p,exists:false,reason:e.code??'unknown'});}
   }
   const linkedTests=(task.evidence??[]).filter(x=>/^tests\/.+\.mjs$/.test(x));
