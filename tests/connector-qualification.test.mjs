@@ -3,7 +3,7 @@ import {readFileSync} from 'node:fs';import {runInNewContext} from 'node:vm';imp
 const catalog=readFileSync(new URL('../lib/catalog.ts',import.meta.url),'utf8');const cap=readFileSync(new URL('../lib/connector-qualification.ts',import.meta.url),'utf8');
 const get=x=>ts.transpileModule(x,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;
 const block=catalog.match(/export const connectors = (\[[\s\S]*?\]);/);if(!block)throw Error('connector catalog missing');const domain={};runInNewContext('this.connectors='+block[1]+';',domain);
-const js=get(cap).replace(/import \{connectors\} from ['"].\/catalog['"];?/,'').replace(/export function/g,'function');
+const js=get(cap.replace(/import \{connectors\} from ['"].\/catalog['"];?/,'').replace(/export function/g,'function'));
 const ctx={connectors:domain.connectors};runInNewContext(js+';this.list=connectorCapabilityInventory;this.assess=assessConnectorAcceptance;',ctx);
 test('39 connector listings do not become 39 active integrations',()=>{const r=ctx.list();assert.equal(r.length,39);assert.equal(r.filter(x=>x.implementation==='catalog-only').length,34);assert.ok(r.every(x=>x.verifiedLive===false));});
 test('unimplemented catalog connector rejects fabricated successful receipt',()=>assert.equal(ctx.assess('GitLab',{connector:'GitLab',sourceCommit:'a'.repeat(40),providerReceipt:'fake',realOperationTest:true}).reason,'no-adapter-implementation'));
