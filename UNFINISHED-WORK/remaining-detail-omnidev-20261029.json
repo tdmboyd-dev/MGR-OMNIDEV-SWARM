@@ -1479,7 +1479,7 @@
       "priority": "P1",
       "recordedStatus": "open",
       "classification": "partly-built-with-open-function-and-qualification",
-      "existingState": "Rescans preserve manual dispositions and reconcile snapshot signals. Image-alt presence and test-path recognition pass 41 labeled local cases. The next security wave passes 60 labeled SQL/eval/credential cases plus seven coverage/redaction/budget/generic-boundary checks; incomplete-inspection caller protection is being finished. No production accuracy or complete semantic coverage is established.",
+      "existingState": "Rescans preserve manual dispositions and reconcile snapshot signals. Image-alt presence and test-path recognition pass 41 labeled local cases. The next security wave passes 60 labeled SQL/eval/credential cases plus seven coverage/redaction/budget/generic-boundary checks; incomplete-inspection caller protection is implemented and passes all six rescan/apply/rollback regression checks at the pinned source. No production accuracy or complete semantic coverage is established.",
       "pendingActions": [
         "Extend security analysis beyond the bounded JavaScript/TypeScript lexical and JSON signals; aliases, computed calls, full type/JSX semantics, taint flow and unsupported-language interpretation remain unqualified.",
         "Add project-type-aware expectations for missing pages, APIs, validation, architecture, workflow, monitoring and scale controls.",
@@ -17624,5 +17624,7 @@
       "qualification": "Source references establish locations, not complete behavior. Existing local contracts stay credited separately; final acceptance is not invented."
     }
   ],
-  "updatedAt": "2026-10-29T15:31:13.752331+00:00"
+  "updatedAt": "2026-10-29T15:31:13.752331+00:00",
+  "publicationState": "Confirmed source/evidence publication and remote read-back at 18f33466ecb86aa74a52224b92453f8e7d2dd5f3 on mgr/code-monster-omnisight-20261028. See UNFINISHED-WORK/mgr-github-publication-20261029.json for exact local/remote tree equivalence. No merge or deployment.",
+  "publicationRecord": "UNFINISHED-WORK/mgr-github-publication-20261029.json"
 }

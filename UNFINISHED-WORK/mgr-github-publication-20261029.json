@@ -1,0 +1,22 @@
+{
+  "schema": "mgr.github-publication.v1",
+  "recordedAt": "2026-10-29T15:36:14.380581+00:00",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "branch": "mgr/code-monster-omnisight-20261028",
+  "localTestedSourceCommit": "e6701655ecad5f1c9d3fd7944b7ecec4191b0955",
+  "remoteSourceCommit": "7a8ec2f728ff35fcc03488d903acc7d1d6b51af9",
+  "identicalSourceTree": "23303ed67d0cbd816c18fdbee91c4fe38446d89f",
+  "localEvidenceCheckpoint": "e7488de8e4b84912fb8b3065e00706db4ab7f0bf",
+  "confirmedRemoteEvidenceCheckpoint": "18f33466ecb86aa74a52224b92453f8e7d2dd5f3",
+  "identicalEvidenceTree": "c462df2a6c372dd2e55d8130662f9e569d9fab61",
+  "remoteRefReadBack": true,
+  "remoteCommitTreeReadBack": true,
+  "verification": "60/60 full verification profiles, including TypeScript and production build",
+  "identityNote": "GitHub commits preserve the existing remote ancestry. Local and remote commit IDs differ; both source and evidence file trees were compared and match exactly. Original local verification records remain unchanged.",
+  "limitations": [
+    "Local verification does not establish independent or production acceptance.",
+    "No merge, deployment or task-status promotion occurred.",
+    "Later documentation-only commits may follow the pinned published evidence checkpoint."
+  ]
+}

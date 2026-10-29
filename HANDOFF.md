@@ -1,3 +1,15 @@
+# Current publication confirmation — October 29, 2026
+
+The source and evidence for this repair wave are **published and read back** on the existing review branch `mgr/code-monster-omnisight-20261028`. Pinned published evidence checkpoint: `18f33466ecb86aa74a52224b92453f8e7d2dd5f3`. Later documentation-only updates may follow this checkpoint. Earlier publication-blocked statements below are historical.
+
+- Verified local result: **60/60 full verification profiles, including TypeScript and production build**.
+- Tested local source `e6701655ecad5f1c9d3fd7944b7ecec4191b0955` maps to published source `7a8ec2f728ff35fcc03488d903acc7d1d6b51af9` with identical file tree `23303ed67d0cbd816c18fdbee91c4fe38446d89f`.
+- Local evidence checkpoint `e7488de8e4b84912fb8b3065e00706db4ab7f0bf` maps to published evidence `18f33466ecb86aa74a52224b92453f8e7d2dd5f3` with identical file tree `c462df2a6c372dd2e55d8130662f9e569d9fab61`.
+- Exact mapping and confirmed provider read-back: [`UNFINISHED-WORK/mgr-github-publication-20261029.json`](UNFINISHED-WORK/mgr-github-publication-20261029.json). Commit IDs differ because the existing GitHub ancestry was preserved; no test result was relabeled as execution on a different source tree.
+- Continue from the current named remaining-work record [`UNFINISHED-WORK/remaining-detail-omnidev-20261029.json`](UNFINISHED-WORK/remaining-detail-omnidev-20261029.json) and the latest functional/test handoff immediately below. Full acceptance, actual browser journeys, live identities/workers and production release remain scoped separately. No automatic merge, deployment or original task promotion occurred.
+
+---
+
 # Current scanner integration checkpoint — October 29, 2026
 
 This newest section supersedes older scanner and 54/58-profile descriptions below while preserving their history. **60/60 full local profiles pass**, including TypeScript and the production build, at source commit `e6701655ecad5f1c9d3fd7944b7ecec4191b0955`. Exact source-bound logs and hashes are in `UNFINISHED-WORK/evidence/security-wave-20261029/run/`; the complete report is `UNFINISHED-WORK/mgr-security-wave-20261029.md`.

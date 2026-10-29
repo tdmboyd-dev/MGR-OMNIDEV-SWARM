@@ -1,3 +1,34 @@
+# Current published trilogy wave — October 29, 2026
+
+All three existing review branches now contain the verified repair wave and its evidence. GitHub branch and commit-tree reads confirmed each pinned checkpoint below. Earlier publication failures and older test counts are historical. Repository visibility remains unchanged: OmniDev public, Code Monster and OmniSight private. Later documentation-only commits may follow these source/evidence checkpoints.
+
+| Product | Executed local verification | Published matching source | Published evidence checkpoint |
+|---|---|---|---|
+| MGR-OMNIDEV-SWARM | 60/60 full verification profiles, including TypeScript and production build | `7a8ec2f728ff35fcc03488d903acc7d1d6b51af9` | `18f33466ecb86aa74a52224b92453f8e7d2dd5f3` |
+| MGR-CODE-MONSTER | 126/126 full tests; 13 focused CLI checks are a subset; demo and syntax passed | `a32d247916426f643d14a28c469a70bd8061f8c0` | `89a9f13a0788092acb6154d85f37a481cfe23d28` |
+| MGR-OMNISIGHT | 56/56 full tests; 12 focused census checks are a subset; localhost and producer/consumer integration passed | `6be0d00c94f77de1ef50ecf8d66d303839ad819f` | `36648593e59daa90eff9dfcf8605c3e7b357308b` |
+
+The GitHub connector retained the existing remote ancestry. Local test-receipt commit IDs and published commit IDs differ; exact Git file-tree equality was checked for both source and evidence. Each repository's newest `HANDOFF.md` and publication JSON gives the mapping. Do not relabel local fixture evidence as independent or deployed acceptance.
+
+## What changed for the user
+
+- OmniDev's security scanner distinguishes executable code from comments/examples, reports incomplete inspection honestly, preserves unresolved warnings and manual review choices, and rejects malformed replacement source. The same 60 labeled inputs went from 34 mismatches to zero; the complete project passes all 60 reviewed profiles.
+- Code Monster has usable `imprint-prepare` and `imprint-inspect` commands. They export and inspect bounded proposals tied to exact committed source and do not execute recipe snippets or overwrite existing outputs. Imprint contains the compatible-part selector formerly discussed as Slot Machine; no new product/repository was added.
+- OmniSight searches every permitted census path and pages results beyond the former display cutoff. Signed cursors bind the source, scope and query. Malformed imported paths cannot cross the display scope. Browser accessibility and live multi-user qualification remain open.
+
+## Continue with concrete remaining functionality
+
+1. Qualify the existing isolated worker fleet on an actual suitable Docker host with protected credentials, recovery, concurrency and budget measurements. Keep the established worker, not a replacement scheduler.
+2. Connect real multi-agent work from OmniDev through Code Monster candidate commits and independent verification to OmniSight live event views; preserve owner release authority.
+3. Finish live account/provider consent, scoped access, refresh, revocation and disconnect proof. Catalog names are not working adapters.
+4. Build real code relationship/symbol graphs, change-impact analysis and verified repair/recipe retrieval; measure recommendation usefulness with actual outcomes.
+5. Finish the live map, folder/symbol navigation, historical replay, large-repository performance and real keyboard/screen-reader/mobile journeys.
+6. Finish deployed identity, independent signing, measured business inputs, release/rollback and commercial qualification. Do not merge or release merely because local profiles pass.
+
+The exact named remaining actions remain in the existing per-repo `remaining-detail-*-20261029.json` records. Preserve all original requirements and their current evidence statuses. The original backlog and 441-clause acceptance register were not changed by this wave; no parent received invented certification.
+
+---
+
 # Current coordinated checkpoint — October 29, 2026
 
 Read this section before historical entries below. This is an additive update to the established handoff protocol; original decisions and evidence remain preserved.
