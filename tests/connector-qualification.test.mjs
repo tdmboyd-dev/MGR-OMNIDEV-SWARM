@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';import {runInNewContext} from 'node:vm';import ts from 'typescript';
-const catalog=readFileSync('lib/catalog.ts','utf8');const cap=readFileSync('lib/connector-qualification.ts','utf8');
+const catalog=readFileSync(new URL('../lib/catalog.ts',import.meta.url),'utf8');const cap=readFileSync(new URL('../lib/connector-qualification.ts',import.meta.url),'utf8');
 const get=x=>ts.transpileModule(x,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;
 const block=catalog.match(/export const connectors = (\[[\s\S]*?\]);/);if(!block)throw Error('connector catalog missing');const domain={};runInNewContext('this.connectors='+block[1]+';',domain);
 const js=get(cap).replace(/import \{connectors\} from ['"].\/catalog['"];?/,'').replace(/export function/g,'function');
