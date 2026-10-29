@@ -4,7 +4,7 @@
   "taskBoard": {
     "historical": 174,
     "reviewedMetadata": 105,
-    "reviewedPercent": 60.3448275862069,
+    "reviewedPercent": 60.34,
     "remainingUnreviewed": 69,
     "implementedUnverified": 1,
     "independentlyFullAccepted": 0,
@@ -18,10 +18,11 @@
     "activatedTenPercent": 0
   },
   "candidateCampaign": {
-    "status": "single-task signed evidence repair tested on Windows",
-    "passing": 7,
-    "skipped": 1,
+    "status": "New campaigns default to signed Ed25519 proof; real Git candidate test passed; trusted runner still not independent",
+    "passing": 64,
+    "skipped": 3,
     "failing": 0,
+    "total": 67,
     "independentRunnerQualified": false
   },
   "products": [
@@ -57,5 +58,6 @@
       ]
     }
   ],
-  "policy": "Percentages are measured for explicitly defined denominators only. No invented product-completion percentages. Metadata review is NOT done."
+  "policy": "Percentages are measured for explicitly defined denominators only. No invented product-completion percentages. Metadata review is NOT done.",
+  "latestCodeMonsterEvidence": "docs/FULL-WINDOWS-REGRESSION-20261029.md on MGR-CODE-MONSTER review branch"
 }
