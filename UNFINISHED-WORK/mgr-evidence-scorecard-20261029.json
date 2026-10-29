@@ -12,8 +12,8 @@
     "stillOpen": 173,
     "fullyAcceptedPercent": 0,
     "statusCounts": {
-      "open": 173,
-      "implemented_unverified": 1
+      "open": 126,
+      "implemented_unverified": 48
     },
     "sourceReferenceCheck": {
       "total": 88,
@@ -21,7 +21,19 @@
       "missing": 0,
       "percent": 100,
       "meaning": "existence only, no acceptance proof"
-    }
+    },
+    "sourceLinkedParents": 108,
+    "sourceLinkedPercent": 62.07,
+    "committedSourcePaths": {
+      "present": 276,
+      "total": 276,
+      "percent": 100,
+      "sourceCommit": "881dc631d3b777f203ffebf80713b0cd7600d0b5",
+      "note": "Pinned Git object existence and SHA, not acceptance completion"
+    },
+    "specialistsReclassified": 47,
+    "historicalBacklogCount": 174,
+    "acceptedParents": 0
   },
   "workers": {
     "requestedTenRoles": 10,
