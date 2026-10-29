@@ -1,0 +1,47 @@
+✖ branch lookup is resolved once and inventory plus every file use its immutable commit/tree (29.837473ms)
+✖ missing or malformed commit/tree identity prevents any source-file download (1.561228ms)
+✔ one failed pinned file prevents returning a mixed or incomplete success (1.317262ms)
+✔ workspace records the exact import commit and tree for later job grants (11.595282ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 2
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 50.551461
+
+✖ failing tests:
+
+test at tests/github-snapshot-pinning.test.mjs:19:1
+✖ branch lookup is resolved once and inventory plus every file use its immutable commit/tree (29.837473ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/github-snapshot-pinning.test.mjs:21:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/github-snapshot-pinning.test.mjs:25:1
+✖ missing or malformed commit/tree identity prevents any source-file download (1.561228ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/github-snapshot-pinning.test.mjs:27:35)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /pinned commit and tree/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

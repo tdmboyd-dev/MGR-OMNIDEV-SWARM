@@ -1,0 +1,215 @@
+{
+  "schema": "mgr.security-gap-baseline-reproduction.v1",
+  "sourceRevision": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+  "sourceSha256": "dca61450118d08c10683668702f4184b3a997da1185fa6b37cc5c4b5ad66aea6",
+  "corpusSha256": "4532e7e3792f3e305de8866e5100e237336c6e74523752d003ef1714563ee9aa",
+  "total": 60,
+  "matched": 26,
+  "mismatches": [
+    {
+      "id": "eval-optional",
+      "rule": "eval",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "eval-global-optional",
+      "rule": "eval",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "eval-line-comment",
+      "rule": "eval",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "eval-block-comment",
+      "rule": "eval",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "eval-quoted-message",
+      "rule": "eval",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "eval-template-message",
+      "rule": "eval",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "eval-object-method",
+      "rule": "eval",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "eval-function-declaration",
+      "rule": "eval",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "eval-method-declaration",
+      "rule": "eval",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "eval-method-multiple-parameters",
+      "rule": "eval",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "eval-regex-literal",
+      "rule": "eval",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "eval-regex-after-condition",
+      "rule": "eval",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "sql-bound-arithmetic",
+      "rule": "sql",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "sql-bound-concat",
+      "rule": "sql",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "sql-plus-in-literal",
+      "rule": "sql",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "sql-multiline-concat",
+      "rule": "sql",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "sql-template-interpolation",
+      "rule": "sql",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "sql-comment-example",
+      "rule": "sql",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "sql-string-example",
+      "rule": "sql",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "sql-comment-plus",
+      "rule": "sql",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "sql-parenthesized-bound-values",
+      "rule": "sql",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "sql-execute-bound-values",
+      "rule": "sql",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "sql-optional-call",
+      "rule": "sql",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "sql-increment-not-concat",
+      "rule": "sql",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "credential-typed-assignment",
+      "rule": "credential",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "credential-quoted-key",
+      "rule": "credential",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "credential-static-template",
+      "rule": "credential",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "credential-comment-example",
+      "rule": "credential",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "credential-block-comment",
+      "rule": "credential",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "credential-quoted-example",
+      "rule": "credential",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "credential-type-literal",
+      "rule": "credential",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "credential-sql-string",
+      "rule": "credential",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "credential-json-field",
+      "rule": "credential",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "credential-json-nested",
+      "rule": "credential",
+      "expected": true,
+      "detected": false
+    }
+  ],
+  "qualification": "Hand-labeled bounded local corpus; not production accuracy."
+}

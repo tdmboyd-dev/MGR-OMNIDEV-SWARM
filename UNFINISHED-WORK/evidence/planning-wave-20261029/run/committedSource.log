@@ -1,0 +1,10 @@
+✔ 50 code-linked tasks carry reproducible SHA and are not auto certified (144.506781ms)
+✔ a missing source does not become completed (115.065145ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 269.890614

@@ -139,3 +139,11 @@ All items below are open. See [README.md](README.md) for status definitions and 
 **Depends on:** DEV-01, OPS-03
 
 **Completion evidence:** None yet. Add commit, tests, artifact/provider read-back and remaining limitations before closing.
+
+## Verified local update — October 29, 2026
+
+RUN-03 now records implemented_unverified: atomic recovery preserves result evidence and durable audits, with concurrent/stale/audit-failure regressions passing. Real multi-host and external effects remain open.
+
+DEV-01/AC-02 has separately recorded local validation evidence; broader code generation/refactoring remains open.
+
+See [the exact source-bound wave report](mgr-full-verification-wave-20261029.md) and canonical criterion register; earlier planning notes above are historical where they conflict. Original acceptance wording is preserved.

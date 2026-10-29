@@ -1,0 +1,92 @@
+✖ RUN-03 exhausted recovery preserves candidate, reviews and test output with an audit event (11.133036ms)
+✖ RUN-03 retry recovery is auditable, preserves attempts and executes the queued work (2.299331ms)
+✖ RUN-03 concurrent recovery and repeated requests record exactly one recovery (1.633148ms)
+✔ RUN-03 recovery cannot overwrite a newer completed worker result (1.584925ms)
+✖ RUN-03 audit persistence failure rolls recovery back atomically (1.867861ms)
+✔ RUN-03 healthy leases and terminal jobs are not recovered (1.668552ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 2
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.813766
+
+✖ failing tests:
+
+test at tests/job-recovery-integrity.mjs:27:1
+✖ RUN-03 exhausted recovery preserves candidate, reviews and test output with an audit event (11.133036ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + undefined
+  - {
+  -   patches: [
+  -     {
+  -       after: '# Saved output',
+  -       before: null,
+  -       path: 'README.md'
+  -     }
+  -   ],
+  -   summary: 'Saved candidate'
+  - }
+  
+      at TestContext.<anonymous> (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/job-recovery-integrity.mjs:29:96)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Object],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/job-recovery-integrity.mjs:35:1
+✖ RUN-03 retry recovery is auditable, preserves attempts and executes the queued work (2.299331ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/job-recovery-integrity.mjs:38:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/job-recovery-integrity.mjs:44:1
+✖ RUN-03 concurrent recovery and repeated requests record exactly one recovery (1.633148ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/job-recovery-integrity.mjs:46:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/job-recovery-integrity.mjs:56:1
+✖ RUN-03 audit persistence failure rolls recovery back atomically (1.867861ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/job-recovery-integrity.mjs:59:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /forced audit failure/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

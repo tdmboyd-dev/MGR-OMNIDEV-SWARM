@@ -1,0 +1,58 @@
+import {createHash} from 'node:crypto';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+const root=process.cwd();
+const {fixture,closeStore,jobs,get,post,environment,resultOf,mutateJob,database}=await import(pathToFileURL(resolve(root,'tests/trilogy-fixture.mjs')));
+const results=[];
+const hash=value=>createHash('sha256').update(value).digest('hex');
+async function staged(){const f=await fixture(),pending=await f.pending();const saved=await f.save({result:pending.result});if(saved.status!==200)throw Error('Stage fixture failed');return {f,pending};}
+const report=(f,assignment,signed)=>({passed:true,output:Buffer.from(signed.outputBase64,'base64').toString('utf8'),worker:'docker-isolated',imageDigest:'node@sha256:'+'a'.repeat(64),cleanup:{verifiedAbsent:true},assignment:assignment.assignment,trilogyReceipt:signed.receipt,trilogySignerId:environment.OMNI_TRILOGY_VERIFIER_ID});
+async function probe(name,fn){try{const result=await fn();results.push({name,...result});}catch(error){results.push({name,unexpectedError:String(error)});}}
+await probe('execution read returns output after completed owner revocation',async()=>{
+ const {f,pending}=await staged(),assignment=await jobs.workerJob(f.job.id),signed=await f.verified(pending);
+ await jobs.report(f.job.id,report(f,assignment,signed));
+ const verify=crypto.subtle.verify;let revoked;
+ crypto.subtle.verify=async function(...args){const valid=await verify.apply(this,args);revoked=await post({action:'revoke',jobId:f.job.id},f.tokens.owner);return valid;};
+ try{const response=await get(f.job.id,f.tokens.bridge,'execution');return {expected:'non-200 with no output',observed:{revocationStatus:revoked?.status,grantRevoked:resultOf(f.job.id).trilogy.grant.revoked,responseStatus:response.status,available:response.data.available,includesSignedOutput:!!response.data.outputBase64},guardPassed:response.status!==200&&!response.data.outputBase64};}finally{crypto.subtle.verify=verify;}
+});
+await probe('verified replay claims success after completed owner revocation',async()=>{
+ const {f,pending}=await staged(),signed=await f.verified(pending);await f.save(signed);
+ const verify=crypto.subtle.verify;let revoked;
+ crypto.subtle.verify=async function(...args){const valid=await verify.apply(this,args);revoked=await post({action:'revoke',jobId:f.job.id},f.tokens.owner);return valid;};
+ try{const response=await f.save(signed);return {expected:'non-200 after revoked grant',observed:{revocationStatus:revoked?.status,grantRevoked:resultOf(f.job.id).trilogy.grant.revoked,responseStatus:response.status,replayed:response.data.replayed},guardPassed:response.status!==200};}finally{crypto.subtle.verify=verify;}
+});
+await probe('pending stage commits after concurrent objective change',async()=>{
+ const f=await fixture(),pending=await f.pending(),batch=environment.DB.batch;
+ environment.DB.batch=async statements=>{if(statements.some(s=>s.sql.includes('UPDATE jobs SET result=?')))mutateJob(f.job.id,j=>j.objective='Changed owner objective during staging');return batch(statements);};
+ const response=await f.save({result:pending.result});
+ return {expected:'non-200 with no newly stored stage',observed:{responseStatus:response.status,savedState:resultOf(f.job.id).trilogy.result?.state,subsequentReadStatus:(await get(f.job.id,f.tokens.reader)).status},guardPassed:response.status!==200&&resultOf(f.job.id).trilogy.result===null};
+});
+await probe('verification result commits after grant expiry during signature check',async()=>{
+ const {f,pending}=await staged(),signed=await f.verified(pending),verify=crypto.subtle.verify,now=Date.now;
+ crypto.subtle.verify=async function(...args){const valid=await verify.apply(this,args);Date.now=()=>pending.grant.expiresAt+1;return valid;};
+ try{const response=await f.save(signed);return {expected:'non-200 with stage still pending',observed:{responseStatus:response.status,savedState:resultOf(f.job.id).trilogy.result?.state,subsequentReadStatus:(await get(f.job.id,f.tokens.reader)).status},guardPassed:response.status!==200&&resultOf(f.job.id).trilogy.result?.state==='candidate-pending-independent-verification'};}finally{crypto.subtle.verify=verify;Date.now=now;}
+});
+await probe('worker assignment commits after concurrent objective change',async()=>{
+ const {f}=await staged(),prepare=environment.DB.prepare;
+ environment.DB.prepare=sql=>{const statement=prepare(sql),bind=statement.bind;statement.bind=function(...args){const bound=bind.apply(this,args),run=bound.run;bound.run=async function(){if(sql.startsWith('UPDATE jobs SET result='))mutateJob(f.job.id,j=>j.objective='Changed owner objective during worker assignment');return run.call(this);};return bound;};return statement;};
+ let accepted=false,error;try{await jobs.workerJob(f.job.id);accepted=true;}catch(e){error=String(e);}
+ return {expected:'rejection without worker assignment',observed:{accepted,error,hasAssignment:!!resultOf(f.job.id).workerAssignment},guardPassed:!accepted&&!resultOf(f.job.id).workerAssignment};
+});
+await probe('worker proof report commits after concurrent objective change',async()=>{
+ const {f,pending}=await staged(),assignment=await jobs.workerJob(f.job.id),signed=await f.verified(pending),verify=crypto.subtle.verify;
+ crypto.subtle.verify=async function(...args){const valid=await verify.apply(this,args);mutateJob(f.job.id,j=>j.objective='Changed owner objective during worker report');return valid;};
+ try{let accepted=false,error;try{await jobs.report(f.job.id,report(f,assignment,signed));accepted=true;}catch(e){error=String(e);}return {expected:'rejection with no accepted worker report',observed:{accepted,error,hasReport:!!resultOf(f.job.id).externalTests},guardPassed:!accepted&&!resultOf(f.job.id).externalTests};}finally{crypto.subtle.verify=verify;}
+});
+await probe('snapshot apply after expiry during exposure admission',async()=>{
+ const {f,pending}=await staged(),signed=await f.verified(pending);await f.save(signed);
+ const prepare=environment.DB.prepare,now=Date.now;
+ environment.DB.prepare=sql=>{const statement=prepare(sql),bind=statement.bind;statement.bind=function(...args){const bound=bind.apply(this,args),run=bound.run;bound.run=async function(){const value=await run.call(this);if(sql.startsWith('INSERT OR IGNORE INTO records')&&args[1]==='exposure')Date.now=()=>pending.grant.expiresAt+1;return value;};return bound;};return statement;};
+ try{let accepted=false,error;try{await jobs.decide(f.job.id,'apply');accepted=true;}catch(e){error=String(e);}const status=database().prepare('SELECT status FROM jobs WHERE id=?').get(f.job.id).status;return {expected:'rejection without snapshot apply after expiry',observed:{accepted,error,status},guardPassed:!accepted&&status!=='applied'};}finally{Date.now=now;}
+});
+closeStore();
+const sources=['lib/trilogy-jobs.ts','lib/jobs.ts','lib/repository.ts','worker/trilogy-proof.mjs','.test-runtime/trilogy-jobs.mjs','.test-runtime/jobs.mjs','tests/trilogy-fixture.mjs'];
+const evidence={createdAt:new Date().toISOString(),scope:'Local in-memory SQLite fixtures and actual Ed25519 signatures with disposable test keys; no production identity or Docker qualification',sources:sources.map(path=>({path,sha256:hash(readFileSync(resolve(root,path)))})),results};
+const name=process.argv[2]||'races-before.json';writeFileSync(resolve(root,'outputs/trilogy-wave/independent-review',name),JSON.stringify(evidence,null,2)+'\n');
+console.log(JSON.stringify(evidence,null,2));
+process.exitCode=results.some(r=>r.guardPassed!==true)?1:0;

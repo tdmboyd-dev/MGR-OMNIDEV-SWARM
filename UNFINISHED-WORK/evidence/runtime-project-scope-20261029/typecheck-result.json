@@ -1,0 +1,8 @@
+{
+  "command": "node node_modules/typescript/bin/tsc --noEmit --incremental false",
+  "exitCode": 0,
+  "stdoutBytes": 0,
+  "stderrBytes": 0,
+  "qualification": "Working-tree typecheck completed successfully; clean committed full verification is the coordinator gate.",
+  "repairedPriorFailure": "Explicit JSON response type annotation resolves TS18046 in runtime-workspace.tsx."
+}

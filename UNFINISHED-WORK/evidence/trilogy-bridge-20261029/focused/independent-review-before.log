@@ -1,0 +1,106 @@
+{
+  "createdAt": "2026-10-29T18:23:24.879Z",
+  "scope": "Local in-memory SQLite fixtures and actual Ed25519 signatures with disposable test keys; no production identity or Docker qualification",
+  "sources": [
+    {
+      "path": "lib/trilogy-jobs.ts",
+      "sha256": "569fa747aea8027e126b56619191854a6937dfe4d5dd6837a6445993c3c3f417"
+    },
+    {
+      "path": "lib/jobs.ts",
+      "sha256": "10ce4356665c6ae1759b06d05f9ac6b03d6a1a2e82c46bccd74355ea40ff9c83"
+    },
+    {
+      "path": "lib/repository.ts",
+      "sha256": "e72f4d796deffc4f1fe068d445f46129602eb40ef6dd05dabdb3e5900941d62f"
+    },
+    {
+      "path": "worker/trilogy-proof.mjs",
+      "sha256": "b215c5a3db80ec1a41f5aa6e36868b07bdbf321c67ab3f5d19fb046e410f8bde"
+    },
+    {
+      "path": ".test-runtime/trilogy-jobs.mjs",
+      "sha256": "3bede03e28aa3a04cdaab37ae5ca1eedc8b7501b8b3f9f18cb79d1b17ec008b3"
+    },
+    {
+      "path": ".test-runtime/jobs.mjs",
+      "sha256": "752243d0c763ef7bea7cad259b6371a1e5518fa981add2aba95c9f8f820a67b0"
+    },
+    {
+      "path": "tests/trilogy-fixture.mjs",
+      "sha256": "14fc90eff85ab3ed9ee3b6771ad040bdf41c0ef540b70995bcfc507df67d6090"
+    }
+  ],
+  "results": [
+    {
+      "name": "execution read returns output after completed owner revocation",
+      "expected": "non-200 with no output",
+      "observed": {
+        "revocationStatus": 200,
+        "grantRevoked": true,
+        "responseStatus": 200,
+        "available": true,
+        "includesSignedOutput": true
+      },
+      "guardPassed": false
+    },
+    {
+      "name": "verified replay claims success after completed owner revocation",
+      "expected": "non-200 after revoked grant",
+      "observed": {
+        "revocationStatus": 200,
+        "grantRevoked": true,
+        "responseStatus": 200,
+        "replayed": true
+      },
+      "guardPassed": false
+    },
+    {
+      "name": "pending stage commits after concurrent objective change",
+      "expected": "non-200 with no newly stored stage",
+      "observed": {
+        "responseStatus": 200,
+        "savedState": "candidate-pending-independent-verification",
+        "subsequentReadStatus": 403
+      },
+      "guardPassed": false
+    },
+    {
+      "name": "verification result commits after grant expiry during signature check",
+      "expected": "non-200 with stage still pending",
+      "observed": {
+        "responseStatus": 200,
+        "savedState": "verified-pending-owner",
+        "subsequentReadStatus": 403
+      },
+      "guardPassed": false
+    },
+    {
+      "name": "worker assignment commits after concurrent objective change",
+      "expected": "rejection without worker assignment",
+      "observed": {
+        "accepted": true,
+        "hasAssignment": true
+      },
+      "guardPassed": false
+    },
+    {
+      "name": "worker proof report commits after concurrent objective change",
+      "expected": "rejection with no accepted worker report",
+      "observed": {
+        "accepted": true,
+        "hasReport": true
+      },
+      "guardPassed": false
+    },
+    {
+      "name": "snapshot apply after expiry during exposure admission",
+      "expected": "rejection without snapshot apply after expiry",
+      "observed": {
+        "accepted": true,
+        "status": "applied"
+      },
+      "guardPassed": false
+    }
+  ]
+}

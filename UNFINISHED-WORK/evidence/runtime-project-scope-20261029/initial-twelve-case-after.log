@@ -1,0 +1,20 @@
+✔ no implicit launch or integration target for "all" (35.063989ms)
+✔ no implicit launch or integration target for "deleted-project" (7.196211ms)
+✔ no implicit launch or integration target for "" (2.653594ms)
+✔ self healing also requires one selected project (1.294569ms)
+✔ selected project, not first project, owns a native launch (3.077533ms)
+✔ a rendered launch callback becomes inert if its project is deleted (1.969846ms)
+✔ switching projects clears old integration plans and selected partner projects (4.095094ms)
+✔ a delayed integration response cannot attach to the new project, even after switching back (2.859675ms)
+✔ deleted partner projects cannot enter an integration request (2.058158ms)
+✔ switching while audit lookup is pending prevents audit mutation and job enqueue (2.948688ms)
+✔ failed audit cannot silently fall through to job creation (1.809314ms)
+✔ an old integration job response cannot launch generation in the new selection (2.525421ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 648.907128

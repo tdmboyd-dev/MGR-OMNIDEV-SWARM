@@ -1,0 +1,13 @@
+✔ 10 slots accepted when adequate resources (0.852794ms)
+✔ insufficient host resources refuse additional slots (0.120051ms)
+✔ fleet processes 10 jobs with bounded concurrency (8.356961ms)
+✔ bad slot requests rejected (0.669998ms)
+✔ unsafe cleanup quarantines host (0.467334ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14.563404

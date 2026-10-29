@@ -1,0 +1,879 @@
+{
+  "schema": "mgr.unlinked-source-discovery.v1",
+  "date": "2026-10-29",
+  "unlinkedAtStart": 66,
+  "rule": "Candidate source paths are hypotheses, not verified implementation, do not auto-close",
+  "rows": [
+    {
+      "id": "AUTH-03",
+      "title": "Add supported AI account adapters",
+      "area": "03-account-connections",
+      "originalAcceptance": [
+        "Each shipped provider has a real no-key sign-in and completed model request with evidence.",
+        "Unavailable provider capabilities remain visibly unavailable rather than simulated."
+      ],
+      "sourceCandidates": [
+        "lib/providers.ts",
+        "lib/github-account.ts"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "DEV-01",
+      "title": "Build general code generation and refactoring",
+      "area": "02-agent-runtime",
+      "originalAcceptance": [
+        "Real coding tasks change application behavior correctly and pass relevant tests.",
+        "Unsupported edits and stale baselines are rejected with recoverable errors."
+      ],
+      "sourceCandidates": [
+        "lib/jobs.ts",
+        "lib/analyzer.ts"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "DEV-02",
+      "title": "Complete repository delivery and CI evidence",
+      "area": "02-agent-runtime",
+      "originalAcceptance": [
+        "A real branch → candidate → tests → draft PR flow is proven on a test repository.",
+        "Retry cannot silently duplicate or overwrite unrelated work."
+      ],
+      "sourceCandidates": [
+        "lib/repository.ts",
+        "lib/github.ts"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "DEV-03",
+      "title": "Generate delivery, migration and infrastructure artifacts",
+      "area": "02-agent-runtime",
+      "originalAcceptance": [
+        "Representative generated artifacts validate and run in an authorized test environment.",
+        "Destructive changes and unsupported versions cannot execute silently."
+      ],
+      "sourceCandidates": [
+        "lib/jobs.ts",
+        "lib/agent-os.ts"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "GRAPH-02",
+      "title": "Add language-aware and runtime discovery",
+      "area": "05-knowledge-and-gaps",
+      "originalAcceptance": [
+        "Fixtures and authorized real projects show correct entities and relationships.",
+        "Unsupported languages and incomplete snapshots are labeled as coverage gaps."
+      ],
+      "sourceCandidates": [
+        "lib/analyzer.ts"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "GAP-01",
+      "title": "Expand the missing-things engine",
+      "area": "05-knowledge-and-gaps",
+      "originalAcceptance": [
+        "Known gaps are detected with actionable evidence and acceptable measured false-positive rates.",
+        "Incomplete snapshots and business hypotheses do not become unsupported factual claims."
+      ],
+      "sourceCandidates": [
+        "lib/analyzer.ts",
+        "lib/repo-audit.ts"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "SEC-01",
+      "title": "Build real security intelligence",
+      "area": "06-security-and-verification",
+      "originalAcceptance": [
+        "Known vulnerabilities and remediations are validated against test fixtures and authorized targets.",
+        "Coverage, false positives and source freshness are visible."
+      ],
+      "sourceCandidates": [
+        "lib/analyzer.ts",
+        "lib/agent-os.ts"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "SEC-02",
+      "title": "Implement authorization beyond a single owner",
+      "area": "06-security-and-verification",
+      "originalAcceptance": [
+        "Unauthorized users cannot access any project data, credential or action.",
+        "Sharing does not expose a previously single-owner API."
+      ],
+      "sourceCandidates": [
+        "lib/control-plane.ts"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "SEC-03",
+      "title": "Complete credential and provider-boundary audit",
+      "area": "06-security-and-verification",
+      "originalAcceptance": [
+        "Security review findings are recorded and fixed or explicitly dispositioned.",
+        "Tests exercise material failure paths and no secrets appear in logs/exports."
+      ],
+      "sourceCandidates": [
+        "lib/providers.ts",
+        "lib/github-account.ts"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "QA-01",
+      "title": "Verify hosted end-to-end behavior",
+      "area": "06-security-and-verification",
+      "originalAcceptance": [
+        "Hosted user journeys and access boundaries pass with captured evidence.",
+        "Publication alone is never recorded as external integration success."
+      ],
+      "sourceCandidates": [
+        "tests/acceptance.mjs"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "QA-02",
+      "title": "Test actual application behavior",
+      "area": "06-security-and-verification",
+      "originalAcceptance": [
+        "Behavioral bugs and regressions cause meaningful failures.",
+        "Passing snapshot-integrity checks is not presented as application correctness."
+      ],
+      "sourceCandidates": [
+        "tests/runtime.mjs"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "QA-03",
+      "title": "Add performance, resilience and evaluation suites",
+      "area": "06-security-and-verification",
+      "originalAcceptance": [
+        "Measured results demonstrate stated capacity and reliability limits.",
+        "Evaluation artifacts and failures remain searchable.",
+        "Incident/control capacity remains available under noisy-neighbor load; supported SLOs and economic usage limits match observed profiles."
+      ],
+      "sourceCandidates": [
+        "tests/integration-fleet.mjs"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "OPS-01",
+      "title": "Ingest real health telemetry",
+      "area": "07-production-and-self-healing",
+      "originalAcceptance": [
+        "Authorized target failures produce accurate incidents and recoveries with timestamps.",
+        "Stale/missing telemetry cannot produce a false healthy state."
+      ],
+      "sourceCandidates": [
+        "lib/control-plane.ts"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "OPS-02",
+      "title": "Build production diagnosis and repair loop",
+      "area": "07-production-and-self-healing",
+      "originalAcceptance": [
+        "An induced test-environment incident is detected, diagnosed, repaired, checked and safely rolled back on failure.",
+        "No unsupported production action is claimed or performed."
+      ],
+      "sourceCandidates": [
+        "companion/engine/supervisor.mjs"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "OPS-03",
+      "title": "Add deployment and rollback adapters",
+      "area": "07-production-and-self-healing",
+      "originalAcceptance": [
+        "A real authorized staging deployment and rollback are verified.",
+        "Wrong-target, stale-plan and unsafe/destructive actions are rejected."
+      ],
+      "sourceCandidates": [
+        "companion/engine/update.mjs"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "OPS-04",
+      "title": "Operate OmniDev itself reliably",
+      "area": "07-production-and-self-healing",
+      "originalAcceptance": [
+        "Platform outages and stale workers generate actionable alerts.",
+        "Recovery and maintenance runbooks are exercised."
+      ],
+      "sourceCandidates": [
+        "worker/runner.mjs"
+      ],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "TWIN-01",
+      "title": "Build project digital twins",
+      "area": "08-digital-twins-and-futures",
+      "originalAcceptance": [
+        "Predictions are calibrated against real staging outcomes and documented uncertainty.",
+        "Twin changes cannot affect production or expose sensitive data."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "TWIN-02",
+      "title": "Add cost and revenue impact models",
+      "area": "08-digital-twins-and-futures",
+      "originalAcceptance": [
+        "Scenarios trace to real input data and explicitly distinguish forecasts from facts.",
+        "Revenue and cost access is permission-controlled."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "FUT-01",
+      "title": "Replace future-state templates with evaluated plans",
+      "area": "08-digital-twins-and-futures",
+      "originalAcceptance": [
+        "Every horizon has project-specific evidence and testable milestones.",
+        "Predictions remain hypotheses with evaluations, not guaranteed futures."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "BIZ-01",
+      "title": "Connect product and business intelligence",
+      "area": "10-business-and-innovation",
+      "originalAcceptance": [
+        "Recommendations reference real evidence and measurable business objectives.",
+        "Sensitive business/customer data has scoped access and retention."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "BIZ-02",
+      "title": "Build innovation discovery and validation",
+      "area": "10-business-and-innovation",
+      "originalAcceptance": [
+        "Proposals include sources, competing solutions, validation plans and experimental results.",
+        "The system does not claim that nobody has built something without evidence."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "EXEC-01",
+      "title": "Complete executive intelligence scores",
+      "area": "10-business-and-innovation",
+      "originalAcceptance": [
+        "All 14 dimensions have documented methodology and evidence or an explicit unassessed state.",
+        "A score never implies a certification or unsupported measurement."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "UX-02",
+      "title": "Complete accessibility and responsive verification",
+      "area": "09-design-and-user-experience",
+      "originalAcceptance": [
+        "Representative viewport and assistive-technology journeys pass with recorded findings.",
+        "All critical actions work without a mouse."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "LEGAL-01",
+      "title": "Implement scoped compliance and legal auditing",
+      "area": "06-security-and-verification",
+      "originalAcceptance": [
+        "Reports distinguish measured controls, missing evidence and legal interpretation.",
+        "No unsupported certification or legal conclusion is issued."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "INT-01",
+      "title": "Create reusable integration execution contracts",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Every adapter follows a verified lifecycle and common capability/error contract.",
+        "Cross-source permission boundaries and revoked access are enforced."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "REL-01",
+      "title": "Prepare release documentation and operating evidence",
+      "area": "13-release-and-github-handoff",
+      "originalAcceptance": [
+        "A new authorized operator can set up, verify, recover and upgrade the platform using the docs.",
+        "Release notes accurately distinguish engineering work, activation and verification."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "REL-03",
+      "title": "Resolve the unused Vercel experiment",
+      "area": "13-release-and-github-handoff",
+      "originalAcceptance": [
+        "No unwanted running resources or required Vercel dependency remain.",
+        "Cleanup outcome is verified; absence of a supported delete operation is documented."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-01",
+      "title": "GitHub integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-02",
+      "title": "GitLab integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-03",
+      "title": "Bitbucket integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-04",
+      "title": "Azure DevOps integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-05",
+      "title": "Local Projects integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-06",
+      "title": "Local Directories integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-07",
+      "title": "Monorepos integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-08",
+      "title": "AWS integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-09",
+      "title": "Azure integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-10",
+      "title": "Google Cloud integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-11",
+      "title": "Digital Ocean integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-12",
+      "title": "Kubernetes integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-13",
+      "title": "Docker integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-14",
+      "title": "PostgreSQL integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-15",
+      "title": "MySQL integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-16",
+      "title": "SQL Server integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-17",
+      "title": "MariaDB integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-18",
+      "title": "MongoDB integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-19",
+      "title": "Neo4j integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-20",
+      "title": "Redis integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-21",
+      "title": "Firebase integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-22",
+      "title": "Supabase integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-23",
+      "title": "Figma integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-24",
+      "title": "Adobe XD integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-25",
+      "title": "Sketch integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-26",
+      "title": "Blender integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-27",
+      "title": "Maya integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-28",
+      "title": "Cinema4D integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-29",
+      "title": "Notion integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-30",
+      "title": "Confluence integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-31",
+      "title": "Slack integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-32",
+      "title": "Teams integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-33",
+      "title": "Email Systems integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-34",
+      "title": "Internal Documentation integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-35",
+      "title": "APIs integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-36",
+      "title": "Microservices integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-37",
+      "title": "Legacy Systems integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-38",
+      "title": "ERP Systems integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    },
+    {
+      "id": "CONN-39",
+      "title": "CRM Systems integration",
+      "area": "04-integration-inventory",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "sourceCandidates": [],
+      "disposition": "DISCOVERY_REQUIRED",
+      "certified": false
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Digital Twins And Futures
 
-All items below are open. See [README.md](README.md) for status definitions and resume rules.
+Use the canonical backlog for current recorded states; no parent is independently certified. See [README.md](README.md) for status definitions and resume rules.
 
 ## TWIN-01 — Build project digital twins
 
@@ -42,13 +42,13 @@ All items below are open. See [README.md](README.md) for status definitions and 
 
 **Depends on:** TWIN-01, BIZ-01
 
-**Completion evidence:** None yet. Add commit, tests, artifact/provider read-back and remaining limitations before closing.
+**Local evidence:** [Current repair report](mgr-planning-imprint-wave-20261029.md) and exact source-bound logs. Full original acceptance remains subject to its stated limitations; the checkbox is not independent certification.
 
 ## FUT-01 — Replace future-state templates with evaluated plans
 
 **Priority:** P1 · **Type:** engineering · **Owner:** Unassigned
 
-**Current state:** V2/V3/V5/V10 are disclosed planning templates informed by snapshot gaps.
+**Current state:** Versioned evidence-based V2/V3/V5/V10 planning and immutable outcome evaluation are implemented and locally tested. Broader market, calibrated model and production qualification remain open.
 
 **Work required:**
 
@@ -63,4 +63,4 @@ All items below are open. See [README.md](README.md) for status definitions and 
 
 **Depends on:** GRAPH-02, TWIN-01, BIZ-01
 
-**Completion evidence:** None yet. Add commit, tests, artifact/provider read-back and remaining limitations before closing.
+**Local evidence:** [Current repair report](mgr-planning-imprint-wave-20261029.md) and exact source-bound logs. Full original acceptance remains subject to its stated limitations; the checkbox is not independent certification.

@@ -1,0 +1,4028 @@
+{
+  "schema": "mgr.omnidev.source-implementation-reconciliation.v1",
+  "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+  "reviewed": 136,
+  "sourcePaths": 327,
+  "presentPaths": 327,
+  "fullyAccepted": 0,
+  "rows": [
+    {
+      "id": "AUTH-01",
+      "title": "Activate GitHub account access",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/github-account.ts",
+          "exists": true,
+          "size": 6156,
+          "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/repository.ts",
+          "exists": true,
+          "size": 8186,
+          "sha256": "2c64a1a7512b4fb3a95bbcc4a5e47585caf11f9af22b7f55eb86be93271f7739",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUTH-02",
+      "title": "Implement approved ChatGPT plan access",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/providers.ts",
+          "exists": true,
+          "size": 5913,
+          "sha256": "390f7b299a2f385f91e04ba60b635a470262453a1a8814d26870934bb08189ba",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "components/runtime-workspace.tsx",
+          "exists": true,
+          "size": 77572,
+          "sha256": "bd84f3bb2a502d32f0929b27be66244e84a236c2ace3a822cbd3469c8b005be1",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "companion/chatgpt.mjs",
+          "exists": true,
+          "size": 20443,
+          "sha256": "7ecae41100464596022c226005498fde24b557c5a6cae737499fdfda28f1abee",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUTH-03",
+      "title": "Add supported AI account adapters",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/providers.ts",
+          "exists": true,
+          "size": 5913,
+          "sha256": "390f7b299a2f385f91e04ba60b635a470262453a1a8814d26870934bb08189ba",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/github-account.ts",
+          "exists": true,
+          "size": 6156,
+          "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUTH-04",
+      "title": "Unify connection lifecycle and policies",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "db/schema.ts",
+          "exists": true,
+          "size": 1237,
+          "sha256": "f7f0a03eaecd2fd6285b033fa41a69c15f481a5f0583b093e73a97ef29023f31",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/github-account.ts",
+          "exists": true,
+          "size": 6156,
+          "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "RUN-01",
+      "title": "Attach a real isolated worker host",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "worker/runner.mjs",
+          "exists": true,
+          "size": 8158,
+          "sha256": "019c1f2d027ab845691ed538e33bfbaaa33ef639aee88e712492b6c78192b188",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "worker/README.md",
+          "exists": true,
+          "size": 5185,
+          "sha256": "f304564ca62d144c1ad3db2a6163b66b73d284e7a0e7cbe2b94027c403a1458f",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "app/api/worker/route.ts",
+          "exists": true,
+          "size": 3071,
+          "sha256": "93c5a5b5245befc53dcc953c0033d0e23d38e65d1dc7352b290b06d1f2cf26d3",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "RUN-02",
+      "title": "Turn swarm definitions into executable specialists",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/catalog.ts",
+          "exists": true,
+          "size": 2904,
+          "sha256": "708dba1b8f78d1147815d6f4003edd7ad72425d7785207a6c07b6a19c176277d",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/agent-os.ts",
+          "exists": true,
+          "size": 7661,
+          "sha256": "4e73fb2a2326fc4688ce24182fcd80f527e0af50f6e43b8ca0cd82842d376ce0",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "app/api/agents/route.ts",
+          "exists": true,
+          "size": 1174,
+          "sha256": "e1ac70fa0c64d715b9f93e39fbd94bc495c7f3f667e37a3eb190901a45811801",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "RUN-03",
+      "title": "Harden durable orchestration and recovery",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/repository.ts",
+          "exists": true,
+          "size": 8186,
+          "sha256": "2c64a1a7512b4fb3a95bbcc4a5e47585caf11f9af22b7f55eb86be93271f7739",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/control-plane.ts",
+          "exists": true,
+          "size": 4166,
+          "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DEV-01",
+      "title": "Build general code generation and refactoring",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/analyzer.ts",
+          "exists": true,
+          "size": 5716,
+          "sha256": "0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DEV-02",
+      "title": "Complete repository delivery and CI evidence",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/repository.ts",
+          "exists": true,
+          "size": 8186,
+          "sha256": "2c64a1a7512b4fb3a95bbcc4a5e47585caf11f9af22b7f55eb86be93271f7739",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/github.ts",
+          "exists": true,
+          "size": 3039,
+          "sha256": "87ee85fee3fe7f30e53da6711d84b34c2134a3528db95a521b502da5cf230183",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DEV-03",
+      "title": "Generate delivery, migration and infrastructure artifacts",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/agent-os.ts",
+          "exists": true,
+          "size": 7661,
+          "sha256": "4e73fb2a2326fc4688ce24182fcd80f527e0af50f6e43b8ca0cd82842d376ce0",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "GRAPH-01",
+      "title": "Build a unified typed intelligence graph",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/analyzer.ts",
+          "exists": true,
+          "size": 5716,
+          "sha256": "0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "db/schema.ts",
+          "exists": true,
+          "size": 1237,
+          "sha256": "f7f0a03eaecd2fd6285b033fa41a69c15f481a5f0583b093e73a97ef29023f31",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/intelligence.ts",
+          "exists": true,
+          "size": 10713,
+          "sha256": "fc7e2185640a621bfd5805a052f3e07384d60f3923442e3a938f168b81b5fe0e",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "GRAPH-02",
+      "title": "Add language-aware and runtime discovery",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/analyzer.ts",
+          "exists": true,
+          "size": 5716,
+          "sha256": "0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "GAP-01",
+      "title": "Expand the missing-things engine",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/analyzer.ts",
+          "exists": true,
+          "size": 5716,
+          "sha256": "0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/repo-audit.ts",
+          "exists": true,
+          "size": 6330,
+          "sha256": "e1bcd77676698cc627ee739ee476917af81a931bbb612bd5e391eaa730e88ad8",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DATA-01",
+      "title": "Expand persistence and artifact storage",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "db/store.ts",
+          "exists": true,
+          "size": 1077,
+          "sha256": "7c8c1a87c7d2a68e02655193025f696410948f6ed6ffb114277a0949a27b4d79",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "db/schema.ts",
+          "exists": true,
+          "size": 1237,
+          "sha256": "f7f0a03eaecd2fd6285b033fa41a69c15f481a5f0583b093e73a97ef29023f31",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DATA-02",
+      "title": "Build durable searchable global memory",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/intelligence.ts",
+          "exists": true,
+          "size": 10713,
+          "sha256": "fc7e2185640a621bfd5805a052f3e07384d60f3923442e3a938f168b81b5fe0e",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DATA-03",
+      "title": "Add backup, restore and disaster recovery",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/intelligence.ts",
+          "exists": true,
+          "size": 10713,
+          "sha256": "fc7e2185640a621bfd5805a052f3e07384d60f3923442e3a938f168b81b5fe0e",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/platform.mjs",
+          "exists": true,
+          "size": 16879,
+          "sha256": "cf20ffe3c09a3de0ec13520c3f7faeb5e468491c627c2a94e2992a81eff19918",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "SEC-01",
+      "title": "Build real security intelligence",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/analyzer.ts",
+          "exists": true,
+          "size": 5716,
+          "sha256": "0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/agent-os.ts",
+          "exists": true,
+          "size": 7661,
+          "sha256": "4e73fb2a2326fc4688ce24182fcd80f527e0af50f6e43b8ca0cd82842d376ce0",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "SEC-02",
+      "title": "Implement authorization beyond a single owner",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/control-plane.ts",
+          "exists": true,
+          "size": 4166,
+          "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "SEC-03",
+      "title": "Complete credential and provider-boundary audit",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/providers.ts",
+          "exists": true,
+          "size": 5913,
+          "sha256": "390f7b299a2f385f91e04ba60b635a470262453a1a8814d26870934bb08189ba",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/github-account.ts",
+          "exists": true,
+          "size": 6156,
+          "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "QA-01",
+      "title": "Verify hosted end-to-end behavior",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "tests/acceptance.mjs",
+          "exists": true,
+          "size": 7902,
+          "sha256": "eeb392cc44bbe841a4f552859df3679c3be745d69b563802b1074da83d426179",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "QA-02",
+      "title": "Test actual application behavior",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "tests/runtime.mjs",
+          "exists": true,
+          "size": 27026,
+          "sha256": "336be76c44ca48878c27123b6ec36a10f48cac9357d2f04b9bfcfb68fd0dd570",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "QA-03",
+      "title": "Add performance, resilience and evaluation suites",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "tests/integration-fleet.mjs",
+          "exists": true,
+          "size": 4555,
+          "sha256": "2c08a2ca24ea19deac4e43ffad5cce60a26dfb3be021fbadd50cd9dc79c8fbd6",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "OPS-01",
+      "title": "Ingest real health telemetry",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/control-plane.ts",
+          "exists": true,
+          "size": 4166,
+          "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "OPS-02",
+      "title": "Build production diagnosis and repair loop",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "companion/engine/supervisor.mjs",
+          "exists": true,
+          "size": 2607,
+          "sha256": "e8a68ded4ac5f8ca6e47064757684c7a344ddfdf7d801c4a997e9fda4e24fa9c",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "OPS-03",
+      "title": "Add deployment and rollback adapters",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "companion/engine/update.mjs",
+          "exists": true,
+          "size": 2368,
+          "sha256": "62fc3eb041954845e9a98082ba1d945b56cee67c8d397822768977e5f0a76f01",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "OPS-04",
+      "title": "Operate OmniDev itself reliably",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "worker/runner.mjs",
+          "exists": true,
+          "size": 8158,
+          "sha256": "019c1f2d027ab845691ed538e33bfbaaa33ef639aee88e712492b6c78192b188",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "TWIN-01",
+      "title": "Build project digital twins",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/analyzer.ts",
+          "exists": true,
+          "size": 5716,
+          "sha256": "0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "app/api/workspace/route.ts",
+          "exists": true,
+          "size": 9393,
+          "sha256": "177edda3611c741655d29c348aa6195d532dde0e0f47f439fc8ba2e814fcb3a2",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "app/page.tsx",
+          "exists": true,
+          "size": 50978,
+          "sha256": "87670ae4f27c761e856e9bd1be3b6cfad7cb875408638e6344e135d7aeda6684",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "TWIN-02",
+      "title": "Add cost and revenue impact models",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/analyzer.ts",
+          "exists": true,
+          "size": 5716,
+          "sha256": "0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "app/api/workspace/route.ts",
+          "exists": true,
+          "size": 9393,
+          "sha256": "177edda3611c741655d29c348aa6195d532dde0e0f47f439fc8ba2e814fcb3a2",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "app/page.tsx",
+          "exists": true,
+          "size": 50978,
+          "sha256": "87670ae4f27c761e856e9bd1be3b6cfad7cb875408638e6344e135d7aeda6684",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "FUT-01",
+      "title": "Replace future-state templates with evaluated plans",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "app/api/workspace/route.ts",
+          "exists": true,
+          "size": 9393,
+          "sha256": "177edda3611c741655d29c348aa6195d532dde0e0f47f439fc8ba2e814fcb3a2",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "app/page.tsx",
+          "exists": true,
+          "size": 50978,
+          "sha256": "87670ae4f27c761e856e9bd1be3b6cfad7cb875408638e6344e135d7aeda6684",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "EXEC-01",
+      "title": "Complete executive intelligence scores",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/executive-scorecard.ts",
+          "exists": true,
+          "size": 8832,
+          "sha256": "2d8ee073c2d34cc798ba2b18ead901ffed67026bf0997a3e8e46b98f03b1f1be",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "app/page.tsx",
+          "exists": true,
+          "size": 50978,
+          "sha256": "87670ae4f27c761e856e9bd1be3b6cfad7cb875408638e6344e135d7aeda6684",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/executive-scorecard.test.mjs",
+          "exists": true,
+          "size": 7276,
+          "sha256": "e86fda2fa604dca2a2ea6c0e8f0416d7b19c82996a2b5d1782b7b7c79d5bdce2",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "components/executive-scorecard.tsx",
+          "exists": true,
+          "size": 1667,
+          "sha256": "acae02aa9cab5eee1c0410a59c831658ffe7dcea162505397b499e88e6ae34e6",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "UX-01",
+      "title": "Audit the existing interface and journeys",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "app/page.tsx",
+          "exists": true,
+          "size": 50978,
+          "sha256": "87670ae4f27c761e856e9bd1be3b6cfad7cb875408638e6344e135d7aeda6684",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "components/runtime-workspace.tsx",
+          "exists": true,
+          "size": 77572,
+          "sha256": "bd84f3bb2a502d32f0929b27be66244e84a236c2ace3a822cbd3469c8b005be1",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "app/globals.css",
+          "exists": true,
+          "size": 44324,
+          "sha256": "c57b9815ec565ce217226de864b36991404a7338f20e4b2566443dcf6241aef3",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "UX-02",
+      "title": "Complete accessibility and responsive verification",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "app/page.tsx",
+          "exists": true,
+          "size": 50978,
+          "sha256": "87670ae4f27c761e856e9bd1be3b6cfad7cb875408638e6344e135d7aeda6684",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "app/globals.css",
+          "exists": true,
+          "size": 44324,
+          "sha256": "c57b9815ec565ce217226de864b36991404a7338f20e4b2566443dcf6241aef3",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "components/ui/sheet.tsx",
+          "exists": true,
+          "size": 4188,
+          "sha256": "63863cf2df8f8973e52b3459ac9bdbf81be1262dbc70eb53d5271ffb03488e16",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "components/ui/dialog.tsx",
+          "exists": true,
+          "size": 4303,
+          "sha256": "dce39c6adc47d997bd2567f8b7a72f466b0134715105cd42f9194007b8ecdb14",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "UX-03",
+      "title": "Design the missing advanced working surfaces",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "components/intelligence-workspace.tsx",
+          "exists": true,
+          "size": 4946,
+          "sha256": "9e42ada17efc1067c74bcc4962250563964687e10bb4e378a59cb23d60df2e2b",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "components/runtime-workspace.tsx",
+          "exists": true,
+          "size": 77572,
+          "sha256": "bd84f3bb2a502d32f0929b27be66244e84a236c2ace3a822cbd3469c8b005be1",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "INT-01",
+      "title": "Create reusable integration execution contracts",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/integration-engineering.ts",
+          "exists": true,
+          "size": 8102,
+          "sha256": "dbd4c5c083f22ea2ce5747ae3afd3d8a8319213e5fcfba7729c5b06c524f12bd",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "REL-01",
+      "title": "Prepare release documentation and operating evidence",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "README.md",
+          "exists": true,
+          "size": 6651,
+          "sha256": "ba4dfc8d1bea3192ceccb0b9a2e8d67f04c2b62bbf476f9d331fb72c0632f8d0",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "worker/README.md",
+          "exists": true,
+          "size": 5185,
+          "sha256": "f304564ca62d144c1ad3db2a6163b66b73d284e7a0e7cbe2b94027c403a1458f",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "companion/README.md",
+          "exists": true,
+          "size": 6659,
+          "sha256": "0dd5b83b35af45675e0df425c58deb520d6c9d0363a324d27ef2d0f2e7cbdb3b",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "architecture/STATUS.md",
+          "exists": true,
+          "size": 7013,
+          "sha256": "087ab9579c989df6d969b4b4b8fb4fd9a7613dd9fdb8d5805c56d6c0c2ff673c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "scripts/engine/release.mjs",
+          "exists": true,
+          "size": 1801,
+          "sha256": "cefeba16b7f57962d3e9dd2abd086468da992d2cfa9ffb61fedd0b4e46056e1a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "scripts/install-pnpm.sh",
+          "exists": true,
+          "size": 9015,
+          "sha256": "a684c02c2b493dfbf262a66252a5cd36f81ca995a4024761728662ae63aa40c0",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "REL-02",
+      "title": "Copy the project to the requested GitHub destination",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "SOURCE-IMPORT.md",
+          "exists": true,
+          "size": 1120,
+          "sha256": "8ba39ebc63314423142bc141cbfbc5bff958140e88c170ce4fd1eede28e452de",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "UNFINISHED-WORK/README.md",
+          "exists": true,
+          "size": 7624,
+          "sha256": "1ad9f485674fab61f1f79e33be8b7ce0932258eaae2d2132bfa7e7c51f9bc10c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "worker/runner.mjs",
+          "exists": true,
+          "size": 8158,
+          "sha256": "019c1f2d027ab845691ed538e33bfbaaa33ef639aee88e712492b6c78192b188",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/verify-source-import.test.mjs",
+        "tests/scan-import-secrets.test.mjs"
+      ],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "CONN-01",
+      "title": "GitHub integration",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/github-account.ts",
+          "exists": true,
+          "size": 6156,
+          "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "CONN-05",
+      "title": "Local Projects integration",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "app/api/workspace/route.ts",
+          "exists": true,
+          "size": 9393,
+          "sha256": "177edda3611c741655d29c348aa6195d532dde0e0f47f439fc8ba2e814fcb3a2",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "CONN-06",
+      "title": "Local Directories integration",
+      "priority": "P2",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "app/api/workspace/route.ts",
+          "exists": true,
+          "size": 9393,
+          "sha256": "177edda3611c741655d29c348aa6195d532dde0e0f47f439fc8ba2e814fcb3a2",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "CONN-07",
+      "title": "Monorepos integration",
+      "priority": "P2",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "app/api/workspace/route.ts",
+          "exists": true,
+          "size": 9393,
+          "sha256": "177edda3611c741655d29c348aa6195d532dde0e0f47f439fc8ba2e814fcb3a2",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "CONN-13",
+      "title": "Docker integration",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "worker/runner.mjs",
+          "exists": true,
+          "size": 8158,
+          "sha256": "019c1f2d027ab845691ed538e33bfbaaa33ef639aee88e712492b6c78192b188",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-01",
+      "title": "Security executable specialist",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-02",
+      "title": "Backend executable specialist",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-03",
+      "title": "Frontend executable specialist",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-04",
+      "title": "DevOps executable specialist",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-05",
+      "title": "Cloud executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-06",
+      "title": "Infrastructure executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-07",
+      "title": "Databases executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-08",
+      "title": "AI Development executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-09",
+      "title": "Machine Learning executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-10",
+      "title": "LLM Engineering executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-11",
+      "title": "RAG Systems executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-12",
+      "title": "Vector Databases executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-13",
+      "title": "3D Development executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-14",
+      "title": "Blender executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-15",
+      "title": "Maya executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-16",
+      "title": "Unity executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-17",
+      "title": "Unreal Engine executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-18",
+      "title": "Game Development executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-19",
+      "title": "Mobile Development executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-20",
+      "title": "Testing executable specialist",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-21",
+      "title": "QA executable specialist",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-22",
+      "title": "Automation executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-23",
+      "title": "UI Design executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-24",
+      "title": "UX Design executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-25",
+      "title": "Accessibility executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-26",
+      "title": "Compliance executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-27",
+      "title": "Legal Auditing executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-28",
+      "title": "Documentation executable specialist",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-29",
+      "title": "Research executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-30",
+      "title": "Business Intelligence executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-31",
+      "title": "Product Management executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-32",
+      "title": "Customer Analytics executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-33",
+      "title": "Revenue Optimization executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-34",
+      "title": "Competitive Analysis executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-35",
+      "title": "Innovation Discovery executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-36",
+      "title": "Future Prediction executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-37",
+      "title": "Architecture executable specialist",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-38",
+      "title": "Code Quality executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-39",
+      "title": "Performance executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-40",
+      "title": "Scalability executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-41",
+      "title": "Reliability executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-42",
+      "title": "Observability executable specialist",
+      "priority": "P1",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-43",
+      "title": "Networking executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-44",
+      "title": "Cyber Defense executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-45",
+      "title": "Penetration Testing executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-46",
+      "title": "Open Source Analysis executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "DOM-47",
+      "title": "Dependency Intelligence executable specialist",
+      "priority": "P2",
+      "recordedStatus": "implemented_unverified",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "lib/specialists.ts",
+          "exists": true,
+          "size": 5736,
+          "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/brains.ts",
+          "exists": true,
+          "size": 2041,
+          "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "tests/specialist-areas.mjs",
+          "exists": true,
+          "size": 1523,
+          "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [
+        "tests/specialist-areas.mjs"
+      ],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-01",
+      "title": "Capability certification envelope",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-02",
+      "title": "Evidence trust root",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-03",
+      "title": "Data withdrawal convergence",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-04",
+      "title": "Control-plane bootstrap recovery",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-05",
+      "title": "Evaluator independence and capture",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-06",
+      "title": "Human accountability and appeals",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-07",
+      "title": "Supply-chain build provenance",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-08",
+      "title": "Support and incident access",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-09",
+      "title": "Independent economy and demand model",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-10",
+      "title": "Competitive outcome benchmark",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-11",
+      "title": "Blast-radius containment of learning",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-12",
+      "title": "Cross-cell budget conservation",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-13",
+      "title": "Residency-local placement authority",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-14",
+      "title": "Disconnected and local mode contract",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-15",
+      "title": "Licensed content and export feasibility",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-16",
+      "title": "Long-lived compatibility and ownership succession",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-17",
+      "title": "Customer concentration and provider collapse",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-18",
+      "title": "Experiment interference and causal claims",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-19",
+      "title": "Operational readiness of the company",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 3,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-20",
+      "title": "Option-based future readiness",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+          "exists": true,
+          "size": 9173,
+          "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-21",
+      "title": "Curated marketplace release and settlement",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/README.md",
+          "exists": true,
+          "size": 3617,
+          "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-22",
+      "title": "Provider billing path and liability reconciliation",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/README.md",
+          "exists": true,
+          "size": 3617,
+          "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-23",
+      "title": "Unified service/API compatibility matrix",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/README.md",
+          "exists": true,
+          "size": 3617,
+          "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-24",
+      "title": "Behavior-evidence policy by action class",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/README.md",
+          "exists": true,
+          "size": 3617,
+          "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-25",
+      "title": "Atomic active-job admission",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/README.md",
+          "exists": true,
+          "size": 3617,
+          "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-26",
+      "title": "Awaited sandbox cleanup and evidence",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/README.md",
+          "exists": true,
+          "size": 3617,
+          "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-27",
+      "title": "Causal repair and symptom-recurrence tracking",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/README.md",
+          "exists": true,
+          "size": 3617,
+          "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-28",
+      "title": "Engineering staffed capacity and demand forecast",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/README.md",
+          "exists": true,
+          "size": 3617,
+          "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-29",
+      "title": "Cryptographic inventory and migration drill",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/README.md",
+          "exists": true,
+          "size": 3617,
+          "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "AUD-30",
+      "title": "Correction, withdrawal and cost-liability UI",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "BUILD-BIBLE/README.md",
+          "exists": true,
+          "size": 3617,
+          "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-01",
+      "title": "Systemic Risk and Accountability Plane",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/control-plane.ts",
+          "exists": true,
+          "size": 4166,
+          "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/repository.ts",
+          "exists": true,
+          "size": 8186,
+          "sha256": "2c64a1a7512b4fb3a95bbcc4a5e47585caf11f9af22b7f55eb86be93271f7739",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-02",
+      "title": "Intent and Commitment Registry",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/jobs.ts",
+          "exists": true,
+          "size": 56286,
+          "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-03",
+      "title": "Rights and Responsibility Registry",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-04",
+      "title": "Cross-Company Collaboration Rooms",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-05",
+      "title": "Marketplace Integrity and Dispute System",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-06",
+      "title": "Enterprise Assurance Passport",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-07",
+      "title": "Coordinated Change Admission",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/control-plane.ts",
+          "exists": true,
+          "size": 4166,
+          "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-08",
+      "title": "Business-Invariant Recovery Gate",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-09",
+      "title": "Product Complexity Budget",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-10",
+      "title": "Customer Outcome Laboratory",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-11",
+      "title": "Supplier Exit and Substitution Contract",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-12",
+      "title": "Workforce Knowledge Continuity",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-13",
+      "title": "Acquisition Assimilation Protocol",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-14",
+      "title": "Interoperability Assurance Network",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-15",
+      "title": "Vertical and Physical-World Safety Gate",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-16",
+      "title": "Governance Integrity and Recovery",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-17",
+      "title": "Sovereign Deployment Acceptance Profile",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    },
+    {
+      "id": "V2-18",
+      "title": "Customer Continuity and Orderly Exit",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "implementation": "SOURCE_PRESENT_NOT_ACCEPTED",
+      "sourcePaths": [
+        {
+          "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+          "exists": true,
+          "size": 17810,
+          "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+          "authority": "committed-git-object"
+        },
+        {
+          "path": "lib/intelligence.ts",
+          "exists": true,
+          "size": 10713,
+          "sha256": "fc7e2185640a621bfd5805a052f3e07384d60f3923442e3a938f168b81b5fe0e",
+          "authority": "committed-git-object"
+        }
+      ],
+      "linkedTests": [],
+      "acceptanceCount": 2,
+      "next": "Reproduce every acceptance criterion; source presence cannot close parent."
+    }
+  ]
+}

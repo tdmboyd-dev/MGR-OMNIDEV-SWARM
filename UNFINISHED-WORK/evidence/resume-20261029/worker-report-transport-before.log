@@ -1,0 +1,108 @@
+✖ the worker route accepts the complete signed 20 KB output after JSON escaping (55.740909ms)
+✖ worst-case six-byte JSON escaping fits without increasing the decoded output allowance (11.363425ms)
+✔ chunk boundaries inside valid multi-byte UTF-8 preserve the exact signed output (17.500905ms)
+✔ signed decoded output over 20 KB is still refused even when its body fits (19.781818ms)
+✖ the existing ordinary worker report remains compatible at its allowed output limit (4.041504ms)
+✔ ordinary oversized decoded output is still refused before storage (4.243178ms)
+✖ an oversized chunked body is canceled before the remaining body is read or stored (8.817073ms)
+✔ wire-body limits count UTF-8 bytes instead of JavaScript string characters (8.464511ms)
+✖ malformed UTF-8 cannot be silently replaced and saved as ordinary worker output (5.620571ms)
+✔ truncated JSON is refused without changing any job evidence (9.341402ms)
+✔ a failed stream cannot leave a partially accepted execution report (7.780572ms)
+✔ unauthorized report requests are rejected without consuming their body (8.291883ms)
+✔ the larger transport envelope still refuses altered signed test output (7.623616ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 8
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 175.65435
+
+✖ failing tests:
+
+test at tests/worker-report-transport.test.mjs:29:1
+✖ the worker route accepts the complete signed 20 KB output after JSON escaping (55.740909ms)
+  AssertionError [ERR_ASSERTION]: Report too large
+  
+  400 !== 200
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/worker-report-transport.test.mjs:32:42)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 400,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/worker-report-transport.test.mjs:39:1
+✖ worst-case six-byte JSON escaping fits without increasing the decoded output allowance (11.363425ms)
+  AssertionError [ERR_ASSERTION]: Report too large
+  
+  400 !== 200
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/worker-report-transport.test.mjs:42:42)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 400,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/worker-report-transport.test.mjs:63:1
+✖ the existing ordinary worker report remains compatible at its allowed output limit (4.041504ms)
+  AssertionError [ERR_ASSERTION]: Report too large
+  
+  400 !== 200
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/worker-report-transport.test.mjs:66:38)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 400,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/worker-report-transport.test.mjs:75:1
+✖ an oversized chunked body is canceled before the remaining body is read or stored (8.817073ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/worker-report-transport.test.mjs:79:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/worker-report-transport.test.mjs:88:1
+✖ malformed UTF-8 cannot be silently replaced and saved as ordinary worker output (5.620571ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/worker-report-transport.test.mjs:91:46)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

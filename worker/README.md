@@ -33,3 +33,9 @@ Run `node worker/doctor.mjs` before starting. It checks daemon reachability, ima
 Set `OMNI_WORKER_SLOTS` from 1 to 10. Admission reserves 30% of host CPU and memory and allocates up to two CPUs and 1 GB per slot. A 32-CPU, 16-GB host can admit ten slots under this model. This is a concurrency configuration, not a measured tenfold throughput claim. Use one worker process per host; each job is claimed once by a digest-bound expiring assignment. Additional hosts share the queue and claim different work. The platform still admits at most ten active generation jobs at once; pending reviews can feed the execution pool.
 
 The fleet drains a bounded queue, records per-job outcomes, and stops admitting work if cleanup becomes uncertain. Cache misses, absent manifests, daemon failure and denied capacity never become passing reports. No Docker socket is exposed to application containers. Local Unix/Windows named-pipe daemon configuration is supported; remote untrusted Docker TCP endpoints are rejected.
+
+## Scoped trilogy candidate verification
+
+The existing runner now supports the authorized trilogy snapshot job described in [`TRILOGY-JOB-BRIDGE.md`](../UNFINISHED-WORK/TRILOGY-JOB-BRIDGE.md). It verifies the granted Git candidate, exact imported snapshot and command before execution, then signs observed output only after successful execution and cleanup. Configure the trusted repository mirror, registered separate verifier and protected key file outside the candidate checkout. Keys are excluded from the container environment. No new worker fleet or scheduler is introduced.
+
+Focused checks using a simulated Docker CLI do not qualify a real host. Keep the existing host-capacity, pinned-image, permission and independent production-approval requirements above.

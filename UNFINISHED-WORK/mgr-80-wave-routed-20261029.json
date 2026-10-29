@@ -1,0 +1,2035 @@
+{
+  "contract": "mgr.omnidev.acceptance-routing.v1",
+  "parents": 80,
+  "criteria": 192,
+  "p0": 30,
+  "additional": 50,
+  "classification": "HEURISTIC_ONLY_NEVER_ACCEPTANCE_PROOF",
+  "bucketCounts": {
+    "provider-access": 48,
+    "isolated-host": 4,
+    "local-runtime": 72,
+    "manual-evidence": 51,
+    "release-security": 11,
+    "browser-qa": 4,
+    "integration-verification": 2
+  },
+  "items": [
+    {
+      "id": "AUTH-01",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "AUTH-01/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "A real authorized repository import and draft PR have provider-side evidence."
+        },
+        {
+          "id": "AUTH-01/AC-02",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Decline, revoke, refresh and disconnect behave correctly; no merge occurs."
+        }
+      ]
+    },
+    {
+      "id": "AUTH-02",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "AUTH-02/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "An eligible signed-in account completes real inference without pasting an API key."
+        },
+        {
+          "id": "AUTH-02/AC-02",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "No model call occurs with identity-only consent, revoked permission or a declined usage grant."
+        },
+        {
+          "id": "AUTH-02/AC-03",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Account switching, limits and refresh are verified."
+        }
+      ]
+    },
+    {
+      "id": "RUN-01",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "RUN-01/AC-01",
+          "category": "isolated-host",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified isolated-host proof",
+          "sourceRequirement": "At least one real isolated run reports evidence to the hosted queue."
+        },
+        {
+          "id": "RUN-01/AC-02",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Worker survives restart and rejects unauthorized requests without exposing credentials."
+        }
+      ]
+    },
+    {
+      "id": "RUN-02",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "RUN-02/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Nested specialist execution completes with real provider evidence and durable lineage."
+        },
+        {
+          "id": "RUN-02/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Budget exhaustion, cancellation and partial failures stop work predictably."
+        }
+      ]
+    },
+    {
+      "id": "RUN-03",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "RUN-03/AC-01",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Concurrent workers do not duplicate effects or overwrite newer results."
+        },
+        {
+          "id": "RUN-03/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Crash/retry tests produce correct terminal states and auditable recovery."
+        }
+      ]
+    },
+    {
+      "id": "DEV-02",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "DEV-02/AC-01",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "A real branch → candidate → tests → draft PR flow is proven on a test repository."
+        },
+        {
+          "id": "DEV-02/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Retry cannot silently duplicate or overwrite unrelated work."
+        }
+      ]
+    },
+    {
+      "id": "DATA-03",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "DATA-03/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "A clean environment restores approved data and artifacts successfully."
+        },
+        {
+          "id": "DATA-03/AC-02",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Lost/rotated credentials fail safely and can be reauthorized."
+        }
+      ]
+    },
+    {
+      "id": "SEC-02",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "SEC-02/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Unauthorized users cannot access any project data, credential or action."
+        },
+        {
+          "id": "SEC-02/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Sharing does not expose a previously single-owner API."
+        }
+      ]
+    },
+    {
+      "id": "SEC-03",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "SEC-03/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Security review findings are recorded and fixed or explicitly dispositioned."
+        },
+        {
+          "id": "SEC-03/AC-02",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "Tests exercise material failure paths and no secrets appear in logs/exports."
+        }
+      ]
+    },
+    {
+      "id": "QA-01",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "QA-01/AC-01",
+          "category": "browser-qa",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified browser-qa proof",
+          "sourceRequirement": "Hosted user journeys and access boundaries pass with captured evidence."
+        },
+        {
+          "id": "QA-01/AC-02",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Publication alone is never recorded as external integration success."
+        }
+      ]
+    },
+    {
+      "id": "QA-02",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "QA-02/AC-01",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Behavioral bugs and regressions cause meaningful failures."
+        },
+        {
+          "id": "QA-02/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Passing snapshot-integrity checks is not presented as application correctness."
+        }
+      ]
+    },
+    {
+      "id": "OPS-01",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "OPS-01/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized target failures produce accurate incidents and recoveries with timestamps."
+        },
+        {
+          "id": "OPS-01/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Stale/missing telemetry cannot produce a false healthy state."
+        }
+      ]
+    },
+    {
+      "id": "OPS-02",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "OPS-02/AC-01",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "An induced test-environment incident is detected, diagnosed, repaired, checked and safely rolled back on failure."
+        },
+        {
+          "id": "OPS-02/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "No unsupported production action is claimed or performed."
+        }
+      ]
+    },
+    {
+      "id": "OPS-03",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "OPS-03/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "A real authorized staging deployment and rollback are verified."
+        },
+        {
+          "id": "OPS-03/AC-02",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "Wrong-target, stale-plan and unsafe/destructive actions are rejected."
+        }
+      ]
+    },
+    {
+      "id": "UX-01",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "UX-01/AC-01",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Critical tasks can be completed with clear success/failure/recovery states."
+        },
+        {
+          "id": "UX-01/AC-02",
+          "category": "browser-qa",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified browser-qa proof",
+          "sourceRequirement": "Screens never imply unverified connectivity, test evidence or autonomy."
+        }
+      ]
+    },
+    {
+      "id": "UX-02",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "UX-02/AC-01",
+          "category": "browser-qa",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified browser-qa proof",
+          "sourceRequirement": "Representative viewport and assistive-technology journeys pass with recorded findings."
+        },
+        {
+          "id": "UX-02/AC-02",
+          "category": "browser-qa",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified browser-qa proof",
+          "sourceRequirement": "All critical actions work without a mouse."
+        }
+      ]
+    },
+    {
+      "id": "INT-01",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "INT-01/AC-01",
+          "category": "integration-verification",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified integration-verification proof",
+          "sourceRequirement": "Every adapter follows a verified lifecycle and common capability/error contract."
+        },
+        {
+          "id": "INT-01/AC-02",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Cross-source permission boundaries and revoked access are enforced."
+        }
+      ]
+    },
+    {
+      "id": "AUD-02",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "AUD-02/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Forged/stale/mismatched reports cannot authorize effects."
+        },
+        {
+          "id": "AUD-02/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+        }
+      ]
+    },
+    {
+      "id": "AUD-04",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "AUD-04/AC-01",
+          "category": "isolated-host",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified isolated-host proof",
+          "sourceRequirement": "Cold-region restore succeeds without relying on the failed control plane."
+        },
+        {
+          "id": "AUD-04/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+        },
+        {
+          "id": "AUD-04/AC-03",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Missing keys/objects, incompatible histories, deleted-source resurrection and unknown external writes prevent unsafe restart."
+        }
+      ]
+    },
+    {
+      "id": "AUD-07",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "AUD-07/AC-01",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "Poisoned image/package/attestation fails admission."
+        },
+        {
+          "id": "AUD-07/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+        }
+      ]
+    },
+    {
+      "id": "AUD-12",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "AUD-12/AC-01",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "Network partition cannot multiply available funds or release unresolved liability."
+        },
+        {
+          "id": "AUD-12/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+        },
+        {
+          "id": "AUD-12/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Duplicate receipts, currency mismatch, imbalance and immutable-history edits fail; uncertain liability and controlled exposure are explicit."
+        }
+      ]
+    },
+    {
+      "id": "AUD-24",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "AUD-24/AC-01",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "Snapshot edit versus validated change versus deployment has explicit required evidence; missing/stale tests cannot authorize high-risk actions."
+        },
+        {
+          "id": "AUD-24/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Exact revision, operational owner and repeatable evidence are recorded."
+        }
+      ]
+    },
+    {
+      "id": "AUD-25",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "AUD-25/AC-01",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "Enforce concurrency/resource admission atomically; concurrent enqueue cannot exceed quota; failure releases only valid allocations."
+        },
+        {
+          "id": "AUD-25/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Exact revision, operational owner and repeatable evidence are recorded."
+        }
+      ]
+    },
+    {
+      "id": "AUD-26",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "AUD-26/AC-01",
+          "category": "isolated-host",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified isolated-host proof",
+          "sourceRequirement": "Await cleanup outcomes; verify no surviving containers/files after success, timeout, cancellation and runner crash; alert unresolved cleanup."
+        },
+        {
+          "id": "AUD-26/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Exact revision, operational owner and repeatable evidence are recorded."
+        }
+      ]
+    },
+    {
+      "id": "V2-01",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "V2-01/AC-01",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "Concurrent correlated releases cannot exceed aggregate ceilings; compromised runtime cannot remove veto or recovery evidence."
+        },
+        {
+          "id": "V2-01/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+        }
+      ]
+    },
+    {
+      "id": "V2-02",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "V2-02/AC-01",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "A bug-fix objective cannot silently become a migration; ambiguous revisions preserve original intent and review."
+        },
+        {
+          "id": "V2-02/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+        }
+      ]
+    },
+    {
+      "id": "V2-03",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "V2-03/AC-01",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Revocation/transfer/export tests preserve provenance and prevent purpose escalation."
+        },
+        {
+          "id": "V2-03/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+        }
+      ]
+    },
+    {
+      "id": "V2-07",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "V2-07/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Individually safe but jointly unsafe related changes cannot dispatch together."
+        },
+        {
+          "id": "V2-07/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+        }
+      ]
+    },
+    {
+      "id": "V2-08",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "V2-08/AC-01",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Restored but logically inconsistent data fails recovery; deletion and unresolved effects are reconciled."
+        },
+        {
+          "id": "V2-08/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+        }
+      ]
+    },
+    {
+      "id": "V2-16",
+      "priority": "P0",
+      "criteria": [
+        {
+          "id": "V2-16/AC-01",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Compromised agents/evaluators cannot disable veto; legitimate scoped recovery is independently auditable."
+        },
+        {
+          "id": "V2-16/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+        }
+      ]
+    },
+    {
+      "id": "AUTH-03",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "AUTH-03/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Each shipped provider has a real no-key sign-in and completed model request with evidence."
+        },
+        {
+          "id": "AUTH-03/AC-02",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Unavailable provider capabilities remain visibly unavailable rather than simulated."
+        }
+      ]
+    },
+    {
+      "id": "AUTH-04",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "AUTH-04/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Connections report only verified capabilities and preserve errors without leaking tokens."
+        },
+        {
+          "id": "AUTH-04/AC-02",
+          "category": "isolated-host",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified isolated-host proof",
+          "sourceRequirement": "Concurrent refresh/revocation and cross-account isolation pass meaningful tests."
+        }
+      ]
+    },
+    {
+      "id": "DEV-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "DEV-01/AC-01",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Real coding tasks change application behavior correctly and pass relevant tests."
+        },
+        {
+          "id": "DEV-01/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Unsupported edits and stale baselines are rejected with recoverable errors."
+        }
+      ]
+    },
+    {
+      "id": "DEV-03",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "DEV-03/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Representative generated artifacts validate and run in an authorized test environment."
+        },
+        {
+          "id": "DEV-03/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Destructive changes and unsupported versions cannot execute silently."
+        }
+      ]
+    },
+    {
+      "id": "GRAPH-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "GRAPH-01/AC-01",
+          "category": "integration-verification",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified integration-verification proof",
+          "sourceRequirement": "Multiple connected systems share verified cross-source relationships."
+        },
+        {
+          "id": "GRAPH-01/AC-02",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Updates/deletes do not leave stale edges or reveal unauthorized nodes."
+        }
+      ]
+    },
+    {
+      "id": "GRAPH-02",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "GRAPH-02/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Fixtures and authorized real projects show correct entities and relationships."
+        },
+        {
+          "id": "GRAPH-02/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Unsupported languages and incomplete snapshots are labeled as coverage gaps."
+        }
+      ]
+    },
+    {
+      "id": "GAP-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "GAP-01/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Known gaps are detected with actionable evidence and acceptable measured false-positive rates."
+        },
+        {
+          "id": "GAP-01/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Incomplete snapshots and business hypotheses do not become unsupported factual claims."
+        }
+      ]
+    },
+    {
+      "id": "DATA-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "DATA-01/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Large projects remain responsive within measured budgets."
+        },
+        {
+          "id": "DATA-01/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Artifacts have provenance, access controls and reliable lifecycle cleanup."
+        },
+        {
+          "id": "DATA-01/AC-03",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "Migrations run on the selected PostgreSQL version from empty/prior schemas; wrong-project links, cycle races, BYPASSRLS/owner contexts and pooled tenant leakage are rejected."
+        }
+      ]
+    },
+    {
+      "id": "DATA-02",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "DATA-02/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Relevant historical evidence can be retrieved across project versions with provenance."
+        },
+        {
+          "id": "DATA-02/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Access, correction, retention and deletion are verified."
+        }
+      ]
+    },
+    {
+      "id": "SEC-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "SEC-01/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Known vulnerabilities and remediations are validated against test fixtures and authorized targets."
+        },
+        {
+          "id": "SEC-01/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Coverage, false positives and source freshness are visible."
+        }
+      ]
+    },
+    {
+      "id": "QA-03",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "QA-03/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Measured results demonstrate stated capacity and reliability limits."
+        },
+        {
+          "id": "QA-03/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Evaluation artifacts and failures remain searchable."
+        },
+        {
+          "id": "QA-03/AC-03",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Incident/control capacity remains available under noisy-neighbor load; supported SLOs and economic usage limits match observed profiles."
+        }
+      ]
+    },
+    {
+      "id": "OPS-04",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "OPS-04/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Platform outages and stale workers generate actionable alerts."
+        },
+        {
+          "id": "OPS-04/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Recovery and maintenance runbooks are exercised."
+        }
+      ]
+    },
+    {
+      "id": "TWIN-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "TWIN-01/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Predictions are calibrated against real staging outcomes and documented uncertainty."
+        },
+        {
+          "id": "TWIN-01/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Twin changes cannot affect production or expose sensitive data."
+        }
+      ]
+    },
+    {
+      "id": "TWIN-02",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "TWIN-02/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Scenarios trace to real input data and explicitly distinguish forecasts from facts."
+        },
+        {
+          "id": "TWIN-02/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Revenue and cost access is permission-controlled."
+        }
+      ]
+    },
+    {
+      "id": "FUT-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "FUT-01/AC-01",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Every horizon has project-specific evidence and testable milestones."
+        },
+        {
+          "id": "FUT-01/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Predictions remain hypotheses with evaluations, not guaranteed futures."
+        }
+      ]
+    },
+    {
+      "id": "BIZ-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "BIZ-01/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Recommendations reference real evidence and measurable business objectives."
+        },
+        {
+          "id": "BIZ-01/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Sensitive business/customer data has scoped access and retention."
+        }
+      ]
+    },
+    {
+      "id": "BIZ-02",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "BIZ-02/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Proposals include sources, competing solutions, validation plans and experimental results."
+        },
+        {
+          "id": "BIZ-02/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "The system does not claim that nobody has built something without evidence."
+        }
+      ]
+    },
+    {
+      "id": "EXEC-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "EXEC-01/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "All 14 dimensions have documented methodology and evidence or an explicit unassessed state."
+        },
+        {
+          "id": "EXEC-01/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "A score never implies a certification or unsupported measurement."
+        }
+      ]
+    },
+    {
+      "id": "UX-03",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "UX-03/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Each new surface has task-based acceptance criteria and maps to implemented data/actions."
+        },
+        {
+          "id": "UX-03/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Usability review covers real target users and failure paths."
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "LEGAL-01/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Reports distinguish measured controls, missing evidence and legal interpretation."
+        },
+        {
+          "id": "LEGAL-01/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "No unsupported certification or legal conclusion is issued."
+        }
+      ]
+    },
+    {
+      "id": "REL-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "REL-01/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "A new authorized operator can set up, verify, recover and upgrade the platform using the docs."
+        },
+        {
+          "id": "REL-01/AC-02",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "Release notes accurately distinguish engineering work, activation and verification."
+        }
+      ]
+    },
+    {
+      "id": "REL-02",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "REL-02/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "User-designated GitHub repository contains the exact reviewed source and unfinished-work folder."
+        },
+        {
+          "id": "REL-02/AC-02",
+          "category": "release-security",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified release-security proof",
+          "sourceRequirement": "No unrelated repository is modified and no secret is committed."
+        }
+      ]
+    },
+    {
+      "id": "REL-03",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "REL-03/AC-01",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "No unwanted running resources or required Vercel dependency remain."
+        },
+        {
+          "id": "REL-03/AC-02",
+          "category": "manual-evidence",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified manual-evidence proof",
+          "sourceRequirement": "Cleanup outcome is verified; absence of a supported delete operation is documented."
+        }
+      ]
+    },
+    {
+      "id": "CONN-01",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "CONN-01/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-01/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-01/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-02",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-02/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-02/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-02/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-03",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-03/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-03/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-03/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-04",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-04/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-04/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-04/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-05",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "CONN-05/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-05/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-05/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-06",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-06/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-06/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-06/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-07",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-07/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-07/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-07/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-08",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-08/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-08/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-08/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-09",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-09/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-09/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-09/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-10",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-10/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-10/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-10/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-11",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-11/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-11/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-11/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-12",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "CONN-12/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-12/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-12/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-13",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "CONN-13/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-13/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-13/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-14",
+      "priority": "P1",
+      "criteria": [
+        {
+          "id": "CONN-14/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-14/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-14/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-15",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-15/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-15/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-15/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-16",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-16/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-16/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-16/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-17",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-17/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-17/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-17/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-18",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-18/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-18/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-18/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-19",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-19/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-19/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-19/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-20",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-20/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-20/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-20/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-21",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-21/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-21/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-21/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-22",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-22/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-22/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-22/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-23",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-23/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-23/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-23/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-24",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-24/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-24/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-24/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-25",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-25/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-25/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-25/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-26",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-26/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-26/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-26/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    },
+    {
+      "id": "CONN-27",
+      "priority": "P2",
+      "criteria": [
+        {
+          "id": "CONN-27/AC-01",
+          "category": "provider-access",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "qualified provider-access proof",
+          "sourceRequirement": "Authorized real-source discovery and incremental read-back are demonstrated."
+        },
+        {
+          "id": "CONN-27/AC-02",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Denial, revocation, service failure and unsupported actions fail safely."
+        },
+        {
+          "id": "CONN-27/AC-03",
+          "category": "local-runtime",
+          "status": "AWAITING_CRITERION_VERIFICATION",
+          "candidateEvidence": [],
+          "blockingGate": "exact test and review",
+          "sourceRequirement": "Writes, if shipped, have separate target-specific tests and policy."
+        }
+      ]
+    }
+  ]
+}

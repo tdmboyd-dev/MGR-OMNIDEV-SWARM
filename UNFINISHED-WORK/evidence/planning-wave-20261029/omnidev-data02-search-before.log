@@ -1,0 +1,82 @@
+✔ decisions list includes prior structured decisions, project scope and revision history (51.288681ms)
+✔ recorded outcomes and corrections retain readable prior and next revisions (2.553654ms)
+✔ stale outcome forms cannot replace a newer observation even when requests are sequential (3.093176ms)
+✔ missing, malformed and wrong revisions or empty outcomes are refused without writes (3.236361ms)
+✔ simultaneous decision outcomes produce one durable revision and one audit event (2.044588ms)
+✔ decision audit failure rolls back the outcome instead of losing its history (1.347238ms)
+✔ project-scoped decisions reject stale source and deleted parents without creating orphan records (4.503559ms)
+✔ unknown decision-list scope and cross-origin outcome writes fail safely (1.219106ms)
+✖ historical corrected outcomes remain searchable with their exact decision revision and source context (6.892585ms)
+✖ scoped history search excludes matching other-project and unassigned records without changing stored history (19.82353ms)
+✖ unknown and wrong-kind search scopes are rejected instead of silently appearing to contain no evidence (1.646629ms)
+✖ future plan search retains the original version and contract citation after a later source version (9.955615ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 8
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 116.403055
+
+✖ failing tests:
+
+test at tests/decision-outcomes.mjs:79:1
+✖ historical corrected outcomes remain searchable with their exact decision revision and source context (6.892585ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'a657d7ce-a562-45f9-8e2b-fc58ec19f1bc'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/decision-outcomes.mjs:87:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'a657d7ce-a562-45f9-8e2b-fc58ec19f1bc',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/decision-outcomes.mjs:96:1
+✖ scoped history search excludes matching other-project and unassigned records without changing stored history (19.82353ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(result.data.hits.every(h=>h.projectId===p.id&&h.citation.projectId===p.id))
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/decision-outcomes.mjs:100:82)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/decision-outcomes.mjs:105:1
+✖ unknown and wrong-kind search scopes are rejected instead of silently appearing to contain no evidence (1.646629ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/decision-outcomes.mjs:107:99)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/decision-outcomes.mjs:111:1
+✖ future plan search retains the original version and contract citation after a later source version (9.955615ms)
+  TypeError: Cannot read properties of undefined (reading 'planVersion')
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/decision-outcomes.mjs:117:39)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

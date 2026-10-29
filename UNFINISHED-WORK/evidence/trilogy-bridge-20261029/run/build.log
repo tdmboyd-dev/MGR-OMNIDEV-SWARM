@@ -1,0 +1,45 @@
+
+  vinext build  (Vite 8.0.13)
+
+[1/5] analyze client references...
+[2Ktransforming...✓ 258 modules transformed.
+rendering chunks...
+✓ built in 1.26s
+[2/5] analyze server references...
+[2Ktransforming...✓ 243 modules transformed.
+rendering chunks...
+✓ built in 728ms
+[3/5] build rsc environment...
+[2Ktransforming...✓ 255 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 827ms
+[4/5] build client environment...
+[2Ktransforming...✓ 2042 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 2.27s
+[5/5] build ssr environment...
+[2Ktransforming...✓ 249 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 895ms
+[0m
+  Route (app)
+  ┌ ? /                   
+  ├ λ /api/accounts/github
+  ├ λ /api/agents         
+  ├ λ /api/intelligence   
+  ├ λ /api/runtime        
+  ├ λ /api/trilogy        
+  ├ λ /api/worker         
+  └ λ /api/workspace      
+
+  λ API  ? Unknown
+
+  ? Some routes could not be classified. vinext currently uses static analysis
+    and cannot detect dynamic API usage (headers(), cookies(), etc.) at build time.
+    Automatic classification will be improved in a future release.
+
+  Build complete. Run `vinext start` to start the production server.
+

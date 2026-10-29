@@ -1,0 +1,118 @@
+✔ non-trilogy jobs receive no trilogy signature capability (3.534146ms)
+✔ a real failing baseline and passing candidate produce a valid exact-command Ed25519 receipt (396.40027ms)
+✔ arbitrary candidate commit labels and noncandidate branch refs are refused (49.960256ms)
+✔ candidate with additional unapproved committed changes is refused (80.750696ms)
+✔ merge-parent candidates are refused even when their tree matches the proposal (68.415813ms)
+✔ tampered candidate contents and before/after hashes are refused (105.524805ms)
+✖ every changed plan file must be included in the executed snapshot (84.82516ms)
+✔ source HEAD and candidate ref drift are rejected again before signing (105.719217ms)
+✔ command changes are refused even after assignment hashes are recomputed (52.232663ms)
+✔ unmatched assignment and expired grant or assignment are refused (54.350191ms)
+✔ owner identity cannot be the verifier and revoked verifier cannot start (53.200394ms)
+✔ wrong repository configuration or public signing key is refused (55.818036ms)
+✔ verifier revocation and public-key rotation during execution stop signing (102.594499ms)
+✖ same-path private-key replacement during execution stops signing (102.496667ms)
+✖ protected key permissions cannot become public during execution (111.577614ms)
+✔ key files in the candidate repository and symlink keys are refused (54.19673ms)
+✔ relative, oversized and non-Ed25519 key files are refused (146.139906ms)
+✔ a failed process receives no successful receipt (73.885448ms)
+✖ truthy values cannot replace the observed passed boolean (89.532732ms)
+✖ empty, oversized, non-string and malformed Unicode output cannot be signed (86.773609ms)
+✔ failed cleanup, wrong exit status and invalid observation times cannot be signed (63.741356ms)
+✖ timestamps must be canonical ISO instants before a receipt is generated (83.271251ms)
+✔ grant expiry during execution prevents signing even after successful process output (69.082852ms)
+✔ Docker command environment contains no verifier keys or control credentials (42.737832ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 18
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2223.545618
+
+✖ failing tests:
+
+test at tests/trilogy-worker.test.mjs:76:1
+✖ every changed plan file must be included in the executed snapshot (84.82516ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:77:108)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/trilogy-worker.test.mjs:97:1
+✖ same-path private-key replacement during execution stops signing (102.496667ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:98:135)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/trilogy-worker.test.mjs:100:1
+✖ protected key permissions cannot become public during execution (111.577614ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:102:99)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/trilogy-worker.test.mjs:117:1
+✖ truthy values cannot replace the observed passed boolean (89.532732ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:118:103)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/trilogy-worker.test.mjs:120:1
+✖ empty, oversized, non-string and malformed Unicode output cannot be signed (86.773609ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:121:159)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/trilogy-worker.test.mjs:126:1
+✖ timestamps must be canonical ISO instants before a receipt is generated (83.271251ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:127:70)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }

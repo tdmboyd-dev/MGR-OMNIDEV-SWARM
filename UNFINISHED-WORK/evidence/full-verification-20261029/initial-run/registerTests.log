@@ -1,0 +1,30 @@
+✔ 174 task records and 348 criteria pass preservation without false certifications (4.661797ms)
+✔ rejects parent marked certified with unverified criterion (2.168504ms)
+✔ rejects forged VERIFIED with missing source/test/reviewer receipt (1.665968ms)
+✔ full provenance per criterion makes parent eligible, not automatically approved (2.164157ms)
+✔ exact acceptance text cannot be silently rewritten (1.574224ms)
+✔ duplicate original or registered parent identities are rejected (1.008528ms)
+✔ empty original requirements cannot make 174 parents ready (0.976189ms)
+✔ unknown parent IDs cannot silently replace required original parents (1.469893ms)
+✔ sparse or malformed parent and criterion records fail closed (5.794391ms)
+✔ duplicate criterion identities cannot reuse the same original requirement (4.567865ms)
+✔ blank or meaningless provenance cannot be counted as verified (11.030354ms)
+✔ historic verified proof remains intact when candidate source changes (2.316457ms)
+✔ matching candidate revision has structural readiness but no automatic certification (1.067387ms)
+✔ source readiness is unknown without an explicitly requested current revision (0.954096ms)
+✔ proof from different source revisions cannot make a parent ready (2.05339ms)
+✔ false aggregate counts and unsupported parent states are rejected (8.584932ms)
+✔ completed canonical parent and certified register must remain synchronized (3.816434ms)
+✔ the original verified status and completed_verified alias both require complete certified proof (5.658427ms)
+✔ documented incomplete states remain valid and unsupported supplied backlog states are rejected (10.713016ms)
+✔ recorded status drift is visible rather than silently changing historical source (1.042719ms)
+✔ invalid current source selectors cannot be used for certification (0.229435ms)
+✔ the original 174-task 441-criterion register and REL-02 historical evidence are preserved (9.600862ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 89.003493

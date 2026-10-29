@@ -1,0 +1,1041 @@
+{
+  "date": "2026-10-29",
+  "scope": "Current local trilogy connection verification; live production qualification and GitHub publication remain separate.",
+  "taskBoard": {
+    "historical": 174,
+    "reviewedMetadata": 174,
+    "reviewedPercent": 100,
+    "remainingUnreviewed": 0,
+    "implementedUnverified": 52,
+    "stillOpen": 122,
+    "statusCounts": {
+      "open": 122,
+      "implemented_unverified": 52
+    },
+    "independentlyFullAccepted": 0,
+    "acceptedParents": 0,
+    "fullyAcceptedPercent": 0,
+    "sourceLinkedParents": 137,
+    "sourceLinkedPercent": 78.74,
+    "remainingWithoutLinks": 37,
+    "committedSourcePaths": {
+      "total": 348,
+      "present": 348,
+      "percent": 100,
+      "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+      "proof": "UNFINISHED-WORK/mgr-137-committed-source-reconciliation-20261029.json",
+      "type": "Pinned Git objects; source presence is not behavior acceptance"
+    },
+    "specialistsReclassifiedHistorically": 47
+  },
+  "workers": {
+    "requestedTenRoles": 10,
+    "liveDockerSlots": 0,
+    "windowsQualifiedCapacityWithoutDocker": 2,
+    "activatedTenPercent": 0
+  },
+  "candidateCampaign": {
+    "status": "Scoped candidate and signed local receipt connection reproduced across all three products; production signer and general campaigns remain open.",
+    "passing": 171,
+    "total": 171,
+    "skipped": 0,
+    "failing": 0,
+    "independentRunnerQualified": false
+  },
+  "products": [
+    {
+      "name": "Code Monster",
+      "reviewPR": 1,
+      "releaseCertified": false,
+      "remaining": [
+        "independent verifier",
+        "full portable CI",
+        "multi-agent integration",
+        "batch execution"
+      ],
+      "evidenceScope": "Historical other-repository evidence; not rerun here."
+    },
+    {
+      "name": "OmniSight",
+      "reviewPR": 1,
+      "releaseCertified": false,
+      "remaining": [
+        "live source relay",
+        "hosted auth",
+        "browser certification"
+      ],
+      "evidenceScope": "Historical other-repository evidence; not rerun here."
+    },
+    {
+      "name": "OmniDev",
+      "reviewPR": 1,
+      "releaseCertified": false,
+      "remaining": [
+        "Remaining exact original criterion scope",
+        "Real Docker/worker-host qualification",
+        "Live provider and hosted authorization evidence",
+        "Reachable browser journeys",
+        "Independent signer and owner-controlled final acceptance"
+      ],
+      "evidenceScope": "Current 54-profile local verification, not production certification."
+    }
+  ],
+  "policy": "Percentages use explicit denominators. Source location, task investigation, local regression and final acceptance are distinct. No invented product-completion percentage and no nested-suite double counting.",
+  "latestCodeMonsterEvidence": "docs/FULL-WINDOWS-REGRESSION-20261029.md on MGR-CODE-MONSTER review branch",
+  "caveat": "136 linked/38 unlinked; 54/54 local profiles pass. Seven local clauses are separately evidenced; original final criterion proof remains one historical source-transfer clause, and independently certified parents remain zero. Browser, live provider, real worker and independent signing gates remain explicit.",
+  "productionGates": {
+    "historicalAcceptance": 0,
+    "sourcePathCoverage": 100,
+    "liveDockerWorkers": 0,
+    "hostedCrossProductCertification": false
+  },
+  "acceptanceEvidence": {
+    "parentRecords": 174,
+    "totalCriteria": 441,
+    "criteriaWithRecordedFinalProof": 1,
+    "verifiedCriterionIds": [
+      "REL-02/AC-01"
+    ],
+    "historicalProofScope": "REL-02/AC-01 source import at older source revision; unchanged historical record.",
+    "locallyVerifiedClauses": 7,
+    "localCriterionIds": [
+      "DEV-01/AC-02",
+      "EXEC-01/AC-01",
+      "EXEC-01/AC-02",
+      "QA-02/AC-01",
+      "QA-02/AC-02",
+      "RUN-03/AC-01",
+      "RUN-03/AC-02"
+    ],
+    "localVerifiedPercent": 1.59,
+    "parentsWithAllLocalContractsReproduced": [
+      "EXEC-01",
+      "QA-02",
+      "RUN-03"
+    ],
+    "readyForCertification": 0,
+    "independentlyCertifiedParents": 0,
+    "register": "UNFINISHED-WORK/mgr-174-acceptance-evidence-register.json",
+    "validator": "scripts/validate-acceptance-register.mjs",
+    "validatorTests": 22,
+    "note": "Local verification is stored separately, with exact source/logs/scope; it does not increase final criterion or parent certification counts."
+  },
+  "waveP0Plus50": {
+    "requestedParents": 80,
+    "p0Parents": 30,
+    "additionalParents": 50,
+    "criteria": 192,
+    "selectedAndRouted": 192,
+    "selectionPercent": 100,
+    "fullCriteriaVerified": 0,
+    "fullAcceptancePercent": 0,
+    "fullParentCertifications": 0,
+    "fixtureProfilesExecuted": 12,
+    "fixtureProfilesPassed": 12,
+    "fixturePassPercent": 100,
+    "fixtureEvidence": "UNFINISHED-WORK/mgr-p0-expanded-evidence-repaired-20261029.json",
+    "routing": "UNFINISHED-WORK/mgr-80-wave-routed-20261029.json",
+    "sourceProofScope": "local fixtures bound to git revision, not live provider or Docker certification",
+    "repairedDefects": [
+      "Public engine verification PEM was accidentally excluded by global ignore; restored and tested",
+      "P0 wave selector rejects acceptance criterion wording drift",
+      "Fixture evidence now binds to clean tracked Git commit"
+    ],
+    "externalBlockers": [
+      "Docker host unavailable",
+      "consumer provider consent/runtime not qualified",
+      "hosted OAuth/revocation workflows untested",
+      "trusted public key origin not independently established",
+      "production multi-tenant security and deployment tests unqualified"
+    ]
+  },
+  "sourceImport": {
+    "originalGithubCommit": "26e230d052c45c1f42cb731ff095679497af045a",
+    "originalSitesCommit": "439c6c1a275ba01ad346e4e11890e58f024c6efc",
+    "manifestFiles": 516,
+    "verifiedSha256Matches": 516,
+    "recognizedSecretPatternHits": 0,
+    "scannedBytes": 9199629,
+    "limitation": "credential pattern scan not exhaustive"
+  },
+  "fullVerificationGate": {
+    "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+    "totalProfiles": 64,
+    "passed": 64,
+    "failed": 0,
+    "blocked": 0,
+    "report": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/report.json",
+    "independentlyCertifiedParents": 0
+  },
+  "connectorMaturity": {
+    "catalogEntries": 39,
+    "catalogOnly": 34,
+    "partialExisting": 5,
+    "liveQualified": 0,
+    "source": "lib/connector-qualification.ts"
+  },
+  "updatedAt": "2026-10-29T20:35:56.378Z",
+  "currentWave": {
+    "schema": "mgr.trilogy.connection-wave.v1",
+    "createdAt": "2026-10-29T20:35:56.378Z",
+    "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+    "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+    "fullVerification": {
+      "passedProfiles": 64,
+      "failedProfiles": 0,
+      "blockedProfiles": 0,
+      "totalProfiles": 64,
+      "independentlyCertifiedParents": 0,
+      "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred.",
+      "report": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/report.json",
+      "sha256": "055607ca785e63f237f2842d241b4070bc28b531befcf7e2230993025e94147b",
+      "qualification": "executed-local-regression-not-live-provider-or-release-certification",
+      "independentReadback": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/independent-full-readback.json"
+    },
+    "focused": [
+      {
+        "profile": "runtimeProjectScope",
+        "passed": 18,
+        "total": 18,
+        "before": {
+          "passed": 3,
+          "failed": 15
+        }
+      },
+      {
+        "profile": "trilogyJobs",
+        "passed": 33,
+        "total": 33,
+        "stagedBaselines": [
+          {
+            "total": 16,
+            "failed": 5
+          },
+          {
+            "total": 25,
+            "failed": 4
+          },
+          {
+            "total": 33,
+            "failed": 8
+          }
+        ]
+      },
+      {
+        "profile": "trilogyWorker",
+        "passed": 31,
+        "total": 31,
+        "beforeGuardCases": {
+          "total": 24,
+          "failed": 6
+        },
+        "beforeModeCases": {
+          "total": 31,
+          "failed": 2
+        }
+      },
+      {
+        "profile": "githubSnapshotPinning",
+        "passed": 4,
+        "total": 4,
+        "before": {
+          "passed": 2,
+          "failed": 2
+        }
+      }
+    ],
+    "countingRule": "Focused tests are subsets of the64profiles. Earlier smaller suites overlap; never sum them as unique tests or completed parents.",
+    "companions": [
+      {
+        "product": "Code Monster",
+        "testedSource": "3e2f8ca405ad378c5a8d379f4caf2df9e77c474d",
+        "passed": 171,
+        "total": 171,
+        "evidence": "docs/evidence/trilogy-job-bridge-20261029/committed-verification.json",
+        "qualification": "Local Git/HTTP/signature/CLI tests; no independent production signer."
+      },
+      {
+        "product": "OmniSight",
+        "testedSource": "026a3f2360e1c4322202e9e57bbe9b084942649e",
+        "passed": 87,
+        "total": 87,
+        "evidence": "docs/evidence/job-bridge-20261029/verification.json",
+        "qualification": "Local HTTP/projection/actual-loader VM tests; no real browser qualification."
+      }
+    ],
+    "crossProduct": {
+      "passed": true,
+      "flowChecks": 10,
+      "sourceCommits": {
+        "omniDev": "9f78f46662b8ae051b523dd5df1db7339397649f",
+        "codeMonster": "348caf20c1bef59725f26faf59f2767b26040e2b",
+        "omniSight": "39543d6fb16377aaa6b69de8f89289a65034942a"
+      },
+      "sourceFilesStable": 235,
+      "preparedModulesStable": 33,
+      "privateEvidenceRepository": "tdmboyd-dev/MGR-OMNISIGHT",
+      "evidencePath": "docs/evidence/job-bridge-20261029/integration-clean-verification.json",
+      "evidenceSha256": "bb6936bfdbf446d81dc18b2235876b1b9fc3d3e9bab1e28b4571b6752c78a2ba",
+      "qualified": "Actual temporary Git candidate, SQLite, local HTTP and snapshot execution; disposable local signature keys.",
+      "notQualified": [
+        "production Docker isolation",
+        "independently operated signer",
+        "hosted multi-user identity",
+        "real browser journey",
+        "general application correctness",
+        "release"
+      ]
+    },
+    "originalScope": {
+      "parents": 174,
+      "acceptanceClauses": 441,
+      "separateUpgrades": 28,
+      "open": 122,
+      "implementedUnverified": 52,
+      "independentlyCertifiedParents": 0,
+      "sourceLinkedParents": 137,
+      "remainingWithoutSourceLinks": 37,
+      "committedSourceReferences": 348,
+      "presentCommittedReferences": 348,
+      "reconciliation": "UNFINISHED-WORK/mgr-137-committed-source-reconciliation-20261029.json"
+    },
+    "clauseMapping": [
+      {
+        "criterionId": "RUN-03/AC-01",
+        "requirement": "Concurrent workers do not duplicate effects or overwrite newer results.",
+        "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+        "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+        "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+        "observed": "Concurrent identical submissions, canceled permissions, changed objectives and delayed expiry cannot duplicate successful events or overwrite current evidence.",
+        "remaining": "Single configured scope and local SQLite; real multi-host recovery/concurrency qualification remains.",
+        "profiles": [
+          "trilogyJobs"
+        ],
+        "evidence": [
+          {
+            "profile": "trilogyJobs",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyJobs.log",
+            "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+            "bytes": 3322,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/trilogy-jobs.test.mjs"
+            ],
+            "exitCode": 0
+          }
+        ],
+        "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+        "recordedAt": "2026-10-29T20:35:56.378Z",
+        "independentlyAttested": false,
+        "productionCertified": false
+      },
+      {
+        "criterionId": "DEV-01/AC-02",
+        "requirement": "Unsupported edits and stale baselines are rejected with recoverable errors.",
+        "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+        "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+        "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+        "observed": "Exact Git base/candidate/file/mode binding, immutable import, stale-selection rejection and current-authority write checks.",
+        "remaining": "Imported snapshot and bounded candidate edits; full general refactoring acceptance remains.",
+        "profiles": [
+          "trilogyJobs",
+          "trilogyWorker",
+          "githubSnapshotPinning",
+          "runtimeProjectScope"
+        ],
+        "evidence": [
+          {
+            "profile": "trilogyJobs",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyJobs.log",
+            "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+            "bytes": 3322,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/trilogy-jobs.test.mjs"
+            ],
+            "exitCode": 0
+          },
+          {
+            "profile": "trilogyWorker",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyWorker.log",
+            "sha256": "c3b8847acd80ff52a350ca19788bf8ec41c74f841f35e0d635d5924acea935f8",
+            "bytes": 2994,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/trilogy-worker.test.mjs"
+            ],
+            "exitCode": 0
+          },
+          {
+            "profile": "githubSnapshotPinning",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/githubSnapshotPinning.log",
+            "sha256": "67ceeea62882a66641868f413a992126c81619c005610eba2a78a71c0658aa74",
+            "bytes": 493,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/github-snapshot-pinning.test.mjs"
+            ],
+            "exitCode": 0
+          },
+          {
+            "profile": "runtimeProjectScope",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/runtimeProjectScope.log",
+            "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+            "bytes": 1629,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/runtime-project-scope.test.mjs"
+            ],
+            "exitCode": 0
+          }
+        ],
+        "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+        "recordedAt": "2026-10-29T20:35:56.378Z",
+        "independentlyAttested": false,
+        "productionCertified": false
+      },
+      {
+        "criterionId": "QA-02/AC-01",
+        "requirement": "Behavioral bugs and regressions cause meaningful failures.",
+        "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+        "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+        "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+        "observed": "Preserved baseline defects become meaningful passing behavioral regressions.",
+        "remaining": "Does not certify unrelated application requirements or external providers.",
+        "profiles": [
+          "trilogyJobs",
+          "trilogyWorker",
+          "runtimeProjectScope",
+          "githubSnapshotPinning"
+        ],
+        "evidence": [
+          {
+            "profile": "trilogyJobs",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyJobs.log",
+            "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+            "bytes": 3322,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/trilogy-jobs.test.mjs"
+            ],
+            "exitCode": 0
+          },
+          {
+            "profile": "trilogyWorker",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyWorker.log",
+            "sha256": "c3b8847acd80ff52a350ca19788bf8ec41c74f841f35e0d635d5924acea935f8",
+            "bytes": 2994,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/trilogy-worker.test.mjs"
+            ],
+            "exitCode": 0
+          },
+          {
+            "profile": "runtimeProjectScope",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/runtimeProjectScope.log",
+            "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+            "bytes": 1629,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/runtime-project-scope.test.mjs"
+            ],
+            "exitCode": 0
+          },
+          {
+            "profile": "githubSnapshotPinning",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/githubSnapshotPinning.log",
+            "sha256": "67ceeea62882a66641868f413a992126c81619c005610eba2a78a71c0658aa74",
+            "bytes": 493,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/github-snapshot-pinning.test.mjs"
+            ],
+            "exitCode": 0
+          }
+        ],
+        "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+        "recordedAt": "2026-10-29T20:35:56.378Z",
+        "independentlyAttested": false,
+        "productionCertified": false
+      },
+      {
+        "criterionId": "QA-02/AC-02",
+        "requirement": "Passing snapshot-integrity checks is not presented as application correctness.",
+        "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+        "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+        "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+        "observed": "Status retains snapshot-only scope, unqualified host/isolation state and pending owner authority.",
+        "remaining": "Actual Docker qualification and general application tests remain separate.",
+        "profiles": [
+          "trilogyJobs",
+          "trilogyWorker"
+        ],
+        "evidence": [
+          {
+            "profile": "trilogyJobs",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyJobs.log",
+            "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+            "bytes": 3322,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/trilogy-jobs.test.mjs"
+            ],
+            "exitCode": 0
+          },
+          {
+            "profile": "trilogyWorker",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyWorker.log",
+            "sha256": "c3b8847acd80ff52a350ca19788bf8ec41c74f841f35e0d635d5924acea935f8",
+            "bytes": 2994,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/trilogy-worker.test.mjs"
+            ],
+            "exitCode": 0
+          }
+        ],
+        "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+        "recordedAt": "2026-10-29T20:35:56.378Z",
+        "independentlyAttested": false,
+        "productionCertified": false
+      },
+      {
+        "criterionId": "UX-01/AC-01",
+        "requirement": "Critical tasks can be completed with clear success/failure/recovery states.",
+        "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+        "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+        "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+        "observed": "Actual compiled component callbacks refuse missing/deleted/all-project targets and late replies; audit failure stops follow-on work.",
+        "remaining": "No real browser, keyboard, screen-reader or target-user journey qualification.",
+        "profiles": [
+          "runtimeProjectScope"
+        ],
+        "evidence": [
+          {
+            "profile": "runtimeProjectScope",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/runtimeProjectScope.log",
+            "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+            "bytes": 1629,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/runtime-project-scope.test.mjs"
+            ],
+            "exitCode": 0
+          }
+        ],
+        "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+        "recordedAt": "2026-10-29T20:35:56.378Z",
+        "independentlyAttested": false,
+        "productionCertified": false
+      },
+      {
+        "criterionId": "UX-01/AC-02",
+        "requirement": "Screens never imply unverified connectivity, test evidence or autonomy.",
+        "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+        "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+        "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+        "observed": "Old project data clears, failed evidence cannot claim execution or release, public jobs omit signed proof.",
+        "remaining": "Hosted identity and browser journeys remain unqualified.",
+        "profiles": [
+          "runtimeProjectScope",
+          "trilogyJobs"
+        ],
+        "evidence": [
+          {
+            "profile": "runtimeProjectScope",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/runtimeProjectScope.log",
+            "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+            "bytes": 1629,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/runtime-project-scope.test.mjs"
+            ],
+            "exitCode": 0
+          },
+          {
+            "profile": "trilogyJobs",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyJobs.log",
+            "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+            "bytes": 3322,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/trilogy-jobs.test.mjs"
+            ],
+            "exitCode": 0
+          }
+        ],
+        "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+        "recordedAt": "2026-10-29T20:35:56.378Z",
+        "independentlyAttested": false,
+        "productionCertified": false
+      },
+      {
+        "criterionId": "UX-03/AC-01",
+        "requirement": "Each new surface has task-based acceptance criteria and maps to implemented data/actions.",
+        "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+        "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+        "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+        "observed": "Runtime and self-healing controls use their selected project and reject stale follow-on requests.",
+        "remaining": "Other advanced surfaces and target-user usability remain incomplete.",
+        "profiles": [
+          "runtimeProjectScope"
+        ],
+        "evidence": [
+          {
+            "profile": "runtimeProjectScope",
+            "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/runtimeProjectScope.log",
+            "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+            "bytes": 1629,
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+              "tests/runtime-project-scope.test.mjs"
+            ],
+            "exitCode": 0
+          }
+        ],
+        "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+        "recordedAt": "2026-10-29T20:35:56.378Z",
+        "independentlyAttested": false,
+        "productionCertified": false
+      }
+    ],
+    "productDecision": {
+      "imprint": "Code Monster background proposal assembly",
+      "slotMachine": "Bounded compatible-part selector within Imprint",
+      "omniDev": "Project/job/permission/budget/owner control",
+      "omniSight": "Scoped read-only evidence view",
+      "recommendations": "Require actual project findings, outside evidence where applicable and measured outcomes; assembly does not establish usefulness."
+    },
+    "publication": "NEW_WAVE_NOT_PUBLISHED",
+    "publicationEvidence": "UNFINISHED-WORK/mgr-trilogy-publication-attempt-20261029.json",
+    "remaining": [
+      "Qualified existing Docker host, protected signing identity and actual concurrency/recovery measurements.",
+      "Deployed multi-user and provider consent/revocation boundaries;34catalog-only connectors are not live adapters.",
+      "Owner-authorized exact-commit publication for trilogy candidates; generic latest-base publisher rejects them.",
+      "General application execution, semantic source relationships, recipe admission/revocation and measured recommendation usefulness.",
+      "Real browser/keyboard/screen-reader/mobile journeys and large-repository performance.",
+      "Full per-clause external acceptance and independent owner-approved release."
+    ]
+  },
+  "historicalRepairsBeforeThisWave": [
+    {
+      "module": "VampBite",
+      "issue": "invalid state restoration and quarantine approval",
+      "tests": 2
+    },
+    {
+      "module": "DevMapGod",
+      "issue": "missing actual multi-file candidate execution",
+      "testedBatchFiles": 2,
+      "testedCases": 4,
+      "releaseCertified": false
+    },
+    {
+      "module": "OmniDev historical audit",
+      "issue": "stale or unknown source file references",
+      "checked": 88,
+      "present": 88
+    }
+  ],
+  "repairedThisWave": [
+    {
+      "id": "CORE-RECOVERY-EVIDENCE",
+      "source": "lib/jobs.ts",
+      "defect": "Retry exhaustion replaced all prior candidate/review/test evidence and recovery had no durable audit event.",
+      "repair": "Guarded atomic job recovery preserves result, changes agent status and appends one recovery event; stale observation and audit-storage failure cannot corrupt state.",
+      "evidence": [
+        "recovery-before",
+        "recovery-after"
+      ]
+    },
+    {
+      "id": "CORE-GRAPH-STALE-PROJECT",
+      "source": "lib/intelligence.ts",
+      "defect": "Integration snapshots resurrected deleted source nodes and stale names.",
+      "repair": "Current stored project identity is required before emitting integration participants.",
+      "evidence": [
+        "intelligence-before",
+        "intelligence-after"
+      ]
+    },
+    {
+      "id": "CORE-BACKUP-REFERENCES",
+      "source": "lib/intelligence.ts",
+      "defect": "Restore accepted non-project job targets, dangling record links, null/array payloads and invalid retry counts.",
+      "repair": "Validate JSON object shapes and typed project/audit-child relationships before transaction; preserve valid repo_tree/repo_file parent model.",
+      "evidence": [
+        "intelligence-before",
+        "intelligence-after"
+      ]
+    },
+    {
+      "id": "CORE-PROVIDER-VERIFICATION-RACE",
+      "source": "lib/providers.ts",
+      "defect": "Old provider verification could mark newly saved credentials ready; named verification returned legacy provider metadata.",
+      "repair": "Compare-and-swap exact encrypted configuration and independent verification identity; return the selected provider status.",
+      "evidence": [
+        "provider-before",
+        "provider-after"
+      ]
+    },
+    {
+      "id": "CORE-AUDIT-CHILD-CLEANUP",
+      "source": "lib/jobs.ts",
+      "defect": "Project deletion and snapshot clear removed audit parent rows but retained repo_tree/repo_file rows keyed to the audit ID, leaving orphan artifacts and invalid future backups.",
+      "repair": "Delete only the selected project audit children before audit parents in the guarded transaction; a unique snapshot-clear identity prevents stale cleanup from following a failed update.",
+      "evidence": [
+        "cleanup-before",
+        "cleanup-after"
+      ]
+    },
+    {
+      "id": "DISCOVERY-EXEC-14",
+      "issue": "Executive screen exposed seven heuristic categories rather than the original fourteen evidence-qualified dimensions.",
+      "repair": "Added executive evidence model and fourteen native detail views; explicit unassessed values, documented methodology, no inferred aggregate/certification.",
+      "tests": [
+        "executive-scorecard",
+        "typecheck"
+      ]
+    },
+    {
+      "id": "DISCOVERY-UX-TABLES",
+      "issue": "Entity and finding table row click handlers had no keyboard action.",
+      "repair": "Native labeled buttons now open details while table semantics remain intact.",
+      "tests": [
+        "typecheck"
+      ],
+      "browserStatus": "BLOCKED_BROWSER_REACHABILITY"
+    },
+    {
+      "id": "PROOF-GATE-INTEGRITY",
+      "repair": "Reject empty/duplicate/wrong-parent proofs, stale source, ambiguous identities, same-key owner/runner, unbound approval digests, lossy payloads and forged register totals.",
+      "evidence": "UNFINISHED-WORK/evidence/full-verification-20261029/gate-adversarial-repairs.json",
+      "targetedCases": 55
+    },
+    {
+      "id": "FULL-WORKFLOW-INTEGRITY",
+      "repair": "Execute fixed profiles on clean immutable source; fresh compiled modules with drift checks, bounded output/time, minimal environment, actual output and process closure required; preserve raw logs and hashes.",
+      "targetedCases": 16
+    },
+    {
+      "id": "PRESERVED-RENDER-EVIDENCE",
+      "repair": "Generate current render into ignored outputs/verification-render; preserved prior HTML stays immutable and hash-matched."
+    }
+  ],
+  "history": [
+    {
+      "retainedAt": "2026-10-29T20:35:56.378Z",
+      "priorCurrent": {
+        "date": "2026-10-29",
+        "scope": "Current OmniDev source-bound verification; other trilogy results are retained historical evidence, not rerun in this wave.",
+        "taskBoard": {
+          "historical": 174,
+          "reviewedMetadata": 174,
+          "reviewedPercent": 100,
+          "remainingUnreviewed": 0,
+          "implementedUnverified": 51,
+          "stillOpen": 123,
+          "statusCounts": {
+            "open": 123,
+            "implemented_unverified": 51
+          },
+          "independentlyFullAccepted": 0,
+          "acceptedParents": 0,
+          "fullyAcceptedPercent": 0,
+          "sourceLinkedParents": 136,
+          "sourceLinkedPercent": 78.16,
+          "remainingWithoutLinks": 38,
+          "committedSourcePaths": {
+            "total": 327,
+            "present": 327,
+            "percent": 100,
+            "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+            "proof": "UNFINISHED-WORK/mgr-136-committed-source-reconciliation-20261029.json",
+            "type": "Pinned Git objects; source presence is not behavior acceptance"
+          },
+          "specialistsReclassifiedHistorically": 47
+        },
+        "workers": {
+          "requestedTenRoles": 10,
+          "liveDockerSlots": 0,
+          "windowsQualifiedCapacityWithoutDocker": 2,
+          "activatedTenPercent": 0
+        },
+        "candidateCampaign": {
+          "status": "signed one-task campaign plus new multi-file DevMapGod candidate staging, awaiting independent validation",
+          "passing": 70,
+          "skipped": 3,
+          "failing": 0,
+          "total": 73,
+          "passingPercentOfTotal": 95.89,
+          "independentRunnerQualified": false
+        },
+        "products": [
+          {
+            "name": "Code Monster",
+            "reviewPR": 1,
+            "releaseCertified": false,
+            "remaining": [
+              "independent verifier",
+              "full portable CI",
+              "multi-agent integration",
+              "batch execution"
+            ],
+            "evidenceScope": "Historical other-repository evidence; not rerun here."
+          },
+          {
+            "name": "OmniSight",
+            "reviewPR": 1,
+            "releaseCertified": false,
+            "remaining": [
+              "live source relay",
+              "hosted auth",
+              "browser certification"
+            ],
+            "evidenceScope": "Historical other-repository evidence; not rerun here."
+          },
+          {
+            "name": "OmniDev",
+            "reviewPR": 1,
+            "releaseCertified": false,
+            "remaining": [
+              "Remaining exact original criterion scope",
+              "Real Docker/worker-host qualification",
+              "Live provider and hosted authorization evidence",
+              "Reachable browser journeys",
+              "Independent signer and owner-controlled final acceptance"
+            ],
+            "evidenceScope": "Current 54-profile local verification, not production certification."
+          }
+        ],
+        "policy": "Percentages use explicit denominators. Source location, task investigation, local regression and final acceptance are distinct. No invented product-completion percentage and no nested-suite double counting.",
+        "latestCodeMonsterEvidence": "docs/FULL-WINDOWS-REGRESSION-20261029.md on MGR-CODE-MONSTER review branch",
+        "caveat": "136 linked/38 unlinked; 54/54 local profiles pass. Seven local clauses are separately evidenced; original final criterion proof remains one historical source-transfer clause, and independently certified parents remain zero. Browser, live provider, real worker and independent signing gates remain explicit.",
+        "productionGates": {
+          "historicalAcceptance": 0,
+          "sourcePathCoverage": 100,
+          "liveDockerWorkers": 0,
+          "hostedCrossProductCertification": false
+        },
+        "acceptanceEvidence": {
+          "parentRecords": 174,
+          "totalCriteria": 441,
+          "criteriaWithRecordedFinalProof": 1,
+          "verifiedCriterionIds": [
+            "REL-02/AC-01"
+          ],
+          "historicalProofScope": "REL-02/AC-01 source import at older source revision; unchanged historical record.",
+          "locallyVerifiedClauses": 7,
+          "localCriterionIds": [
+            "DEV-01/AC-02",
+            "EXEC-01/AC-01",
+            "EXEC-01/AC-02",
+            "QA-02/AC-01",
+            "QA-02/AC-02",
+            "RUN-03/AC-01",
+            "RUN-03/AC-02"
+          ],
+          "localVerifiedPercent": 1.59,
+          "parentsWithAllLocalContractsReproduced": [
+            "EXEC-01",
+            "QA-02",
+            "RUN-03"
+          ],
+          "readyForCertification": 0,
+          "independentlyCertifiedParents": 0,
+          "register": "UNFINISHED-WORK/mgr-174-acceptance-evidence-register.json",
+          "validator": "scripts/validate-acceptance-register.mjs",
+          "validatorTests": 22,
+          "note": "Local verification is stored separately, with exact source/logs/scope; it does not increase final criterion or parent certification counts."
+        },
+        "waveP0Plus50": {
+          "requestedParents": 80,
+          "p0Parents": 30,
+          "additionalParents": 50,
+          "criteria": 192,
+          "selectedAndRouted": 192,
+          "selectionPercent": 100,
+          "fullCriteriaVerified": 0,
+          "fullAcceptancePercent": 0,
+          "fullParentCertifications": 0,
+          "fixtureProfilesExecuted": 12,
+          "fixtureProfilesPassed": 12,
+          "fixturePassPercent": 100,
+          "fixtureEvidence": "UNFINISHED-WORK/mgr-p0-expanded-evidence-repaired-20261029.json",
+          "routing": "UNFINISHED-WORK/mgr-80-wave-routed-20261029.json",
+          "sourceProofScope": "local fixtures bound to git revision, not live provider or Docker certification",
+          "repairedDefects": [
+            "Public engine verification PEM was accidentally excluded by global ignore; restored and tested",
+            "P0 wave selector rejects acceptance criterion wording drift",
+            "Fixture evidence now binds to clean tracked Git commit"
+          ],
+          "externalBlockers": [
+            "Docker host unavailable",
+            "consumer provider consent/runtime not qualified",
+            "hosted OAuth/revocation workflows untested",
+            "trusted public key origin not independently established",
+            "production multi-tenant security and deployment tests unqualified"
+          ]
+        },
+        "sourceImport": {
+          "originalGithubCommit": "26e230d052c45c1f42cb731ff095679497af045a",
+          "originalSitesCommit": "439c6c1a275ba01ad346e4e11890e58f024c6efc",
+          "manifestFiles": 516,
+          "verifiedSha256Matches": 516,
+          "recognizedSecretPatternHits": 0,
+          "scannedBytes": 9199629,
+          "limitation": "credential pattern scan not exhaustive"
+        },
+        "fullVerificationGate": {
+          "status": "LOCAL_FULL_REGRESSION_PASSED_EXTERNAL_AND_INDEPENDENT_QUALIFICATION_PENDING",
+          "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+          "fullRun": "UNFINISHED-WORK/evidence/full-verification-20261029/run/report.json",
+          "passedProfiles": 54,
+          "failedProfiles": 0,
+          "blockedProfiles": 0,
+          "receiptTests": {
+            "passed": 12,
+            "failed": 0
+          },
+          "parentGateTests": {
+            "passed": 21,
+            "failed": 0
+          },
+          "registerTests": {
+            "passed": 22,
+            "failed": 0
+          },
+          "changedOrAddedRegressionCases": {
+            "passed": 140,
+            "failed": 0
+          },
+          "noAutomaticCompletion": true
+        },
+        "connectorMaturity": {
+          "catalogEntries": 39,
+          "catalogOnly": 34,
+          "partialExisting": 5,
+          "liveQualified": 0,
+          "source": "lib/connector-qualification.ts"
+        },
+        "updatedAt": "2026-10-29T13:22:45.421Z",
+        "currentWave": {
+          "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+          "parentsExaminedOrExercised": 105,
+          "coveragePercentOf174": 60.34,
+          "meaning": "Task coverage, not full completion.",
+          "sourceLinkedBefore": 130,
+          "sourceLinkedAfter": 136,
+          "localClauseResults": 7,
+          "independentParentCertifications": 0
+        },
+        "historicalRepairsBeforeThisWave": [
+          {
+            "module": "VampBite",
+            "issue": "invalid state restoration and quarantine approval",
+            "tests": 2
+          },
+          {
+            "module": "DevMapGod",
+            "issue": "missing actual multi-file candidate execution",
+            "testedBatchFiles": 2,
+            "testedCases": 4,
+            "releaseCertified": false
+          },
+          {
+            "module": "OmniDev historical audit",
+            "issue": "stale or unknown source file references",
+            "checked": 88,
+            "present": 88
+          }
+        ],
+        "repairedThisWave": [
+          {
+            "id": "CORE-RECOVERY-EVIDENCE",
+            "source": "lib/jobs.ts",
+            "defect": "Retry exhaustion replaced all prior candidate/review/test evidence and recovery had no durable audit event.",
+            "repair": "Guarded atomic job recovery preserves result, changes agent status and appends one recovery event; stale observation and audit-storage failure cannot corrupt state.",
+            "evidence": [
+              "recovery-before",
+              "recovery-after"
+            ]
+          },
+          {
+            "id": "CORE-GRAPH-STALE-PROJECT",
+            "source": "lib/intelligence.ts",
+            "defect": "Integration snapshots resurrected deleted source nodes and stale names.",
+            "repair": "Current stored project identity is required before emitting integration participants.",
+            "evidence": [
+              "intelligence-before",
+              "intelligence-after"
+            ]
+          },
+          {
+            "id": "CORE-BACKUP-REFERENCES",
+            "source": "lib/intelligence.ts",
+            "defect": "Restore accepted non-project job targets, dangling record links, null/array payloads and invalid retry counts.",
+            "repair": "Validate JSON object shapes and typed project/audit-child relationships before transaction; preserve valid repo_tree/repo_file parent model.",
+            "evidence": [
+              "intelligence-before",
+              "intelligence-after"
+            ]
+          },
+          {
+            "id": "CORE-PROVIDER-VERIFICATION-RACE",
+            "source": "lib/providers.ts",
+            "defect": "Old provider verification could mark newly saved credentials ready; named verification returned legacy provider metadata.",
+            "repair": "Compare-and-swap exact encrypted configuration and independent verification identity; return the selected provider status.",
+            "evidence": [
+              "provider-before",
+              "provider-after"
+            ]
+          },
+          {
+            "id": "CORE-AUDIT-CHILD-CLEANUP",
+            "source": "lib/jobs.ts",
+            "defect": "Project deletion and snapshot clear removed audit parent rows but retained repo_tree/repo_file rows keyed to the audit ID, leaving orphan artifacts and invalid future backups.",
+            "repair": "Delete only the selected project audit children before audit parents in the guarded transaction; a unique snapshot-clear identity prevents stale cleanup from following a failed update.",
+            "evidence": [
+              "cleanup-before",
+              "cleanup-after"
+            ]
+          },
+          {
+            "id": "DISCOVERY-EXEC-14",
+            "issue": "Executive screen exposed seven heuristic categories rather than the original fourteen evidence-qualified dimensions.",
+            "repair": "Added executive evidence model and fourteen native detail views; explicit unassessed values, documented methodology, no inferred aggregate/certification.",
+            "tests": [
+              "executive-scorecard",
+              "typecheck"
+            ]
+          },
+          {
+            "id": "DISCOVERY-UX-TABLES",
+            "issue": "Entity and finding table row click handlers had no keyboard action.",
+            "repair": "Native labeled buttons now open details while table semantics remain intact.",
+            "tests": [
+              "typecheck"
+            ],
+            "browserStatus": "BLOCKED_BROWSER_REACHABILITY"
+          },
+          {
+            "id": "PROOF-GATE-INTEGRITY",
+            "repair": "Reject empty/duplicate/wrong-parent proofs, stale source, ambiguous identities, same-key owner/runner, unbound approval digests, lossy payloads and forged register totals.",
+            "evidence": "UNFINISHED-WORK/evidence/full-verification-20261029/gate-adversarial-repairs.json",
+            "targetedCases": 55
+          },
+          {
+            "id": "FULL-WORKFLOW-INTEGRITY",
+            "repair": "Execute fixed profiles on clean immutable source; fresh compiled modules with drift checks, bounded output/time, minimal environment, actual output and process closure required; preserve raw logs and hashes.",
+            "targetedCases": 16
+          },
+          {
+            "id": "PRESERVED-RENDER-EVIDENCE",
+            "repair": "Generate current render into ignored outputs/verification-render; preserved prior HTML stays immutable and hash-matched."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,947 @@
+{
+  "schema": "mgr.backlog.wave2-triage.v1",
+  "date": "2026-10-29",
+  "range": "index 50 through 104, 55 additional parents",
+  "count": 55,
+  "previouslyTriaged": 50,
+  "totalReviewed": 105,
+  "totalHistorical": 174,
+  "statusAuthority": "metadata and documented evidence refs only; not full acceptance",
+  "tasks": [
+    {
+      "id": "CONN-11",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-12",
+      "recordedStatus": "open",
+      "priority": "P1",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-13",
+      "recordedStatus": "open",
+      "priority": "P1",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-14",
+      "recordedStatus": "open",
+      "priority": "P1",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-15",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-16",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-17",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-18",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-19",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-20",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-21",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-22",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-23",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-24",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-25",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-26",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-27",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-28",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-29",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-30",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-31",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-32",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-33",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-34",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-35",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-36",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-37",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-38",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "CONN-39",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-01",
+      "recordedStatus": "open",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Security tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-02",
+      "recordedStatus": "open",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Backend tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-03",
+      "recordedStatus": "open",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Frontend tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-04",
+      "recordedStatus": "open",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative DevOps tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-05",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Cloud tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-06",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Infrastructure tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-07",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Databases tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-08",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative AI Development tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-09",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Machine Learning tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-10",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative LLM Engineering tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-11",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative RAG Systems tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-12",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Vector Databases tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-13",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative 3D Development tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-14",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Blender tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-15",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Maya tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-16",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Unity tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-17",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Unreal Engine tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-18",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Game Development tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-19",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Mobile Development tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-20",
+      "recordedStatus": "open",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Testing tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-21",
+      "recordedStatus": "open",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative QA tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-22",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Automation tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-23",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative UI Design tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-24",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative UX Design tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-25",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Accessibility tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    },
+    {
+      "id": "DOM-26",
+      "recordedStatus": "open",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Compliance tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "implementationClaim": "unspecified",
+      "triageState": "REVIEWED_NOT_CERTIFIED",
+      "acceptanceVerified": false,
+      "remainingWork": "reproduce complete acceptance with source SHA, tests and external provider checks as necessary"
+    }
+  ]
+}

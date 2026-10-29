@@ -1,0 +1,103 @@
+{
+  "schema": "mgr.verified-local-git-history.v1",
+  "createdAt": "2026-10-29T15:39:21.935369+00:00",
+  "repository": "MGR-OMNIDEV-SWARM",
+  "purpose": "Inert recovery evidence retaining exact original local Git commit identities. Not a second live implementation or a release attestation.",
+  "sourceBranch": "refs/heads/mgr/code-monster-omnisight-20261028",
+  "bundledRef": "refs/heads/current",
+  "capturedHead": "0745b3506871fe5fa7f85ffc9aac3294564036b2",
+  "capturedTree": "f63cc32cffda0ba00056e58fa47870dd1d1050bf",
+  "bundleFile": "verified-local-history.bundle",
+  "bundleBytes": 444465,
+  "bundleSha256": "b5d45d8b9e680e3dfebb7281765a56aae3672aa7b6b5ff4914d5cdde81c429df",
+  "prerequisites": [
+    "c44818c5017d15139c294e971346b1152ed24ba1"
+  ],
+  "historyMode": "incremental-from-public-prerequisite",
+  "containsOriginalCommits": [
+    {
+      "commit": "b05af17de473fcedf8ad10fa0f38871a465e3bf5",
+      "tree": "ea759067182cfa3b5879f1e85d126e7be014dbfe",
+      "parents": [
+        "c44818c5017d15139c294e971346b1152ed24ba1"
+      ]
+    },
+    {
+      "commit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+      "tree": "93c256a4f3def611e2ed5399af1d9c5feed87bd0",
+      "parents": [
+        "b05af17de473fcedf8ad10fa0f38871a465e3bf5"
+      ]
+    },
+    {
+      "commit": "6bc20032061d90b1129e58cc54e251a3164207d1",
+      "tree": "e4a2785632009f403dc19e9f5c15bbe52b22b242",
+      "parents": [
+        "8aa5f615af380bea1676daf2459d365f2e4653ae"
+      ]
+    },
+    {
+      "commit": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+      "tree": "54cc937eca8e51b6ef42093b0d9b0b5f61be5d6f",
+      "parents": [
+        "6bc20032061d90b1129e58cc54e251a3164207d1"
+      ]
+    },
+    {
+      "commit": "0126c41dafcba0b6e46fb92cd2a9043e20987e56",
+      "tree": "f1652bf9c8ea232f0d9e1c6491b3b17de162c9ad",
+      "parents": [
+        "1c00a6105afe42b06a1d463d541f06c51839f9ad"
+      ]
+    },
+    {
+      "commit": "e6701655ecad5f1c9d3fd7944b7ecec4191b0955",
+      "tree": "23303ed67d0cbd816c18fdbee91c4fe38446d89f",
+      "parents": [
+        "0126c41dafcba0b6e46fb92cd2a9043e20987e56"
+      ]
+    },
+    {
+      "commit": "e7488de8e4b84912fb8b3065e00706db4ab7f0bf",
+      "tree": "c462df2a6c372dd2e55d8130662f9e569d9fab61",
+      "parents": [
+        "e6701655ecad5f1c9d3fd7944b7ecec4191b0955"
+      ]
+    },
+    {
+      "commit": "0745b3506871fe5fa7f85ffc9aac3294564036b2",
+      "tree": "f63cc32cffda0ba00056e58fa47870dd1d1050bf",
+      "parents": [
+        "e7488de8e4b84912fb8b3065e00706db4ab7f0bf"
+      ]
+    }
+  ],
+  "verification": {
+    "bundleVerifyInExportRepository": {
+      "exitCode": 0,
+      "stdout": "The bundle contains this ref:\n0745b3506871fe5fa7f85ffc9aac3294564036b2 refs/heads/current\nThe bundle requires this ref:\nc44818c5017d15139c294e971346b1152ed24ba1 \nThe bundle uses this hash algorithm: sha1",
+      "stderr": "/workspace/scratch/b5d6a233c1bb/MGR-OMNIDEV-SWARM/UNFINISHED-WORK/evidence/source-history-20261029/verified-local-history.bundle is okay"
+    },
+    "bundleVerifyInFreshRecoveryRepository": {
+      "exitCode": 0,
+      "stdout": "The bundle contains this ref:\n0745b3506871fe5fa7f85ffc9aac3294564036b2 refs/heads/current\nThe bundle requires this ref:\nc44818c5017d15139c294e971346b1152ed24ba1 \nThe bundle uses this hash algorithm: sha1",
+      "stderr": "/workspace/scratch/b5d6a233c1bb/MGR-OMNIDEV-SWARM/UNFINISHED-WORK/evidence/source-history-20261029/verified-local-history.bundle is okay"
+    },
+    "listHeads": "0745b3506871fe5fa7f85ffc9aac3294564036b2 refs/heads/current",
+    "freshBareFetchPassed": true,
+    "recoveredHead": "0745b3506871fe5fa7f85ffc9aac3294564036b2",
+    "allListedCommitBytesAndTreeIdsMatched": true,
+    "gitFsckFullStrict": {
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "notice: HEAD points to an unborn branch (master)"
+    }
+  },
+  "scopeLimits": [
+    "Only committed objects reachable from the captured current local branch are included; unrelated refs, untracked files, Git configuration and environment variables are not added.",
+    "The current bundle and this manifest were created after the captured head and are not bundled into themselves.",
+    "GitHub commit identities differ where publication used new remote commits with identical trees; this bundle preserves the original local identities.",
+    "Restoring this bundle does not execute tests, approve changes or deploy code.",
+    "Restore requires the named public prerequisite commit and its reachable objects before fetching the bundle."
+  ]
+}

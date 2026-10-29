@@ -1,0 +1,229 @@
+{
+  "schema": "mgr.historical.final14.v1",
+  "created": "2026-10-29",
+  "reviewedTotal": 174,
+  "originalTotal": 174,
+  "reviewCoveragePercent": 100,
+  "fullyAcceptedThisWave": 0,
+  "important": "100% historical metadata inspected does not mean 100% code implemented or accepted.",
+  "remaining": [
+    {
+      "id": "V2-05",
+      "title": "Marketplace Integrity and Dispute System",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "Sybil/reciprocal reputation, conflicted reviewer, appeal and licensing dispute tests pass.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-06",
+      "title": "Enterprise Assurance Passport",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "A residency/DR promise is marked unqualified after incompatible deployment drift.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-07",
+      "title": "Coordinated Change Admission",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json",
+        "lib/control-plane.ts"
+      ],
+      "evidence": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "Individually safe but jointly unsafe related changes cannot dispatch together.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-08",
+      "title": "Business-Invariant Recovery Gate",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "Restored but logically inconsistent data fails recovery; deletion and unresolved effects are reconciled.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-09",
+      "title": "Product Complexity Budget",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "An expensive feature without retained customer value cannot enter general release.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-10",
+      "title": "Customer Outcome Laboratory",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "Matched workflows include failures/review labor; source cutoff and denominator changes remain reproducible.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-11",
+      "title": "Supplier Exit and Substitution Contract",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "Simulated supplier withdrawal preserves current rights, supported operations and customer export.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-12",
+      "title": "Workforce Knowledge Continuity",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "Key-person departure preserves permitted decisions and responsibilities without privacy escalation.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-13",
+      "title": "Acquisition Assimilation Protocol",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "Conflicting acquired-company data rights remain isolated until qualified resolution.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-14",
+      "title": "Interoperability Assurance Network",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "External tools exchange evidence without secret/internal access; permission/schema drift fails compatibility.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-15",
+      "title": "Vertical and Physical-World Safety Gate",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "Simulation success alone cannot authorize a robot or other physical effect.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-16",
+      "title": "Governance Integrity and Recovery",
+      "priority": "P0",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "Compromised agents/evaluators cannot disable veto; legitimate scoped recovery is independently auditable.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-17",
+      "title": "Sovereign Deployment Acceptance Profile",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidence": [],
+      "acceptance": [
+        "Dedicated/disconnected deployment is tested against its actual scoped responsibilities.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    },
+    {
+      "id": "V2-18",
+      "title": "Customer Continuity and Orderly Exit",
+      "priority": "P1",
+      "recordedStatus": "open",
+      "sourceFiles": [
+        "COMPLETION-AUDIT/upgrade-contracts.json",
+        "lib/intelligence.ts"
+      ],
+      "evidence": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "Payment interruption or operator shutdown preserves promised lawful exit paths and accountable handoff.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "reviewState": "METADATA_REVIEWED_NOT_ACCEPTED"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "mgr.runtime-project-scope-verification.v1",
+  "createdAt": "2026-10-29T18:08:00.807160+00:00",
+  "baseline": {
+    "sourceCommit": "bbf6d5f9dd102cd413631a1b0afe1628a135463b",
+    "file": "components/runtime-workspace.tsx",
+    "sha256": "bd84f3bb2a502d32f0929b27be66244e84a236c2ace3a822cbd3469c8b005be1",
+    "passed": 3,
+    "failed": 15,
+    "total": 18,
+    "command": "OMNI_RUNTIME_COMPONENT_SOURCE=<unchanged baseline component> node --test tests/runtime-project-scope.test.mjs"
+  },
+  "current": {
+    "sourceCommit": null,
+    "qualification": "Tested working source; coordinator must attach the later clean committed full-run receipt.",
+    "file": "components/runtime-workspace.tsx",
+    "sha256": "3a25cb1eb18df5af57610efdda4533a44e3f0bcc20882ad60bfaa60bb5a053f8",
+    "passed": 18,
+    "failed": 0,
+    "total": 18,
+    "command": "node --test tests/runtime-project-scope.test.mjs",
+    "testPath": "tests/runtime-project-scope.test.mjs",
+    "testSha256": "4e469d52d05cf04233b1edadef87a703cbdc5502c53ed7c1353ad5f60efcfa6c"
+  },
+  "runtime": "Node v24.22.1; TypeScript 5.9.3 transpilation; actual RuntimeWorkspace event handlers with controlled hook/element host and deferred HTTP fixtures.",
+  "browserQualification": "NOT_RUN: primary-runtime Playwright is present, Chromium executable is absent. No browser, screen-reader, DOM focus or deployed-provider success is claimed.",
+  "repairs": [
+    "Require an explicitly selected current project for new runtime and self-healing launches, repository scans and integration planning.",
+    "Prevent stale callbacks and delayed audit/integration/job responses from dispatching follow-up work after switching project, deleting it, switching away/back or unmounting.",
+    "Keep successful current-project audit/integration/native dispatch intact and leave already-dispatched server work recorded.",
+    "Clear project-bound audit and integration views on selection changes; reject removed partner projects and mismatched audit responses.",
+    "Stop job admission when the preliminary audit fails instead of continuing silently."
+  ],
+  "originalAcceptanceLinks": [
+    {
+      "id": "UX-01/AC-01",
+      "requirement": "Critical tasks can be completed with clear success/failure/recovery states.",
+      "scope": "Runtime launch, audit and integration selection behavior only; broader hosted user journeys remain open."
+    },
+    {
+      "id": "UX-03/AC-01",
+      "requirement": "Each new surface has task-based acceptance criteria and maps to implemented data/actions.",
+      "scope": "Existing runtime/self-healing surface correction with actual request behavior; no usability certification."
+    },
+    {
+      "id": "DEV-01/AC-02",
+      "requirement": "Unsupported edits and stale baselines are rejected with recoverable errors.",
+      "scope": "Stale project selection now blocks new client dispatch; exact source/candidate checks remain server responsibilities."
+    }
+  ],
+  "testDevelopmentFailures": [
+    {
+      "file": "initial-expanded-fixture-failure.log",
+      "description": "The newly added success-path fixture omitted the returned job list; the real component opened a job ID without its record. Fixture now mirrors the existing runtime route response shape; no product behavior was weakened."
+    },
+    {
+      "file": "initial-typecheck-failure.log",
+      "description": "New fetch response used unknown JSON type. Added explicit response type annotation; coordinator full source check follows."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "UNFINISHED-WORK/evidence/runtime-project-scope-20261029/after.log",
+      "sha256": "80cd8f593113ca4e94e087898f6b04b62ef2755d3a94c4233e7f4c99e0cfe256",
+      "bytes": 1628
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/runtime-project-scope-20261029/before.log",
+      "sha256": "89994a9d1f7baa87d8ef6315eb528a5c3f09cadc6e8c94aaa546f9723f4cbd52",
+      "bytes": 13191
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/runtime-project-scope-20261029/initial-expanded-fixture-failure.log",
+      "sha256": "aac2793069bbed6160de5fcb5d4c3d4ec0a41156e82a9ff1ed526c2893c1b11f",
+      "bytes": 2712
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/runtime-project-scope-20261029/initial-twelve-case-after.log",
+      "sha256": "e173789b6b69017ccf20a5302b1b87bfca52ee96a5317d20947a37b772ae2af4",
+      "bytes": 1103
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/runtime-project-scope-20261029/initial-twelve-case-before.log",
+      "sha256": "c12df9a31bf7d11b5fdfe718ff3326abccd6131efea87995a4a3b3092d235aa5",
+      "bytes": 9431
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/runtime-project-scope-20261029/initial-typecheck-failure.log",
+      "sha256": "c3c5e4f1610d5df17b51dc13a0d682ff93ab05f30eba061e95270eb83a6a69ed",
+      "bytes": 88
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/runtime-project-scope-20261029/typecheck-result.json",
+      "sha256": "717eeabe9a9bb675e1911be4c5f1444d346076b123673882a526b7afb608a322",
+      "bytes": 381
+    }
+  ],
+  "typecheck": {
+    "command": "node node_modules/typescript/bin/tsc --noEmit --incremental false",
+    "exitCode": 0,
+    "stdoutBytes": 0,
+    "stderrBytes": 0,
+    "qualification": "Working-tree typecheck completed successfully; clean committed full verification is the coordinator gate.",
+    "repairedPriorFailure": "Explicit JSON response type annotation resolves TS18046 in runtime-workspace.tsx."
+  }
+}

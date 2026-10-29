@@ -1,6 +1,6 @@
 # Knowledge And Gaps
 
-All items below are open. See [README.md](README.md) for status definitions and resume rules.
+Use the canonical backlog for current recorded states; no parent is independently certified. See [README.md](README.md) for status definitions and resume rules.
 
 ## GRAPH-01 — Build a unified typed intelligence graph
 
@@ -51,7 +51,7 @@ All items below are open. See [README.md](README.md) for status definitions and 
 
 **Priority:** P1 · **Type:** engineering · **Owner:** Unassigned
 
-**Current state:** Rules check some secrets/SQL/eval, accessibility markers, TODOs and presence of tests/docs/CI/telemetry.
+**Current state:** Rescans preserve manual dispositions and reconcile snapshot signals. Image-alt presence and test-path recognition pass41 labeled local cases; production accuracy and remaining rules are not established.
 
 **Work required:**
 
@@ -67,4 +67,4 @@ All items below are open. See [README.md](README.md) for status definitions and 
 
 **Depends on:** GRAPH-02, BIZ-01
 
-**Completion evidence:** None yet. Add commit, tests, artifact/provider read-back and remaining limitations before closing.
+**Local evidence:** [Current repair report](mgr-planning-imprint-wave-20261029.md) and exact source-bound logs. Full original acceptance remains subject to its stated limitations; the checkbox is not independent certification.

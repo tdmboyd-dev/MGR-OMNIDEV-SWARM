@@ -1,0 +1,84 @@
+PASS AI jobs refuse to run without provider access
+PASS Provider allowlist blocks arbitrary credential destinations
+PASS Provider credential is encrypted and configuration persists
+PASS Plaintext key is absent from database and API read-back
+PASS Live verification path sends decrypted key only to fixed provider endpoint (stubbed HTTP)
+PASS Native maintenance job is durably queued
+PASS Hosted native agent generates actual documentation and test code
+PASS Static checks disclose missing runtime evidence
+PASS Generated trusted snapshot-integrity tests execute and pass
+PASS Reviewed candidate is applied atomically to the stored snapshot
+PASS Snapshot source, analysis, and revision update together
+PASS Applying repair reconciles dashboard findings
+PASS Repeated apply is rejected without duplicate changes
+PASS Rollback restores the preserved baseline
+PASS Rollback read-back proves original source restored
+PASS Rollback reopens restored snapshot gaps
+PASS Repeated rollback is rejected
+PASS Path traversal in agent patches is rejected
+PASS Stale patch baselines are rejected
+PASS Credential-bearing candidate is rejected
+PASS Canceled jobs cannot execute
+PASS Expired worker lease is recovered for retry
+PASS Expired lease at budget exhaustion becomes terminal failure
+PASS Concurrent execution claims exactly one worker lease
+PASS Model-call / retry budget is enforced
+PASS Exhausted job cannot be retried
+PASS Unauthenticated execution worker is rejected
+PASS Authorized worker can retrieve eligible jobs
+PASS Unapproved worker type cannot claim isolated test evidence
+PASS Worker evidence for another candidate is rejected
+PASS Mismatched execution assignment sourceDigest is rejected
+PASS Mismatched execution assignment testManifestDigest is rejected
+PASS Mismatched execution assignment id is rejected
+PASS Expired execution assignment cannot report
+PASS Missing image/cleanup evidence cannot report success
+PASS Authenticated worker report persists test evidence
+PASS Failed isolated test report blocks applying the candidate
+PASS Execution runner independently rejects unsafe files
+PASS Docker command enforces isolation, resource limits, and no implicit image downloads
+PASS AI root agent stages candidate and queues specialists (stubbed provider)
+PASS First specialist executes and persists a review (stubbed provider)
+PASS Second specialist completes a bounded three-call swarm (stubbed provider)
+PASS Runtime API never exposes stored provider plaintext
+PASS Runtime mutations reject cross-origin requests
+PASS Repository credential is encrypted and its scope is explicit
+PASS Repository plaintext token is absent from storage
+PASS Repository access verification checks authenticated write permission (stubbed HTTP)
+PASS Repository mismatch blocks all GitHub writes
+PASS Candidate creates a draft PR without merging (stubbed HTTP)
+PASS Repeated PR request returns the recorded external result without duplicate writes
+PASS Repository disconnect removes encrypted token
+PASS Provider disconnect deletes encrypted credential
+PASS GitHub sign-in refuses cross-origin initiation
+PASS GitHub manifest flow provides real registration form and restricted permissions
+PASS Embedded GitHub initiation opens a separate tab while preserving frame protection
+PASS Sign-in browser binding uses secure HttpOnly cookie
+PASS Callback from another browser is rejected before exchanging code
+PASS Manifest conversion registers private GitHub app (stubbed HTTP)
+PASS GitHub application secret is encrypted
+PASS Registration callback cannot be replayed
+PASS Account sign-in uses registered client and fresh state
+PASS GitHub account authorizes and persists verified identity (stubbed HTTP)
+PASS Account status exposes identity without credentials
+PASS Authorized account can discover repository choices (stubbed HTTP)
+PASS Account connection selects and verifies repository without pasted token
+PASS Private account snapshot uses OAuth only on GitHub API origin (stubbed HTTP)
+PASS Expired account access refreshes through OAuth (stubbed HTTP)
+PASS Declined consent is reported without false success
+PASS Expired authorization attempt cannot exchange credentials
+PASS Disconnect removes account and account-backed repository access
+PASS Accepted execution report cannot be overwritten
+PASS Concurrent enqueue atomically respects the ten-job limit
+PASS Rejected admissions create no activity records
+PASS Account HTTP uses edge-supported manual redirects and rejects redirect destinations without following
+PASS All hosted credential and snapshot clients reject non-success responses with manual redirect policy
+PASS Saved-output recovery rejects a different baseline
+PASS Invalid saved output retains failed state without losing prior evidence
+PASS Validated saved output recovers a failed job without inference
+PASS Recovered output cannot be replayed over staged work
+{
+  "passed": 79,
+  "failed": 0,
+  "limits": "Provider HTTP stubbed; Docker execution unavailable; trusted generated tests executed locally; production runtime unverified"
+}

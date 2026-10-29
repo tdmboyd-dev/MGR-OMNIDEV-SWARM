@@ -1,0 +1,19 @@
+{
+  "schema": "mgr.omnidev.source-reference-existence.v1",
+  "date": "2026-10-29",
+  "referenceBranch": "mgr/code-monster-omnisight-20261028",
+  "measuredOn": "connected Windows PR worktree",
+  "command": "node scripts/reconcile-source-refs.mjs C:\\Users\\cool\\OmniDev-Integration-Review-20261029 UNFINISHED-WORK\\backlog.json source-ref-audit-20261029.json",
+  "totalParents": 174,
+  "parentsWithRefs": 61,
+  "totalSourceRefs": 88,
+  "presentFileRefs": 88,
+  "missingRefs": 0,
+  "unsafeRefs": 0,
+  "scope": "Filesystem path existence only. Source references may be partial, stale in meaning, or lack passing tests; does not certify any full acceptance.",
+  "testCommand": "node --test tests/reconcile-source-refs.test.mjs",
+  "tests": {
+    "passed": 3,
+    "failed": 0
+  }
+}

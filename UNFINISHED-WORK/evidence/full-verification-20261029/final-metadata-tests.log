@@ -1,0 +1,40 @@
+✔ preserves 174+28 without manufacturing completion (3.558857ms)
+✔ rejects lost or duplicated parent tasks (0.450247ms)
+✔ no historical status changes (0.799384ms)
+✔ routes criteria without auto-certifying (1.688201ms)
+✔ rejects forged verified status (0.465281ms)
+✔ rejects changed number of original acceptance clauses (0.453272ms)
+✔ select 30 P0 plus 50 extra without acceptance (2.580714ms)
+✔ duplicate evidence fails (0.488065ms)
+✔ priority drift fails (0.282875ms)
+✔ changed acceptance wording fails closed (1.302665ms)
+✔ 174 task records and 348 criteria pass preservation without false certifications (5.260709ms)
+✔ rejects parent marked certified with unverified criterion (2.731792ms)
+✔ rejects forged VERIFIED with missing source/test/reviewer receipt (2.455056ms)
+✔ full provenance per criterion makes parent eligible, not automatically approved (2.229275ms)
+✔ exact acceptance text cannot be silently rewritten (1.60768ms)
+✔ duplicate original or registered parent identities are rejected (1.230011ms)
+✔ empty original requirements cannot make 174 parents ready (1.688462ms)
+✔ unknown parent IDs cannot silently replace required original parents (1.55456ms)
+✔ sparse or malformed parent and criterion records fail closed (9.742445ms)
+✔ duplicate criterion identities cannot reuse the same original requirement (1.975053ms)
+✔ blank or meaningless provenance cannot be counted as verified (15.269173ms)
+✔ historic verified proof remains intact when candidate source changes (2.791522ms)
+✔ matching candidate revision has structural readiness but no automatic certification (1.297974ms)
+✔ source readiness is unknown without an explicitly requested current revision (1.384865ms)
+✔ proof from different source revisions cannot make a parent ready (2.466503ms)
+✔ false aggregate counts and unsupported parent states are rejected (10.615859ms)
+✔ completed canonical parent and certified register must remain synchronized (4.497761ms)
+✔ the original verified status and completed_verified alias both require complete certified proof (7.703215ms)
+✔ documented incomplete states remain valid and unsupported supplied backlog states are rejected (10.634357ms)
+✔ recorded status drift is visible rather than silently changing historical source (1.351123ms)
+✔ invalid current source selectors cannot be used for certification (0.304549ms)
+✔ the original 174-task 441-criterion register and REL-02 historical evidence are preserved (35.404151ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 236.929019

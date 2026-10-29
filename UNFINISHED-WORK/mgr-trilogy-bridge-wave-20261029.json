@@ -1,0 +1,443 @@
+{
+  "schema": "mgr.trilogy.connection-wave.v1",
+  "createdAt": "2026-10-29T20:35:56.378Z",
+  "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+  "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+  "fullVerification": {
+    "passedProfiles": 64,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 64,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred.",
+    "report": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/report.json",
+    "sha256": "055607ca785e63f237f2842d241b4070bc28b531befcf7e2230993025e94147b",
+    "qualification": "executed-local-regression-not-live-provider-or-release-certification",
+    "independentReadback": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/independent-full-readback.json"
+  },
+  "focused": [
+    {
+      "profile": "runtimeProjectScope",
+      "passed": 18,
+      "total": 18,
+      "before": {
+        "passed": 3,
+        "failed": 15
+      }
+    },
+    {
+      "profile": "trilogyJobs",
+      "passed": 33,
+      "total": 33,
+      "stagedBaselines": [
+        {
+          "total": 16,
+          "failed": 5
+        },
+        {
+          "total": 25,
+          "failed": 4
+        },
+        {
+          "total": 33,
+          "failed": 8
+        }
+      ]
+    },
+    {
+      "profile": "trilogyWorker",
+      "passed": 31,
+      "total": 31,
+      "beforeGuardCases": {
+        "total": 24,
+        "failed": 6
+      },
+      "beforeModeCases": {
+        "total": 31,
+        "failed": 2
+      }
+    },
+    {
+      "profile": "githubSnapshotPinning",
+      "passed": 4,
+      "total": 4,
+      "before": {
+        "passed": 2,
+        "failed": 2
+      }
+    }
+  ],
+  "countingRule": "Focused tests are subsets of the64profiles. Earlier smaller suites overlap; never sum them as unique tests or completed parents.",
+  "companions": [
+    {
+      "product": "Code Monster",
+      "testedSource": "3e2f8ca405ad378c5a8d379f4caf2df9e77c474d",
+      "passed": 171,
+      "total": 171,
+      "evidence": "docs/evidence/trilogy-job-bridge-20261029/committed-verification.json",
+      "qualification": "Local Git/HTTP/signature/CLI tests; no independent production signer."
+    },
+    {
+      "product": "OmniSight",
+      "testedSource": "026a3f2360e1c4322202e9e57bbe9b084942649e",
+      "passed": 87,
+      "total": 87,
+      "evidence": "docs/evidence/job-bridge-20261029/verification.json",
+      "qualification": "Local HTTP/projection/actual-loader VM tests; no real browser qualification."
+    }
+  ],
+  "crossProduct": {
+    "passed": true,
+    "flowChecks": 10,
+    "sourceCommits": {
+      "omniDev": "9f78f46662b8ae051b523dd5df1db7339397649f",
+      "codeMonster": "348caf20c1bef59725f26faf59f2767b26040e2b",
+      "omniSight": "39543d6fb16377aaa6b69de8f89289a65034942a"
+    },
+    "sourceFilesStable": 235,
+    "preparedModulesStable": 33,
+    "privateEvidenceRepository": "tdmboyd-dev/MGR-OMNISIGHT",
+    "evidencePath": "docs/evidence/job-bridge-20261029/integration-clean-verification.json",
+    "evidenceSha256": "bb6936bfdbf446d81dc18b2235876b1b9fc3d3e9bab1e28b4571b6752c78a2ba",
+    "qualified": "Actual temporary Git candidate, SQLite, local HTTP and snapshot execution; disposable local signature keys.",
+    "notQualified": [
+      "production Docker isolation",
+      "independently operated signer",
+      "hosted multi-user identity",
+      "real browser journey",
+      "general application correctness",
+      "release"
+    ]
+  },
+  "originalScope": {
+    "parents": 174,
+    "acceptanceClauses": 441,
+    "separateUpgrades": 28,
+    "open": 122,
+    "implementedUnverified": 52,
+    "independentlyCertifiedParents": 0,
+    "sourceLinkedParents": 137,
+    "remainingWithoutSourceLinks": 37,
+    "committedSourceReferences": 348,
+    "presentCommittedReferences": 348,
+    "reconciliation": "UNFINISHED-WORK/mgr-137-committed-source-reconciliation-20261029.json"
+  },
+  "clauseMapping": [
+    {
+      "criterionId": "RUN-03/AC-01",
+      "requirement": "Concurrent workers do not duplicate effects or overwrite newer results.",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+      "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+      "observed": "Concurrent identical submissions, canceled permissions, changed objectives and delayed expiry cannot duplicate successful events or overwrite current evidence.",
+      "remaining": "Single configured scope and local SQLite; real multi-host recovery/concurrency qualification remains.",
+      "profiles": [
+        "trilogyJobs"
+      ],
+      "evidence": [
+        {
+          "profile": "trilogyJobs",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyJobs.log",
+          "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+          "bytes": 3322,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/trilogy-jobs.test.mjs"
+          ],
+          "exitCode": 0
+        }
+      ],
+      "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+      "recordedAt": "2026-10-29T20:35:56.378Z",
+      "independentlyAttested": false,
+      "productionCertified": false
+    },
+    {
+      "criterionId": "DEV-01/AC-02",
+      "requirement": "Unsupported edits and stale baselines are rejected with recoverable errors.",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+      "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+      "observed": "Exact Git base/candidate/file/mode binding, immutable import, stale-selection rejection and current-authority write checks.",
+      "remaining": "Imported snapshot and bounded candidate edits; full general refactoring acceptance remains.",
+      "profiles": [
+        "trilogyJobs",
+        "trilogyWorker",
+        "githubSnapshotPinning",
+        "runtimeProjectScope"
+      ],
+      "evidence": [
+        {
+          "profile": "trilogyJobs",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyJobs.log",
+          "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+          "bytes": 3322,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/trilogy-jobs.test.mjs"
+          ],
+          "exitCode": 0
+        },
+        {
+          "profile": "trilogyWorker",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyWorker.log",
+          "sha256": "c3b8847acd80ff52a350ca19788bf8ec41c74f841f35e0d635d5924acea935f8",
+          "bytes": 2994,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/trilogy-worker.test.mjs"
+          ],
+          "exitCode": 0
+        },
+        {
+          "profile": "githubSnapshotPinning",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/githubSnapshotPinning.log",
+          "sha256": "67ceeea62882a66641868f413a992126c81619c005610eba2a78a71c0658aa74",
+          "bytes": 493,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/github-snapshot-pinning.test.mjs"
+          ],
+          "exitCode": 0
+        },
+        {
+          "profile": "runtimeProjectScope",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/runtimeProjectScope.log",
+          "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+          "bytes": 1629,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/runtime-project-scope.test.mjs"
+          ],
+          "exitCode": 0
+        }
+      ],
+      "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+      "recordedAt": "2026-10-29T20:35:56.378Z",
+      "independentlyAttested": false,
+      "productionCertified": false
+    },
+    {
+      "criterionId": "QA-02/AC-01",
+      "requirement": "Behavioral bugs and regressions cause meaningful failures.",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+      "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+      "observed": "Preserved baseline defects become meaningful passing behavioral regressions.",
+      "remaining": "Does not certify unrelated application requirements or external providers.",
+      "profiles": [
+        "trilogyJobs",
+        "trilogyWorker",
+        "runtimeProjectScope",
+        "githubSnapshotPinning"
+      ],
+      "evidence": [
+        {
+          "profile": "trilogyJobs",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyJobs.log",
+          "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+          "bytes": 3322,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/trilogy-jobs.test.mjs"
+          ],
+          "exitCode": 0
+        },
+        {
+          "profile": "trilogyWorker",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyWorker.log",
+          "sha256": "c3b8847acd80ff52a350ca19788bf8ec41c74f841f35e0d635d5924acea935f8",
+          "bytes": 2994,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/trilogy-worker.test.mjs"
+          ],
+          "exitCode": 0
+        },
+        {
+          "profile": "runtimeProjectScope",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/runtimeProjectScope.log",
+          "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+          "bytes": 1629,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/runtime-project-scope.test.mjs"
+          ],
+          "exitCode": 0
+        },
+        {
+          "profile": "githubSnapshotPinning",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/githubSnapshotPinning.log",
+          "sha256": "67ceeea62882a66641868f413a992126c81619c005610eba2a78a71c0658aa74",
+          "bytes": 493,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/github-snapshot-pinning.test.mjs"
+          ],
+          "exitCode": 0
+        }
+      ],
+      "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+      "recordedAt": "2026-10-29T20:35:56.378Z",
+      "independentlyAttested": false,
+      "productionCertified": false
+    },
+    {
+      "criterionId": "QA-02/AC-02",
+      "requirement": "Passing snapshot-integrity checks is not presented as application correctness.",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+      "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+      "observed": "Status retains snapshot-only scope, unqualified host/isolation state and pending owner authority.",
+      "remaining": "Actual Docker qualification and general application tests remain separate.",
+      "profiles": [
+        "trilogyJobs",
+        "trilogyWorker"
+      ],
+      "evidence": [
+        {
+          "profile": "trilogyJobs",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyJobs.log",
+          "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+          "bytes": 3322,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/trilogy-jobs.test.mjs"
+          ],
+          "exitCode": 0
+        },
+        {
+          "profile": "trilogyWorker",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyWorker.log",
+          "sha256": "c3b8847acd80ff52a350ca19788bf8ec41c74f841f35e0d635d5924acea935f8",
+          "bytes": 2994,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/trilogy-worker.test.mjs"
+          ],
+          "exitCode": 0
+        }
+      ],
+      "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+      "recordedAt": "2026-10-29T20:35:56.378Z",
+      "independentlyAttested": false,
+      "productionCertified": false
+    },
+    {
+      "criterionId": "UX-01/AC-01",
+      "requirement": "Critical tasks can be completed with clear success/failure/recovery states.",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+      "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+      "observed": "Actual compiled component callbacks refuse missing/deleted/all-project targets and late replies; audit failure stops follow-on work.",
+      "remaining": "No real browser, keyboard, screen-reader or target-user journey qualification.",
+      "profiles": [
+        "runtimeProjectScope"
+      ],
+      "evidence": [
+        {
+          "profile": "runtimeProjectScope",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/runtimeProjectScope.log",
+          "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+          "bytes": 1629,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/runtime-project-scope.test.mjs"
+          ],
+          "exitCode": 0
+        }
+      ],
+      "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+      "recordedAt": "2026-10-29T20:35:56.378Z",
+      "independentlyAttested": false,
+      "productionCertified": false
+    },
+    {
+      "criterionId": "UX-01/AC-02",
+      "requirement": "Screens never imply unverified connectivity, test evidence or autonomy.",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+      "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+      "observed": "Old project data clears, failed evidence cannot claim execution or release, public jobs omit signed proof.",
+      "remaining": "Hosted identity and browser journeys remain unqualified.",
+      "profiles": [
+        "runtimeProjectScope",
+        "trilogyJobs"
+      ],
+      "evidence": [
+        {
+          "profile": "runtimeProjectScope",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/runtimeProjectScope.log",
+          "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+          "bytes": 1629,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/runtime-project-scope.test.mjs"
+          ],
+          "exitCode": 0
+        },
+        {
+          "profile": "trilogyJobs",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/trilogyJobs.log",
+          "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+          "bytes": 3322,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/trilogy-jobs.test.mjs"
+          ],
+          "exitCode": 0
+        }
+      ],
+      "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+      "recordedAt": "2026-10-29T20:35:56.378Z",
+      "independentlyAttested": false,
+      "productionCertified": false
+    },
+    {
+      "criterionId": "UX-03/AC-01",
+      "requirement": "Each new surface has task-based acceptance criteria and maps to implemented data/actions.",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+      "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+      "observed": "Runtime and self-healing controls use their selected project and reject stale follow-on requests.",
+      "remaining": "Other advanced surfaces and target-user usability remain incomplete.",
+      "profiles": [
+        "runtimeProjectScope"
+      ],
+      "evidence": [
+        {
+          "profile": "runtimeProjectScope",
+          "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/runtimeProjectScope.log",
+          "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+          "bytes": 1629,
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+            "tests/runtime-project-scope.test.mjs"
+          ],
+          "exitCode": 0
+        }
+      ],
+      "reviewedBy": "MGR root with separate AI review and preserved local race reproductions; no independent production signing identity",
+      "recordedAt": "2026-10-29T20:35:56.378Z",
+      "independentlyAttested": false,
+      "productionCertified": false
+    }
+  ],
+  "productDecision": {
+    "imprint": "Code Monster background proposal assembly",
+    "slotMachine": "Bounded compatible-part selector within Imprint",
+    "omniDev": "Project/job/permission/budget/owner control",
+    "omniSight": "Scoped read-only evidence view",
+    "recommendations": "Require actual project findings, outside evidence where applicable and measured outcomes; assembly does not establish usefulness."
+  },
+  "publication": "NEW_WAVE_NOT_PUBLISHED",
+  "publicationEvidence": "UNFINISHED-WORK/mgr-trilogy-publication-attempt-20261029.json",
+  "remaining": [
+    "Qualified existing Docker host, protected signing identity and actual concurrency/recovery measurements.",
+    "Deployed multi-user and provider consent/revocation boundaries;34catalog-only connectors are not live adapters.",
+    "Owner-authorized exact-commit publication for trilogy candidates; generic latest-base publisher rejects them.",
+    "General application execution, semantic source relationships, recipe admission/revocation and measured recommendation usefulness.",
+    "Real browser/keyboard/screen-reader/mobile journeys and large-repository performance.",
+    "Full per-clause external acceptance and independent owner-approved release."
+  ]
+}

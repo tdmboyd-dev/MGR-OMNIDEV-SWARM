@@ -1,0 +1,41 @@
+✔ separate service roles authorize only their scoped operations and responses are never cached (69.577287ms)
+✔ project, repository and job-reader scope are enforced even with a valid service token (8.942167ms)
+✔ new grants require a committed origin and exact existing candidate bytes; they never execute or apply it (12.506874ms)
+✔ same authorization and result replay produce one transition and one audit (11.759344ms)
+✔ concurrent identical submissions cannot append a losing transaction audit (8.774213ms)
+✔ audit insertion failure rolls back the grant together with its job state (6.963687ms)
+✔ revocation, expiry and the owner stop switch reject reads, retries and reports without mutating evidence (27.895558ms)
+✔ a newer source, objective, candidate or canceled job invalidates its grant (34.652789ms)
+✔ signed verification requires prior candidate stage and never grants release authority (16.761632ms)
+✔ Boolean passes, rewritten history, substituted candidates and shifted files cannot become evidence (21.104892ms)
+✔ expired or replaced verifier cannot keep an old verified result visible (15.270325ms)
+✔ validly signed output from before staging is still rejected (8.543135ms)
+✔ empty output or malformed request identity never qualifies (8.490806ms)
+✔ worker assignment waits for a candidate commit and binds the live grant (11.734341ms)
+✔ generic worker Boolean success cannot qualify a trilogy job (10.830439ms)
+✔ scoped worker report fixture keeps exact signed proof and allows verified replay without rerunning (23.607896ms)
+✔ stopped or revoked grant cannot accept an already issued worker report (22.266861ms)
+✔ verifier revocation during signature checking cannot be persisted as a successful worker report (9.920871ms)
+✔ existing snapshot apply cannot bypass a trilogy job still awaiting signed verification (8.583927ms)
+✔ explicit owner snapshot apply succeeds only after current exact proof is accepted (15.804675ms)
+✔ concurrent revocation cannot be overwritten by snapshot apply (16.415771ms)
+✔ candidate-only trilogy grants cannot enter the generic unbound GitHub publisher (11.41843ms)
+✔ revocation during execution-proof verification refuses the output read (16.429917ms)
+✔ revocation during a verified replay cannot return accepted (13.722068ms)
+✔ objective change at the durable result write cannot record stale candidate evidence (7.583049ms)
+✔ grant expiry during signature verification cannot persist verified evidence (8.993118ms)
+✔ grant expiry while a database write waits is checked by the database clock (315.828533ms)
+✔ snapshot application refuses a grant that expires while effect capacity is reserved (15.795746ms)
+✔ objective change at worker assignment write refuses stale authorization (8.921655ms)
+✔ objective change at worker report write refuses stale authorization (13.29772ms)
+✔ duplicate event identities or evidence beyond the fixed protocol do not enter the durable record (6.283161ms)
+✔ request body byte limit and strict UTF-8 hold for multibyte or malformed input (3.471378ms)
+✔ API refuses cross-origin, unexpected authority fields, ambiguous reads and oversized bodies (3.576285ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 894.653449

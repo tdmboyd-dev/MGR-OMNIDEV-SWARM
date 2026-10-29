@@ -1,0 +1,3 @@
+PASS automatic relevant-domain plan exceeds two reviews, enforces visible budget and completion gates, preserves source-digest evidence and records owner build proposals without activating capabilities
+PASS independent API specialist requests execute concurrently and all receipts survive storage contention
+PASS concurrent API coordinators claim one review and issue exactly one provider request; completed review cannot be charged twice

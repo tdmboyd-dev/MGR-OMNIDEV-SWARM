@@ -1,0 +1,12 @@
+✔ branch lookup is resolved once and inventory plus every file use its immutable commit/tree (35.263015ms)
+✔ missing or malformed commit/tree identity prevents any source-file download (2.1284ms)
+✔ one failed pinned file prevents returning a mixed or incomplete success (1.264962ms)
+✔ workspace records the exact import commit and tree for later job grants (14.396979ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 131.438393

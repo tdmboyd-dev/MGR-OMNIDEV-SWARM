@@ -1,0 +1,82 @@
+{
+  "schema": "mgr.gate-repair.local-evidence.v2",
+  "recordedAt": "2026-10-29T13:09:18.357Z",
+  "baseCommit": "c44818c5017d15139c294e971346b1152ed24ba1",
+  "sourceFilesUnchanged": true,
+  "fileSha256": {
+    "scripts/verify-acceptance-receipt.mjs": "814914385b8642722961c973e3bc8d28104f2c003cd5c69cecca229413fd8af6",
+    "scripts/acceptance-promotion-gate.mjs": "f864ceb340535de415e9c0bb0a4b0201cff1b677b3df19351da283559b8bb4e8",
+    "scripts/validate-acceptance-register.mjs": "edad8be93309141a4e60232d85561447ba5543a8627d4a07d72545a84ddab56a",
+    "tests/verify-acceptance-receipt.test.mjs": "943e7beeeff51c61ec145e34840eb93dd4bcdf7aab195ee57f5e68751d1758db",
+    "tests/acceptance-promotion-gate.test.mjs": "8a4ad60dc1d45734b666b2ee784ed280e52b63f81f9c623be9bda4996c1ad9d0",
+    "tests/validate-acceptance-register.test.mjs": "e12d77e0c3c3d98d090524fabc4a3e84dea0d23c68d99ac4e4f0f7dd6c7de671"
+  },
+  "runtime": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "evidenceScope": "Executed local cryptographic and structural fixtures against exact working-file bytes; not an independent runner, live owner identity, or production certification",
+  "runs": [
+    {
+      "argv": [
+        "node",
+        "tests/verify-acceptance-receipt.test.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "✔ valid receipt proves cryptographic integrity without claiming independent execution (3.28075ms)\n✔ legacy flat v1 serialization remains compatible with Ed25519 receipts (9.079807ms)\n✔ public PEM, KeyObject and SPKI bytes all verify the same receipt (4.413786ms)\n✔ changed original requirement, criterion ID and commit fail (0.502426ms)\n✔ failed, incomplete and truncated execution cannot pass (1.189581ms)\n✔ tampering with any signed execution field rejects the receipt (0.526002ms)\n✔ wrong key and non-Ed25519 signing keys are refused (59.02439ms)\n✔ noncanonical base64, malformed and oversized signatures are rejected (0.387153ms)\n✔ trusted expected signer and execution digests must match exactly (0.873535ms)\n✔ malformed records and blank requirements fail closed without throwing (0.753715ms)\n✔ nested JSON signing is canonical and rejects lossy values or getters (0.73768ms)\n✔ SHA-256 Git commit identity is supported and malformed lengths are refused (0.661016ms)\nℹ tests 12\nℹ suites 0\nℹ pass 12\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 89.549465\n",
+      "stderr": "",
+      "stdoutSha256": "81f4579f3e5b4c2fb097809f9d98c9125ff0e61b40821f36d3cad6030f60dcbe",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "node",
+        "tests/acceptance-promotion-gate.test.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "✔ all original criteria plus separately bound owner grant becomes eligible without mutation (8.011833ms)\n✔ missing signed receipts cannot approve parent (0.689268ms)\n✔ unverified or changed original criterion cannot be bypassed (2.046621ms)\n✔ register evidence must describe the current exact source revision (0.978233ms)\n✔ unregistered, revoked, unqualified and out-of-scope signers are rejected (2.047333ms)\n✔ zero criteria never become a fully accepted parent (0.359301ms)\n✔ one signed receipt cannot be reused across duplicated or unrelated criterion identities (0.545571ms)\n✔ duplicate receipts and extra unrelated receipts fail closed (1.784767ms)\n✔ duplicate parent records cannot hide conflicting source-of-truth states (0.77019ms)\n✔ duplicate trust identities cannot override a revoked key by array ordering (0.824321ms)\n✔ missing, fixture, simulated and unknown environment labels cannot qualify (5.082382ms)\n✔ partial source coverage cannot qualify even with valid signatures (0.75668ms)\n✔ runner and owner cannot share a signing key even under different identities (0.96279ms)\n✔ runner and owner cannot share an identity even under different keys (1.30132ms)\n✔ a valid replacement receipt after owner review requires a new matching grant (1.979952ms)\n✔ owner identity must match trusted configuration, not merely a signed arbitrary name (1.373959ms)\n✔ legacy or unbound owner grants cannot authorize current evidence (4.712336ms)\n✔ changing signed owner grant bytes is rejected (1.196822ms)\n✔ trusted execution digest expectations are enforced during parent assessment (0.56441ms)\n✔ receipt order does not change the reviewed evidence set (1.242391ms)\n✔ malformed structured inputs produce denials, never exceptions or positive results (1.250183ms)\nℹ tests 21\nℹ suites 0\nℹ pass 21\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 47.236251\n",
+      "stderr": "",
+      "stdoutSha256": "eab70c70349849920d3d9a6c1204b59d189fd3ddd4f28416ec4d3a54282943e2",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "node",
+        "tests/validate-acceptance-register.test.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "✔ 174 task records and 348 criteria pass preservation without false certifications (6.479045ms)\n✔ rejects parent marked certified with unverified criterion (4.202488ms)\n✔ rejects forged VERIFIED with missing source/test/reviewer receipt (2.092461ms)\n✔ full provenance per criterion makes parent eligible, not automatically approved (2.509779ms)\n✔ exact acceptance text cannot be silently rewritten (2.121073ms)\n✔ duplicate original or registered parent identities are rejected (2.033091ms)\n✔ empty original requirements cannot make 174 parents ready (1.609553ms)\n✔ unknown parent IDs cannot silently replace required original parents (3.601653ms)\n✔ sparse or malformed parent and criterion records fail closed (13.612326ms)\n✔ duplicate criterion identities cannot reuse the same original requirement (1.49431ms)\n✔ blank or meaningless provenance cannot be counted as verified (13.171301ms)\n✔ historic verified proof remains intact when candidate source changes (3.931901ms)\n✔ matching candidate revision has structural readiness but no automatic certification (1.467429ms)\n✔ source readiness is unknown without an explicitly requested current revision (1.179366ms)\n✔ proof from different source revisions cannot make a parent ready (2.431561ms)\n✔ false aggregate counts and unsupported parent states are rejected (9.135354ms)\n✔ completed canonical parent and certified register must remain synchronized (4.579565ms)\n✔ the original verified status and completed_verified alias both require complete certified proof (7.174933ms)\n✔ documented incomplete states remain valid and unsupported supplied backlog states are rejected (10.930207ms)\n✔ recorded status drift is visible rather than silently changing historical source (1.26874ms)\n✔ invalid current source selectors cannot be used for certification (0.411785ms)\n✔ the original 174-task 441-criterion register and REL-02 historical evidence are preserved (11.41292ms)\nℹ tests 22\nℹ suites 0\nℹ pass 22\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 114.683993\n",
+      "stderr": "",
+      "stdoutSha256": "ecb80ed3ea06ce0bb8211e454f6ef0af71eb4a5132cceec68661fbf9d1db27bc",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "baseline": {
+    "sourceCommit": "c44818c5017d15139c294e971346b1152ed24ba1",
+    "runs": [
+      {
+        "argv": [
+          "node",
+          "baseline-bypass-probes.mjs"
+        ],
+        "exitCode": 0,
+        "stdout": "{\"probe\":\"same runner and owner key\",\"eligible\":true,\"status\":\"ELIGIBLE_FOR_FINAL_OWNER_CONTROLLED_PROMOTION\",\"parentId\":\"Q\",\"criteriaVerified\":1,\"sourceCommit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}\n{\"probe\":\"missing environment\",\"eligible\":true,\"status\":\"ELIGIBLE_FOR_FINAL_OWNER_CONTROLLED_PROMOTION\",\"parentId\":\"Q\",\"criteriaVerified\":1,\"sourceCommit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}\n{\"probe\":\"unknown environment\",\"eligible\":true,\"status\":\"ELIGIBLE_FOR_FINAL_OWNER_CONTROLLED_PROMOTION\",\"parentId\":\"Q\",\"criteriaVerified\":1,\"sourceCommit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}\n{\"probe\":\"criterion belongs to another parent\",\"eligible\":true,\"status\":\"ELIGIBLE_FOR_FINAL_OWNER_CONTROLLED_PROMOTION\",\"parentId\":\"Q\",\"criteriaVerified\":1,\"sourceCommit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}\n{\"probe\":\"empty acceptance requirements\",\"eligible\":true,\"status\":\"ELIGIBLE_FOR_FINAL_OWNER_CONTROLLED_PROMOTION\",\"parentId\":\"Q\",\"criteriaVerified\":0,\"sourceCommit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}\n{\"probe\":\"reuse one receipt for two criteria\",\"eligible\":true,\"status\":\"ELIGIBLE_FOR_FINAL_OWNER_CONTROLLED_PROMOTION\",\"parentId\":\"Q\",\"criteriaVerified\":2,\"sourceCommit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}\n{\"probe\":\"duplicate trust identity overrides revocation\",\"eligible\":true,\"status\":\"ELIGIBLE_FOR_FINAL_OWNER_CONTROLLED_PROMOTION\",\"parentId\":\"Q\",\"criteriaVerified\":1,\"sourceCommit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}\n",
+        "stderr": "",
+        "stdoutSha256": "0ec3c5fd08aa7470405c53c4ff423aecb860bd0ceb8ba739ec09864991590bfb",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "node",
+          "validator-bypass-probes.mjs"
+        ],
+        "exitCode": 0,
+        "stdout": "{\"probe\":\"empty original requirements report 174 ready parents\",\"valid\":true,\"totalParents\":174,\"totalCriteria\":0,\"verifiedCriteria\":0,\"readyForCertification\":174,\"errors\":[]}\n{\"probe\":\"duplicate original parent silently replaces another\",\"valid\":true,\"totalParents\":174,\"totalCriteria\":348,\"verifiedCriteria\":0,\"readyForCertification\":0,\"errors\":[]}\n{\"probe\":\"invented certified total\",\"valid\":true,\"totalParents\":174,\"totalCriteria\":348,\"verifiedCriteria\":0,\"readyForCertification\":0,\"errors\":[]}\n{\"probe\":\"unrecognized parent state\",\"valid\":true,\"totalParents\":174,\"totalCriteria\":348,\"verifiedCriteria\":0,\"readyForCertification\":0,\"errors\":[]}\n{\"probe\":\"blank proof and invalid timestamp report parent ready\",\"valid\":true,\"totalParents\":174,\"totalCriteria\":348,\"verifiedCriteria\":2,\"readyForCertification\":1,\"errors\":[]}\n{\"probe\":\"proofs from different source revisions report one ready parent\",\"valid\":true,\"totalParents\":174,\"totalCriteria\":348,\"verifiedCriteria\":2,\"readyForCertification\":1,\"errors\":[]}\n",
+        "stderr": "",
+        "stdoutSha256": "1cfcdb7fb52aeb603410b105f1a5405b7bcd74837bd7893a4084308c0e9f1fb8",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  }
+}

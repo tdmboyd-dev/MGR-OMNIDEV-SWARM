@@ -1,0 +1,196 @@
+{
+  "schema": "mgr.worker-package-verification.v1",
+  "scope": "Archive reproducibility, committed-source equality, dependency completeness and importability only; no Docker execution or full-suite claim",
+  "testedRuntimeSourceCommit": "bf27df673e137c1592a4e3dc76ebc5666ebba3c6",
+  "sourceHead": "4087759e1ef27d8b8d7d1b82f57b108f89c13c29",
+  "helperSha256": "1438f933296ec1894fc8fd862cde8907421ad4a6457b4e02e9db992e56354d93",
+  "before": {
+    "head": "4087759e1ef27d8b8d7d1b82f57b108f89c13c29",
+    "zipBytes": 9378,
+    "zipSha256": "3d88cf706048c6608a81914c94a9a88a0cd3a2f654210bf09c41cfa054720b40",
+    "entries": [
+      {
+        "path": "worker/README.md",
+        "bytes": 5185,
+        "sha256": "f304564ca62d144c1ad3db2a6163b66b73d284e7a0e7cbe2b94027c403a1458f",
+        "equalsCurrentSource": false
+      },
+      {
+        "path": "worker/START-WORKER.cmd",
+        "bytes": 172,
+        "sha256": "0327392b1a87c63320d9d4e3cf095065f90b1ed3f1724a59b5b1247d15289407",
+        "equalsCurrentSource": true
+      },
+      {
+        "path": "worker/fleet.mjs",
+        "bytes": 1264,
+        "sha256": "ef770482e3a73f2cdd5812ecd2d9f9fad6da9afc91b42b98058610ed2089528a",
+        "equalsCurrentSource": true
+      },
+      {
+        "path": "worker/Dockerfile.application",
+        "bytes": 500,
+        "sha256": "8ec127e4a896969e13ecf2a5b3a45c67f3209981a6abe9f77d8140405bde42c4",
+        "equalsCurrentSource": true
+      },
+      {
+        "path": "worker/application-profile.mjs",
+        "bytes": 1739,
+        "sha256": "20c6fdbcc3ff676b723a7098da7df8e512dcc6caa242cb81e33397b6cb5e002c",
+        "equalsCurrentSource": true
+      },
+      {
+        "path": "worker/runner.mjs",
+        "bytes": 8093,
+        "sha256": "0a41ca628583cbbecaff1e87b6fb501c9b83324dc509f12ce50f9d0849aa07ea",
+        "equalsCurrentSource": false
+      },
+      {
+        "path": "worker/doctor.mjs",
+        "bytes": 1398,
+        "sha256": "47033a036cf323ca026a03b8ba116c6b3d2d653294bf2040a54b8f67d4498078",
+        "equalsCurrentSource": true
+      },
+      {
+        "path": "worker/CHECK-WORKER.cmd",
+        "bytes": 46,
+        "sha256": "b3b5fe93da3f9d1891ad8596fb60194da880d25fcc96ae470447239fe7a4f32f",
+        "equalsCurrentSource": true
+      }
+    ]
+  },
+  "after": {
+    "zipBytes": 35752,
+    "zipSha256": "d4df8cb7964803dea38d2348ad419c722ea8ff539eef20ca9ddbd74041545505",
+    "manifest": {
+      "schema": "mgr.worker-package.v1",
+      "sourceCommit": "bf27df673e137c1592a4e3dc76ebc5666ebba3c6",
+      "scope": "Portable worker source package; no credentials or Docker-host qualification",
+      "files": [
+        {
+          "path": "worker/CHECK-WORKER.cmd",
+          "bytes": 46,
+          "sha256": "b3b5fe93da3f9d1891ad8596fb60194da880d25fcc96ae470447239fe7a4f32f"
+        },
+        {
+          "path": "worker/Dockerfile.application",
+          "bytes": 500,
+          "sha256": "8ec127e4a896969e13ecf2a5b3a45c67f3209981a6abe9f77d8140405bde42c4"
+        },
+        {
+          "path": "worker/README.md",
+          "bytes": 5954,
+          "sha256": "74ab772e3d500c66605edfcf97d78ca0245dd28cdf5968f56553738f0d352529"
+        },
+        {
+          "path": "worker/START-WORKER.cmd",
+          "bytes": 172,
+          "sha256": "0327392b1a87c63320d9d4e3cf095065f90b1ed3f1724a59b5b1247d15289407"
+        },
+        {
+          "path": "worker/application-profile.mjs",
+          "bytes": 1739,
+          "sha256": "20c6fdbcc3ff676b723a7098da7df8e512dcc6caa242cb81e33397b6cb5e002c"
+        },
+        {
+          "path": "worker/doctor.mjs",
+          "bytes": 1398,
+          "sha256": "47033a036cf323ca026a03b8ba116c6b3d2d653294bf2040a54b8f67d4498078"
+        },
+        {
+          "path": "worker/fleet.mjs",
+          "bytes": 1264,
+          "sha256": "ef770482e3a73f2cdd5812ecd2d9f9fad6da9afc91b42b98058610ed2089528a"
+        },
+        {
+          "path": "worker/runner.mjs",
+          "bytes": 9362,
+          "sha256": "1b90e38b8a5e1abfd5c94efc63835f9b78c6ca5c9d5cb1a485a6b9c410f4c655"
+        },
+        {
+          "path": "worker/trilogy-proof.mjs",
+          "bytes": 11926,
+          "sha256": "b215c5a3db80ec1a41f5aa6e36868b07bdbf321c67ab3f5d19fb046e410f8bde"
+        }
+      ],
+      "relativeImports": [
+        {
+          "source": "worker/doctor.mjs",
+          "specifier": "./fleet.mjs",
+          "target": "worker/fleet.mjs"
+        },
+        {
+          "source": "worker/runner.mjs",
+          "specifier": "./application-profile.mjs",
+          "target": "worker/application-profile.mjs"
+        },
+        {
+          "source": "worker/runner.mjs",
+          "specifier": "./fleet.mjs",
+          "target": "worker/fleet.mjs"
+        },
+        {
+          "source": "worker/runner.mjs",
+          "specifier": "./trilogy-proof.mjs",
+          "target": "worker/trilogy-proof.mjs"
+        }
+      ]
+    },
+    "entries": [
+      "worker/CHECK-WORKER.cmd",
+      "worker/Dockerfile.application",
+      "worker/PACKAGE-MANIFEST.json",
+      "worker/README.md",
+      "worker/START-WORKER.cmd",
+      "worker/application-profile.mjs",
+      "worker/doctor.mjs",
+      "worker/fleet.mjs",
+      "worker/runner.mjs",
+      "worker/trilogy-proof.mjs"
+    ]
+  },
+  "check": {
+    "exitCode": 0,
+    "stdout": "{\"archiveEntries\": 10, \"operation\": \"check\", \"relativeImports\": 4, \"sourceCommit\": \"bf27df673e137c1592a4e3dc76ebc5666ebba3c6\", \"sourceFiles\": 9, \"status\": \"verified\", \"zipBytes\": 35752, \"zipSha256\": \"d4df8cb7964803dea38d2348ad419c722ea8ff539eef20ca9ddbd74041545505\"}",
+    "stderr": ""
+  },
+  "rebuild": {
+    "exitCode": 0,
+    "stdout": "{\"archiveEntries\": 10, \"operation\": \"build\", \"relativeImports\": 4, \"sourceCommit\": \"bf27df673e137c1592a4e3dc76ebc5666ebba3c6\", \"sourceFiles\": 9, \"status\": \"verified\", \"zipBytes\": 35752, \"zipSha256\": \"d4df8cb7964803dea38d2348ad419c722ea8ff539eef20ca9ddbd74041545505\"}",
+    "stderr": ""
+  },
+  "reproducible": true,
+  "sourceFilesUnchanged": true,
+  "beforeArchiveRejected": {
+    "exitCode": 1,
+    "stdout": "{\"reason\": \"Worker archive paths differ: {\\\"missing\\\": [\\\"worker/PACKAGE-MANIFEST.json\\\", \\\"worker/trilogy-proof.mjs\\\"], \\\"unexpected\\\": [], \\\"duplicates\\\": false}\", \"status\": \"failed\"}",
+    "stderr": ""
+  },
+  "negativeChecks": {
+    "missing_module": {
+      "exitCode": 1,
+      "stdout": "{\"reason\": \"Worker archive paths differ: {\\\"missing\\\": [\\\"worker/trilogy-proof.mjs\\\"], \\\"unexpected\\\": [], \\\"duplicates\\\": false}\", \"status\": \"failed\"}",
+      "stderr": ""
+    },
+    "unexpected_local_file": {
+      "exitCode": 1,
+      "stdout": "{\"reason\": \"Worker archive paths differ: {\\\"missing\\\": [], \\\"unexpected\\\": [\\\"worker/.env\\\"], \\\"duplicates\\\": false}\", \"status\": \"failed\"}",
+      "stderr": ""
+    },
+    "altered_runner": {
+      "exitCode": 1,
+      "stdout": "{\"reason\": \"Worker archive bytes differ from source: worker/runner.mjs\", \"status\": \"failed\"}",
+      "stderr": ""
+    }
+  },
+  "extractedRunnerImport": {
+    "exitCode": 0,
+    "stdout": "{\"imported\":true,\"execute\":\"function\",\"cleanupContainer\":\"function\"}",
+    "stderr": ""
+  },
+  "extractedDoctorSyntax": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

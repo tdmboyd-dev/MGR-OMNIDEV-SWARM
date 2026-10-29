@@ -1,0 +1,1 @@
+{"passed":6,"scope":"Real subprocess sequencing with a simulated Docker CLI; missing pinned-image rejection. No real Docker isolation is certified."}

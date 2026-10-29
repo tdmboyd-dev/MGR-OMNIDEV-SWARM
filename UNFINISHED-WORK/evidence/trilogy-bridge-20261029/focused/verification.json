@@ -1,0 +1,181 @@
+{
+  "schema": "mgr.trilogy.focused-verification.v1",
+  "createdAt": "2026-10-29T18:27:53.087Z",
+  "sourceCommit": null,
+  "sourceQualification": "Working-source development observations; superseded for committed regression by the separate clean 64-profile report.",
+  "commands": [
+    "node tests/prepare.mjs",
+    "node --test tests/trilogy-jobs.test.mjs",
+    "node --test tests/github-snapshot-pinning.test.mjs",
+    "node outputs/trilogy-wave/independent-review/reproduce-races.mjs races-after.json"
+  ],
+  "results": {
+    "api-before-initial.log": {
+      "tests": 16,
+      "passed": 11,
+      "failed": 5,
+      "skipped": 0
+    },
+    "api-before-release-gates.log": {
+      "tests": 25,
+      "passed": 21,
+      "failed": 4,
+      "skipped": 0
+    },
+    "api-before-final-races.log": {
+      "tests": 33,
+      "passed": 25,
+      "failed": 8,
+      "skipped": 0
+    },
+    "api-intermediate-test-harness-error.log": {
+      "tests": 33,
+      "passed": 32,
+      "failed": 1,
+      "skipped": 0
+    },
+    "api-after.log": {
+      "tests": 33,
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0
+    },
+    "github-before.log": {
+      "tests": 4,
+      "passed": 2,
+      "failed": 2,
+      "skipped": 0
+    },
+    "github-after.log": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "independentReview": {
+    "beforeGuardPasses": 0,
+    "afterGuardPasses": 7,
+    "total": 7,
+    "meaning": "Separate AI source review and actual local race reproduction, not a production signing identity."
+  },
+  "preservedHarnessIssues": [
+    "Initial GitHub fixture compilation encountered restricted child-process EPERM; that error is not a product failure.",
+    "Intermediate API run reached the correct expiry refusal but its new assertion called a non-exported jobs.get helper. The assertion now reads actual SQLite status."
+  ],
+  "sourceFiles": [
+    {
+      "path": "app/api/trilogy/route.ts",
+      "sha256": "3104859425050aca386cafd31066b3882e404ddfe111900362605889a956aa2c"
+    },
+    {
+      "path": "lib/trilogy-contract.ts",
+      "sha256": "198a5fdcd1a02a9f48f538563a7416e82fefab13d28c6bcd6d283d1761cc139e"
+    },
+    {
+      "path": "lib/trilogy-jobs.ts",
+      "sha256": "afccd24618c9f6fb8cffa226cd15cec42f51e95c5acace8c4ca92302b1435290"
+    },
+    {
+      "path": "lib/jobs.ts",
+      "sha256": "dee1d394760b504375c7700c383f60ce13b256e3f77bde57463943de07fa7ce2"
+    },
+    {
+      "path": "lib/repository.ts",
+      "sha256": "e72f4d796deffc4f1fe068d445f46129602eb40ef6dd05dabdb3e5900941d62f"
+    },
+    {
+      "path": "lib/github.ts",
+      "sha256": "b8809781542604362897ea33a6ca975be33cdc03867fd477b7b66107582c2ae0"
+    },
+    {
+      "path": "app/api/workspace/route.ts",
+      "sha256": "0e71b20b5bfb542332ea52690703f7cc86bf6f1540cb92077974af35ddca40c3"
+    },
+    {
+      "path": "tests/trilogy-jobs.test.mjs",
+      "sha256": "9bed1620001b29c6fe2faa64fb6282557e08f02c556b93de0ce59059e2df32e2"
+    },
+    {
+      "path": "tests/trilogy-fixture.mjs",
+      "sha256": "14fc90eff85ab3ed9ee3b6771ad040bdf41c0ef540b70995bcfc507df67d6090"
+    },
+    {
+      "path": "tests/github-snapshot-pinning.test.mjs",
+      "sha256": "1539ef9db8fcae74784bd54c51352104af30930e6d117aa82274f44901c9b3fb"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/api-before-initial.log",
+      "bytes": 4813,
+      "sha256": "e12827540d00ae7c8f4603fa67fdb0f7f96e882549641c50d0aac23041c85b9a"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/api-before-release-gates.log",
+      "bytes": 5980,
+      "sha256": "59e79b347c1918994ff1a2189aab7dddee1d64cbd6ccc5cd69b60f1b0f4de2da"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/api-before-final-races.log",
+      "bytes": 8440,
+      "sha256": "182e2a84fa582c2e93239c28d371c03587bcb744bba28da3e0c25439c2b739fd"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/api-intermediate-test-harness-error.log",
+      "bytes": 3822,
+      "sha256": "51567af6bc76cb4b927c2b4f8ea81e9ad7699c9be4f69d90d93a44d394a291ad"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/api-after.log",
+      "bytes": 3324,
+      "sha256": "b5d56497aab1d3d38e112e1fef4fb1895acbceaf222addbbd7ee9d20ff4dfcbb"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/github-before.log",
+      "bytes": 1984,
+      "sha256": "308293c761f0da15c1b6f2feebf16eec60fe4e1e2824b98085bfaf0b2976c6ac"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/github-preparation-error.log",
+      "bytes": 1186,
+      "sha256": "e0dcb7b99e68b4eba6ad46f7aaf99188be12d2c8fcb46dca18fba01e704b89dc"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/github-after.log",
+      "bytes": 494,
+      "sha256": "d39e30e97072bcbc4c19d7cbc2a8f821470a77f9b54a2cba76f5e259cdae7ea2"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/independent-review-before.json",
+      "bytes": 3289,
+      "sha256": "b6fd857023a912f803c93dcc7638120dc982bd3b3b14fc9d8ba79bf25aaadb3b"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/independent-review-before.log",
+      "bytes": 3289,
+      "sha256": "b6fd857023a912f803c93dcc7638120dc982bd3b3b14fc9d8ba79bf25aaadb3b"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/independent-review-after.json",
+      "bytes": 3401,
+      "sha256": "2964fd8d802dcdce01e9cdd32f02da1042f45e9c662e62adbb2e1ce03a64f715"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/independent-review-after.log",
+      "bytes": 3401,
+      "sha256": "2964fd8d802dcdce01e9cdd32f02da1042f45e9c662e62adbb2e1ce03a64f715"
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-bridge-20261029/focused/independent-review-reproduction.mjs.txt",
+      "bytes": 7583,
+      "sha256": "c2ad8230ba17f79f650725cdbe4723467438c648353342904c6084c1a4906fd6"
+    }
+  ],
+  "limitations": [
+    "Actual SQLite/API/signature fixtures use disposable keys.",
+    "GitHub responses are provider fixtures.",
+    "No browser, physical Docker, live account, multi-user hosted identity, merge or deployment certification.",
+    "Full original acceptance remains separate; no parent or clause promoted."
+  ]
+}

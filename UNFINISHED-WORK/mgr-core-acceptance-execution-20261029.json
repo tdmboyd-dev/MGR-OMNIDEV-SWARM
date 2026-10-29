@@ -1,0 +1,829 @@
+{
+  "schema": "mgr.core-criterion-execution.v1",
+  "generatedAt": "2026-10-29T13:09:24.098210+00:00",
+  "baseCommit": "c44818c5017d15139c294e971346b1152ed24ba1",
+  "sourceBinding": "Worktree content manifest, including new repairs. Not a claim that uncommitted changes were present at baseCommit. Final commit-bound workflow evidence is recorded by root separately.",
+  "sourceManifest": [
+    {
+      "path": "app/api/accounts/github/route.ts",
+      "sha256": "5c2c14094fd5ff44548a63f8984cfac1f3cc2428b92aa57782bcaec575ded403"
+    },
+    {
+      "path": "app/api/agents/route.ts",
+      "sha256": "e1ac70fa0c64d715b9f93e39fbd94bc495c7f3f667e37a3eb190901a45811801"
+    },
+    {
+      "path": "app/api/intelligence/route.ts",
+      "sha256": "f18b10ce931f74ead1a208157c0807be63741d3d1cab9acb133723ad1f4e1fe7"
+    },
+    {
+      "path": "app/api/runtime/route.ts",
+      "sha256": "2b1cfdfa2f4b8eaef24c304689a64043708015be5b65a79bd7c34d7d7710d04d"
+    },
+    {
+      "path": "app/api/worker/route.ts",
+      "sha256": "93c5a5b5245befc53dcc953c0033d0e23d38e65d1dc7352b290b06d1f2cf26d3"
+    },
+    {
+      "path": "app/api/workspace/route.ts",
+      "sha256": "177edda3611c741655d29c348aa6195d532dde0e0f47f439fc8ba2e814fcb3a2"
+    },
+    {
+      "path": "companion/chatgpt.mjs",
+      "sha256": "7ecae41100464596022c226005498fde24b557c5a6cae737499fdfda28f1abee"
+    },
+    {
+      "path": "companion/dashboard.mjs",
+      "sha256": "a1fc951b8b04d4bd2cf34d1b8215a7e75c384bfdab5eefcf1d9113a02c03108d"
+    },
+    {
+      "path": "companion/engine/install.mjs",
+      "sha256": "e2274cfa2d9686845ef9b41af4542d7555585c4d720d41e58b1756ac5908d0bb"
+    },
+    {
+      "path": "companion/engine/supervisor.mjs",
+      "sha256": "e8a68ded4ac5f8ca6e47064757684c7a344ddfdf7d801c4a997e9fda4e24fa9c"
+    },
+    {
+      "path": "companion/engine/update.mjs",
+      "sha256": "62fc3eb041954845e9a98082ba1d945b56cee67c8d397822768977e5f0a76f01"
+    },
+    {
+      "path": "companion/job-memory.mjs",
+      "sha256": "b83bcf805b6a429a8fb5fbabe526e242a484081f51d8f00a6bd07a7886d77035"
+    },
+    {
+      "path": "db/index.ts",
+      "sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd"
+    },
+    {
+      "path": "db/schema.ts",
+      "sha256": "f7f0a03eaecd2fd6285b033fa41a69c15f481a5f0583b093e73a97ef29023f31"
+    },
+    {
+      "path": "db/store.ts",
+      "sha256": "7c8c1a87c7d2a68e02655193025f696410948f6ed6ffb114277a0949a27b4d79"
+    },
+    {
+      "path": "drizzle/0000_orange_phalanx.sql",
+      "sha256": "4b81617d9646dbc56b91baa7bf5f7cfa7e57905607fbb890149e2e37793b619b"
+    },
+    {
+      "path": "drizzle/0001_modern_hammerhead.sql",
+      "sha256": "754201b9f42974af8770fb87a357bbf87bacccd4a88a5c35f00810b2df37fe7c"
+    },
+    {
+      "path": "lib/agent-os.ts",
+      "sha256": "4e73fb2a2326fc4688ce24182fcd80f527e0af50f6e43b8ca0cd82842d376ce0"
+    },
+    {
+      "path": "lib/analyzer.ts",
+      "sha256": "0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709"
+    },
+    {
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c"
+    },
+    {
+      "path": "lib/catalog.ts",
+      "sha256": "708dba1b8f78d1147815d6f4003edd7ad72425d7785207a6c07b6a19c176277d"
+    },
+    {
+      "path": "lib/companion-bridge.ts",
+      "sha256": "4873b5c9316ba7a7b92f57d1d8a6a198d286790de96c355bc21e7e853f2fc551"
+    },
+    {
+      "path": "lib/connector-context.ts",
+      "sha256": "bbddff68689cb0f6926fecd4b8b96f12f2054277c296e97b0df07d4ad5ece24e"
+    },
+    {
+      "path": "lib/connector-preview.d.ts",
+      "sha256": "abd69a94f7f61f1359063bb557574faae35e8ff5a028cc4c04b9ee248ef52642"
+    },
+    {
+      "path": "lib/connector-qualification.ts",
+      "sha256": "59235091fc2f952cf7ecb5a965f2828451579e0f84bfd739d333a33b08f0f139"
+    },
+    {
+      "path": "lib/connectors.ts",
+      "sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c"
+    },
+    {
+      "path": "lib/control-plane.ts",
+      "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951"
+    },
+    {
+      "path": "lib/executive-scorecard.ts",
+      "sha256": "2d8ee073c2d34cc798ba2b18ead901ffed67026bf0997a3e8e46b98f03b1f1be"
+    },
+    {
+      "path": "lib/file-ledger.ts",
+      "sha256": "bc770fb6ee65dc3f1262941d2821817d4d2f4eb32edb61a663d43b62d0608b5b"
+    },
+    {
+      "path": "lib/github-account.ts",
+      "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1"
+    },
+    {
+      "path": "lib/github-selection.ts",
+      "sha256": "ca812363deafd088541092c1df3c8967dabab8320fe8cb2d16f959106cea73bf"
+    },
+    {
+      "path": "lib/github.ts",
+      "sha256": "87ee85fee3fe7f30e53da6711d84b34c2134a3528db95a521b502da5cf230183"
+    },
+    {
+      "path": "lib/integration-engineering.ts",
+      "sha256": "dbd4c5c083f22ea2ce5747ae3afd3d8a8319213e5fcfba7729c5b06c524f12bd"
+    },
+    {
+      "path": "lib/intelligence.ts",
+      "sha256": "fc7e2185640a621bfd5805a052f3e07384d60f3923442e3a938f168b81b5fe0e"
+    },
+    {
+      "path": "lib/job-presentation.ts",
+      "sha256": "25f4f21c00533340bfd7a794ba070cd6e58527f3aea91b4a95e3f6d27196c35a"
+    },
+    {
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a"
+    },
+    {
+      "path": "lib/providers.ts",
+      "sha256": "390f7b299a2f385f91e04ba60b635a470262453a1a8814d26870934bb08189ba"
+    },
+    {
+      "path": "lib/repo-audit.ts",
+      "sha256": "e1bcd77676698cc627ee739ee476917af81a931bbb612bd5e391eaa730e88ad8"
+    },
+    {
+      "path": "lib/repository.ts",
+      "sha256": "2c64a1a7512b4fb3a95bbcc4a5e47585caf11f9af22b7f55eb86be93271f7739"
+    },
+    {
+      "path": "lib/review-planner.ts",
+      "sha256": "7fc34ab8e4820b114155a093e983ff6b2a46a96605345cf0c4b2f3044384df18"
+    },
+    {
+      "path": "lib/runtime-contract.ts",
+      "sha256": "655e6d7c6ec2037bc7f9374e53fb447b60a63754a3dc7c432cae9456bb361249"
+    },
+    {
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397"
+    },
+    {
+      "path": "lib/utils.ts",
+      "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68"
+    },
+    {
+      "path": "package.json",
+      "sha256": "65087fbd82436e66bddd82a181f5d05b23632411c043ee82388fcc9bfd7916a9"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "095ba6f301ba3997da2c251dfc4b805c220624bdf0921d905eaceee0d1fb29c9"
+    },
+    {
+      "path": "tests/acceptance.mjs",
+      "sha256": "eeb392cc44bbe841a4f552859df3679c3be745d69b563802b1074da83d426179"
+    },
+    {
+      "path": "tests/brains.mjs",
+      "sha256": "43dd3186c671a399fe8ffd81efb18dc38c00741d726185b1dd5e96bae2a63aff"
+    },
+    {
+      "path": "tests/engine-supervisor.mjs",
+      "sha256": "1c63a47d4f4f2c8a57d62a6e95c529c9f2de0fed395801d9e3421fa5eb765d90"
+    },
+    {
+      "path": "tests/integration-fleet.mjs",
+      "sha256": "2c08a2ca24ea19deac4e43ffad5cce60a26dfb3be021fbadd50cd9dc79c8fbd6"
+    },
+    {
+      "path": "tests/intelligence-integrity.mjs",
+      "sha256": "6feb7bea025e9b76616178d80f99154c6e7d811eb4d08362f2b979c965274930"
+    },
+    {
+      "path": "tests/job-recovery-integrity.mjs",
+      "sha256": "d4ab34573490e53f68249673b0096ccfea9a6f8ae3aee40ef264a08c206c46e0"
+    },
+    {
+      "path": "tests/platform.mjs",
+      "sha256": "cf20ffe3c09a3de0ec13520c3f7faeb5e468491c627c2a94e2992a81eff19918"
+    },
+    {
+      "path": "tests/prepare.mjs",
+      "sha256": "078cc3b2b386b89685ee9caf1077ec41d44a5f2a47a91adb839c3088e740ba76"
+    },
+    {
+      "path": "tests/project-controls.mjs",
+      "sha256": "ece95e956838f349549e639f04ad114942749827a43169dbe03021dc9505c0e6"
+    },
+    {
+      "path": "tests/provider-verification-race.mjs",
+      "sha256": "0e5124d91964e20eada5e7bfe04dff613bbe52a4266814faedd156d5658e3324"
+    },
+    {
+      "path": "tests/repo-completion.mjs",
+      "sha256": "8d3a4620ef81361f8ebcd460035795fa3453336a1c53d21990ccdbd96648d920"
+    },
+    {
+      "path": "tests/runtime.mjs",
+      "sha256": "336be76c44ca48878c27123b6ec36a10f48cac9357d2f04b9bfcfb68fd0dd570"
+    },
+    {
+      "path": "worker/application-profile.mjs",
+      "sha256": "20c6fdbcc3ff676b723a7098da7df8e512dcc6caa242cb81e33397b6cb5e002c"
+    },
+    {
+      "path": "worker/doctor.mjs",
+      "sha256": "47033a036cf323ca026a03b8ba116c6b3d2d653294bf2040a54b8f67d4498078"
+    },
+    {
+      "path": "worker/fleet.mjs",
+      "sha256": "ef770482e3a73f2cdd5812ecd2d9f9fad6da9afc91b42b98058610ed2089528a"
+    },
+    {
+      "path": "worker/runner.mjs",
+      "sha256": "019c1f2d027ab845691ed538e33bfbaaa33ef639aee88e712492b6c78192b188"
+    }
+  ],
+  "sourceManifestSha256": "e589e45bb5c43d04c57ec4e8dc0a4da56c6938102bbda605c8635717a1274e1e",
+  "environment": {
+    "node": "v24.22.1",
+    "storage": "Node SQLite with real migrations and transactional D1-compatible adapter",
+    "externalHttp": "Provider and GitHub HTTP are explicit fixtures; no paid provider calls or live deployment",
+    "processes": "Runtime generated Node tests and companion supervisor ran with child-process permission; failed sandbox attempts excluded from passing results"
+  },
+  "summary": {
+    "distinctParentTasks": 14,
+    "criteriaExamined": 20,
+    "localContractSatisfied": 5,
+    "partialLocal": 15,
+    "newRegressionCases": 23,
+    "baselinePassed": 6,
+    "baselineFailed": 15,
+    "repairedPassed": 23,
+    "repairedFailed": 0,
+    "canonicalParentsAutomaticallyClosed": 0,
+    "baselineComparedCases": 21,
+    "supplementalCleanupCases": 2,
+    "supplementalCleanupBeforeFailed": 2,
+    "supplementalCleanupAfterPassed": 2
+  },
+  "runs": [
+    {
+      "id": "intelligence-before",
+      "command": "node tests/intelligence-integrity.mjs",
+      "exitCode": 1,
+      "phase": "BASELINE_WITH_REGRESSION_TESTS",
+      "tests": 8,
+      "passed": 2,
+      "failed": 6,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/intelligence-before.log",
+      "outputSha256": "965e126cdb4d044e095af1409ae352c37c33cdef7b9d3dce76fcc29ac477da23",
+      "outputBytes": 5276,
+      "outputLastModifiedAt": "2026-10-29T13:06:30.496561+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests.",
+      "implementationCommit": "c44818c5017d15139c294e971346b1152ed24ba1",
+      "baselineMethod": "Executed new regression tests against pristine git archive of c44818; current source worktree was not altered."
+    },
+    {
+      "id": "intelligence-after",
+      "command": "node tests/intelligence-integrity.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED",
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/intelligence-after.log",
+      "outputSha256": "76a2f24004c708ef39ce307831f550a48282b0a113872ab428d295ef5a9a4d2f",
+      "outputBytes": 825,
+      "outputLastModifiedAt": "2026-10-29T12:58:08.798142+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "recovery-before",
+      "command": "node tests/job-recovery-integrity.mjs",
+      "exitCode": 1,
+      "phase": "BASELINE_WITH_REGRESSION_TESTS",
+      "tests": 6,
+      "passed": 2,
+      "failed": 4,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/recovery-before.log",
+      "outputSha256": "292dbc4c9b6dfa4d8b02c637d6c20881be17018af52d7ad8e4231dea44036b19",
+      "outputBytes": 3474,
+      "outputLastModifiedAt": "2026-10-29T13:06:30.480560+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests.",
+      "implementationCommit": "c44818c5017d15139c294e971346b1152ed24ba1",
+      "baselineMethod": "Executed new regression tests against pristine git archive of c44818; current source worktree was not altered."
+    },
+    {
+      "id": "recovery-after",
+      "command": "node tests/job-recovery-integrity.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED",
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/recovery-after.log",
+      "outputSha256": "8372828a11ede3a33ccc5a866d3f706d7bf95e29e9e9ee1b0c22c9a9f01524ae",
+      "outputBytes": 654,
+      "outputLastModifiedAt": "2026-10-29T13:08:46.591447+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "provider-before",
+      "command": "node tests/provider-verification-race.mjs",
+      "exitCode": 1,
+      "phase": "BASELINE_WITH_REGRESSION_TESTS",
+      "tests": 7,
+      "passed": 2,
+      "failed": 5,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/provider-before.log",
+      "outputSha256": "e9bd686d3e14fb6b630b95a8c11004e90e6cc35214b37ce1514b0fc3ffe80789",
+      "outputBytes": 4906,
+      "outputLastModifiedAt": "2026-10-29T13:06:30.520561+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests.",
+      "implementationCommit": "c44818c5017d15139c294e971346b1152ed24ba1",
+      "baselineMethod": "Executed new regression tests against pristine git archive of c44818; current source worktree was not altered."
+    },
+    {
+      "id": "provider-after",
+      "command": "node tests/provider-verification-race.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/provider-after.log",
+      "outputSha256": "830124c2f78187b8d1d02575d9e1255e9e705f69f816268c61e721af5c25a320",
+      "outputBytes": 866,
+      "outputLastModifiedAt": "2026-10-29T13:02:54.935998+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "runtime",
+      "command": "node tests/runtime.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED_REGRESSION",
+      "tests": 79,
+      "passed": 79,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/runtime.log",
+      "outputSha256": "2a80f908f4444bfa49faa14e9895078afd880932fc99676847e8c90059dc7c74",
+      "outputBytes": 5041,
+      "outputLastModifiedAt": "2026-10-29T13:03:32.368794+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "platform",
+      "command": "node tests/platform.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED_REGRESSION",
+      "tests": 80,
+      "passed": 80,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/platform.log",
+      "outputSha256": "6659eec88403dd635b157f6f9498ed48e5998086d1b10e6bda22298b40fcea34",
+      "outputBytes": 9881,
+      "outputLastModifiedAt": "2026-10-29T13:03:34.092831+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "acceptance",
+      "command": "node tests/acceptance.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED_REGRESSION",
+      "tests": 31,
+      "passed": 31,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/acceptance.log",
+      "outputSha256": "e53e6b5895bd90f6b3bf346e3e8381e8966afd982951eaded6b968b7b0066a61",
+      "outputBytes": 1669,
+      "outputLastModifiedAt": "2026-10-29T12:59:51.124187+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "brains",
+      "command": "node tests/brains.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED_REGRESSION",
+      "tests": 19,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/brains.log",
+      "outputSha256": "76538ccec40fe10596d35a37adc30cc0fe0e77e3e84ece92f218a578e5e4ac0c",
+      "outputBytes": 11177,
+      "outputLastModifiedAt": "2026-10-29T13:03:33.144811+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "integration-fleet",
+      "command": "node tests/integration-fleet.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED_REGRESSION",
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/integration-fleet.log",
+      "outputSha256": "25ac825985f46534f515a353af5b9538ad906d2e9f5faa7686b5c2a62bdd2503",
+      "outputBytes": 5982,
+      "outputLastModifiedAt": "2026-10-29T13:00:24.008843+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "repo-completion",
+      "command": "node tests/repo-completion.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED_REGRESSION",
+      "tests": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/repo-completion.log",
+      "outputSha256": "f495dfd9cf102422d1b0082ee46865d35d71d7c285521670d8eb85dacc318268",
+      "outputBytes": 5852,
+      "outputLastModifiedAt": "2026-10-29T13:00:23.472832+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "project-controls",
+      "command": "node tests/project-controls.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED_REGRESSION",
+      "tests": null,
+      "passed": null,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/project-controls.log",
+      "outputSha256": "32b7495b0979e84b3679c784c4891523e658e7f0feb58cdbc88be6b99ab91887",
+      "outputBytes": 208,
+      "outputLastModifiedAt": "2026-10-29T13:08:46.499445+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "engine-supervisor",
+      "command": "node tests/engine-supervisor.mjs",
+      "exitCode": 0,
+      "phase": "REPAIRED_REGRESSION",
+      "tests": null,
+      "passed": null,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/engine-supervisor.log",
+      "outputSha256": "5cd8732f1a8bb37e0d08887a21c9b59c41bbd1513b6126f4f4aa44256347429b",
+      "outputBytes": 85,
+      "outputLastModifiedAt": "2026-10-29T13:00:44.905264+00:00",
+      "counterScope": "Suite own reported checks; runtime suite is nested in platform, brains, integration-fleet and repo-completion. Do not sum counters as unique tests."
+    },
+    {
+      "id": "cleanup-before",
+      "command": "node tests/intelligence-integrity.mjs",
+      "exitCode": 1,
+      "phase": "SUPPLEMENTAL_BEFORE_AUDIT_CHILD_CLEANUP",
+      "tests": 10,
+      "passed": 8,
+      "failed": 2,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/cleanup-before.log",
+      "outputSha256": "4166ff9c372acf33a728f83d67099340a8b05c03b195062506c78bcd1f04a85c",
+      "outputBytes": 2368,
+      "outputLastModifiedAt": "2026-10-29T13:08:23.390953+00:00",
+      "counterScope": "Eight original intelligence cases plus two additional cleanup cases. Count only the two additions when combining with the original 21-case wave."
+    },
+    {
+      "id": "cleanup-after",
+      "command": "node tests/intelligence-integrity.mjs",
+      "exitCode": 0,
+      "phase": "SUPPLEMENTAL_REPAIRED",
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "log": "UNFINISHED-WORK/evidence/core-acceptance-20261029/cleanup-after.log",
+      "outputSha256": "5372832d904e033764570962da625b8b2f681a7c3ecafa825e230356b03403ec",
+      "outputBytes": 1018,
+      "outputLastModifiedAt": "2026-10-29T13:08:46.359442+00:00",
+      "counterScope": "Eight original intelligence cases plus two additional cleanup cases. Count only the two additions when combining with the original 21-case wave."
+    }
+  ],
+  "criteria": [
+    {
+      "criterionId": "AUTH-01/AC-02",
+      "requirement": "Decline, revoke, refresh and disconnect behave correctly; no merge occurs.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "runtime"
+      ],
+      "observed": "Actual OAuth state/cookie validation rejects stale and replayed callbacks; decline, token refresh and disconnect execute against an HTTP fixture without merging.",
+      "remaining": "Provider-side revocation, refresh and disconnect remain unexecuted against a real account.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "AUTH-03/AC-02",
+      "requirement": "Unavailable provider capabilities remain visibly unavailable rather than simulated.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "brains",
+        "acceptance"
+      ],
+      "observed": "Unknown brains and unsupported account specialists reject execution; missing capability does not silently spend through another provider; catalog registration remains not connected.",
+      "remaining": "Visible signed-in browser journeys and every shipped no-key provider still require qualification.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "AUTH-04/AC-01",
+      "requirement": "Connections report only verified capabilities and preserve errors without leaking tokens.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "provider-after",
+        "brains",
+        "runtime"
+      ],
+      "observed": "A verification response updates only the selected unchanged encrypted configuration; replaced connections retain null readiness, named providers return their own metadata, plaintext fixtures never appear in persistence/readback.",
+      "remaining": "Unified connection scopes/sync-state and OAuth account capability inventory are broader than this API-provider repair.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "AUTH-04/AC-02",
+      "requirement": "Concurrent refresh/revocation and cross-account isolation pass meaningful tests.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "provider-after",
+        "brains"
+      ],
+      "observed": "Actual SQLite compare-and-swap rejects pending verification after replace/disconnect/replace-back; simultaneous completions have one winner, per-brain credentials stay isolated.",
+      "remaining": "OAuth refresh concurrency, multi-user account ownership and live provider revoke remain separate requirements.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "RUN-02/AC-02",
+      "requirement": "Budget exhaustion, cancellation and partial failures stop work predictably.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "runtime",
+        "recovery-after"
+      ],
+      "observed": "Cancelled jobs do not execute, model/retry ceilings reject attempts, expired/exhausted work has bounded recovery while retaining previous candidate and test evidence.",
+      "remaining": "Real provider and deeper hierarchical budgets need qualified live execution.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "RUN-03/AC-01",
+      "requirement": "Concurrent workers do not duplicate effects or overwrite newer results.",
+      "coverage": "SATISFIED_LOCAL_CONTRACT",
+      "evidenceRuns": [
+        "runtime",
+        "platform",
+        "recovery-after"
+      ],
+      "observed": "Concurrent claim/admission/request IDs admit one operation; recovered observations cannot overwrite a newer completed result; concurrent recoveries record one immutable event and one agent-state revision.",
+      "remaining": "The measured contract is SQLite-backed hosted-route logic; real multi-host process death and external side effects are not certified.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "RUN-03/AC-02",
+      "requirement": "Crash/retry tests produce correct terminal states and auditable recovery.",
+      "coverage": "SATISFIED_LOCAL_CONTRACT",
+      "evidenceRuns": [
+        "recovery-after",
+        "runtime"
+      ],
+      "observed": "Expired leases requeue under budget, preserve prior results on exhaustion, persist an audit event, and roll back atomically if audit persistence fails; resumed queued work executes successfully.",
+      "remaining": "Lease expiry is induced in SQLite; no physical Docker-host crash test is claimed.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "DEV-01/AC-02",
+      "requirement": "Unsupported edits and stale baselines are rejected with recoverable errors.",
+      "coverage": "SATISFIED_LOCAL_CONTRACT",
+      "evidenceRuns": [
+        "runtime",
+        "project-controls"
+      ],
+      "observed": "Traversal, changed baselines and credential-bearing candidates reject; saved-output recovery rejects stale/malformed/replayed candidates; source switch creates a fresh job preserving old evidence.",
+      "remaining": "General language-aware refactoring and real AI generation are outside this bounded snapshot-validation proof.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "DEV-02/AC-02",
+      "requirement": "Retry cannot silently duplicate or overwrite unrelated work.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "runtime",
+        "project-controls"
+      ],
+      "observed": "Repeated draft-PR request returns existing recorded result with no additional fixture HTTP writes; snapshot apply and rollback replay are rejected; switch requests reuse one job.",
+      "remaining": "Concurrent external GitHub failures and provider-side branch reconciliation are not proven by stubbed HTTP.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "GRAPH-01/AC-02",
+      "requirement": "Updates/deletes do not leave stale edges or reveal unauthorized nodes.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "intelligence-after",
+        "platform",
+        "cleanup-after"
+      ],
+      "observed": "Actual project deletion removes historical integration participants from graph; current labels replace stale snapshot names; emitted edges have valid endpoints. Project deletion and snapshot clearing remove their own nested audit artifacts; a second project and its audit children remain intact and the resulting backup validates.",
+      "remaining": "Cross-tenant authorization is not supplied by this owner-private graph, and historical integration snapshots intentionally retain their content.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "GAP-01/AC-01",
+      "requirement": "Known gaps are detected with actionable evidence and acceptable measured false-positive rates.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "acceptance",
+        "repo-completion"
+      ],
+      "observed": "Known SQL concatenation, tests/docs/accessibility gaps are detected; covered fixture produces no presence gaps; resumable traversal inspects 150 files and excludes secret payload fetches.",
+      "remaining": "Measured false-positive evaluation across representative authorized projects remains unperformed.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "DATA-02/AC-01",
+      "requirement": "Relevant historical evidence can be retrieved across project versions with provenance.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "platform"
+      ],
+      "observed": "Search returns stored evidence citations; decision revisions retain previous rationale and recorded outcomes.",
+      "remaining": "Semantic retrieval and comprehensive cross-version source lineage remain incomplete.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "DATA-02/AC-02",
+      "requirement": "Access, correction, retention and deletion are verified.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "intelligence-after",
+        "platform",
+        "project-controls",
+        "cleanup-after"
+      ],
+      "observed": "Project deletion and decision correction execute; backups exclude credential settings; malformed restores leave the store unchanged. Project deletion and snapshot clearing remove their own nested audit artifacts; a second project and its audit children remain intact and the resulting backup validates.",
+      "remaining": "Multi-user access policy and timed retention/deletion convergence remain unqualified.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "DATA-03/AC-01",
+      "requirement": "A clean environment restores approved data and artifacts successfully.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "intelligence-after",
+        "platform",
+        "cleanup-after"
+      ],
+      "observed": "Complete records/jobs/source artifacts restore transactionally into a fresh SQLite store; exact record counts/content read back; restored jobs are canceled with no leases or credentials; duplicate restore has one winner. Project deletion and snapshot clearing remove their own nested audit artifacts; a second project and its audit children remain intact and the resulting backup validates.",
+      "remaining": "Supported restore remains bounded to 498 records/jobs per transaction; deployed backups, external resources and recovery-time objectives are not certified.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "DATA-03/AC-02",
+      "requirement": "Lost/rotated credentials fail safely and can be reauthorized.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "provider-after"
+      ],
+      "observed": "Missing and rotated AES-GCM vault keys fail before any outbound provider request; disconnect and save under the new key permits successful fixture reauthorization, without exposing secrets.",
+      "remaining": "This tests API-provider credential recovery; live OAuth reauthorization and managed key-rotation operations remain unqualified.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "SEC-03/AC-01",
+      "requirement": "Security review findings are recorded and fixed or explicitly dispositioned.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "provider-before",
+        "provider-after",
+        "intelligence-before",
+        "intelligence-after",
+        "recovery-before",
+        "recovery-after"
+      ],
+      "observed": "Concrete credential-verification race, stale-graph state, malformed backup acceptance and loss of recovery evidence are recorded and repaired with before/after failures.",
+      "remaining": "An independent audit of all credential and provider boundaries is not replaced by these focused repairs.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "SEC-03/AC-02",
+      "requirement": "Tests exercise material failure paths and no secrets appear in logs/exports.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "runtime",
+        "platform",
+        "provider-after"
+      ],
+      "observed": "OAuth replay/origin/redirect and metadata redaction negatives execute; provider verification race and key loss fail safely; backups exclude settings and raw fixture keys.",
+      "remaining": "This is bounded fixture disclosure checking, not exhaustive live secret/log scanning.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "QA-02/AC-01",
+      "requirement": "Behavioral bugs and regressions cause meaningful failures.",
+      "coverage": "SATISFIED_LOCAL_CONTRACT",
+      "evidenceRuns": [
+        "intelligence-before",
+        "intelligence-after",
+        "recovery-before",
+        "recovery-after",
+        "provider-before",
+        "provider-after"
+      ],
+      "observed": "New behavior regressions produce 15 failing cases against the original implementations; all 21 cases pass after causal repairs. Tests exercise actual SQLite state, crypto and product code.",
+      "remaining": "User project applications still require their own toolchain tests through a qualified isolated worker.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "QA-02/AC-02",
+      "requirement": "Passing snapshot-integrity checks is not presented as application correctness.",
+      "coverage": "SATISFIED_LOCAL_CONTRACT",
+      "evidenceRuns": [
+        "runtime",
+        "repo-completion"
+      ],
+      "observed": "Static/generated snapshot checks disclose runtime checks not run; execution assignments distinguish snapshot-integrity and node-application profiles and reject trivial application test declarations.",
+      "remaining": "No snapshot-integrity pass is promoted here to general application or production certification.",
+      "automaticPromotion": false
+    },
+    {
+      "criterionId": "OPS-02/AC-01",
+      "requirement": "An induced test-environment incident is detected, diagnosed, repaired, checked and safely rolled back on failure.",
+      "coverage": "PARTIAL_LOCAL",
+      "evidenceRuns": [
+        "engine-supervisor"
+      ],
+      "observed": "A real local child process fails, supervisor restores previous release pointer and quarantines the failed release; observed file side effects confirm rollback.",
+      "remaining": "This is the companion release supervisor; production diagnosis from target telemetry and staged code repair remain incomplete.",
+      "automaticPromotion": false
+    }
+  ],
+  "repairs": [
+    {
+      "id": "CORE-RECOVERY-EVIDENCE",
+      "source": "lib/jobs.ts",
+      "defect": "Retry exhaustion replaced all prior candidate/review/test evidence and recovery had no durable audit event.",
+      "repair": "Guarded atomic job recovery preserves result, changes agent status and appends one recovery event; stale observation and audit-storage failure cannot corrupt state.",
+      "evidence": [
+        "recovery-before",
+        "recovery-after"
+      ]
+    },
+    {
+      "id": "CORE-GRAPH-STALE-PROJECT",
+      "source": "lib/intelligence.ts",
+      "defect": "Integration snapshots resurrected deleted source nodes and stale names.",
+      "repair": "Current stored project identity is required before emitting integration participants.",
+      "evidence": [
+        "intelligence-before",
+        "intelligence-after"
+      ]
+    },
+    {
+      "id": "CORE-BACKUP-REFERENCES",
+      "source": "lib/intelligence.ts",
+      "defect": "Restore accepted non-project job targets, dangling record links, null/array payloads and invalid retry counts.",
+      "repair": "Validate JSON object shapes and typed project/audit-child relationships before transaction; preserve valid repo_tree/repo_file parent model.",
+      "evidence": [
+        "intelligence-before",
+        "intelligence-after"
+      ]
+    },
+    {
+      "id": "CORE-PROVIDER-VERIFICATION-RACE",
+      "source": "lib/providers.ts",
+      "defect": "Old provider verification could mark newly saved credentials ready; named verification returned legacy provider metadata.",
+      "repair": "Compare-and-swap exact encrypted configuration and independent verification identity; return the selected provider status.",
+      "evidence": [
+        "provider-before",
+        "provider-after"
+      ]
+    },
+    {
+      "id": "CORE-AUDIT-CHILD-CLEANUP",
+      "source": "lib/jobs.ts",
+      "defect": "Project deletion and snapshot clear removed audit parent rows but retained repo_tree/repo_file rows keyed to the audit ID, leaving orphan artifacts and invalid future backups.",
+      "repair": "Delete only the selected project audit children before audit parents in the guarded transaction; a unique snapshot-clear identity prevents stale cleanup from following a failed update.",
+      "evidence": [
+        "cleanup-before",
+        "cleanup-after"
+      ]
+    }
+  ],
+  "publicationPolicy": "Do not auto-close parents or claim live provider/Docker certification from this report. Read original criterion plus remaining scope and bind the final source to the root verification run before any promotion."
+}

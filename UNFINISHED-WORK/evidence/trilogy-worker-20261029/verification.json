@@ -1,0 +1,127 @@
+{
+  "schema": "mgr.trilogy-worker-verification.v1",
+  "createdAt": "2026-10-29T18:22:27.962Z",
+  "qualification": "LOCAL_FIXTURES_ONLY",
+  "sourceCommit": null,
+  "startingCommit": "bbf6d5f9dd102cd413631a1b0afe1628a135463b",
+  "cleanCommitFollowup": "Coordinator must attach the full clean committed verification run. This focused working-source receipt does not independently certify original task acceptance.",
+  "command": [
+    "node",
+    "--test",
+    "tests/trilogy-worker.test.mjs"
+  ],
+  "runtime": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "result": {
+    "exitCode": 0,
+    "total": 31,
+    "passed": 31,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sources": [
+    {
+      "path": "worker/trilogy-proof.mjs",
+      "sha256": "b215c5a3db80ec1a41f5aa6e36868b07bdbf321c67ab3f5d19fb046e410f8bde",
+      "bytes": 11926
+    },
+    {
+      "path": "worker/runner.mjs",
+      "sha256": "c2dc6b633dd02738aefb6c65c7e434c795f831951b54621287593fb47eeb045f",
+      "bytes": 8732
+    },
+    {
+      "path": "tests/trilogy-worker.test.mjs",
+      "sha256": "acc090f8764993028150ddc17812863852737c90f5abd1b4b58b1a1629f88fe6",
+      "bytes": 22835
+    }
+  ],
+  "baselines": [
+    {
+      "log": "before-six-guard-defects.log",
+      "total": 24,
+      "passed": 18,
+      "failed": 6,
+      "sourcePreimage": "guard-before-six-fixes.mjs.txt",
+      "scope": "Initial 24 guard cases reproduced six concrete refusal gaps; these are not the later 31-case suite."
+    },
+    {
+      "log": "before-mode-checks.log",
+      "total": 31,
+      "passed": 29,
+      "failed": 2,
+      "sourcePreimage": "guard-before-mode-fixes.mjs.txt",
+      "scope": "Corrected Git fixture reproduced two actual unapproved executable-permission gaps."
+    }
+  ],
+  "retainedFixtureFailure": {
+    "log": "initial-mode-fixture-error.log",
+    "total": 31,
+    "passed": 29,
+    "failed": 2,
+    "explanation": "First mode cases failed in Git checkout setup, before reaching their product assertions. The fixture explicitly sets the Git index executable bit. The corrected fixture still reproduced both product refusals missing before the mode fix; no assertion was weakened."
+  },
+  "repairedGaps": [
+    "Every approved changed file must actually be present in the tested snapshot.",
+    "Same-path private-key replacement during execution prevents a signature.",
+    "Private key permissions are checked again before signing.",
+    "A truthy non-boolean passed value is refused.",
+    "Non-string, malformed Unicode, empty and oversized output is refused.",
+    "Receipt timestamps must be canonical ISO instants.",
+    "Updated file modes must remain unchanged from the approved base.",
+    "New files must use the candidate writer regular-file mode."
+  ],
+  "integrationScope": {
+    "real": [
+      "Disposable Git repositories and candidate commits",
+      "Baseline failure and candidate pass from an actual Node test subprocess",
+      "Exact command/output hashes and Ed25519 verification",
+      "Runner process launch and cleanup ordering through a simulated Docker CLI",
+      "Candidate/source and assignment binding refusal paths",
+      "Control credential exclusion from the simulated child environment"
+    ],
+    "simulatedDockerCases": 5,
+    "qualifiedDockerHost": false,
+    "independentProductionSigner": false,
+    "productionSecretsUsed": false,
+    "limitation": "Five runner cases simulate the Docker executable while executing the real assigned Node command. No real daemon, kernel container isolation, production host, deployed worker service, production identity registry or owner-release approval was qualified. Linux run had zero skips; Windows POSIX-mode and simulated-CLI cases explicitly skip or narrow their fixture claims."
+  },
+  "evidence": [
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-worker-20261029/before-six-guard-defects.log",
+      "sha256": "7f96f24bc2cb02e88820592363dda6a7feffbb3e203ee2b29ff0126f5e5749e0",
+      "bytes": 6013
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-worker-20261029/initial-mode-fixture-error.log",
+      "sha256": "e10a2f581fde91e37235ad842d09ba634bfe53b8c8752eeebf40fd30eac59156",
+      "bytes": 6271
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-worker-20261029/before-mode-checks.log",
+      "sha256": "525536878b82ac1c18b80a3362429b752f8b6c5871cb114f6cbe17509f0316ab",
+      "bytes": 4286
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-worker-20261029/after.log",
+      "sha256": "fbb3589b983b9759c3a7be8a62a57452c4731ac469e8032ed1a193a7be96ddc7",
+      "bytes": 2990
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-worker-20261029/guard-before-six-fixes.mjs.txt",
+      "sha256": "61e4f37c28ab211bd5d8de6e1ffb4e91e982a7020046a7391b2b79b0cdebccee",
+      "bytes": 10467
+    },
+    {
+      "path": "UNFINISHED-WORK/evidence/trilogy-worker-20261029/guard-before-mode-fixes.mjs.txt",
+      "sha256": "ed767452bafec92c87cb6f4f0db283ce8297f86f18b6a46c71d4330d2e0e0287",
+      "bytes": 11644
+    }
+  ],
+  "parentPromotions": 0
+}
