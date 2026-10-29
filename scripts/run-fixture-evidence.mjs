@@ -8,7 +8,14 @@ const PROFILES=Object.freeze({
  integration:['tests/integration-fleet.mjs'],
  supervisor:['tests/engine-supervisor.mjs'],
  cleanup:['tests/worker-cleanup.mjs'],
- specialists:['tests/specialist-areas.mjs']
+ specialists:['tests/specialist-areas.mjs'],
+ parallel:['tests/parallel-specialists.mjs'],
+ automatic:['tests/automatic-review.mjs'],
+ jobs:['tests/job-move.mjs'],
+ project:['tests/project-controls.mjs'],
+ pipeline:['tests/pipeline.mjs'],
+ review:['tests/review-controls.mjs'],
+ generation:['tests/generation-timeout.mjs']
 });
 const hash=b=>createHash('sha256').update(b).digest('hex');
 export async function runFixtureEvidence({profile,cwd=process.cwd(),timeoutMs=90_000}){
