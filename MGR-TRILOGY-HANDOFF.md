@@ -1,3 +1,13 @@
+# Confirmed resumed publication — October 29, 2026
+
+**The recovered integration, new result-saving repairs, and current worker download are published and read back.** Pinned OmniDev checkpoint: `e16f2e91f049245ec8582b4338e6e0f13b1543fc`, exact tree `d5735457dbb3e8402424ced57d12558e876152bc`, identical to local `74dcd7607781ee763c8bad0652bde96268c0ed43`. Later documentation-only confirmation commits may follow this checkpoint. Earlier publication-pending and interrupted-attempt entries below are retained history.
+
+Current proof: **67/67 full local profiles** at runtime `bf27df673e137c1592a4e3dc76ebc5666ebba3c6`, including build/typecheck and **21 focused result-saving cases**; **10/10 actual local three-product flow checks**; exact, reproducible worker download with nine source files plus its manifest. The app/worker runtime remained unchanged after the full run. The later packaging helper and ZIP have separate verification. Exact source/test/provider mapping: `UNFINISHED-WORK/mgr-resume-publication-20261029.json`; all raw evidence: `UNFINISHED-WORK/evidence/resume-20261029/`.
+
+Confirmed companion evidence checkpoints: Code Monster `611c56966e5d7248fef03d53e1b2801af1323544` (171/171 fresh tests) and OmniSight `485b46ae2c4138d06dac711b8988593e22253228` (87/87 fresh tests). Preserve existing parent states and original acceptance wording. Physical worker isolation, deployed identities, independent signer custody, browser journeys, exact tested-candidate publication and remaining feature acceptance stay open. Do not repeat completed discovery or mistake review-branch publication for live deployment.
+
+---
+
 # Current worker download checkpoint — October 29, 2026
 
 The corrected download now contains the same worker source as the67-profile verification, including its previously missing proof module. The helper `scripts/package-worker.py --check` and the exact package receipt in `UNFINISHED-WORK/evidence/resume-20261029/worker-package-verification.json` verify source equality, import completeness and reproducible bytes. Runtime remains unchanged from `bf27df6`; publication of this latest artifact checkpoint is pending read-back. All earlier test/source attribution below remains intact.

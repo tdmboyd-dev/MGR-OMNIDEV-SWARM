@@ -199,5 +199,12 @@
     "Implement authorized product publication retaining the exact tested candidate commit.",
     "Complete real host/signing/account qualification through available permitted paths; respect the declined remote probe.",
     "Continue actual browser/accessibility, whole-application/campaign and original clause acceptance."
-  ]
+  ],
+  "confirmedPublication": {
+    "receipt": "UNFINISHED-WORK/mgr-resume-publication-20261029.json",
+    "checkpoint": "e16f2e91f049245ec8582b4338e6e0f13b1543fc",
+    "branchReadBack": true,
+    "treeReadBack": true,
+    "workerPackageVerified": true
+  }
 }

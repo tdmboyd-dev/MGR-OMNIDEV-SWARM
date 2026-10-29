@@ -1,3 +1,7 @@
+# Publication confirmed
+
+All three repository branches have confirmed source/evidence checkpoints. OmniDev `e16f2e91f049245ec8582b4338e6e0f13b1543fc` includes the corrected worker download. Exact read-back and verification attribution are in [the publication receipt](mgr-resume-publication-20261029.json). Earlier preparation/pending statements below are historical.
+
 # Resume reconciliation and worker result delivery — October 29, 2026
 
 ## Current verified result

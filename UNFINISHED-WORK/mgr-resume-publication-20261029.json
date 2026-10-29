@@ -1,0 +1,65 @@
+{
+  "schema": "mgr.resume-publication.v1",
+  "recordedAt": "2026-10-29T23:17:50.024Z",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "branch": "mgr/code-monster-omnisight-20261028",
+  "previousRemoteHead": "ec1f38d755939e6186b29f95c170d005722d67a2",
+  "localCheckpoint": "74dcd7607781ee763c8bad0652bde96268c0ed43",
+  "confirmedRemoteCheckpoint": "e16f2e91f049245ec8582b4338e6e0f13b1543fc",
+  "identicalFileTree": "d5735457dbb3e8402424ced57d12558e876152bc",
+  "remoteRefReadBack": true,
+  "remoteCommitTreeReadBack": true,
+  "testedRuntimeCommit": "bf27df673e137c1592a4e3dc76ebc5666ebba3c6",
+  "testedRuntimeTree": "147a195e514ae00d18c504022ec8383a43ede203",
+  "runtimeSourceUnchangedAfterVerification": true,
+  "verification": {
+    "fullProfiles": {
+      "passed": 67,
+      "failed": 0,
+      "blocked": 0
+    },
+    "focusedRepairTests": {
+      "passed": 21,
+      "note": "13 route and 8 runner cases; subsets of full profiles"
+    },
+    "threeProductFlowChecks": {
+      "passed": 10
+    },
+    "artifact": "UNFINISHED-WORK/evidence/resume-20261029/",
+    "workerPackage": {
+      "sha256": "d4df8cb7964803dea38d2348ad419c722ea8ff539eef20ca9ddbd74041545505",
+      "bytes": 35752,
+      "sourceFiles": 9,
+      "manifest": true,
+      "reproducible": true
+    }
+  },
+  "companions": [
+    {
+      "repository": "tdmboyd-dev/MGR-CODE-MONSTER",
+      "sourceCheckpoint": "6f9092b339be643b135b6ebe1a52c2cab3815753",
+      "confirmedEvidenceCheckpoint": "611c56966e5d7248fef03d53e1b2801af1323544",
+      "tree": "52572cd10f26113a106e652a5c0ff94e0e1c963c",
+      "freshTests": 171
+    },
+    {
+      "repository": "tdmboyd-dev/MGR-OMNISIGHT",
+      "sourceCheckpoint": "e1ee5ff517ac8932c64b4f62451f2cfb55fd8c81",
+      "confirmedEvidenceCheckpoint": "485b46ae2c4138d06dac711b8988593e22253228",
+      "tree": "9f98bd1f211697bc8f45a937c3aa10c0043c1bc3",
+      "freshTests": 87
+    }
+  ],
+  "scope": {
+    "parents": 174,
+    "acceptanceClauses": 441,
+    "additiveUpgrades": 28,
+    "parentStatusesUnchanged": true,
+    "automaticallyPromotedParents": 0
+  },
+  "limitations": [
+    "Local testing and source publication do not qualify physical Docker isolation, deployed accounts, independent production signing, actual browser/accessibility journeys or final release.",
+    "Computer preflight was declined; it was not retried through another channel.",
+    "This source checkpoint is confirmed. A later documentation-only confirmation commit may follow."
+  ]
+}
