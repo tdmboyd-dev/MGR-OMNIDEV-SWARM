@@ -1,0 +1,9 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {generateKeyPairSync,sign} from 'node:crypto';
+import {verifyAcceptanceReceipt} from '../scripts/verify-acceptance-receipt.mjs';
+const keys=generateKeyPairSync('ed25519'),criterion={criterionId:'QA-01/AC-01',requirement:'Authorized hosted journey passes'},commit='a'.repeat(40);
+function signed(p={}){const body={schema:'mgr.acceptance.receipt.v1',criterionId:criterion.criterionId,requirement:criterion.requirement,sourceCommit:commit,commandSha256:'b'.repeat(64),outputSha256:'c'.repeat(64),exitCode:0,truncated:false,timedOut:false,signerId:'isolated-test-runner',...p};const serialized=JSON.stringify(Object.fromEntries(Object.entries(body).sort(([a],[b])=>a.localeCompare(b))));return {...body,signature:sign(null,Buffer.from(serialized),keys.privateKey).toString('base64')};}
+test('valid Ed25519 receipt is cryptographically valid but not proof runner is independent',()=>{const r=verifyAcceptanceReceipt({criterion,receipt:signed(),publicKey:keys.publicKey,expectedCommit:commit});assert.equal(r.ok,true);assert.match(r.reason,/needs-independent-runner/);});
+test('changed requirement and commit fail',()=>{assert.equal(verifyAcceptanceReceipt({criterion,receipt:signed({requirement:'easier'}),publicKey:keys.publicKey,expectedCommit:commit}).ok,false);assert.equal(verifyAcceptanceReceipt({criterion,receipt:signed(),publicKey:keys.publicKey,expectedCommit:'d'.repeat(40)}).ok,false);});
+test('failed and truncated zero-exit proofs are rejected',()=>{for(const p of [{exitCode:1},{truncated:true},{timedOut:true},{commandSha256:'fake'}])assert.equal(verifyAcceptanceReceipt({criterion,receipt:signed(p),publicKey:keys.publicKey,expectedCommit:commit}).ok,false);});
+test('tampered signature rejected',()=>{const r=signed();r.outputSha256='d'.repeat(64);assert.equal(verifyAcceptanceReceipt({criterion,receipt:r,publicKey:keys.publicKey,expectedCommit:commit}).ok,false);});
