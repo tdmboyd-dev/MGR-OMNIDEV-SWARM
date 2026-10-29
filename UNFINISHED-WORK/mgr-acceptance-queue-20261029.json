@@ -876,8 +876,12 @@
       ],
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Source transfer read back on GitHub at 26e230d; reproduce secret scan, full inventory digest and ensure no unintended repository modifications before VERIFIED.",
-      "currentRecordedState": "implemented_unverified"
+      "next": "AC-01 pinned Git import hash comparison 516/516 verified. AC-02 credential pattern scan 0 hits but needs independent broad secret and unrelated-repo scope review before full parent closure.",
+      "currentRecordedState": "implemented_unverified",
+      "acceptanceProofStates": [
+        "VERIFIED",
+        "BLOCKED"
+      ]
     },
     {
       "id": "REL-03",
