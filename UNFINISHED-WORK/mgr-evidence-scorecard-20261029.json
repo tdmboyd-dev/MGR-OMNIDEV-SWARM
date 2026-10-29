@@ -22,8 +22,8 @@
       "percent": 100,
       "meaning": "existence only, no acceptance proof"
     },
-    "sourceLinkedParents": 124,
-    "sourceLinkedPercent": 71.26,
+    "sourceLinkedParents": 130,
+    "sourceLinkedPercent": 74.71,
     "committedSourcePaths": {
       "total": 276,
       "present": 276,
@@ -35,8 +35,8 @@
     "specialistsReclassified": 47,
     "historicalBacklogCount": 174,
     "acceptedParents": 0,
-    "remainingWithoutLinks": 50,
-    "newlyLinkedSourceCandidates": 16,
+    "remainingWithoutLinks": 44,
+    "newlyLinkedSourceCandidates": 22,
     "candidateFilesVerifiedOnGitHub": 15
   },
   "workers": {
@@ -109,7 +109,7 @@
       "present": 88
     }
   ],
-  "caveat": "124 source-linked tasks includes 16 newly discovered candidate links; only 108 had prior committed-object hash census. 50 still lack links. A source link is not acceptance, no parents newly completed.",
+  "caveat": "130 source-linked includes 22 provisional candidate/partial links, not accepted code. 44 remain unlinked. 11/11 focused proof gate tests passed but live worker/provider qualifications not established. Original 441 clauses and 174 parent status unchanged.",
   "productionGates": {
     "historicalAcceptance": 0,
     "sourcePathCoverage": 100,
@@ -170,11 +170,37 @@
     "limitation": "credential pattern scan not exhaustive"
   },
   "fullVerificationGate": {
-    "status": "BLOCKED_VALID_SIGNATURE_TEST",
-    "negativeTestsPassed": 3,
-    "totalTests": 4,
-    "validKeyObjectCasePassed": false,
-    "independentRunnerRegistered": false,
-    "doNotUseForCertification": true
+    "status": "CRYPTOGRAPHIC_GATE_TESTED_NOT_HOST_QUALIFIED",
+    "receiptTests": {
+      "passed": 4,
+      "failed": 0
+    },
+    "parentGateTests": {
+      "passed": 4,
+      "failed": 0
+    },
+    "connectorQualificationTests": {
+      "passed": 3,
+      "failed": 0
+    },
+    "totalFocusedTests": {
+      "passed": 11,
+      "failed": 0
+    },
+    "requires": [
+      "independent protected worker key registry",
+      "real accepted source-specific test execution",
+      "authenticated separate human approval",
+      "live provider/tenant permissions",
+      "final owner-controlled promotion"
+    ],
+    "noAutomaticCompletion": true
+  },
+  "connectorMaturity": {
+    "catalogEntries": 39,
+    "catalogOnly": 34,
+    "partialExisting": 5,
+    "liveQualified": 0,
+    "source": "lib/connector-qualification.ts"
   }
 }
