@@ -2217,10 +2217,10 @@
       "id": "DOM-01",
       "title": "Security executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Verified against source: bounded Security specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Security specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Vulnerability triage, security design review and validated remediation with scanner evidence.",
         "Define Security inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2250,16 +2250,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-02",
       "title": "Backend executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Verified against source: bounded Backend specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Backend specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Service logic, API behavior, authorization, validation and backend test artifacts.",
         "Define Backend inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2289,16 +2291,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-03",
       "title": "Frontend executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Verified against source: bounded Frontend specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Frontend specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Component implementation, state/data flows, browser behavior and frontend regression evidence.",
         "Define Frontend inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2328,16 +2332,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-04",
       "title": "DevOps executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Verified against source: bounded DevOps specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded DevOps specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Delivery pipelines, deployment plans, environment consistency and recovery runbooks.",
         "Define DevOps inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2367,16 +2373,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-05",
       "title": "Cloud executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Cloud specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Cloud specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Provider resource inventory, IAM boundaries, workload architecture and cost-aware changes.",
         "Define Cloud inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2406,16 +2414,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-06",
       "title": "Infrastructure executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Infrastructure specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Infrastructure specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Infrastructure-as-code plans, drift detection, resource dependencies and reversible changes.",
         "Define Infrastructure inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2445,16 +2455,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-07",
       "title": "Databases executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Databases specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Databases specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Schema/query analysis, indexes, migrations, integrity, backup and restore evidence.",
         "Define Databases inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2484,16 +2496,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-08",
       "title": "AI Development executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded AI Development specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded AI Development specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: AI product workflows, model/tool contracts, evaluation suites and deployment behavior.",
         "Define AI Development inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2523,16 +2537,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-09",
       "title": "Machine Learning executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Machine Learning specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Machine Learning specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Data lineage, training/evaluation pipelines, leakage checks, reproducibility and model monitoring.",
         "Define Machine Learning inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2562,16 +2578,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-10",
       "title": "LLM Engineering executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded LLM Engineering specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded LLM Engineering specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Prompt/tool design, model routing, inference budgets, agent evaluation and grounded outputs.",
         "Define LLM Engineering inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2601,16 +2619,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-11",
       "title": "RAG Systems executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded RAG Systems specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded RAG Systems specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Document ingestion, chunking, retrieval/reranking, source attribution and retrieval quality evaluation.",
         "Define RAG Systems inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2640,16 +2660,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-12",
       "title": "Vector Databases executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Vector Databases specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Vector Databases specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Embedding/index/version management, access filters, retrieval latency and recall/cost evidence.",
         "Define Vector Databases inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2679,16 +2701,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-13",
       "title": "3D Development executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded 3D Development specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded 3D Development specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Scene/asset pipelines, geometry/material standards, render validation and export provenance.",
         "Define 3D Development inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2718,16 +2742,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-14",
       "title": "Blender executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Blender specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Blender specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Version-aware scene, geometry, modifier, material, rig and render operations with inspected artifacts.",
         "Define Blender inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2757,16 +2783,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-15",
       "title": "Maya executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Maya specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Maya specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Version-aware scene, modeling, rigging, animation and export operations on an authorized licensed runtime.",
         "Define Maya inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2796,16 +2824,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-16",
       "title": "Unity executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Unity specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Unity specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Scene/package/code analysis, asset import, gameplay behavior, build and frame-time verification.",
         "Define Unity inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2835,16 +2865,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-17",
       "title": "Unreal Engine executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Unreal Engine specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Unreal Engine specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Project/plugin/Blueprint/C++ workflows, asset cooking, build, rendering and performance evidence.",
         "Define Unreal Engine inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2874,16 +2906,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-18",
       "title": "Game Development executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Game Development specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Game Development specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Gameplay/system implementation, content pipelines, game-loop tests and playable artifact validation.",
         "Define Game Development inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2913,16 +2947,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-19",
       "title": "Mobile Development executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Mobile Development specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Mobile Development specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Platform-specific navigation, lifecycle, offline behavior, accessibility and device/build verification.",
         "Define Mobile Development inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2952,16 +2988,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-20",
       "title": "Testing executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Verified against source: bounded Testing specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Testing specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Meaningful unit/integration/regression tests tied to observable behavior and candidate revisions.",
         "Define Testing inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -2991,16 +3029,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-21",
       "title": "QA executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Verified against source: bounded QA specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded QA specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Acceptance plans, exploratory journeys, release evidence and defect reproduction.",
         "Define QA inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3030,16 +3070,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-22",
       "title": "Automation executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Automation specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Automation specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Scoped repeatable workflows, scheduling, idempotency, retry behavior and human handoffs.",
         "Define Automation inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3069,16 +3111,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-23",
       "title": "UI Design executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded UI Design specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded UI Design specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Task-focused layout, components, interaction states and design-to-implementation artifacts.",
         "Define UI Design inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3108,16 +3152,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-24",
       "title": "UX Design executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded UX Design specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded UX Design specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: User research, journey design, usability evaluation and evidence-based workflow improvements.",
         "Define UX Design inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3147,16 +3193,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-25",
       "title": "Accessibility executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Accessibility specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Accessibility specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Keyboard, semantic, visual and assistive-technology checks with verified repairs.",
         "Define Accessibility inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3186,16 +3234,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-26",
       "title": "Compliance executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Compliance specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Compliance specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Applicable control mapping, evidence collection, scope boundaries and audit readiness.",
         "Define Compliance inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3225,16 +3275,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-27",
       "title": "Legal Auditing executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Legal Auditing specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Legal Auditing specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: License/IP/privacy obligations, jurisdiction context and qualified-review handoff.",
         "Define Legal Auditing inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3264,16 +3316,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-28",
       "title": "Documentation executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Verified against source: bounded Documentation specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Documentation specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Source-grounded setup/API/architecture/recovery documentation kept consistent with shipped behavior.",
         "Define Documentation inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3303,16 +3357,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-29",
       "title": "Research executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Research specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Research specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Source discovery, quality assessment, attribution, competing explanations and reproducible findings.",
         "Define Research inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3342,16 +3398,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-30",
       "title": "Business Intelligence executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Business Intelligence specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Business Intelligence specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Authorized business data modeling, KPI definitions, trends and evidence-based decision support.",
         "Define Business Intelligence inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3381,16 +3439,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-31",
       "title": "Product Management executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Product Management specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Product Management specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Requirements, prioritization, acceptance criteria, roadmaps and measurable outcomes.",
         "Define Product Management inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3420,16 +3480,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-32",
       "title": "Customer Analytics executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Customer Analytics specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Customer Analytics specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Privacy-aware funnels, cohorts, behavior/feedback analysis and validated customer insights.",
         "Define Customer Analytics inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3459,16 +3521,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-33",
       "title": "Revenue Optimization executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Revenue Optimization specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Revenue Optimization specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Unit economics, monetization hypotheses, pricing/conversion experiments and measured outcomes.",
         "Define Revenue Optimization inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3498,16 +3562,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-34",
       "title": "Competitive Analysis executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Competitive Analysis specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Competitive Analysis specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Current sourced competitor capabilities, alternatives, positioning and opportunity comparisons.",
         "Define Competitive Analysis inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3537,16 +3603,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-35",
       "title": "Innovation Discovery executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Innovation Discovery specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Innovation Discovery specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Unmet-needs research, novel concept hypotheses, feasibility and demand validation.",
         "Define Innovation Discovery inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3576,16 +3644,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-36",
       "title": "Future Prediction executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Future Prediction specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Future Prediction specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Scenario forecasts, uncertainty, assumptions and retrospective forecast evaluation.",
         "Define Future Prediction inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3615,16 +3685,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-37",
       "title": "Architecture executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Verified against source: bounded Architecture specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Architecture specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: System boundaries, dependency decisions, tradeoffs, migration plans and architecture fitness checks.",
         "Define Architecture inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3654,16 +3726,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-38",
       "title": "Code Quality executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Code Quality specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Code Quality specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Maintainability/debt analysis, safe refactoring and measured regression checks.",
         "Define Code Quality inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3693,16 +3767,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-39",
       "title": "Performance executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Performance specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Performance specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Profiling, latency/resource bottlenecks, benchmark baselines and measured optimization.",
         "Define Performance inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3732,16 +3808,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-40",
       "title": "Scalability executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Scalability specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Scalability specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Capacity/load models, dependency bottlenecks, scaling plans and verified workload limits.",
         "Define Scalability inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3771,16 +3849,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-41",
       "title": "Reliability executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Reliability specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Reliability specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Failure modes, SLOs, resilience changes, incident diagnosis and recovery evidence.",
         "Define Reliability inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3810,16 +3890,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-42",
       "title": "Observability executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Verified against source: bounded Observability specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Observability specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Metrics/logs/traces, correlation, alerts, signal freshness and actionable incident context.",
         "Define Observability inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3849,16 +3931,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-43",
       "title": "Networking executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Networking specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Networking specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Authorized topology, routing, connectivity, DNS/TLS and network policy validation.",
         "Define Networking inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3888,16 +3972,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-44",
       "title": "Cyber Defense executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Cyber Defense specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Cyber Defense specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Authorized detection/response workflows, threat indicators and tested containment strategies.",
         "Define Cyber Defense inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3927,16 +4013,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-45",
       "title": "Penetration Testing executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Penetration Testing specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Penetration Testing specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Explicitly authorized target scope, isolated test plans, validated findings and remediation checks.",
         "Define Penetration Testing inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -3966,16 +4054,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-46",
       "title": "Open Source Analysis executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Open Source Analysis specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Open Source Analysis specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Upstream provenance, project health, licenses, security and compatibility research.",
         "Define Open Source Analysis inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -4005,16 +4095,18 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "DOM-47",
       "title": "Dependency Intelligence executable specialist",
       "area": "11-specialist-domains",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P2",
       "kind": "engineering",
-      "current": "Verified against source: bounded Dependency Intelligence specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task stays open.",
+      "current": "Verified against source: bounded Dependency Intelligence specialist exists in lib/specialists.ts with three domain checks, proposal-only permissions, job admission, brain routing and cancel contract. The specialist suite exercised 48 roles and reported 52 assertions passed locally on Windows. Real domain-specific tools, representative provider-backed artifacts, and full acceptance requirements remain unqualified; task is implemented_unverified until representative live domain evaluation and owner acceptance.",
       "work": [
         "Domain deliverables: Dependency graph/SBOM, advisories, update compatibility and supply-chain provenance.",
         "Define Dependency Intelligence inputs, tools, allowed actions, output artifacts, domain knowledge and success metrics.",
@@ -4044,7 +4136,9 @@
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
-      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified"
+      "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
+      "historical_status": "open",
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
     },
     {
       "id": "AUD-01",
