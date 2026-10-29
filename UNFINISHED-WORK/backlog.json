@@ -1263,10 +1263,13 @@
         "AUTH-04",
         "DATA-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/integration-engineering.ts"
+      ],
       "owner": "Unassigned",
       "evidence": [],
-      "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met."
+      "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
+      "source_link_confidence": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "REL-01",
@@ -1372,9 +1375,12 @@
       "dependencies": [
         "INT-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/github-account.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "CONN-02",
@@ -1468,9 +1474,12 @@
       "dependencies": [
         "INT-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "app/api/workspace/route.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "CONN-06",
@@ -1492,9 +1501,12 @@
       "dependencies": [
         "INT-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "app/api/workspace/route.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "CONN-07",
@@ -1516,9 +1528,12 @@
       "dependencies": [
         "INT-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "app/api/workspace/route.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "CONN-08",
@@ -1660,9 +1675,12 @@
       "dependencies": [
         "INT-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "worker/runner.mjs"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "CONN-14",
