@@ -1,3 +1,9 @@
+# Next local integration wave — October 29, 2026: one job, one evidence identity
+
+OmniDev now has a new locally tested `mgr.trilogy.job-link.v1` assignment identity linking job, project, source snapshot digest, candidate digest and exact test-command digest. Worker reports with an absent, forged or different link are refused for new linked assignments. The direct runtime suite reports 83 passing checks; TypeScript and dedicated link tests pass. This is **not** yet published or certified as a live cross-product integration. It neither invokes Code Monster nor streams into OmniSight, and it does not sign or approve results. Details: `UNFINISHED-WORK/mgr-trilogy-job-link-wave-20261029.md`. No parent tasks promoted; the current 122 open / 52 implemented-unverified register is conserved.
+
+---
+
 # Current published trilogy wave — October 29, 2026
 
 All three existing review branches now contain the verified repair wave and its evidence. GitHub branch and commit-tree reads confirmed each pinned checkpoint below. Earlier publication failures and older test counts are historical. Repository visibility remains unchanged: OmniDev public, Code Monster and OmniSight private. Later documentation-only commits may follow these source/evidence checkpoints.

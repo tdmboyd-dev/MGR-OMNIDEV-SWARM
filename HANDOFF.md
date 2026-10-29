@@ -1,3 +1,9 @@
+# In-progress next wave — October 29, 2026: source-bound Trilogy job link
+
+The newest local change ties an OmniDev worker assignment to one job, project, source snapshot, proposed candidate and test command with `mgr.trilogy.job-link.v1`. Wrong, missing, or edited links are refused on worker report admission. This is a shared correlation contract only, **not** a trusted signature, Code Monster live adapter, OmniSight event feed or owner release. Pre-existing unlinked assignments keep their previous gates without retroactive promotion. Direct runtime checks pass 83/83; TypeScript and portable link tests pass. Full clean-commit verification and GitHub read-back still require their own receipts. See `UNFINISHED-WORK/mgr-trilogy-job-link-wave-20261029.md`. All original parent states remain unchanged.
+
+---
+
 # Current publication confirmation — October 29, 2026
 
 The source and evidence for this repair wave are **published and read back** on the existing review branch `mgr/code-monster-omnisight-20261028`. Pinned published evidence checkpoint: `18f33466ecb86aa74a52224b92453f8e7d2dd5f3`. Later documentation-only updates may follow this checkpoint. Earlier publication-blocked statements below are historical.

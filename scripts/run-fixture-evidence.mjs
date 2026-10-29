@@ -7,6 +7,7 @@ import {pathToFileURL} from 'node:url';
 // Reviewed local checks, not a sandbox for untrusted code or a production attestation.
 export const FIXTURE_PROFILES = Object.freeze(Object.fromEntries(Object.entries({
  prepare:['tests/prepare.mjs'],
+ trilogyLink:['tests/trilogy-job-link.test.mjs'],
  typecheck:['node_modules/typescript/bin/tsc','--noEmit','--incremental','false','--diagnostics'],
  build:['scripts/run-framework.mjs','build'],
  acceptance:['tests/acceptance.mjs'], runtime:['tests/runtime.mjs'],

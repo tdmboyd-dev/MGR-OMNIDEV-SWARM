@@ -8,6 +8,7 @@ import {db,list,record,insert} from "@/db/store";
 import {analyze} from "./analyzer";
 import {nativeCandidate,candidate,staticTests,applyPatches} from "./runtime-contract";
 import {completion,providerStatus,settings} from "./providers";
+import {createTrilogyJobLink,verifyTrilogyJobLink} from './trilogy-job-link.mjs';
 export function jobRow(r:any){return {id:r.id,projectId:r.project_id,objective:r.objective,mode:r.mode,status:r.status,phase:r.phase,payload:JSON.parse(r.payload),result:JSON.parse(r.result),attempts:Number(r.attempts),createdAt:r.created_at,updatedAt:r.updated_at};}
 export function publicJob(job:any){if(!job||Array.isArray(job)||!job.payload)return job;const {baseline,...payload}=job.payload;const {appliedFiles,...result}=job.result;return {...job,payload,result:{...result,report:combinedReport(result)}};}
 export async function jobs(){const r=await db().prepare("SELECT id,project_id,objective,mode,status,phase,json_remove(payload,'$.baseline') AS payload,json_remove(result,'$.appliedFiles') AS result,attempts,lease_token,lease_until,created_at,updated_at FROM jobs ORDER BY created_at DESC LIMIT 100").all();return r.results.map((r:any)=>publicJob(jobRow(r)));}
@@ -119,8 +120,46 @@ export async function recover(){
  return jobs();
 }
 async function digest(value:unknown){const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(value)));return [...new Uint8Array(bytes)].map(x=>x.toString(16).padStart(2,'0')).join('');}
-export async function workerJob(id:string){const j=await get(id);await assertPipelineRunning(j);if(!j.result.checks?.passed)throw Error('Candidate static checks must pass before worker execution');if(j.status!=='awaiting review'||j.result.externalTests)throw new Error('Candidate is not ready for worker testing or already has a report');if(j.result.workerAssignment?.expiresAt>Date.now())throw Error('Execution is already claimed by a worker');const files=applyPatches(j.payload.baseline,j.result.candidate.patches);const profile=j.payload.testProfile==='node-application'?'node-application':'snapshot';if(profile==='node-application'){const pkg=files.find((f:any)=>f.path==='package.json'),lock=files.find((f:any)=>f.path==='package-lock.json');if(!pkg||!lock||!JSON.parse(pkg.content).scripts?.test)throw Error('Import runnable application source, package.json and package-lock.json before requesting application tests');}const command=profile==='node-application'?['npm','run','omni:verify']:['node','--test','tests/omni-snapshot.test.mjs'];const assignment={id:crypto.randomUUID(),candidateDigest:await digest(files),sourceDigest:await digest(j.payload.baseline),testManifestDigest:await digest(command),profile,expiresAt:Date.now()+(profile==='node-application'?240000:60000)};const old=JSON.stringify(j.result);const update=await db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND status='awaiting review' AND result=?").bind(JSON.stringify({...j.result,workerAssignment:assignment,externalTests:null}),new Date().toISOString(),id,old).run();if(!update.meta.changes)throw new Error('Candidate changed while assigning execution');return {id:j.id,files,command,profile,timeoutMs:profile==='node-application'?180000:15000,assignment};}
-export async function report(id:string,p:any){for(let attempt=0;attempt<16;attempt++){const j=await get(id);const a=j.result.workerAssignment;if(j.status!=='awaiting review'||typeof p.passed!=='boolean'||typeof p.output!=='string'||p.output.length>20000||p.worker!=='docker-isolated'||!a||a.expiresAt<=Date.now()||!p.assignment||['id','candidateDigest','sourceDigest','testManifestDigest'].some(k=>p.assignment[k]!==a[k]))throw new Error('Invalid, expired or mismatched worker report');if(j.result.externalTests)throw new Error('Execution report already accepted');if(p.passed&&(!/^.+@sha256:[a-f0-9]{64}$/.test(p.imageDigest||'')||p.cleanup?.verifiedAbsent!==true))throw new Error('Successful execution requires pinned image and verified cleanup receipts');const old=JSON.stringify(j.result);const result={...j.result,externalTests:{profile:a.profile||'snapshot',scope:a.profile==='node-application'?'Candidate application bundle only':'Snapshot integrity only',passed:p.passed,output:p.output,worker:p.worker,assignment:a,imageDigest:p.imageDigest??null,cleanup:p.cleanup??null,isolationVerified:false,completedAt:new Date().toISOString()}};const update=await db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND status='awaiting review' AND result=?").bind(JSON.stringify(result),new Date().toISOString(),id,old).run();if(update.meta.changes)return get(id);}throw Error('Report storage is busy; retain the execution receipt for reconciliation');}
+export async function workerJob(id:string){
+ const j=await get(id);await assertPipelineRunning(j);
+ if(!j.result.checks?.passed)throw Error('Candidate static checks must pass before worker execution');
+ if(j.status!=='awaiting review'||j.result.externalTests)throw new Error('Candidate is not ready for worker testing or already has a report');
+ if(j.result.workerAssignment?.expiresAt>Date.now())throw Error('Execution is already claimed by a worker');
+ const files=applyPatches(j.payload.baseline,j.result.candidate.patches);
+ const profile=j.payload.testProfile==='node-application'?'node-application':'snapshot';
+ if(profile==='node-application'){
+  const pkg=files.find((f:any)=>f.path==='package.json'),lock=files.find((f:any)=>f.path==='package-lock.json');
+  if(!pkg||!lock||!JSON.parse(pkg.content).scripts?.test)throw Error('Import runnable application source, package.json and package-lock.json before requesting application tests');
+ }
+ const command=profile==='node-application'?['npm','run','omni:verify']:['node','--test','tests/omni-snapshot.test.mjs'];
+ const assignment={id:crypto.randomUUID(),candidateDigest:await digest(files),sourceDigest:await digest(j.payload.baseline),testManifestDigest:await digest(command),profile,expiresAt:Date.now()+(profile==='node-application'?240000:60000)};
+ const trilogyLink=await createTrilogyJobLink({jobId:j.id,projectId:j.projectId,assignmentId:assignment.id,sourceDigest:assignment.sourceDigest,candidateDigest:assignment.candidateDigest,testManifestDigest:assignment.testManifestDigest});
+ const linkedAssignment={...assignment,trilogyLink};
+ const old=JSON.stringify(j.result);
+ const update=await db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND status='awaiting review' AND result=?").bind(JSON.stringify({...j.result,workerAssignment:linkedAssignment,externalTests:null}),new Date().toISOString(),id,old).run();
+ if(!update.meta.changes)throw new Error('Candidate changed while assigning execution');
+ return {id:j.id,projectId:j.projectId,files,command,profile,timeoutMs:profile==='node-application'?180000:15000,assignment:linkedAssignment};
+}
+export async function report(id:string,p:any){
+ for(let attempt=0;attempt<16;attempt++){
+  const j=await get(id),a=j.result.workerAssignment;
+  if(j.status!=='awaiting review'||typeof p.passed!=='boolean'||typeof p.output!=='string'||p.output.length>20000||p.worker!=='docker-isolated'||!a||a.expiresAt<=Date.now()||!p.assignment||['id','candidateDigest','sourceDigest','testManifestDigest'].some(k=>p.assignment[k]!==a[k]))throw new Error('Invalid, expired or mismatched worker report');
+  // Existing in-flight assignments may predate the new correlation contract.
+  // Every newly issued linked assignment requires its exact identity on read-back.
+  if(a.trilogyLink){
+   const expected={jobId:j.id,projectId:j.projectId,assignmentId:a.id,sourceDigest:a.sourceDigest,candidateDigest:a.candidateDigest,testManifestDigest:a.testManifestDigest};
+   const checked=await verifyTrilogyJobLink(p.assignment.trilogyLink,expected);
+   if(!checked.ok||p.assignment.trilogyLink.linkSha256!==a.trilogyLink.linkSha256)throw new Error('Trilogy job link does not match the assigned source, candidate, command and job');
+  }
+  if(j.result.externalTests)throw new Error('Execution report already accepted');
+  if(p.passed&&(!/^.+@sha256:[a-f0-9]{64}$/.test(p.imageDigest||'')||p.cleanup?.verifiedAbsent!==true))throw new Error('Successful execution requires pinned image and verified cleanup receipts');
+  const old=JSON.stringify(j.result);
+  const result={...j.result,externalTests:{profile:a.profile||'snapshot',scope:a.profile==='node-application'?'Candidate application bundle only':'Snapshot integrity only',passed:p.passed,output:p.output,worker:p.worker,assignment:a,imageDigest:p.imageDigest??null,cleanup:p.cleanup??null,isolationVerified:false,completedAt:new Date().toISOString()}};
+  const update=await db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND status='awaiting review' AND result=?").bind(JSON.stringify(result),new Date().toISOString(),id,old).run();
+  if(update.meta.changes)return get(id);
+ }
+ throw Error('Report storage is busy; retain the execution receipt for reconciliation');
+}
 
 export async function accountRequest(id:string){const j=await get(id);await assertPipelineRunning(j);if(j.mode!=='account'||j.status!=='queued')throw new Error('Account job must be queued');return {format:'omnidev-account-request',jobId:j.id,parentJobId:j.payload.pipelineParentId||undefined,kind:j.payload.pipelineParentId?'repair-generation':undefined,integration:j.payload.integrationContext,specialist:j.payload.specialist,recommendSpecialists:j.payload.recommendSpecialists===true,objective:j.objective,reportContext:j.payload.reportContext,files:j.payload.baseline,sourceDigest:await fingerprint(j.payload.baseline)};}
 export async function submitAccountCandidate(id:string,p:any,recovery=false){const j=await get(id);if(j.mode!=='account'||!(j.status==='queued'||recovery&&j.status==='failed')||p.jobId!==id||p.sourceDigest!==await fingerprint(j.payload.baseline))throw new Error('Candidate does not match the queued account request');const c=candidate(p.candidate,j.payload.baseline);const checks=staticTests(j.payload.baseline,c);const plan=j.payload.automaticReview?await buildReviewPlan(j,c.experts):null;const result={candidate:{...c,experts:j.payload.recommendSpecialists?c.experts.slice(0,3):[]},reviewPlan:plan,checks,reviews:[],externalTests:null,accountGeneration:{model:typeof p.model==='string'?p.model.slice(0,150):null,verification:'Owner-submitted local companion output; provider execution not independently attested'}};const r=await db().prepare("UPDATE jobs SET status=?,phase='review',result=?,updated_at=? WHERE id=? AND status=?").bind(checks.passed?'awaiting review':'failed',JSON.stringify(result),new Date().toISOString(),id,j.status).run();if(!r.meta.changes)throw new Error('Job changed concurrently');await agentState(id,'reviewing').run();return get(id);}
