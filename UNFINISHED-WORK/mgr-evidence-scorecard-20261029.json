@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-29",
+  "scope": "MGR trilogy evidence snapshot",
+  "taskBoard": {
+    "historical": 174,
+    "reviewedMetadata": 105,
+    "reviewedPercent": 60.3448275862069,
+    "remainingUnreviewed": 69,
+    "implementedUnverified": 1,
+    "independentlyFullAccepted": 0,
+    "fullAcceptedPercent": 0,
+    "stillOpen": 173
+  },
+  "workers": {
+    "requestedTenRoles": 10,
+    "liveDockerSlots": 0,
+    "windowsQualifiedCapacityWithoutDocker": 2,
+    "activatedTenPercent": 0
+  },
+  "candidateCampaign": {
+    "status": "single-task signed evidence repair tested on Windows",
+    "passing": 7,
+    "skipped": 1,
+    "failing": 0,
+    "independentRunnerQualified": false
+  },
+  "products": [
+    {
+      "name": "Code Monster",
+      "reviewPR": 1,
+      "releaseCertified": false,
+      "remaining": [
+        "independent verifier",
+        "full portable CI",
+        "multi-agent integration",
+        "batch execution"
+      ]
+    },
+    {
+      "name": "OmniSight",
+      "reviewPR": 1,
+      "releaseCertified": false,
+      "remaining": [
+        "live source relay",
+        "hosted auth",
+        "browser certification"
+      ]
+    },
+    {
+      "name": "OmniDev",
+      "reviewPR": 1,
+      "releaseCertified": false,
+      "remaining": [
+        "real Docker host",
+        "50+ full acceptance reproductions",
+        "live worker connectivity"
+      ]
+    }
+  ],
+  "policy": "Percentages are measured for explicitly defined denominators only. No invented product-completion percentages. Metadata review is NOT done."
+}
