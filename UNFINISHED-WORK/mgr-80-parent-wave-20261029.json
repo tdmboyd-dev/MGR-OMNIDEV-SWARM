@@ -1,0 +1,1995 @@
+{
+  "contract": "mgr.omnidev.acceptance-wave.v1",
+  "parents": 80,
+  "p0": 30,
+  "additional": 50,
+  "criteria": 192,
+  "selection": "all P0 then 50 non-P0 in canonical order",
+  "complete": 0,
+  "items": [
+    {
+      "id": "AUTH-01",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUTH-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "A real authorized repository import and draft PR have provider-side evidence.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUTH-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Decline, revoke, refresh and disconnect behave correctly; no merge occurs.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "AUTH-02",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUTH-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "An eligible signed-in account completes real inference without pasting an API key.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUTH-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "No model call occurs with identity-only consent, revoked permission or a declined usage grant.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUTH-02/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Account switching, limits and refresh are verified.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "RUN-01",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "RUN-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "At least one real isolated run reports evidence to the hosted queue.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "RUN-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Worker survives restart and rejects unauthorized requests without exposing credentials.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "RUN-02",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "RUN-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Nested specialist execution completes with real provider evidence and durable lineage.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "RUN-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Budget exhaustion, cancellation and partial failures stop work predictably.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "RUN-03",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "RUN-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Concurrent workers do not duplicate effects or overwrite newer results.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "RUN-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Crash/retry tests produce correct terminal states and auditable recovery.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "DEV-02",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "DEV-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "A real branch → candidate → tests → draft PR flow is proven on a test repository.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "DEV-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Retry cannot silently duplicate or overwrite unrelated work.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "DATA-03",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "DATA-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "A clean environment restores approved data and artifacts successfully.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "DATA-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Lost/rotated credentials fail safely and can be reauthorized.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "SEC-02",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "SEC-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Unauthorized users cannot access any project data, credential or action.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "SEC-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Sharing does not expose a previously single-owner API.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "SEC-03",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "SEC-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Security review findings are recorded and fixed or explicitly dispositioned.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "SEC-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Tests exercise material failure paths and no secrets appear in logs/exports.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "QA-01",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "QA-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Hosted user journeys and access boundaries pass with captured evidence.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "QA-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Publication alone is never recorded as external integration success.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "QA-02",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "QA-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Behavioral bugs and regressions cause meaningful failures.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "QA-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Passing snapshot-integrity checks is not presented as application correctness.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "OPS-01",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "OPS-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized target failures produce accurate incidents and recoveries with timestamps.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "OPS-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Stale/missing telemetry cannot produce a false healthy state.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "OPS-02",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "OPS-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "An induced test-environment incident is detected, diagnosed, repaired, checked and safely rolled back on failure.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "OPS-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "No unsupported production action is claimed or performed.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "OPS-03",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "OPS-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "A real authorized staging deployment and rollback are verified.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "OPS-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Wrong-target, stale-plan and unsafe/destructive actions are rejected.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "UX-01",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "UX-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Critical tasks can be completed with clear success/failure/recovery states.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "UX-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Screens never imply unverified connectivity, test evidence or autonomy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "UX-02",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "UX-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Representative viewport and assistive-technology journeys pass with recorded findings.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "UX-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "All critical actions work without a mouse.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "INT-01",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "INT-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Every adapter follows a verified lifecycle and common capability/error contract.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "INT-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Cross-source permission boundaries and revoked access are enforced.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "AUD-02",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUD-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Forged/stale/mismatched reports cannot authorize effects.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUD-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Evidence binds the exact implementation revision and scope; design checks alone do not close this task.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "AUD-04",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUD-04/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Cold-region restore succeeds without relying on the failed control plane.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUD-04/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Evidence binds the exact implementation revision and scope; design checks alone do not close this task.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUD-04/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Missing keys/objects, incompatible histories, deleted-source resurrection and unknown external writes prevent unsafe restart.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "AUD-07",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUD-07/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Poisoned image/package/attestation fails admission.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUD-07/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Evidence binds the exact implementation revision and scope; design checks alone do not close this task.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "AUD-12",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUD-12/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Network partition cannot multiply available funds or release unresolved liability.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUD-12/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Evidence binds the exact implementation revision and scope; design checks alone do not close this task.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUD-12/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Duplicate receipts, currency mismatch, imbalance and immutable-history edits fail; uncertain liability and controlled exposure are explicit.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "AUD-24",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUD-24/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Snapshot edit versus validated change versus deployment has explicit required evidence; missing/stale tests cannot authorize high-risk actions.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUD-24/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Exact revision, operational owner and repeatable evidence are recorded.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "AUD-25",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUD-25/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Enforce concurrency/resource admission atomically; concurrent enqueue cannot exceed quota; failure releases only valid allocations.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUD-25/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Exact revision, operational owner and repeatable evidence are recorded.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "AUD-26",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUD-26/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Await cleanup outcomes; verify no surviving containers/files after success, timeout, cancellation and runner crash; alert unresolved cleanup.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUD-26/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Exact revision, operational owner and repeatable evidence are recorded.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "V2-01",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "V2-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Concurrent correlated releases cannot exceed aggregate ceilings; compromised runtime cannot remove veto or recovery evidence.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "V2-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "V2-02",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "V2-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "A bug-fix objective cannot silently become a migration; ambiguous revisions preserve original intent and review.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "V2-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "V2-03",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "V2-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Revocation/transfer/export tests preserve provenance and prevent purpose escalation.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "V2-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "V2-07",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "V2-07/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Individually safe but jointly unsafe related changes cannot dispatch together.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "V2-07/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "V2-08",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "V2-08/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Restored but logically inconsistent data fails recovery; deletion and unresolved effects are reconciled.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "V2-08/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "V2-16",
+      "priority": "P0",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "V2-16/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Compromised agents/evaluators cannot disable veto; legitimate scoped recovery is independently auditable.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "V2-16/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "AUTH-03",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUTH-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Each shipped provider has a real no-key sign-in and completed model request with evidence.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUTH-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Unavailable provider capabilities remain visibly unavailable rather than simulated.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "AUTH-04",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "AUTH-04/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Connections report only verified capabilities and preserve errors without leaking tokens.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "AUTH-04/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Concurrent refresh/revocation and cross-account isolation pass meaningful tests.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "DEV-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "DEV-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Real coding tasks change application behavior correctly and pass relevant tests.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "DEV-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Unsupported edits and stale baselines are rejected with recoverable errors.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "DEV-03",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "DEV-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Representative generated artifacts validate and run in an authorized test environment.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "DEV-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Destructive changes and unsupported versions cannot execute silently.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "GRAPH-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "GRAPH-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Multiple connected systems share verified cross-source relationships.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "GRAPH-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Updates/deletes do not leave stale edges or reveal unauthorized nodes.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "GRAPH-02",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "GRAPH-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Fixtures and authorized real projects show correct entities and relationships.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "GRAPH-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Unsupported languages and incomplete snapshots are labeled as coverage gaps.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "GAP-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "GAP-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Known gaps are detected with actionable evidence and acceptable measured false-positive rates.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "GAP-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Incomplete snapshots and business hypotheses do not become unsupported factual claims.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "DATA-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "DATA-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Large projects remain responsive within measured budgets.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "DATA-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Artifacts have provenance, access controls and reliable lifecycle cleanup.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "DATA-01/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Migrations run on the selected PostgreSQL version from empty/prior schemas; wrong-project links, cycle races, BYPASSRLS/owner contexts and pooled tenant leakage are rejected.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "DATA-02",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "DATA-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Relevant historical evidence can be retrieved across project versions with provenance.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "DATA-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Access, correction, retention and deletion are verified.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "SEC-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "SEC-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Known vulnerabilities and remediations are validated against test fixtures and authorized targets.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "SEC-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Coverage, false positives and source freshness are visible.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "QA-03",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "QA-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Measured results demonstrate stated capacity and reliability limits.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "QA-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Evaluation artifacts and failures remain searchable.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "QA-03/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Incident/control capacity remains available under noisy-neighbor load; supported SLOs and economic usage limits match observed profiles.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "OPS-04",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "OPS-04/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Platform outages and stale workers generate actionable alerts.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "OPS-04/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Recovery and maintenance runbooks are exercised.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "TWIN-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "TWIN-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Predictions are calibrated against real staging outcomes and documented uncertainty.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "TWIN-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Twin changes cannot affect production or expose sensitive data.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "TWIN-02",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "TWIN-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Scenarios trace to real input data and explicitly distinguish forecasts from facts.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "TWIN-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Revenue and cost access is permission-controlled.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "FUT-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "FUT-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Every horizon has project-specific evidence and testable milestones.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "FUT-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Predictions remain hypotheses with evaluations, not guaranteed futures.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "BIZ-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "BIZ-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Recommendations reference real evidence and measurable business objectives.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "BIZ-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Sensitive business/customer data has scoped access and retention.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "BIZ-02",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "BIZ-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Proposals include sources, competing solutions, validation plans and experimental results.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "BIZ-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "The system does not claim that nobody has built something without evidence.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "EXEC-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "EXEC-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "All 14 dimensions have documented methodology and evidence or an explicit unassessed state.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "EXEC-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "A score never implies a certification or unsupported measurement.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "UX-03",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "UX-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Each new surface has task-based acceptance criteria and maps to implemented data/actions.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "UX-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Usability review covers real target users and failure paths.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "LEGAL-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "LEGAL-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Reports distinguish measured controls, missing evidence and legal interpretation.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "LEGAL-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "No unsupported certification or legal conclusion is issued.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "REL-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "REL-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "A new authorized operator can set up, verify, recover and upgrade the platform using the docs.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "REL-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Release notes accurately distinguish engineering work, activation and verification.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "REL-02",
+      "priority": "P1",
+      "status": "implemented_unverified",
+      "criteria": [
+        {
+          "id": "REL-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "User-designated GitHub repository contains the exact reviewed source and unfinished-work folder.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "REL-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "No unrelated repository is modified and no secret is committed.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "REL-03",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "REL-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "No unwanted running resources or required Vercel dependency remain.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "REL-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Cleanup outcome is verified; absence of a supported delete operation is documented.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-01",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-01/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-01/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-01/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-02",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-02/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-02/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-02/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-03",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-03/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-03/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-03/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-04",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-04/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-04/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-04/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-05",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-05/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-05/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-05/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-06",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-06/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-06/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-06/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-07",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-07/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-07/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-07/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-08",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-08/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-08/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-08/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-09",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-09/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-09/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-09/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-10",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-10/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-10/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-10/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-11",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-11/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-11/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-11/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-12",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-12/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-12/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-12/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-13",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-13/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-13/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-13/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-14",
+      "priority": "P1",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-14/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-14/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-14/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-15",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-15/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-15/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-15/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-16",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-16/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-16/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-16/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-17",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-17/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-17/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-17/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-18",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-18/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-18/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-18/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-19",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-19/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-19/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-19/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-20",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-20/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-20/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-20/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-21",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-21/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-21/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-21/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-22",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-22/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-22/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-22/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-23",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-23/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-23/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-23/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-24",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-24/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-24/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-24/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-25",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-25/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-25/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-25/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-26",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-26/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-26/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-26/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    },
+    {
+      "id": "CONN-27",
+      "priority": "P2",
+      "status": "open",
+      "criteria": [
+        {
+          "id": "CONN-27/AC-01",
+          "status": "UNVERIFIED",
+          "requirement": "Authorized real-source discovery and incremental read-back are demonstrated.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-27/AC-02",
+          "status": "UNVERIFIED",
+          "requirement": "Denial, revocation, service failure and unsupported actions fail safely.",
+          "sourceCommit": null,
+          "evidence": []
+        },
+        {
+          "id": "CONN-27/AC-03",
+          "status": "UNVERIFIED",
+          "requirement": "Writes, if shipped, have separate target-specific tests and policy.",
+          "sourceCommit": null,
+          "evidence": []
+        }
+      ],
+      "fullAcceptance": "NOT_CERTIFIED"
+    }
+  ]
+}
