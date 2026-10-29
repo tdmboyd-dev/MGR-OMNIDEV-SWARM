@@ -21,6 +21,8 @@
 # misc
 .DS_Store
 *.pem
+# Public engine signature-verification key is publishable; never add private signing keys.
+!/companion/engine/public-key.pem
 
 # debug
 npm-debug.log*
