@@ -3430,9 +3430,17 @@
       "id": "DOM-01",
       "title": "Security executable specialist",
       "priority": "P1",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-01/AC-01",
@@ -3478,9 +3486,17 @@
       "id": "DOM-02",
       "title": "Backend executable specialist",
       "priority": "P1",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-02/AC-01",
@@ -3526,9 +3542,17 @@
       "id": "DOM-03",
       "title": "Frontend executable specialist",
       "priority": "P1",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-03/AC-01",
@@ -3574,9 +3598,17 @@
       "id": "DOM-04",
       "title": "DevOps executable specialist",
       "priority": "P1",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-04/AC-01",
@@ -3622,9 +3654,17 @@
       "id": "DOM-05",
       "title": "Cloud executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-05/AC-01",
@@ -3670,9 +3710,17 @@
       "id": "DOM-06",
       "title": "Infrastructure executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-06/AC-01",
@@ -3718,9 +3766,17 @@
       "id": "DOM-07",
       "title": "Databases executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-07/AC-01",
@@ -3766,9 +3822,17 @@
       "id": "DOM-08",
       "title": "AI Development executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-08/AC-01",
@@ -3814,9 +3878,17 @@
       "id": "DOM-09",
       "title": "Machine Learning executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-09/AC-01",
@@ -3862,9 +3934,17 @@
       "id": "DOM-10",
       "title": "LLM Engineering executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-10/AC-01",
@@ -3910,9 +3990,17 @@
       "id": "DOM-11",
       "title": "RAG Systems executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-11/AC-01",
@@ -3958,9 +4046,17 @@
       "id": "DOM-12",
       "title": "Vector Databases executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-12/AC-01",
@@ -4006,9 +4102,17 @@
       "id": "DOM-13",
       "title": "3D Development executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-13/AC-01",
@@ -4054,9 +4158,17 @@
       "id": "DOM-14",
       "title": "Blender executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-14/AC-01",
@@ -4102,9 +4214,17 @@
       "id": "DOM-15",
       "title": "Maya executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-15/AC-01",
@@ -4150,9 +4270,17 @@
       "id": "DOM-16",
       "title": "Unity executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-16/AC-01",
@@ -4198,9 +4326,17 @@
       "id": "DOM-17",
       "title": "Unreal Engine executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-17/AC-01",
@@ -4246,9 +4382,17 @@
       "id": "DOM-18",
       "title": "Game Development executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-18/AC-01",
@@ -4294,9 +4438,17 @@
       "id": "DOM-19",
       "title": "Mobile Development executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-19/AC-01",
@@ -4342,9 +4494,17 @@
       "id": "DOM-20",
       "title": "Testing executable specialist",
       "priority": "P1",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-20/AC-01",
@@ -4390,9 +4550,17 @@
       "id": "DOM-21",
       "title": "QA executable specialist",
       "priority": "P1",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-21/AC-01",
@@ -4438,9 +4606,17 @@
       "id": "DOM-22",
       "title": "Automation executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-22/AC-01",
@@ -4486,9 +4662,17 @@
       "id": "DOM-23",
       "title": "UI Design executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-23/AC-01",
@@ -4534,9 +4718,17 @@
       "id": "DOM-24",
       "title": "UX Design executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-24/AC-01",
@@ -4582,9 +4774,17 @@
       "id": "DOM-25",
       "title": "Accessibility executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-25/AC-01",
@@ -4630,9 +4830,17 @@
       "id": "DOM-26",
       "title": "Compliance executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-26/AC-01",
@@ -4678,9 +4886,17 @@
       "id": "DOM-27",
       "title": "Legal Auditing executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-27/AC-01",
@@ -4726,9 +4942,17 @@
       "id": "DOM-28",
       "title": "Documentation executable specialist",
       "priority": "P1",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-28/AC-01",
@@ -4774,9 +4998,17 @@
       "id": "DOM-29",
       "title": "Research executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-29/AC-01",
@@ -4822,9 +5054,17 @@
       "id": "DOM-30",
       "title": "Business Intelligence executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-30/AC-01",
@@ -4870,9 +5110,17 @@
       "id": "DOM-31",
       "title": "Product Management executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-31/AC-01",
@@ -4918,9 +5166,17 @@
       "id": "DOM-32",
       "title": "Customer Analytics executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-32/AC-01",
@@ -4966,9 +5222,17 @@
       "id": "DOM-33",
       "title": "Revenue Optimization executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-33/AC-01",
@@ -5014,9 +5278,17 @@
       "id": "DOM-34",
       "title": "Competitive Analysis executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-34/AC-01",
@@ -5062,9 +5334,17 @@
       "id": "DOM-35",
       "title": "Innovation Discovery executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-35/AC-01",
@@ -5110,9 +5390,17 @@
       "id": "DOM-36",
       "title": "Future Prediction executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-36/AC-01",
@@ -5158,9 +5446,17 @@
       "id": "DOM-37",
       "title": "Architecture executable specialist",
       "priority": "P1",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-37/AC-01",
@@ -5206,9 +5502,17 @@
       "id": "DOM-38",
       "title": "Code Quality executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-38/AC-01",
@@ -5254,9 +5558,17 @@
       "id": "DOM-39",
       "title": "Performance executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-39/AC-01",
@@ -5302,9 +5614,17 @@
       "id": "DOM-40",
       "title": "Scalability executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-40/AC-01",
@@ -5350,9 +5670,17 @@
       "id": "DOM-41",
       "title": "Reliability executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-41/AC-01",
@@ -5398,9 +5726,17 @@
       "id": "DOM-42",
       "title": "Observability executable specialist",
       "priority": "P1",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-42/AC-01",
@@ -5446,9 +5782,17 @@
       "id": "DOM-43",
       "title": "Networking executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-43/AC-01",
@@ -5494,9 +5838,17 @@
       "id": "DOM-44",
       "title": "Cyber Defense executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-44/AC-01",
@@ -5542,9 +5894,17 @@
       "id": "DOM-45",
       "title": "Penetration Testing executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-45/AC-01",
@@ -5590,9 +5950,17 @@
       "id": "DOM-46",
       "title": "Open Source Analysis executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-46/AC-01",
@@ -5638,9 +6006,17 @@
       "id": "DOM-47",
       "title": "Dependency Intelligence executable specialist",
       "priority": "P2",
-      "recordedStatus": "open",
-      "sourcePaths": [],
-      "claimedEvidence": [],
+      "recordedStatus": "implemented_unverified",
+      "sourcePaths": [
+        "lib/specialists.ts",
+        "lib/jobs.ts",
+        "lib/brains.ts",
+        "tests/specialist-areas.mjs"
+      ],
+      "claimedEvidence": [
+        "tests/specialist-areas.mjs",
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+      ],
       "acceptance": [
         {
           "criterionId": "DOM-47/AC-01",
