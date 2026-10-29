@@ -22,8 +22,8 @@
       "percent": 100,
       "meaning": "existence only, no acceptance proof"
     },
-    "sourceLinkedParents": 108,
-    "sourceLinkedPercent": 62.07,
+    "sourceLinkedParents": 124,
+    "sourceLinkedPercent": 71.26,
     "committedSourcePaths": {
       "total": 276,
       "present": 276,
@@ -34,7 +34,10 @@
     },
     "specialistsReclassified": 47,
     "historicalBacklogCount": 174,
-    "acceptedParents": 0
+    "acceptedParents": 0,
+    "remainingWithoutLinks": 50,
+    "newlyLinkedSourceCandidates": 16,
+    "candidateFilesVerifiedOnGitHub": 15
   },
   "workers": {
     "requestedTenRoles": 10,
@@ -106,7 +109,7 @@
       "present": 88
     }
   ],
-  "caveat": "100 percent metadata triage across 174 historic parent records is not implementation completion or acceptance certification.",
+  "caveat": "124 source-linked tasks includes 16 newly discovered candidate links; only 108 had prior committed-object hash census. 50 still lack links. A source link is not acceptance, no parents newly completed.",
   "productionGates": {
     "historicalAcceptance": 0,
     "sourcePathCoverage": 100,
@@ -165,5 +168,13 @@
     "recognizedSecretPatternHits": 0,
     "scannedBytes": 9199629,
     "limitation": "credential pattern scan not exhaustive"
+  },
+  "fullVerificationGate": {
+    "status": "BLOCKED_VALID_SIGNATURE_TEST",
+    "negativeTestsPassed": 3,
+    "totalTests": 4,
+    "validKeyObjectCasePassed": false,
+    "independentRunnerRegistered": false,
+    "doNotUseForCertification": true
   }
 }
