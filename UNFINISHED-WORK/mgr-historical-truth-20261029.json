@@ -1,16 +1,19 @@
 {
-  "schema": "mgr.omnidev.historical-truth.v1",
+  "schema": "mgr.omnidev.historical-truth.v2",
   "generatedOn": "2026-10-29",
   "source": "UNFINISHED-WORK/backlog.json on review branch",
-  "recordedOpen": 174,
   "historicalIds": 174,
   "additionalUpgradeIds": 28,
+  "recordedStatuses": {
+    "open": 173,
+    "implemented_unverified": 1
+  },
   "partialLocallyTestedClaims": 11,
-  "sourceReferenceTasks": 60,
-  "evidenceReferenceTasks": 14,
-  "unknownImplementationState": 163,
-  "verifiedFullAcceptance": 0,
-  "important": "0 full acceptances verified by THIS report does not imply 0 historical tasks are actually complete. This report is status triage only, not an assertion about existing code quality.",
+  "sourceReferenceTasks": 61,
+  "evidenceReferenceTasks": 15,
+  "unknownImplementationState": 162,
+  "verifiedFullAcceptanceByThisReport": 0,
+  "note": "One historical REL-02 task reclassified from open to implemented_unverified based on actual GitHub provider readback. This report does not prove no other tasks are complete, or that REL-02 passes all acceptance gates.",
   "items": [
     {
       "id": "AUTH-01",
@@ -471,12 +474,12 @@
     {
       "id": "REL-02",
       "priority": "P1",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "source-transfer-provider-readback",
+      "source_refs": 3,
+      "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
+      "classification": "SOURCE_TRANSFER_COMPLETED_FURTHER_VERIFICATION_REQUIRED",
       "action": "REPRODUCE_FULL_ACCEPTANCE",
       "must_not_autoclose": true
     },
