@@ -9,6 +9,7 @@ export function selectAcceptanceWave(backlog,register,{p0Count=30,additionalCoun
  return {contract:'mgr.omnidev.acceptance-wave.v1',parents:selected.length,p0:p0.length,additional:additionalCount,criteria:selected.reduce((n,t)=>n+t.acceptance.length,0),selection:'all P0 then 50 non-P0 in canonical order',complete:0,items:selected.map(t=>{
   const source=indexed.get(t.id);
   if(!source||source.acceptance?.length!==t.acceptance.length)throw new Error('evidence drift: '+t.id);
+  for(let i=0;i<t.acceptance.length;i++)if(source.acceptance[i]?.requirement!==t.acceptance[i])throw new Error('acceptance text drift: '+t.id);
   return {id:t.id,priority:t.priority,status:t.status,criteria:source.acceptance.map(c=>({id:c.criterionId,status:c.status,requirement:c.requirement,sourceCommit:c.sourceCommit,evidence:c.evidence})),fullAcceptance:'NOT_CERTIFIED'};
  })};
 }
