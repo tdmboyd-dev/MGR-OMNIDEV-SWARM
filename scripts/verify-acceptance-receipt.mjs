@@ -8,7 +8,7 @@ export function verifyAcceptanceReceipt({criterion,receipt,publicKey,expectedCom
  if(typeof receipt.signerId!=='string'||!receipt.signerId||typeof receipt.signature!=='string')return {ok:false,reason:'missing-signer'};
  const {signature,...body}=receipt;
  const payload=JSON.stringify(Object.fromEntries(Object.entries(body).sort(([a],[b])=>a.localeCompare(b))));
- try{if(createPublicKey(publicKey).asymmetricKeyType!=='ed25519')return {ok:false,reason:'unqualified-key'};
+ try{if((publicKey.type==='public'?publicKey:createPublicKey(publicKey)).asymmetricKeyType!=='ed25519')return {ok:false,reason:'unqualified-key'};
  const good=verify(null,Buffer.from(payload),publicKey,Buffer.from(signature,'base64'));
  return {ok:good,reason:good?'cryptographic-receipt-valid-needs-independent-runner':'signature-rejected'};
  }catch{return {ok:false,reason:'signature-invalid'};}
