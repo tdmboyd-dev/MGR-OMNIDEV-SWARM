@@ -110,5 +110,34 @@
     "validator": "scripts/validate-acceptance-register.mjs",
     "testCount": 5,
     "testResult": "passed"
+  },
+  "waveP0Plus50": {
+    "requestedParents": 80,
+    "p0Parents": 30,
+    "additionalParents": 50,
+    "criteria": 192,
+    "selectedAndRouted": 192,
+    "selectionPercent": 100,
+    "fullCriteriaVerified": 0,
+    "fullAcceptancePercent": 0,
+    "fullParentCertifications": 0,
+    "fixtureProfilesExecuted": 12,
+    "fixtureProfilesPassed": 12,
+    "fixturePassPercent": 100,
+    "fixtureEvidence": "UNFINISHED-WORK/mgr-p0-expanded-evidence-repaired-20261029.json",
+    "routing": "UNFINISHED-WORK/mgr-80-wave-routed-20261029.json",
+    "sourceProofScope": "local fixtures bound to git revision, not live provider or Docker certification",
+    "repairedDefects": [
+      "Public engine verification PEM was accidentally excluded by global ignore; restored and tested",
+      "P0 wave selector rejects acceptance criterion wording drift",
+      "Fixture evidence now binds to clean tracked Git commit"
+    ],
+    "externalBlockers": [
+      "Docker host unavailable",
+      "consumer provider consent/runtime not qualified",
+      "hosted OAuth/revocation workflows untested",
+      "trusted public key origin not independently established",
+      "production multi-tenant security and deployment tests unqualified"
+    ]
   }
 }
