@@ -9,7 +9,7 @@ export function verifyHistoricalSourceImport({repoRoot,sourceRevision,manifestPa
  for(const row of manifest.files){
   const path=row.path;if(typeof path!=='string'||!path||path.startsWith('/')||path.includes('\\')||path.split('/').some(x=>!x||x==='.'||x==='..')||seen.has(path))throw new Error('unsafe duplicate manifest path');
   seen.add(path);
-  if(/(?:^|\/)(?:\.env(?:\.|$)|id_rsa|id_ed25519|.*private.key|.*credentials\.json)$/i.test(path))throw new Error('credential-like path in tracked snapshot');
+  if(/(?:^|\/)(?:\.env(?:\.[^/]+)?|id_rsa|id_ed25519|[^/]*private\.key|[^/]*credentials\.json)(?:$|\/)/i.test(path))throw new Error('credential-like path in tracked snapshot');
   let actual;try{actual=show(path)}catch{files.push({path,status:'missing'});continue;}
   const digest=createHash('sha256').update(actual).digest('hex');
   files.push({path,status:actual.length===row.bytes&&digest===row.sha256?'match':'mismatch'});
