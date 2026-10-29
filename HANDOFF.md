@@ -8,6 +8,11 @@ The source and evidence for this repair wave are **published and read back** on 
 - Exact mapping and confirmed provider read-back: [`UNFINISHED-WORK/mgr-github-publication-20261029.json`](UNFINISHED-WORK/mgr-github-publication-20261029.json). Commit IDs differ because the existing GitHub ancestry was preserved; no test result was relabeled as execution on a different source tree.
 - Continue from the current named remaining-work record [`UNFINISHED-WORK/remaining-detail-omnidev-20261029.json`](UNFINISHED-WORK/remaining-detail-omnidev-20261029.json) and the latest functional/test handoff immediately below. Full acceptance, actual browser journeys, live identities/workers and production release remain scoped separately. No automatic merge, deployment or original task promotion occurred.
 
+## Exact original source recovery
+
+The original local test-receipt commit identities are recoverable from [`verified-local-history.bundle`](UNFINISHED-WORK/evidence/source-history-20261029/verified-local-history.bundle). The adjacent [manifest](UNFINISHED-WORK/evidence/source-history-20261029/manifest.json) records exact commit/tree identities, SHA-256 and successful fresh-repository recovery checks. This is inert historical evidence; no active code path was duplicated. Load the named existing public prerequisite `c44818c5017d15139c294e971346b1152ed24ba1` before fetching the OmniDev bundle.
+
+
 ---
 
 # Current scanner integration checkpoint — October 29, 2026
