@@ -99,5 +99,16 @@
     "sourcePathCoverage": 100,
     "liveDockerWorkers": 0,
     "hostedCrossProductCertification": false
+  },
+  "acceptanceEvidence": {
+    "parentRecords": 174,
+    "totalCriteria": 441,
+    "criteriaWithFullProof": 0,
+    "readyForCertification": 0,
+    "verifiedPercent": 0,
+    "register": "UNFINISHED-WORK/mgr-174-acceptance-evidence-register.json",
+    "validator": "scripts/validate-acceptance-register.mjs",
+    "testCount": 5,
+    "testResult": "passed"
   }
 }
