@@ -107,7 +107,10 @@
       "title": "Add supported AI account adapters",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/providers.ts",
+        "lib/github-account.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -136,7 +139,9 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "AUTH-04",
@@ -309,7 +314,10 @@
       "title": "Build general code generation and refactoring",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/jobs.ts",
+        "lib/analyzer.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -338,14 +346,19 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "DEV-02",
       "title": "Complete repository delivery and CI evidence",
       "priority": "P0",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/repository.ts",
+        "lib/github.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -374,14 +387,19 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "DEV-03",
       "title": "Generate delivery, migration and infrastructure artifacts",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/jobs.ts",
+        "lib/agent-os.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -410,7 +428,9 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "GRAPH-01",
@@ -460,7 +480,9 @@
       "title": "Add language-aware and runtime discovery",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/analyzer.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -489,14 +511,19 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "GAP-01",
       "title": "Expand the missing-things engine",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/analyzer.ts",
+        "lib/repo-audit.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -525,7 +552,9 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "DATA-01",
@@ -666,7 +695,10 @@
       "title": "Build real security intelligence",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/analyzer.ts",
+        "lib/agent-os.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -695,14 +727,18 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "SEC-02",
       "title": "Implement authorization beyond a single owner",
       "priority": "P0",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/control-plane.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -731,14 +767,19 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "SEC-03",
       "title": "Complete credential and provider-boundary audit",
       "priority": "P0",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/providers.ts",
+        "lib/github-account.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -767,14 +808,18 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "QA-01",
       "title": "Verify hosted end-to-end behavior",
       "priority": "P0",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "tests/acceptance.mjs"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -803,14 +848,18 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "QA-02",
       "title": "Test actual application behavior",
       "priority": "P0",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "tests/runtime.mjs"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -839,14 +888,18 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "QA-03",
       "title": "Add performance, resilience and evaluation suites",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "tests/integration-fleet.mjs"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -887,14 +940,18 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "OPS-01",
       "title": "Ingest real health telemetry",
       "priority": "P0",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/control-plane.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -923,14 +980,18 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "OPS-02",
       "title": "Build production diagnosis and repair loop",
       "priority": "P0",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "companion/engine/supervisor.mjs"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -959,14 +1020,18 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "OPS-03",
       "title": "Add deployment and rollback adapters",
       "priority": "P0",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "companion/engine/update.mjs"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -995,14 +1060,18 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "OPS-04",
       "title": "Operate OmniDev itself reliably",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "worker/runner.mjs"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -1031,7 +1100,9 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "sourceLinkStatus": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "TWIN-01",
