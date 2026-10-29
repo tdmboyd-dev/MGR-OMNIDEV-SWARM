@@ -25,11 +25,12 @@
     "sourceLinkedParents": 108,
     "sourceLinkedPercent": 62.07,
     "committedSourcePaths": {
-      "present": 276,
       "total": 276,
+      "present": 276,
       "percent": 100,
       "sourceCommit": "881dc631d3b777f203ffebf80713b0cd7600d0b5",
-      "note": "Pinned Git object existence and SHA, not acceptance completion"
+      "proof": "UNFINISHED-WORK/mgr-committed-code-reconciliation-20261029.json",
+      "type": "pinned Git objects, not live acceptance"
     },
     "specialistsReclassified": 47,
     "historicalBacklogCount": 174,
@@ -115,13 +116,17 @@
   "acceptanceEvidence": {
     "parentRecords": 174,
     "totalCriteria": 441,
-    "criteriaWithFullProof": 0,
+    "criteriaWithFullProof": 1,
     "readyForCertification": 0,
-    "verifiedPercent": 0,
+    "verifiedPercent": 0.23,
     "register": "UNFINISHED-WORK/mgr-174-acceptance-evidence-register.json",
     "validator": "scripts/validate-acceptance-register.mjs",
     "testCount": 5,
-    "testResult": "passed"
+    "testResult": "passed",
+    "verifiedCriterionIds": [
+      "REL-02/AC-01"
+    ],
+    "note": "Pinned imported source integrity verified; REL-02 security/scope AC-02 unresolved. Parent remains implemented_unverified."
   },
   "waveP0Plus50": {
     "requestedParents": 80,
@@ -151,5 +156,14 @@
       "trusted public key origin not independently established",
       "production multi-tenant security and deployment tests unqualified"
     ]
+  },
+  "sourceImport": {
+    "originalGithubCommit": "26e230d052c45c1f42cb731ff095679497af045a",
+    "originalSitesCommit": "439c6c1a275ba01ad346e4e11890e58f024c6efc",
+    "manifestFiles": 516,
+    "verifiedSha256Matches": 516,
+    "recognizedSecretPatternHits": 0,
+    "scannedBytes": 9199629,
+    "limitation": "credential pattern scan not exhaustive"
   }
 }
