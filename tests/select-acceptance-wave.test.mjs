@@ -15,3 +15,5 @@ test('priority drift fails',()=>{
  const changed=[{...tasks[0],priority:'P1'},...tasks.slice(1)];
  assert.throws(()=>selectAcceptanceWave({tasks:changed},register));
 });
+
+test('changed acceptance wording fails closed',()=>{const changed={tasks:register.tasks.map((t,i)=>i===0?{...t,acceptance:[{...t.acceptance[0],requirement:'relaxed criterion'}]}:t)};assert.throws(()=>selectAcceptanceWave({tasks},changed),/acceptance text drift/);});
