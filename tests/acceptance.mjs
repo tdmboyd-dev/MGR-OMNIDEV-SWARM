@@ -1,11 +1,13 @@
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync} from 'node:fs';
 import assert from 'node:assert/strict';
-const sqlite=new DatabaseSync(':memory:');sqlite.exec(readFileSync('drizzle/0000_orange_phalanx.sql','utf8'));
-class Stmt{constructor(sql,args=[]){this.sql=sql;this.args=args}bind(...args){return new Stmt(this.sql,args)}async all(){return {results:sqlite.prepare(this.sql).all(...this.args)}}async run(){return sqlite.prepare(this.sql).run(...this.args)}}
-globalThis.__omniEnv={DB:{prepare:s=>new Stmt(s),batch:async ss=>{sqlite.exec('BEGIN');try{const r=ss.map(s=>sqlite.prepare(s.sql).run(...s.args));sqlite.exec('COMMIT');return r}catch(e){sqlite.exec('ROLLBACK');throw e}}}};
+const sqlite=new DatabaseSync(':memory:');for(const file of ['drizzle/0000_orange_phalanx.sql','drizzle/0001_modern_hammerhead.sql'])sqlite.exec(readFileSync(file,'utf8'));
+class Stmt{constructor(sql,args=[]){this.sql=sql;this.args=args}bind(...args){return new Stmt(this.sql,args)}async all(){return {results:sqlite.prepare(this.sql).all(...this.args)}}async run(){return {meta:{changes:Number(sqlite.prepare(this.sql).run(...this.args).changes)}}}}
+globalThis.__omniEnv={DB:{prepare:s=>new Stmt(s),batch:async ss=>{sqlite.exec('BEGIN');try{const r=ss.map(s=>({meta:{changes:Number(sqlite.prepare(s.sql).run(...s.args).changes)}}));sqlite.exec('COMMIT');return r}catch(e){sqlite.exec('ROLLBACK');throw e}}}};
 const {GET,POST}=await import('../.test-runtime/route.mjs');
 const {analyze,simulate}=await import('../.test-runtime/analyzer.mjs');
+const {planningSource}=await import('../.test-runtime/workspace-planning.mjs');
+const sourceDigest=async id=>{const rows=(await (await GET()).json()).records;return (await planningSource(rows.find(r=>r.id===id&&r.kind==='project'),rows)).sourceDigest;};
 let passed=0;const ok=(v,label)=>{assert.ok(v,label);passed++;console.log('PASS '+label)};
 const post=async p=>{const res=await POST(new Request('https://omni.example/api/workspace',{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://omni.example'},body:JSON.stringify(p)}));return {status:res.status,data:await res.json()}};
 let r=await post({action:'initialize'});ok(r.status===200&&r.data.records.filter(x=>x.kind==='swarm').length===48,'Initialize Omni Core and 47 master swarms');
@@ -25,15 +27,15 @@ r=await post({action:'finding',id:findings[0].id,status:'hacked'});ok(r.status==
 r=await post({action:'memory',title:'ADR-001',content:'Use isolated workers',type:'Decision'});ok(r.data.records.find(x=>x.id===r.data.id).data.content==='Use isolated workers','Global memory saves the decision');
 r=await post({action:'memory',title:'',content:'x'});ok(r.status===400,'Empty memory title is rejected');
 r=await post({action:'connection',title:'GitHub organization',provider:'GitHub',endpoint:'https://github.com/example'});ok(r.data.records.find(x=>x.id===r.data.id).status==='not connected','System registration does not invent a connected state');
-r=await post({action:'simulate',traffic:600,capacity:500,latency:80,cost:45,replicas:2,projectId:pid});ok(r.data.result.utilization===60&&r.data.result.latency===200&&r.data.result.cost===90,'Capacity model computes and persists the scenario');
+r=await post({action:'simulate',traffic:600,capacity:500,latency:80,cost:45,replicas:2,projectId:pid,expectedSourceDigest:await sourceDigest(pid)});ok(r.data.result.utilization===60&&r.data.result.latency===200&&r.data.result.cost===90,'Capacity model computes and persists the scenario');
 r=await post({action:'simulate',traffic:1,capacity:0,latency:80,cost:45,replicas:2});ok(r.status===400,'Zero capacity simulation is rejected');
 ok(simulate({traffic:1001,capacity:500,latency:80,cost:45,replicas:2}).status==='Over capacity','Overload scenario is flagged');
-r=await post({action:'future',projectId:pid});ok(r.data.records.find(x=>x.id===r.data.id).data.horizons.map(x=>x.version).join(',')==='V2,V3,V5,V10','Four future planning horizons persist');
+r=await post({action:'future',projectId:pid,expectedSourceDigest:await sourceDigest(pid)});ok(r.data.records.find(x=>x.id===r.data.id).data.horizons.map(x=>x.version).join(',')==='V2,V3,V5,V10','Four future planning horizons persist');
 r=await post({action:'import',title:'Secret check',files:[{path:'config.js',content:'const api_key="test-secret-value-1234";'}]});const secretProject=r.data.records.find(x=>x.id===r.data.projectId);ok(!JSON.stringify(secretProject).includes('test-secret-value-1234'),'Detected credential assignment is redacted before storage');
 r=await post({action:'import',title:'Duplicate',files:[{path:'x',content:'a'},{path:'x',content:'b'}]});ok(r.status===400,'Duplicate file paths are rejected');
 const cross=await POST(new Request('https://omni.example/api/workspace',{method:'POST',headers:{Origin:'https://attacker.example'},body:JSON.stringify({action:'memory',title:'bad',content:'bad'})}));ok(cross.status===403,'Cross-origin mutation is rejected');
 const bad=await POST(new Request('https://omni.example/api/workspace',{method:'POST',body:'{broken'}));ok(bad.status===400,'Malformed JSON is rejected');
-r=await post({action:'rescan',projectId:pid});ok(r.data.records.find(x=>x.id===pid).data.scanCount===2,'Rescan updates snapshot analysis without duplicating findings');
+r=await post({action:'rescan',projectId:pid,expectedSourceDigest:await sourceDigest(pid)});ok(r.data.records.find(x=>x.id===pid).data.scanCount===2,'Rescan updates snapshot analysis without duplicating findings');
 const clean=analyze([{path:'src/a.ts',content:'export function add(a,b){ return a+b; }'},{path:'tests/a.test.ts',content:'test("add",()=>{})'},{path:'README.md',content:'Setup'},{path:'.github/workflows/check.yml',content:'jobs: {}'},{path:'logger.ts',content:'export const logger = console;'}]);ok(clean.findings.length===0,'Covered baseline does not generate missing-presence findings');
 const nativeFetch=globalThis.fetch;globalThis.fetch=async url=>{const u=String(url);if(u.includes('/git/trees/'))return Response.json({tree:[{type:'blob',size:30,path:'src/index.ts'}]});if(u.includes('api.github.com'))return Response.json({default_branch:'main'});if(u.includes('raw.githubusercontent.com'))return new Response('export function hello(){ return 1; }');throw new Error('Unexpected URL')};
 r=await post({action:'github',location:'https://github.com/example/repository'});ok(r.status===200&&r.data.records.find(x=>x.id===r.data.projectId).data.source==='Public GitHub snapshot','GitHub adapter imports an HTTP snapshot with provenance (stubbed network)');

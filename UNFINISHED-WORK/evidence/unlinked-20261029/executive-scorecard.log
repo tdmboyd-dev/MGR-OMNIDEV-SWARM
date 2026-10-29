@@ -1,0 +1,19 @@
+✔ the original 14 dimensions have methodology, required evidence and an explicit unknown state (1.872048ms)
+✔ perfect heuristic scores cannot become executive measurements, evidence or certification (0.142295ms)
+✔ actual snapshot findings retain source and revision without becoming measured controls (0.323236ms)
+✔ missing source identity does not attach orphan findings (0.184928ms)
+✔ malformed finding collections do not crash the owner dashboard or create evidence (0.266041ms)
+✔ accessibility signals remain a scoped lead, not a UX score or business proxy (0.169035ms)
+✔ repeated evaluation is deterministic and cannot mutate source records (0.333552ms)
+✔ absent or invalid revision stays unknown rather than inventing a pinned source revision (0.1795ms)
+✔ actual React panel renders fourteen native evidence disclosures and no unsupported measured score (9.224517ms)
+✔ actual React panel preserves security signals and escapes user-controlled project text (4.262396ms)
+✔ actual React panel empty state exposes the evidence requirement rather than a fake healthy baseline (3.927973ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28.021512

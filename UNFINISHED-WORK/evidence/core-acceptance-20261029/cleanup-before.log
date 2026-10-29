@@ -1,0 +1,54 @@
+✔ GRAPH-01 deletion does not resurrect stale integration participants or edges (8.530169ms)
+✔ GRAPH-01 integration participants use current project identity after a rename (0.953355ms)
+✔ DATA-03 complete backup restores into a fresh store without execution authority (8.774587ms)
+✔ DATA-03 rejects jobs whose project reference is a memory record (4.397368ms)
+✔ DATA-03 rejects dangling project links before a restore writes anything (3.712277ms)
+✔ DATA-03 rejects null or array record data and job payloads (6.689899ms)
+✔ DATA-03 rejects malformed job retry counters and empty record identities (9.058524ms)
+✔ DATA-03 concurrent restoration has one winner and no duplicated effects (2.626764ms)
+✖ DATA-03 delete removes its audit children without touching another project (2.337017ms)
+✖ DATA-03 clearSnapshot removes its audit children without touching another project (1.913751ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 8
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 57.080063
+
+✖ failing tests:
+
+test at tests/intelligence-integrity.mjs:139:51
+✖ DATA-03 delete removes its audit children without touching another project (2.337017ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/e95bafd06928/MGR-OMNIDEV-SWARM/tests/intelligence-integrity.mjs:147:37)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/intelligence-integrity.mjs:139:51
+✖ DATA-03 clearSnapshot removes its audit children without touching another project (1.913751ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/e95bafd06928/MGR-OMNIDEV-SWARM/tests/intelligence-integrity.mjs:147:37)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

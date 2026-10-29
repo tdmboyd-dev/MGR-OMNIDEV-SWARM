@@ -1,6 +1,6 @@
 # Data Memory And Platform
 
-All items below are open. See [README.md](README.md) for status definitions and resume rules.
+Use the canonical backlog for current recorded states; no parent is independently certified. See [README.md](README.md) for status definitions and resume rules.
 
 ## DATA-01 — Expand persistence and artifact storage
 
@@ -29,7 +29,7 @@ All items below are open. See [README.md](README.md) for status definitions and 
 
 **Priority:** P1 · **Type:** engineering · **Owner:** Unassigned
 
-**Current state:** Activity and manually saved decisions persist; full searchable lifelong memory is not implemented.
+**Current state:** Project-scoped lexical retrieval, structured decisions, corrected historical outcomes and plan-version citations are implemented and tested locally. Semantic retrieval, tenant privacy, retention and deletion qualification remain open.
 
 **Work required:**
 
@@ -44,7 +44,7 @@ All items below are open. See [README.md](README.md) for status definitions and 
 
 **Depends on:** DATA-01, SEC-02
 
-**Completion evidence:** None yet. Add commit, tests, artifact/provider read-back and remaining limitations before closing.
+**Local evidence:** [Current repair report](mgr-planning-imprint-wave-20261029.md) and exact source-bound logs. Full original acceptance remains subject to its stated limitations; the checkbox is not independent certification.
 
 ## DATA-03 — Add backup, restore and disaster recovery
 

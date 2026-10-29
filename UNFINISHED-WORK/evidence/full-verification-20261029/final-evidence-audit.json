@@ -1,0 +1,137 @@
+{
+  "schema": "mgr.final-evidence-reconciliation-audit.v1",
+  "recordedAt": "2026-10-29T13:26:41.515Z",
+  "testedSourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+  "originalIdsConserved": 174,
+  "originalVerbatimClausesConserved": 441,
+  "separateUpgradeRequirementsUnchanged": 28,
+  "currentStatusCounts": {
+    "open": 123,
+    "implemented_unverified": 51
+  },
+  "localRecords": {
+    "PARTIAL": 193,
+    "VERIFIED": 7,
+    "NOT_REPRODUCED": 83
+  },
+  "localEvidenceReferencesHashMatched": 831,
+  "originalFinalVerifiedCriteria": 1,
+  "historicalRel02ProofUnchanged": true,
+  "independentlyCertifiedParents": 0,
+  "sourceLinkedParents": 136,
+  "sourceUnlinkedParents": 38,
+  "pinnedSourcePathsHashMatched": 327,
+  "fullRuns": [
+    {
+      "sourceCommit": "b05af17de473fcedf8ad10fa0f38871a465e3bf5",
+      "profiles": 54,
+      "allLogHashesMatched": true,
+      "report": "UNFINISHED-WORK/evidence/full-verification-20261029/initial-run/report.json",
+      "reportSha256": "69705dd039af02fdd2465017ffc83f30119eea7b0fa9df0fef5a27635ed7993e"
+    },
+    {
+      "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+      "profiles": 54,
+      "allLogHashesMatched": true,
+      "report": "UNFINISHED-WORK/evidence/full-verification-20261029/run/report.json",
+      "reportSha256": "336441b1e10109a0194642b08ac15079364637ada86d739263c2720d292cc124"
+    }
+  ],
+  "metadataTests": {
+    "passed": 32,
+    "failed": 0,
+    "skipped": 0,
+    "log": "UNFINISHED-WORK/evidence/full-verification-20261029/final-metadata-tests.log",
+    "sha256": "3198c885e71c11466dcf46ddda08a886f9729288aa058da47a12702e1e1303c5",
+    "countingNote": "Repeated relevant checks; not added to targeted140-case total."
+  },
+  "actualRegisterValidation": {
+    "path": "UNFINISHED-WORK/evidence/full-verification-20261029/final-register-validation.json",
+    "sha256": "7c7c97fdaa04b4babc314d04325f79cf8f8f466b4978eccf3ad864e082858705",
+    "valid": true,
+    "qualification": "structural-provenance-only-not-execution-certification",
+    "totalParents": 174,
+    "totalCriteria": 441,
+    "verifiedCriteria": 1,
+    "currentVerifiedCriteria": 0,
+    "certifiedTasks": 0,
+    "readyForCertification": 0,
+    "expectedSourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+    "staleCriteria": [
+      "REL-02/AC-01"
+    ],
+    "mixedSourceParents": [],
+    "errors": []
+  },
+  "testedCodeUnchanged": {
+    "result": true,
+    "comparedTrackedFilesOutsideEvidenceAndHandoffs": 525,
+    "method": "Byte comparison to every tracked Git object outside UNFINISHED-WORK and three handoff/instruction documents."
+  },
+  "metadataSnapshot": [
+    {
+      "path": "UNFINISHED-WORK/backlog.json",
+      "sha256": "d0d7cf61bdc52e35618fddc92c0dff1971a5b05821ce84df281578aa4b579462"
+    },
+    {
+      "path": "UNFINISHED-WORK/mgr-174-acceptance-evidence-register.json",
+      "sha256": "aee3a719bb2124b016ed0ee072b468e1a987b2b60b6bd6f2881cfe83ff5f7ec6"
+    },
+    {
+      "path": "UNFINISHED-WORK/mgr-evidence-scorecard-20261029.json",
+      "sha256": "d2f2fc1d53dd3319eb0d3f079e602b424be6fe51e5b19e0bed0ef7351098aba3"
+    },
+    {
+      "path": "UNFINISHED-WORK/mgr-historical-truth-20261029.json",
+      "sha256": "23bc9112d40bd969cb1e00b7f1356ab4d6d927678bc179c9634c3d0b9237d21b"
+    },
+    {
+      "path": "UNFINISHED-WORK/mgr-acceptance-queue-20261029.json",
+      "sha256": "b70660ff16bc3732bed955437e5d7f24b78801461e12b067bf5055bb64d79855"
+    },
+    {
+      "path": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+      "sha256": "fb945ae527939013bf237e8e24f2241ff91bb78b9ae4be28db1d9b072fabf4ff"
+    },
+    {
+      "path": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.md",
+      "sha256": "066390c070c909569a82f279ffa5d2ed483e5d255f9aef60d121bc66fe642f98"
+    },
+    {
+      "path": "UNFINISHED-WORK/174-IMPLEMENTATION-INDEX.md",
+      "sha256": "df1396693d5c0c8254070bef8cd772b5b9cc322b21ff094f7203c8017297a0f6"
+    },
+    {
+      "path": "UNFINISHED-WORK/FULL-VERIFICATION-WORKFLOW.md",
+      "sha256": "0a88dbbcd6994e57f091676b03a5f10af9ade71e807cc4ba5f28d63b75001468"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "688c51a8c331917513ab1d5eeea462e80cb0dff9894c63f8cd93800fdaa2d850"
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "a8566453ed75eb5ecbb025b46fc38347a14ca7960e2d3d5b0d1bbbc8b6a7d083"
+    },
+    {
+      "path": "MGR-TRILOGY-HANDOFF.md",
+      "sha256": "74127ff74b4217cba2913520741ee5e576db940c81c32504ee229c1561b23cde"
+    }
+  ],
+  "publicationPayloadPatternScan": {
+    "baseCommit": "c44818c5017d15139c294e971346b1152ed24ba1",
+    "files": 185,
+    "bytes": 3259590,
+    "recognizedCredentialPatternHits": [],
+    "patterns": [
+      "private-key-pem",
+      "github-token",
+      "aws-access-key-id",
+      "openai-api-key",
+      "stripe-live-secret",
+      "slack-token"
+    ],
+    "scope": "Changed tracked and new nonignored payload files at audit time. Bounded pattern scan, not exhaustive secret discovery or publication authorization."
+  },
+  "qualification": "Local metadata/source/evidence integrity audit; no independent protected signature, live provider qualification or release certification."
+}

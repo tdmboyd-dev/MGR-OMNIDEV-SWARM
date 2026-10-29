@@ -1,0 +1,11 @@
+✔ preserves 174+28 without manufacturing completion (2.659249ms)
+✔ rejects lost or duplicated parent tasks (0.265278ms)
+✔ no historical status changes (0.681415ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9.162278

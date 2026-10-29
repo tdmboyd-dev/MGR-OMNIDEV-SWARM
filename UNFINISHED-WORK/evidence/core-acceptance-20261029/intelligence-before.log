@@ -1,0 +1,114 @@
+✖ GRAPH-01 deletion does not resurrect stale integration participants or edges (10.179836ms)
+✖ GRAPH-01 integration participants use current project identity after a rename (1.474289ms)
+✔ DATA-03 complete backup restores into a fresh store without execution authority (10.246863ms)
+✖ DATA-03 rejects jobs whose project reference is a memory record (3.533608ms)
+✖ DATA-03 rejects dangling project links before a restore writes anything (3.28245ms)
+✖ DATA-03 rejects null or array record data and job payloads (3.745998ms)
+✖ DATA-03 rejects malformed job retry counters and empty record identities (6.337708ms)
+✔ DATA-03 concurrent restoration has one winner and no duplicated effects (3.054356ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 2
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 49.013854
+
+✖ failing tests:
+
+test at tests/intelligence-integrity.mjs:55:1
+✖ GRAPH-01 deletion does not resurrect stale integration participants or edges (10.179836ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/intelligence-integrity.mjs:62:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/intelligence-integrity.mjs:68:1
+✖ GRAPH-01 integration participants use current project identity after a rename (1.474289ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Old source name'
+  - 'Current source name'
+  
+      at TestContext.<anonymous> (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/intelligence-integrity.mjs:74:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Old source name',
+    expected: 'Current source name',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/intelligence-integrity.mjs:93:1
+✖ DATA-03 rejects jobs whose project reference is a memory record (3.533608ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async rejectsWithoutWrites (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/intelligence-integrity.mjs:50:3)
+      at async TestContext.<anonymous> (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/intelligence-integrity.mjs:97:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /project|reference/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/intelligence-integrity.mjs:100:1
+✖ DATA-03 rejects dangling project links before a restore writes anything (3.28245ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async rejectsWithoutWrites (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/intelligence-integrity.mjs:50:3)
+      at async TestContext.<anonymous> (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/intelligence-integrity.mjs:104:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /project|reference/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/intelligence-integrity.mjs:107:1
+✖ DATA-03 rejects null or array record data and job payloads (3.745998ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async rejectsWithoutWrites (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/intelligence-integrity.mjs:50:3)
+      at async TestContext.<anonymous> (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/intelligence-integrity.mjs:112:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /object|data|payload|result/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/intelligence-integrity.mjs:116:1
+✖ DATA-03 rejects malformed job retry counters and empty record identities (6.337708ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async rejectsWithoutWrites (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/intelligence-integrity.mjs:50:3)
+      at async TestContext.<anonymous> (file:///tmp/omnidev-acceptance-baseline-khik74_0/tests/intelligence-integrity.mjs:121:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /attempt|retry/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }

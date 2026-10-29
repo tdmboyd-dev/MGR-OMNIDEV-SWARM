@@ -1,0 +1,167 @@
+{
+  "schema": "mgr.planning-imprint-wave.v1",
+  "testedSourceCommit": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+  "fullVerification": "UNFINISHED-WORK/evidence/planning-wave-20261029/run/report.json",
+  "profiles": {
+    "passedProfiles": 58,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 58,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "canonical": {
+    "parents": 174,
+    "clauses": 441,
+    "additiveUpgrades": 28,
+    "states": {
+      "implemented_unverified": 52,
+      "open": 122
+    },
+    "independentlyCertifiedParents": 0,
+    "historicalFinalVerifiedCriteria": 1,
+    "localVerifiedClauses": 11,
+    "sourceLinkedParents": 136,
+    "sourceReferences": 343
+  },
+  "changedClauses": [
+    {
+      "criterionId": "FUT-01/AC-01",
+      "localStatus": "VERIFIED",
+      "profiles": [
+        "workspacePlanning",
+        "planningUi"
+      ],
+      "observed": "Four horizons bind to actual selected snapshot/finding evidence and expose testable milestones, dependencies, unknowns and tradeoffs.",
+      "remaining": "Local planning contracts only; real market/billing/runtime evidence and quality of broader business/architecture recommendations remain unqualified."
+    },
+    {
+      "criterionId": "FUT-01/AC-02",
+      "localStatus": "VERIFIED",
+      "profiles": [
+        "workspacePlanning",
+        "planningUi"
+      ],
+      "observed": "Hypotheses retain unassessed confidence; outcomes append without altering the original proposal. Version lineage, source drift, stale forms and transaction races are tested.",
+      "remaining": "Owner-recorded observations are not independent certification or calibrated predictions; real long-term outcomes remain to be measured."
+    },
+    {
+      "criterionId": "AUD-20/AC-01",
+      "localStatus": "VERIFIED",
+      "profiles": [
+        "workspacePlanning",
+        "planningUi"
+      ],
+      "observed": "Each V2/V3/V5/V10 horizon records a reversible experiment, rollback instructions and explicit stop rule.",
+      "remaining": "The local contract is reproduced; actual model/tool/compiler/schema replacement experiments remain to execute."
+    },
+    {
+      "criterionId": "AUD-20/AC-02",
+      "localStatus": "PARTIAL",
+      "profiles": [
+        "workspacePlanning",
+        "planningUi"
+      ],
+      "observed": "Executed route/UI contracts and command/output hashes bind to the exact clean source commit.",
+      "remaining": "Broader future-readiness experiments and independently attested review remain unqualified; design records alone cannot close the parent."
+    },
+    {
+      "criterionId": "DATA-02/AC-01",
+      "localStatus": "VERIFIED",
+      "profiles": [
+        "decisionOutcomes",
+        "planningUi"
+      ],
+      "observed": "Lexical search retrieves corrected historical outcome revisions and earlier future-plan versions with original/observed source context and exact record lineage.",
+      "remaining": "Bounded local stored-record retrieval only; semantic retrieval, representative relevance evaluation and broader evidence ingestion remain incomplete."
+    },
+    {
+      "criterionId": "DATA-02/AC-02",
+      "localStatus": "PARTIAL",
+      "profiles": [
+        "decisionOutcomes",
+        "intelligenceIntegrity"
+      ],
+      "observed": "Invalid and other-project search scopes reject or exclude records; correction history is retained and stale updates fail atomically.",
+      "remaining": "Actual tenant authorization, a complete retention policy, deletion/withdrawal convergence and production disaster recovery remain unqualified."
+    },
+    {
+      "criterionId": "GAP-01/AC-01",
+      "localStatus": "PARTIAL",
+      "profiles": [
+        "workspacePlanning",
+        "gapEvaluation"
+      ],
+      "observed": "Rescans reconcile additions/disappearance without duplicating signals and preserve manual dispositions. A fixed41-case two-rule corpus improves from19 errors to0.",
+      "remaining": "No production false-positive threshold is established. SQL/eval/credential and other rules, project-type expectations and business hypotheses remain unmeasured."
+    },
+    {
+      "criterionId": "GAP-01/AC-02",
+      "localStatus": "PARTIAL",
+      "profiles": [
+        "workspacePlanning",
+        "gapEvaluation",
+        "planningUi"
+      ],
+      "observed": "Snapshot-only limits are explicit; disappearance is not proof of repair; recommendations exclude resolved and accepted-risk signals.",
+      "remaining": "Broader scanners and real repository coverage need evaluation; markup checks do not resolve runtime spreads or establish semantic accessibility."
+    },
+    {
+      "criterionId": "TWIN-02/AC-01",
+      "localStatus": "PARTIAL",
+      "profiles": [
+        "workspacePlanning",
+        "planningUi"
+      ],
+      "observed": "Scenarios bind to an explicit selected source or stay unassigned; numerical inputs and outputs are labeled hypothetical owner assumptions.",
+      "remaining": "Real authorized billing, revenue, traffic and staging measurements are not connected; calibrated forecasting is not established."
+    },
+    {
+      "criterionId": "UX-03/AC-01",
+      "localStatus": "PARTIAL",
+      "profiles": [
+        "planningUi",
+        "workspacePlanning",
+        "decisionOutcomes"
+      ],
+      "observed": "Future/decision/search surfaces invoke persisted route actions and render revision/source evidence, errors, empty states and history.",
+      "remaining": "Actual browser keyboard, viewport and assistive-technology journeys and target-user usability remain unqualified."
+    }
+  ],
+  "targetedSuites": {
+    "workspacePlanning": 19,
+    "decisionHistorySearch": 12,
+    "actualReactRendering": 12,
+    "gapCorpus": 41
+  },
+  "gapBaseline": {
+    "sameFinalCorpus": 41,
+    "mismatchesBefore": 19,
+    "mismatchesAfter": 0,
+    "qualification": "Hand-labeled regression examples for two rules; not a production error-rate estimate."
+  },
+  "limits": [
+    "Browser interaction not qualified; extension context unavailable and local Chromium download was truncated.",
+    "Live D1/tenant/provider behavior, Docker host, independent signer and production qualification remain open.",
+    "No new GitHub publication, merge, deployment or paid model call."
+  ],
+  "createdAt": "2026-10-29T14:42:22.987Z",
+  "trilogyTestedSources": {
+    "OmniDev": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+    "Code Monster": "166305de9fa380c3a9f28936d6d95f011531195a",
+    "OmniSight": "a94ae4b478901bbe7b004677b706a3267f89204a"
+  },
+  "trilogyVerification": {
+    "codeMonsterTests": 113,
+    "omniSightTests": 39,
+    "producerConsumer": {
+      "passed": true,
+      "producerContract": "mgr.imprint.plan.v1",
+      "consumerContract": "mgr.omnisight.imprint.v1",
+      "visibleFiles": 2,
+      "scopedFiles": 1,
+      "sourceUnchanged": true,
+      "qualification": "real-local-producer-consumer; not hosted authentication or release proof"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+✔ 174 task records and 348 criteria pass preservation without false certifications (4.125093ms)
+✔ rejects parent marked certified with unverified criterion (2.022452ms)
+✔ rejects forged VERIFIED with missing source/test/reviewer receipt (1.739666ms)
+✔ full provenance per criterion makes parent eligible, not automatically approved (1.52284ms)
+✔ exact acceptance text cannot be silently rewritten (1.283971ms)
+✔ duplicate original or registered parent identities are rejected (1.095968ms)
+✔ empty original requirements cannot make 174 parents ready (1.007525ms)
+✔ unknown parent IDs cannot silently replace required original parents (1.392023ms)
+✔ sparse or malformed parent and criterion records fail closed (6.198682ms)
+✔ duplicate criterion identities cannot reuse the same original requirement (1.521458ms)
+✔ blank or meaningless provenance cannot be counted as verified (12.504544ms)
+✔ historic verified proof remains intact when candidate source changes (2.690085ms)
+✔ matching candidate revision has structural readiness but no automatic certification (1.627207ms)
+✔ source readiness is unknown without an explicitly requested current revision (1.114406ms)
+✔ proof from different source revisions cannot make a parent ready (2.518587ms)
+✔ false aggregate counts and unsupported parent states are rejected (9.806708ms)
+✔ completed canonical parent and certified register must remain synchronized (3.484661ms)
+✔ the original verified status and completed_verified alias both require complete certified proof (7.350964ms)
+✔ documented incomplete states remain valid and unsupported supplied backlog states are rejected (10.509634ms)
+✔ recorded status drift is visible rather than silently changing historical source (1.829587ms)
+✔ invalid current source selectors cannot be used for certification (0.31878ms)
+✔ the original 174-task 441-criterion register and REL-02 historical evidence are preserved (21.27939ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 107.786726

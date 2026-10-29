@@ -153,3 +153,9 @@ All items below are open. See [README.md](README.md) for status definitions and 
 **Depends on:** SEC-01, SEC-02, BIZ-01
 
 **Completion evidence:** None yet. Add commit, tests, artifact/provider read-back and remaining limitations before closing.
+
+## Verified local update — October 29, 2026
+
+QA-02 now records implemented_unverified. Actual behavioral bugs fail against the baseline, repaired cases pass, and 54 clean-source verification profiles pass. User-project toolchains and qualified isolated execution remain open.
+
+See [the exact source-bound wave report](mgr-full-verification-wave-20261029.md) and canonical criterion register; earlier planning notes above are historical where they conflict. Original acceptance wording is preserved.

@@ -1,0 +1,136 @@
+GAP_CORPUS_RESULT {"schema":"mgr.gap-rule-evaluation.v1","sourceSha256":"407a873b0ca71ba25a8481265316fe01c833eaabf1212d3360eee0e2f9009655","corpusSha256":"809088c52c7b9d551aac2006af06c0aaf40eda610a147e54d4aa00dbb56976c9","total":41,"byRule":{"image":{"cases":26,"positives":10,"negatives":16,"truePositive":10,"trueNegative":12,"falsePositive":4,"falseNegative":0,"falsePositiveRate":0.25,"falseNegativeRate":0},"tests":{"cases":15,"positives":5,"negatives":10,"truePositive":5,"trueNegative":10,"falsePositive":0,"falseNegative":0,"falsePositiveRate":0,"falseNegativeRate":0}},"qualification":"Hand-labeled local regression corpus for image alt presence and test-path recognition only. No production false-positive threshold or semantic accessibility judgment. SQL, eval, credential and other rules remain unmeasured.","mismatches":[{"id":"image-jsx-arrow-before-alt","expected":false,"detected":true},{"id":"image-jsx-comparison-before-alt","expected":false,"detected":true},{"id":"image-boolean-alt-presence","expected":false,"detected":true},{"id":"image-html-comment-only","expected":false,"detected":true}]}
+✔ image-none (1.291334ms)
+✔ image-missing (0.167002ms)
+✔ image-described (0.146961ms)
+✔ image-decorative (0.08019ms)
+✔ image-alt-space (0.129895ms)
+✔ image-alt-case (0.07345ms)
+✔ image-alt-newline (0.106991ms)
+✔ image-second-missing (0.097417ms)
+✔ image-first-missing (0.153992ms)
+✔ image-data-alt-only (0.129475ms)
+✔ image-alt-in-value (0.094623ms)
+✔ image-quoted-greater (0.083746ms)
+✔ image-real-and-data-alt (0.076966ms)
+✔ image-altitude-only (0.035173ms)
+✔ image-all-described (0.073651ms)
+✔ image-other-element (0.028823ms)
+✔ image-self-closing (0.024557ms)
+✔ image-jsx-alt (0.022494ms)
+✖ image-jsx-arrow-before-alt (0.817901ms)
+✖ image-jsx-comparison-before-alt (0.15958ms)
+✔ image-jsx-missing-after-expression (0.043385ms)
+✔ image-jsx-value-not-attribute (0.033069ms)
+✖ image-boolean-alt-presence (0.135744ms)
+✖ image-html-comment-only (0.079609ms)
+✔ image-comment-and-live-missing (0.033711ms)
+✔ image-jsx-nested-expression (0.025909ms)
+✔ tests-directory (0.023866ms)
+✔ test-directory (0.054552ms)
+✔ tests-special-directory (0.028412ms)
+✔ tests-dot-test (0.022885ms)
+✔ tests-dot-spec (0.04694ms)
+✔ tests-go-suffix (0.023805ms)
+✔ tests-python-prefix (0.021823ms)
+✔ tests-ruby-suffix (0.023576ms)
+✔ tests-spec-directory (0.049305ms)
+✔ tests-java-suffix (0.025869ms)
+✔ tests-contest-not-test (0.023105ms)
+✔ tests-latest-not-test (0.045509ms)
+✔ tests-contest-java (0.031868ms)
+✔ tests-docs-not-tests (0.042664ms)
+✔ tests-source-only (0.02652ms)
+ℹ tests 41
+ℹ suites 0
+ℹ pass 37
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12.895862
+
+✖ failing tests:
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-jsx-arrow-before-alt (0.817901ms)
+  AssertionError [ERR_ASSERTION]: image: expected false, detected true
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-jsx-comparison-before-alt (0.15958ms)
+  AssertionError [ERR_ASSERTION]: image: expected false, detected true
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-boolean-alt-presence (0.135744ms)
+  AssertionError [ERR_ASSERTION]: image: expected false, detected true
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-html-comment-only (0.079609ms)
+  AssertionError [ERR_ASSERTION]: image: expected false, detected true
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

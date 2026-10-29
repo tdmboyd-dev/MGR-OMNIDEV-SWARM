@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceCommit": "50d3e375db1cda2a4c78d80cc683d52186a1cd0d",
+  "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
   "created": "2026-10-29",
   "purpose": "Actionable 174-parent verification queue; not 174 confirmed missing features.",
   "total": 174,
@@ -22,15 +22,22 @@
         "lib/github-account.ts",
         "lib/repository.ts"
       ],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "A real authorized repository import and draft PR have provider-side evidence.",
         "Decline, revoke, refresh and disconnect behave correctly; no merge occurs."
       ],
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 1,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUTH-02",
@@ -57,7 +64,12 @@
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUTH-03",
@@ -66,8 +78,13 @@
       "lane": "identity-connectors",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "lib/providers.ts",
+        "lib/github-account.ts"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Each shipped provider has a real no-key sign-in and completed model request with evidence.",
         "Unavailable provider capabilities remain visibly unavailable rather than simulated."
@@ -76,8 +93,13 @@
         "AUTH-02"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 1,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUTH-04",
@@ -90,7 +112,9 @@
         "db/schema.ts",
         "lib/github-account.ts"
       ],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Connections report only verified capabilities and preserve errors without leaking tokens.",
         "Concurrent refresh/revocation and cross-account isolation pass meaningful tests."
@@ -99,8 +123,13 @@
         "AUTH-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "RUN-01",
@@ -122,7 +151,12 @@
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "RUN-02",
@@ -139,7 +173,8 @@
       ],
       "evidenceReferences": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Nested specialist execution completes with real provider evidence and durable lineage.",
@@ -150,8 +185,13 @@
         "RUN-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 1,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "RUN-03",
@@ -159,7 +199,7 @@
       "area": "02-agent-runtime",
       "lane": "agent-runtime",
       "historicalState": "open",
-      "claimedImplementation": "partial-tested-local",
+      "claimedImplementation": "implemented-local-contract-tested-final-qualification-pending",
       "sourceReferences": [
         "lib/jobs.ts",
         "lib/repository.ts",
@@ -167,7 +207,8 @@
       ],
       "evidenceReferences": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Concurrent workers do not duplicate effects or overwrite newer results.",
@@ -177,8 +218,13 @@
         "RUN-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 2,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DEV-01",
@@ -187,8 +233,13 @@
       "lane": "agent-runtime",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "lib/jobs.ts",
+        "lib/analyzer.ts"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Real coding tasks change application behavior correctly and pass relevant tests.",
         "Unsupported edits and stale baselines are rejected with recoverable errors."
@@ -199,8 +250,13 @@
         "QA-02"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 1,
+        "examinedClauses": 1,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DEV-02",
@@ -209,8 +265,13 @@
       "lane": "agent-runtime",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "lib/repository.ts",
+        "lib/github.ts"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "A real branch → candidate → tests → draft PR flow is proven on a test repository.",
         "Retry cannot silently duplicate or overwrite unrelated work."
@@ -221,8 +282,13 @@
         "QA-02"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 1,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DEV-03",
@@ -231,7 +297,10 @@
       "lane": "agent-runtime",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "lib/jobs.ts",
+        "lib/agent-os.ts"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Representative generated artifacts validate and run in an authorized test environment.",
@@ -243,7 +312,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "GRAPH-01",
@@ -259,7 +333,8 @@
       ],
       "evidenceReferences": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Multiple connected systems share verified cross-source relationships.",
@@ -270,8 +345,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 1,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "GRAPH-02",
@@ -280,7 +360,9 @@
       "lane": "code-intelligence",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "lib/analyzer.ts"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Fixtures and authorized real projects show correct entities and relationships.",
@@ -291,7 +373,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "GAP-01",
@@ -300,8 +387,13 @@
       "lane": "code-intelligence",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "lib/analyzer.ts",
+        "lib/repo-audit.ts"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Known gaps are detected with actionable evidence and acceptable measured false-positive rates.",
         "Incomplete snapshots and business hypotheses do not become unsupported factual claims."
@@ -311,8 +403,13 @@
         "BIZ-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 1,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DATA-01",
@@ -334,7 +431,12 @@
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DATA-02",
@@ -348,7 +450,8 @@
       ],
       "evidenceReferences": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Relevant historical evidence can be retrieved across project versions with provenance.",
@@ -359,8 +462,13 @@
         "SEC-02"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DATA-03",
@@ -375,7 +483,8 @@
       ],
       "evidenceReferences": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "A clean environment restores approved data and artifacts successfully.",
@@ -383,8 +492,13 @@
       ],
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "SEC-01",
@@ -393,7 +507,10 @@
       "lane": "security-verification",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "lib/analyzer.ts",
+        "lib/agent-os.ts"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Known vulnerabilities and remediations are validated against test fixtures and authorized targets.",
@@ -405,7 +522,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "SEC-02",
@@ -414,7 +536,9 @@
       "lane": "security-verification",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "lib/control-plane.ts"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Unauthorized users cannot access any project data, credential or action.",
@@ -423,7 +547,12 @@
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "SEC-03",
@@ -432,16 +561,26 @@
       "lane": "security-verification",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "lib/providers.ts",
+        "lib/github-account.ts"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Security review findings are recorded and fixed or explicitly dispositioned.",
         "Tests exercise material failure paths and no secrets appear in logs/exports."
       ],
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "QA-01",
@@ -450,7 +589,9 @@
       "lane": "security-verification",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "tests/acceptance.mjs"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Hosted user journeys and access boundaries pass with captured evidence.",
@@ -459,7 +600,12 @@
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "QA-02",
@@ -467,9 +613,13 @@
       "area": "06-security-and-verification",
       "lane": "security-verification",
       "historicalState": "open",
-      "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "claimedImplementation": "implemented-local-contract-tested-final-qualification-pending",
+      "sourceReferences": [
+        "tests/runtime.mjs"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Behavioral bugs and regressions cause meaningful failures.",
         "Passing snapshot-integrity checks is not presented as application correctness."
@@ -478,8 +628,13 @@
         "RUN-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 2,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "QA-03",
@@ -488,7 +643,9 @@
       "lane": "security-verification",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "tests/integration-fleet.mjs"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Measured results demonstrate stated capacity and reliability limits.",
@@ -501,7 +658,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "OPS-01",
@@ -510,7 +672,9 @@
       "lane": "release-operations",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "lib/control-plane.ts"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Authorized target failures produce accurate incidents and recoveries with timestamps.",
@@ -521,7 +685,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "OPS-02",
@@ -530,8 +699,12 @@
       "lane": "release-operations",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "companion/engine/supervisor.mjs"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "An induced test-environment incident is detected, diagnosed, repaired, checked and safely rolled back on failure.",
         "No unsupported production action is claimed or performed."
@@ -543,8 +716,13 @@
         "QA-02"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 1,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "OPS-03",
@@ -553,7 +731,9 @@
       "lane": "release-operations",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "companion/engine/update.mjs"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "A real authorized staging deployment and rollback are verified.",
@@ -565,7 +745,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "OPS-04",
@@ -574,7 +759,9 @@
       "lane": "release-operations",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "worker/runner.mjs"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Platform outages and stale workers generate actionable alerts.",
@@ -586,7 +773,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "TWIN-01",
@@ -595,8 +787,15 @@
       "lane": "general",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "lib/analyzer.ts",
+        "app/api/workspace/route.ts",
+        "app/page.tsx"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Predictions are calibrated against real staging outcomes and documented uncertainty.",
         "Twin changes cannot affect production or expose sensitive data."
@@ -608,8 +807,13 @@
         "DATA-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "TWIN-02",
@@ -618,8 +822,15 @@
       "lane": "general",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "lib/analyzer.ts",
+        "app/api/workspace/route.ts",
+        "app/page.tsx"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Scenarios trace to real input data and explicitly distinguish forecasts from facts.",
         "Revenue and cost access is permission-controlled."
@@ -629,8 +840,13 @@
         "BIZ-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "FUT-01",
@@ -639,8 +855,14 @@
       "lane": "general",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "app/api/workspace/route.ts",
+        "app/page.tsx"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Every horizon has project-specific evidence and testable milestones.",
         "Predictions remain hypotheses with evaluations, not guaranteed futures."
@@ -651,8 +873,13 @@
         "BIZ-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "BIZ-01",
@@ -662,7 +889,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Recommendations reference real evidence and measurable business objectives.",
         "Sensitive business/customer data has scoped access and retention."
@@ -672,8 +901,13 @@
         "DATA-02"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "BIZ-02",
@@ -683,7 +917,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Proposals include sources, competing solutions, validation plans and experimental results.",
         "The system does not claim that nobody has built something without evidence."
@@ -693,8 +929,13 @@
         "FUT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "EXEC-01",
@@ -703,8 +944,16 @@
       "lane": "business",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "lib/executive-scorecard.ts",
+        "app/page.tsx",
+        "tests/executive-scorecard.test.mjs",
+        "components/executive-scorecard.tsx"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "All 14 dimensions have documented methodology and evidence or an explicit unassessed state.",
         "A score never implies a certification or unsupported measurement."
@@ -716,8 +965,13 @@
         "OPS-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 2,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "UX-01",
@@ -739,7 +993,12 @@
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "UX-02",
@@ -748,8 +1007,16 @@
       "lane": "interface",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "app/page.tsx",
+        "app/globals.css",
+        "components/ui/sheet.tsx",
+        "components/ui/dialog.tsx"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Representative viewport and assistive-technology journeys pass with recorded findings.",
         "All critical actions work without a mouse."
@@ -758,8 +1025,13 @@
         "UX-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "UX-03",
@@ -788,7 +1060,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "LEGAL-01",
@@ -798,7 +1075,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Reports distinguish measured controls, missing evidence and legal interpretation.",
         "No unsupported certification or legal conclusion is issued."
@@ -809,8 +1088,13 @@
         "BIZ-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "INT-01",
@@ -819,7 +1103,9 @@
       "lane": "integration",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "lib/integration-engineering.ts"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Every adapter follows a verified lifecycle and common capability/error contract.",
@@ -831,7 +1117,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "REL-01",
@@ -840,8 +1131,18 @@
       "lane": "release-operations",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "README.md",
+        "worker/README.md",
+        "companion/README.md",
+        "architecture/STATUS.md",
+        "scripts/engine/release.mjs",
+        "scripts/install-pnpm.sh"
+      ],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "A new authorized operator can set up, verify, recover and upgrade the platform using the docs.",
         "Release notes accurately distinguish engineering work, activation and verification."
@@ -851,8 +1152,13 @@
         "OPS-04"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "REL-02",
@@ -860,7 +1166,7 @@
       "area": "13-release-and-github-handoff",
       "lane": "release-operations",
       "historicalState": "implemented_unverified",
-      "claimedImplementation": "source-transfer-provider-readback",
+      "claimedImplementation": "source-transfer-byte-verified-security-review-pending",
       "sourceReferences": [
         "SOURCE-IMPORT.md",
         "UNFINISHED-WORK/README.md",
@@ -868,7 +1174,11 @@
       ],
       "evidenceReferences": [
         "SOURCE-IMPORT.md",
-        "evidence/github-source-import.json"
+        "evidence/github-source-import.json",
+        "UNFINISHED-WORK/mgr-original-source-secret-audit-20261029.json",
+        "scripts/verify-source-import.mjs",
+        "tests/verify-source-import.test.mjs",
+        "tests/scan-import-secrets.test.mjs"
       ],
       "acceptance": [
         "User-designated GitHub repository contains the exact reviewed source and unfinished-work folder.",
@@ -881,7 +1191,12 @@
       "acceptanceProofStates": [
         "VERIFIED",
         "BLOCKED"
-      ]
+      ],
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "REL-03",
@@ -891,15 +1206,22 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "No unwanted running resources or required Vercel dependency remain.",
         "Cleanup outcome is verified; absence of a supported delete operation is documented."
       ],
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 2,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-01",
@@ -908,7 +1230,9 @@
       "lane": "integration",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "lib/github-account.ts"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
@@ -920,7 +1244,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-02",
@@ -930,7 +1259,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -940,8 +1271,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-03",
@@ -951,7 +1287,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -961,8 +1299,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-04",
@@ -972,7 +1315,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -982,8 +1327,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-05",
@@ -992,7 +1342,9 @@
       "lane": "integration",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "app/api/workspace/route.ts"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
@@ -1004,7 +1356,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-06",
@@ -1013,7 +1370,9 @@
       "lane": "integration",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "app/api/workspace/route.ts"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
@@ -1025,7 +1384,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-07",
@@ -1034,7 +1398,9 @@
       "lane": "integration",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "app/api/workspace/route.ts"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
@@ -1046,7 +1412,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-08",
@@ -1056,7 +1427,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1066,8 +1439,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-09",
@@ -1077,7 +1455,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1087,8 +1467,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-10",
@@ -1098,7 +1483,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1108,8 +1495,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-11",
@@ -1119,7 +1511,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1129,8 +1523,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-12",
@@ -1140,7 +1539,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1150,8 +1551,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-13",
@@ -1160,7 +1566,9 @@
       "lane": "integration",
       "historicalState": "open",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
+      "sourceReferences": [
+        "worker/runner.mjs"
+      ],
       "evidenceReferences": [],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
@@ -1172,7 +1580,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-14",
@@ -1182,7 +1595,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1192,8 +1607,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-15",
@@ -1203,7 +1623,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1213,8 +1635,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-16",
@@ -1224,7 +1651,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1234,8 +1663,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-17",
@@ -1245,7 +1679,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1255,8 +1691,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-18",
@@ -1266,7 +1707,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1276,8 +1719,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-19",
@@ -1287,7 +1735,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1297,8 +1747,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-20",
@@ -1308,7 +1763,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1318,8 +1775,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-21",
@@ -1329,7 +1791,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1339,8 +1803,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-22",
@@ -1350,7 +1819,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1360,8 +1831,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-23",
@@ -1371,7 +1847,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1381,8 +1859,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-24",
@@ -1392,7 +1875,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1402,8 +1887,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-25",
@@ -1413,7 +1903,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1423,8 +1915,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-26",
@@ -1434,7 +1931,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1444,8 +1943,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-27",
@@ -1455,7 +1959,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1465,8 +1971,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-28",
@@ -1476,7 +1987,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1486,8 +1999,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-29",
@@ -1497,7 +2015,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1507,8 +2027,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-30",
@@ -1518,7 +2043,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1528,8 +2055,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-31",
@@ -1539,7 +2071,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1549,8 +2083,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-32",
@@ -1560,7 +2099,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1570,8 +2111,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-33",
@@ -1581,7 +2127,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1591,8 +2139,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-34",
@@ -1602,7 +2155,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1612,8 +2167,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-35",
@@ -1623,7 +2183,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1633,8 +2195,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-36",
@@ -1644,7 +2211,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1654,8 +2223,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-37",
@@ -1665,7 +2239,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1675,8 +2251,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-38",
@@ -1686,7 +2267,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1696,8 +2279,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "CONN-39",
@@ -1707,7 +2295,9 @@
       "historicalState": "open",
       "claimedImplementation": "unspecified",
       "sourceReferences": [],
-      "evidenceReferences": [],
+      "evidenceReferences": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "acceptance": [
         "Authorized real-source discovery and incremental read-back are demonstrated.",
         "Denial, revocation, service failure and unsupported actions fail safely.",
@@ -1717,8 +2307,13 @@
         "INT-01"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-01",
@@ -1735,7 +2330,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Security tasks with source/tool evidence and useful artifacts.",
@@ -1748,8 +2344,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-02",
@@ -1766,7 +2367,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Backend tasks with source/tool evidence and useful artifacts.",
@@ -1779,8 +2381,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-03",
@@ -1797,7 +2404,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Frontend tasks with source/tool evidence and useful artifacts.",
@@ -1810,8 +2418,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-04",
@@ -1828,7 +2441,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative DevOps tasks with source/tool evidence and useful artifacts.",
@@ -1841,8 +2455,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-05",
@@ -1859,7 +2478,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Cloud tasks with source/tool evidence and useful artifacts.",
@@ -1872,8 +2492,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-06",
@@ -1890,7 +2515,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Infrastructure tasks with source/tool evidence and useful artifacts.",
@@ -1903,8 +2529,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-07",
@@ -1921,7 +2552,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Databases tasks with source/tool evidence and useful artifacts.",
@@ -1934,8 +2566,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-08",
@@ -1952,7 +2589,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative AI Development tasks with source/tool evidence and useful artifacts.",
@@ -1965,8 +2603,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-09",
@@ -1983,7 +2626,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Machine Learning tasks with source/tool evidence and useful artifacts.",
@@ -1996,8 +2640,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-10",
@@ -2014,7 +2663,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative LLM Engineering tasks with source/tool evidence and useful artifacts.",
@@ -2027,8 +2677,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-11",
@@ -2045,7 +2700,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative RAG Systems tasks with source/tool evidence and useful artifacts.",
@@ -2058,8 +2714,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-12",
@@ -2076,7 +2737,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Vector Databases tasks with source/tool evidence and useful artifacts.",
@@ -2089,8 +2751,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-13",
@@ -2107,7 +2774,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative 3D Development tasks with source/tool evidence and useful artifacts.",
@@ -2120,8 +2788,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-14",
@@ -2138,7 +2811,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Blender tasks with source/tool evidence and useful artifacts.",
@@ -2151,8 +2825,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-15",
@@ -2169,7 +2848,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Maya tasks with source/tool evidence and useful artifacts.",
@@ -2182,8 +2862,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-16",
@@ -2200,7 +2885,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Unity tasks with source/tool evidence and useful artifacts.",
@@ -2213,8 +2899,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-17",
@@ -2231,7 +2922,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Unreal Engine tasks with source/tool evidence and useful artifacts.",
@@ -2244,8 +2936,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-18",
@@ -2262,7 +2959,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Game Development tasks with source/tool evidence and useful artifacts.",
@@ -2275,8 +2973,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-19",
@@ -2293,7 +2996,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Mobile Development tasks with source/tool evidence and useful artifacts.",
@@ -2306,8 +3010,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-20",
@@ -2324,7 +3033,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Testing tasks with source/tool evidence and useful artifacts.",
@@ -2337,8 +3047,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-21",
@@ -2355,7 +3070,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative QA tasks with source/tool evidence and useful artifacts.",
@@ -2368,8 +3084,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-22",
@@ -2386,7 +3107,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Automation tasks with source/tool evidence and useful artifacts.",
@@ -2399,8 +3121,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-23",
@@ -2417,7 +3144,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative UI Design tasks with source/tool evidence and useful artifacts.",
@@ -2430,8 +3158,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-24",
@@ -2448,7 +3181,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative UX Design tasks with source/tool evidence and useful artifacts.",
@@ -2461,8 +3195,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-25",
@@ -2479,7 +3218,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Accessibility tasks with source/tool evidence and useful artifacts.",
@@ -2492,8 +3232,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-26",
@@ -2510,7 +3255,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Compliance tasks with source/tool evidence and useful artifacts.",
@@ -2523,8 +3269,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-27",
@@ -2541,7 +3292,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Legal Auditing tasks with source/tool evidence and useful artifacts.",
@@ -2554,8 +3306,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-28",
@@ -2572,7 +3329,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Documentation tasks with source/tool evidence and useful artifacts.",
@@ -2585,8 +3343,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-29",
@@ -2603,7 +3366,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Research tasks with source/tool evidence and useful artifacts.",
@@ -2616,8 +3380,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-30",
@@ -2634,7 +3403,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Business Intelligence tasks with source/tool evidence and useful artifacts.",
@@ -2647,8 +3417,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-31",
@@ -2665,7 +3440,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Product Management tasks with source/tool evidence and useful artifacts.",
@@ -2678,8 +3454,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-32",
@@ -2696,7 +3477,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Customer Analytics tasks with source/tool evidence and useful artifacts.",
@@ -2709,8 +3491,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-33",
@@ -2727,7 +3514,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Revenue Optimization tasks with source/tool evidence and useful artifacts.",
@@ -2740,8 +3528,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-34",
@@ -2758,7 +3551,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Competitive Analysis tasks with source/tool evidence and useful artifacts.",
@@ -2771,8 +3565,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-35",
@@ -2789,7 +3588,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Innovation Discovery tasks with source/tool evidence and useful artifacts.",
@@ -2802,8 +3602,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-36",
@@ -2820,7 +3625,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Future Prediction tasks with source/tool evidence and useful artifacts.",
@@ -2833,8 +3639,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-37",
@@ -2851,7 +3662,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Architecture tasks with source/tool evidence and useful artifacts.",
@@ -2864,8 +3676,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-38",
@@ -2882,7 +3699,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Code Quality tasks with source/tool evidence and useful artifacts.",
@@ -2895,8 +3713,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-39",
@@ -2913,7 +3736,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Performance tasks with source/tool evidence and useful artifacts.",
@@ -2926,8 +3750,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-40",
@@ -2944,7 +3773,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Scalability tasks with source/tool evidence and useful artifacts.",
@@ -2957,8 +3787,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-41",
@@ -2975,7 +3810,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Reliability tasks with source/tool evidence and useful artifacts.",
@@ -2988,8 +3824,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-42",
@@ -3006,7 +3847,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Observability tasks with source/tool evidence and useful artifacts.",
@@ -3019,8 +3861,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-43",
@@ -3037,7 +3884,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Networking tasks with source/tool evidence and useful artifacts.",
@@ -3050,8 +3898,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-44",
@@ -3068,7 +3921,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Cyber Defense tasks with source/tool evidence and useful artifacts.",
@@ -3081,8 +3935,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-45",
@@ -3099,7 +3958,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Penetration Testing tasks with source/tool evidence and useful artifacts.",
@@ -3112,8 +3972,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-46",
@@ -3130,7 +3995,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Open Source Analysis tasks with source/tool evidence and useful artifacts.",
@@ -3143,8 +4009,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "DOM-47",
@@ -3161,7 +4032,8 @@
       ],
       "evidenceReferences": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "acceptance": [
         "Specialist completes representative Dependency Intelligence tasks with source/tool evidence and useful artifacts.",
@@ -3174,8 +4046,13 @@
         "QA-03"
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run representative authorized domain tools, produce artifacts, verify failure/budget guards before full close",
-      "currentRecordedState": "implemented_unverified"
+      "next": "Use preserved criterion evidence and its remaining scope; continue the missing original behavior or required environment qualification. Do not repeat source-only discovery or auto-close from fixtures.",
+      "currentRecordedState": "implemented_unverified",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 3,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-01",
@@ -3198,7 +4075,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-02",
@@ -3225,7 +4107,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-03",
@@ -3248,7 +4135,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-04",
@@ -3272,7 +4164,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-05",
@@ -3295,7 +4192,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-06",
@@ -3318,7 +4220,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-07",
@@ -3341,7 +4248,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-08",
@@ -3364,7 +4276,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-09",
@@ -3386,7 +4303,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-10",
@@ -3409,7 +4331,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-11",
@@ -3432,7 +4359,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-12",
@@ -3456,7 +4388,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-13",
@@ -3480,7 +4417,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-14",
@@ -3503,7 +4445,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-15",
@@ -3526,7 +4473,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-16",
@@ -3549,7 +4501,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-17",
@@ -3572,7 +4529,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-18",
@@ -3595,7 +4557,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-19",
@@ -3619,7 +4586,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-20",
@@ -3642,7 +4614,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-21",
@@ -3666,7 +4643,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-22",
@@ -3689,7 +4671,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-23",
@@ -3712,7 +4699,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-24",
@@ -3735,7 +4727,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-25",
@@ -3761,7 +4758,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-26",
@@ -3787,7 +4789,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-27",
@@ -3810,7 +4817,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-28",
@@ -3833,7 +4845,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-29",
@@ -3856,7 +4873,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "AUD-30",
@@ -3880,7 +4902,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-01",
@@ -3910,7 +4937,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-02",
@@ -3936,7 +4968,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-03",
@@ -3959,7 +4996,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-04",
@@ -3982,7 +5024,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-05",
@@ -4005,7 +5052,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-06",
@@ -4028,7 +5080,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-07",
@@ -4055,7 +5112,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-08",
@@ -4078,7 +5140,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-09",
@@ -4101,7 +5168,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-10",
@@ -4124,7 +5196,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-11",
@@ -4147,7 +5224,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-12",
@@ -4170,7 +5252,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-13",
@@ -4193,7 +5280,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-14",
@@ -4216,7 +5308,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-15",
@@ -4240,7 +5337,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-16",
@@ -4263,7 +5365,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-17",
@@ -4286,7 +5393,12 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     },
     {
       "id": "V2-18",
@@ -4314,11 +5426,19 @@
       ],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task.",
-      "currentRecordedState": "open"
+      "currentRecordedState": "open",
+      "localVerification": {
+        "verifiedClauses": 0,
+        "examinedClauses": 0,
+        "fullOriginalAcceptance": false
+      }
     }
   ],
   "currentRecordedStatusCounts": {
-    "open": 126,
-    "implemented_unverified": 48
-  }
+    "open": 123,
+    "implemented_unverified": 51
+  },
+  "historicalSourceCommit": "50d3e375db1cda2a4c78d80cc683d52186a1cd0d",
+  "updatedAt": "2026-10-29T13:22:45.421Z",
+  "verificationReport": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
 }

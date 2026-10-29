@@ -1,0 +1,296 @@
+GAP_CORPUS_RESULT {"schema":"mgr.gap-rule-evaluation.v1","sourceSha256":"0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709","corpusSha256":"10f7ad47e04b6a8394b9c73b1fa166af1f2b62885443373c0a195db3069503f6","total":33,"byRule":{"image":{"cases":18,"positives":7,"negatives":11,"truePositive":3,"trueNegative":8,"falsePositive":3,"falseNegative":4,"falsePositiveRate":0.2727272727272727,"falseNegativeRate":0.5714285714285714},"tests":{"cases":15,"positives":5,"negatives":10,"truePositive":2,"trueNegative":8,"falsePositive":2,"falseNegative":3,"falsePositiveRate":0.2,"falseNegativeRate":0.6}},"qualification":"Hand-labeled local regression corpus for image alt presence and test-path recognition only. No production false-positive threshold or semantic accessibility judgment. SQL, eval, credential and other rules remain unmeasured.","mismatches":[{"id":"image-alt-space","expected":false,"detected":true},{"id":"image-alt-newline","expected":false,"detected":true},{"id":"image-second-missing","expected":true,"detected":false},{"id":"image-first-missing","expected":true,"detected":false},{"id":"image-data-alt-only","expected":true,"detected":false},{"id":"image-alt-in-value","expected":true,"detected":false},{"id":"image-quoted-greater","expected":false,"detected":true},{"id":"tests-directory","expected":false,"detected":true},{"id":"tests-python-prefix","expected":false,"detected":true},{"id":"tests-contest-not-test","expected":true,"detected":false},{"id":"tests-latest-not-test","expected":true,"detected":false},{"id":"tests-contest-java","expected":true,"detected":false}]}
+✔ image-none (1.131874ms)
+✔ image-missing (0.191478ms)
+✔ image-described (0.09943ms)
+✔ image-decorative (0.077717ms)
+✖ image-alt-space (0.663329ms)
+✔ image-alt-case (0.120301ms)
+✖ image-alt-newline (0.147513ms)
+✖ image-second-missing (0.103937ms)
+✖ image-first-missing (0.095463ms)
+✖ image-data-alt-only (0.160702ms)
+✖ image-alt-in-value (0.096736ms)
+✖ image-quoted-greater (0.076195ms)
+✔ image-real-and-data-alt (0.082054ms)
+✔ image-altitude-only (0.049414ms)
+✔ image-all-described (0.117637ms)
+✔ image-other-element (0.069104ms)
+✔ image-self-closing (0.090546ms)
+✔ image-jsx-alt (0.043155ms)
+✖ tests-directory (0.081162ms)
+✔ test-directory (0.134352ms)
+✔ tests-special-directory (0.057226ms)
+✔ tests-dot-test (0.085809ms)
+✔ tests-dot-spec (0.034191ms)
+✔ tests-go-suffix (0.025068ms)
+✖ tests-python-prefix (0.15913ms)
+✔ tests-ruby-suffix (0.064947ms)
+✔ tests-spec-directory (0.034952ms)
+✔ tests-java-suffix (0.05353ms)
+✖ tests-contest-not-test (0.128734ms)
+✖ tests-latest-not-test (0.078398ms)
+✖ tests-contest-java (0.068963ms)
+✔ tests-docs-not-tests (0.037386ms)
+✔ tests-source-only (0.057476ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 21
+ℹ fail 12
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14.05149
+
+✖ failing tests:
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-alt-space (0.663329ms)
+  AssertionError [ERR_ASSERTION]: image: expected false, detected true
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-alt-newline (0.147513ms)
+  AssertionError [ERR_ASSERTION]: image: expected false, detected true
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-second-missing (0.103937ms)
+  AssertionError [ERR_ASSERTION]: image: expected true, detected false
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-first-missing (0.095463ms)
+  AssertionError [ERR_ASSERTION]: image: expected true, detected false
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-data-alt-only (0.160702ms)
+  AssertionError [ERR_ASSERTION]: image: expected true, detected false
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-alt-in-value (0.096736ms)
+  AssertionError [ERR_ASSERTION]: image: expected true, detected false
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ image-quoted-greater (0.076195ms)
+  AssertionError [ERR_ASSERTION]: image: expected false, detected true
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ tests-directory (0.081162ms)
+  AssertionError [ERR_ASSERTION]: tests: expected false, detected true
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ tests-python-prefix (0.15913ms)
+  AssertionError [ERR_ASSERTION]: tests: expected false, detected true
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ tests-contest-not-test (0.128734ms)
+  AssertionError [ERR_ASSERTION]: tests: expected true, detected false
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ tests-latest-not-test (0.078398ms)
+  AssertionError [ERR_ASSERTION]: tests: expected true, detected false
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/gap-evaluation.test.mjs:16:23
+✖ tests-contest-java (0.068963ms)
+  AssertionError [ERR_ASSERTION]: tests: expected true, detected false
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/gap-evaluation.test.mjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,3 +1,5 @@
+> **Current checkpoint — October 29, 2026:** [The planning/Imprint repair report](mgr-planning-imprint-wave-20261029.md) records the latest tested source. OmniDev passed 58/58 profiles; canonical states are 122 open and 52 implemented_unverified. Eleven local clauses are reproduced; no original parent is independently certified. Start from the existing root HANDOFF and MGR-TRILOGY-HANDOFF. Older checkpoint entries below are history. The owner requests concrete unfinished features, not aggregate shorthand.
+
 # OmniDev Swarm — unfinished work
 
 This is the single starting point for all known unfinished engineering, design, authorization, activation and verification work. It covers the original platform request and the account-first direction accepted on October 8, 2026 (America/Chicago).
@@ -10,7 +12,11 @@ Do not merge the 28 new MGR IDs into the original count or mark historical items
 
 DeepSeek's revised SQLite event, territory-lock and census proposals are evaluated in [mgr-deepseek-round2-review.md](mgr-deepseek-round2-review.md). The ideas are approved for research and qualified adaptation, **not** direct production installation; the proposed event hash verifier and lease ownership model still contain correctness/security defects.
 
-**174 open work items:** the original 40 platform items, 39 individually tracked integrations and 47 executable specialist domains, plus 30 final-audit additions and 18 Version 2 completion upgrades. No item is marked complete merely because its UI or catalog entry exists. Future discoveries should be added here rather than kept only in chat.
+**174 original work items (123 open, 51 implemented_unverified; none independently certified):** the original 40 platform items, 39 individually tracked integrations and 47 executable specialist domains, plus 30 final-audit additions and 18 Version 2 completion upgrades. No item is marked complete merely because its UI or catalog entry exists. Future discoveries should be added here rather than kept only in chat.
+
+## Current verified checkpoint — October 29, 2026
+
+[Full verification and repair report](mgr-full-verification-wave-20261029.md): **54/54 local profiles passed**, **136/174 source-linked**, **327/327 paths present**, seven separately recorded local contract results. The 441 original clauses remain unchanged; local passes do not imply live provider/worker or final certification. Use the [current index](174-IMPLEMENTATION-INDEX.md) and [criterion register](mgr-174-acceptance-evidence-register.json) for current status. Older narrative workstream entries retain their historical planning context.
 
 ## Start here
 

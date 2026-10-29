@@ -1,3 +1,46 @@
+# Current coordinated checkpoint — October 29, 2026
+
+Read this section before historical entries below. This is an additive update to the established handoff protocol; original decisions and evidence remain preserved.
+
+| Product | Role | Tested source | Current local result |
+|---|---|---|---|
+| OmniDev | Project/worker orchestration and owner governance | `1c00a6105afe42b06a1d463d541f06c51839f9ad` |58/58 profiles, including build and TypeScript |
+| Code Monster | Imprint composition, candidate writes and signed verification | `166305de9fa380c3a9f28936d6d95f011531195a` |113/113 tests; Boolean execution removed |
+| OmniSight | Permission-scoped read-only evidence views | `a94ae4b478901bbe7b004677b706a3267f89204a` |39/39 checks; actual producer/consumer contract passed |
+
+Current report: [planning, history, scanner and Imprint repairs](UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.md). Exact OmniDev logs: [58-profile report](UNFINISHED-WORK/evidence/planning-wave-20261029/run/report.json). The companion repositories retain their own current handoffs and committed-verification artifacts.
+
+Current implementation work includes immutable evidence-based plans, append-only observations, historical decision search/provenance, project-safe actions, reconciled findings, 41-case scanner repairs, constrained Imprint assembly, command-bound receipt v2, full batch replay binding and clearing stale viewer data. Imprint and Slot Machine are components in Code Monster; DevMapGod remains a cross-product workflow. Keep the established Docker worker; no replacement scheduler was introduced.
+
+Canonical ledger state: 122 open and 52 implemented_unverified original parents; 11 local clause results; zero independently certified parents. All 174 original IDs, 441 acceptance statements and 28 separate upgrades are conserved. 136 parents link to 343 present committed source references; 38 remain unlinked. These counters are bookkeeping, not the requested explanation of what remains: read the concrete functional limits in the current report and the next-wave detailed pending-work register.
+
+The owner requested the next build wave and a concrete exhaustive remaining-work explanation. Next work is being selected from real missing functionality: usable Imprint preparation/export, scoped viewer pagination, and measured scanner/history gaps. Prior tested source revisions above remain frozen checkpoints; new work requires its own source receipts. Do not call unfinished features blocked solely because they still require engineering.
+
+Publication remains uncompleted. Confirmed GitHub rights and signed-in Windows CLI do not equal upload success; the last native write returned user-rejected, with no confirmed pending prompt. Do not bypass it. No merge, deployment, paid model call, qualified Docker host or independent production signer occurred. Code Monster/OmniSight materialized baselines need ancestry reconciliation before any later remote push.
+
+Older counts, v1/Boolean execution instructions and intermediate failures below are historical. Current code requires receipt v2 and preserves historical records without reactivating retired execution.
+
+---
+
+# Current verification result — 2026-10-29
+
+**54/54 local profiles passed** at `8aa5f615af380bea1676daf2459d365f2e4653ae`, including TypeScript and the actual production build. Complete logs: `UNFINISHED-WORK/evidence/full-verification-20261029/run/report.json`. The prior b05af17 run is retained separately; the final source moves generated HTML out of tracked evidence. Exact source/log hashes were independently reread.
+
+- Canonical scope: **174 original parents / 441 unchanged clauses / 28 separate upgrades**.
+- Current states: **123 open, 51 implemented_unverified, zero independently certified parents**.
+- Source: **136 linked / 38 unlinked; 327/327 committed paths present**. Original 66 and later 44 counts are historical, not current.
+- This wave investigated or exercised **105 distinct original parents** (44 discovery + 14 core + 47 specialist workflows), not 105 completed parents.
+- **140 targeted changed/added regression cases pass.** Core before/after behavior: 17 failing cases become passing, for 23/23 current cases.
+- **Seven local clause results** are preserved separately in `localVerification`; original final criterion count stays one historical REL-02 source-import proof. RUN-03/QA-02/EXEC-01 have all named local contracts reproduced but are not production-certified.
+- Repairs cover atomic evidence-preserving recovery, graph/restore/delete integrity, provider credential races, all fourteen executive dimensions, native table controls, strict cryptographic proof gates and a clean-source full regression workflow.
+- Read `UNFINISHED-WORK/mgr-full-verification-wave-20261029.md`, `UNFINISHED-WORK/mgr-full-verification-wave-20261029.json`, `UNFINISHED-WORK/174-IMPLEMENTATION-INDEX.md`, `UNFINISHED-WORK/mgr-174-acceptance-evidence-register.json` and `UNFINISHED-WORK/FULL-VERIFICATION-WORKFLOW.md` before continuing.
+- Browser interaction, real Docker/worker host, live provider/tenant behavior, Vercel team authorization and protected independent signer/owner approval remain explicit gaps. Continue exact missing acceptance behavior, not another source-only metadata sweep.
+- GitHub reports this OmniDev repository **public**. An earlier push was blocked by automatic approval review over exact publication authorization. The evidence was recorded locally; verify remote SHA before claiming publication. Keep other repository visibility boundaries and do not merge/deploy from a local pass.
+
+Everything below is earlier history unless consistent with this section. Preserve it; use the canonical current register and newest exact run for decisions.
+
+---
+
 # MGR OMNIDEV SWARM — LIVE HANDOFF
 
 Updated 2026-10-29. **This is the immediate restart entrypoint.**

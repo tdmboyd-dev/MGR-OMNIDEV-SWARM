@@ -1,6 +1,6 @@
 {
   "project": "OmniDev Swarm",
-  "as_of": "2026-10-09T12:37:20.088593+00:00",
+  "as_of": "2026-10-29T14:42:22.987Z",
   "user_local_date": "2026-10-09",
   "baseline_source_commit": "50d3e375db1cda2a4c78d80cc683d52186a1cd0d",
   "site_url": "https://omnidev-swarm.rainytetra1.chatgpt.site",
@@ -23,7 +23,28 @@
     "integration_fleet_scope": "SQLite and host scheduling; no live connectivity proof",
     "specialist_area_checks": 52,
     "specialist_area_scope": "48 evidence workflows; tool qualification pending",
-    "repository_completion_checks": 13
+    "repository_completion_checks": 13,
+    "historical_counter_note": "Earlier scalar suite counts are historical and include nested suites; they are not a current unique-test total.",
+    "latest_full_verification": {
+      "sourceCommit": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+      "report": "UNFINISHED-WORK/evidence/planning-wave-20261029/run/report.json",
+      "passedProfiles": 58,
+      "failedProfiles": 0,
+      "blockedProfiles": 0,
+      "scopedLocalVerifiedClauses": 11,
+      "independentlyCertifiedParents": 0
+    },
+    "full_verification_history": [
+      {
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "report": "UNFINISHED-WORK/evidence/full-verification-20261029/run/report.json",
+        "passedProfiles": 54,
+        "failedProfiles": 0,
+        "blockedProfiles": 0,
+        "scopedLocalVerifiedClauses": 7,
+        "independentlyCertifiedParents": 0
+      }
+    ]
   },
   "task_count": 174,
   "tasks": [
@@ -50,7 +71,14 @@
         "lib/repository.ts"
       ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "AUTH-02",
@@ -121,9 +149,16 @@
         "lib/github-account.ts"
       ],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
-      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "AUTH-04",
@@ -151,7 +186,9 @@
         "lib/github-account.ts"
       ],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "audit_subtasks": [
         {
           "id": "BP-07",
@@ -161,7 +198,12 @@
           "status": "open",
           "resolution_and_acceptance": "Source/severity: P1; experience onboarding/core flows\nResolution: A resumable connection state machine records requested scopes, initiating user, organization owner, provider application, pending admin and expiry. Tenant admin handoff never sends credentials.\nAcceptance: Different requester/approver users finish or deny setup; abandoned callback, removed owner, changed scope and revoked app preserve clear status."
         }
-      ]
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "RUN-01",
@@ -222,7 +264,8 @@
       "owner": "Unassigned",
       "evidence": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "audit_subtasks": [
         {
@@ -235,16 +278,21 @@
         }
       ],
       "implementation_state": "partial-tested-local",
-      "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met."
+      "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "RUN-03",
       "title": "Harden durable orchestration and recovery",
       "area": "02-agent-runtime",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P0",
       "kind": "engineering",
-      "current": "Atomic enqueue, request idempotency, expiring bound worker assignments, replay rejection and effect reservations exercised locally. Distributed fairness, billing conservation, real-host crash/lease tests remain open.",
+      "current": "Atomic admission and recovery preserve prior candidates/reviews/test output, reject stale observations and record one durable recovery event. Current SQLite concurrency, retry exhaustion and recovery-audit failure tests pass. Real multi-host process death, external effects, distributed fairness and billing conservation remain unqualified.",
       "work": [
         "Review lease heartbeat/extension for long jobs and clock/timeout behavior.",
         "Add idempotency keys for enqueue, concurrent PR creation and worker evidence writes.",
@@ -267,9 +315,16 @@
       "owner": "Unassigned",
       "evidence": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
-      "implementation_state": "partial-tested-local"
+      "implementation_state": "implemented-local-contract-tested-final-qualification-pending",
+      "historical_status": "open",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DEV-01",
@@ -278,7 +333,7 @@
       "status": "open",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Native mode only creates missing README and snapshot-integrity tests. AI candidates and exact-baseline patches are implemented, with stubbed model execution.",
+      "current": "Supported snapshot edits, stale baselines, unsafe paths and malformed/replayed saved candidates are rejected recoverably in actual local runtime tests. General language-aware feature/refactor work and real model-generated application outcomes remain incomplete.",
       "work": [
         "Support scoped feature, bug fix, refactor, migration and architecture objectives.",
         "Use repository context retrieval, language-aware patching and artifact provenance.",
@@ -299,9 +354,16 @@
         "lib/analyzer.ts"
       ],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
-      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DEV-02",
@@ -331,9 +393,16 @@
         "lib/github.ts"
       ],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
-      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DEV-03",
@@ -395,7 +464,8 @@
       "owner": "Unassigned",
       "evidence": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "audit_subtasks": [
         {
@@ -407,7 +477,12 @@
           "resolution_and_acceptance": "**Sources:** K / “Canonical objects”, “Relationship semantics and constraints”, “Knowledge APIs”.\n\nReversible mappings are specified but not how accepted decisions, citation selectors, external references and task targets behave after a split. Repointing all historical references can falsify which entity an earlier decision targeted.\n\n**Resolution:** identity mappings are temporal assertions; historic references remain bound to original IDs and versions. New current queries resolve through reviewed maps with ambiguity flags. Split impact plan invalidates affected projections and decision/task assumptions; an external-action target is always re-resolved and approved at exact revision.\n\n**Gate:** wrong merge then split; historical answers retain original evidence; tasks targeting an ambiguous merged entity cannot execute; current citations resolve without misleading attribution."
         }
       ],
-      "implementation_state": "partial-tested-local"
+      "implementation_state": "partial-tested-local",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "GRAPH-02",
@@ -444,7 +519,7 @@
       "status": "open",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Rules check some secrets/SQL/eval, accessibility markers, TODOs and presence of tests/docs/CI/telemetry.",
+      "current": "Rescans preserve manual dispositions and reconcile snapshot signals. Image-alt presence and test-path recognition pass41 labeled local cases; production accuracy and remaining rules are not established.",
       "work": [
         "Build evidence-based rules for missing pages, APIs, workflows, validation, security controls, monitoring, integrations, automation, architecture layers, accessibility and scale planning.",
         "Evaluate expectations against project type, requirements, user flows and repository coverage.",
@@ -461,12 +536,31 @@
       ],
       "source_files": [
         "lib/analyzer.ts",
-        "lib/repo-audit.ts"
+        "lib/repo-audit.ts",
+        "lib/workspace-planning.ts",
+        "lib/workspace-scope.ts",
+        "app/api/workspace/route.ts"
       ],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "UNFINISHED-WORK/evidence/planning-wave-20261029/run/report.json"
+      ],
       "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
-      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "sourceCommit": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+        "scope": "Executed local contracts with limits; original parent remains uncertified"
+      },
+      "verification_history": [
+        {
+          "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+          "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+          "scope": "local contract/discovery evidence only; original parent remains uncertified"
+        }
+      ]
     },
     {
       "id": "DATA-01",
@@ -512,7 +606,7 @@
       "status": "open",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Lexical evidence retrieval, structured decision memory and outcome revision history implemented. Vector/semantic retrieval, global privacy-safe learning and indefinite retention qualification remain open.",
+      "current": "Project-scoped lexical retrieval, structured decisions, corrected historical outcomes and plan-version citations are implemented and tested locally. Semantic retrieval, tenant privacy, retention and deletion qualification remain open.",
       "work": [
         "Ingest decisions, bug/deployment history, debt, feature evolution, roadmaps, research, business/security/performance context.",
         "Add full-text/semantic retrieval with source references, project scope and version lineage.",
@@ -527,12 +621,19 @@
         "SEC-02"
       ],
       "source_files": [
-        "lib/intelligence.ts"
+        "lib/intelligence.ts",
+        "app/api/intelligence/route.ts",
+        "lib/workspace-storage.ts",
+        "components/intelligence-workspace.tsx",
+        "components/decision-record.tsx"
       ],
       "owner": "Unassigned",
       "evidence": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "UNFINISHED-WORK/evidence/planning-wave-20261029/run/report.json"
       ],
       "audit_subtasks": [
         {
@@ -544,7 +645,19 @@
           "resolution_and_acceptance": "**Sources:** K / “Decision schema and lifecycle”; A / “Bounded debate algorithm”.\n\nAn accepted historic decision remains searchable, but must not authorize a later action after source, target, regulation, budget or accountable signer changes.\n\n**Resolution:** separate historic accepted-decision record from current effective policy/action authorization. Decision applicability has version, expiry/review date and dependency conditions. Reversal creates a new decision plus implementation obligations; do not silently erase the old rationale or assume reversal compensates deployed effects.\n\n**Gate:** expired accepted decision, withdrawn approver authority, target revision change and superseded architecture; historical display remains accurate while new dispatch requires current authorization.\n\n## Research and evolution hostile review"
         }
       ],
-      "implementation_state": "partial-tested-local"
+      "implementation_state": "partial-tested-local",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "sourceCommit": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+        "scope": "Executed local contracts with limits; original parent remains uncertified"
+      },
+      "verification_history": [
+        {
+          "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+          "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+          "scope": "local contract/discovery evidence only; original parent remains uncertified"
+        }
+      ]
     },
     {
       "id": "DATA-03",
@@ -571,9 +684,15 @@
       "owner": "Unassigned",
       "evidence": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
-      "implementation_state": "partial-tested-local"
+      "implementation_state": "partial-tested-local",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "SEC-01",
@@ -683,9 +802,16 @@
         "lib/github-account.ts"
       ],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
-      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "QA-01",
@@ -718,10 +844,10 @@
       "id": "QA-02",
       "title": "Test actual application behavior",
       "area": "06-security-and-verification",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P0",
       "kind": "engineering",
-      "current": "Generated fixture tests only check snapshot integrity and a manifest property, not application behavior.",
+      "current": "Actual behavior regression suites reproduce defects before repair and pass afterward. A clean-commit full workflow rebuilds test modules, type-checks, builds the application and captures all 54 reviewed profiles with source/output hashes. Snapshot integrity stays distinct from application correctness; arbitrary user-project toolchains and real isolated host qualification remain open.",
       "work": [
         "Discover project test frameworks and approved commands without running arbitrary shell instructions on the host.",
         "Run language/toolchain-specific unit, integration, API and critical user-flow tests in isolated workers.",
@@ -739,9 +865,18 @@
         "tests/runtime.mjs"
       ],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
-      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED",
+      "historical_status": "open",
+      "implementation_state": "implemented-local-contract-tested-final-qualification-pending",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "QA-03",
@@ -864,9 +999,16 @@
         "companion/engine/supervisor.mjs"
       ],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
-      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "OPS-03",
@@ -949,9 +1091,27 @@
         "OPS-01",
         "DATA-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/analyzer.ts",
+        "app/api/workspace/route.ts",
+        "app/page.tsx"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "implementation_discovery": {
+        "evidence": "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "classification": "partial-implementation-found",
+        "finding": "The actual simulate() function computes an explicitly illustrative queueing scenario; the route persists scenario results and the twin screen displays them. This is real implemented functionality, but no staging replica or calibration dataset was found.",
+        "qualification": "located implementation; exact acceptance is tracked separately"
+      },
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "TWIN-02",
@@ -974,18 +1134,46 @@
         "TWIN-01",
         "BIZ-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/analyzer.ts",
+        "app/api/workspace/route.ts",
+        "app/page.tsx",
+        "lib/workspace-planning.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "UNFINISHED-WORK/evidence/planning-wave-20261029/run/report.json"
+      ],
+      "implementation_discovery": {
+        "evidence": "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "classification": "partial-implementation-found",
+        "finding": "simulate() multiplies user-entered per-replica cost by replicas and labels the result modeled. This is a hypothetical cost calculation, not an authorized billing or revenue integration.",
+        "qualification": "located implementation; exact acceptance is tracked separately"
+      },
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "sourceCommit": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+        "scope": "Executed local contracts with limits; original parent remains uncertified"
+      },
+      "verification_history": [
+        {
+          "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+          "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+          "scope": "local contract/discovery evidence only; original parent remains uncertified"
+        }
+      ]
     },
     {
       "id": "FUT-01",
       "title": "Replace future-state templates with evaluated plans",
       "area": "08-digital-twins-and-futures",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "V2/V3/V5/V10 are disclosed planning templates informed by snapshot gaps.",
+      "current": "Versioned evidence-based V2/V3/V5/V10 planning and immutable outcome evaluation are implemented and locally tested. Broader market, calibrated model and production qualification remain open.",
       "work": [
         "Generate evidence-based architecture, bottleneck, migration, product-line and revenue-roadmap options.",
         "Add dependencies, tradeoffs, uncertainty, experiments and measurable milestones.",
@@ -1000,9 +1188,20 @@
         "TWIN-01",
         "BIZ-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "app/api/workspace/route.ts",
+        "app/page.tsx",
+        "lib/workspace-planning.ts",
+        "lib/workspace-storage.ts",
+        "components/planning-workspace.tsx"
+      ],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "UNFINISHED-WORK/evidence/planning-wave-20261029/run/report.json"
+      ],
       "audit_subtasks": [
         {
           "id": "AK-22",
@@ -1012,7 +1211,33 @@
           "status": "open",
           "resolution_and_acceptance": "**Sources:** E / “Scenario engine”; K / “Bitemporal and scenario semantics”.\n\nMany scenarios can appear insightful without ever being resolved. Strategic forecasts with vague outcomes cannot earn an accuracy score and can bias roadmaps through narrative confidence.\n\n**Resolution:** each scoreable forecast freezes event definition, horizon, probability/range, source time, resolution source and missing-data rules. Separate scored probabilistic forecasts, structural stress scenarios and speculative inventions. Report coverage and unresolved forecasts. Robust/reversible decisions may be useful without assigning unreliable probabilities to decade-scale AGI or quantum futures.\n\n**Gate:** backtest with source cutoffs; detect future-information leakage; unresolved predictions do not count as successes; original issued forecasts remain immutable."
         }
-      ]
+      ],
+      "implementation_discovery": {
+        "evidence": "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "classification": "partial-implementation-found",
+        "finding": "The future action persists V2/V3/V5/V10 horizons with project ID, title and gap count. The horizon text remains a common template; its method string explicitly states no market research or predictions were performed.",
+        "qualification": "located implementation; exact acceptance is tracked separately"
+      },
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "sourceCommit": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+        "scope": "Executed local contracts with limits; original parent remains uncertified"
+      },
+      "verification_history": [
+        {
+          "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+          "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+          "scope": "local contract/discovery evidence only; original parent remains uncertified"
+        }
+      ],
+      "implementation_history": [
+        {
+          "sourceCommit": "6bc20032061d90b1129e58cc54e251a3164207d1",
+          "status": "open",
+          "current": "V2/V3/V5/V10 are disclosed planning templates informed by snapshot gaps."
+        }
+      ],
+      "implementation_state": "partial-tested-local"
     },
     {
       "id": "BIZ-01",
@@ -1037,7 +1262,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "BIZ-02",
@@ -1063,7 +1295,9 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "audit_subtasks": [
         {
           "id": "BP-14",
@@ -1073,16 +1307,21 @@
           "status": "open",
           "resolution_and_acceptance": "Source/severity: P2; future/innovation strategy\nResolution: Every opportunity has problem owner, evidence, experiment cost, rights and stop criterion. Generated ideas are hypotheses, not patentability or revenue.\nAcceptance: Customer/research validation changes stage; rejected ideas retain rationale; no pipeline monetary totals without defined probability/valuation basis."
         }
-      ]
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "EXEC-01",
       "title": "Complete executive intelligence scores",
       "area": "10-business-and-innovation",
-      "status": "open",
+      "status": "implemented_unverified",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Seven heuristic scores exist; no complete executive scorecard or measured business readiness exists.",
+      "current": "All fourteen original executive dimensions now render documented methodologies, evidence requirements and explicit unassessed values; model and actual React markup tests pass. No live measurements or production certification is inferred.",
       "work": [
         "Implement all requested scores: Security, Performance, Architecture, Scalability, Reliability, Maintainability, Innovation, Revenue Potential, AI Readiness, Technical Debt, Operational Excellence, Developer Experience, User Experience and Business Health.",
         "Define data requirements, weighting, coverage and confidence; mark unknown dimensions unassessed.",
@@ -1098,9 +1337,29 @@
         "BIZ-01",
         "OPS-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/executive-scorecard.ts",
+        "app/page.tsx",
+        "tests/executive-scorecard.test.mjs",
+        "components/executive-scorecard.tsx"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "implementation_discovery": {
+        "evidence": "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "classification": "repaired-and-locally-tested",
+        "finding": "Added all original fourteen named executive dimensions, documented methodology, required evidence, next actions, source/revision references, confidence/coverage and explicit null/unassessed measurements. Existing seven snapshot indicators are labeled separately. No aggregate score or certification is inferred from heuristic cleanliness.",
+        "qualification": "located implementation; exact acceptance is tracked separately"
+      },
+      "historical_status": "open",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "UX-01",
@@ -1167,9 +1426,17 @@
       "dependencies": [
         "UX-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "app/page.tsx",
+        "app/globals.css",
+        "components/ui/sheet.tsx",
+        "components/ui/dialog.tsx"
+      ],
       "owner": "Unassigned",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
       "audit_subtasks": [
         {
           "id": "BP-12",
@@ -1179,7 +1446,18 @@
           "status": "open",
           "resolution_and_acceptance": "Source/severity: P1; accessibility/mobile\nResolution: Release by complete journey, not isolated component. Evaluate real keyboard, screen reader, zoom, touch and poor-network paths, with stop conditions for dangerous confusion.\nAcceptance: Independent evaluation across connect, inspect, review, cancel/reconcile and budget change; no critical blockers."
         }
-      ]
+      ],
+      "implementation_discovery": {
+        "evidence": "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "classification": "partial-implementation-found-and-repaired",
+        "finding": "Responsive styles, native controls and keyboard handlers for SVG graph nodes exist. Two genuine gaps were found: the entity and finding tables used clickable rows with no keyboard action. Replaced both with native labeled buttons while retaining table semantics. Executive evidence uses native details/summary.",
+        "qualification": "located implementation; exact acceptance is tracked separately"
+      },
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "UX-03",
@@ -1206,14 +1484,28 @@
       ],
       "source_files": [
         "components/intelligence-workspace.tsx",
-        "components/runtime-workspace.tsx"
+        "components/runtime-workspace.tsx",
+        "components/planning-workspace.tsx",
+        "components/decision-record.tsx"
       ],
       "owner": "Unassigned",
       "evidence": [
         "evidence/platform.txt",
-        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+        "UNFINISHED-WORK/build-pass-2026-10-09.md",
+        "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "UNFINISHED-WORK/evidence/planning-wave-20261029/run/report.json"
       ],
-      "implementation_state": "partial-tested-local"
+      "implementation_state": "partial-tested-local",
+      "verification_history": [
+        {
+          "note": "No earlier wave field"
+        }
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "sourceCommit": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+        "scope": "Executed local contracts with limits; original parent remains uncertified"
+      }
     },
     {
       "id": "LEGAL-01",
@@ -1239,7 +1531,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "INT-01",
@@ -1292,9 +1591,30 @@
         "QA-01",
         "OPS-04"
       ],
-      "source_files": [],
+      "source_files": [
+        "README.md",
+        "worker/README.md",
+        "companion/README.md",
+        "architecture/STATUS.md",
+        "scripts/engine/release.mjs",
+        "scripts/install-pnpm.sh"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "implementation_discovery": {
+        "evidence": "UNFINISHED-WORK/mgr-unlinked-deep-discovery-20261029.json",
+        "classification": "partial-operating-documentation-found",
+        "finding": "There are actual worker setup/doctor instructions, companion account/model/recovery guidance, signed updater code and capability/evidence limits. These should not be treated as absent. No complete independent fresh-operator setup/recover/upgrade reproduction for all shipped platform capabilities is recorded.",
+        "qualification": "located implementation; exact acceptance is tracked separately"
+      },
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "REL-02",
@@ -1353,7 +1673,14 @@
       "dependencies": [],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-01",
@@ -1404,7 +1731,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-03",
@@ -1428,7 +1762,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-04",
@@ -1452,7 +1793,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-05",
@@ -1557,7 +1905,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-09",
@@ -1581,7 +1936,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-10",
@@ -1605,7 +1967,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-11",
@@ -1629,7 +1998,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-12",
@@ -1653,7 +2029,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-13",
@@ -1704,7 +2087,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-15",
@@ -1728,7 +2118,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-16",
@@ -1752,7 +2149,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-17",
@@ -1776,7 +2180,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-18",
@@ -1800,7 +2211,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-19",
@@ -1824,7 +2242,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-20",
@@ -1848,7 +2273,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-21",
@@ -1872,7 +2304,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-22",
@@ -1896,7 +2335,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-23",
@@ -1920,7 +2366,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-24",
@@ -1944,7 +2397,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-25",
@@ -1968,7 +2428,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-26",
@@ -1992,7 +2459,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-27",
@@ -2016,7 +2490,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-28",
@@ -2040,7 +2521,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-29",
@@ -2064,7 +2552,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-30",
@@ -2088,7 +2583,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-31",
@@ -2112,7 +2614,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-32",
@@ -2136,7 +2645,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-33",
@@ -2160,7 +2676,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-34",
@@ -2184,7 +2707,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-35",
@@ -2208,7 +2738,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-36",
@@ -2232,7 +2769,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-37",
@@ -2256,7 +2800,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-38",
@@ -2280,7 +2831,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "CONN-39",
@@ -2304,7 +2862,14 @@
       ],
       "source_files": [],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-01",
@@ -2339,13 +2904,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-02",
@@ -2380,13 +2951,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-03",
@@ -2421,13 +2998,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-04",
@@ -2462,13 +3045,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-05",
@@ -2503,13 +3092,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-06",
@@ -2544,13 +3139,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-07",
@@ -2585,13 +3186,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-08",
@@ -2626,13 +3233,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-09",
@@ -2667,13 +3280,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-10",
@@ -2708,13 +3327,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-11",
@@ -2749,13 +3374,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-12",
@@ -2790,13 +3421,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-13",
@@ -2831,13 +3468,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-14",
@@ -2872,13 +3515,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-15",
@@ -2913,13 +3562,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-16",
@@ -2954,13 +3609,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-17",
@@ -2995,13 +3656,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-18",
@@ -3036,13 +3703,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-19",
@@ -3077,13 +3750,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-20",
@@ -3118,13 +3797,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-21",
@@ -3159,13 +3844,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-22",
@@ -3200,13 +3891,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-23",
@@ -3241,13 +3938,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-24",
@@ -3282,13 +3985,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-25",
@@ -3323,13 +4032,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-26",
@@ -3364,13 +4079,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-27",
@@ -3405,13 +4126,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-28",
@@ -3446,13 +4173,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-29",
@@ -3487,13 +4220,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-30",
@@ -3528,13 +4267,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-31",
@@ -3569,13 +4314,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-32",
@@ -3610,13 +4361,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-33",
@@ -3651,13 +4408,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-34",
@@ -3692,13 +4455,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-35",
@@ -3733,13 +4502,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-36",
@@ -3774,13 +4549,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-37",
@@ -3815,13 +4596,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-38",
@@ -3856,13 +4643,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-39",
@@ -3897,13 +4690,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-40",
@@ -3938,13 +4737,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-41",
@@ -3979,13 +4784,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-42",
@@ -4020,13 +4831,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-43",
@@ -4061,13 +4878,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-44",
@@ -4102,13 +4925,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-45",
@@ -4143,13 +4972,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-46",
@@ -4184,13 +5019,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "DOM-47",
@@ -4225,13 +5066,19 @@
       "owner": "Unassigned",
       "evidence": [
         "tests/specialist-areas.mjs",
-        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md"
+        "UNFINISHED-WORK/mgr-integration-branch-windows-tests-20261029.md",
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
       ],
       "implementation_update": "See specialist-48-status.md, repository-specialists-runtime.md and integration-fleet-current.md for current implemented workflows and explicit qualification gates. Parent remains open until its acceptance criteria are met.",
       "implementation_state": "partial-tested-local",
       "audit_scope": "source-linked-and-local-fixture-tested-not-live-domain-qualified",
       "historical_status": "open",
-      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE"
+      "verification_gate": "REQUIRES_REPRESENTATIVE_LIVE_DOMAIN_TOOL_AND_OWNER_ACCEPTANCE",
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
+        "scope": "local contract/discovery evidence only; original parent remains uncertified"
+      }
     },
     {
       "id": "AUD-01",
@@ -4962,10 +5809,16 @@
         "BIZ-02"
       ],
       "source_files": [
-        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+        "lib/workspace-planning.ts",
+        "app/api/workspace/route.ts",
+        "components/planning-workspace.tsx"
       ],
       "owner": "Strategy lead",
-      "evidence": [],
+      "evidence": [
+        "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "UNFINISHED-WORK/evidence/planning-wave-20261029/run/report.json"
+      ],
       "audit_subtasks": [
         {
           "id": "AK-23",
@@ -4975,7 +5828,17 @@
           "status": "open",
           "resolution_and_acceptance": "**Sources:** E / “Civilization model”, “Scorecard”, “Agent economy”; A / “Autonomous-company simulation”.\n\nA complex agent economy may consume more coordination than it saves. Simulated emergence or rising agent population can be mistaken for platform value.\n\n**Resolution:** compare dynamic swarms against single-agent, deterministic automation and human-assisted baselines at equivalent budgets. Retain swarm structure only where measured quality, cost, resilience or speed improves. Expose verified deliverables per dollar, user-benefit outcomes, dissent resolution, recurrence and concentration alongside internal scores. Simplification and safe retirement count as improvements.\n\n**Gate:** matched workload experiments; coordination overhead and failure correlation included; raw agent/idea/message count cannot increase the headline score."
         }
-      ]
+      ],
+      "verification_history": [
+        {
+          "note": "No earlier wave field"
+        }
+      ],
+      "verification_wave": {
+        "report": "UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.json",
+        "sourceCommit": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+        "scope": "Executed local contracts with limits; original parent remains uncertified"
+      }
     },
     {
       "id": "AUD-21",
@@ -5853,7 +6716,8 @@
     }
   ],
   "audit_source_commit": "e071ee6bc1d964a5eba035e93e0a2529ce99f340",
-  "audit_note": "174 open parent tasks: original126+audit30+completion18. Local hardening evidence does not certify live isolation.",
+  "audit_note": "174 original parents and441 verbatim clauses retained; {'implemented_unverified': 52, 'open': 122}. Eleven separately reproduced local clauses; no parent independently certified. Canonical status and local tests are different measures.",
   "latest_build_pass": "UNFINISHED-WORK/build-pass-2026-10-09.md",
-  "current_build_update": "Multi-project integration mapping and candidate splitting; host-aware ten-slot worker pool. No production or runtime qualification claim."
+  "current_build_update": "Planning/decision/gap repair verification:58/58 local profiles at 1c00a6105afe42b06a1d463d541f06c51839f9ad; current handoff/report UNFINISHED-WORK/mgr-planning-imprint-wave-20261029.md. Original174/441 conserved.",
+  "historical_as_of": "2026-10-09T12:37:20.088593+00:00"
 }

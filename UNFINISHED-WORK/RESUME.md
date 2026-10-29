@@ -1,3 +1,7 @@
+> **Current checkpoint — October 29, 2026:** [The planning/Imprint repair report](mgr-planning-imprint-wave-20261029.md) records the latest tested source. OmniDev passed 58/58 profiles; canonical states are 122 open and 52 implemented_unverified. Eleven local clauses are reproduced; no original parent is independently certified. Start from the existing root HANDOFF and MGR-TRILOGY-HANDOFF. Older checkpoint entries below are history. The owner requests concrete unfinished features, not aggregate shorthand.
+
+> **Current checkpoint — October 29, 2026:** The [full verification and repair report](mgr-full-verification-wave-20261029.md) supersedes older state claims below. The clean source run passed 54/54 profiles. Canonical records now contain 123 open and 51 implemented_unverified parents, 136 source-linked and 38 unlinked, seven separately verified local contracts, and zero independently certified parents. All 174 original IDs and 441 acceptance clauses remain unchanged. Start from root HANDOFF.md, the current implementation index, and the exact criterion register; keep older details as historical context.
+
 # Resume instructions
 
 1. Read README.md, current-state.md, decisions.md and implementation-order.md in this folder.

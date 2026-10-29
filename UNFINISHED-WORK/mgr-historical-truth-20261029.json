@@ -1,19 +1,19 @@
 {
-  "schema": "mgr.omnidev.historical-truth.v3",
-  "generatedOn": "2026-10-29",
+  "schema": "mgr.omnidev.historical-truth.v4",
+  "generatedOn": "2026-10-29T13:22:45.421Z",
   "source": "UNFINISHED-WORK/backlog.json on review branch",
   "historicalIds": 174,
   "additionalUpgradeIds": 28,
   "recordedStatuses": {
-    "open": 126,
-    "implemented_unverified": 48
+    "open": 123,
+    "implemented_unverified": 51
   },
-  "partialLocallyTestedClaims": 58,
-  "sourceReferenceTasks": 108,
-  "evidenceReferenceTasks": 62,
-  "unknownImplementationState": 115,
+  "partialLocallyTestedClaims": 59,
+  "sourceReferenceTasks": 136,
+  "evidenceReferenceTasks": 115,
+  "unknownImplementationState": 114,
   "verifiedFullAcceptanceByThisReport": 0,
-  "note": "Historical 174 original IDs retained; 47 specialist workflows proven source-present + local fixture-tested and moved to implemented_unverified, not completed. All 276 source paths across 108 tasks pinned to Git commit and present. No full acceptance criteria automatically passed. Original Sites import 516/516 committed SHA-256 matched and credential patterns zero detected; REL-02 security/scope AC-02 not yet certified.",
+  "note": "Original 174 IDs, 441 exact clauses and separate 28 upgrades retained. 136 source-linked parents, 327/327 committed paths. 54/54 local profiles passed. Seven local contracts are recorded separately; historical REL-02/AC-01 proof is preserved. No new original criterion or full parent was independently certified.",
   "items": [
     {
       "id": "AUTH-01",
@@ -21,11 +21,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 2,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUTH-02",
@@ -37,19 +38,21 @@
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUTH-03",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 2,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUTH-04",
@@ -57,11 +60,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 2,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "RUN-01",
@@ -73,7 +77,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "RUN-02",
@@ -81,59 +86,64 @@
       "recorded_status": "open",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "RUN-03",
       "priority": "P0",
-      "recorded_status": "open",
-      "implementation_state": "partial-tested-local",
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "implemented-local-contract-tested-final-qualification-pending",
       "source_refs": 3,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_OR_PARTIAL",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 2
     },
     {
       "id": "DEV-01",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 2,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 1
     },
     {
       "id": "DEV-02",
       "priority": "P0",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 2,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DEV-03",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 2,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "GRAPH-01",
@@ -141,35 +151,38 @@
       "recorded_status": "open",
       "implementation_state": "partial-tested-local",
       "source_refs": 3,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "GRAPH-02",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "GAP-01",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 2,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DATA-01",
@@ -181,7 +194,8 @@
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DATA-02",
@@ -189,11 +203,12 @@
       "recorded_status": "open",
       "implementation_state": "partial-tested-local",
       "source_refs": 1,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DATA-03",
@@ -201,167 +216,181 @@
       "recorded_status": "open",
       "implementation_state": "partial-tested-local",
       "source_refs": 2,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "SEC-01",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 2,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "SEC-02",
       "priority": "P0",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "SEC-03",
       "priority": "P0",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 2,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "QA-01",
       "priority": "P0",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "QA-02",
       "priority": "P0",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "implemented-local-contract-tested-final-qualification-pending",
+      "source_refs": 1,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_OR_PARTIAL",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 2
     },
     {
       "id": "QA-03",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "OPS-01",
       "priority": "P0",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "OPS-02",
       "priority": "P0",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 1,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "OPS-03",
       "priority": "P0",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "OPS-04",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "TWIN-01",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 3,
+      "evidence_refs": 2,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "TWIN-02",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 3,
+      "evidence_refs": 2,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "FUT-01",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 2,
+      "evidence_refs": 2,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "BIZ-01",
@@ -369,11 +398,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "BIZ-02",
@@ -381,23 +411,25 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "EXEC-01",
       "priority": "P1",
-      "recorded_status": "open",
+      "recorded_status": "implemented_unverified",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_OR_PARTIAL",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 2
     },
     {
       "id": "UX-01",
@@ -409,19 +441,21 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "UX-02",
       "priority": "P0",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "UX-03",
@@ -433,7 +467,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "LEGAL-01",
@@ -441,47 +476,51 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "INT-01",
       "priority": "P0",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "REL-01",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "source_refs": 6,
+      "evidence_refs": 2,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "REL-02",
       "priority": "P1",
       "recorded_status": "implemented_unverified",
-      "implementation_state": "source-transfer-provider-readback",
+      "implementation_state": "source-transfer-byte-verified-security-review-pending",
       "source_refs": 3,
-      "evidence_refs": 2,
+      "evidence_refs": 6,
       "acceptance_clauses": 2,
-      "classification": "PINNED_516_FILE_SOURCE_TRANSFER_VERIFIED_SECURITY_SCOPE_PENDING",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "SECOND_ACCEPTANCE_CRITERION_REQUIRES_INDEPENDENT_SECURITY_REVIEW",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "REL-03",
@@ -489,23 +528,25 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-01",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-02",
@@ -513,11 +554,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-03",
@@ -525,11 +567,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-04",
@@ -537,47 +580,51 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-05",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-06",
       "priority": "P2",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-07",
       "priority": "P2",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-08",
@@ -585,11 +632,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-09",
@@ -597,11 +645,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-10",
@@ -609,11 +658,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-11",
@@ -621,11 +671,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-12",
@@ -633,23 +684,25 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-13",
       "priority": "P1",
       "recorded_status": "open",
       "implementation_state": "unspecified",
-      "source_refs": 0,
+      "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-14",
@@ -657,11 +710,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-15",
@@ -669,11 +723,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-16",
@@ -681,11 +736,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-17",
@@ -693,11 +749,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-18",
@@ -705,11 +762,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-19",
@@ -717,11 +775,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-20",
@@ -729,11 +788,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-21",
@@ -741,11 +801,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-22",
@@ -753,11 +814,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-23",
@@ -765,11 +827,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-24",
@@ -777,11 +840,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-25",
@@ -789,11 +853,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-26",
@@ -801,11 +866,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-27",
@@ -813,11 +879,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-28",
@@ -825,11 +892,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-29",
@@ -837,11 +905,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-30",
@@ -849,11 +918,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-31",
@@ -861,11 +931,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-32",
@@ -873,11 +944,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-33",
@@ -885,11 +957,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-34",
@@ -897,11 +970,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-35",
@@ -909,11 +983,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-36",
@@ -921,11 +996,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-37",
@@ -933,11 +1009,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-38",
@@ -945,11 +1022,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "CONN-39",
@@ -957,11 +1035,12 @@
       "recorded_status": "open",
       "implementation_state": "unspecified",
       "source_refs": 0,
-      "evidence_refs": 0,
+      "evidence_refs": 1,
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-01",
@@ -969,11 +1048,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-02",
@@ -981,11 +1061,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-03",
@@ -993,11 +1074,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-04",
@@ -1005,11 +1087,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-05",
@@ -1017,11 +1100,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-06",
@@ -1029,11 +1113,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-07",
@@ -1041,11 +1126,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-08",
@@ -1053,11 +1139,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-09",
@@ -1065,11 +1152,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-10",
@@ -1077,11 +1165,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-11",
@@ -1089,11 +1178,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-12",
@@ -1101,11 +1191,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-13",
@@ -1113,11 +1204,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-14",
@@ -1125,11 +1217,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-15",
@@ -1137,11 +1230,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-16",
@@ -1149,11 +1243,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-17",
@@ -1161,11 +1256,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-18",
@@ -1173,11 +1269,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-19",
@@ -1185,11 +1282,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-20",
@@ -1197,11 +1295,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-21",
@@ -1209,11 +1308,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-22",
@@ -1221,11 +1321,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-23",
@@ -1233,11 +1334,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-24",
@@ -1245,11 +1347,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-25",
@@ -1257,11 +1360,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-26",
@@ -1269,11 +1373,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-27",
@@ -1281,11 +1386,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-28",
@@ -1293,11 +1399,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-29",
@@ -1305,11 +1412,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-30",
@@ -1317,11 +1425,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-31",
@@ -1329,11 +1438,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-32",
@@ -1341,11 +1451,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-33",
@@ -1353,11 +1464,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-34",
@@ -1365,11 +1477,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-35",
@@ -1377,11 +1490,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-36",
@@ -1389,11 +1503,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-37",
@@ -1401,11 +1516,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-38",
@@ -1413,11 +1529,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-39",
@@ -1425,11 +1542,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-40",
@@ -1437,11 +1555,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-41",
@@ -1449,11 +1568,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-42",
@@ -1461,11 +1581,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-43",
@@ -1473,11 +1594,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-44",
@@ -1485,11 +1607,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-45",
@@ -1497,11 +1620,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-46",
@@ -1509,11 +1633,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "DOM-47",
@@ -1521,11 +1646,12 @@
       "recorded_status": "implemented_unverified",
       "implementation_state": "partial-tested-local",
       "source_refs": 4,
-      "evidence_refs": 2,
+      "evidence_refs": 3,
       "acceptance_clauses": 3,
-      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "classification": "IMPLEMENTED_LOCAL_TESTED_FINAL_ACCEPTANCE_PENDING",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-01",
@@ -1537,7 +1663,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-02",
@@ -1549,7 +1676,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-03",
@@ -1561,7 +1689,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-04",
@@ -1573,7 +1702,8 @@
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-05",
@@ -1585,7 +1715,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-06",
@@ -1597,7 +1728,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-07",
@@ -1609,7 +1741,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-08",
@@ -1621,7 +1754,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-09",
@@ -1633,7 +1767,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-10",
@@ -1645,7 +1780,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-11",
@@ -1657,7 +1793,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-12",
@@ -1669,7 +1806,8 @@
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-13",
@@ -1681,7 +1819,8 @@
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-14",
@@ -1693,7 +1832,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-15",
@@ -1705,7 +1845,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-16",
@@ -1717,7 +1858,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-17",
@@ -1729,7 +1871,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-18",
@@ -1741,7 +1884,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-19",
@@ -1753,7 +1897,8 @@
       "acceptance_clauses": 3,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-20",
@@ -1765,7 +1910,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-21",
@@ -1777,7 +1923,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-22",
@@ -1789,7 +1936,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-23",
@@ -1801,7 +1949,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-24",
@@ -1813,7 +1962,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-25",
@@ -1825,7 +1975,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-26",
@@ -1837,7 +1988,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-27",
@@ -1849,7 +2001,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-28",
@@ -1861,7 +2014,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-29",
@@ -1873,7 +2027,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "AUD-30",
@@ -1885,7 +2040,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-01",
@@ -1897,7 +2053,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-02",
@@ -1909,7 +2066,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-03",
@@ -1921,7 +2079,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-04",
@@ -1933,7 +2092,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-05",
@@ -1945,7 +2105,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-06",
@@ -1957,7 +2118,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-07",
@@ -1969,7 +2131,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-08",
@@ -1981,7 +2144,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-09",
@@ -1993,7 +2157,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-10",
@@ -2005,7 +2170,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-11",
@@ -2017,7 +2183,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-12",
@@ -2029,7 +2196,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-13",
@@ -2041,7 +2209,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-14",
@@ -2053,7 +2222,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-15",
@@ -2065,7 +2235,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-16",
@@ -2077,7 +2248,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-17",
@@ -2089,7 +2261,8 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     },
     {
       "id": "V2-18",
@@ -2101,11 +2274,22 @@
       "acceptance_clauses": 2,
       "classification": "UNVERIFIED_OR_PARTIAL",
       "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
-      "must_not_autoclose": true
+      "must_not_autoclose": true,
+      "local_contracts_verified": 0
     }
   ],
-  "verifiedCriteriaFromThisWave": 1,
+  "verifiedCriteriaFromThisWave": 0,
   "verifiedCriterionIds": [
     "REL-02/AC-01"
-  ]
+  ],
+  "scopedLocalVerifiedCriteria": [
+    "DEV-01/AC-02",
+    "EXEC-01/AC-01",
+    "EXEC-01/AC-02",
+    "QA-02/AC-01",
+    "QA-02/AC-02",
+    "RUN-03/AC-01",
+    "RUN-03/AC-02"
+  ],
+  "testedSourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae"
 }

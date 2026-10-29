@@ -66,3 +66,7 @@ The full target design, contracts, migration sequence and release gates are in [
 **ChatGPT companion** mode exports a source-bound job request. The portable [local companion](companion/README.md) implements eligible account consent and Responses streaming without an API key; import its generated candidate for server validation and review. Tokens remain local. Live account execution is not yet verified, and hosted website approval is separate.
 
 Run `node tests/platform.mjs` after preparation for the additional 52 platform/protocol checks. See [latest execution evidence and limits](UNFINISHED-WORK/build-pass-2026-10-09.md).
+
+## Full verification of the current review candidate
+
+Run `pnpm verify:full` from a clean committed checkout after installing the pinned lockfile. It rebuilds test modules, type-checks and builds the app, executes all reviewed regression profiles, records exact source/output hashes, and retains failures in `outputs/full-verification/`. Follow [the full workflow](UNFINISHED-WORK/FULL-VERIFICATION-WORKFLOW.md) for criterion-level evidence and final approval. Local fixtures do not certify external providers, Docker or production release.

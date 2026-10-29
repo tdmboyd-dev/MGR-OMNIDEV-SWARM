@@ -1,0 +1,125 @@
+{
+  "schema": "mgr.gap-baseline-reproduction.v1",
+  "sourceCommit": "6bc20032061d90b1129e58cc54e251a3164207d1",
+  "sourceSha256": "0edda631c8858a0b19a8815701dfc3b4c4ce4ff8f48af29a06a4516a1d872709",
+  "corpusSha256": "809088c52c7b9d551aac2006af06c0aaf40eda610a147e54d4aa00dbb56976c9",
+  "total": 41,
+  "mismatches": [
+    {
+      "id": "image-alt-space",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "image-alt-newline",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "image-second-missing",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "image-first-missing",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "image-data-alt-only",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "image-alt-in-value",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "image-quoted-greater",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "image-jsx-arrow-before-alt",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "image-jsx-comparison-before-alt",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "image-jsx-value-not-attribute",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "image-boolean-alt-presence",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "image-html-comment-only",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "image-comment-and-live-missing",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "image-jsx-nested-expression",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "tests-directory",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "tests-python-prefix",
+      "expected": false,
+      "detected": true
+    },
+    {
+      "id": "tests-contest-not-test",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "tests-latest-not-test",
+      "expected": true,
+      "detected": false
+    },
+    {
+      "id": "tests-contest-java",
+      "expected": true,
+      "detected": false
+    }
+  ],
+  "byRule": {
+    "image": {
+      "cases": 26,
+      "positives": 10,
+      "negatives": 16,
+      "falsePositive": 8,
+      "falseNegative": 6,
+      "falsePositiveRate": 0.5,
+      "falseNegativeRate": 0.6
+    },
+    "tests": {
+      "cases": 15,
+      "positives": 5,
+      "negatives": 10,
+      "falsePositive": 2,
+      "falseNegative": 3,
+      "falsePositiveRate": 0.2,
+      "falseNegativeRate": 0.6
+    }
+  },
+  "qualification": "Reproduced original analyzer against final local hand-labeled corpus; not a representative production estimate."
+}

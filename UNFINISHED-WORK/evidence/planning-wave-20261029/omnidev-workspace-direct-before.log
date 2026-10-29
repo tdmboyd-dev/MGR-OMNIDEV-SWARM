@@ -1,0 +1,290 @@
+✖ simulation rejects dangling, wrong-kind and aggregate project references without corrupting backups (37.043277ms)
+✖ simulation records owner assumptions and the actual selected snapshot; a workspace scenario stays unassigned (5.282332ms)
+✖ stale simulation context and project deletion during admission cannot create an orphan record (5.881153ms)
+✖ rescan reconciles stale and new findings, preserves manual dispositions and does not duplicate current signals (4.496899ms)
+✖ rescan reopens a signal that returns after snapshot resolution without reopening a manual acceptance (3.900872ms)
+✖ rescan refuses a stale source or finding disposition and keeps the newer source unchanged (4.040721ms)
+✖ rescan compare-and-swap detects a disposition changed after reading but before its transaction (3.812198ms)
+workspace write failed Error: audit failure
+    at file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-fixture.mjs:18:85
+    at Array.map (<anonymous>)
+    at Object.batch (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-fixture.mjs:18:33)
+    at Module.POST (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/.test-runtime/route.mjs:143:24)
+    at async post (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-fixture.mjs:31:18)
+    at async TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:88:17)
+    at async Test.run (node:internal/test_runner/test:1409:7)
+    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+  code: 'ERR_SQLITE_ERROR',
+  errcode: 1811,
+  errstr: 'constraint failed'
+}
+✔ rescan audit failure rolls back project and finding changes together (3.658898ms)
+✖ each future horizon cites the selected snapshot, explicit unknowns, a measurable milestone and a reversible experiment (3.459107ms)
+✖ different projects produce different cited horizons while accepted and resolved findings retain their dispositions (6.693715ms)
+✖ partial snapshots preserve coverage unknowns and cannot imply measured health or market opportunity (2.917462ms)
+✖ repeated and concurrent generation for the same evidence returns one immutable plan and one audit record (4.728077ms)
+✖ future generation requires a current source commitment and refuses stale sources or missing project scope (3.86636ms)
+✖ changed evidence creates a linked plan version while preserving the previous contract and outcomes (3.563554ms)
+✖ future evaluations append to an immutable plan and preserve the source actually observed (4.044989ms)
+✔ future evaluation rejects missing or stale revision, wrong contract, wrong horizon and unsupported success claims without writes (6.37814ms)
+✖ concurrent outcomes have one winner and cannot overwrite or duplicate its history (3.870386ms)
+✔ recommendations prioritize confirmed current dispositions by severity, retain reasons and exclude accepted or resolved signals (9.06206ms)
+✔ All projects never supplies an implicit action target; security statistics and rows share exactly the same scope (3.063371ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 4
+ℹ fail 15
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 129.516078
+
+✖ failing tests:
+
+test at tests/workspace-planning.mjs:8:1
+✖ simulation rejects dangling, wrong-kind and aggregate project references without corrupting backups (37.043277ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:12:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:17:1
+✖ simulation records owner assumptions and the actual selected snapshot; a workspace scenario stays unassigned (5.282332ms)
+  TypeError: Cannot read properties of undefined (reading 'projectId')
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:22:22)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/workspace-planning.mjs:28:1
+✖ stale simulation context and project deletion during admission cannot create an orphan record (5.881153ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:31:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:39:1
+✖ rescan reconciles stale and new findings, preserves manual dispositions and does not duplicate current signals (4.496899ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'open' !== 'resolved'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:46:74)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'open',
+    expected: 'resolved',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:54:1
+✖ rescan reopens a signal that returns after snapshot resolution without reopening a manual acceptance (3.900872ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'open' !== 'resolved'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:57:56)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'open',
+    expected: 'resolved',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:63:1
+✖ rescan refuses a stale source or finding disposition and keeps the newer source unchanged (4.040721ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:68:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:76:1
+✖ rescan compare-and-swap detects a disposition changed after reading but before its transaction (3.812198ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:81:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:91:1
+✖ each future horizon cites the selected snapshot, explicit unknowns, a measurable milestone and a reversible experiment (3.459107ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'omnidev-future-plan-v1'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:93:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'omnidev-future-plan-v1',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:103:1
+✖ different projects produce different cited horizons while accepted and resolved findings retain their dispositions (6.693715ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" not to be strictly deep-equal to:
+  
+  {
+    scope: 'Resolve security and validation findings; prove tests for critical flows.',
+    title: 'Establish trust',
+    version: 'V2'
+  }
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:108:30)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Object],
+    expected: [Object],
+    operator: 'notDeepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:114:1
+✖ partial snapshots preserve coverage unknowns and cannot imply measured health or market opportunity (2.917462ms)
+  TypeError: Cannot read properties of undefined (reading 'some')
+      at file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:117:52
+      at Array.every (<anonymous>)
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:117:32)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/workspace-planning.mjs:122:1
+✖ repeated and concurrent generation for the same evidence returns one immutable plan and one audit record (4.728077ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 1
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:125:54)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:130:1
+✖ future generation requires a current source commitment and refuses stale sources or missing project scope (3.86636ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:133:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:137:1
+✖ changed evidence creates a linked plan version while preserving the previous contract and outcomes (3.563554ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  undefined !== NaN
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:140:42)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: NaN,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:147:1
+✖ future evaluations append to an immutable plan and preserve the source actually observed (4.044989ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  400 !== 200
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:151:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 400,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/workspace-planning.mjs:168:1
+✖ concurrent outcomes have one winner and cannot overwrite or duplicate its history (3.870386ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  -   200,
+      400,
+  +   400
+    ]
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/1ce753a33287/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:171:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [Array],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

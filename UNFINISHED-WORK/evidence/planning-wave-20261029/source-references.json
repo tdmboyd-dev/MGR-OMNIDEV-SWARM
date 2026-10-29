@@ -1,0 +1,2067 @@
+{
+  "sourceCommit": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+  "linkedParents": 136,
+  "references": 343,
+  "missing": 0,
+  "scope": "Committed source existence and identity, not additional task acceptance.",
+  "rows": [
+    {
+      "parentId": "AUTH-01",
+      "path": "lib/github-account.ts",
+      "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1",
+      "bytes": 6156
+    },
+    {
+      "parentId": "AUTH-01",
+      "path": "lib/repository.ts",
+      "sha256": "2c64a1a7512b4fb3a95bbcc4a5e47585caf11f9af22b7f55eb86be93271f7739",
+      "bytes": 8186
+    },
+    {
+      "parentId": "AUTH-02",
+      "path": "lib/providers.ts",
+      "sha256": "390f7b299a2f385f91e04ba60b635a470262453a1a8814d26870934bb08189ba",
+      "bytes": 5913
+    },
+    {
+      "parentId": "AUTH-02",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "AUTH-02",
+      "path": "components/runtime-workspace.tsx",
+      "sha256": "bd84f3bb2a502d32f0929b27be66244e84a236c2ace3a822cbd3469c8b005be1",
+      "bytes": 77572
+    },
+    {
+      "parentId": "AUTH-02",
+      "path": "companion/chatgpt.mjs",
+      "sha256": "7ecae41100464596022c226005498fde24b557c5a6cae737499fdfda28f1abee",
+      "bytes": 20443
+    },
+    {
+      "parentId": "AUTH-03",
+      "path": "lib/providers.ts",
+      "sha256": "390f7b299a2f385f91e04ba60b635a470262453a1a8814d26870934bb08189ba",
+      "bytes": 5913
+    },
+    {
+      "parentId": "AUTH-03",
+      "path": "lib/github-account.ts",
+      "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1",
+      "bytes": 6156
+    },
+    {
+      "parentId": "AUTH-04",
+      "path": "db/schema.ts",
+      "sha256": "f7f0a03eaecd2fd6285b033fa41a69c15f481a5f0583b093e73a97ef29023f31",
+      "bytes": 1237
+    },
+    {
+      "parentId": "AUTH-04",
+      "path": "lib/github-account.ts",
+      "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1",
+      "bytes": 6156
+    },
+    {
+      "parentId": "RUN-01",
+      "path": "worker/runner.mjs",
+      "sha256": "019c1f2d027ab845691ed538e33bfbaaa33ef639aee88e712492b6c78192b188",
+      "bytes": 8158
+    },
+    {
+      "parentId": "RUN-01",
+      "path": "worker/README.md",
+      "sha256": "f304564ca62d144c1ad3db2a6163b66b73d284e7a0e7cbe2b94027c403a1458f",
+      "bytes": 5185
+    },
+    {
+      "parentId": "RUN-01",
+      "path": "app/api/worker/route.ts",
+      "sha256": "93c5a5b5245befc53dcc953c0033d0e23d38e65d1dc7352b290b06d1f2cf26d3",
+      "bytes": 3071
+    },
+    {
+      "parentId": "RUN-02",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "RUN-02",
+      "path": "lib/catalog.ts",
+      "sha256": "708dba1b8f78d1147815d6f4003edd7ad72425d7785207a6c07b6a19c176277d",
+      "bytes": 2904
+    },
+    {
+      "parentId": "RUN-02",
+      "path": "lib/agent-os.ts",
+      "sha256": "4e73fb2a2326fc4688ce24182fcd80f527e0af50f6e43b8ca0cd82842d376ce0",
+      "bytes": 7661
+    },
+    {
+      "parentId": "RUN-02",
+      "path": "app/api/agents/route.ts",
+      "sha256": "e1ac70fa0c64d715b9f93e39fbd94bc495c7f3f667e37a3eb190901a45811801",
+      "bytes": 1174
+    },
+    {
+      "parentId": "RUN-03",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "RUN-03",
+      "path": "lib/repository.ts",
+      "sha256": "2c64a1a7512b4fb3a95bbcc4a5e47585caf11f9af22b7f55eb86be93271f7739",
+      "bytes": 8186
+    },
+    {
+      "parentId": "RUN-03",
+      "path": "lib/control-plane.ts",
+      "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951",
+      "bytes": 4166
+    },
+    {
+      "parentId": "DEV-01",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DEV-01",
+      "path": "lib/analyzer.ts",
+      "sha256": "dca61450118d08c10683668702f4184b3a997da1185fa6b37cc5c4b5ad66aea6",
+      "bytes": 7198
+    },
+    {
+      "parentId": "DEV-02",
+      "path": "lib/repository.ts",
+      "sha256": "2c64a1a7512b4fb3a95bbcc4a5e47585caf11f9af22b7f55eb86be93271f7739",
+      "bytes": 8186
+    },
+    {
+      "parentId": "DEV-02",
+      "path": "lib/github.ts",
+      "sha256": "87ee85fee3fe7f30e53da6711d84b34c2134a3528db95a521b502da5cf230183",
+      "bytes": 3039
+    },
+    {
+      "parentId": "DEV-03",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DEV-03",
+      "path": "lib/agent-os.ts",
+      "sha256": "4e73fb2a2326fc4688ce24182fcd80f527e0af50f6e43b8ca0cd82842d376ce0",
+      "bytes": 7661
+    },
+    {
+      "parentId": "GRAPH-01",
+      "path": "lib/analyzer.ts",
+      "sha256": "dca61450118d08c10683668702f4184b3a997da1185fa6b37cc5c4b5ad66aea6",
+      "bytes": 7198
+    },
+    {
+      "parentId": "GRAPH-01",
+      "path": "db/schema.ts",
+      "sha256": "f7f0a03eaecd2fd6285b033fa41a69c15f481a5f0583b093e73a97ef29023f31",
+      "bytes": 1237
+    },
+    {
+      "parentId": "GRAPH-01",
+      "path": "lib/intelligence.ts",
+      "sha256": "de80978557d1d82306d86259159ed68a8965ac6fb8ed85b9f70807f918fbb12e",
+      "bytes": 15608
+    },
+    {
+      "parentId": "GRAPH-02",
+      "path": "lib/analyzer.ts",
+      "sha256": "dca61450118d08c10683668702f4184b3a997da1185fa6b37cc5c4b5ad66aea6",
+      "bytes": 7198
+    },
+    {
+      "parentId": "GAP-01",
+      "path": "lib/analyzer.ts",
+      "sha256": "dca61450118d08c10683668702f4184b3a997da1185fa6b37cc5c4b5ad66aea6",
+      "bytes": 7198
+    },
+    {
+      "parentId": "GAP-01",
+      "path": "lib/repo-audit.ts",
+      "sha256": "e1bcd77676698cc627ee739ee476917af81a931bbb612bd5e391eaa730e88ad8",
+      "bytes": 6330
+    },
+    {
+      "parentId": "GAP-01",
+      "path": "lib/workspace-planning.ts",
+      "sha256": "af847ad318457524201f1ef139f58ded193566bf4f0257f529876cc802c2ccff",
+      "bytes": 13384
+    },
+    {
+      "parentId": "GAP-01",
+      "path": "lib/workspace-scope.ts",
+      "sha256": "0f8871b0bb877945aef41de9646cd767d0aef38252f90a76354f3099fbd464c4",
+      "bytes": 871
+    },
+    {
+      "parentId": "GAP-01",
+      "path": "app/api/workspace/route.ts",
+      "sha256": "0c8bde8afff7ff5abfe458e6e0d19335b9a840aa659fe875ae51299b15e9947e",
+      "bytes": 14109
+    },
+    {
+      "parentId": "DATA-01",
+      "path": "db/store.ts",
+      "sha256": "7c8c1a87c7d2a68e02655193025f696410948f6ed6ffb114277a0949a27b4d79",
+      "bytes": 1077
+    },
+    {
+      "parentId": "DATA-01",
+      "path": "db/schema.ts",
+      "sha256": "f7f0a03eaecd2fd6285b033fa41a69c15f481a5f0583b093e73a97ef29023f31",
+      "bytes": 1237
+    },
+    {
+      "parentId": "DATA-02",
+      "path": "lib/intelligence.ts",
+      "sha256": "de80978557d1d82306d86259159ed68a8965ac6fb8ed85b9f70807f918fbb12e",
+      "bytes": 15608
+    },
+    {
+      "parentId": "DATA-02",
+      "path": "app/api/intelligence/route.ts",
+      "sha256": "02cfa91020b4617fe3a891a050fae7817714ee41072113a699f130670bb23f87",
+      "bytes": 1647
+    },
+    {
+      "parentId": "DATA-02",
+      "path": "lib/workspace-storage.ts",
+      "sha256": "933d403a81cbcab8bbb6c67e78ffc7bf2f02d824ddfe06991239350e2fa2be2a",
+      "bytes": 3110
+    },
+    {
+      "parentId": "DATA-02",
+      "path": "components/intelligence-workspace.tsx",
+      "sha256": "26baf4c5cafb244e6aab6379fbc6b18fe292ee2f0d75e7feedd37ab6b8e8212b",
+      "bytes": 12617
+    },
+    {
+      "parentId": "DATA-02",
+      "path": "components/decision-record.tsx",
+      "sha256": "ec9f25877ffebfc3938363f4ab1daf51d12c7df2b423c9f1fdabe6aebb23f095",
+      "bytes": 2391
+    },
+    {
+      "parentId": "DATA-03",
+      "path": "lib/intelligence.ts",
+      "sha256": "de80978557d1d82306d86259159ed68a8965ac6fb8ed85b9f70807f918fbb12e",
+      "bytes": 15608
+    },
+    {
+      "parentId": "DATA-03",
+      "path": "tests/platform.mjs",
+      "sha256": "a950fa3cfbc00df5eca6d4e5c9879adfd04b6cf8531f3375349d5536c405cdb7",
+      "bytes": 17154
+    },
+    {
+      "parentId": "SEC-01",
+      "path": "lib/analyzer.ts",
+      "sha256": "dca61450118d08c10683668702f4184b3a997da1185fa6b37cc5c4b5ad66aea6",
+      "bytes": 7198
+    },
+    {
+      "parentId": "SEC-01",
+      "path": "lib/agent-os.ts",
+      "sha256": "4e73fb2a2326fc4688ce24182fcd80f527e0af50f6e43b8ca0cd82842d376ce0",
+      "bytes": 7661
+    },
+    {
+      "parentId": "SEC-02",
+      "path": "lib/control-plane.ts",
+      "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951",
+      "bytes": 4166
+    },
+    {
+      "parentId": "SEC-03",
+      "path": "lib/providers.ts",
+      "sha256": "390f7b299a2f385f91e04ba60b635a470262453a1a8814d26870934bb08189ba",
+      "bytes": 5913
+    },
+    {
+      "parentId": "SEC-03",
+      "path": "lib/github-account.ts",
+      "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1",
+      "bytes": 6156
+    },
+    {
+      "parentId": "QA-01",
+      "path": "tests/acceptance.mjs",
+      "sha256": "6b6e12e933a3c96dde57359b8b2c669574d5ba70823b566b46405cf3834974f9",
+      "bytes": 8421
+    },
+    {
+      "parentId": "QA-02",
+      "path": "tests/runtime.mjs",
+      "sha256": "336be76c44ca48878c27123b6ec36a10f48cac9357d2f04b9bfcfb68fd0dd570",
+      "bytes": 27026
+    },
+    {
+      "parentId": "QA-03",
+      "path": "tests/integration-fleet.mjs",
+      "sha256": "2c08a2ca24ea19deac4e43ffad5cce60a26dfb3be021fbadd50cd9dc79c8fbd6",
+      "bytes": 4555
+    },
+    {
+      "parentId": "OPS-01",
+      "path": "lib/control-plane.ts",
+      "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951",
+      "bytes": 4166
+    },
+    {
+      "parentId": "OPS-02",
+      "path": "companion/engine/supervisor.mjs",
+      "sha256": "e8a68ded4ac5f8ca6e47064757684c7a344ddfdf7d801c4a997e9fda4e24fa9c",
+      "bytes": 2607
+    },
+    {
+      "parentId": "OPS-03",
+      "path": "companion/engine/update.mjs",
+      "sha256": "62fc3eb041954845e9a98082ba1d945b56cee67c8d397822768977e5f0a76f01",
+      "bytes": 2368
+    },
+    {
+      "parentId": "OPS-04",
+      "path": "worker/runner.mjs",
+      "sha256": "019c1f2d027ab845691ed538e33bfbaaa33ef639aee88e712492b6c78192b188",
+      "bytes": 8158
+    },
+    {
+      "parentId": "TWIN-01",
+      "path": "lib/analyzer.ts",
+      "sha256": "dca61450118d08c10683668702f4184b3a997da1185fa6b37cc5c4b5ad66aea6",
+      "bytes": 7198
+    },
+    {
+      "parentId": "TWIN-01",
+      "path": "app/api/workspace/route.ts",
+      "sha256": "0c8bde8afff7ff5abfe458e6e0d19335b9a840aa659fe875ae51299b15e9947e",
+      "bytes": 14109
+    },
+    {
+      "parentId": "TWIN-01",
+      "path": "app/page.tsx",
+      "sha256": "679b9469abd4a3ec66c10364b84d13dc4c0659fdd89c554773682ae7f5548b55",
+      "bytes": 52177
+    },
+    {
+      "parentId": "TWIN-02",
+      "path": "lib/analyzer.ts",
+      "sha256": "dca61450118d08c10683668702f4184b3a997da1185fa6b37cc5c4b5ad66aea6",
+      "bytes": 7198
+    },
+    {
+      "parentId": "TWIN-02",
+      "path": "app/api/workspace/route.ts",
+      "sha256": "0c8bde8afff7ff5abfe458e6e0d19335b9a840aa659fe875ae51299b15e9947e",
+      "bytes": 14109
+    },
+    {
+      "parentId": "TWIN-02",
+      "path": "app/page.tsx",
+      "sha256": "679b9469abd4a3ec66c10364b84d13dc4c0659fdd89c554773682ae7f5548b55",
+      "bytes": 52177
+    },
+    {
+      "parentId": "TWIN-02",
+      "path": "lib/workspace-planning.ts",
+      "sha256": "af847ad318457524201f1ef139f58ded193566bf4f0257f529876cc802c2ccff",
+      "bytes": 13384
+    },
+    {
+      "parentId": "FUT-01",
+      "path": "app/api/workspace/route.ts",
+      "sha256": "0c8bde8afff7ff5abfe458e6e0d19335b9a840aa659fe875ae51299b15e9947e",
+      "bytes": 14109
+    },
+    {
+      "parentId": "FUT-01",
+      "path": "app/page.tsx",
+      "sha256": "679b9469abd4a3ec66c10364b84d13dc4c0659fdd89c554773682ae7f5548b55",
+      "bytes": 52177
+    },
+    {
+      "parentId": "FUT-01",
+      "path": "lib/workspace-planning.ts",
+      "sha256": "af847ad318457524201f1ef139f58ded193566bf4f0257f529876cc802c2ccff",
+      "bytes": 13384
+    },
+    {
+      "parentId": "FUT-01",
+      "path": "lib/workspace-storage.ts",
+      "sha256": "933d403a81cbcab8bbb6c67e78ffc7bf2f02d824ddfe06991239350e2fa2be2a",
+      "bytes": 3110
+    },
+    {
+      "parentId": "FUT-01",
+      "path": "components/planning-workspace.tsx",
+      "sha256": "f00c05365ea2c168ddf34b8f982e0cfb16ebc32b239ffde0e344a5a6b5894c25",
+      "bytes": 10241
+    },
+    {
+      "parentId": "EXEC-01",
+      "path": "lib/executive-scorecard.ts",
+      "sha256": "2d8ee073c2d34cc798ba2b18ead901ffed67026bf0997a3e8e46b98f03b1f1be",
+      "bytes": 8832
+    },
+    {
+      "parentId": "EXEC-01",
+      "path": "app/page.tsx",
+      "sha256": "679b9469abd4a3ec66c10364b84d13dc4c0659fdd89c554773682ae7f5548b55",
+      "bytes": 52177
+    },
+    {
+      "parentId": "EXEC-01",
+      "path": "tests/executive-scorecard.test.mjs",
+      "sha256": "e86fda2fa604dca2a2ea6c0e8f0416d7b19c82996a2b5d1782b7b7c79d5bdce2",
+      "bytes": 7276
+    },
+    {
+      "parentId": "EXEC-01",
+      "path": "components/executive-scorecard.tsx",
+      "sha256": "acae02aa9cab5eee1c0410a59c831658ffe7dcea162505397b499e88e6ae34e6",
+      "bytes": 1667
+    },
+    {
+      "parentId": "UX-01",
+      "path": "app/page.tsx",
+      "sha256": "679b9469abd4a3ec66c10364b84d13dc4c0659fdd89c554773682ae7f5548b55",
+      "bytes": 52177
+    },
+    {
+      "parentId": "UX-01",
+      "path": "components/runtime-workspace.tsx",
+      "sha256": "bd84f3bb2a502d32f0929b27be66244e84a236c2ace3a822cbd3469c8b005be1",
+      "bytes": 77572
+    },
+    {
+      "parentId": "UX-01",
+      "path": "app/globals.css",
+      "sha256": "c57b9815ec565ce217226de864b36991404a7338f20e4b2566443dcf6241aef3",
+      "bytes": 44324
+    },
+    {
+      "parentId": "UX-02",
+      "path": "app/page.tsx",
+      "sha256": "679b9469abd4a3ec66c10364b84d13dc4c0659fdd89c554773682ae7f5548b55",
+      "bytes": 52177
+    },
+    {
+      "parentId": "UX-02",
+      "path": "app/globals.css",
+      "sha256": "c57b9815ec565ce217226de864b36991404a7338f20e4b2566443dcf6241aef3",
+      "bytes": 44324
+    },
+    {
+      "parentId": "UX-02",
+      "path": "components/ui/sheet.tsx",
+      "sha256": "63863cf2df8f8973e52b3459ac9bdbf81be1262dbc70eb53d5271ffb03488e16",
+      "bytes": 4188
+    },
+    {
+      "parentId": "UX-02",
+      "path": "components/ui/dialog.tsx",
+      "sha256": "dce39c6adc47d997bd2567f8b7a72f466b0134715105cd42f9194007b8ecdb14",
+      "bytes": 4303
+    },
+    {
+      "parentId": "UX-03",
+      "path": "components/intelligence-workspace.tsx",
+      "sha256": "26baf4c5cafb244e6aab6379fbc6b18fe292ee2f0d75e7feedd37ab6b8e8212b",
+      "bytes": 12617
+    },
+    {
+      "parentId": "UX-03",
+      "path": "components/runtime-workspace.tsx",
+      "sha256": "bd84f3bb2a502d32f0929b27be66244e84a236c2ace3a822cbd3469c8b005be1",
+      "bytes": 77572
+    },
+    {
+      "parentId": "UX-03",
+      "path": "components/planning-workspace.tsx",
+      "sha256": "f00c05365ea2c168ddf34b8f982e0cfb16ebc32b239ffde0e344a5a6b5894c25",
+      "bytes": 10241
+    },
+    {
+      "parentId": "UX-03",
+      "path": "components/decision-record.tsx",
+      "sha256": "ec9f25877ffebfc3938363f4ab1daf51d12c7df2b423c9f1fdabe6aebb23f095",
+      "bytes": 2391
+    },
+    {
+      "parentId": "INT-01",
+      "path": "lib/integration-engineering.ts",
+      "sha256": "dbd4c5c083f22ea2ce5747ae3afd3d8a8319213e5fcfba7729c5b06c524f12bd",
+      "bytes": 8102
+    },
+    {
+      "parentId": "REL-01",
+      "path": "README.md",
+      "sha256": "ba4dfc8d1bea3192ceccb0b9a2e8d67f04c2b62bbf476f9d331fb72c0632f8d0",
+      "bytes": 6651
+    },
+    {
+      "parentId": "REL-01",
+      "path": "worker/README.md",
+      "sha256": "f304564ca62d144c1ad3db2a6163b66b73d284e7a0e7cbe2b94027c403a1458f",
+      "bytes": 5185
+    },
+    {
+      "parentId": "REL-01",
+      "path": "companion/README.md",
+      "sha256": "0dd5b83b35af45675e0df425c58deb520d6c9d0363a324d27ef2d0f2e7cbdb3b",
+      "bytes": 6659
+    },
+    {
+      "parentId": "REL-01",
+      "path": "architecture/STATUS.md",
+      "sha256": "087ab9579c989df6d969b4b4b8fb4fd9a7613dd9fdb8d5805c56d6c0c2ff673c",
+      "bytes": 7013
+    },
+    {
+      "parentId": "REL-01",
+      "path": "scripts/engine/release.mjs",
+      "sha256": "cefeba16b7f57962d3e9dd2abd086468da992d2cfa9ffb61fedd0b4e46056e1a",
+      "bytes": 1801
+    },
+    {
+      "parentId": "REL-01",
+      "path": "scripts/install-pnpm.sh",
+      "sha256": "a684c02c2b493dfbf262a66252a5cd36f81ca995a4024761728662ae63aa40c0",
+      "bytes": 9015
+    },
+    {
+      "parentId": "REL-02",
+      "path": "SOURCE-IMPORT.md",
+      "sha256": "8ba39ebc63314423142bc141cbfbc5bff958140e88c170ce4fd1eede28e452de",
+      "bytes": 1120
+    },
+    {
+      "parentId": "REL-02",
+      "path": "UNFINISHED-WORK/README.md",
+      "sha256": "e6b19f2d0a17829a5c0b8700587be4cd509f99c1cf1372b22ee6b3b179d9b18e",
+      "bytes": 8298
+    },
+    {
+      "parentId": "REL-02",
+      "path": "worker/runner.mjs",
+      "sha256": "019c1f2d027ab845691ed538e33bfbaaa33ef639aee88e712492b6c78192b188",
+      "bytes": 8158
+    },
+    {
+      "parentId": "CONN-01",
+      "path": "lib/github-account.ts",
+      "sha256": "cf5d9c8fc835a3335875870635857eeb5d5c9e80d81b0874e1553dee66a6a7f1",
+      "bytes": 6156
+    },
+    {
+      "parentId": "CONN-05",
+      "path": "app/api/workspace/route.ts",
+      "sha256": "0c8bde8afff7ff5abfe458e6e0d19335b9a840aa659fe875ae51299b15e9947e",
+      "bytes": 14109
+    },
+    {
+      "parentId": "CONN-06",
+      "path": "app/api/workspace/route.ts",
+      "sha256": "0c8bde8afff7ff5abfe458e6e0d19335b9a840aa659fe875ae51299b15e9947e",
+      "bytes": 14109
+    },
+    {
+      "parentId": "CONN-07",
+      "path": "app/api/workspace/route.ts",
+      "sha256": "0c8bde8afff7ff5abfe458e6e0d19335b9a840aa659fe875ae51299b15e9947e",
+      "bytes": 14109
+    },
+    {
+      "parentId": "CONN-13",
+      "path": "worker/runner.mjs",
+      "sha256": "019c1f2d027ab845691ed538e33bfbaaa33ef639aee88e712492b6c78192b188",
+      "bytes": 8158
+    },
+    {
+      "parentId": "DOM-01",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-01",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-01",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-01",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-02",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-02",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-02",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-02",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-03",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-03",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-03",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-03",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-04",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-04",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-04",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-04",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-05",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-05",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-05",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-05",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-06",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-06",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-06",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-06",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-07",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-07",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-07",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-07",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-08",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-08",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-08",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-08",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-09",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-09",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-09",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-09",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-10",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-10",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-10",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-10",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-11",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-11",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-11",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-11",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-12",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-12",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-12",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-12",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-13",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-13",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-13",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-13",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-14",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-14",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-14",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-14",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-15",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-15",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-15",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-15",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-16",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-16",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-16",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-16",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-17",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-17",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-17",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-17",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-18",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-18",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-18",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-18",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-19",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-19",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-19",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-19",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-20",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-20",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-20",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-20",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-21",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-21",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-21",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-21",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-22",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-22",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-22",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-22",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-23",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-23",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-23",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-23",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-24",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-24",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-24",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-24",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-25",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-25",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-25",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-25",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-26",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-26",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-26",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-26",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-27",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-27",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-27",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-27",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-28",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-28",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-28",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-28",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-29",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-29",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-29",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-29",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-30",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-30",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-30",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-30",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-31",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-31",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-31",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-31",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-32",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-32",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-32",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-32",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-33",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-33",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-33",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-33",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-34",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-34",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-34",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-34",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-35",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-35",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-35",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-35",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-36",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-36",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-36",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-36",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-37",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-37",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-37",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-37",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-38",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-38",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-38",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-38",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-39",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-39",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-39",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-39",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-40",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-40",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-40",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-40",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-41",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-41",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-41",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-41",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-42",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-42",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-42",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-42",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-43",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-43",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-43",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-43",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-44",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-44",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-44",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-44",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-45",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-45",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-45",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-45",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-46",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-46",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-46",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-46",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "DOM-47",
+      "path": "lib/specialists.ts",
+      "sha256": "c3e1e20de114298f1bf7bb551852a846082da5401bebc91a4edc3180c58f8397",
+      "bytes": 5736
+    },
+    {
+      "parentId": "DOM-47",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "DOM-47",
+      "path": "lib/brains.ts",
+      "sha256": "87f0a776ead29de50e40c59299658a18ca95842ab230825d165f7f878dd27f3c",
+      "bytes": 2041
+    },
+    {
+      "parentId": "DOM-47",
+      "path": "tests/specialist-areas.mjs",
+      "sha256": "7df11430bf64559f984f180e6b81746303a79b8aabff283c8443eeae7d00ba55",
+      "bytes": 1523
+    },
+    {
+      "parentId": "AUD-01",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-02",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-03",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-04",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-05",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-06",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-07",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-08",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-09",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-10",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-11",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-12",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-13",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-14",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-15",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-16",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-17",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-18",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-19",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-20",
+      "path": "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md",
+      "sha256": "1b01cee873de9e82bbd49cd5d2be7102950b850f3b9f72be3dd92393bb1e714b",
+      "bytes": 9173
+    },
+    {
+      "parentId": "AUD-20",
+      "path": "lib/workspace-planning.ts",
+      "sha256": "af847ad318457524201f1ef139f58ded193566bf4f0257f529876cc802c2ccff",
+      "bytes": 13384
+    },
+    {
+      "parentId": "AUD-20",
+      "path": "app/api/workspace/route.ts",
+      "sha256": "0c8bde8afff7ff5abfe458e6e0d19335b9a840aa659fe875ae51299b15e9947e",
+      "bytes": 14109
+    },
+    {
+      "parentId": "AUD-20",
+      "path": "components/planning-workspace.tsx",
+      "sha256": "f00c05365ea2c168ddf34b8f982e0cfb16ebc32b239ffde0e344a5a6b5894c25",
+      "bytes": 10241
+    },
+    {
+      "parentId": "AUD-21",
+      "path": "BUILD-BIBLE/README.md",
+      "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+      "bytes": 3617
+    },
+    {
+      "parentId": "AUD-22",
+      "path": "BUILD-BIBLE/README.md",
+      "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+      "bytes": 3617
+    },
+    {
+      "parentId": "AUD-23",
+      "path": "BUILD-BIBLE/README.md",
+      "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+      "bytes": 3617
+    },
+    {
+      "parentId": "AUD-24",
+      "path": "BUILD-BIBLE/README.md",
+      "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+      "bytes": 3617
+    },
+    {
+      "parentId": "AUD-25",
+      "path": "BUILD-BIBLE/README.md",
+      "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+      "bytes": 3617
+    },
+    {
+      "parentId": "AUD-26",
+      "path": "BUILD-BIBLE/README.md",
+      "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+      "bytes": 3617
+    },
+    {
+      "parentId": "AUD-27",
+      "path": "BUILD-BIBLE/README.md",
+      "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+      "bytes": 3617
+    },
+    {
+      "parentId": "AUD-28",
+      "path": "BUILD-BIBLE/README.md",
+      "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+      "bytes": 3617
+    },
+    {
+      "parentId": "AUD-29",
+      "path": "BUILD-BIBLE/README.md",
+      "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+      "bytes": 3617
+    },
+    {
+      "parentId": "AUD-30",
+      "path": "BUILD-BIBLE/README.md",
+      "sha256": "01c4144105815f6f38e708ca5b0fae24f1e906d2015f2063298a6ea360952e95",
+      "bytes": 3617
+    },
+    {
+      "parentId": "V2-01",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-01",
+      "path": "lib/control-plane.ts",
+      "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951",
+      "bytes": 4166
+    },
+    {
+      "parentId": "V2-01",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "V2-01",
+      "path": "lib/repository.ts",
+      "sha256": "2c64a1a7512b4fb3a95bbcc4a5e47585caf11f9af22b7f55eb86be93271f7739",
+      "bytes": 8186
+    },
+    {
+      "parentId": "V2-02",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-02",
+      "path": "lib/jobs.ts",
+      "sha256": "d4a118a37e37650aacb256b35c4d0d0b52b2b0d0a22b7e25f698685cbe115f3a",
+      "bytes": 56286
+    },
+    {
+      "parentId": "V2-03",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-04",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-05",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-06",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-07",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-07",
+      "path": "lib/control-plane.ts",
+      "sha256": "e6872f9b0756208c7b5e7c3d3e61bd9292a5e79b5a148ae5d7ec4523b83f7951",
+      "bytes": 4166
+    },
+    {
+      "parentId": "V2-08",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-09",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-10",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-11",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-12",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-13",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-14",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-15",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-16",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-17",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-18",
+      "path": "COMPLETION-AUDIT/upgrade-contracts.json",
+      "sha256": "71451cb8a1c916fb7aef36364b635d6de90d754a0c186b8407c30f42858f30a9",
+      "bytes": 17810
+    },
+    {
+      "parentId": "V2-18",
+      "path": "lib/intelligence.ts",
+      "sha256": "de80978557d1d82306d86259159ed68a8965ac6fb8ed85b9f70807f918fbb12e",
+      "bytes": 15608
+    }
+  ]
+}

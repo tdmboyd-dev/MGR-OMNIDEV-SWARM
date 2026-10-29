@@ -65,3 +65,9 @@ All items below are open. See [README.md](README.md) for status definitions and 
 **Depends on:** SEC-01, QA-03, BIZ-01, OPS-01
 
 **Completion evidence:** None yet. Add commit, tests, artifact/provider read-back and remaining limitations before closing.
+
+## Verified local update — October 29, 2026
+
+EXEC-01 now records implemented_unverified. All fourteen original executive dimensions expose methodology/evidence requirements and truthful unassessed states; eleven model/actual React-render cases pass. Live measurements, trends, browser interaction and final attestation remain separately unqualified.
+
+See [the exact source-bound wave report](mgr-full-verification-wave-20261029.md) and canonical criterion register; earlier planning notes above are historical where they conflict. Original acceptance wording is preserved.
