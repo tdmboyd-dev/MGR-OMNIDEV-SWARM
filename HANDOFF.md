@@ -38,3 +38,6 @@ A VampBite is a permanent per-code-job identity derived from Code Monster's exis
 
 ## Further wave update — October 29
 A **second batch of 55** original backlog records was reviewed in `UNFINISHED-WORK/mgr-55-task-wave2-triage-20261029.json`; total **105/174 (60.34%) metadata triaged**, **0/174 fully accepted from this wave**. Historical statuses 173 open + one implemented_unverified. Code Monster actual Windows full run is 67 tests, 64 pass, 0 fail, 3 explicit platform skips; see Code Monster `docs/FULL-WINDOWS-REGRESSION-20261029.md`. New single-task campaign defaults to signed evidence, but independent runner and 3-agent executor still blocked. The machine-readable scorecard has been updated. Don't interpret review % as implementation %.
+
+## 2026-10-29 wave 4
+All 174 historical parent records have now had metadata/evidence triage: additional 55 in `UNFINISHED-WORK/mgr-wave3-55-review-20261029.json` and final 14 in `UNFINISHED-WORK/mgr-final14-metadata-review-20261029.json`. 100% reviewed does NOT equal completed; no new full acceptances certified. Current recorded statuses: 173 open, 1 implemented_unverified. Code Monster VampBite terminal-state safety repaired and tested; full Windows suite 69 total, 66 pass, 0 fail, 3 platform-specific skips. Scorecard updated. Production Docker/verifier/integration and per-record acceptance remain pending.
