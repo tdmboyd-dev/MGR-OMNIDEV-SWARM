@@ -116,9 +116,14 @@
       "dependencies": [
         "AUTH-02"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/providers.ts",
+        "lib/github-account.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "AUTH-04",
@@ -289,9 +294,14 @@
         "RUN-01",
         "QA-02"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/jobs.ts",
+        "lib/analyzer.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "DEV-02",
@@ -316,9 +326,14 @@
         "RUN-01",
         "QA-02"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/repository.ts",
+        "lib/github.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "DEV-03",
@@ -341,9 +356,14 @@
         "DEV-01",
         "OPS-03"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/jobs.ts",
+        "lib/agent-os.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "GRAPH-01",
@@ -409,9 +429,13 @@
       "dependencies": [
         "GRAPH-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/analyzer.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "GAP-01",
@@ -435,9 +459,14 @@
         "GRAPH-02",
         "BIZ-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/analyzer.ts",
+        "lib/repo-audit.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "DATA-01",
@@ -568,9 +597,14 @@
         "RUN-01",
         "GRAPH-02"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/analyzer.ts",
+        "lib/agent-os.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "SEC-02",
@@ -591,7 +625,9 @@
         "Sharing does not expose a previously single-owner API."
       ],
       "dependencies": [],
-      "source_files": [],
+      "source_files": [
+        "lib/control-plane.ts"
+      ],
       "owner": "Unassigned",
       "evidence": [],
       "audit_subtasks": [
@@ -619,7 +655,9 @@
           "status": "open",
           "resolution_and_acceptance": "Source/severity: P1; pricing/agency packaging\nResolution: Each agency client is an isolated tenant or explicitly scoped workspace with its own source rights, approver and cost center. Agency portfolio aggregates authorized summaries only.\nAcceptance: Remove agency access without deleting client data, transfer retained history with authority, export approved artifacts and demonstrate no cross-client search/count leakage."
         }
-      ]
+      ],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "SEC-03",
@@ -640,9 +678,14 @@
         "Tests exercise material failure paths and no secrets appear in logs/exports."
       ],
       "dependencies": [],
-      "source_files": [],
+      "source_files": [
+        "lib/providers.ts",
+        "lib/github-account.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "QA-01",
@@ -663,9 +706,13 @@
         "Publication alone is never recorded as external integration success."
       ],
       "dependencies": [],
-      "source_files": [],
+      "source_files": [
+        "tests/acceptance.mjs"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "QA-02",
@@ -688,9 +735,13 @@
       "dependencies": [
         "RUN-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "tests/runtime.mjs"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "QA-03",
@@ -715,7 +766,9 @@
         "QA-02",
         "DATA-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "tests/integration-fleet.mjs"
+      ],
       "owner": "Unassigned",
       "evidence": [],
       "audit_subtasks": [
@@ -751,7 +804,9 @@
           "status": "open",
           "resolution_and_acceptance": "Source/severity: P2; future readiness\nResolution: Capacity expansion follows actual load and unit economics. Version numbers, elapsed years and market rank are separate axes.\nAcceptance: Quarterly decision records show observed demand, capacity threshold, approved cost and rollback rather than automatic phase progression."
         }
-      ]
+      ],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "OPS-01",
@@ -773,9 +828,13 @@
       "dependencies": [
         "INT-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/control-plane.ts"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "OPS-02",
@@ -801,9 +860,13 @@
         "TWIN-01",
         "QA-02"
       ],
-      "source_files": [],
+      "source_files": [
+        "companion/engine/supervisor.mjs"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "OPS-03",
@@ -826,9 +889,13 @@
         "RUN-01",
         "AUTH-04"
       ],
-      "source_files": [],
+      "source_files": [
+        "companion/engine/update.mjs"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "OPS-04",
@@ -851,9 +918,13 @@
         "RUN-01",
         "DATA-03"
       ],
-      "source_files": [],
+      "source_files": [
+        "worker/runner.mjs"
+      ],
       "owner": "Unassigned",
-      "evidence": []
+      "evidence": [],
+      "source_link_confidence": "CANDIDATE_FILE_VERIFIED_NOT_BEHAVIOR",
+      "discovery_status": "EXISTING_FILE_FOUND_TEST_AND_SEMANTIC_VALIDATION_REQUIRED"
     },
     {
       "id": "TWIN-01",
