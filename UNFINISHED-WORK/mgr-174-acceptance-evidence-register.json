@@ -1479,7 +1479,9 @@
       "title": "Create reusable integration execution contracts",
       "priority": "P0",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/integration-engineering.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -1508,7 +1510,8 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "REL-01",
@@ -1656,7 +1659,9 @@
       "title": "GitHub integration",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "lib/github-account.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -1697,7 +1702,8 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "CONN-02",
@@ -1848,7 +1854,9 @@
       "title": "Local Projects integration",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "app/api/workspace/route.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -1889,14 +1897,17 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "CONN-06",
       "title": "Local Directories integration",
       "priority": "P2",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "app/api/workspace/route.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -1937,14 +1948,17 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "CONN-07",
       "title": "Monorepos integration",
       "priority": "P2",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "app/api/workspace/route.ts"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -1985,7 +1999,8 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "CONN-08",
@@ -2232,7 +2247,9 @@
       "title": "Docker integration",
       "priority": "P1",
       "recordedStatus": "open",
-      "sourcePaths": [],
+      "sourcePaths": [
+        "worker/runner.mjs"
+      ],
       "claimedEvidence": [],
       "acceptance": [
         {
@@ -2273,7 +2290,8 @@
         }
       ],
       "overall": "NOT_CERTIFIED",
-      "owner": "Unassigned"
+      "owner": "Unassigned",
+      "sourceLinkEvidenceType": "PARTIAL_SOURCE_NOT_LIVE_VERIFIED"
     },
     {
       "id": "CONN-14",
