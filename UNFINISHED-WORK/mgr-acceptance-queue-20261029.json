@@ -821,17 +821,24 @@
       "priority": "P1",
       "area": "13-release-and-github-handoff",
       "lane": "release-operations",
-      "historicalState": "open",
+      "historicalState": "implemented_unverified",
       "claimedImplementation": "unspecified",
-      "sourceReferences": [],
-      "evidenceReferences": [],
+      "sourceReferences": [
+        "SOURCE-IMPORT.md",
+        "UNFINISHED-WORK/README.md",
+        "worker/runner.mjs"
+      ],
+      "evidenceReferences": [
+        "SOURCE-IMPORT.md",
+        "evidence/github-source-import.json"
+      ],
       "acceptance": [
         "User-designated GitHub repository contains the exact reviewed source and unfinished-work folder.",
         "No unrelated repository is modified and no secret is committed."
       ],
       "dependencies": [],
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
-      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+      "next": "Source transfer read back on GitHub at 26e230d; reproduce secret scan, full inventory digest and ensure no unintended repository modifications before VERIFIED."
     },
     {
       "id": "REL-03",
@@ -3755,5 +3762,9 @@
       "admission": "REVIEW_NOT_AUTO_COMPLETED",
       "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
     }
-  ]
+  ],
+  "currentRecordedStatusCounts": {
+    "open": 173,
+    "implemented_unverified": 1
+  }
 }
