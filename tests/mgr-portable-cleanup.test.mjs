@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {cleanupContainer} from '../worker/runner.mjs';
+test('explicit Docker absence required',async()=>{const calls=[];const r=await cleanupContainer('test',{runCommand:async args=>{calls.push(args[0]);return args[0]==='rm'?{code:0,output:''}:{code:1,output:'No such object: test'};}});assert.equal(r.verifiedAbsent,true);assert.deepEqual(calls,['rm','inspect']);});
+test('daemon unavailable is NOT proof of cleanup',async()=>{const r=await cleanupContainer('test',{runCommand:async args=>({code:1,output:'Cannot connect to daemon'})});assert.equal(r.verifiedAbsent,false);});
+test('still-present container fails',async()=>{const r=await cleanupContainer('test',{runCommand:async args=>({code:0,output:'{}'})});assert.equal(r.verifiedAbsent,false);});
