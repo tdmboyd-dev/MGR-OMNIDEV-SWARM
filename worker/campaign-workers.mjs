@@ -32,7 +32,7 @@ export class CampaignWorkers{
   const jobs=this.state.jobs;
   for(const j of Object.values(jobs))if(j.status==='queued'&&j.dependsOn.some(d=>jobs[d]&&['blocked','quarantined'].includes(jobs[d].status))){j.status='blocked';j.lastReason='dependency-blocked';this.event('job.blocked',j.id);}
   const capacity=this.maxWorkers-this.active.size;
-  const ready=Object.values(jobs).filter(j=>j.status==='queued'&&j.dependsOn.every(d=>jobs[d]?.status==='verified')).sort((a,b)=>a.id.localeCompare(b.id)).slice(0,Math.max(0,capacity));
+  const ready=Object.values(jobs).filter(j=>j.status==='queued'&&j.dependsOn.every(d=>jobs[d]?.status==='executed-zero-exit')).sort((a,b)=>a.id.localeCompare(b.id)).slice(0,Math.max(0,capacity));
   for(const j of ready){j.status='running';j.attempts++;j.workerLease=this.owner;this.event('job.started',j.id,{attempt:j.attempts});}
   await this.persist();
   for(const j of ready){const p=this.profiles[j.profile];const promise=this.runOne(j,p).finally(()=>this.active.delete(j.id));this.active.set(j.id,promise);}
@@ -41,7 +41,7 @@ export class CampaignWorkers{
  async runOne(j,profile){
   let result;try{result=await this.execute(profile,j.args);}catch(e){result={ok:false,reason:e.code??'worker-exception'};}
   if(j.workerLease!==this.owner||j.status!=='running')return;
-  if(result.ok){j.status='verified';j.lastReason=null;this.event('job.verified',j.id,{exitCode:0,outputHash:result.outputHash});}
+  if(result.ok){j.status='executed-zero-exit';j.lastReason=null;this.event('job.executed-zero-exit',j.id,{exitCode:0,outputHash:result.outputHash});}
   else{j.status=j.attempts>=this.maxAttempts?'quarantined':'queued';j.lastReason=result.reason;this.event(j.status==='quarantined'?'job.quarantined':'job.retry',j.id,{reason:result.reason,attempt:j.attempts});}
   delete j.workerLease;await this.persist();
  }
@@ -69,5 +69,5 @@ export class CampaignWorkers{
   }
   return this.summary();
  }
- summary(){const jobs=Object.values(this.state.jobs),counts={};for(const j of jobs)counts[j.status]=(counts[j.status]??0)+1;return {total:jobs.length,counts,complete:jobs.every(j=>j.status==='verified'),unresolved:jobs.filter(j=>j.status!=='verified').map(j=>({id:j.id,status:j.status,reason:j.lastReason}))};}
+ summary(){const jobs=Object.values(this.state.jobs),counts={};for(const j of jobs)counts[j.status]=(counts[j.status]??0)+1;return {total:jobs.length,counts,allCommandsExitedZero:jobs.every(j=>j.status==='executed-zero-exit'),releaseVerified:false,unresolved:jobs.filter(j=>j.status!=='executed-zero-exit').map(j=>({id:j.id,status:j.status,reason:j.lastReason}))};}
 }
