@@ -1,0 +1,3759 @@
+{
+  "version": 1,
+  "sourceCommit": "50d3e375db1cda2a4c78d80cc683d52186a1cd0d",
+  "created": "2026-10-29",
+  "purpose": "Actionable 174-parent verification queue; not 174 confirmed missing features.",
+  "total": 174,
+  "priorityCounts": {
+    "P0": 30,
+    "P1": 71,
+    "P2": 73
+  },
+  "operatingRule": "Never mark done from source reference alone. Agent model work needs owner-approved provider budgets, protected credentials, and qualified Docker host.",
+  "tasks": [
+    {
+      "id": "AUTH-01",
+      "priority": "P0",
+      "area": "03-account-connections",
+      "lane": "identity-connectors",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "lib/github-account.ts",
+        "lib/repository.ts"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "A real authorized repository import and draft PR have provider-side evidence.",
+        "Decline, revoke, refresh and disconnect behave correctly; no merge occurs."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUTH-02",
+      "priority": "P0",
+      "area": "03-account-connections",
+      "lane": "identity-connectors",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "lib/providers.ts",
+        "lib/jobs.ts",
+        "components/runtime-workspace.tsx",
+        "companion/chatgpt.mjs"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "An eligible signed-in account completes real inference without pasting an API key.",
+        "No model call occurs with identity-only consent, revoked permission or a declined usage grant.",
+        "Account switching, limits and refresh are verified."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUTH-03",
+      "priority": "P1",
+      "area": "03-account-connections",
+      "lane": "identity-connectors",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Each shipped provider has a real no-key sign-in and completed model request with evidence.",
+        "Unavailable provider capabilities remain visibly unavailable rather than simulated."
+      ],
+      "dependencies": [
+        "AUTH-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUTH-04",
+      "priority": "P1",
+      "area": "03-account-connections",
+      "lane": "identity-connectors",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "db/schema.ts",
+        "lib/github-account.ts"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Connections report only verified capabilities and preserve errors without leaking tokens.",
+        "Concurrent refresh/revocation and cross-account isolation pass meaningful tests."
+      ],
+      "dependencies": [
+        "AUTH-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "RUN-01",
+      "priority": "P0",
+      "area": "02-agent-runtime",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "worker/runner.mjs",
+        "worker/README.md",
+        "app/api/worker/route.ts"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "At least one real isolated run reports evidence to the hosted queue.",
+        "Worker survives restart and rejects unauthorized requests without exposing credentials."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "RUN-02",
+      "priority": "P0",
+      "area": "02-agent-runtime",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "lib/jobs.ts",
+        "lib/catalog.ts",
+        "lib/agent-os.ts",
+        "app/api/agents/route.ts"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "Nested specialist execution completes with real provider evidence and durable lineage.",
+        "Budget exhaustion, cancellation and partial failures stop work predictably."
+      ],
+      "dependencies": [
+        "AUTH-02",
+        "RUN-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "RUN-03",
+      "priority": "P0",
+      "area": "02-agent-runtime",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "lib/jobs.ts",
+        "lib/repository.ts",
+        "lib/control-plane.ts"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "Concurrent workers do not duplicate effects or overwrite newer results.",
+        "Crash/retry tests produce correct terminal states and auditable recovery."
+      ],
+      "dependencies": [
+        "RUN-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DEV-01",
+      "priority": "P1",
+      "area": "02-agent-runtime",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Real coding tasks change application behavior correctly and pass relevant tests.",
+        "Unsupported edits and stale baselines are rejected with recoverable errors."
+      ],
+      "dependencies": [
+        "AUTH-02",
+        "RUN-01",
+        "QA-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DEV-02",
+      "priority": "P0",
+      "area": "02-agent-runtime",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "A real branch → candidate → tests → draft PR flow is proven on a test repository.",
+        "Retry cannot silently duplicate or overwrite unrelated work."
+      ],
+      "dependencies": [
+        "AUTH-01",
+        "RUN-01",
+        "QA-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DEV-03",
+      "priority": "P1",
+      "area": "02-agent-runtime",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Representative generated artifacts validate and run in an authorized test environment.",
+        "Destructive changes and unsupported versions cannot execute silently."
+      ],
+      "dependencies": [
+        "DEV-01",
+        "OPS-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "GRAPH-01",
+      "priority": "P1",
+      "area": "05-knowledge-and-gaps",
+      "lane": "code-intelligence",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "lib/analyzer.ts",
+        "db/schema.ts",
+        "lib/intelligence.ts"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "Multiple connected systems share verified cross-source relationships.",
+        "Updates/deletes do not leave stale edges or reveal unauthorized nodes."
+      ],
+      "dependencies": [
+        "DATA-01",
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "GRAPH-02",
+      "priority": "P1",
+      "area": "05-knowledge-and-gaps",
+      "lane": "code-intelligence",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Fixtures and authorized real projects show correct entities and relationships.",
+        "Unsupported languages and incomplete snapshots are labeled as coverage gaps."
+      ],
+      "dependencies": [
+        "GRAPH-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "GAP-01",
+      "priority": "P1",
+      "area": "05-knowledge-and-gaps",
+      "lane": "code-intelligence",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Known gaps are detected with actionable evidence and acceptable measured false-positive rates.",
+        "Incomplete snapshots and business hypotheses do not become unsupported factual claims."
+      ],
+      "dependencies": [
+        "GRAPH-02",
+        "BIZ-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DATA-01",
+      "priority": "P1",
+      "area": "12-data-memory-and-platform",
+      "lane": "data-memory",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "db/store.ts",
+        "db/schema.ts"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Large projects remain responsive within measured budgets.",
+        "Artifacts have provenance, access controls and reliable lifecycle cleanup.",
+        "Migrations run on the selected PostgreSQL version from empty/prior schemas; wrong-project links, cycle races, BYPASSRLS/owner contexts and pooled tenant leakage are rejected."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DATA-02",
+      "priority": "P1",
+      "area": "12-data-memory-and-platform",
+      "lane": "data-memory",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "lib/intelligence.ts"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "Relevant historical evidence can be retrieved across project versions with provenance.",
+        "Access, correction, retention and deletion are verified."
+      ],
+      "dependencies": [
+        "DATA-01",
+        "SEC-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DATA-03",
+      "priority": "P0",
+      "area": "12-data-memory-and-platform",
+      "lane": "data-memory",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "lib/intelligence.ts",
+        "tests/platform.mjs"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "A clean environment restores approved data and artifacts successfully.",
+        "Lost/rotated credentials fail safely and can be reauthorized."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "SEC-01",
+      "priority": "P1",
+      "area": "06-security-and-verification",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Known vulnerabilities and remediations are validated against test fixtures and authorized targets.",
+        "Coverage, false positives and source freshness are visible."
+      ],
+      "dependencies": [
+        "RUN-01",
+        "GRAPH-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "SEC-02",
+      "priority": "P0",
+      "area": "06-security-and-verification",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Unauthorized users cannot access any project data, credential or action.",
+        "Sharing does not expose a previously single-owner API."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "SEC-03",
+      "priority": "P0",
+      "area": "06-security-and-verification",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Security review findings are recorded and fixed or explicitly dispositioned.",
+        "Tests exercise material failure paths and no secrets appear in logs/exports."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "QA-01",
+      "priority": "P0",
+      "area": "06-security-and-verification",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Hosted user journeys and access boundaries pass with captured evidence.",
+        "Publication alone is never recorded as external integration success."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "QA-02",
+      "priority": "P0",
+      "area": "06-security-and-verification",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Behavioral bugs and regressions cause meaningful failures.",
+        "Passing snapshot-integrity checks is not presented as application correctness."
+      ],
+      "dependencies": [
+        "RUN-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "QA-03",
+      "priority": "P1",
+      "area": "06-security-and-verification",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Measured results demonstrate stated capacity and reliability limits.",
+        "Evaluation artifacts and failures remain searchable.",
+        "Incident/control capacity remains available under noisy-neighbor load; supported SLOs and economic usage limits match observed profiles."
+      ],
+      "dependencies": [
+        "QA-02",
+        "DATA-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "OPS-01",
+      "priority": "P0",
+      "area": "07-production-and-self-healing",
+      "lane": "release-operations",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized target failures produce accurate incidents and recoveries with timestamps.",
+        "Stale/missing telemetry cannot produce a false healthy state."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "OPS-02",
+      "priority": "P0",
+      "area": "07-production-and-self-healing",
+      "lane": "release-operations",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "An induced test-environment incident is detected, diagnosed, repaired, checked and safely rolled back on failure.",
+        "No unsupported production action is claimed or performed."
+      ],
+      "dependencies": [
+        "OPS-01",
+        "OPS-03",
+        "TWIN-01",
+        "QA-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "OPS-03",
+      "priority": "P0",
+      "area": "07-production-and-self-healing",
+      "lane": "release-operations",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "A real authorized staging deployment and rollback are verified.",
+        "Wrong-target, stale-plan and unsafe/destructive actions are rejected."
+      ],
+      "dependencies": [
+        "RUN-01",
+        "AUTH-04"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "OPS-04",
+      "priority": "P1",
+      "area": "07-production-and-self-healing",
+      "lane": "release-operations",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Platform outages and stale workers generate actionable alerts.",
+        "Recovery and maintenance runbooks are exercised."
+      ],
+      "dependencies": [
+        "RUN-01",
+        "DATA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "TWIN-01",
+      "priority": "P1",
+      "area": "08-digital-twins-and-futures",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Predictions are calibrated against real staging outcomes and documented uncertainty.",
+        "Twin changes cannot affect production or expose sensitive data."
+      ],
+      "dependencies": [
+        "RUN-01",
+        "GRAPH-02",
+        "OPS-01",
+        "DATA-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "TWIN-02",
+      "priority": "P1",
+      "area": "08-digital-twins-and-futures",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Scenarios trace to real input data and explicitly distinguish forecasts from facts.",
+        "Revenue and cost access is permission-controlled."
+      ],
+      "dependencies": [
+        "TWIN-01",
+        "BIZ-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "FUT-01",
+      "priority": "P1",
+      "area": "08-digital-twins-and-futures",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Every horizon has project-specific evidence and testable milestones.",
+        "Predictions remain hypotheses with evaluations, not guaranteed futures."
+      ],
+      "dependencies": [
+        "GRAPH-02",
+        "TWIN-01",
+        "BIZ-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "BIZ-01",
+      "priority": "P1",
+      "area": "10-business-and-innovation",
+      "lane": "business",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Recommendations reference real evidence and measurable business objectives.",
+        "Sensitive business/customer data has scoped access and retention."
+      ],
+      "dependencies": [
+        "INT-01",
+        "DATA-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "BIZ-02",
+      "priority": "P1",
+      "area": "10-business-and-innovation",
+      "lane": "business",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Proposals include sources, competing solutions, validation plans and experimental results.",
+        "The system does not claim that nobody has built something without evidence."
+      ],
+      "dependencies": [
+        "BIZ-01",
+        "FUT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "EXEC-01",
+      "priority": "P1",
+      "area": "10-business-and-innovation",
+      "lane": "business",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "All 14 dimensions have documented methodology and evidence or an explicit unassessed state.",
+        "A score never implies a certification or unsupported measurement."
+      ],
+      "dependencies": [
+        "SEC-01",
+        "QA-03",
+        "BIZ-01",
+        "OPS-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "UX-01",
+      "priority": "P0",
+      "area": "09-design-and-user-experience",
+      "lane": "interface",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "app/page.tsx",
+        "components/runtime-workspace.tsx",
+        "app/globals.css"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Critical tasks can be completed with clear success/failure/recovery states.",
+        "Screens never imply unverified connectivity, test evidence or autonomy."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "UX-02",
+      "priority": "P0",
+      "area": "09-design-and-user-experience",
+      "lane": "interface",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Representative viewport and assistive-technology journeys pass with recorded findings.",
+        "All critical actions work without a mouse."
+      ],
+      "dependencies": [
+        "UX-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "UX-03",
+      "priority": "P1",
+      "area": "09-design-and-user-experience",
+      "lane": "interface",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "components/intelligence-workspace.tsx",
+        "components/runtime-workspace.tsx"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "Each new surface has task-based acceptance criteria and maps to implemented data/actions.",
+        "Usability review covers real target users and failure paths."
+      ],
+      "dependencies": [
+        "UX-01",
+        "GRAPH-01",
+        "OPS-02",
+        "TWIN-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "LEGAL-01",
+      "priority": "P1",
+      "area": "06-security-and-verification",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Reports distinguish measured controls, missing evidence and legal interpretation.",
+        "No unsupported certification or legal conclusion is issued."
+      ],
+      "dependencies": [
+        "SEC-01",
+        "SEC-02",
+        "BIZ-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "INT-01",
+      "priority": "P0",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Every adapter follows a verified lifecycle and common capability/error contract.",
+        "Cross-source permission boundaries and revoked access are enforced."
+      ],
+      "dependencies": [
+        "AUTH-04",
+        "DATA-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "REL-01",
+      "priority": "P1",
+      "area": "13-release-and-github-handoff",
+      "lane": "release-operations",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "A new authorized operator can set up, verify, recover and upgrade the platform using the docs.",
+        "Release notes accurately distinguish engineering work, activation and verification."
+      ],
+      "dependencies": [
+        "QA-01",
+        "OPS-04"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "REL-02",
+      "priority": "P1",
+      "area": "13-release-and-github-handoff",
+      "lane": "release-operations",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "User-designated GitHub repository contains the exact reviewed source and unfinished-work folder.",
+        "No unrelated repository is modified and no secret is committed."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "REL-03",
+      "priority": "P2",
+      "area": "13-release-and-github-handoff",
+      "lane": "release-operations",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "No unwanted running resources or required Vercel dependency remain.",
+        "Cleanup outcome is verified; absence of a supported delete operation is documented."
+      ],
+      "dependencies": [],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-01",
+      "priority": "P1",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-02",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-03",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-04",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-05",
+      "priority": "P1",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-06",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-07",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-08",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-09",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-10",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-11",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-12",
+      "priority": "P1",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-13",
+      "priority": "P1",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-14",
+      "priority": "P1",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-15",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-16",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-17",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-18",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-19",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-20",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-21",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-22",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-23",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-24",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-25",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-26",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-27",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-28",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-29",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-30",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-31",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-32",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-33",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-34",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-35",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-36",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-37",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-38",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "CONN-39",
+      "priority": "P2",
+      "area": "04-integration-inventory",
+      "lane": "integration",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "dependencies": [
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-01",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Security tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-02",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Backend tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-03",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Frontend tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-04",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative DevOps tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-05",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Cloud tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-06",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Infrastructure tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-07",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Databases tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-08",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative AI Development tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-09",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Machine Learning tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-10",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative LLM Engineering tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-11",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative RAG Systems tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-12",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Vector Databases tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-13",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative 3D Development tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-14",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Blender tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-15",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Maya tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-16",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Unity tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-17",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Unreal Engine tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-18",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Game Development tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-19",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Mobile Development tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-20",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Testing tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-21",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative QA tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-22",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Automation tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-23",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative UI Design tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-24",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative UX Design tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-25",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Accessibility tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-26",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Compliance tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-27",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Legal Auditing tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-28",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Documentation tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-29",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Research tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-30",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Business Intelligence tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-31",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Product Management tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-32",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Customer Analytics tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-33",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Revenue Optimization tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-34",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Competitive Analysis tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-35",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Innovation Discovery tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-36",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Future Prediction tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-37",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Architecture tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-38",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Code Quality tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-39",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Performance tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-40",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Scalability tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-41",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Reliability tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-42",
+      "priority": "P1",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Observability tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-43",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Networking tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-44",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Cyber Defense tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-45",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Penetration Testing tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-46",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Open Source Analysis tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "DOM-47",
+      "priority": "P2",
+      "area": "11-specialist-domains",
+      "lane": "agent-runtime",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Specialist completes representative Dependency Intelligence tasks with source/tool evidence and useful artifacts.",
+        "Failures, unsupported cases and uncertain conclusions are disclosed.",
+        "Child agents respect shared permissions and execution budgets."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "INT-01",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-01",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Reference unsupported cases fail without silent fallback.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "QA-03",
+        "INT-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-02",
+      "priority": "P0",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [
+        "evidence/runtime.txt",
+        "evidence/worker-cleanup.txt",
+        "COMPLETION-AUDIT/IMPLEMENTATION-EVIDENCE.md"
+      ],
+      "acceptance": [
+        "Forged/stale/mismatched reports cannot authorize effects.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "RUN-01",
+        "RUN-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-03",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Deleted material is denied immediately; purge convergence and restored-copy denial are measured.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "DATA-02",
+        "DATA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-04",
+      "priority": "P0",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Cold-region restore succeeds without relying on the failed control plane.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task.",
+        "Missing keys/objects, incompatible histories, deleted-source resurrection and unknown external writes prevent unsafe restart."
+      ],
+      "dependencies": [
+        "DATA-03",
+        "OPS-04"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-05",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Clone votes do not increase effective independence; evaluator tampering is rejected.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "RUN-02",
+        "QA-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-06",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "A user can challenge a finding, stop a run and track resolution without exposing hidden data.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "SEC-02",
+        "UX-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-07",
+      "priority": "P0",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Poisoned image/package/attestation fails admission.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "RUN-01",
+        "SEC-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-08",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Support access is denied without valid ticket/scope and appears in audit.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "SEC-02",
+        "SEC-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-09",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Overage workload raises costs; cash and earned revenue reconcile separately.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "BIZ-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-10",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "A paid pilot demonstrates incremental value beyond an existing coding agent.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "QA-02",
+        "DEV-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-11",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Poisoned lesson cannot reach every tenant before detection; rollback is demonstrated.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "AUD-03",
+        "AUD-05"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-12",
+      "priority": "P0",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Network partition cannot multiply available funds or release unresolved liability.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task.",
+        "Duplicate receipts, currency mismatch, imbalance and immutable-history edits fail; uncertain liability and controlled exposure are explicit."
+      ],
+      "dependencies": [
+        "RUN-03",
+        "DATA-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-13",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Loss of another residency domain does not grant or revoke local authority incorrectly.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task.",
+        "Partition/skew/stale-home tests show one writer; no regional DR claim if policy disallows an alternate region."
+      ],
+      "dependencies": [
+        "DATA-01",
+        "OPS-04"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-14",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Expired/offline credentials cannot authorize cloud effects.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "SEC-02",
+        "AUD-13"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-15",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Artifact export and training check rights independently.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "INT-01",
+        "LEGAL-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-16",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Historical releases can be reconstructed and verified after provider replacement.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "DATA-03",
+        "REL-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-17",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Loss of largest provider/customer has a bounded documented response.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "AUD-09",
+        "AUTH-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-18",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Revenue/latency attribution reports known confounders.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "TWIN-01",
+        "BIZ-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-19",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "A real pilot rehearses escalation, export, billing dispute and incident notification.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task.",
+        "Pilot rehearses vulnerability report, incident notification, export/delete and support-access expiry."
+      ],
+      "dependencies": [
+        "REL-01",
+        "LEGAL-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-20",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Each future scenario maps to a reversible experiment and stop rule.",
+        "Evidence binds the exact implementation revision and scope; design checks alone do not close this task."
+      ],
+      "dependencies": [
+        "FUT-01",
+        "BIZ-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-21",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/README.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Signed module admission, permission upgrades, malicious release revocation, independent domain evaluations and payout/refund reconciliation.",
+        "Exact revision, operational owner and repeatable evidence are recorded."
+      ],
+      "dependencies": [
+        "SEC-02",
+        "AUD-07",
+        "AUD-09"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-22",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/README.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Separate customer plan usage, platform fees, API receipts and unknown liability; prove no double billing or unauthorized fallback.",
+        "Exact revision, operational owner and repeatable evidence are recorded."
+      ],
+      "dependencies": [
+        "AUTH-02",
+        "AUD-12"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-23",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/README.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Version /v1 APIs, event schemas, state mappings, plugins, models and migrations; run replay/compatibility and deprecation checks.",
+        "Exact revision, operational owner and repeatable evidence are recorded."
+      ],
+      "dependencies": [
+        "DATA-01",
+        "RUN-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-24",
+      "priority": "P0",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/README.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Snapshot edit versus validated change versus deployment has explicit required evidence; missing/stale tests cannot authorize high-risk actions.",
+        "Exact revision, operational owner and repeatable evidence are recorded."
+      ],
+      "dependencies": [
+        "QA-02",
+        "AUD-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-25",
+      "priority": "P0",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/README.md"
+      ],
+      "evidenceReferences": [
+        "evidence/runtime.txt",
+        "evidence/worker-cleanup.txt",
+        "COMPLETION-AUDIT/IMPLEMENTATION-EVIDENCE.md"
+      ],
+      "acceptance": [
+        "Enforce concurrency/resource admission atomically; concurrent enqueue cannot exceed quota; failure releases only valid allocations.",
+        "Exact revision, operational owner and repeatable evidence are recorded."
+      ],
+      "dependencies": [
+        "RUN-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-26",
+      "priority": "P0",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/README.md"
+      ],
+      "evidenceReferences": [
+        "evidence/runtime.txt",
+        "evidence/worker-cleanup.txt",
+        "COMPLETION-AUDIT/IMPLEMENTATION-EVIDENCE.md"
+      ],
+      "acceptance": [
+        "Await cleanup outcomes; verify no surviving containers/files after success, timeout, cancellation and runner crash; alert unresolved cleanup.",
+        "Exact revision, operational owner and repeatable evidence are recorded."
+      ],
+      "dependencies": [
+        "RUN-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-27",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/README.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Distinguish symptom relief from root-cause repair and verify delayed recurrence and business invariants.",
+        "Exact revision, operational owner and repeatable evidence are recorded."
+      ],
+      "dependencies": [
+        "OPS-02",
+        "AUD-18"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-28",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/README.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Replace target-only acquisition with funnel, sales/onboarding capacity and retention evidence; stress cash collection and contract liabilities.",
+        "Exact revision, operational owner and repeatable evidence are recorded."
+      ],
+      "dependencies": [
+        "AUD-09",
+        "AUD-10"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-29",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/README.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Record cryptographic algorithms/key lifetimes/signature dependencies; test supported algorithm migration and historical verification.",
+        "Exact revision, operational owner and repeatable evidence are recorded."
+      ],
+      "dependencies": [
+        "SEC-03",
+        "AUD-16"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "AUD-30",
+      "priority": "P1",
+      "area": "14-final-audit",
+      "lane": "security-verification",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "BUILD-BIBLE/README.md"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Accessible flows expose correction/appeal, source withdrawal status and unresolved effect/cost; preserve resumability and current authorization.",
+        "Exact revision, operational owner and repeatable evidence are recorded."
+      ],
+      "dependencies": [
+        "UX-02",
+        "AUD-03",
+        "AUD-22"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-01",
+      "priority": "P0",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json",
+        "lib/control-plane.ts",
+        "lib/jobs.ts",
+        "lib/repository.ts"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "Concurrent correlated releases cannot exceed aggregate ceilings; compromised runtime cannot remove veto or recovery evidence.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-12",
+        "AUD-13",
+        "AUD-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-02",
+      "priority": "P0",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json",
+        "lib/jobs.ts"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "A bug-fix objective cannot silently become a migration; ambiguous revisions preserve original intent and review.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-24"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-03",
+      "priority": "P0",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Revocation/transfer/export tests preserve provenance and prevent purpose escalation.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-03",
+        "LEGAL-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-04",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Participant exit, conflicting rights, derived-artifact use and cross-room leakage tests pass.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "SEC-02",
+        "V2-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-05",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Sybil/reciprocal reputation, conflicted reviewer, appeal and licensing dispute tests pass.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-21",
+        "V2-03"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-06",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "A residency/DR promise is marked unqualified after incompatible deployment drift.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-19",
+        "REL-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-07",
+      "priority": "P0",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json",
+        "lib/control-plane.ts"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "Individually safe but jointly unsafe related changes cannot dispatch together.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "RUN-03",
+        "V2-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-08",
+      "priority": "P0",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Restored but logically inconsistent data fails recovery; deletion and unresolved effects are reconciled.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-04",
+        "AUD-27"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-09",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "An expensive feature without retained customer value cannot enter general release.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-10",
+        "AUD-28"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-10",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Matched workflows include failures/review labor; source cutoff and denominator changes remain reproducible.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-10",
+        "AUD-18"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-11",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Simulated supplier withdrawal preserves current rights, supported operations and customer export.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-17",
+        "AUD-16"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-12",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Key-person departure preserves permitted decisions and responsibilities without privacy escalation.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "V2-03",
+        "AUD-19"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-13",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Conflicting acquired-company data rights remain isolated until qualified resolution.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "V2-03",
+        "SEC-02"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-14",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "External tools exchange evidence without secret/internal access; permission/schema drift fails compatibility.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-23",
+        "AUD-21"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-15",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Simulation success alone cannot authorize a robot or other physical effect.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "V2-09",
+        "QA-03",
+        "LEGAL-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-16",
+      "priority": "P0",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Compromised agents/evaluators cannot disable veto; legitimate scoped recovery is independently auditable.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "SEC-03",
+        "V2-01"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-17",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "unspecified",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json"
+      ],
+      "evidenceReferences": [],
+      "acceptance": [
+        "Dedicated/disconnected deployment is tested against its actual scoped responsibilities.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "AUD-13",
+        "V2-06"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    },
+    {
+      "id": "V2-18",
+      "priority": "P1",
+      "area": "15-completion-v2",
+      "lane": "general",
+      "historicalState": "open",
+      "claimedImplementation": "partial-tested-local",
+      "sourceReferences": [
+        "COMPLETION-AUDIT/upgrade-contracts.json",
+        "lib/intelligence.ts"
+      ],
+      "evidenceReferences": [
+        "evidence/platform.txt",
+        "UNFINISHED-WORK/build-pass-2026-10-09.md"
+      ],
+      "acceptance": [
+        "Payment interruption or operator shutdown preserves promised lawful exit paths and accountable handoff.",
+        "Implemented path and its operating owner have exact-revision evidence; specification alone does not close task."
+      ],
+      "dependencies": [
+        "V2-03",
+        "V2-11",
+        "AUD-19"
+      ],
+      "admission": "REVIEW_NOT_AUTO_COMPLETED",
+      "next": "Run exact acceptance in qualified environment; attach immutable proof and revise only that task."
+    }
+  ]
+}
