@@ -1,4 +1,17 @@
-# Current coordinated checkpoint — October 29, 2026
+# Current scanner integration checkpoint — October 29, 2026
+
+This newest section supersedes older scanner and 54/58-profile descriptions below while preserving their history. **60/60 full local profiles pass**, including TypeScript and the production build, at source commit `e6701655ecad5f1c9d3fd7944b7ecec4191b0955`. Exact source-bound logs and hashes are in `UNFINISHED-WORK/evidence/security-wave-20261029/run/`; the complete report is `UNFINISHED-WORK/mgr-security-wave-20261029.md`.
+
+- Integrated the saved bounded lexical scanner and the existing workspace/jobs/static-check callers. The same 60 labeled examples changed from 34 incorrect results to zero; the 67-check scanner suite, 41-case previous gap suite and six finding-reconciliation cases all pass. Four of those six caller cases were reproduced failing before repair.
+- When source cannot be inspected, rescan/apply/rollback preserve old security findings and manual dispositions. Changed uninspectable source fails the bounded gate; incomplete before/after comparisons stay `not run`. No unknown result is promoted into a repair claim.
+- Added `securityGapEvaluation` and `securityGapReconciliation` to the existing full verification runner, including its required fresh runtime preparation. Source and generated modules remained stable through all 60 profiles.
+- The initial restricted attempt could not capture child-process output and was retained as failed evidence. The same source passed with permitted expanded local execution; no output, source-integrity or approval checks were weakened.
+- All original acceptance wording and parent states remain unchanged: 122 open / 52 implemented_unverified, zero newly independently certified parents. `GAP-01` remains partial. Use `UNFINISHED-WORK/remaining-detail-omnidev-20261029.json` for the named remaining work instead of assuming every open task lacks code.
+- Remaining: semantic/language-aware analysis, real-project evaluation, actual isolated workers/providers, live cross-product identity, browser/assistive journeys and independent release qualification. These local receipts do not claim remote publication, merge or deployment. The shared trilogy handoff remains the root coordinator's responsibility.
+
+---
+
+# Prior coordinated checkpoint — October 29, 2026
 
 Read this section before historical entries below. This is an additive update to the established handoff protocol; original decisions and evidence remain preserved.
 

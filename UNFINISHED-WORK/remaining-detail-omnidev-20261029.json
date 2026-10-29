@@ -26,7 +26,7 @@
   ],
   "nextWave": {
     "capability": "Improve security gap detection in the existing snapshot analyzer",
-    "status": "Scanner and caller/gate repair integrated with passing targeted checks; clean committed full regression pending.",
+    "status": "IMPLEMENTED_TESTED_LOCAL_PINNED",
     "reason": "The same 60 hand-labeled security inputs produced 34 mismatches in the previous runtime source and zero after the bounded lexical repair.",
     "baseline": {
       "schema": "mgr.security-gap-rule-evaluation.v1",
@@ -308,6 +308,12 @@
         "failed": 0,
         "beforePassed": 2,
         "beforeFailed": 4
+      },
+      "fullRegression": {
+        "passedProfiles": 60,
+        "failedProfiles": 0,
+        "blockedProfiles": 0,
+        "report": "UNFINISHED-WORK/evidence/security-wave-20261029/run/report.json"
       }
     },
     "sourceFiles": [
@@ -358,8 +364,9 @@
         "failures": 0
       },
       "behavior": "Preserve old security findings and manual dispositions when source is uninspected across rescan/apply/rollback; fail changed uninspectable source; allow unrelated maintenance; mark incomplete comparisons not run.",
-      "integrationStatus": "APPLIED_WITH_PASSING_TARGETED_RECONCILIATION",
-      "integratedTestPath": "tests/security-gap-reconciliation.mjs"
+      "integrationStatus": "COMMITTED_AND_VERIFIED_FULL_REGRESSION",
+      "integratedTestPath": "tests/security-gap-reconciliation.mjs",
+      "finalEvidence": "UNFINISHED-WORK/evidence/security-wave-20261029/verification.json"
     },
     "sourceFingerprints": [
       {
@@ -369,22 +376,6 @@
       {
         "path": "lib/snapshot-security.ts",
         "sha256": "1c9b1c93321bbdbec914daed9f666f1eaad77bed1e4c4ef159df43f91f3b528e"
-      },
-      {
-        "path": "tests/fixtures/security-gap-corpus.mjs",
-        "sha256": "d6bee6fea946b2360ee3a5fbf76b70e152426329c6869e2b98efe01812ccfce7"
-      },
-      {
-        "path": "tests/security-gap-evaluation.test.mjs",
-        "sha256": "5db6f134179118ccfaa810adbd9357fa84bb72e126b9df6e03b431b6805a30a3"
-      },
-      {
-        "path": "tests/gap-evaluation.test.mjs",
-        "sha256": "5394cc92c2f63152e2a7a1c46baced3f9f48f91d66a354b98b6c2f212dc5f4c3"
-      },
-      {
-        "path": "tests/prepare.mjs",
-        "sha256": "c2f1b26b64e9049b667034fc0c12fc7f769e24b0c163d685d32d20ee26da2f4e"
       },
       {
         "path": "app/api/workspace/route.ts",
@@ -399,22 +390,36 @@
         "sha256": "86cd1183ae60a2c50dff59708928c0c44819304d4d4687e675fda868b67ecaab"
       },
       {
-        "path": "tests/security-gap-reconciliation.mjs",
-        "sha256": "1b97d1669c1ae008531d23881a2e1a64b2406d3968ff3076acb786b6d5716abb"
-      },
-      {
         "path": "scripts/run-fixture-evidence.mjs",
         "sha256": "94e55289fd4750005585fb958a8a165f8caeaa246dc0ab1e60f160961f13465e"
       },
       {
         "path": "scripts/run-full-verification.mjs",
         "sha256": "96868badbfd637fa701b4c3ae6267361118844d3a4c5c64ace94e49675ed5d22"
+      },
+      {
+        "path": "tests/prepare.mjs",
+        "sha256": "c2f1b26b64e9049b667034fc0c12fc7f769e24b0c163d685d32d20ee26da2f4e"
+      },
+      {
+        "path": "tests/fixtures/security-gap-corpus.mjs",
+        "sha256": "d6bee6fea946b2360ee3a5fbf76b70e152426329c6869e2b98efe01812ccfce7"
+      },
+      {
+        "path": "tests/security-gap-evaluation.test.mjs",
+        "sha256": "5db6f134179118ccfaa810adbd9357fa84bb72e126b9df6e03b431b6805a30a3"
+      },
+      {
+        "path": "tests/security-gap-reconciliation.mjs",
+        "sha256": "1b97d1669c1ae008531d23881a2e1a64b2406d3968ff3076acb786b6d5716abb"
+      },
+      {
+        "path": "tests/gap-evaluation.test.mjs",
+        "sha256": "5394cc92c2f63152e2a7a1c46baced3f9f48f91d66a354b98b6c2f212dc5f4c3"
       }
     ],
-    "pendingBeforeCompletion": [
-      "Run the complete clean committed 60-profile verification and preserve source-bound receipts.",
-      "Record current evidence and exact remaining scope in the existing per-repository and trilogy handoffs."
-    ]
+    "pendingBeforeCompletion": [],
+    "testedSourceCommit": "e6701655ecad5f1c9d3fd7944b7ecec4191b0955"
   },
   "items": [
     {
@@ -17619,5 +17624,5 @@
       "qualification": "Source references establish locations, not complete behavior. Existing local contracts stay credited separately; final acceptance is not invented."
     }
   ],
-  "updatedAt": "2026-10-29T15:28:49.962163+00:00"
+  "updatedAt": "2026-10-29T15:31:13.752331+00:00"
 }

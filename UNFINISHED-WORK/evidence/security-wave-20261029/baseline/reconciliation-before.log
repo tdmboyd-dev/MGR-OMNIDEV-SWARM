@@ -1,0 +1,106 @@
+✖ rescan preserves existing security dispositions when source cannot be inspected (47.619094ms)
+✔ a completed clean rescan can still resolve absent snapshot signals (5.350113ms)
+✔ removing the source file resolves snapshot absence rather than pretending it was uninspected (4.031588ms)
+✖ native maintenance apply and rollback retain findings for unchanged uninspected source (7.944707ms)
+✖ malformed changed source fails static inspection and cannot enter snapshot apply (3.931217ms)
+✖ a local fix of malformed source can be reviewed without claiming a complete before comparison (0.700455ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 2
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 75.271625
+
+✖ failing tests:
+
+test at tests/security-gap-reconciliation.mjs:12:1
+✖ rescan preserves existing security dispositions when source cannot be inspected (47.619094ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      {
+        createdAt: '2026-10-29T15:27:59.927Z',
+        data: {
+          category: 'Security',
+  ...
+          remediation: 'Confirm the query and input flow. Use bound parameters; validate and authorize inputs before database access.',
+  +       resolution: 'Signal absent from the current stored snapshot; not proof of a runtime repair.',
+          severity: 'critical',
+  +       snapshotResolved: true,
+          status: 'open',
+          title: 'Possible SQL injection path'
+        },
+        id: 'f58fe3d0-7795-4c3a-b7c6-8c14d1676ed3',
+        kind: 'finding',
+        projectId: '5e9c9931-5f58-4b57-86e6-60a8621c2e6a',
+  +     status: 'resolved',
+  -     status: 'in review',
+        title: 'Possible SQL injection path',
+  +     updatedAt: '2026-10-29T15:27:59.934Z'
+  -     updatedAt: '2026-10-29T15:27:59.929Z'
+      },
+      {
+        createdAt: '2026-10-29T15:27:59.927Z',
+        data: {
+          category: 'Security',
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/b5d6a233c1bb/MGR-OMNIDEV-SWARM/tests/security-gap-reconciliation.mjs:19:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [Array],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/security-gap-reconciliation.mjs:36:1
+✖ native maintenance apply and rollback retain findings for unchanged uninspected source (7.944707ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'passed'
+  - 'not run'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/b5d6a233c1bb/MGR-OMNIDEV-SWARM/tests/security-gap-reconciliation.mjs:44:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'passed',
+    expected: 'not run',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/security-gap-reconciliation.mjs:49:1
+✖ malformed changed source fails static inspection and cannot enter snapshot apply (3.931217ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'awaiting review'
+  - 'failed'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/b5d6a233c1bb/MGR-OMNIDEV-SWARM/tests/security-gap-reconciliation.mjs:54:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'awaiting review',
+    expected: 'failed',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/security-gap-reconciliation.mjs:61:1
+✖ a local fix of malformed source can be reviewed without claiming a complete before comparison (0.700455ms)
+  TypeError: Cannot read properties of undefined (reading 'status')
+      at TestContext.<anonymous> (file:///workspace/scratch/b5d6a233c1bb/MGR-OMNIDEV-SWARM/tests/security-gap-reconciliation.mjs:65:98)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

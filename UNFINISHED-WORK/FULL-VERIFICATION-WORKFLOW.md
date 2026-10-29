@@ -80,3 +80,9 @@ Read `HANDOFF.md`, `AGENTS.md`, this workflow, the canonical backlog/register, a
 ## Completed source checkpoint
 
 The final October 29 run passed all **54/54 profiles** at `8aa5f615af380bea1676daf2459d365f2e4653ae`. Logs and receipt hashes are in `evidence/full-verification-20261029/run/`. The wave report is `mgr-full-verification-wave-20261029.md`; current source census is `mgr-136-committed-source-reconciliation-20261029.json`, and the remaining discovery list is `mgr-38-unlinked-source-gaps-20261029.json`. Seven local contracts are recorded separately from original final acceptance. Metadata-only evidence reconciliation after this source commit requires a conservation/provenance check and an explicit code-identity comparison.
+
+## Latest scanner integration checkpoint — October 29, 2026
+
+The current complete local run is **60/60 profiles** at `e6701655ecad5f1c9d3fd7944b7ecec4191b0955`, including TypeScript and production build. The prior 54- and 58-profile runs are historical checkpoints. `securityGapEvaluation` executes the bounded scanner corpus directly; `securityGapReconciliation` requires the existing fresh runtime preparation and exercises actual workspace/job consumers. Exact receipts are in `evidence/security-wave-20261029/run/report.json`; the report is `mgr-security-wave-20261029.md`.
+
+The initial restricted attempt is preserved separately because Node child-process output was empty. Expanded local execution restored real capture and allowed the unchanged source to pass; accepting exit zero without output is still prohibited. No original parent was auto-promoted. Keep source-bound local results distinct from real provider, Docker, browser, hosted identity and independent release evidence.

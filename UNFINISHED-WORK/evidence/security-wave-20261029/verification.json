@@ -1,0 +1,342 @@
+{
+  "schema": "mgr.security-wave-verification.v1",
+  "createdAt": "2026-10-29T15:31:13.742034+00:00",
+  "testedSourceCommit": "e6701655ecad5f1c9d3fd7944b7ecec4191b0955",
+  "fullRegression": {
+    "passedProfiles": 60,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 60,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "sourceFingerprints": [
+    {
+      "path": "lib/analyzer.ts",
+      "sha256": "43a2dd5d9543d1d5a4c7cf4817c985bf135edd94a16b7e9f55c4f16ac88cf99c"
+    },
+    {
+      "path": "lib/snapshot-security.ts",
+      "sha256": "1c9b1c93321bbdbec914daed9f666f1eaad77bed1e4c4ef159df43f91f3b528e"
+    },
+    {
+      "path": "app/api/workspace/route.ts",
+      "sha256": "6b157389332c2c659e288a425fd06fec7d59440441fb347afc1b9c95967e7836"
+    },
+    {
+      "path": "lib/jobs.ts",
+      "sha256": "9c30007e15729dde64a026fe59bd3c085daf424dad337f8e229f1ff5d0f5dd11"
+    },
+    {
+      "path": "lib/runtime-contract.ts",
+      "sha256": "86cd1183ae60a2c50dff59708928c0c44819304d4d4687e675fda868b67ecaab"
+    },
+    {
+      "path": "scripts/run-fixture-evidence.mjs",
+      "sha256": "94e55289fd4750005585fb958a8a165f8caeaa246dc0ab1e60f160961f13465e"
+    },
+    {
+      "path": "scripts/run-full-verification.mjs",
+      "sha256": "96868badbfd637fa701b4c3ae6267361118844d3a4c5c64ace94e49675ed5d22"
+    },
+    {
+      "path": "tests/prepare.mjs",
+      "sha256": "c2f1b26b64e9049b667034fc0c12fc7f769e24b0c163d685d32d20ee26da2f4e"
+    },
+    {
+      "path": "tests/fixtures/security-gap-corpus.mjs",
+      "sha256": "d6bee6fea946b2360ee3a5fbf76b70e152426329c6869e2b98efe01812ccfce7"
+    },
+    {
+      "path": "tests/security-gap-evaluation.test.mjs",
+      "sha256": "5db6f134179118ccfaa810adbd9357fa84bb72e126b9df6e03b431b6805a30a3"
+    },
+    {
+      "path": "tests/security-gap-reconciliation.mjs",
+      "sha256": "1b97d1669c1ae008531d23881a2e1a64b2406d3968ff3076acb786b6d5716abb"
+    },
+    {
+      "path": "tests/gap-evaluation.test.mjs",
+      "sha256": "5394cc92c2f63152e2a7a1c46baced3f9f48f91d66a354b98b6c2f212dc5f4c3"
+    }
+  ],
+  "scannerBefore": {
+    "schema": "mgr.security-gap-baseline-reproduction.v1",
+    "sourceRevision": "1c00a6105afe42b06a1d463d541f06c51839f9ad",
+    "sourceSha256": "dca61450118d08c10683668702f4184b3a997da1185fa6b37cc5c4b5ad66aea6",
+    "corpusSha256": "4532e7e3792f3e305de8866e5100e237336c6e74523752d003ef1714563ee9aa",
+    "total": 60,
+    "matched": 26,
+    "mismatches": [
+      {
+        "id": "eval-optional",
+        "rule": "eval",
+        "expected": true,
+        "detected": false
+      },
+      {
+        "id": "eval-global-optional",
+        "rule": "eval",
+        "expected": true,
+        "detected": false
+      },
+      {
+        "id": "eval-line-comment",
+        "rule": "eval",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "eval-block-comment",
+        "rule": "eval",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "eval-quoted-message",
+        "rule": "eval",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "eval-template-message",
+        "rule": "eval",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "eval-object-method",
+        "rule": "eval",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "eval-function-declaration",
+        "rule": "eval",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "eval-method-declaration",
+        "rule": "eval",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "eval-method-multiple-parameters",
+        "rule": "eval",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "eval-regex-literal",
+        "rule": "eval",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "eval-regex-after-condition",
+        "rule": "eval",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "sql-bound-arithmetic",
+        "rule": "sql",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "sql-bound-concat",
+        "rule": "sql",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "sql-plus-in-literal",
+        "rule": "sql",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "sql-multiline-concat",
+        "rule": "sql",
+        "expected": true,
+        "detected": false
+      },
+      {
+        "id": "sql-template-interpolation",
+        "rule": "sql",
+        "expected": true,
+        "detected": false
+      },
+      {
+        "id": "sql-comment-example",
+        "rule": "sql",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "sql-string-example",
+        "rule": "sql",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "sql-comment-plus",
+        "rule": "sql",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "sql-parenthesized-bound-values",
+        "rule": "sql",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "sql-execute-bound-values",
+        "rule": "sql",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "sql-optional-call",
+        "rule": "sql",
+        "expected": true,
+        "detected": false
+      },
+      {
+        "id": "sql-increment-not-concat",
+        "rule": "sql",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "credential-typed-assignment",
+        "rule": "credential",
+        "expected": true,
+        "detected": false
+      },
+      {
+        "id": "credential-quoted-key",
+        "rule": "credential",
+        "expected": true,
+        "detected": false
+      },
+      {
+        "id": "credential-static-template",
+        "rule": "credential",
+        "expected": true,
+        "detected": false
+      },
+      {
+        "id": "credential-comment-example",
+        "rule": "credential",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "credential-block-comment",
+        "rule": "credential",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "credential-quoted-example",
+        "rule": "credential",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "credential-type-literal",
+        "rule": "credential",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "credential-sql-string",
+        "rule": "credential",
+        "expected": false,
+        "detected": true
+      },
+      {
+        "id": "credential-json-field",
+        "rule": "credential",
+        "expected": true,
+        "detected": false
+      },
+      {
+        "id": "credential-json-nested",
+        "rule": "credential",
+        "expected": true,
+        "detected": false
+      }
+    ],
+    "qualification": "Hand-labeled bounded local corpus; not production accuracy."
+  },
+  "scannerAfter": {
+    "schema": "mgr.security-gap-rule-evaluation.v1",
+    "sourceSha256": "43a2dd5d9543d1d5a4c7cf4817c985bf135edd94a16b7e9f55c4f16ac88cf99c",
+    "helperSha256": "1c9b1c93321bbdbec914daed9f666f1eaad77bed1e4c4ef159df43f91f3b528e",
+    "corpusSha256": "4532e7e3792f3e305de8866e5100e237336c6e74523752d003ef1714563ee9aa",
+    "total": 60,
+    "byRule": {
+      "eval": {
+        "cases": 20,
+        "positives": 9,
+        "negatives": 11,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "falsePositiveRate": 0,
+        "falseNegativeRate": 0
+      },
+      "sql": {
+        "cases": 18,
+        "positives": 6,
+        "negatives": 12,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "falsePositiveRate": 0,
+        "falseNegativeRate": 0
+      },
+      "credential": {
+        "cases": 22,
+        "positives": 12,
+        "negatives": 10,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "falsePositiveRate": 0,
+        "falseNegativeRate": 0
+      }
+    },
+    "qualification": "Hand-labeled local regression inputs. No semantic taint analysis, vulnerability confirmation or production accuracy threshold.",
+    "mismatches": []
+  },
+  "reconciliationBefore": {
+    "tests": 6,
+    "passed": 2,
+    "failed": 4,
+    "callerSourceCommit": "0126c41dafcba0b6e46fb92cd2a9043e20987e56",
+    "qualification": "Recovered working snapshot: original workspace/jobs/runtime-contract callers from this commit plus scanner and new regression source matching the current manifest. Not a clean committed full-source baseline.",
+    "log": "baseline/reconciliation-before.log"
+  },
+  "reconciliationAfter": {
+    "tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "profile": "securityGapReconciliation"
+  },
+  "restrictedAttempt": {
+    "reason": "Sandboxed child-process output capture was empty; expanded local execution restored stdout/stderr without changing source or weakening evidence checks.",
+    "report": "restricted-run/report.json"
+  },
+  "originalRegisterUnchanged": true,
+  "independentlyCertifiedParents": 0,
+  "limits": [
+    "Bounded lexical warnings, not semantic taint analysis or confirmed vulnerabilities.",
+    "Hand-labeled fixtures do not establish real-project accuracy.",
+    "Actual deployed account/tenant, isolated Docker worker, browser/assistive interaction and independently provisioned signer remain unqualified.",
+    "No GitHub publication, merge or deployment was performed by this scanner work."
+  ]
+}
