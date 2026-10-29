@@ -1,0 +1,560 @@
+{
+  "schema": "mgr.independent-full-readback.v1",
+  "observedAt": "2026-10-29T18:31:18.320Z",
+  "reviewer": "AI subagent trilogy_independent_review; independent review step, not an independent production signing identity",
+  "passed": true,
+  "sourceCommit": "9f78f46662b8ae051b523dd5df1db7339397649f",
+  "sourceTree": "2293a94056ecac0c84e609695e1d1bfd4743aa61",
+  "currentHead": "9f78f46662b8ae051b523dd5df1db7339397649f",
+  "sourceState": {
+    "currentHeadEqualsTested": true,
+    "cleanAtReadback": true,
+    "recordedSourceBoundaryChecksAllTrue": true,
+    "runtimeAndTestGitObjectsChecked": 290,
+    "runtimeAndTestFilesMatchTestedGitObjects": true,
+    "runtimeAndTestManifestSha256": "aac96d29b8494fbde5b5dc3a503c2ce7bb3d0d31516c6798ececa2b53cb355ba"
+  },
+  "report": {
+    "path": "outputs/trilogy-wave/run/report.json",
+    "bytes": 97193,
+    "sha256": "055607ca785e63f237f2842d241b4070bc28b531befcf7e2230993025e94147b",
+    "summary": {
+      "passedProfiles": 64,
+      "failedProfiles": 0,
+      "blockedProfiles": 0,
+      "totalProfiles": 64,
+      "independentlyCertifiedParents": 0,
+      "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+    }
+  },
+  "outputReadback": {
+    "checked": 64,
+    "totalBytes": 108269,
+    "allNonemptyAndUntruncated": true,
+    "outputs": [
+      {
+        "profile": "prepare",
+        "outputFile": "prepare.log",
+        "bytes": 107,
+        "sha256": "d8efd7e26e74bb141b310462f94125ea1b777e7a01e0ec6c0933d682457d6186",
+        "verified": true
+      },
+      {
+        "profile": "typecheck",
+        "outputFile": "typecheck.log",
+        "bytes": 336,
+        "sha256": "37a0a1f181ca875d25644a064f9b8a38f54981fd763b5bc731bb3a8f550ef712",
+        "verified": true
+      },
+      {
+        "profile": "build",
+        "outputFile": "build.log",
+        "bytes": 1289,
+        "sha256": "362896ebbb60cfc8b70151153ed93f55f1e31066a726ab387b0cb26eea6433f7",
+        "verified": true
+      },
+      {
+        "profile": "acceptance",
+        "outputFile": "acceptance.log",
+        "bytes": 1669,
+        "sha256": "e53e6b5895bd90f6b3bf346e3e8381e8966afd982951eaded6b968b7b0066a61",
+        "verified": true
+      },
+      {
+        "profile": "runtime",
+        "outputFile": "runtime.log",
+        "bytes": 5041,
+        "sha256": "2a80f908f4444bfa49faa14e9895078afd880932fc99676847e8c90059dc7c74",
+        "verified": true
+      },
+      {
+        "profile": "integration",
+        "outputFile": "integration.log",
+        "bytes": 5982,
+        "sha256": "25ac825985f46534f515a353af5b9538ad906d2e9f5faa7686b5c2a62bdd2503",
+        "verified": true
+      },
+      {
+        "profile": "supervisor",
+        "outputFile": "supervisor.log",
+        "bytes": 85,
+        "sha256": "5cd8732f1a8bb37e0d08887a21c9b59c41bbd1513b6126f4f4aa44256347429b",
+        "verified": true
+      },
+      {
+        "profile": "cleanup",
+        "outputFile": "cleanup.log",
+        "bytes": 150,
+        "sha256": "f5a13a515d6237bd8461bcf88e38356134239e083f7c6128987fa10f87e86216",
+        "verified": true
+      },
+      {
+        "profile": "specialists",
+        "outputFile": "specialists.log",
+        "bytes": 8407,
+        "sha256": "1d5435dcdfc6f4ad0d8b952938fbeb632022d78293aa474c4fe358b207c4dded",
+        "verified": true
+      },
+      {
+        "profile": "parallel",
+        "outputFile": "parallel.log",
+        "bytes": 206,
+        "sha256": "c106a79cfe3263a86623b5e128874b441db953ec04a6672eda5727b1786e9535",
+        "verified": true
+      },
+      {
+        "profile": "automatic",
+        "outputFile": "automatic.log",
+        "bytes": 439,
+        "sha256": "c9d3775e17d8a08c3f8afdbf381572aa5c78b8869305f6e989c26b8ea4a1c1d1",
+        "verified": true
+      },
+      {
+        "profile": "jobs",
+        "outputFile": "jobs.log",
+        "bytes": 174,
+        "sha256": "393b33a78a49dce76ca5bea091dfee5065dbc37f66a39fbccc9fcbc3935c5d93",
+        "verified": true
+      },
+      {
+        "profile": "project",
+        "outputFile": "project.log",
+        "bytes": 208,
+        "sha256": "32b7495b0979e84b3679c784c4891523e658e7f0feb58cdbc88be6b99ab91887",
+        "verified": true
+      },
+      {
+        "profile": "pipeline",
+        "outputFile": "pipeline.log",
+        "bytes": 235,
+        "sha256": "dce5ea5dbd205c36347af1bf096b0d4255e9a85a3cc72b700b9e0d78ce8b75d2",
+        "verified": true
+      },
+      {
+        "profile": "review",
+        "outputFile": "review.log",
+        "bytes": 213,
+        "sha256": "57c67fccc40e9c5b982239a4f05be5e2af7293fdb0c2c674daa46460a52ad410",
+        "verified": true
+      },
+      {
+        "profile": "generation",
+        "outputFile": "generation.log",
+        "bytes": 129,
+        "sha256": "3cc54d648b24890e64eef74eab3057d5c4808c68463644d6588aee99186a7d27",
+        "verified": true
+      },
+      {
+        "profile": "platform",
+        "outputFile": "platform.log",
+        "bytes": 9881,
+        "sha256": "6659eec88403dd635b157f6f9498ed48e5998086d1b10e6bda22298b40fcea34",
+        "verified": true
+      },
+      {
+        "profile": "brains",
+        "outputFile": "brains.log",
+        "bytes": 11177,
+        "sha256": "76538ccec40fe10596d35a37adc30cc0fe0e77e3e84ece92f218a578e5e4ac0c",
+        "verified": true
+      },
+      {
+        "profile": "accountAutostart",
+        "outputFile": "accountAutostart.log",
+        "bytes": 239,
+        "sha256": "c67813bee00a4da154573f828bcbd364a2f4a4a331f2b39f44126fb5393df4e7",
+        "verified": true
+      },
+      {
+        "profile": "companion",
+        "outputFile": "companion.log",
+        "bytes": 2701,
+        "sha256": "3002d58e630b318c79438d08803f693498dda2419c1c373a1248e4d3035208c4",
+        "verified": true
+      },
+      {
+        "profile": "engineHeader",
+        "outputFile": "engineHeader.log",
+        "bytes": 127,
+        "sha256": "ef166139b55b35e0b8aac8bda9106f737d984839620ff8960eca179420c7ffb4",
+        "verified": true
+      },
+      {
+        "profile": "engineUpdate",
+        "outputFile": "engineUpdate.log",
+        "bytes": 132,
+        "sha256": "9ed19ececcbc6caa13e3090fe61a4da9dac3e89d4b36472803449e53894cc362",
+        "verified": true
+      },
+      {
+        "profile": "fileLedger",
+        "outputFile": "fileLedger.log",
+        "bytes": 115,
+        "sha256": "7c5c7b888aa602861ce3f10fa872a7f00f67cad7348366bc04775d86e18c0d2b",
+        "verified": true
+      },
+      {
+        "profile": "jobPresentation",
+        "outputFile": "jobPresentation.log",
+        "bytes": 73,
+        "sha256": "e6b8e166d075af9261ff863a172bb6ad30617a386fcaafe7a6be32193d9164f7",
+        "verified": true
+      },
+      {
+        "profile": "localReview",
+        "outputFile": "localReview.log",
+        "bytes": 104,
+        "sha256": "f2441f01f39efedf05e654d42b4aef56b868259f1d8cd6aaa8fc06760999876b",
+        "verified": true
+      },
+      {
+        "profile": "openProgress",
+        "outputFile": "openProgress.log",
+        "bytes": 98,
+        "sha256": "d38b964047acfad0083220f37e5e78bf228e7c53bb9c8148f9c391dfd284d5b6",
+        "verified": true
+      },
+      {
+        "profile": "pipelineEngine",
+        "outputFile": "pipelineEngine.log",
+        "bytes": 151,
+        "sha256": "4f44a680075280d40a50b0e05680eda37b27869bfcd114fbaa778316a90b93cb",
+        "verified": true
+      },
+      {
+        "profile": "repoCompletion",
+        "outputFile": "repoCompletion.log",
+        "bytes": 5852,
+        "sha256": "f495dfd9cf102422d1b0082ee46865d35d71d7c285521670d8eb85dacc318268",
+        "verified": true
+      },
+      {
+        "profile": "reviewPlanner",
+        "outputFile": "reviewPlanner.log",
+        "bytes": 144,
+        "sha256": "aefdd975003a6976592df81b1dffc5a5fffa5f2ebbf458108be0c8d934096787",
+        "verified": true
+      },
+      {
+        "profile": "specialistBackground",
+        "outputFile": "specialistBackground.log",
+        "bytes": 144,
+        "sha256": "641105d6ae97a7602581274ede2d2832b0b310a9ab544a8db9a8c81f74e2e06d",
+        "verified": true
+      },
+      {
+        "profile": "specialistsLedger",
+        "outputFile": "specialistsLedger.log",
+        "bytes": 12048,
+        "sha256": "5242908ea5009bd0236d09fc7777ccba893de012c6fff98ef7764b27e910ccc8",
+        "verified": true
+      },
+      {
+        "profile": "swarmSpawning",
+        "outputFile": "swarmSpawning.log",
+        "bytes": 78,
+        "sha256": "a675936907d813ec679668f160471d26a009b1e8b5bc70d4ff4418606ebac6d8",
+        "verified": true
+      },
+      {
+        "profile": "audit174",
+        "outputFile": "audit174.log",
+        "bytes": 283,
+        "sha256": "f385581aca0bba2b4c90ad387c88ed5694766245ddbf3e22b6398091b102f9d0",
+        "verified": true
+      },
+      {
+        "profile": "acceptanceGate",
+        "outputFile": "acceptanceGate.log",
+        "bytes": 1923,
+        "sha256": "7a8d848b71220d1ed273270418d2e2d10670e0f1d9ba53d1b236f4741b47d34e",
+        "verified": true
+      },
+      {
+        "profile": "connectorQualification",
+        "outputFile": "connectorQualification.log",
+        "bytes": 365,
+        "sha256": "6038dde614b8f6e8539dd6dacba2700be2fd8d39c2029f30bc7eb8d341d7e177",
+        "verified": true
+      },
+      {
+        "profile": "publicKey",
+        "outputFile": "publicKey.log",
+        "bytes": 325,
+        "sha256": "75646f78adfcba94be551ebb0d8ca40a6d58df51f65f396a20d154da007f36ad",
+        "verified": true
+      },
+      {
+        "profile": "portableCleanup",
+        "outputFile": "portableCleanup.log",
+        "bytes": 269,
+        "sha256": "6a339039d250ceed1d2007a306bb68fbe38a2ce5f0f87838b39f91d588f4f8b4",
+        "verified": true
+      },
+      {
+        "profile": "fleet",
+        "outputFile": "fleet.log",
+        "bytes": 401,
+        "sha256": "4e8fab52ac5dd92b93ec2deea50dee9fc65bf82bade6ba58d097ded188d857d6",
+        "verified": true
+      },
+      {
+        "profile": "committedSource",
+        "outputFile": "committedSource.log",
+        "bytes": 267,
+        "sha256": "a0ff842b0b87ff8afc737d3d216f64047224865a8195a0de0f09dea088186ddb",
+        "verified": true
+      },
+      {
+        "profile": "sourceReferences",
+        "outputFile": "sourceReferences.log",
+        "bytes": 293,
+        "sha256": "c9bce54c1c756dd19d9f8c21dfe4c9abf302523e1d714afa5a4329cc1dee3f1f",
+        "verified": true
+      },
+      {
+        "profile": "acceptanceRouting",
+        "outputFile": "acceptanceRouting.log",
+        "bytes": 289,
+        "sha256": "9f1cc49f2fef9150b10eba78f340e2c89905d9d4e5fae2b97c7219a251d5effe",
+        "verified": true
+      },
+      {
+        "profile": "fixtureRecorder",
+        "outputFile": "fixtureRecorder.log",
+        "bytes": 832,
+        "sha256": "e38b178f1113a0b244d7b5a45a805f11fd17e9188153153cf93b061ca116d7db",
+        "verified": true
+      },
+      {
+        "profile": "secretScan",
+        "outputFile": "secretScan.log",
+        "bytes": 278,
+        "sha256": "489545b642d45db278e59ddae778152e35bc7d9d021b5e5f0de560b5ccfdfe8d",
+        "verified": true
+      },
+      {
+        "profile": "waveSelection",
+        "outputFile": "waveSelection.log",
+        "bytes": 313,
+        "sha256": "6c9ce4820da5318f928c53b0b8bcda3021a3382c52ddd9cd81223f610bbc5cee",
+        "verified": true
+      },
+      {
+        "profile": "registerTests",
+        "outputFile": "registerTests.log",
+        "bytes": 2082,
+        "sha256": "084eaa081d11acb310cd4e70a0a8c4bc7acf10482b1f6940e542f645e0d57019",
+        "verified": true
+      },
+      {
+        "profile": "signedReceipt",
+        "outputFile": "signedReceipt.log",
+        "bytes": 1115,
+        "sha256": "804d008b3bd09e376972a4201228c9721fd21c0a203de7752d3dcd45568f4790",
+        "verified": true
+      },
+      {
+        "profile": "sourceImport",
+        "outputFile": "sourceImport.log",
+        "bytes": 332,
+        "sha256": "5be2eda98f9a29c17171dd6588cf259767f02107085851d6db5d47f7d3adcccb",
+        "verified": true
+      },
+      {
+        "profile": "register",
+        "outputFile": "register.log",
+        "bytes": 307,
+        "sha256": "3e907cd587c2afc6867b43a96eefdd41b90ab1770aa8b283b9d04b93d1f7bc9b",
+        "verified": true
+      },
+      {
+        "profile": "executive",
+        "outputFile": "executive.log",
+        "bytes": 1231,
+        "sha256": "6cab0a74c6237f6a0713014d7cd1c734d0b6d132bf747c18fdd647483b4246f7",
+        "verified": true
+      },
+      {
+        "profile": "intelligenceIntegrity",
+        "outputFile": "intelligenceIntegrity.log",
+        "bytes": 1015,
+        "sha256": "5db52ed0516c4f915b74529b2e0d66032e0eb732e346cbd0a5f95add06b95b53",
+        "verified": true
+      },
+      {
+        "profile": "jobRecovery",
+        "outputFile": "jobRecovery.log",
+        "bytes": 655,
+        "sha256": "8e0235e0053582e1ae30fb1e5199c29b9fd5f2e99ebebad2f4a4a851f2353efa",
+        "verified": true
+      },
+      {
+        "profile": "providerRace",
+        "outputFile": "providerRace.log",
+        "bytes": 866,
+        "sha256": "60deb90ef6d5d61edf20b1260d67f6b4583c6777ed562c32e7f8a5223d4c1922",
+        "verified": true
+      },
+      {
+        "profile": "unlinkedConnectors",
+        "outputFile": "unlinkedConnectors.log",
+        "bytes": 4185,
+        "sha256": "b16a38024496da7a822387610fcfc89f8780095f4cfb4a62d00601a629ed2cba",
+        "verified": true
+      },
+      {
+        "profile": "workflow",
+        "outputFile": "workflow.log",
+        "bytes": 787,
+        "sha256": "df277733fec4a6a44cdbb8aa4c24862c0dd9a2a6b4b49b73eaeff240c88944e5",
+        "verified": true
+      },
+      {
+        "profile": "workspacePlanning",
+        "outputFile": "workspacePlanning.log",
+        "bytes": 3391,
+        "sha256": "f528a48ebf34d2af3bfe336958424fb234371e59238c9a2ab5f166db12683b22",
+        "verified": true
+      },
+      {
+        "profile": "decisionOutcomes",
+        "outputFile": "decisionOutcomes.log",
+        "bytes": 1395,
+        "sha256": "8eb95c3685cbcdf113a7d5aed5967879190efcef4d65cfff97876992e06d5d2a",
+        "verified": true
+      },
+      {
+        "profile": "planningUi",
+        "outputFile": "planningUi.log",
+        "bytes": 1506,
+        "sha256": "804eaf0edd0312654b57e3a8ea00c898978472a91a0b812cf45b6578f9d1a042",
+        "verified": true
+      },
+      {
+        "profile": "gapEvaluation",
+        "outputFile": "gapEvaluation.log",
+        "bytes": 2599,
+        "sha256": "d562b1f7c2d7e36fe047eb4a10229f3aeea07b4453e061c46607da486aad6fc4",
+        "verified": true
+      },
+      {
+        "profile": "securityGapEvaluation",
+        "outputFile": "securityGapEvaluation.log",
+        "bytes": 4073,
+        "sha256": "39f24d9a8b0a71491ed788541eead3871ef7029234cbabdf42dc2b13fcf79597",
+        "verified": true
+      },
+      {
+        "profile": "securityGapReconciliation",
+        "outputFile": "securityGapReconciliation.log",
+        "bytes": 720,
+        "sha256": "2855f92fb5ff0b4d6b90fcce44c19d9fc2299588219c0637cb47a5f637264b39",
+        "verified": true
+      },
+      {
+        "profile": "runtimeProjectScope",
+        "outputFile": "runtimeProjectScope.log",
+        "bytes": 1629,
+        "sha256": "0fab2e0c72ade6f1501ada7183aa49f13c294a32c8da81834a8710e0b8562e8e",
+        "verified": true
+      },
+      {
+        "profile": "trilogyJobs",
+        "outputFile": "trilogyJobs.log",
+        "bytes": 3322,
+        "sha256": "b3f3bad4b3e001c48a9002e03fc85bd7a04bd051a4e5dbf1975ea1a78e5487c8",
+        "verified": true
+      },
+      {
+        "profile": "trilogyWorker",
+        "outputFile": "trilogyWorker.log",
+        "bytes": 2994,
+        "sha256": "c3b8847acd80ff52a350ca19788bf8ec41c74f841f35e0d635d5924acea935f8",
+        "verified": true
+      },
+      {
+        "profile": "githubSnapshotPinning",
+        "outputFile": "githubSnapshotPinning.log",
+        "bytes": 493,
+        "sha256": "67ceeea62882a66641868f413a992126c81619c005610eba2a78a71c0658aa74",
+        "verified": true
+      }
+    ]
+  },
+  "preparedModules": {
+    "checked": 33,
+    "manifestSha256": "860de9f51c07fa9f24b7ed5b9a8d3709bd4c5bc44986ec6db708253ef01b2f64",
+    "prepareSourceOutputManifestSha256": "207f0991b22ad1c80b80afa3e928b49d50fbca99e3544e64dcb23ca10333a637",
+    "allMatches": true
+  },
+  "focusedProfiles": {
+    "runtimeProjectScope": {
+      "tests": 18,
+      "pass": 18,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "trilogyJobs": {
+      "tests": 33,
+      "pass": 33,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "trilogyWorker": {
+      "tests": 31,
+      "pass": 31,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "githubSnapshotPinning": {
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    }
+  },
+  "conservation": {
+    "baselineCommit": "bbf6d5f9dd102cd413631a1b0afe1628a135463b",
+    "originalTasks": 174,
+    "exactAcceptanceClauses": 441,
+    "separateUpgrades": 28,
+    "parentStatuses": {
+      "open": 122,
+      "implemented_unverified": 52
+    },
+    "independentlyCertifiedParents": 0,
+    "originalIdentityAndRequirementsSha256": "3714ba28f879374b23435ac2074b2aa30680b5626f441bfab5aa5e1d0728e5b7",
+    "registeredCriterionIdentityAndRequirementsSha256": "b0cff8b83113de4789454c728827b94d7ddd1050967f41b9690e4691308eadde",
+    "separateUpgradeIdentityAndRequirementsSha256": "a9766672f463ee3fda38c82b803b188b2a13766505959ed3c145adf9456a9cf0",
+    "allOriginalIdentitiesWordingAndStatusesPreserved": true,
+    "sourceFiles": {
+      "backlog": {
+        "path": "UNFINISHED-WORK/backlog.json",
+        "sha256": "a4c03fee4b92ecf9030a0402a1b8fcbca8e475e07a58423147868e0712bed0d9"
+      },
+      "register": {
+        "path": "UNFINISHED-WORK/mgr-174-acceptance-evidence-register.json",
+        "sha256": "81bd569bc8743ffc49e3aff160af84fe5d0da1e30e91350300bb432f52802e1f"
+      },
+      "upgrades": {
+        "path": "UNFINISHED-WORK/mgr-trilogy-upgrades.json",
+        "sha256": "67dd154e99c4e4be18f6b7d594c16732dd3790ac92b4c91a71e624f0eccd8588"
+      }
+    }
+  },
+  "failures": [],
+  "limitations": [
+    "This is readback of the retained local execution evidence, not a second execution of the tests.",
+    "64 profiles are command executions; repeated nested assertions are not claimed as additional unique tests.",
+    "Historical source stability is checked against retained before/after fields and current Git objects; production signer, live providers, real browser, and qualified Docker isolation are not certified."
+  ]
+}

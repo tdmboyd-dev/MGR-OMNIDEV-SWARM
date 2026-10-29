@@ -1278,7 +1278,7 @@
       "status": "open",
       "priority": "P1",
       "kind": "engineering",
-      "current": "Innovation Discovery is a catalog domain; no invention pipeline or novelty evaluation exists.",
+      "current": "Existing V10 future plans cite project source snapshots, express opportunity hypotheses and call for competing-solution comparisons, predeclared experiment thresholds and stop rules. Saved evaluations retain owner-recorded outcomes and source context. This is partial innovation support; actual dated competitor research, typed experiments, independently measured results and evaluated recommendation usefulness remain unfinished. Demand, revenue and novelty stay unknown without research.",
       "work": [
         "Research unmet needs, competing products, technologies, trends and hidden value opportunities.",
         "Generate feature, automation, product and business-model hypotheses.",
@@ -1293,10 +1293,17 @@
         "BIZ-01",
         "FUT-01"
       ],
-      "source_files": [],
+      "source_files": [
+        "lib/workspace-planning.ts",
+        "components/planning-workspace.tsx",
+        "app/api/workspace/route.ts",
+        "app/page.tsx",
+        "lib/intelligence.ts"
+      ],
       "owner": "Unassigned",
       "evidence": [
-        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json"
+        "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
+        "UNFINISHED-WORK/mgr-biz02-source-discovery-20261029.json"
       ],
       "audit_subtasks": [
         {
@@ -1312,7 +1319,28 @@
         "report": "UNFINISHED-WORK/mgr-full-verification-wave-20261029.json",
         "sourceCommit": "8aa5f615af380bea1676daf2459d365f2e4653ae",
         "scope": "local contract/discovery evidence only; original parent remains uncertified"
-      }
+      },
+      "source_discovery_history": [
+        {
+          "recordedAt": "2026-10-29T18:24:22.870Z",
+          "classification": "source-linked-partial-existing-planning-lifecycle",
+          "report": "UNFINISHED-WORK/mgr-biz02-source-discovery-20261029.json",
+          "sourceCommit": "bbf6d5f9dd102cd413631a1b0afe1628a135463b",
+          "sourceFiles": [
+            "lib/workspace-planning.ts",
+            "components/planning-workspace.tsx",
+            "app/api/workspace/route.ts",
+            "app/page.tsx",
+            "lib/intelligence.ts"
+          ],
+          "qualification": "Targeted implementation discovery only; source links are not acceptance or new live-provider evidence.",
+          "nextAction": "Extend the existing plan/evaluation lifecycle with the recorded missing capabilities; do not rebuild it or infer absent implementation from old empty source links.",
+          "previous": {
+            "current": "Innovation Discovery is a catalog domain; no invention pipeline or novelty evaluation exists.",
+            "source_files": []
+          }
+        }
+      ]
     },
     {
       "id": "EXEC-01",

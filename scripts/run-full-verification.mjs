@@ -6,7 +6,7 @@ import {pathToFileURL} from 'node:url';
 import {FIXTURE_PROFILES,runFixtureEvidence} from './run-fixture-evidence.mjs';
 
 const hash=value=>createHash('sha256').update(value).digest('hex');
-const preparedProfiles=new Set(['runtime','acceptance','integration','specialists','parallel','automatic','jobs','project','pipeline','review','platform','brains','jobPresentation','repoCompletion','reviewPlanner','specialistsLedger','swarmSpawning','intelligenceIntegrity','jobRecovery','providerRace','unlinkedConnectors','workspacePlanning','decisionOutcomes','securityGapReconciliation']);
+const preparedProfiles=new Set(['runtime','acceptance','integration','specialists','parallel','automatic','jobs','project','pipeline','review','platform','brains','jobPresentation','repoCompletion','reviewPlanner','specialistsLedger','swarmSpawning','intelligenceIntegrity','jobRecovery','providerRace','unlinkedConnectors','workspacePlanning','decisionOutcomes','securityGapReconciliation','trilogyJobs','githubSnapshotPinning','workerReportTransport','workerFailureOutput']);
 export async function preparedModuleManifest(root){
  const directory=join(root,'.test-runtime');let entries;
  try{entries=await readdir(directory,{withFileTypes:true});}catch(error){if(error.code==='ENOENT')return null;throw error;}

@@ -1,5 +1,9 @@
 # OmniDev — 174 original task implementation index
 
+## Newest BIZ-02 discovery correction — 2026-10-29
+
+Five existing planning/evaluation source paths are now recorded for BIZ-02 as **partial implementation**. Its parent remains open and both original clauses remain unverified. Extend that lifecycle with actual dated competitor evidence, typed experiments, measured outcomes and research controls; do not rebuild it from the old empty source list. [Discovery record](mgr-biz02-source-discovery-20261029.json). The numerical source rollup below is the prior committed checkpoint; the coordinator will refresh it from the next clean committed reconciliation.
+
 Current tested source: `1c00a6105afe42b06a1d463d541f06c51839f9ad`. Updated 2026-10-29T14:42:22.987Z.
 
 **122 open · 52 implemented_unverified · 0 independently certified parents.** All 174 original IDs and 441 acceptance clauses remain unchanged.
@@ -78,7 +82,7 @@ Current tested source: `1c00a6105afe42b06a1d463d541f06c51839f9ad`. Updated 2026-
 | ID | Original requirement | Recorded status | Source paths | Local clauses / original clauses |
 |---|---|---|---:|---:|
 |BIZ-01|Connect product and business intelligence|open|0|0/2|
-|BIZ-02|Build innovation discovery and validation|open|0|0/2|
+|BIZ-02|Build innovation discovery and validation|open|5 (partial discovery)|0/2|
 |EXEC-01|Complete executive intelligence scores|implemented_unverified|4|2/2|
 
 ## 09-design-and-user-experience

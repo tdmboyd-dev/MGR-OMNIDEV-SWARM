@@ -1,0 +1,1 @@
+PASS repairs created before parent review completes; immutable baseline; repeat findings deduplicated; tests start before child review completes; pause prevents new repair starts; test receipt survives parent pause; no automatic apply

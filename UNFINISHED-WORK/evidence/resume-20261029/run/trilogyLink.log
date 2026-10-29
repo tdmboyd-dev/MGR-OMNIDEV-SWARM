@@ -1,0 +1,12 @@
+✔ one assignment links a specific job, project, source, candidate and command (12.587319ms)
+✔ another job, project, assignment, source, candidate or command cannot claim the link (0.884451ms)
+✔ edited, truncated, extended or malformed links fail closed (3.38769ms)
+✔ a checksum never implies signed, independently executed, or owner-approved (0.554004ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25.023627

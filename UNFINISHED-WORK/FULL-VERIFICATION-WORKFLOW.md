@@ -86,3 +86,15 @@ The final October 29 run passed all **54/54 profiles** at `8aa5f615af380bea1676d
 The current complete local run is **60/60 profiles** at `e6701655ecad5f1c9d3fd7944b7ecec4191b0955`, including TypeScript and production build. The prior 54- and 58-profile runs are historical checkpoints. `securityGapEvaluation` executes the bounded scanner corpus directly; `securityGapReconciliation` requires the existing fresh runtime preparation and exercises actual workspace/job consumers. Exact receipts are in `evidence/security-wave-20261029/run/report.json`; the report is `mgr-security-wave-20261029.md`.
 
 The initial restricted attempt is preserved separately because Node child-process output was empty. Expanded local execution restored real capture and allowed the unchanged source to pass; accepting exit zero without output is still prohibited. No original parent was auto-promoted. Keep source-bound local results distinct from real provider, Docker, browser, hosted identity and independent release evidence.
+
+## Trilogy connection and runtime scope extension — October 29, 2026
+
+The reviewed profile list now contains 64 commands. Four additions execute project-selection callbacks, the scoped trilogy API and concurrent permission changes, the existing worker's candidate/proof boundary, and immutable GitHub imports. New compiled trilogy/GitHub suites require the same fresh preparation and module-stability checks as the existing runtime suites.
+
+Retain both failing development observations and the final clean committed run. Additional independent review probes reproduce cancellation, objective-change and expiry races; they are reviewed local AI-assisted checks, not an independently operated production signer. The companion OmniSight integration script requires all three repositories clean and records their exact commits plus before/after hashes, including its actual HTTP server entrypoint.
+
+See `TRILOGY-JOB-BRIDGE.md` for supported behavior and deployment prerequisites. Source discovery also found a real partial BIZ-02 lifecycle; its canonical source paths now credit existing planning/evaluation code. The new committed reconciliation must calculate the current rollup. Original statuses and all 441 clauses remain unchanged; old 66/44/38 unlinked counts describe earlier snapshots.
+
+## Completed trilogy connection checkpoint
+
+All 64profiles passed from clean committed source `9f78f46662b8ae051b523dd5df1db7339397649f`; exact source-bound logs are `UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/report.json`. All 64output hashes, 33prepared modules and 290runtime/test Git objects were reread. New committed reconciliation records137linked/37unlinked parents and 348present refs. This evidence update changes metadata only; original acceptance states remain unchanged. The new GitHub upload is incomplete as documented in the publication attempt record.

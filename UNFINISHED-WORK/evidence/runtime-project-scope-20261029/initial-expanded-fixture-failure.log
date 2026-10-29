@@ -1,0 +1,39 @@
+✔ no implicit launch or integration target for "all" (33.054428ms)
+✔ no implicit launch or integration target for "deleted-project" (6.603903ms)
+✔ no implicit launch or integration target for "" (2.64367ms)
+✔ self healing also requires one selected project (1.246407ms)
+✔ selected project, not first project, owns a native launch (3.154791ms)
+✔ a rendered launch callback becomes inert if its project is deleted (2.04546ms)
+✔ switching projects clears old integration plans and selected partner projects (3.95827ms)
+✔ a delayed integration response cannot attach to the new project, even after switching back (2.987769ms)
+✔ deleted partner projects cannot enter an integration request (2.047423ms)
+✔ switching while audit lookup is pending prevents audit mutation and job enqueue (2.352041ms)
+✔ failed audit cannot silently fall through to job creation (1.961964ms)
+✔ an old integration job response cannot launch generation in the new selection (3.035641ms)
+✖ a completed integration proposal remains executable for its current selection (8.291323ms)
+✔ a captured proposal callback cannot execute after switching away and back (2.192111ms)
+✔ switching after enqueue preserves that request but prevents additional dispatch (1.626759ms)
+✔ audit execution keeps the chosen project through its final status read (14.030715ms)
+✔ an audit for a different project cannot be resumed or launch a job (1.648672ms)
+✔ unmounting during audit lookup prevents later mutations (1.123912ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 17
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 661.566538
+
+✖ failing tests:
+
+test at tests/runtime-project-scope.test.mjs:123:1
+✖ a completed integration proposal remains executable for its current selection (8.291323ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'projectTitle')
+      at RuntimeWorkspace (eval at host (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:45:17), <anonymous>:1123:57)
+      at render (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:47:66)
+      at flush (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:50:57)
+      at async Object.click (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:52:589)
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:125:116)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

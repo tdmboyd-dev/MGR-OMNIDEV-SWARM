@@ -1,0 +1,308 @@
+✖ no implicit launch or integration target for "all" (40.719661ms)
+✖ no implicit launch or integration target for "deleted-project" (18.620968ms)
+✖ no implicit launch or integration target for "" (2.520495ms)
+✖ self healing also requires one selected project (1.949696ms)
+✔ selected project, not first project, owns a native launch (8.666019ms)
+✖ a rendered launch callback becomes inert if its project is deleted (3.066707ms)
+✖ switching projects clears old integration plans and selected partner projects (4.39659ms)
+✖ a delayed integration response cannot attach to the new project, even after switching back (3.064064ms)
+✖ deleted partner projects cannot enter an integration request (2.773526ms)
+✖ switching while audit lookup is pending prevents audit mutation and job enqueue (3.649936ms)
+✖ failed audit cannot silently fall through to job creation (4.640167ms)
+✖ an old integration job response cannot launch generation in the new selection (10.244331ms)
+✔ a completed integration proposal remains executable for its current selection (4.494347ms)
+✖ a captured proposal callback cannot execute after switching away and back (3.405578ms)
+✖ switching after enqueue preserves that request but prevents additional dispatch (2.817433ms)
+✔ audit execution keeps the chosen project through its final status read (24.872826ms)
+✖ an audit for a different project cannot be resumed or launch a job (4.773007ms)
+✖ unmounting during audit lookup prevents later mutations (3.53322ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 3
+ℹ fail 15
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 935.417594
+
+✖ failing tests:
+
+test at tests/runtime-project-scope.test.mjs:60:53
+✖ no implicit launch or integration target for "all" (40.719661ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:62:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:60:53
+✖ no implicit launch or integration target for "deleted-project" (18.620968ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:62:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:60:53
+✖ no implicit launch or integration target for "" (2.520495ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:62:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:68:1
+✖ self healing also requires one selected project (1.949696ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:70:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:79:1
+✖ a rendered launch callback becomes inert if its project is deleted (3.066707ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:81:79)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:84:1
+✖ switching projects clears old integration plans and selected partner projects (4.39659ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   props: {
+  +     children: [
+  +       'Propose integration changes'
+  +     ],
+  +     className: 'primary-btn',
+  +     disabled: false,
+  +     onClick: [AsyncFunction: onClick]
+  +   },
+  +   type: 'button'
+  + }
+  - undefined
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:87:44)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Object],
+    expected: undefined,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:91:1
+✖ a delayed integration response cannot attach to the new project, even after switching back (3.064064ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   props: {
+  +     children: [
+  +       'Propose integration changes'
+  +     ],
+  +     className: 'primary-btn',
+  +     disabled: false,
+  +     onClick: [AsyncFunction: onClick]
+  +   },
+  +   type: 'button'
+  + }
+  - undefined
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:95:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Object],
+    expected: undefined,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:98:1
+✖ deleted partner projects cannot enter an integration request (2.773526ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:100:79)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:103:1
+✖ switching while audit lookup is pending prevents audit mutation and job enqueue (3.649936ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  5 !== 0
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:107:69)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 5,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:110:1
+✖ failed audit cannot silently fall through to job creation (4.640167ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'map')
+      at RuntimeWorkspace (eval at host (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:45:17), <anonymous>:810:41)
+      at render (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:47:66)
+      at flush (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:50:57)
+      at async Object.click (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:52:589)
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:113:44)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/runtime-project-scope.test.mjs:116:1
+✖ an old integration job response cannot launch generation in the new selection (10.244331ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'createIntegration',
+      'integrationJob',
+  +   'tick'
+    ]
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:120:77)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'createIntegration', 'integrationJob', 'tick' ],
+    expected: [ 'createIntegration', 'integrationJob' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:129:1
+✖ a captured proposal callback cannot execute after switching away and back (3.405578ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'createIntegration',
+  +   'integrationJob'
+    ]
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:133:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'createIntegration', 'integrationJob' ],
+    expected: [ 'createIntegration' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:136:1
+✖ switching after enqueue preserves that request but prevents additional dispatch (2.817433ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'enqueue',
+  +   'tick'
+    ]
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:139:77)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'enqueue', 'tick' ],
+    expected: [ 'enqueue' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/runtime-project-scope.test.mjs:149:1
+✖ an audit for a different project cannot be resumed or launch a job (4.773007ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'map')
+      at RuntimeWorkspace (eval at host (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:45:17), <anonymous>:810:41)
+      at render (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:47:66)
+      at flush (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:50:57)
+      at async Object.click (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:52:589)
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:152:44)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/runtime-project-scope.test.mjs:155:1
+✖ unmounting during audit lookup prevents later mutations (3.53322ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  5 !== 0
+  
+      at TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/runtime-project-scope.test.mjs:159:50)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 5,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

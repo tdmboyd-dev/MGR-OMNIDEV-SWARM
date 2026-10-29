@@ -1,3 +1,5 @@
+import {trilogyWorkerBinding,checkTrilogyWorkerProof,assertTrilogySnapshotApply,TRILOGY_DATABASE_NOW_MS} from './trilogy-jobs';
+import {createTrilogyJobLink,verifyTrilogyJobLink} from './trilogy-job-link.mjs';
 import {reviewPlan,combinedReport,expandSwarm} from './review-planner';
 import {specialists,specialistFor,specialistRole} from './specialists';
 import {fileLedger} from './file-ledger';
@@ -8,9 +10,13 @@ import {db,list,record,insert} from "@/db/store";
 import {analyze} from "./analyzer";
 import {nativeCandidate,candidate,staticTests,applyPatches} from "./runtime-contract";
 import {completion,providerStatus,settings} from "./providers";
-import {createTrilogyJobLink,verifyTrilogyJobLink} from './trilogy-job-link.mjs';
 export function jobRow(r:any){return {id:r.id,projectId:r.project_id,objective:r.objective,mode:r.mode,status:r.status,phase:r.phase,payload:JSON.parse(r.payload),result:JSON.parse(r.result),attempts:Number(r.attempts),createdAt:r.created_at,updatedAt:r.updated_at};}
-export function publicJob(job:any){if(!job||Array.isArray(job)||!job.payload)return job;const {baseline,...payload}=job.payload;const {appliedFiles,...result}=job.result;return {...job,payload,result:{...result,report:combinedReport(result)}};}
+export function publicJob(job:any){
+ if(!job||Array.isArray(job)||!job.payload)return job;const {baseline,...payload}=job.payload;const {appliedFiles,...result}=job.result;
+ if(result.externalTests){const {trilogyProof,...visible}=result.externalTests;result.externalTests=visible;}
+ if(result.trilogy){const {grant,statusRevision,result:observed}=result.trilogy;result.trilogy={grant:{grantId:grant?.grantId,expiresAt:grant?.expiresAt,revoked:grant?.revoked,permission:grant?.permission},statusRevision,result:observed};}
+ return {...job,payload,result:{...result,report:combinedReport(result)}};
+}
 export async function jobs(){const r=await db().prepare("SELECT id,project_id,objective,mode,status,phase,json_remove(payload,'$.baseline') AS payload,json_remove(result,'$.appliedFiles') AS result,attempts,lease_token,lease_until,created_at,updated_at FROM jobs ORDER BY created_at DESC LIMIT 100").all();return r.results.map((r:any)=>publicJob(jobRow(r)));}
 async function get(id:string){const r=await db().prepare("SELECT * FROM jobs WHERE id=?").bind(id).first();if(!r)throw new Error("Job not found");return jobRow(r);}
 export async function moveJob(id:string,projectId:string){
@@ -82,11 +88,11 @@ async function reconcileFindings(projectId:string,analysis:ReturnType<typeof ana
 export async function decide(id:string,action:string){const j=await get(id),now=new Date().toISOString();if(action==='cancel'){if(['applied','rolled back','rejected','canceled'].includes(j.status))throw new Error('Terminal job cannot be canceled');await db().prepare("UPDATE jobs SET status='canceled',lease_token=NULL,lease_until=NULL,updated_at=? WHERE id=?").bind(now,id).run();await agentState(id,'dormant').run();return get(id);}
  if(action==='retry'){if(j.status!=='failed'||j.attempts>=3)throw new Error('Job cannot be retried');await db().prepare("UPDATE jobs SET status='queued',lease_token=NULL,lease_until=NULL,updated_at=? WHERE id=? AND status='failed'").bind(now,id).run();return get(id);}
  if(action==='reject'){if(j.status!=='awaiting review')throw new Error('Job is not awaiting review');await db().prepare("UPDATE jobs SET status='rejected',updated_at=? WHERE id=? AND status='awaiting review'").bind(now,id).run();return get(id);}
- if(action==='apply'){if(j.result.reviewPlan&&combinedReport(j.result)?.status!=='reviewed')throw Error('Automatic review is incomplete or requires changes; finish the planned reviews before applying');if(j.status!=='awaiting review'||!j.result.checks?.passed||j.result.externalTests?.passed===false||j.result.reviews?.some((r:any)=>!r.approved)||(j.mode==='ai'&&j.result.candidate.experts.length&&(!j.result.reviews?.length||j.result.reviews.some((r:any)=>!r.approved))))throw new Error('Candidate must pass checks and await review');const project=(await list()).find(r=>r.id===(j.payload.sourceProjectId||j.projectId)&&r.kind==='project');if(!project)throw new Error('Project no longer exists');if(JSON.stringify(project.data.files)!==JSON.stringify(j.payload.baseline))throw new Error('Project snapshot changed; regenerate the candidate');if(j.payload.commitment&&j.payload.commitment.objectiveDigest!==await fingerprint(j.objective))throw new Error('Objective changed after commitment');const admission=await reserveSnapshot({...j,projectId:j.payload.sourceProjectId||j.projectId});const files=applyPatches(project.data.files,j.result.candidate.patches);const a=analyze(files);const next={...project.data,files,fileLedger:await fileLedger(files,project.data.fileLedger||[],j.result.candidate.patches.map((p:any)=>p.path),id),analysis:a,revision:(project.data.revision||0)+1};
+ if(action==='apply'){if(j.result.trilogy)await assertTrilogySnapshotApply(id,j.result);if(j.result.reviewPlan&&combinedReport(j.result)?.status!=='reviewed')throw Error('Automatic review is incomplete or requires changes; finish the planned reviews before applying');if(j.status!=='awaiting review'||!j.result.checks?.passed||j.result.externalTests?.passed===false||j.result.reviews?.some((r:any)=>!r.approved)||(j.mode==='ai'&&j.result.candidate.experts.length&&(!j.result.reviews?.length||j.result.reviews.some((r:any)=>!r.approved))))throw new Error('Candidate must pass checks and await review');const project=(await list()).find(r=>r.id===(j.payload.sourceProjectId||j.projectId)&&r.kind==='project');if(!project)throw new Error('Project no longer exists');if(JSON.stringify(project.data.files)!==JSON.stringify(j.payload.baseline))throw new Error('Project snapshot changed; regenerate the candidate');if(j.payload.commitment&&j.payload.commitment.objectiveDigest!==await fingerprint(j.objective))throw new Error('Objective changed after commitment');const admission=await reserveSnapshot({...j,projectId:j.payload.sourceProjectId||j.projectId});const files=applyPatches(project.data.files,j.result.candidate.patches);const a=analyze(files);const next={...project.data,files,fileLedger:await fileLedger(files,project.data.fileLedger||[],j.result.candidate.patches.map((p:any)=>p.path),id),analysis:a,revision:(project.data.revision||0)+1};
  const token=crypto.randomUUID();const finalResult=JSON.stringify({...j.result,appliedFiles:files,applyToken:token});const previous=JSON.stringify(project.data),updated=JSON.stringify(next);
  const memory=record('memory','Candidate applied to snapshot',{type:'Activity',jobId:id,content:j.objective+'. No external repository or production deployment was changed.'},j.projectId);
- const findingOps=await reconcileFindings(project.id,a,id,'applied',updated,now);const r=await db().batch([
- db().prepare("UPDATE jobs SET status='applying',lease_token=?,updated_at=? WHERE id=? AND status='awaiting review' AND COALESCE((SELECT json_extract(data,'$.stopped') FROM runtime_settings WHERE id='effect-policy'),0)=0 AND EXISTS (SELECT 1 FROM records WHERE id=? AND data=?)").bind(token,now,id,project.id,previous),
+ const findingOps=await reconcileFindings(project.id,a,id,'applied',updated,now);if(j.result.trilogy)await assertTrilogySnapshotApply(id,j.result);const trilogyGuard=j.result.trilogy?" AND json_extract(result,'$.trilogy.grant.expiresAt')>"+TRILOGY_DATABASE_NOW_MS:"";const r=await db().batch([
+ db().prepare("UPDATE jobs SET status='applying',lease_token=?,updated_at=? WHERE id=? AND status='awaiting review' AND payload=? AND result=? AND objective=? AND COALESCE((SELECT json_extract(data,'$.stopped') FROM runtime_settings WHERE id='effect-policy'),0)=0 AND EXISTS (SELECT 1 FROM records WHERE id=? AND data=?)"+trilogyGuard).bind(token,now,id,JSON.stringify(j.payload),JSON.stringify(j.result),j.objective,project.id,previous),
  db().prepare("UPDATE records SET data=?,updated_at=? WHERE id=? AND data=? AND EXISTS (SELECT 1 FROM jobs WHERE id=? AND status='applying' AND lease_token=?)").bind(updated,now,project.id,previous,id,token),
  db().prepare("UPDATE jobs SET status='applied',phase='complete',lease_token=NULL,result=?,updated_at=? WHERE id=? AND status='applying' AND lease_token=? AND EXISTS (SELECT 1 FROM records WHERE id=? AND data=?)").bind(finalResult,now,id,token,project.id,updated),
  db().prepare("INSERT INTO records(id,kind,title,project_id,status,data,created_at,updated_at) SELECT ?,?,?,?,?,?,?,? WHERE EXISTS (SELECT 1 FROM jobs WHERE id=? AND result=?)").bind(memory.id,memory.kind,memory.title,memory.projectId,memory.status,JSON.stringify(memory.data),now,now,id,finalResult),...findingOps,releaseSnapshot(admission.id,id,'applied')
@@ -123,39 +129,43 @@ async function digest(value:unknown){const bytes=await crypto.subtle.digest('SHA
 export async function workerJob(id:string){
  const j=await get(id);await assertPipelineRunning(j);
  if(!j.result.checks?.passed)throw Error('Candidate static checks must pass before worker execution');
- if(j.status!=='awaiting review'||j.result.externalTests)throw new Error('Candidate is not ready for worker testing or already has a report');
+ if(j.status!=='awaiting review'||j.result.externalTests)throw Error('Candidate is not ready for worker testing or already has a report');
  if(j.result.workerAssignment?.expiresAt>Date.now())throw Error('Execution is already claimed by a worker');
- const files=applyPatches(j.payload.baseline,j.result.candidate.patches);
- const profile=j.payload.testProfile==='node-application'?'node-application':'snapshot';
- if(profile==='node-application'){
-  const pkg=files.find((f:any)=>f.path==='package.json'),lock=files.find((f:any)=>f.path==='package-lock.json');
-  if(!pkg||!lock||!JSON.parse(pkg.content).scripts?.test)throw Error('Import runnable application source, package.json and package-lock.json before requesting application tests');
- }
+ const trilogy=j.result.trilogy?await trilogyWorkerBinding(id):null;
+ const files=applyPatches(j.payload.baseline,j.result.candidate.patches),profile=j.payload.testProfile==='node-application'?'node-application':'snapshot';
+ if(profile==='node-application'){const pkg=files.find((f:any)=>f.path==='package.json'),lock=files.find((f:any)=>f.path==='package-lock.json');if(!pkg||!lock||!JSON.parse(pkg.content).scripts?.test)throw Error('Import runnable application source, package.json and package-lock.json before requesting application tests');}
  const command=profile==='node-application'?['npm','run','omni:verify']:['node','--test','tests/omni-snapshot.test.mjs'];
- const assignment={id:crypto.randomUUID(),candidateDigest:await digest(files),sourceDigest:await digest(j.payload.baseline),testManifestDigest:await digest(command),profile,expiresAt:Date.now()+(profile==='node-application'?240000:60000)};
+ const assignment={id:crypto.randomUUID(),candidateDigest:await digest(files),sourceDigest:await digest(j.payload.baseline),testManifestDigest:await digest(command),profile,expiresAt:Math.min(Date.now()+(profile==='node-application'?240000:60000),trilogy?.grantExpiresAt??Number.MAX_SAFE_INTEGER),...(trilogy?{trilogyBindingDigest:await fingerprint(trilogy)}:{})};
  const trilogyLink=await createTrilogyJobLink({jobId:j.id,projectId:j.projectId,assignmentId:assignment.id,sourceDigest:assignment.sourceDigest,candidateDigest:assignment.candidateDigest,testManifestDigest:assignment.testManifestDigest});
  const linkedAssignment={...assignment,trilogyLink};
- const old=JSON.stringify(j.result);
- const update=await db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND status='awaiting review' AND result=?").bind(JSON.stringify({...j.result,workerAssignment:linkedAssignment,externalTests:null}),new Date().toISOString(),id,old).run();
- if(!update.meta.changes)throw new Error('Candidate changed while assigning execution');
- return {id:j.id,projectId:j.projectId,files,command,profile,timeoutMs:profile==='node-application'?180000:15000,assignment:linkedAssignment};
+ const old=JSON.stringify(j.result),project:any=trilogy?await db().prepare("SELECT data FROM records WHERE id=? AND kind='project'").bind(j.projectId).first():null;
+ if(trilogy&&(!project||trilogy.sourceDigest!==assignment.sourceDigest))throw Error('Trilogy source changed before assignment');
+ const guard=trilogy?" AND payload=? AND objective=? AND json_extract(result,'$.trilogy.grant.expiresAt')>? AND ?>"+TRILOGY_DATABASE_NOW_MS+" AND EXISTS (SELECT 1 FROM records WHERE id=? AND data=?) AND COALESCE((SELECT json_extract(data,'$.stopped') FROM runtime_settings WHERE id='effect-policy'),0)=0":"";
+ const args:any[]=[JSON.stringify({...j.result,workerAssignment:linkedAssignment,externalTests:null}),new Date().toISOString(),id,old];if(trilogy)args.push(JSON.stringify(j.payload),j.objective,Date.now(),assignment.expiresAt,j.projectId,project.data);
+ const update=await db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND status='awaiting review' AND result=?"+guard).bind(...args).run();
+ if(!update.meta.changes)throw Error('Candidate changed while assigning execution');
+ return {id:j.id,projectId:j.projectId,files,command,profile,timeoutMs:profile==='node-application'?180000:15000,assignment:linkedAssignment,...(trilogy?{trilogy}:{})};
 }
 export async function report(id:string,p:any){
  for(let attempt=0;attempt<16;attempt++){
   const j=await get(id),a=j.result.workerAssignment;
-  if(j.status!=='awaiting review'||typeof p.passed!=='boolean'||typeof p.output!=='string'||p.output.length>20000||p.worker!=='docker-isolated'||!a||a.expiresAt<=Date.now()||!p.assignment||['id','candidateDigest','sourceDigest','testManifestDigest'].some(k=>p.assignment[k]!==a[k]))throw new Error('Invalid, expired or mismatched worker report');
-  // Existing in-flight assignments may predate the new correlation contract.
-  // Every newly issued linked assignment requires its exact identity on read-back.
+  if(j.status!=='awaiting review'||typeof p.passed!=='boolean'||typeof p.output!=='string'||p.output.length>20000||p.worker!=='docker-isolated'||!a||a.expiresAt<=Date.now()||!p.assignment||['id','candidateDigest','sourceDigest','testManifestDigest',...(a.trilogyBindingDigest?['trilogyBindingDigest']:[])].some(k=>p.assignment[k]!==a[k]))throw Error('Invalid, expired or mismatched worker report');
+  // Pre-existing assignments retain their original admission requirements.
+  // Every newly issued assignment must return its exact job correlation link.
   if(a.trilogyLink){
    const expected={jobId:j.id,projectId:j.projectId,assignmentId:a.id,sourceDigest:a.sourceDigest,candidateDigest:a.candidateDigest,testManifestDigest:a.testManifestDigest};
    const checked=await verifyTrilogyJobLink(p.assignment.trilogyLink,expected);
-   if(!checked.ok||p.assignment.trilogyLink.linkSha256!==a.trilogyLink.linkSha256)throw new Error('Trilogy job link does not match the assigned source, candidate, command and job');
+   if(!checked.ok||p.assignment.trilogyLink.linkSha256!==a.trilogyLink.linkSha256)throw Error('Trilogy job link does not match the assigned source, candidate, command and job');
   }
-  if(j.result.externalTests)throw new Error('Execution report already accepted');
-  if(p.passed&&(!/^.+@sha256:[a-f0-9]{64}$/.test(p.imageDigest||'')||p.cleanup?.verifiedAbsent!==true))throw new Error('Successful execution requires pinned image and verified cleanup receipts');
-  const old=JSON.stringify(j.result);
-  const result={...j.result,externalTests:{profile:a.profile||'snapshot',scope:a.profile==='node-application'?'Candidate application bundle only':'Snapshot integrity only',passed:p.passed,output:p.output,worker:p.worker,assignment:a,imageDigest:p.imageDigest??null,cleanup:p.cleanup??null,isolationVerified:false,completedAt:new Date().toISOString()}};
-  const update=await db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND status='awaiting review' AND result=?").bind(JSON.stringify(result),new Date().toISOString(),id,old).run();
+  if(j.result.externalTests)throw Error('Execution report already accepted');
+  if(p.passed&&(!/^.+@sha256:[a-f0-9]{64}$/.test(p.imageDigest||'')||p.cleanup?.verifiedAbsent!==true))throw Error('Successful execution requires pinned image and verified cleanup receipts');
+  const trilogyProof=j.result.trilogy?await checkTrilogyWorkerProof(id,p,a):null;
+  const project:any=j.result.trilogy?await db().prepare("SELECT data FROM records WHERE id=? AND kind='project'").bind(j.projectId).first():null;
+  if(j.result.trilogy&&(!project||await fingerprint(JSON.parse(project.data).files)!==a.sourceDigest||JSON.parse(project.data).origin?.commit!==j.payload.origin?.commit))throw Error('Trilogy source changed during execution reporting');
+  const old=JSON.stringify(j.result),result={...j.result,externalTests:{profile:a.profile||'snapshot',scope:a.profile==='node-application'?'Candidate application bundle only':'Snapshot integrity only',passed:p.passed,output:p.output,worker:p.worker,assignment:a,imageDigest:p.imageDigest??null,cleanup:p.cleanup??null,isolationVerified:false,completedAt:new Date().toISOString(),...(trilogyProof?{trilogyProof}:{})}};
+  const guard=j.result.trilogy?" AND payload=? AND objective=? AND COALESCE((SELECT json_extract(data,'$.stopped') FROM runtime_settings WHERE id='effect-policy'),0)=0 AND json_extract(result,'$.workerAssignment.expiresAt')>? AND json_extract(result,'$.workerAssignment.expiresAt')>"+TRILOGY_DATABASE_NOW_MS+" AND json_extract(result,'$.trilogy.grant.expiresAt')>"+TRILOGY_DATABASE_NOW_MS+" AND EXISTS (SELECT 1 FROM records WHERE id=? AND data=?)":"";
+  const args:any[]=[JSON.stringify(result),new Date().toISOString(),id,old];if(j.result.trilogy)args.push(JSON.stringify(j.payload),j.objective,Date.now(),j.projectId,project.data);
+  const update=await db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND status='awaiting review' AND result=?"+guard).bind(...args).run();
   if(update.meta.changes)return get(id);
  }
  throw Error('Report storage is busy; retain the execution receipt for reconciliation');

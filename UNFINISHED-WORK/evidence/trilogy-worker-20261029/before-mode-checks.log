@@ -1,0 +1,70 @@
+✔ non-trilogy jobs receive no trilogy signature capability (1.21027ms)
+✔ a real failing baseline and passing candidate produce a valid exact-command Ed25519 receipt (354.052471ms)
+✔ arbitrary candidate commit labels and noncandidate branch refs are refused (58.886007ms)
+✔ candidate with additional unapproved committed changes is refused (84.804678ms)
+✖ an updated file cannot gain executable permission outside the approved byte-only plan (83.699626ms)
+✖ created files must use the candidate writer regular-file mode (128.017749ms)
+✔ merge-parent candidates are refused even when their tree matches the proposal (62.34743ms)
+✔ tampered candidate contents and before/after hashes are refused (101.491919ms)
+✔ every changed plan file must be included in the executed snapshot (38.854719ms)
+✔ source HEAD and candidate ref drift are rejected again before signing (99.575441ms)
+✔ command changes are refused even after assignment hashes are recomputed (43.767245ms)
+✔ unmatched assignment and expired grant or assignment are refused (41.719475ms)
+✔ owner identity cannot be the verifier and revoked verifier cannot start (35.419265ms)
+✔ wrong repository configuration or public signing key is refused (38.201787ms)
+✔ verifier revocation and public-key rotation during execution stop signing (57.40961ms)
+✔ same-path private-key replacement during execution stops signing (59.114491ms)
+✔ protected key permissions cannot become public during execution (58.834172ms)
+✔ key files in the candidate repository and symlink keys are refused (38.72479ms)
+✔ relative, oversized and non-Ed25519 key files are refused (103.019533ms)
+✔ a failed process receives no successful receipt (55.988144ms)
+✔ truthy values cannot replace the observed passed boolean (52.91411ms)
+✔ empty, oversized, non-string and malformed Unicode output cannot be signed (52.569401ms)
+✔ failed cleanup, wrong exit status and invalid observation times cannot be signed (56.369414ms)
+✔ timestamps must be canonical ISO instants before a receipt is generated (54.107881ms)
+✔ grant expiry during execution prevents signing even after successful process output (60.615919ms)
+✔ Docker command environment contains no verifier keys or control credentials (40.673205ms)
+✔ simulated Docker CLI: runner executes real Node tests and signs only after cleanup readback (306.121568ms)
+ℹ Docker CLI is simulated; Node tests and process sequencing are real. Physical isolation is not certified.
+✔ simulated Docker CLI: invalid candidate binding prevents any Docker dispatch (42.226418ms)
+✔ simulated Docker CLI: unverified cleanup blocks a successful receipt (249.395103ms)
+✔ simulated Docker CLI: non-UTF8 bytes fail execution and receive no receipt (156.524401ms)
+✔ simulated Docker CLI: empty output is not converted into a successful signed test (176.740786ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 29
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2881.082278
+
+✖ failing tests:
+
+test at tests/trilogy-worker.test.mjs:94:1
+✖ an updated file cannot gain executable permission outside the approved byte-only plan (83.699626ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:96:75)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/trilogy-worker.test.mjs:98:1
+✖ created files must use the candidate writer regular-file mode (128.017749ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///tmp/mgr-trilogy-continue-20261029/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:101:411)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }

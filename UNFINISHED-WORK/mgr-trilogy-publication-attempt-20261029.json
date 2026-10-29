@@ -1,0 +1,47 @@
+{
+  "schema": "mgr.trilogy.publication-attempt.v1",
+  "observedAt": "2026-10-29T20:35:56.378Z",
+  "status": "NEW_WAVE_NOT_PUBLISHED",
+  "connection": "Installed GitHub connector: read operations succeed.",
+  "attempts": [
+    {
+      "operation": "create_tree",
+      "repository": "tdmboyd-dev/MGR-CODE-MONSTER",
+      "expectedTree": "68225d897356faf02a0c7330e3f09566c17f8497",
+      "result": "Tool reported aborted by user after 3118.4 seconds; no success acknowledgement.",
+      "readback": "Expected tree returned GitHub404."
+    },
+    {
+      "operation": "create_blob",
+      "repository": "tdmboyd-dev/MGR-CODE-MONSTER",
+      "expectedBlob": "c91a88e168a0db7ff0529ccaa10434e91b2153b9",
+      "bytes": 4311,
+      "result": "Tool reported aborted by user after 4046.2 seconds; no success acknowledgement.",
+      "readback": "Expected blob returned GitHub404."
+    }
+  ],
+  "remoteBranches": [
+    {
+      "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+      "branch": "mgr/code-monster-omnisight-20261028",
+      "head": "bab42972f076a3b2b8a8d5b903e8a4b355810dfc",
+      "visibility": "public"
+    },
+    {
+      "repository": "tdmboyd-dev/MGR-CODE-MONSTER",
+      "branch": "mgr/receipt-admission-20261029",
+      "head": "8cf3db01ae9edcafd0e029f567737187c2fc0290",
+      "visibility": "private"
+    },
+    {
+      "repository": "tdmboyd-dev/MGR-OMNISIGHT",
+      "branch": "mgr/ten-lane-handoff-20261029",
+      "head": "2398608ef8e6909b3f557048e09aa1e07872a0fa",
+      "visibility": "private"
+    }
+  ],
+  "branchUpdatesAttempted": false,
+  "mergeOrDeploymentAttempted": false,
+  "authorization": "Owner already authorized this review-branch work and commits. No new permission request is implied by the interrupted transport.",
+  "retryInstruction": "Read all current remote heads and exact local target trees before resuming. Never force-push the divergent recovered histories. Create mapped remote commits retaining current ancestry, compare exact trees, update only the existing review branches, then read back. Do not repeat a stalled mutation without inspecting its expected object."
+}

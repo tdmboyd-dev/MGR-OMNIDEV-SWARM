@@ -1,8 +1,64 @@
+# Current worker download checkpoint — October 29, 2026
+
+The corrected download now contains the same worker source as the67-profile verification, including its previously missing proof module. The helper `scripts/package-worker.py --check` and the exact package receipt in `UNFINISHED-WORK/evidence/resume-20261029/worker-package-verification.json` verify source equality, import completeness and reproducible bytes. Runtime remains unchanged from `bf27df6`; publication of this latest artifact checkpoint is pending read-back. All earlier test/source attribution below remains intact.
+
+---
+
+# Current resumed verification — October 29, 2026
+
+**The combined source passed all 67/67 local verification profiles, including TypeScript and the production build, at `bf27df673e137c1592a4e3dc76ebc5666ebba3c6` (tree `147a195e514ae00d18c504022ec8383a43ede203`). OmniDev publication of this combined wave remains pending current GitHub ref/tree readback.** Older 64-profile and correlation-only statements below are historical.
+
+- Both saved work streams are retained: the complete scoped trilogy bridge and the published job/project/source/candidate/command identity safeguard. Two worker-result delivery defects are repaired: valid escaped signed reports fit the bounded transport envelope, and failed executions retain their diagnostics inside the unchanged output allowance.
+- The 67-profile run includes **13 transport checks, 8 failure-output checks and 4 existing job-link checks**; the 21 repair cases and four link cases are subsets, not additional profile totals. All 67 saved output hashes were recomputed with zero mismatches. Exact unchanged receipts: `UNFINISHED-WORK/evidence/resume-20261029/run/report.json`.
+- A fresh actual local three-product flow passed **10/10 checks** at OmniDev `bf27df673e137c1592a4e3dc76ebc5666ebba3c6`, Code Monster `9fc415f3bb9c5b8c10fcfa7c9e7139c46f56ae05` and OmniSight `aeceb6cfd9463190103f6c215607daab33cd204d`. It exercised local HTTP, SQLite, Git, signed fixture output, replay and revocation; it does not qualify Docker isolation, a production signer or browser accessibility. Exact receipt: `UNFINISHED-WORK/evidence/resume-20261029/integration-resumed.json`.
+- Code Monster source checkpoint `6f9092b339be643b135b6ebe1a52c2cab3815753` and latest documentation checkpoint `611c56966e5d7248fef03d53e1b2801af1323544` are confirmed on GitHub. OmniSight source checkpoint `e1ee5ff517ac8932c64b4f62451f2cfb55fd8c81` and latest documentation checkpoint `485b46ae2c4138d06dac711b8988593e22253228` are confirmed. Their fresh 171/171 and 87/87 local test records remain with their own private repositories.
+- Original scope and states are conserved byte for byte from the tested source: **174 parents / 441 clauses / 28 separate upgrades; 122 open / 52 implemented_unverified; zero independently certified parents.** No automatic promotions. Focused wave ledger: `UNFINISHED-WORK/mgr-resume-reconciliation-20261029.json`.
+- Device Time was listed online, but the read-only host probe was declined; no host command execution was confirmed and the declined request must not be retried. Continue authorized local work. Real host/signing/account qualification, exact-tested-candidate publication in the product, browser/accessibility and full original acceptance remain open.
+
+---
+
+# Current resumed source — October 29, 2026
+
+The recovered full trilogy bridge and the newer GitHub job-link safeguard are now combined; neither work stream was discarded. A reproduced worker-report size mismatch has been repaired. The related failure-output diagnostic limit is included in this wave. See `UNFINISHED-WORK/mgr-resume-reconciliation-20261029.md` for exact source identities and acceptance. New full verification and OmniDev publication require their own current receipts; older64-profile and publication-failure sections below are history. Original parent states remain122open/52implemented_unverified, zero independently certified.
+
+Code Monster and OmniSight current source/evidence have confirmed GitHub checkpoints `6f9092b339be643b135b6ebe1a52c2cab3815753` and `e1ee5ff517ac8932c64b4f62451f2cfb55fd8c81`, with fresh171/171 and87/87 local tests respectively. Later documentation-only confirmations may follow.
+
+---
+
+## Retained earlier GitHub correlation-only checkpoint
+
 # In-progress next wave — October 29, 2026: source-bound Trilogy job link
 
 The newest local change ties an OmniDev worker assignment to one job, project, source snapshot, proposed candidate and test command with `mgr.trilogy.job-link.v1`. Wrong, missing, or edited links are refused on worker report admission. This is a shared correlation contract only, **not** a trusted signature, Code Monster live adapter, OmniSight event feed or owner release. Pre-existing unlinked assignments keep their previous gates without retroactive promotion. Direct runtime checks pass 83/83; TypeScript and portable link tests pass. Full clean-commit verification and GitHub read-back still require their own receipts. See `UNFINISHED-WORK/mgr-trilogy-job-link-wave-20261029.md`. All original parent states remain unchanged.
 
+
 ---
+
+# Latest local trilogy connection — October 29, 2026
+
+**Current connection verified locally; new wave NOT published.** This section supersedes older current-state statements below without deleting their history.
+
+| Product | Tested source | Verification |
+|---|---|---|
+| OmniDev |`9f78f46662b8ae051b523dd5df1db7339397649f`|64/64 full profiles including build/typecheck; source tree `2293a94056ecac0c84e609695e1d1bfd4743aa61`|
+| Code Monster |`3e2f8ca405ad378c5a8d379f4caf2df9e77c474d`|171/171 tests, zero skipped|
+| OmniSight |`026a3f2360e1c4322202e9e57bbe9b084942649e`|87/87 tests, zero skipped|
+
+The actual three-product local run passed ten flow checks at OmniDev `9f78f46662b8ae051b523dd5df1db7339397649f`, Code Monster `348caf20c1bef59725f26faf59f2767b26040e2b`, and OmniSight `39543d6fb16377aaa6b69de8f89289a65034942a`. It retained 235 source hashes and 33 prepared-module hashes; fixture keys are not a production signing service.
+
+Implemented: immutable import identity; selected-project runtime/self-healing actions; scoped candidate-only grant; existing Code Monster Git/ledger bridge; exact signed output; owner revocation/expiry and concurrent-write guards; OmniSight scoped live read-through. Imprint contains Slot Machine in Code Monster. The existing OmniDev worker/fleet remains the only worker engine.
+
+Original scope remains 174 parents/441 clauses/28 upgrades;122 open/52 implemented_unverified; zero independently certified parents. Current source reconciliation is 137 linked/37 unlinked and 348/348 committed refs. BIZ-02 has a real partial planning/evaluation lifecycle; extend it rather than rebuilding it.
+
+Read OmniDev `UNFINISHED-WORK/mgr-trilogy-bridge-wave-20261029.md` and `TRILOGY-JOB-BRIDGE.md`, Code Monster `docs/TRILOGY-JOB-BRIDGE-20261029.md`, and OmniSight `docs/JOB-BRIDGE-20261029.md`. Full/focused receipts stay with each owning repository.
+
+**Publication:** the GitHub connector is installed and reads succeed. Both new-wave write attempts were interrupted without success; expected objects 404 and all branches remain on prior published heads. No update_ref, merge, deploy, visibility change or paid call occurred. Retain the exact local histories and compare Git trees when resuming remote publication; do not force-push recovered ancestry. The owner already authorized commits/review-branch completion.
+
+**Next work:** restore reliable review-branch publication; qualify the existing Docker host and independent signing custody; provision actual scoped identities/providers; implement owner-approved exact-commit publication; continue general application/campaign, semantic relationship, recipe/recommendation, browser/accessibility and full original acceptance work. Local success does not replace these requirements.
+
+---
+
+Full and clause-mapped report: UNFINISHED-WORK/mgr-trilogy-bridge-wave-20261029.json. Exact logs: UNFINISHED-WORK/evidence/trilogy-bridge-20261029/run/report.json. Runtime18/18, API33/33, worker31/31, import4/4 are subsets of64 profiles.
 
 # Current publication confirmation — October 29, 2026
 
@@ -147,7 +203,7 @@ Every historical parent (174/174) now has individual slots for 441 original acce
 - `UNFINISHED-WORK/174-IMPLEMENTATION-INDEX.md` lists all 174 original IDs grouped by planning area; `UNFINISHED-WORK/mgr-108-code-truth-report-20261029.md` explains corrected status and test evidence.
 - `UNFINISHED-WORK/mgr-committed-code-reconciliation-20261029.json`: **108 source-linked parents, 276/276 Git-object source paths present and hashed at the recorded Git SHA**. `scripts/reconcile-implementation.mjs` was repaired to hash immutable **committed Git objects**, not mutable working-directory bytes; tests **2/2 passing**, including tamper negative control.
 - `lib/specialists.ts` defines all original DOM-01..DOM-47 role mappings and an extra Integration Engineering role; `tests/specialist-areas.mjs` executed **52 specialist contract/job workflow checks passed** (plus its internal 79 runtime checks). **47 canonical DOM parents** were updated to `implemented_unverified` with actual code/test references, not falsely marked done. External domain tool/provider certification still required under original three acceptance clauses each.
-- REL-02 source import: original Sites→GitHub file manifest `evidence/github-source-import.json` **516/516 SHA-256 byte matches** pinned to original GitHub import commit `26e230d052c45c1f42cb731ff095679497af045a`; `scripts/verify-source-import.mjs` tests **3/3 passed** after fixing .env.production detection. High-confidence credential patterns scanned **516 files, 9,199,629 bytes, zero recognized matches**, with `tests/scan-import-secrets.test.mjs` **2/2 passing**. This is **not exhaustive secret scanning**. REL-02/AC-01 is now `VERIFIED`; AC-02 is `BLOCKED` for independent security/non-target-repo scope review. REL-02 parent remains `implemented_unverified`.
+- REL-02 source import: original Sites→GitHub file manifest `evidence/github-source-import.json` **516/516 SHA-256 byte matches** pinned to original GitHub import commit `26e230d052c45c1f42cb731ff095679497af045a`; `scripts/verify-source-import.mjs` tests **3/3 passed** after fixing .env.production detection. High-confidence credential patterns scanned **516 files, 9, 199, 629 bytes, zero recognized matches**, with `tests/scan-import-secrets.test.mjs` **2/2 passing**. This is **not exhaustive secret scanning**. REL-02/AC-01 is now `VERIFIED`; AC-02 is `BLOCKED` for independent security/non-target-repo scope review. REL-02 parent remains `implemented_unverified`.
 - Original 441 criterion evidence register validator returned `valid:true, verifiedCriteria:1, readyForCertification:0, errors:[]`; no other acceptance clause silently promoted. Machine scorecard, truth report and queue are synchronized.
 - Next execution order: close fully evidenced old tasks one-by-one, repair incomplete implementations, verify actual provider/Docker/deployment behavior, and preserve all source snapshots/handoffs on private review branches. Do NOT redo 174 metadata triage. The other 66 historically unlinked parents need targeted code/acceptance discovery, not invented absence claims.
 

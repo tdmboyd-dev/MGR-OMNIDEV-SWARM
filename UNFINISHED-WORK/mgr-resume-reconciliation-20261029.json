@@ -1,0 +1,203 @@
+{
+  "schema": "mgr.resume.wave-ledger.v1",
+  "recordedAt": "2026-10-29T23:11:11.108477+00:00",
+  "sourceCommit": "bf27df673e137c1592a4e3dc76ebc5666ebba3c6",
+  "sourceTree": "147a195e514ae00d18c504022ec8383a43ede203",
+  "report": "UNFINISHED-WORK/mgr-resume-reconciliation-20261029.md",
+  "canonicalScope": {
+    "parents": 174,
+    "clauses": 441,
+    "upgrades": 28,
+    "states": {
+      "open": 122,
+      "implemented_unverified": 52
+    },
+    "independentlyCertifiedParents": 0,
+    "promotions": 0,
+    "unchangedFileSha256": {
+      "UNFINISHED-WORK/backlog.json": "a4c03fee4b92ecf9030a0402a1b8fcbca8e475e07a58423147868e0712bed0d9",
+      "UNFINISHED-WORK/mgr-174-acceptance-evidence-register.json": "813336d9d848c947be0cc7033886118d2c04eb0986b5b686c3c2395c31351617",
+      "UNFINISHED-WORK/mgr-trilogy-upgrades.json": "67dd154e99c4e4be18f6b7d594c16732dd3790ac92b4c91a71e624f0eccd8588"
+    }
+  },
+  "verification": {
+    "fullProfiles": {
+      "passedProfiles": 67,
+      "failedProfiles": 0,
+      "blockedProfiles": 0,
+      "totalProfiles": 67,
+      "independentlyCertifiedParents": 0,
+      "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+    },
+    "focusedRepairCases": {
+      "transport": 13,
+      "failureOutput": 8,
+      "total": 21,
+      "subsetOfFullRun": true
+    },
+    "jobLinkCases": {
+      "passed": 4,
+      "subsetOfFullRun": true
+    },
+    "integration": {
+      "passedChecks": 10,
+      "receipt": "UNFINISHED-WORK/evidence/resume-20261029/integration-resumed.json",
+      "qualification": "Actual local OmniDev SQLite/API, Code Monster candidate Git/ledger/receipt and OmniSight HTTP reader. Disposable local signer and service credentials. Snapshot-integrity tests only; not Docker isolation, application behavior, independent production signing, browser accessibility, merge or release."
+    },
+    "outputHashesVerified": 67,
+    "outputHashMismatches": 0
+  },
+  "publication": {
+    "omnidev": {
+      "state": "PENDING_ROOT_PUBLICATION_AND_READBACK",
+      "priorConfirmedRemoteHead": "ec1f38d755939e6186b29f95c170d005722d67a2",
+      "source": "bf27df673e137c1592a4e3dc76ebc5666ebba3c6"
+    },
+    "companions": {
+      "codeMonster": {
+        "confirmedSourceCommit": "6f9092b339be643b135b6ebe1a52c2cab3815753",
+        "confirmedDocumentationCommit": "611c56966e5d7248fef03d53e1b2801af1323544",
+        "documentationTree": "52572cd10f26113a106e652a5c0ff94e0e1c963c",
+        "localIntegrationCommit": "9fc415f3bb9c5b8c10fcfa7c9e7139c46f56ae05",
+        "freshLocalTests": 171
+      },
+      "omnisight": {
+        "confirmedSourceCommit": "e1ee5ff517ac8932c64b4f62451f2cfb55fd8c81",
+        "confirmedDocumentationCommit": "485b46ae2c4138d06dac711b8988593e22253228",
+        "documentationTree": "9f98bd1f211697bc8f45a937c3aa10c0043c1bc3",
+        "localIntegrationCommit": "aeceb6cfd9463190103f6c215607daab33cd204d",
+        "freshLocalTests": 87
+      }
+    }
+  },
+  "tasks": [
+    {
+      "taskNumber": 1,
+      "id": "RESUME-01",
+      "wave": "resume-20261029",
+      "category": "source-reconciliation",
+      "capability": "both saved work streams",
+      "task": "Preserve published correlation fix and recovered full trilogy bridge",
+      "status": "PASS",
+      "evidence": [
+        "ec1f38d755939e6186b29f95c170d005722d67a2",
+        "bbf1c93352ef82bc486832b31d858e6fc4622be0",
+        "bf27df673e137c1592a4e3dc76ebc5666ebba3c6"
+      ],
+      "artifact": "UNFINISHED-WORK/mgr-resume-reconciliation-20261029.md",
+      "discoveredFollowUp": null,
+      "blocker": null
+    },
+    {
+      "taskNumber": 2,
+      "id": "RESUME-02",
+      "wave": "resume-20261029",
+      "category": "repair",
+      "capability": "worker report transport",
+      "task": "Admit valid escaped signed reports while rejecting oversized/malformed/unauthorized bodies",
+      "status": "PASS",
+      "evidence": [
+        "evidence/resume-20261029/run/workerReportTransport.log",
+        "evidence/resume-20261029/worker-report-transport-before.log"
+      ],
+      "artifact": "UNFINISHED-WORK/mgr-resume-reconciliation-20261029.md",
+      "discoveredFollowUp": null,
+      "blocker": null
+    },
+    {
+      "taskNumber": 3,
+      "id": "RESUME-03",
+      "wave": "resume-20261029",
+      "category": "repair",
+      "capability": "failure diagnostics",
+      "task": "Preserve timeout/overflow diagnostics within the unchanged output limit and valid UTF-8 boundaries",
+      "status": "PASS",
+      "evidence": [
+        "evidence/resume-20261029/run/workerFailureOutput.log"
+      ],
+      "artifact": "UNFINISHED-WORK/mgr-resume-reconciliation-20261029.md",
+      "discoveredFollowUp": null,
+      "blocker": null
+    },
+    {
+      "taskNumber": 4,
+      "id": "RESUME-04",
+      "wave": "resume-20261029",
+      "category": "verification",
+      "capability": "full source regression",
+      "task": "Execute all current profiles on the clean combined source",
+      "status": "PASS",
+      "evidence": [
+        "evidence/resume-20261029/run/report.json"
+      ],
+      "artifact": "UNFINISHED-WORK/mgr-resume-reconciliation-20261029.md",
+      "discoveredFollowUp": null,
+      "blocker": null
+    },
+    {
+      "taskNumber": 5,
+      "id": "RESUME-05",
+      "wave": "resume-20261029",
+      "category": "integration",
+      "capability": "three-product local flow",
+      "task": "Exercise imported job, actual Git candidate, signed fixture output, viewer, replay and revocation",
+      "status": "PASS",
+      "evidence": [
+        "evidence/resume-20261029/integration-resumed.json"
+      ],
+      "artifact": "UNFINISHED-WORK/mgr-resume-reconciliation-20261029.md",
+      "discoveredFollowUp": null,
+      "blocker": null
+    },
+    {
+      "taskNumber": 6,
+      "id": "RESUME-06",
+      "wave": "resume-20261029",
+      "category": "external-reconciliation",
+      "capability": "companion publication",
+      "task": "Confirm companion source and documentation checkpoints on their existing branches",
+      "status": "PASS",
+      "evidence": [
+        "611c56966e5d7248fef03d53e1b2801af1323544",
+        "485b46ae2c4138d06dac711b8988593e22253228"
+      ],
+      "artifact": "UNFINISHED-WORK/mgr-resume-reconciliation-20261029.md",
+      "discoveredFollowUp": null,
+      "blocker": null
+    },
+    {
+      "taskNumber": 7,
+      "id": "RESUME-07",
+      "wave": "resume-20261029",
+      "category": "evidence",
+      "capability": "retained output integrity",
+      "task": "Copy exact source-bound logs and verify all 67 hashes without rerunning tests",
+      "status": "PASS",
+      "evidence": [
+        "evidence/resume-20261029/manifest.json"
+      ],
+      "artifact": "UNFINISHED-WORK/mgr-resume-reconciliation-20261029.md",
+      "discoveredFollowUp": null,
+      "blocker": null
+    },
+    {
+      "taskNumber": 8,
+      "id": "RESUME-08",
+      "wave": "resume-20261029",
+      "category": "host-qualification",
+      "capability": "actual worker host",
+      "task": "Observe host qualification without retrying a declined action",
+      "status": "BLOCKED",
+      "evidence": [],
+      "artifact": "UNFINISHED-WORK/mgr-resume-reconciliation-20261029.md",
+      "discoveredFollowUp": "Complete live host/signing/account and original acceptance requirements without duplicating the worker engine.",
+      "blocker": "Device listed online; read-only remote probe declined. No shell execution confirmed; do not retry."
+    }
+  ],
+  "nextWork": [
+    "Publish the combined OmniDev source/evidence with expected-head protection and exact remote tree/ref readback.",
+    "Implement authorized product publication retaining the exact tested candidate commit.",
+    "Complete real host/signing/account qualification through available permitted paths; respect the declined remote probe.",
+    "Continue actual browser/accessibility, whole-application/campaign and original clause acceptance."
+  ]
+}

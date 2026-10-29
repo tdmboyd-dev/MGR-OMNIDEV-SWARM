@@ -8,6 +8,8 @@ import {pathToFileURL} from 'node:url';
 export const FIXTURE_PROFILES = Object.freeze(Object.fromEntries(Object.entries({
  prepare:['tests/prepare.mjs'],
  trilogyLink:['tests/trilogy-job-link.test.mjs'],
+ workerReportTransport:['tests/worker-report-transport.test.mjs'],
+ workerFailureOutput:['tests/worker-failure-output.test.mjs'],
  typecheck:['node_modules/typescript/bin/tsc','--noEmit','--incremental','false','--diagnostics'],
  build:['scripts/run-framework.mjs','build'],
  acceptance:['tests/acceptance.mjs'], runtime:['tests/runtime.mjs'],
@@ -39,6 +41,8 @@ export const FIXTURE_PROFILES = Object.freeze(Object.fromEntries(Object.entries(
  workspacePlanning:['tests/workspace-planning.mjs'], decisionOutcomes:['tests/decision-outcomes.mjs'],
  planningUi:['tests/planning-ui.test.mjs'], gapEvaluation:['tests/gap-evaluation.test.mjs'],
  securityGapEvaluation:['tests/security-gap-evaluation.test.mjs'], securityGapReconciliation:['tests/security-gap-reconciliation.mjs'],
+ runtimeProjectScope:['tests/runtime-project-scope.test.mjs'], trilogyJobs:['tests/trilogy-jobs.test.mjs'],
+ trilogyWorker:['tests/trilogy-worker.test.mjs'], githubSnapshotPinning:['tests/github-snapshot-pinning.test.mjs'],
 }).map(([name,argv])=>[name,Object.freeze(argv)])));
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const git=(root,args)=>execFileSync('git',['-C',root,...args],{encoding:'utf8',stdio:['ignore','pipe','pipe'],maxBuffer:4_000_000}).trim();

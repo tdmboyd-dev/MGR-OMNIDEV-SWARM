@@ -1,0 +1,112 @@
+{
+  "schema": "mgr.biz02-targeted-source-discovery.v1",
+  "recordedAt": "2026-10-29T18:24:22.870Z",
+  "taskId": "BIZ-02",
+  "classification": "source-linked-partial-existing-planning-lifecycle",
+  "sourceCommit": "bbf6d5f9dd102cd413631a1b0afe1628a135463b",
+  "sourceEvidence": [
+    {
+      "path": "lib/workspace-planning.ts",
+      "sourceCommit": "bbf6d5f9dd102cd413631a1b0afe1628a135463b",
+      "sha256": "af847ad318457524201f1ef139f58ded193566bf4f0257f529876cc802c2ccff"
+    },
+    {
+      "path": "components/planning-workspace.tsx",
+      "sourceCommit": "bbf6d5f9dd102cd413631a1b0afe1628a135463b",
+      "sha256": "f00c05365ea2c168ddf34b8f982e0cfb16ebc32b239ffde0e344a5a6b5894c25"
+    },
+    {
+      "path": "app/api/workspace/route.ts",
+      "sourceCommit": "bbf6d5f9dd102cd413631a1b0afe1628a135463b",
+      "sha256": "6b157389332c2c659e288a425fd06fec7d59440441fb347afc1b9c95967e7836"
+    },
+    {
+      "path": "app/page.tsx",
+      "sourceCommit": "bbf6d5f9dd102cd413631a1b0afe1628a135463b",
+      "sha256": "679b9469abd4a3ec66c10364b84d13dc4c0659fdd89c554773682ae7f5548b55"
+    },
+    {
+      "path": "lib/intelligence.ts",
+      "sourceCommit": "bbf6d5f9dd102cd413631a1b0afe1628a135463b",
+      "sha256": "de80978557d1d82306d86259159ed68a8965ac6fb8ed85b9f70807f918fbb12e"
+    }
+  ],
+  "verificationMethod": "All five existing source hashes were reread from git show bbf6d5f9dd102cd413631a1b0afe1628a135463b:<path> and matched the targeted lead. No code or original acceptance changed.",
+  "sourceDiscoveryInput": {
+    "path": "UNFINISHED-WORK/mgr-runtime-scope-and-unlinked-discovery-20261029.json",
+    "sha256": "16ef4791b09d9c01071c6dfafcec32232181657892715da9571d32dfb33c7624"
+  },
+  "currentFinding": "Existing V10 future plans cite project source snapshots, express opportunity hypotheses and call for competing-solution comparisons, predeclared experiment thresholds and stop rules. Saved evaluations retain owner-recorded outcomes and source context. This is partial innovation support; actual dated competitor research, typed experiments, independently measured results and evaluated recommendation usefulness remain unfinished. Demand, revenue and novelty stay unknown without research.",
+  "existingBehavior": [
+    "V10 opportunity plans cite the imported project source and explicitly keep demand, revenue and novelty unknown.",
+    "The generated plan text calls for independent problem observations, a competing-solution comparison, a predeclared experiment threshold, rollback and stop conditions; it does not itself collect or enforce complete external research evidence.",
+    "Saved evaluations require a chosen horizon, conclusion, owner-reported outcome and evidence text while preserving original proposal/source context.",
+    "Existing lexical search exposes proposal and evaluation provenance."
+  ],
+  "remainingCapabilities": [
+    "Extend the existing plan/evaluation lifecycle with typed opportunity and competing-solution evidence records, dated provenance and permitted use.",
+    "Attach typed experiments with a predeclared metric, baseline, threshold, owner and budget; retain failed and inconclusive measurements without treating owner observations as independent proof.",
+    "Enforce research consent, privacy, retention and source-use controls, and qualify the real research-provider path.",
+    "Evaluate objective-linked opportunity ranking and recommendation usefulness against measured outcomes.",
+    "Check novelty claims against dated competing-solution evidence and qualified IP review where needed; unsupported novelty, revenue and demand remain unknown."
+  ],
+  "originalAcceptance": [
+    {
+      "criterionId": "BIZ-02/AC-01",
+      "requirement": "Proposals include sources, competing solutions, validation plans and experimental results.",
+      "status": "UNVERIFIED",
+      "discoveryFinding": "Source citations, validation-plan structure and retained evaluations are partially implemented. Actual competitor evidence, typed experiments and measured independent outcomes are not required/ingested by this path.",
+      "currentBlocker": "Reuse the existing source-bound V10 proposal and saved evaluation lifecycle. Complete actual dated competing-solution evidence, typed experiments with predeclared metrics/baselines/thresholds, measured outcomes and research consent/privacy/retention controls; then reproduce this exact clause. Generated research instructions and owner-recorded observations do not establish complete acceptance.",
+      "historicalLocalVerificationSha256": "a0213284849afc32a9e7699aaa1b08620d776f4603e07887fda47400bab6c741"
+    },
+    {
+      "criterionId": "BIZ-02/AC-02",
+      "requirement": "The system does not claim that nobody has built something without evidence.",
+      "status": "UNVERIFIED",
+      "discoveryFinding": "Current V10 unknowns and innovation note avoid novelty claims. This is a bounded source/presentation finding, not a complete research/novelty acceptance replay.",
+      "currentBlocker": "Current V10 wording and innovation notes keep novelty, demand and revenue unknown, but this is a bounded source/presentation finding. Exercise the complete research and model-output path against unsupported novelty claims, with dated competing-solution evidence and qualified review where required; no full clause acceptance is established.",
+      "historicalLocalVerificationSha256": "64bb5bd158677e6ba8c98d14d2ca972665b9f64a049c36a206eb9b939915f686"
+    }
+  ],
+  "priorRecord": {
+    "current": "Innovation Discovery is a catalog domain; no invention pipeline or novelty evaluation exists.",
+    "sourceFiles": [],
+    "classification": "documented-capability-without-linked-runtime"
+  },
+  "changedMetadata": [
+    "UNFINISHED-WORK/backlog.json",
+    "UNFINISHED-WORK/mgr-174-acceptance-evidence-register.json",
+    "UNFINISHED-WORK/remaining-detail-omnidev-20261029.json",
+    "UNFINISHED-WORK/174-IMPLEMENTATION-INDEX.md"
+  ],
+  "preservation": {
+    "originalWorkAndAcceptanceUnchanged": true,
+    "allRecordedParentStatusesUnchanged": true,
+    "historicalLocalVerificationUnchanged": true,
+    "historicalLocalVerificationSummaryUnchanged": true,
+    "olderHashedReportsRewritten": false,
+    "upgradesUnchanged": true
+  },
+  "validation": {
+    "valid": true,
+    "qualification": "structural-provenance-only-not-execution-certification",
+    "totalParents": 174,
+    "totalCriteria": 441,
+    "verifiedCriteria": 1,
+    "currentVerifiedCriteria": null,
+    "certifiedTasks": 0,
+    "readyForCertification": 0,
+    "expectedSourceCommit": null,
+    "staleCriteria": [],
+    "mixedSourceParents": [],
+    "errors": [],
+    "historicalCount": 174,
+    "upgradeCount": 28,
+    "recordedStatuses": {
+      "implemented_unverified": 52,
+      "open": 122
+    }
+  },
+  "aggregateSourceCounts": "Not republished by this metadata correction. Coordinator must run committed-object reconciliation at the next clean source checkpoint.",
+  "qualification": "Partial implementation discovery only. No additional acceptance criterion or parent is certified; no real research-provider, market-validation, novelty or recommendation-quality result is claimed."
+}
