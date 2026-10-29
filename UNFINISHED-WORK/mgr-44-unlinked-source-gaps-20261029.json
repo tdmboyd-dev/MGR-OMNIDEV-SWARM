@@ -1,0 +1,625 @@
+{
+  "schema": "mgr.omnidev.remaining-unlinked.v2",
+  "date": "2026-10-29",
+  "historicalParents": 174,
+  "linkedParents": 130,
+  "unlinkedParents": 44,
+  "linkedPercent": 74.71,
+  "sourceKind": "source links include verified historical references and newly discovered provisional candidates; not proof of full acceptance",
+  "areas": {
+    "08-digital-twins-and-futures": 3,
+    "10-business-and-innovation": 3,
+    "09-design-and-user-experience": 1,
+    "06-security-and-verification": 1,
+    "13-release-and-github-handoff": 2,
+    "04-integration-inventory": 34
+  },
+  "records": [
+    {
+      "id": "TWIN-01",
+      "title": "Build project digital twins",
+      "area": "08-digital-twins-and-futures",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Predictions are calibrated against real staging outcomes and documented uncertainty.",
+        "Twin changes cannot affect production or expose sensitive data."
+      ],
+      "currentClaim": "Current twin is an illustrative queueing/capacity scenario, not a measured software/infrastructure replica.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "TWIN-02",
+      "title": "Add cost and revenue impact models",
+      "area": "08-digital-twins-and-futures",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Scenarios trace to real input data and explicitly distinguish forecasts from facts.",
+        "Revenue and cost access is permission-controlled."
+      ],
+      "currentClaim": "No real billing, unit economics or revenue model is connected.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "FUT-01",
+      "title": "Replace future-state templates with evaluated plans",
+      "area": "08-digital-twins-and-futures",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Every horizon has project-specific evidence and testable milestones.",
+        "Predictions remain hypotheses with evaluations, not guaranteed futures."
+      ],
+      "currentClaim": "V2/V3/V5/V10 are disclosed planning templates informed by snapshot gaps.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "BIZ-01",
+      "title": "Connect product and business intelligence",
+      "area": "10-business-and-innovation",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Recommendations reference real evidence and measurable business objectives.",
+        "Sensitive business/customer data has scoped access and retention."
+      ],
+      "currentClaim": "No real customer, product, market, revenue or competitor evidence is ingested.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "BIZ-02",
+      "title": "Build innovation discovery and validation",
+      "area": "10-business-and-innovation",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Proposals include sources, competing solutions, validation plans and experimental results.",
+        "The system does not claim that nobody has built something without evidence."
+      ],
+      "currentClaim": "Innovation Discovery is a catalog domain; no invention pipeline or novelty evaluation exists.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "EXEC-01",
+      "title": "Complete executive intelligence scores",
+      "area": "10-business-and-innovation",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "All 14 dimensions have documented methodology and evidence or an explicit unassessed state.",
+        "A score never implies a certification or unsupported measurement."
+      ],
+      "currentClaim": "Seven heuristic scores exist; no complete executive scorecard or measured business readiness exists.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "UX-02",
+      "title": "Complete accessibility and responsive verification",
+      "area": "09-design-and-user-experience",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Representative viewport and assistive-technology journeys pass with recorded findings.",
+        "All critical actions work without a mouse."
+      ],
+      "currentClaim": "Responsive styles and component primitives exist; no measured accessibility audit is complete.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "LEGAL-01",
+      "title": "Implement scoped compliance and legal auditing",
+      "area": "06-security-and-verification",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Reports distinguish measured controls, missing evidence and legal interpretation.",
+        "No unsupported certification or legal conclusion is issued."
+      ],
+      "currentClaim": "Compliance and Legal Auditing are domain definitions; there are no evidence collectors or jurisdiction-specific controls.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "REL-01",
+      "title": "Prepare release documentation and operating evidence",
+      "area": "13-release-and-github-handoff",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "A new authorized operator can set up, verify, recover and upgrade the platform using the docs.",
+        "Release notes accurately distinguish engineering work, activation and verification."
+      ],
+      "currentClaim": "README, architecture status and evidence files exist, but full operating/developer documentation is incomplete.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "REL-03",
+      "title": "Resolve the unused Vercel experiment",
+      "area": "13-release-and-github-handoff",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "No unwanted running resources or required Vercel dependency remain.",
+        "Cleanup outcome is verified; absence of a supported delete operation is documented."
+      ],
+      "currentClaim": "An empty optional worker project was created; sandbox creation returned 403 and no running worker/deployment was established.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-02",
+      "title": "GitLab integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-03",
+      "title": "Bitbucket integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-04",
+      "title": "Azure DevOps integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-08",
+      "title": "AWS integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-09",
+      "title": "Azure integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-10",
+      "title": "Google Cloud integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-11",
+      "title": "Digital Ocean integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-12",
+      "title": "Kubernetes integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-14",
+      "title": "PostgreSQL integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-15",
+      "title": "MySQL integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-16",
+      "title": "SQL Server integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-17",
+      "title": "MariaDB integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-18",
+      "title": "MongoDB integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-19",
+      "title": "Neo4j integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-20",
+      "title": "Redis integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-21",
+      "title": "Firebase integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-22",
+      "title": "Supabase integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-23",
+      "title": "Figma integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-24",
+      "title": "Adobe XD integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-25",
+      "title": "Sketch integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-26",
+      "title": "Blender integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-27",
+      "title": "Maya integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-28",
+      "title": "Cinema4D integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-29",
+      "title": "Notion integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-30",
+      "title": "Confluence integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-31",
+      "title": "Slack integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-32",
+      "title": "Teams integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-33",
+      "title": "Email Systems integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-34",
+      "title": "Internal Documentation integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-35",
+      "title": "APIs integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-36",
+      "title": "Microservices integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-37",
+      "title": "Legacy Systems integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-38",
+      "title": "ERP Systems integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    },
+    {
+      "id": "CONN-39",
+      "title": "CRM Systems integration",
+      "area": "04-integration-inventory",
+      "originalStatus": "open",
+      "originalAcceptance": [
+        "Authorized real-source discovery and incremental read-back are demonstrated.",
+        "Denial, revocation, service failure and unsupported actions fail safely.",
+        "Writes, if shipped, have separate target-specific tests and policy."
+      ],
+      "currentClaim": "Catalog entry only; dedicated live adapter not implemented.",
+      "candidateNeed": "actual adapter/source discovery and qualified behavior tests",
+      "fullyAccepted": false
+    }
+  ]
+}
