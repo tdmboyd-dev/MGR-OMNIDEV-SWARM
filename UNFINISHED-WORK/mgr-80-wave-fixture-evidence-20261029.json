@@ -1,0 +1,85 @@
+{
+  "createdAt": "2026-10-29T11:21:04.147Z",
+  "runs": [
+    {
+      "contract": "mgr.fixture-execution-evidence.v1",
+      "profile": "acceptance",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/acceptance.mjs"
+      ],
+      "exitCode": 0,
+      "reason": "exited-zero",
+      "outputSha256": "e53e6b5895bd90f6b3bf346e3e8381e8966afd982951eaded6b968b7b0066a61",
+      "capturedBytes": 1669,
+      "truncated": false,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v1",
+      "profile": "runtime",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/runtime.mjs"
+      ],
+      "exitCode": 0,
+      "reason": "exited-zero",
+      "outputSha256": "2a80f908f4444bfa49faa14e9895078afd880932fc99676847e8c90059dc7c74",
+      "capturedBytes": 5041,
+      "truncated": false,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v1",
+      "profile": "integration",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/integration-fleet.mjs"
+      ],
+      "exitCode": 0,
+      "reason": "exited-zero",
+      "outputSha256": "25ac825985f46534f515a353af5b9538ad906d2e9f5faa7686b5c2a62bdd2503",
+      "capturedBytes": 5982,
+      "truncated": false,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v1",
+      "profile": "supervisor",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/engine-supervisor.mjs"
+      ],
+      "exitCode": 0,
+      "reason": "exited-zero",
+      "outputSha256": "5cd8732f1a8bb37e0d08887a21c9b59c41bbd1513b6126f4f4aa44256347429b",
+      "capturedBytes": 85,
+      "truncated": false,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v1",
+      "profile": "cleanup",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/worker-cleanup.mjs"
+      ],
+      "exitCode": 0,
+      "reason": "exited-zero",
+      "outputSha256": "08de3321a17332b3c36e533eb97d7e3e35034bdcd08cdbb764f59ec147f36a0c",
+      "capturedBytes": 91,
+      "truncated": false,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false
+    }
+  ]
+}
