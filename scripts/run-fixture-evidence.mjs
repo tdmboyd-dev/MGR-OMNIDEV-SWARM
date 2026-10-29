@@ -1,4 +1,4 @@
-import {spawn} from 'node:child_process';
+import {spawn,execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
@@ -15,6 +15,10 @@ export async function runFixtureEvidence({profile,cwd=process.cwd(),timeoutMs=90
  const args=PROFILES[profile];if(!args)throw new TypeError('unknown approved suite');
  if(!Number.isSafeInteger(timeoutMs)||timeoutMs<100||timeoutMs>180_000)throw new TypeError('invalid timeout');
  const root=resolve(cwd);
+ const sourceCommit=execFileSync('git',['-C',root,'rev-parse','HEAD'],{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();
+ if(!/^[a-f0-9]{40}(?:[a-f0-9]{24})?$/.test(sourceCommit))throw new Error('unpinned source commit');
+ const dirty=execFileSync('git',['-C',root,'status','--porcelain','--untracked-files=no'],{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();
+ if(dirty)throw new Error('tracked source changes not committed');
  const result=await new Promise(done=>{
   const child=spawn(process.execPath,args,{cwd:root,shell:false,windowsHide:true,env:{...process.env,CI:'1'},stdio:['ignore','pipe','pipe']});
   let chunks=[],bytes=0,truncated=false,closed=false;
@@ -25,7 +29,7 @@ export async function runFixtureEvidence({profile,cwd=process.cwd(),timeoutMs=90
   child.on('close',code=>end(code,code===0?'exited-zero':'exit-failed'));
   const timer=setTimeout(()=>{child.kill();end(null,'timeout');},timeoutMs);
  });
- return {contract:'mgr.fixture-execution-evidence.v1',profile,argv:[process.execPath,...args],...result,passed:result.exitCode===0&&!result.truncated&&result.reason==='exited-zero',qualification:'local-fixture-only-not-parent-acceptance',signed:false};
+ return {contract:'mgr.fixture-execution-evidence.v1',profile,sourceCommit,argv:[process.execPath,...args],...result,passed:result.exitCode===0&&!result.truncated&&result.reason==='exited-zero',qualification:'local-fixture-only-not-parent-acceptance',signed:false};
 }
 if(process.argv[1]?.endsWith('run-fixture-evidence.mjs')&&process.argv.length>=4){
  const output={createdAt:new Date().toISOString(),runs:[]};
