@@ -10,7 +10,18 @@
     "independentlyFullAccepted": 0,
     "fullAcceptedPercent": 0,
     "stillOpen": 173,
-    "fullyAcceptedPercent": 0
+    "fullyAcceptedPercent": 0,
+    "statusCounts": {
+      "open": 173,
+      "implemented_unverified": 1
+    },
+    "sourceReferenceCheck": {
+      "total": 88,
+      "present": 88,
+      "missing": 0,
+      "percent": 100,
+      "meaning": "path existence only, no acceptance certification"
+    }
   },
   "workers": {
     "requestedTenRoles": 10,
@@ -19,7 +30,7 @@
     "activatedTenPercent": 0
   },
   "candidateCampaign": {
-    "status": "signed-evidence single task + VampBite safeguards passed; no isolated production verifier",
+    "status": "signed campaign baseline with new VampBite terminal state guards",
     "passing": 66,
     "skipped": 3,
     "failing": 0,
@@ -64,9 +75,15 @@
   "repairedThisWave": [
     {
       "module": "Code Monster VampBite",
-      "issue": "completed or quarantined jobs could be silently reclassified",
-      "status": "TESTED_LOCAL",
-      "regressionsAdded": 2
+      "issue": "silent terminal-state resurrection/quarantine approval",
+      "testsPassed": 10
+    },
+    {
+      "module": "OmniDev backlog refs",
+      "issue": "unverified source location references",
+      "pathsChecked": 88,
+      "pathsPresent": 88,
+      "testsPassed": 3
     }
   ],
   "caveat": "100 percent metadata triage across 174 historic parent records is not implementation completion or acceptance certification."
