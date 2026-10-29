@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';import {runInNewContext} from 'node:vm';import ts from 'typescript';
+const catalog=readFileSync('lib/catalog.ts','utf8');const cap=readFileSync('lib/connector-qualification.ts','utf8');
+const get=x=>ts.transpileModule(x,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;
+const domain={exports:{}};runInNewContext(get(catalog).replace(/export const connectors/,'const connectors'),domain);
+const js=get(cap).replace(/import \{connectors\} from ['"].\/catalog['"];?/,'').replace(/export function/g,'function');
+const ctx={connectors:domain.connectors};runInNewContext(js+';this.list=connectorCapabilityInventory;this.assess=assessConnectorAcceptance;',ctx);
+test('39 connector listings do not become 39 active integrations',()=>{const r=ctx.list();assert.equal(r.length,39);assert.equal(r.filter(x=>x.implementation==='catalog-only').length,34);assert.ok(r.every(x=>x.verifiedLive===false));});
+test('unimplemented catalog connector rejects fabricated successful receipt',()=>assert.equal(ctx.assess('GitLab',{connector:'GitLab',sourceCommit:'a'.repeat(40),providerReceipt:'fake',realOperationTest:true}).reason,'no-adapter-implementation'));
+test('existing GitHub adapter is not live certified without independent review',()=>{const proof={connector:'GitHub',sourceCommit:'a'.repeat(40),grantedScope:'repo',providerReceipt:'example',deniedAccessTest:true,revocationTest:true,realOperationTest:true};assert.equal(ctx.assess('GitHub',proof).ok,false);});
