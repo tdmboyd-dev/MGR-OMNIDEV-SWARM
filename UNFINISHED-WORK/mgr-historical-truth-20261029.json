@@ -1,19 +1,19 @@
 {
-  "schema": "mgr.omnidev.historical-truth.v2",
+  "schema": "mgr.omnidev.historical-truth.v3",
   "generatedOn": "2026-10-29",
   "source": "UNFINISHED-WORK/backlog.json on review branch",
   "historicalIds": 174,
   "additionalUpgradeIds": 28,
   "recordedStatuses": {
-    "open": 173,
-    "implemented_unverified": 1
+    "open": 126,
+    "implemented_unverified": 48
   },
-  "partialLocallyTestedClaims": 11,
-  "sourceReferenceTasks": 61,
-  "evidenceReferenceTasks": 15,
-  "unknownImplementationState": 162,
+  "partialLocallyTestedClaims": 58,
+  "sourceReferenceTasks": 108,
+  "evidenceReferenceTasks": 62,
+  "unknownImplementationState": 115,
   "verifiedFullAcceptanceByThisReport": 0,
-  "note": "One historical REL-02 task reclassified from open to implemented_unverified based on actual GitHub provider readback. This report does not prove no other tasks are complete, or that REL-02 passes all acceptance gates.",
+  "note": "Historical 174 original IDs retained; 47 specialist workflows proven source-present + local fixture-tested and moved to implemented_unverified, not completed. All 276 source paths across 108 tasks pinned to Git commit and present. No full acceptance criteria automatically passed.",
   "items": [
     {
       "id": "AUTH-01",
@@ -23,8 +23,8 @@
       "source_refs": 2,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -35,8 +35,8 @@
       "source_refs": 4,
       "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -47,8 +47,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -59,8 +59,8 @@
       "source_refs": 2,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -71,8 +71,8 @@
       "source_refs": 3,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -83,8 +83,8 @@
       "source_refs": 4,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -95,8 +95,8 @@
       "source_refs": 3,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -107,8 +107,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -119,8 +119,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -131,8 +131,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -143,8 +143,8 @@
       "source_refs": 3,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -155,8 +155,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -167,8 +167,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -179,8 +179,8 @@
       "source_refs": 2,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -191,8 +191,8 @@
       "source_refs": 1,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -203,8 +203,8 @@
       "source_refs": 2,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -215,8 +215,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -227,8 +227,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -239,8 +239,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -251,8 +251,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -263,8 +263,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -275,8 +275,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -287,8 +287,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -299,8 +299,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -311,8 +311,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -323,8 +323,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -335,8 +335,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -347,8 +347,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -359,8 +359,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -371,8 +371,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -383,8 +383,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -395,8 +395,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -407,8 +407,8 @@
       "source_refs": 3,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -419,8 +419,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -431,8 +431,8 @@
       "source_refs": 2,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -443,8 +443,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -455,8 +455,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -467,8 +467,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -479,8 +479,8 @@
       "source_refs": 3,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "SOURCE_TRANSFER_COMPLETED_FURTHER_VERIFICATION_REQUIRED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "SOURCE_TRANSFER_BYTE_VERIFIED_PENDING_SECRET_SCAN",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -491,8 +491,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -503,8 +503,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -515,8 +515,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -527,8 +527,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -539,8 +539,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -551,8 +551,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -563,8 +563,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -575,8 +575,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -587,8 +587,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -599,8 +599,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -611,8 +611,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -623,8 +623,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -635,8 +635,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -647,8 +647,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -659,8 +659,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -671,8 +671,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -683,8 +683,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -695,8 +695,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -707,8 +707,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -719,8 +719,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -731,8 +731,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -743,8 +743,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -755,8 +755,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -767,8 +767,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -779,8 +779,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -791,8 +791,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -803,8 +803,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -815,8 +815,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -827,8 +827,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -839,8 +839,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -851,8 +851,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -863,8 +863,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -875,8 +875,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -887,8 +887,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -899,8 +899,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -911,8 +911,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -923,8 +923,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -935,8 +935,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -947,8 +947,8 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -959,572 +959,572 @@
       "source_refs": 0,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-01",
       "priority": "P1",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-02",
       "priority": "P1",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-03",
       "priority": "P1",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-04",
       "priority": "P1",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-05",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-06",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-07",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-08",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-09",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-10",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-11",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-12",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-13",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-14",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-15",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-16",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-17",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-18",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-19",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-20",
       "priority": "P1",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-21",
       "priority": "P1",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-22",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-23",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-24",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-25",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-26",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-27",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-28",
       "priority": "P1",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-29",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-30",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-31",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-32",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-33",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-34",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-35",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-36",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-37",
       "priority": "P1",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-38",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-39",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-40",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-41",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-42",
       "priority": "P1",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-43",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-44",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-45",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-46",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
       "id": "DOM-47",
       "priority": "P2",
-      "recorded_status": "open",
-      "implementation_state": "unspecified",
-      "source_refs": 0,
-      "evidence_refs": 0,
+      "recorded_status": "implemented_unverified",
+      "implementation_state": "partial-tested-local",
+      "source_refs": 4,
+      "evidence_refs": 2,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "IMPLEMENTED_LOCAL_SPECIALIST_NOT_DOMAIN_QUALIFIED",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1535,8 +1535,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1547,8 +1547,8 @@
       "source_refs": 1,
       "evidence_refs": 3,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1559,8 +1559,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1571,8 +1571,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1583,8 +1583,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1595,8 +1595,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1607,8 +1607,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1619,8 +1619,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1631,8 +1631,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1643,8 +1643,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1655,8 +1655,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1667,8 +1667,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1679,8 +1679,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1691,8 +1691,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1703,8 +1703,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1715,8 +1715,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1727,8 +1727,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1739,8 +1739,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1751,8 +1751,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 3,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1763,8 +1763,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1775,8 +1775,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1787,8 +1787,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1799,8 +1799,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1811,8 +1811,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1823,8 +1823,8 @@
       "source_refs": 1,
       "evidence_refs": 3,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1835,8 +1835,8 @@
       "source_refs": 1,
       "evidence_refs": 3,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1847,8 +1847,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1859,8 +1859,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1871,8 +1871,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1883,8 +1883,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1895,8 +1895,8 @@
       "source_refs": 4,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1907,8 +1907,8 @@
       "source_refs": 2,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1919,8 +1919,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1931,8 +1931,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1943,8 +1943,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1955,8 +1955,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1967,8 +1967,8 @@
       "source_refs": 2,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1979,8 +1979,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -1991,8 +1991,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -2003,8 +2003,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -2015,8 +2015,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -2027,8 +2027,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -2039,8 +2039,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -2051,8 +2051,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -2063,8 +2063,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -2075,8 +2075,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -2087,8 +2087,8 @@
       "source_refs": 1,
       "evidence_refs": 0,
       "acceptance_clauses": 2,
-      "classification": "UNVERIFIED_UNCLASSIFIED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     },
     {
@@ -2099,8 +2099,8 @@
       "source_refs": 2,
       "evidence_refs": 2,
       "acceptance_clauses": 2,
-      "classification": "PARTIAL_IMPL_REPORTED",
-      "action": "REPRODUCE_FULL_ACCEPTANCE",
+      "classification": "UNVERIFIED_OR_PARTIAL",
+      "action": "INDIVIDUAL_ACCEPTANCE_GATE_REQUIRED",
       "must_not_autoclose": true
     }
   ]
