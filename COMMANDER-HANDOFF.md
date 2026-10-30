@@ -1,5 +1,12 @@
 # Trilogy Commander — standing workflow and restart handoff
 
+## Current source save verified after renewed owner instruction — October 30, 2026
+
+The owner explicitly requested the GitHub approval again after the earlier rejected attempt. Native saves then succeeded and all three development-branch commit/tree identities were read back. OmniDev source checkpoint is `3733dde3962e76513952eaafb21d6aa994ef909d`, exact tree `90543f1e70fde1af42b5f3f5ca9beedd9234b453`, matching reviewed local `ec78b626332beee6d9a91abc8c101cbe284232f3`. Companion mappings are in `UNFINISHED-WORK/evidence/completion-20261030/github-source-readback.json`; the additive `UNFINISHED-WORK/mgr-publication-20261030.json` overlay supersedes the previous current-publication blocker while retaining its history. Source saving does not establish deployment or merge into main.
+
+Keep the 73-profile executed proof bound to runtime `8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec`. Preserve 174 parents / 441 clauses / 28 upgrades and existing acceptance states. Browser-policy and previously declined connected-device probe limitations remain unchanged; renewed GitHub instruction does not authorize retrying either of those separate actions. Regenerate progress from both the completion and publication overlays, using the verified OmniDev checkpoint above for public links. Avoid an endless self-referencing documentation refresh; final metadata publication is read back separately.
+
+
 ## Latest restart checkpoint — October 30, 2026
 
 Continue from local branch `mgr/completion-20261030` and its latest committed documentation, with tested runtime `8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec`. The newest `HANDOFF.md` / `MGR-TRILOGY-HANDOFF.md` and `UNFINISHED-WORK/mgr-completion-20261030.json` describe the completed publication/progress implementation and **73/73** full local profiles. Initial 72/73 failure evidence is preserved. The actual local integration passed 14 checks, with simulated GitHub and disposable signer boundaries kept explicit.

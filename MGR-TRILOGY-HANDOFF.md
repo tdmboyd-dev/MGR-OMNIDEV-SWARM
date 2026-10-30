@@ -1,3 +1,19 @@
+# Confirmed source publication — October 30, 2026
+
+**All three reviewed source trees are saved on their authorized GitHub development branches and read back.** The owner explicitly asked to bring the GitHub approval back after the earlier rejection; the native connection then completed these saves. The earlier rejection and stopped-write notes below remain historical facts and no longer describe the current source-publication state.
+
+| Product | Verified remote commit | Exact remote/local tree |
+|---|---|---|
+| OmniDev Swarm | `3733dde3962e76513952eaafb21d6aa994ef909d` | `90543f1e70fde1af42b5f3f5ca9beedd9234b453` |
+| Code Monster | `da648936e053c4df0cbe6cfaa1f8fc41a2911b4f` | `36d3e58f920bcdd1692a986fd5e5889ac4b91a3a` |
+| OmniSight | `2e4e67e1c723ab60fa8dc66b4889119f55965485` | `b550f42dc652800e8ce5d87022c633192bcb88d8` |
+
+Exact branch names, local-to-remote commit mappings and native readback: `UNFINISHED-WORK/evidence/completion-20261030/github-source-readback.json`. Additive current-state overlay: `UNFINISHED-WORK/mgr-publication-20261030.json`. The completion wave and original rejection receipt are preserved unchanged.
+
+The **73/73 local profiles still belong to runtime `8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec`**. Different source/evidence commit IDs do not relabel that execution. Source saving is complete for the pinned trees above; no merge into main, deployment, in-product live GitHub qualification, actual browser/mobile/keyboard acceptance, Docker-host qualification or independent original-parent certification is implied. Original 174/441/28 scope and parent states remain unchanged. This follow-up records source publication; its own later metadata commit is verified separately without rewriting the original receipt.
+
+---
+
 # Current completed local implementation — October 30, 2026
 
 The publication and progress-board work is implemented, locally tested and committed; **this new wave is not saved to GitHub or deployed**. Tested runtime: `8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec`, tree `b34c32d6fae0f022287e402fa71acfdb39aa4723`. This newest section supersedes older current-state claims below without removing their history.

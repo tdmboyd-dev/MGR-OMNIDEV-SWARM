@@ -1,0 +1,100 @@
+{
+  "schema": "mgr.publication-followup.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-10-30T05:49:49.000Z",
+  "sourceCommit": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec",
+  "sourcePublication": "SAVED_AND_READ_BACK",
+  "confirmedRemoteCheckpoint": "3733dde3962e76513952eaafb21d6aa994ef909d",
+  "publicSourceTree": "90543f1e70fde1af42b5f3f5ca9beedd9234b453",
+  "publishedLocalCommit": "ec78b626332beee6d9a91abc8c101cbe284232f3",
+  "providerReceipt": "UNFINISHED-WORK/evidence/completion-20261030/github-source-readback.json",
+  "repositoryReadbacks": [
+    {
+      "repository": "MGR-OMNIDEV-SWARM",
+      "branch": "mgr/code-monster-omnisight-20261028",
+      "remoteCommit": "3733dde3962e76513952eaafb21d6aa994ef909d",
+      "remoteTree": "90543f1e70fde1af42b5f3f5ca9beedd9234b453",
+      "localCommit": "ec78b626332beee6d9a91abc8c101cbe284232f3",
+      "localTree": "90543f1e70fde1af42b5f3f5ca9beedd9234b453",
+      "verified": true,
+      "commitUrl": "https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/commit/3733dde3962e76513952eaafb21d6aa994ef909d",
+      "parents": [
+        "68dce7592244d664bca09548e40ebb1265114305"
+      ]
+    },
+    {
+      "repository": "MGR-CODE-MONSTER",
+      "branch": "mgr/receipt-admission-20261029",
+      "remoteCommit": "da648936e053c4df0cbe6cfaa1f8fc41a2911b4f",
+      "remoteTree": "36d3e58f920bcdd1692a986fd5e5889ac4b91a3a",
+      "localCommit": "8814f68c1b455af4132c1fc70af5181dc087bddd",
+      "localTree": "36d3e58f920bcdd1692a986fd5e5889ac4b91a3a",
+      "verified": true,
+      "commitUrl": "https://github.com/tdmboyd-dev/MGR-CODE-MONSTER/commit/da648936e053c4df0cbe6cfaa1f8fc41a2911b4f",
+      "parents": [
+        "611c56966e5d7248fef03d53e1b2801af1323544"
+      ]
+    },
+    {
+      "repository": "MGR-OMNISIGHT",
+      "branch": "mgr/ten-lane-handoff-20261029",
+      "remoteCommit": "2e4e67e1c723ab60fa8dc66b4889119f55965485",
+      "remoteTree": "b550f42dc652800e8ce5d87022c633192bcb88d8",
+      "localCommit": "02ad368b485de127ad49bb6c2e6d74b528fe3b15",
+      "localTree": "b550f42dc652800e8ce5d87022c633192bcb88d8",
+      "verified": true,
+      "commitUrl": "https://github.com/tdmboyd-dev/MGR-OMNISIGHT/commit/2e4e67e1c723ab60fa8dc66b4889119f55965485",
+      "parents": [
+        "485b46ae2c4138d06dac711b8988593e22253228"
+      ]
+    }
+  ],
+  "priorRejectedAttempt": {
+    "retainedEvidence": "UNFINISHED-WORK/evidence/completion-20261030/execution-limits.json",
+    "status": "historical",
+    "resolution": "The owner subsequently explicitly requested the GitHub approval again and continued saving. The native connection then saved and read back all three development-branch trees."
+  },
+  "qualification": "Verified source publication only; the 73-profile local execution remains attributed to runtime 8aed90d. This is not in-product live provider qualification, deployment, merge into main, browser acceptance or original parent certification.",
+  "fullAcceptancePromotions": 0,
+  "ownerProgress": {
+    "completed": [
+      {
+        "title": "All three project source saves are confirmed on GitHub",
+        "observed": "The native GitHub connection saved each authorized development branch and read back its commit and tree. Each remote tree exactly matches its corresponding reviewed local tree. The earlier rejected attempt remains preserved as history.",
+        "taskIds": [
+          "REL-02",
+          "REL-01"
+        ],
+        "evidence": [
+          {
+            "kind": "native-provider-source-readback",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/github-source-readback.json",
+            "sha256": "6c912b9104dbc1b3359dd33ba2c293340810eee2e2630a192592a9dad36c31d0"
+          }
+        ],
+        "remaining": [
+          "No merge into main or deployment is claimed. Independently reviewed full acceptance and actual in-product provider/worker/browser qualification remain separate."
+        ]
+      }
+    ],
+    "taskUpdates": [
+      {
+        "id": "REL-02",
+        "currentState": "Source publication is saved and read back across all three Trilogy development branches. OmniDev 3733dde3962e76513952eaafb21d6aa994ef909d has exact tree 90543f1e70fde1af42b5f3f5ca9beedd9234b453, matching local ec78b626332beee6d9a91abc8c101cbe284232f3. The earlier rejected write was followed by explicit renewed owner instruction and successful native saves.",
+        "evidence": [
+          {
+            "kind": "native-provider-source-readback",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/github-source-readback.json",
+            "sha256": "6c912b9104dbc1b3359dd33ba2c293340810eee2e2630a192592a9dad36c31d0"
+          }
+        ],
+        "remainingActions": [
+          "Retain the exact remote/local tree mapping and all original failed/successful evidence during later updates.",
+          "Complete the independent secret/scope acceptance review; the retained six-format scan and exact-tree checks are bounded evidence, not exhaustive certification.",
+          "Keep merges, deployment and live in-product GitHub/provider/worker/browser qualification separately authorized and evidenced."
+        ]
+      }
+    ]
+  }
+}
