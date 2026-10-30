@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-30T08:39:40.729866+00:00",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "checkpoint": {
+    "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+    "branch": "backpack/trilogy-readiness-20261030",
+    "head": "de006f6611ff802811c052d0d71ed8184c17f0dd",
+    "tree": "ad101ddd25ca0db62edbf185de51b8cda12cdc2e",
+    "remoteHeadAndTreeVerified": true
+  },
+  "privateCompanionManifestsIncluded": false,
+  "draftPullRequests": [
+    "https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/pull/2",
+    "https://github.com/tdmboyd-dev/MGR-CODE-MONSTER/pull/2",
+    "https://github.com/tdmboyd-dev/MGR-OMNISIGHT/pull/2"
+  ],
+  "defaultBranchMerge": false,
+  "deployment": false
+}

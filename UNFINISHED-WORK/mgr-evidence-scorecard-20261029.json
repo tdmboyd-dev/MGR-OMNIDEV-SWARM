@@ -1050,7 +1050,7 @@
       "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
     },
     "canonicalScopeUnchanged": true,
-    "sourcePublication": "pending exact remote readback",
+    "sourcePublication": "Published isolated review branches and draft PRs; exact checkpoint remote commit/tree readback verified",
     "productCompletion": "Unassessed; no independently accepted parent promotion",
     "operatorGuide": "TRILOGY-OPERATIONS-BIBLE.md",
     "combinedQualification": {
@@ -1065,7 +1065,7 @@
         "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
       },
       "integrationChecks": 14,
-      "sourcePublication": "pending exact remote readback",
+      "sourcePublication": "Runtime and evidence included in verified published checkpoint de006f6611ff802811c052d0d71ed8184c17f0dd; final metadata leaf separately bound by delivery receipt",
       "noCanonicalPromotions": true
     }
   }

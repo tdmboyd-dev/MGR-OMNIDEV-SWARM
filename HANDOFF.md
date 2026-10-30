@@ -1,3 +1,11 @@
+# Published review source and current board — October 30, 2026
+
+The combined runtime and evidence are published in isolated draft PR #2 on the current development branch. Source checkpoint `de006f6611ff802811c052d0d71ed8184c17f0dd`, tree `ad101ddd25ca0db62edbf185de51b8cda12cdc2e`, was read back from GitHub and matches locally. Current board generation uses that exact available source/public pin, all relevant prior overlays, and the new combined overlay. Its saved data reports **79/79** current local profiles with unchanged 174/441/28 scope and zero fully independently accepted parents. The generator check and complete-board response contract passed.
+
+All three Trilogy draft review branches and the Backpack documentation draft are published; final metadata leaf commits are independently bound in the owner delivery receipt. The actual source-lane merge retained `9436130` inside this isolated branch; no default branch or separate repository was consolidated or deployed. The previous signed companion envelope stays unchanged; the exact unsigned current-source candidate is locally qualified and rejected by the signature validator until properly signed. Current handoff and operator Bible retain remaining engineering/provider/device/browser/Tevin-consumer gates. Do not reinterpret local readiness or publication as whole-product completion.
+
+---
+
 # Combined source verified after concurrent reconciliation — October 30, 2026
 
 The reproduced companion-save failure is also repaired. Both engineering lanes are retained on `backpack/trilogy-readiness-20261030`: the other agent's published continuation `9436130b09e0e089fab4f17045c62c12680a38bf` and the Backpack readiness/security lane. **79/79 complete local profiles pass** at combined runtime `064b64463cec5684ee6835bebf0da0911ef9a540`. A fresh clean **14/14** three-product integration passed on that combined source. The separate 75/75 and 76/76 receipts below remain their original historical executions; they were not relabeled as combined proof.
