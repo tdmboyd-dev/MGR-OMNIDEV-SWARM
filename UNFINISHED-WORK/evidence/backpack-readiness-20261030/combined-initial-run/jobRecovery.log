@@ -1,0 +1,14 @@
+✔ RUN-03 exhausted recovery preserves candidate, reviews and test output with an audit event (17.7986ms)
+✔ RUN-03 retry recovery is auditable, preserves attempts and executes the queued work (11.879ms)
+✔ RUN-03 concurrent recovery and repeated requests record exactly one recovery (5.2211ms)
+✔ RUN-03 recovery cannot overwrite a newer completed worker result (6.0939ms)
+✔ RUN-03 audit persistence failure rolls recovery back atomically (4.9721ms)
+✔ RUN-03 healthy leases and terminal jobs are not recovered (3.7142ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 60.5185

@@ -1,0 +1,11 @@
+✔ all historical IDs are conserved with sourced references (15.3613ms)
+✔ path traversal is denied and never read (1.7275ms)
+✔ duplicate task IDs fail closed (1.2082ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30.0241

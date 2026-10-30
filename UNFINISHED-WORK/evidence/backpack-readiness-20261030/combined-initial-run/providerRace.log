@@ -1,0 +1,15 @@
+✔ AUTH-04 unchanged provider configuration gains a bounded verification timestamp (41.7639ms)
+✔ AUTH-04 an old request cannot verify newly replaced credentials or model configuration (7.4876ms)
+✔ AUTH-04 disconnect during verification cannot recreate or mark a deleted connection (4.0458ms)
+✔ AUTH-04 a replacement followed by identical credentials still requires fresh verification (4.2601ms)
+✔ AUTH-04 two concurrent verification completions cannot overwrite the accepted connection state (4.1675ms)
+✔ AUTH-04 named provider verification reports its own connection rather than the legacy provider (3.9106ms)
+✔ DATA-03 missing or rotated vault keys fail without issuing provider requests and can be reauthorized (4.6131ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 81.3758

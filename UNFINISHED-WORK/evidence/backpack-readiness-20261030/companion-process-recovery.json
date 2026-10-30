@@ -1,0 +1,17 @@
+{
+  "schema": "mgr.companion.process-recovery-proof.v1",
+  "at": "2026-10-30T08:20:49.768Z",
+  "sourceCommit": "064b64463cec5684ee6835bebf0da0911ef9a540",
+  "moduleSha256": "1f7070985b6bf686b5ce567354fc801a86ee0f51a9708d334a53df4e6ec85819",
+  "first": {
+    "code": "JOB_MEMORY_RECOVERY_REQUIRED",
+    "status": 503,
+    "attempts": 8
+  },
+  "second": {
+    "freshProcess": true,
+    "blockedReadAndReplay": 2
+  },
+  "committedAndPendingPreserved": true,
+  "qualification": "Two real independent Node processes and real files with explicit injected native replacement failure. No real provider inference, physical disk-failure certification or automatic pending-result promotion."
+}

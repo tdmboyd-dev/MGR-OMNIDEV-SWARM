@@ -1,0 +1,25 @@
+{
+  "schema": "mgr.trilogy.public-local-integration-summary.v1",
+  "at": "2026-10-30T08:30:46.389769+00:00",
+  "passed": true,
+  "count": 14,
+  "checks": [
+    "actual imported project and native candidate reach review",
+    "owner authorization binds exact source, plan and command",
+    "live viewer reads the actual authorized job before candidate staging",
+    "actual staged Git candidate flows through OmniDev into the read-only viewer",
+    "the existing worker assignment retains its exact generic job correlation link",
+    "altered worker correlation rejects; exact signed local output returns through the existing worker route",
+    "real candidate snapshot test output is admitted by Code Monster",
+    "OmniDev refuses altered runner output without upgrading its saved job",
+    "live full-scope view shows exact pending-owner proof; scoped view withholds it",
+    "producer restart replays the same candidate and five durable events",
+    "owner publication creates a fixture draft for the exact Code Monster candidate that was tested",
+    "publication retry and reconciliation preserve one draft, worker evidence and pending-owner viewer truth",
+    "changed project source and actual owner revocation remove access without cached evidence",
+    "candidate work never changes source HEAD or source worktree"
+  ],
+  "sourceUnchanged": true,
+  "privateCompanionManifestsIncluded": false,
+  "qualification": "Actual local OmniDev SQLite/API, Code Monster candidate Git/ledger/receipt and OmniSight HTTP reader. Disposable local signer and service credentials. Optional GitHub publication and Docker admission metadata are explicit fixtures. Snapshot-integrity tests only; not live GitHub provider acceptance, Docker isolation, application behavior, independent production signing, browser accessibility, merge or release."
+}

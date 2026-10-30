@@ -1,0 +1,12 @@
+✔ select 30 P0 plus 50 extra without acceptance (4.692ms)
+✔ duplicate evidence fails (0.7552ms)
+✔ priority drift fails (0.5495ms)
+✔ changed acceptance wording fails closed (0.9079ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 22.8969

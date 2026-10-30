@@ -1,0 +1,13 @@
+✔ transient Windows replacement failure preserves the old record until one atomic successful replacement (60.854ms)
+✔ exhausted Windows replacement remains failed, keeps exact pending bytes and blocks replay after restart (772.0227ms)
+✔ unexpected I/O failure and non-Windows permission failure are not blindly retried (7.3326ms)
+Local job persistence failed; recover retained pending state before retrying.
+✔ actual HTTP companion survives failed completion persistence and refuses a second generation across restart (872.9624ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1829.2294

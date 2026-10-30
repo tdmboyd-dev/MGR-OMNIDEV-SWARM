@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-30T08:28:17.731Z",
+  "sourceCommit": "064b64463cec5684ee6835bebf0da0911ef9a540",
+  "runs": [
+    {
+      "harness": "companion-dashboard.mjs",
+      "exitCode": 0,
+      "outputSha256": "3002d58e630b318c79438d08803f693498dda2419c1c373a1248e4d3035208c4"
+    },
+    {
+      "harness": "companion-memory.test.mjs",
+      "exitCode": 0,
+      "outputSha256": "81d82d7712f61ad185de43089e619c94c9e21c8c983553ae12d79921da1567b0"
+    }
+  ],
+  "productFileBytesUnchanged": true,
+  "harnessAdaptation": "Dashboard harness TypeScript import points explicitly to the existing pinned compiler; product source is copied byte-for-byte from the unsigned candidate.",
+  "qualification": "Actual candidate-file localhost/fixture checks: 42 dashboard checks plus 4 persistence tests. No real provider inference, signed installation, physical disk-failure certification or production approval."
+}

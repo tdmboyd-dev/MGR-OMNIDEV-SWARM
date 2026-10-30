@@ -1,0 +1,42 @@
+PASS Local control center serves model, effort and generation controls
+PASS Dashboard cannot be embedded by an unrelated page
+PASS Local account data refuses requests without session token
+PASS Cross-origin local account requests are refused
+PASS Unexpected host / DNS rebinding requests are rejected
+PASS Exact OmniDev origin pairs without OpenAI token disclosure
+PASS Foreign website cannot pair
+PASS Pairing requires explicit client header
+PASS Integrated UI preflight permits only exact Site origin
+PASS Integrated OmniDev UI can load local model settings
+PASS Integrated OmniDev UI can generate and receive matching candidate
+PASS Current account models reach UI without credential disclosure
+PASS Selected model, reasoning and profile persist for owner
+PASS Saved preferences remain tied to authenticated account
+PASS Unavailable models cannot be configured
+PASS Unsupported reasoning cannot be configured
+PASS Malformed job request cannot execute
+PASS Generation returns matching envelope without file handoff
+PASS Returned output excludes account credentials
+PASS Concurrent generation is blocked to avoid duplicate calls and refresh races
+PASS Provider failure returns diagnostic and releases execution lock
+PASS Generation recovers after provider failure
+PASS Cross-site generation is denied before spending
+PASS Background start returns before inference completion
+PASS Job continues after initiating HTTP request ended
+PASS Repeated active-job start returns existing job without duplicate inference
+node:internal/fs/promises:1490
+  return await PromisePrototypeThen(
+         ^
+
+Error: EPERM: operation not permitted, rename 'C:\Users\cool\AppData\Local\Temp\omni-dashboard-test-PwSEX8\jobs\274c2e277ada1e20cf1b76e0756f5638e1b32a8fbdb3fd2c794fdefca5831252.json.e7ccc76f-792a-4d7a-bd0a-a0186880ba88' -> 'C:\Users\cool\AppData\Local\Temp\omni-dashboard-test-PwSEX8\jobs\274c2e277ada1e20cf1b76e0756f5638e1b32a8fbdb3fd2c794fdefca5831252.json'
+    at async rename (node:internal/fs/promises:1490:10)
+    at async Object.save (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/companion/job-memory.mjs:4:669)
+    at async file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/companion/dashboard.mjs:49:1606 {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'rename',
+  path: 'C:\\Users\\cool\\AppData\\Local\\Temp\\omni-dashboard-test-PwSEX8\\jobs\\274c2e277ada1e20cf1b76e0756f5638e1b32a8fbdb3fd2c794fdefca5831252.json.e7ccc76f-792a-4d7a-bd0a-a0186880ba88',
+  dest: 'C:\\Users\\cool\\AppData\\Local\\Temp\\omni-dashboard-test-PwSEX8\\jobs\\274c2e277ada1e20cf1b76e0756f5638e1b32a8fbdb3fd2c794fdefca5831252.json'
+}
+
+Node.js v24.21.0

@@ -1,0 +1,21 @@
+✔ DATA-03 restores 1,600 records/jobs atomically and preserves text without restarting jobs (145.8856ms)
+✔ DATA-03 a failure in a later job chunk rolls back records, jobs and admission together (113.1139ms)
+✔ DATA-03 silently skipped rows cannot produce a successful partial restore (60.152ms)
+✔ DATA-03 concurrent large restores have one winner and preserve existing settings (80.143ms)
+✔ DATA-03 export and restore cover the declared 10,000 records plus 10,000 jobs (1289.5987ms)
+✔ DATA-03 export refuses record overflow instead of producing a truncated restorable archive (450.7751ms)
+✔ DATA-03 oversized UTF-8 archives and individual rows fail before any write (321.3649ms)
+✔ DATA-03 the real API restores a large archive and refuses cross-origin restore (108.0069ms)
+✔ DATA-03 malformed late records and nonempty targets never write a partial prefix (155.5441ms)
+✔ DATA-03 a large individual record stays intact across bounded chunks (114.7652ms)
+✔ DATA-03 caller mutation during async validation cannot change restored bytes (18.0981ms)
+✔ DATA-03 a valid near-10-MB archive roundtrips through the actual API envelope (1735.9995ms)
+✔ DATA-03 malformed Unicode in persisted fields is rejected instead of changed (12.0506ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4616.3476

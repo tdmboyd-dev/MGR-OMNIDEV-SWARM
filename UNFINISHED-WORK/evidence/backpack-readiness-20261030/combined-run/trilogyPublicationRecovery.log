@@ -1,0 +1,26 @@
+✔ restart after admission but before attempt persistence recovers the exact reserved job (2640.7571ms)
+✔ concurrent restart of one orphan admission starts at most one provider publication (3238.5376ms)
+✔ orphan admission recovery cannot borrow a reservation with a different effect identity (10794.3474ms)
+✔ failed exposure release after provider confirmation is recoverable without another draft (2230.1021ms)
+✔ legacy published record with an unreleased exposure is repaired by readback (2816.1007ms)
+✔ expired or revoked authority still permits read-only reconciliation of an already-created draft (6855.8378ms)
+✔ read-only reconciliation works while new effects are stopped without resuming them (1994.0539ms)
+✔ read-only reconciliation cannot certify changed remote candidates or changed local proof (11841.7055ms)
+✔ missing remote draft remains unconfirmed and does not silently create one (1675.6375ms)
+✔ only the scoped owner may reconcile saved publication effects (2515.5023ms)
+✔ canceled, expired or revoked undispatched approvals release their exact orphan reservation without GitHub calls (8239.0555ms)
+✔ an active undispatched approval is preserved until resumed or explicitly revoked (1360.6021ms)
+✔ undispatched cleanup refuses a changed effect identity or ambiguous dispatch history (10023.1668ms)
+✔ a delayed starter cannot dispatch after canceled orphan cleanup wins (1116.042ms)
+✔ undispatched cleanup and exposure release roll back together if the release fails (1232.6768ms)
+✔ a reservation changed at the cleanup transaction boundary is not adopted or released (1349.0907ms)
+✔ confirmed publication releases both the capacity row and its saved state metadata (1806.3475ms)
+✔ clearing an undispatched revoked approval requires a new approval before any later draft (3636.3876ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 75877.7935

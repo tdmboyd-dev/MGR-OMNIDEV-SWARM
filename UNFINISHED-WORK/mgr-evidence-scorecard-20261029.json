@@ -1052,6 +1052,21 @@
     "canonicalScopeUnchanged": true,
     "sourcePublication": "pending exact remote readback",
     "productCompletion": "Unassessed; no independently accepted parent promotion",
-    "operatorGuide": "TRILOGY-OPERATIONS-BIBLE.md"
+    "operatorGuide": "TRILOGY-OPERATIONS-BIBLE.md",
+    "combinedQualification": {
+      "report": "UNFINISHED-WORK/mgr-backpack-combined-20261030.json",
+      "sourceCommit": "064b64463cec5684ee6835bebf0da0911ef9a540",
+      "profiles": {
+        "passedProfiles": 79,
+        "failedProfiles": 0,
+        "blockedProfiles": 0,
+        "totalProfiles": 79,
+        "independentlyCertifiedParents": 0,
+        "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+      },
+      "integrationChecks": 14,
+      "sourcePublication": "pending exact remote readback",
+      "noCanonicalPromotions": true
+    }
   }
 }
