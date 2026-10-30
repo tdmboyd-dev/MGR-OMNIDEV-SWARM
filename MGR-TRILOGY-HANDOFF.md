@@ -1,3 +1,11 @@
+# Current source save confirmed — October 30, 2026
+
+The complete reviewed tree is now saved and read back on GitHub at `9436130b09e0e089fab4f17045c62c12680a38bf`, branch `mgr/code-monster-omnisight-20261028`. Its tree `bdece2dadc332ddbf20761d73d94566eb917107c` exactly matches local checkpoint `bc490abe2c07b74a80ddeba67158721ad84ab1ef`. The source-publication-pending statements below are retained as the earlier chronology and are superseded by this readback. Later documentation-only saves may follow this source checkpoint.
+
+Evidence: `UNFINISHED-WORK/evidence/resumption-20261030/github-readback.json`. Runtime proof stays bound to `3ad7671` (76/76 full profiles); the refreshed derived board additionally passed 16 focused checks and deterministic generation verification. Main and separate implementation branches remain unmerged, and no deployment is claimed. The owner-requested exhaustive inventory preserves all original records and distinguishes existing separate-branch work from missing implementation.
+
+---
+
 # Current source and full-inventory audit — October 30, 2026
 
 Current tested runtime: `3ad76710266e7e0181578924075db6b5ea07172d` (tree `4e02554103a5a4f1ba011cbdbb8480baeb56eca7`). **76/76 full local profiles pass**, including build/typecheck and all **13** bounded-backup cases. Original raw output hashes were rechecked with zero mismatches. `UNFINISHED-WORK/evidence/resumption-20261030/final/report.json` preserves exact source attribution; the earlier 76-profile run and recovered 75-profile run remain separate.
