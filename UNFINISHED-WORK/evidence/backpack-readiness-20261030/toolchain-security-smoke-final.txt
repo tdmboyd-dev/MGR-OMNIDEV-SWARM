@@ -1,0 +1,36 @@
+✔ patched image dependencies still produce an actual PNG through the framework OG dependency (402.1931ms)
+✖ patched compiler still generates and checks a real SQLite migration without contacting a database (9571.7414ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10144.3584
+
+✖ failing tests:
+
+test at tests\toolchain-security.test.mjs:24:1
+✖ patched compiler still generates and checks a real SQLite migration without contacting a database (9571.7414ms)
+  AssertionError [ERR_ASSERTION]: Reading config file 'C:\Users\cool\AppData\Local\Temp\mgr-security-drizzle-HitlPB\config.cjs'
+  
+  ENOENT: no such file or directory, open 'C:\Users\cool\Documents\Codex\2026-10-29\i-x20\work\trilogy\MGR-OMNIDEV-SWARM\C:\Users\cool\AppData\Local\Temp\mgr-security-drizzle-HitlPB\generated\meta\0000_snapshot.json'
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/toolchain-security.test.mjs:32:48)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

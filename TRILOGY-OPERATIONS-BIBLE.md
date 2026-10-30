@@ -65,6 +65,18 @@ On Windows, keep explicit platform skips visible. File-symlink privilege, POSIX 
 
 The updater's packaged public key is pinned to LF using `.gitattributes`. Do not normalize signed release payloads or weaken byte comparison to get a pass. The worker uses Git's `/dev/null` config path, which Git for Windows supports; Windows `NUL` was rejected by the installed Git in the reproduced failure. Application signing checks remain enforced.
 
+## Open the local OmniDev development app
+
+In the installed OmniDev checkout, run `npm.cmd run dev -- --hostname 127.0.0.1`. The portable launcher selects port 5173; use the local address it actually prints. Stop it with Ctrl+C after your session. The development server is a local engineering surface; it does not supply an account connection, owner grant, worker host or provider credentials. Start the real account/connection journey in the authorized deployed host when that host and consent are available. Do not interpret a rendered screen as live account/provider qualification.
+
+For a first local proof without external accounts or providers, use the full verification and three-product integration commands in this guide. They execute the real local implementations with explicitly disposable service/signing/provider fixtures.
+
+## Security dependency checkpoint
+
+The October 30 production audit initially reported 23 advisories, including three critical findings. After framework/schema and selected dependency repairs, the complete production/development graph reports zero known advisories at the saved audit time. The intermediate complete audit, after production repairs but before build-tool repairs, reported 62 advisories; these are different graph checkpoints, not additive unique vulnerabilities. The final 75-profile run includes real connector dispatch/denial, PNG generation and disposable SQLite migration generation/checking, plus application TypeScript/build.
+
+pnpm 11 reads dependency overrides from `pnpm-workspace.yaml`; the old duplicate package-manifest override was removed. Seven-day release-age policy remains enabled, and installation scripts remain ignored during the recorded setup. Sources: [pnpm package settings](https://github.com/pnpm/pnpm/blob/main/pnpm/docs/package_json.md), [Next.js upstream security advisory](https://github.com/advisories/GHSA-2464-fhr4-w9xw), [Zod advisory](https://github.com/advisories/GHSA-mrhx-c7xc-m3w5). See the saved audit JSON for exact package paths and advisory identities. Zero known advisories does not mean an exhaustive security audit or production certification.
+
 ## First useful source inspection
 
 Choose an owner-authorized local Git repository. Commit or deliberately identify the source revision you want to inspect. In Code Monster, produce a **new**, explicit JSON output path:

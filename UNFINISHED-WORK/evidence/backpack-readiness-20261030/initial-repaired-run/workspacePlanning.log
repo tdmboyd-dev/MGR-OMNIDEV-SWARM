@@ -1,0 +1,41 @@
+✔ simulation rejects dangling, wrong-kind and aggregate project references without corrupting backups (77.5838ms)
+✔ simulation records owner assumptions and the actual selected snapshot; a workspace scenario stays unassigned (16.3008ms)
+✔ stale simulation context and project deletion during admission cannot create an orphan record (13.0962ms)
+✔ rescan reconciles stale and new findings, preserves manual dispositions and does not duplicate current signals (18.9448ms)
+✔ rescan reopens a signal that returns after snapshot resolution without reopening a manual acceptance (15.6118ms)
+✔ rescan refuses a stale source or finding disposition and keeps the newer source unchanged (12.7975ms)
+✔ rescan compare-and-swap detects a disposition changed after reading but before its transaction (7.3396ms)
+workspace write failed Error: audit failure
+    at file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/workspace-fixture.mjs:18:85
+    at Array.map (<anonymous>)
+    at Object.batch (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/workspace-fixture.mjs:18:33)
+    at admittedWrite (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/.test-runtime/workspace-storage.mjs:34:31)
+    at Module.POST (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/.test-runtime/route.mjs:120:19)
+    at async post (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/workspace-fixture.mjs:31:18)
+    at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/workspace-planning.mjs:88:17)
+    at async Test.run (node:internal/test_runner/test:1409:7)
+    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+  code: 'ERR_SQLITE_ERROR',
+  errcode: 1811,
+  errstr: 'constraint failed'
+}
+✔ rescan audit failure rolls back project and finding changes together (12.1859ms)
+✔ each future horizon cites the selected snapshot, explicit unknowns, a measurable milestone and a reversible experiment (27.1053ms)
+✔ different projects produce different cited horizons while accepted and resolved findings retain their dispositions (16.3302ms)
+✔ partial snapshots preserve coverage unknowns and cannot imply measured health or market opportunity (9.3297ms)
+✔ repeated and concurrent generation for the same evidence returns one immutable plan and one audit record (17.9693ms)
+✔ future generation requires a current source commitment and refuses stale sources or missing project scope (11.9175ms)
+✔ changed evidence creates a linked plan version while preserving the previous contract and outcomes (15.1339ms)
+✔ future evaluations append to an immutable plan and preserve the source actually observed (15.9102ms)
+✔ future evaluation rejects missing or stale revision, wrong contract, wrong horizon and unsupported success claims without writes (20.198ms)
+✔ concurrent outcomes have one winner and cannot overwrite or duplicate its history (16.5727ms)
+✔ recommendations prioritize confirmed current dispositions by severity, retain reasons and exclude accepted or resolved signals (4.6039ms)
+✔ All projects never supplies an implicit action target; security statistics and rows share exactly the same scope (8.7318ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 351.5477

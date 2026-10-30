@@ -1,0 +1,40 @@
+✔ engine verification key is only a public Ed25519 key (6.1169ms)
+✖ stored release signature and packaged public key agree (8.4172ms)
+✔ private PEM files remain ignored by repository rules (0.4744ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.2034
+
+✖ failing tests:
+
+test at tests\engine-public-key-provenance.test.mjs:10:1
+✖ stored release signature and packaged public key agree (8.4172ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '-----BEGIN PUBLIC KEY-----\n' +
+  +   'MCowBQYDK2VwAyEAyICsSjvDZhl6tPI0dma6EQVCBtYxnlwFQRt3kDyNCy4=\n' +
+  +   '-----END PUBLIC KEY-----\n'
+  - '-----BEGIN PUBLIC KEY-----\r\n' +
+  -   'MCowBQYDK2VwAyEAyICsSjvDZhl6tPI0dma6EQVCBtYxnlwFQRt3kDyNCy4=\r\n' +
+  -   '-----END PUBLIC KEY-----\r\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/engine-public-key-provenance.test.mjs:14:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAyICsSjvDZhl6tPI0dma6EQVCBtYxnlwFQRt3kDyNCy4=\n-----END PUBLIC KEY-----\n',
+    expected: '-----BEGIN PUBLIC KEY-----\r\nMCowBQYDK2VwAyEAyICsSjvDZhl6tPI0dma6EQVCBtYxnlwFQRt3kDyNCy4=\r\n-----END PUBLIC KEY-----\r\n',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,45 @@
+✔ publication preview names the exact signed Git commit and does not authorize writes (1068.119ms)
+✔ candidate-only scope and unsigned candidate cannot authorize publication (1231.1115ms)
+✔ owner approval is bound to the complete current preview (1635.3742ms)
+✔ approved draft publication preserves the exact real Git commit and untouched base tree (1718.1638ms)
+✔ the generic publisher remains blocked after separate draft authorization (970.5312ms)
+✔ remote base drift before preview or after authorization refuses all visible writes (1866.29ms)
+✔ changed source, objective, candidate or canceled job invalidates publication approval (5512.3366ms)
+✔ revoked, expired or replaced proof cannot be published (5844.0778ms)
+✔ owner stop, publication revoke and expired publication approval each block dispatch (4138.1713ms)
+✔ a different connected repository or credential invalidates an earlier approval (2583.6399ms)
+✔ a rejected or changed specialist review invalidates publication (1415.5832ms)
+✔ wrong provider tree cannot be converted into a published tested commit (1857.7688ms)
+✔ provider commit substitution is rejected before any branch or PR (1952.2408ms)
+✔ a malformed successful final branch read cannot confirm a published draft (2154.7642ms)
+✔ existing candidate branch with different content is never overwritten (2216.1105ms)
+✔ successful retry reads back the same draft instead of creating duplicates (2659.3898ms)
+✔ remote base drift during object transfer prevents branch publication (5074.7191ms)
+✔ revocation during provider reads is not overwritten by an earlier authorization snapshot (1706.3956ms)
+✔ object upload failure permits a controlled retry without duplicate visible writes (2905.2232ms)
+✔ ambiguous PR response is reconciled read-only when the exact draft already exists (2216.3812ms)
+✔ lost branch response resumes only the still-unstarted PR after exact branch readback (2584.9367ms)
+✔ concurrent publication attempts produce at most one branch and one draft (2808.6527ms)
+✔ publication status and ordinary job responses expose no credentials or signed output (2553.5175ms)
+✔ partial, corrupt or truncated Git trees cannot enter a publication preview (3621.1761ms)
+✔ a signed candidate with an unapproved extra file change is refused before uploads (1217.4779ms)
+✔ real Git directory ordering, executable files and unchanged symlinks retain exact identity (2394.3789ms)
+✔ publication API isolates owner credentials from bridge, reader and worker roles (1616.6439ms)
+✔ publication API refuses cross-origin, unknown authority fields and ambiguous queries (882.3161ms)
+✔ lost branch response cannot resume after branch tampering or remote base drift (3924.566ms)
+✔ concurrent branch recovery starts the pending draft at most once (2583.5385ms)
+✔ base drift during a PR write cannot be recorded as a confirmed publication (1833.7578ms)
+✔ revocation during an external write wins without erasing the uncertain effect (1591.2186ms)
+✔ competing object retries cannot release the capacity reserved by the winning attempt (2532.3065ms)
+✔ a failed local start transaction does not strand an approved publication with no provider effects (2885.6053ms)
+✔ reclaiming a released start reservation still enforces target, recipe and global capacity (6525.3495ms)
+✔ competing recovery of a released start reservation performs one external operation (2259.488ms)
+✔ fresh owner approval after an object-only failure keeps recoverable capacity and invalidates the old approval (5522.6812ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 98726.0517

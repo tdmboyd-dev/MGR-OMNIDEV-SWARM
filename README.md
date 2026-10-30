@@ -70,3 +70,7 @@ Run `node tests/platform.mjs` after preparation for the additional 52 platform/p
 ## Full verification of the current review candidate
 
 Run `pnpm verify:full` from a clean committed checkout after installing the pinned lockfile. It rebuilds test modules, type-checks and builds the app, executes all reviewed regression profiles, records exact source/output hashes, and retains failures in `outputs/full-verification/`. Follow [the full workflow](UNFINISHED-WORK/FULL-VERIFICATION-WORKFLOW.md) for criterion-level evidence and final approval. Local fixtures do not certify external providers, Docker or production release.
+
+## Current Trilogy operator guide
+
+[TRILOGY-OPERATIONS-BIBLE.md](TRILOGY-OPERATIONS-BIBLE.md) covers current product roles, Windows installation, source inspection, the three-product job flow, recovery and optional Backpack placement. [Current readiness proof](UNFINISHED-WORK/mgr-backpack-readiness-20261030.json) and [scorecard](docs/full-build/SCORECARD.md) distinguish local verification from full product and production acceptance. The source repository is public at this checkpoint; private service/companion data must remain private.

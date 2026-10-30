@@ -1,0 +1,245 @@
+? Verifying lockfile against supply-chain policies (842 entries)...
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +639
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 639, reused 0, downloaded 0, added 0
+Progress: resolved 639, reused 0, downloaded 8, added 0
+Packages are hard linked from the content-addressable store to the virtual store.
+  Content-addressable store is at: C:\Users\cool\Documents\Codex\2026-10-29\i-x20\work\trilogy\MGR-OMNIDEV-SWARM\.sites-runtime\pnpm-store\v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 639, reused 0, downloaded 28, added 23
+[WARN] Tarball download average speed 4 KiB/s (size 5 KiB) is below 50 KiB/s: https://registry.npmjs.org/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.6.0.tgz (GET)
+Progress: resolved 639, reused 0, downloaded 32, added 26
+Progress: resolved 639, reused 0, downloaded 65, added 29
+Progress: resolved 639, reused 0, downloaded 72, added 31
+Progress: resolved 639, reused 0, downloaded 79, added 31
+Progress: resolved 639, reused 0, downloaded 80, added 31
+Progress: resolved 639, reused 0, downloaded 98, added 34
+Progress: resolved 639, reused 0, downloaded 101, added 35
+Progress: resolved 639, reused 0, downloaded 108, added 35
+Progress: resolved 639, reused 0, downloaded 111, added 35
+Progress: resolved 639, reused 0, downloaded 118, added 35
+Progress: resolved 639, reused 0, downloaded 123, added 35
+[WARN] Request took 10174ms: https://registry.npmjs.org/@radix-ui%2Freact-label
+Progress: resolved 639, reused 0, downloaded 127, added 35
+[WARN] Request took 12167ms: https://registry.npmjs.org/@radix-ui%2Freact-accordion
+[WARN] Request took 12169ms: https://registry.npmjs.org/@radix-ui%2Freact-focus-scope
+[WARN] Request took 12182ms: https://registry.npmjs.org/@radix-ui%2Freact-slot
+[WARN] Request took 10538ms: https://registry.npmjs.org/@radix-ui%2Freact-use-callback-ref
+Progress: resolved 639, reused 0, downloaded 129, added 35
+[WARN] Request took 13161ms: https://registry.npmjs.org/@radix-ui%2Freact-checkbox
+[WARN] Request took 12607ms: https://registry.npmjs.org/@radix-ui%2Freact-primitive
+[WARN] Request took 13238ms: https://registry.npmjs.org/@radix-ui%2Freact-progress
+[WARN] Request took 11363ms: https://registry.npmjs.org/@radix-ui%2Freact-use-controllable-state
+Progress: resolved 639, reused 0, downloaded 131, added 35
+[WARN] Request took 14048ms: https://registry.npmjs.org/@radix-ui%2Freact-portal
+[WARN] Request took 11936ms: https://registry.npmjs.org/@radix-ui%2Freact-use-layout-effect
+Progress: resolved 639, reused 0, downloaded 134, added 36
+[WARN] Request took 15457ms: https://registry.npmjs.org/@radix-ui%2Freact-collapsible
+[WARN] Request took 14839ms: https://registry.npmjs.org/@radix-ui%2Freact-separator
+[WARN] Request took 11586ms: https://registry.npmjs.org/@radix-ui%2Freact-use-rect
+[WARN] Request took 15609ms: https://registry.npmjs.org/@radix-ui%2Freact-dismissable-layer
+[WARN] Request took 12989ms: https://registry.npmjs.org/@radix-ui%2Freact-use-escape-keydown
+[WARN] Request took 15860ms: https://registry.npmjs.org/@radix-ui%2Freact-context-menu
+[WARN] Request took 12114ms: https://registry.npmjs.org/@radix-ui%2Freact-use-previous
+[WARN] Request took 16350ms: https://registry.npmjs.org/@radix-ui%2Freact-alert-dialog
+Progress: resolved 639, reused 0, downloaded 138, added 38
+[WARN] Request took 16540ms: https://registry.npmjs.org/@radix-ui%2Freact-navigation-menu
+[WARN] Request took 13120ms: https://registry.npmjs.org/@radix-ui%2Freact-use-size
+[WARN] Request took 17479ms: https://registry.npmjs.org/@radix-ui%2Freact-popper
+Progress: resolved 639, reused 0, downloaded 145, added 39
+[WARN] Request took 17785ms: https://registry.npmjs.org/@radix-ui%2Freact-scroll-area
+[WARN] Request took 17842ms: https://registry.npmjs.org/@radix-ui%2Freact-roving-focus
+[WARN] Request took 17648ms: https://registry.npmjs.org/@radix-ui%2Freact-toggle
+[WARN] Request took 17854ms: https://registry.npmjs.org/@radix-ui%2Freact-switch
+[WARN] Request took 18274ms: https://registry.npmjs.org/@radix-ui%2Freact-dropdown-menu
+[WARN] Request took 18119ms: https://registry.npmjs.org/@radix-ui%2Freact-hover-card
+[WARN] Request took 18023ms: https://registry.npmjs.org/@radix-ui%2Freact-radio-group
+[WARN] Request took 12465ms: https://registry.npmjs.org/@reduxjs%2Ftoolkit
+[WARN] Request took 18133ms: https://registry.npmjs.org/@radix-ui%2Freact-slider
+[WARN] Request took 18082ms: https://registry.npmjs.org/@radix-ui%2Freact-toggle-group
+[WARN] Request took 18581ms: https://registry.npmjs.org/@radix-ui%2Freact-dialog
+[WARN] Request took 18151ms: https://registry.npmjs.org/@radix-ui%2Freact-toast
+[WARN] Request took 18193ms: https://registry.npmjs.org/@radix-ui%2Freact-tabs
+[WARN] Request took 18280ms: https://registry.npmjs.org/@radix-ui%2Freact-select
+[WARN] Request took 14607ms: https://registry.npmjs.org/@radix-ui%2Freact-visually-hidden
+[WARN] Request took 18528ms: https://registry.npmjs.org/@radix-ui%2Freact-popover
+[WARN] Request took 18270ms: https://registry.npmjs.org/@radix-ui%2Freact-toolbar
+Progress: resolved 639, reused 0, downloaded 194, added 41
+[WARN] Request took 18825ms: https://registry.npmjs.org/@radix-ui%2Freact-menu
+[WARN] Request took 11810ms: https://registry.npmjs.org/@rolldown%2Fbinding-freebsd-x64
+Progress: resolved 639, reused 0, downloaded 201, added 43
+[WARN] Request took 13286ms: https://registry.npmjs.org/@rolldown%2Fbinding-darwin-arm64
+Progress: resolved 639, reused 0, downloaded 211, added 43
+[WARN] Request took 13043ms: https://registry.npmjs.org/@rolldown%2Fbinding-linux-arm64-gnu
+[WARN] Request took 14154ms: https://registry.npmjs.org/@rolldown%2Fbinding-darwin-x64
+[WARN] Request took 13801ms: https://registry.npmjs.org/@rolldown%2Fbinding-linux-arm-gnueabihf
+[WARN] Request took 19996ms: https://registry.npmjs.org/@radix-ui%2Freact-tooltip
+[WARN] Request took 12995ms: https://registry.npmjs.org/@rolldown%2Fbinding-linux-arm64-musl
+[WARN] Request took 10608ms: https://registry.npmjs.org/@rolldown%2Fbinding-linux-x64-musl
+Progress: resolved 639, reused 0, downloaded 223, added 43
+[WARN] Request took 12122ms: https://registry.npmjs.org/@rolldown%2Fbinding-linux-x64-gnu
+[WARN] Request took 10196ms: https://registry.npmjs.org/@rolldown%2Fbinding-win32-x64-msvc
+[WARN] Request took 10822ms: https://registry.npmjs.org/@rolldown%2Fbinding-win32-arm64-msvc
+[WARN] Request took 10977ms: https://registry.npmjs.org/@rolldown%2Fbinding-wasm32-wasi
+Progress: resolved 639, reused 0, downloaded 234, added 44
+Progress: resolved 639, reused 0, downloaded 254, added 46
+Progress: resolved 639, reused 0, downloaded 276, added 48
+[WARN] Request took 10760ms: https://registry.npmjs.org/@tailwindcss%2Foxide-android-arm64
+[WARN] Request took 10996ms: https://registry.npmjs.org/@tailwindcss%2Fnode
+[WARN] Request took 20087ms: https://registry.npmjs.org/@hookform%2Fresolvers
+Progress: resolved 639, reused 0, downloaded 298, added 51
+Progress: resolved 639, reused 0, downloaded 316, added 52
+[WARN] Request took 11286ms: https://registry.npmjs.org/@tailwindcss%2Fpostcss
+[WARN] Request took 10530ms: https://registry.npmjs.org/@typescript-eslint%2Ftsconfig-utils
+Progress: resolved 639, reused 0, downloaded 340, added 55
+[WARN] Request took 11131ms: https://registry.npmjs.org/@typescript-eslint%2Fproject-service
+[WARN] Request took 14445ms: https://registry.npmjs.org/@tailwindcss%2Foxide-darwin-arm64
+[WARN] Request took 14399ms: https://registry.npmjs.org/@tailwindcss%2Foxide-freebsd-x64
+[WARN] Request took 14530ms: https://registry.npmjs.org/@tailwindcss%2Foxide-darwin-x64
+[WARN] Request took 13796ms: https://registry.npmjs.org/@tailwindcss%2Foxide-linux-arm64-gnu
+[WARN] Request took 13763ms: https://registry.npmjs.org/@tailwindcss%2Foxide-linux-x64-musl
+[WARN] Request took 13810ms: https://registry.npmjs.org/@tailwindcss%2Foxide-linux-x64-gnu
+[WARN] Request took 13845ms: https://registry.npmjs.org/@tailwindcss%2Foxide-linux-arm64-musl
+Progress: resolved 639, reused 0, downloaded 373, added 57
+[WARN] Request took 14385ms: https://registry.npmjs.org/@tailwindcss%2Foxide-linux-arm-gnueabihf
+[WARN] Request took 13512ms: https://registry.npmjs.org/@tailwindcss%2Foxide-win32-x64-msvc
+Progress: resolved 639, reused 0, downloaded 402, added 60
+[WARN] Request took 33944ms: https://registry.npmjs.org/@next%2Fswc-win32-arm64-msvc
+[WARN] Request took 34313ms: https://registry.npmjs.org/@next%2Fswc-linux-x64-musl
+[WARN] Request took 34676ms: https://registry.npmjs.org/@next%2Fswc-linux-arm64-musl
+Progress: resolved 639, reused 0, downloaded 451, added 66
+[WARN] Request took 34836ms: https://registry.npmjs.org/@next%2Fswc-linux-arm64-gnu
+[WARN] Request took 35283ms: https://registry.npmjs.org/@next%2Fswc-win32-x64-msvc
+Progress: resolved 639, reused 0, downloaded 464, added 69
+Progress: resolved 639, reused 0, downloaded 480, added 71
+[WARN] Request took 36950ms: https://registry.npmjs.org/@next%2Fswc-darwin-arm64
+[WARN] Request took 36799ms: https://registry.npmjs.org/@next%2Fswc-linux-x64-gnu
+Progress: resolved 639, reused 0, downloaded 508, added 72
+Progress: resolved 639, reused 0, downloaded 525, added 73
+[WARN] Request took 39024ms: https://registry.npmjs.org/@next%2Fswc-darwin-x64
+[WARN] Request took 40068ms: https://registry.npmjs.org/@next%2Fenv
+Progress: resolved 639, reused 0, downloaded 542, added 74
+[WARN] Request took 21200ms: https://registry.npmjs.org/@tailwindcss%2Foxide
+[WARN] Request took 10617ms: https://registry.npmjs.org/caniuse-lite
+Progress: resolved 639, reused 0, downloaded 583, added 78
+[WARN] Request took 41766ms: https://registry.npmjs.org/@next%2Feslint-plugin-next
+[WARN] Request took 21744ms: https://registry.npmjs.org/@types%2Fnode
+Progress: resolved 639, reused 0, downloaded 635, added 84
+Progress: resolved 639, reused 0, downloaded 638, added 97
+[WARN] Request took 11885ms: https://registry.npmjs.org/drizzle-orm
+Progress: resolved 639, reused 0, downloaded 639, added 105
+Progress: resolved 639, reused 0, downloaded 639, added 109
+[WARN] Request took 13637ms: https://registry.npmjs.org/electron-to-chromium
+[WARN] Request took 13348ms: https://registry.npmjs.org/es-toolkit
+Progress: resolved 639, reused 0, downloaded 639, added 115
+[WARN] Request took 26444ms: https://registry.npmjs.org/@typescript-eslint%2Ftype-utils
+[WARN] Request took 26348ms: https://registry.npmjs.org/@typescript-eslint%2Futils
+[WARN] Request took 17936ms: https://registry.npmjs.org/axe-core
+Progress: resolved 639, reused 0, downloaded 639, added 121
+[WARN] Request took 14713ms: https://registry.npmjs.org/eslint-config-next
+Progress: resolved 639, reused 0, downloaded 639, added 128
+[WARN] Request took 28120ms: https://registry.npmjs.org/@typescript-eslint%2Ftypes
+[WARN] Request took 16081ms: https://registry.npmjs.org/eslint-plugin-react-hooks
+Progress: resolved 639, reused 0, downloaded 639, added 130
+[WARN] Request took 29036ms: https://registry.npmjs.org/@typescript-eslint%2Fvisitor-keys
+[WARN] Request took 29780ms: https://registry.npmjs.org/@typescript-eslint%2Fscope-manager
+Progress: resolved 639, reused 0, downloaded 639, added 135
+Progress: resolved 639, reused 0, downloaded 639, added 137
+[WARN] Request took 31490ms: https://registry.npmjs.org/@typescript-eslint%2Fparser
+[WARN] Request took 31969ms: https://registry.npmjs.org/@typescript-eslint%2Ftypescript-estree
+Progress: resolved 639, reused 0, downloaded 639, added 139
+[WARN] Request took 32652ms: https://registry.npmjs.org/@typescript-eslint%2Feslint-plugin
+Progress: resolved 639, reused 0, downloaded 639, added 140
+[WARN] Request took 12477ms: https://registry.npmjs.org/typescript
+[WARN] Request took 14605ms: https://registry.npmjs.org/@types%2Fnode
+[WARN] Request took 10560ms: https://registry.npmjs.org/react-dom
+Progress: resolved 639, reused 0, downloaded 639, added 141
+[WARN] Request took 16800ms: https://registry.npmjs.org/wrangler
+Progress: resolved 639, reused 0, downloaded 639, added 144
+[WARN] Request took 22999ms: https://registry.npmjs.org/next
+Progress: resolved 639, reused 0, downloaded 639, added 145
+Progress: resolved 639, reused 0, downloaded 639, added 163
+✓ Lockfile passes supply-chain policies (842 entries in 1m 11s)
+Progress: resolved 639, reused 0, downloaded 639, added 182
+Progress: resolved 639, reused 0, downloaded 639, added 196
+Progress: resolved 639, reused 0, downloaded 639, added 200
+Progress: resolved 639, reused 0, downloaded 639, added 206
+Progress: resolved 639, reused 0, downloaded 639, added 207
+Progress: resolved 639, reused 0, downloaded 639, added 211
+Progress: resolved 639, reused 0, downloaded 639, added 215
+Progress: resolved 639, reused 0, downloaded 639, added 231
+Progress: resolved 639, reused 0, downloaded 639, added 234
+Progress: resolved 639, reused 0, downloaded 639, added 251
+Progress: resolved 639, reused 0, downloaded 639, added 276
+Progress: resolved 639, reused 0, downloaded 639, added 315
+Progress: resolved 639, reused 0, downloaded 639, added 331
+Progress: resolved 639, reused 0, downloaded 639, added 359
+Progress: resolved 639, reused 0, downloaded 639, added 381
+Progress: resolved 639, reused 0, downloaded 639, added 395
+Progress: resolved 639, reused 0, downloaded 639, added 408
+Progress: resolved 639, reused 0, downloaded 639, added 420
+Progress: resolved 639, reused 0, downloaded 639, added 443
+Progress: resolved 639, reused 0, downloaded 639, added 475
+Progress: resolved 639, reused 0, downloaded 639, added 500
+Progress: resolved 639, reused 0, downloaded 639, added 504
+Progress: resolved 639, reused 0, downloaded 639, added 505
+Progress: resolved 639, reused 0, downloaded 639, added 509
+Progress: resolved 639, reused 0, downloaded 639, added 520
+Progress: resolved 639, reused 0, downloaded 639, added 553
+Progress: resolved 639, reused 0, downloaded 639, added 584
+Progress: resolved 639, reused 0, downloaded 639, added 621
+Progress: resolved 639, reused 0, downloaded 639, added 638
+Progress: resolved 639, reused 0, downloaded 639, added 639
+Progress: resolved 639, reused 0, downloaded 639, added 639, done
+
+dependencies:
++ @base-ui/react 1.7.0
++ @hookform/resolvers 5.7.1
++ @shadcn/react 0.3.0
++ class-variance-authority 0.7.1
++ clsx 2.1.1
++ cmdk 1.1.1
++ date-fns 4.4.0
++ drizzle-orm 0.45.2
++ embla-carousel-react 8.6.0
++ input-otp 1.4.2
++ lucide-react 1.31.0
++ next 16.3.4
++ next-themes 0.4.6
++ radix-ui 1.6.7
++ react 19.2.6
++ react-day-picker 10.0.1
++ react-dom 19.2.6
++ react-hook-form 7.85.0
++ react-resizable-panels 4.12.2
++ recharts 3.8.0
++ sonner 2.0.8
++ tailwind-merge 3.6.0
++ vaul 1.1.2
++ zod 3.25.76
+
+devDependencies:
++ @cloudflare/vite-plugin 1.37.1
++ @cloudflare/workers-types 4.20260515.1
++ @tailwindcss/postcss 4.2.1
++ @types/node 22.19.19
++ @types/react 19.2.14
++ @types/react-dom 19.2.3
++ @vitejs/plugin-react 6.0.2
++ @vitejs/plugin-rsc 0.5.26
++ drizzle-kit 0.31.10
++ eslint 9.39.4
++ eslint-config-next 16.3.4
++ json-rpc-2.0 1.7.1
++ raw-body 3.0.2
++ react-server-dom-webpack 19.2.6
++ tailwindcss 4.2.1
++ tw-animate-css 1.4.0
++ typescript 5.9.3
++ vinext 1.0.0-beta.5
++ vite 8.0.13
++ wrangler 4.92.0
+
+Done in 2m 12.1s using pnpm v11.25.0

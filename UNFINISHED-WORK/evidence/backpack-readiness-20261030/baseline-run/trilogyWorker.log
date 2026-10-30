@@ -1,0 +1,569 @@
+✔ non-trilogy jobs receive no trilogy signature capability (8.046ms)
+✖ a real failing baseline and passing candidate produce a valid exact-command Ed25519 receipt (222.4635ms)
+✖ arbitrary candidate commit labels and noncandidate branch refs are refused (190.1015ms)
+✖ candidate with additional unapproved committed changes is refused (153.1815ms)
+✖ an updated file cannot gain executable permission outside the approved byte-only plan (172.3356ms)
+✖ created files must use the candidate writer regular-file mode (198.9264ms)
+✖ merge-parent candidates are refused even when their tree matches the proposal (182.5658ms)
+✖ tampered candidate contents and before/after hashes are refused (167.3919ms)
+✖ every changed plan file must be included in the executed snapshot (158.6624ms)
+✖ source HEAD and candidate ref drift are rejected again before signing (170.4568ms)
+✖ command changes are refused even after assignment hashes are recomputed (169.9638ms)
+✖ unmatched assignment and expired grant or assignment are refused (159.3757ms)
+✖ owner identity cannot be the verifier and revoked verifier cannot start (173.9796ms)
+✖ wrong repository configuration or public signing key is refused (165.6847ms)
+✖ verifier revocation and public-key rotation during execution stop signing (188.6461ms)
+✖ same-path private-key replacement during execution stops signing (174.0059ms)
+﹣ protected key permissions cannot become public during execution (0.3706ms) # POSIX private-mode fixture; Windows key ACL qualification remains separate
+✖ key files in the candidate repository and symlink keys are refused (151.6153ms)
+✖ relative, oversized and non-Ed25519 key files are refused (170.3832ms)
+✖ a failed process receives no successful receipt (186.7126ms)
+✖ truthy values cannot replace the observed passed boolean (171.9727ms)
+✖ empty, oversized, non-string and malformed Unicode output cannot be signed (166.4016ms)
+✖ failed cleanup, wrong exit status and invalid observation times cannot be signed (173.4445ms)
+✖ timestamps must be canonical ISO instants before a receipt is generated (156.0424ms)
+✖ grant expiry during execution prevents signing even after successful process output (146.2844ms)
+✖ Docker command environment contains no verifier keys or control credentials (158.1506ms)
+﹣ simulated Docker CLI: runner executes real Node tests and signs only after cleanup readback (0.3985ms) # POSIX CLI fixture; real Windows Docker remains separate
+﹣ simulated Docker CLI: invalid candidate binding prevents any Docker dispatch (0.2174ms) # POSIX CLI fixture
+﹣ simulated Docker CLI: unverified cleanup blocks a successful receipt (0.1909ms) # POSIX CLI fixture
+﹣ simulated Docker CLI: non-UTF8 bytes fail execution and receive no receipt (0.1803ms) # POSIX CLI fixture
+﹣ simulated Docker CLI: empty output is not converted into a successful signed test (0.1677ms) # POSIX CLI fixture
+ℹ tests 31
+ℹ suites 0
+ℹ pass 1
+ℹ fail 24
+ℹ cancelled 0
+ℹ skipped 6
+ℹ todo 0
+ℹ duration_ms 4160.1604
+
+✖ failing tests:
+
+test at tests\trilogy-worker.test.mjs:76:1
+✖ a real failing baseline and passing candidate produce a valid exact-command Ed25519 receipt (222.4635ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-MvGxhP\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:77:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 36040,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:87:1
+✖ arbitrary candidate commit labels and noncandidate branch refs are refused (190.1015ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-ObECry\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:88:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 28664,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:91:1
+✖ candidate with additional unapproved committed changes is refused (153.1815ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-dChkBr\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:92:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 8020,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:94:1
+✖ an updated file cannot gain executable permission outside the approved byte-only plan (172.3356ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-nBpmhO\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:95:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 4720,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:98:1
+✖ created files must use the candidate writer regular-file mode (198.9264ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-Bm5AL6\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:99:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 7328,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:103:1
+✖ merge-parent candidates are refused even when their tree matches the proposal (182.5658ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-MJGNUD\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:104:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 5400,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:106:1
+✖ tampered candidate contents and before/after hashes are refused (167.3919ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-QkMBpB\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:107:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 24108,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:109:1
+✖ every changed plan file must be included in the executed snapshot (158.6624ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-LrRuRH\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:110:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 45792,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:112:1
+✖ source HEAD and candidate ref drift are rejected again before signing (170.4568ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-k7ntbP\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:113:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 42636,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:115:1
+✖ command changes are refused even after assignment hashes are recomputed (169.9638ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-WxS2yI\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:116:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 29536,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:118:1
+✖ unmatched assignment and expired grant or assignment are refused (159.3757ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-shPrF4\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:119:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 39508,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:121:1
+✖ owner identity cannot be the verifier and revoked verifier cannot start (173.9796ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-pINRKP\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:122:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 42104,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:124:1
+✖ wrong repository configuration or public signing key is refused (165.6847ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-tCWS24\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:125:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 45408,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:127:1
+✖ verifier revocation and public-key rotation during execution stop signing (188.6461ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-uRu1XL\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:128:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 6760,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:130:1
+✖ same-path private-key replacement during execution stops signing (174.0059ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-w8MLY1\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:131:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 41792,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:137:1
+✖ key files in the candidate repository and symlink keys are refused (151.6153ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-hClQzY\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:138:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 2112,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:142:1
+✖ relative, oversized and non-Ed25519 key files are refused (170.3832ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-uSV6cX\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:143:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 42792,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:147:1
+✖ a failed process receives no successful receipt (186.7126ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-845dJE\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:148:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 44200,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:150:1
+✖ truthy values cannot replace the observed passed boolean (171.9727ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-u9EFf2\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:151:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 43612,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:153:1
+✖ empty, oversized, non-string and malformed Unicode output cannot be signed (166.4016ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-8KeoMq\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:154:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 32272,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:156:1
+✖ failed cleanup, wrong exit status and invalid observation times cannot be signed (173.4445ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-szITeh\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:157:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 18208,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:159:1
+✖ timestamps must be canonical ISO instants before a receipt is generated (156.0424ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-Jp8Okp\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:160:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 39444,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:162:1
+✖ grant expiry during execution prevents signing even after successful process output (146.2844ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-TlwPIf\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:163:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 29920,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }
+
+test at tests\trilogy-worker.test.mjs:165:1
+✖ Docker command environment contains no verifier keys or control credentials (158.1506ms)
+  Error: Command failed: git -C C:\Users\cool\AppData\Local\Temp\omni-trilogy-worker-GiWeLn\repository -c user.name=Local Trilogy Test -c user.email=fixture@example.invalid -c commit.gpgsign=false init -q
+  fatal: unable to access 'NUL': Invalid argument
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:20:27)
+      at fixture (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:33:99)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/trilogy-worker.test.mjs:166:11)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 128,
+    signal: null,
+    output: [ null, '', "fatal: unable to access 'NUL': Invalid argument\n" ],
+    pid: 8600,
+    stdout: '',
+    stderr: "fatal: unable to access 'NUL': Invalid argument\n"
+  }

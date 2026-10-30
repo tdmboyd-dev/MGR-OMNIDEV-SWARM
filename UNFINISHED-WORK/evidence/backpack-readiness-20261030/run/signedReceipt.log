@@ -1,0 +1,20 @@
+✔ valid receipt proves cryptographic integrity without claiming independent execution (7.1774ms)
+✔ legacy flat v1 serialization remains compatible with Ed25519 receipts (20.9379ms)
+✔ public PEM, KeyObject and SPKI bytes all verify the same receipt (8.5578ms)
+✔ changed original requirement, criterion ID and commit fail (0.9133ms)
+✔ failed, incomplete and truncated execution cannot pass (1.5073ms)
+✔ tampering with any signed execution field rejects the receipt (0.8559ms)
+✔ wrong key and non-Ed25519 signing keys are refused (96.3535ms)
+✔ noncanonical base64, malformed and oversized signatures are rejected (0.7351ms)
+✔ trusted expected signer and execution digests must match exactly (3.3498ms)
+✔ malformed records and blank requirements fail closed without throwing (1.031ms)
+✔ nested JSON signing is canonical and rejects lossy values or getters (1.3882ms)
+✔ SHA-256 Git commit identity is supported and malformed lengths are refused (3.8164ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 163.8321

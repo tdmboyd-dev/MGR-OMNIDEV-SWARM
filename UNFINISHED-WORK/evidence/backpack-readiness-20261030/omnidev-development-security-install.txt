@@ -1,0 +1,56 @@
+✓ Lockfile passes supply-chain policies (verified 2m ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+[WARN] deprecated eslint@9.39.4: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Progress: resolved 39, reused 15, downloaded 0, added 0
+Progress: resolved 43, reused 22, downloaded 0, added 0
+Progress: resolved 44, reused 26, downloaded 0, added 0
+Progress: resolved 138, reused 43, downloaded 0, added 0
+Progress: resolved 165, reused 54, downloaded 0, added 0
+Progress: resolved 218, reused 79, downloaded 0, added 0
+Progress: resolved 269, reused 109, downloaded 0, added 0
+Progress: resolved 332, reused 133, downloaded 1, added 0
+Progress: resolved 392, reused 158, downloaded 1, added 0
+Progress: resolved 461, reused 175, downloaded 3, added 0
+Progress: resolved 586, reused 211, downloaded 9, added 0
+Progress: resolved 607, reused 247, downloaded 10, added 0
+Progress: resolved 715, reused 350, downloaded 10, added 0
+Progress: resolved 767, reused 545, downloaded 10, added 0
+Progress: resolved 777, reused 615, downloaded 19, added 0
+[WARN] 2 deprecated subdependencies found: @esbuild-kit/core-utils@3.3.2, @esbuild-kit/esm-loader@2.6.5
+Progress: resolved 777, reused 627, downloaded 25, added 0
+Packages: +114 -119
++++++++++++++++++++++++++++++++++++++++-----------------------------------------
+Progress: resolved 777, reused 627, downloaded 26, added 0
+Progress: resolved 777, reused 627, downloaded 26, added 18
+Progress: resolved 777, reused 627, downloaded 26, added 26
+Progress: resolved 777, reused 627, downloaded 26, added 31
+Progress: resolved 777, reused 627, downloaded 26, added 41
+Progress: resolved 777, reused 627, downloaded 26, added 55
+Progress: resolved 777, reused 627, downloaded 26, added 58
+Progress: resolved 777, reused 627, downloaded 26, added 63
+Progress: resolved 777, reused 627, downloaded 26, added 73
+Progress: resolved 777, reused 627, downloaded 26, added 83
+Progress: resolved 777, reused 627, downloaded 26, added 96
+Progress: resolved 777, reused 627, downloaded 26, added 102
+Progress: resolved 777, reused 627, downloaded 26, added 103
+Progress: resolved 777, reused 627, downloaded 26, added 107
+Progress: resolved 777, reused 627, downloaded 26, added 110
+Progress: resolved 777, reused 627, downloaded 26, added 111
+Progress: resolved 777, reused 627, downloaded 26, added 112
+Progress: resolved 777, reused 627, downloaded 26, added 113
+Progress: resolved 777, reused 627, downloaded 26, added 114
+Progress: resolved 777, reused 627, downloaded 26, added 114, done
+
+dependencies:
+- react 19.2.6
++ react 19.2.8 (19.3.1 is available)
+- react-dom 19.2.6
++ react-dom 19.2.8 (19.3.1 is available)
+
+devDependencies:
+- react-server-dom-webpack 19.2.6
++ react-server-dom-webpack 19.2.8 (19.3.1 is available)
+- vite 8.0.13
++ vite 8.1.6 (8.3.5 is available)
+
+Done in 1m 0.8s using pnpm v11.25.0

@@ -1,0 +1,11 @@
+✔ engine verification key is only a public Ed25519 key (3.4487ms)
+✔ stored release signature and packaged public key agree (3.6585ms)
+✔ private PEM files remain ignored by repository rules (0.3343ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15.4682

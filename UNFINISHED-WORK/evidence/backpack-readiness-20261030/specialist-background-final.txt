@@ -1,0 +1,1 @@
+{"passed":5,"scope":"Real local HTTP and asynchronous specialist chain; fixture inference; completed output reuse and plan budget enforcement"}

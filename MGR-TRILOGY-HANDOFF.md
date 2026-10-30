@@ -1,3 +1,19 @@
+# Backpack readiness and fresh Windows qualification — October 30, 2026
+
+Current isolated branch: `backpack/trilogy-readiness-20261030`. Tested runtime `3f694401db7c54a140122652c812ce2c36d99ea3` passed **75/75** complete approved local profiles, including TypeScript/build and new real connector/image/migration checks. Baseline **69/73** and initial repair **72/73** failures remain unchanged in `UNFINISHED-WORK/evidence/backpack-readiness-20261030/`. Never relabel older 73-profile Linux evidence as this Windows execution.
+
+Repairs: actual worker and harness Git null-config portability; LF-stable signed updater public key and worker archive; derived board source pin available in a fresh clone; asynchronous specialist test waits for completed/idle state rather than assuming 600ms. The rebuilt worker archive remains source-exact. Code Monster separately rejects hard-linked SQLite files and passes its 178-result Windows suite with six explicit platform skips.
+
+Dependency security: the initial production graph reported 23 advisories including three critical; final production/development graph reports zero known advisories at the saved audit time. Updated Next/React/Vite, moved effective pnpm overrides to their actual workspace policy, migrated preview record schemas and exercised actual authorized connector calls, PNG output and disposable SQLite migration generation/checking. Seven-day release-age and ignored-install-script policy remain in force. An advisory-free result is not an exhaustive source-security or production assessment.
+
+Fresh clean **14/14** local three-product integration passed. Actual Git/SQLite/HTTP; signer and GitHub boundaries are fixtures. Public summary omits private companion manifests; raw integration remains in private OmniSight evidence. The optional Backpack context trial used three explicit roots, no execution profiles and zero copied canonical tasks; it changed no Trilogy files. It does not install another brain, scheduler or ledger.
+
+Read [TRILOGY-OPERATIONS-BIBLE.md](TRILOGY-OPERATIONS-BIBLE.md), [the current wave](UNFINISHED-WORK/mgr-backpack-readiness-20261030.json) and [the persistent readiness scorecard](docs/full-build/SCORECARD.md). Existing target Bibles are retained. Canonical **174 parents / 441 clauses / 28 upgrades**, **122 open / 52 implemented_unverified**, zero newly independently accepted parents: byte-for-byte conservation is recorded.
+
+Source publication and draft PR readback are pending this metadata commit's later receipt. No default-branch merge, deployment, real provider, browser acceptance, qualified physical Docker host or canonical Tevin consumer is implied. Previously declined device/browser actions were not retried. Continue independent engineering from the original exact acceptance registers; do not call the whole Trilogy complete.
+
+---
+
 # Confirmed source publication — October 30, 2026
 
 **All three reviewed source trees are saved on their authorized GitHub development branches and read back.** The owner explicitly asked to bring the GitHub approval back after the earlier rejection; the native connection then completed these saves. The earlier rejection and stopped-write notes below remain historical facts and no longer describe the current source-publication state.

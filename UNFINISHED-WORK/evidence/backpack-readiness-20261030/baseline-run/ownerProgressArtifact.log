@@ -1,0 +1,38 @@
+node:internal/errors:986
+  const err = new Error(message);
+              ^
+
+Error: Command failed: git rev-parse --verify 8434dd9c856b1df27c89a6e90d301124f353dc8c^{commit}
+fatal: Needed a single revision
+
+    at genericNodeError (node:internal/errors:986:15)
+    at wrappedFn (node:internal/errors:540:14)
+    at checkExecSyncError (node:child_process:942:11)
+    at execFileSync (node:child_process:978:15)
+    at git (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/scripts/build-owner-progress.mjs:46:26)
+    at file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/scripts/build-owner-progress.mjs:47:22 {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    Buffer(0) [Uint8Array] [],
+    Buffer(32) [Uint8Array] [
+      102,  97, 116,  97, 108,  58,  32,
+       78, 101, 101, 100, 101, 100,  32,
+       97,  32, 115, 105, 110, 103, 108,
+      101,  32, 114, 101, 118, 105, 115,
+      105, 111, 110,  10
+    ]
+  ],
+  pid: 34408,
+  stdout: Buffer(0) [Uint8Array] [],
+  stderr: Buffer(32) [Uint8Array] [
+    102,  97, 116,  97, 108,  58,  32,
+     78, 101, 101, 100, 101, 100,  32,
+     97,  32, 115, 105, 110, 103, 108,
+    101,  32, 114, 101, 118, 105, 115,
+    105, 111, 110,  10
+  ]
+}
+
+Node.js v24.21.0

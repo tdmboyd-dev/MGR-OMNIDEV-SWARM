@@ -1,0 +1,14 @@
+✔ rescan preserves existing security dispositions when source cannot be inspected (72.3781ms)
+✔ a completed clean rescan can still resolve absent snapshot signals (8.4392ms)
+✔ removing the source file resolves snapshot absence rather than pretending it was uninspected (8.1196ms)
+✔ native maintenance apply and rollback retain findings for unchanged uninspected source (24.5186ms)
+✔ malformed changed source fails static inspection and cannot enter snapshot apply (8.0259ms)
+✔ a local fix of malformed source can be reviewed without claiming a complete before comparison (2.6668ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 132.0442

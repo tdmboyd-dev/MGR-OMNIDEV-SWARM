@@ -5,3 +5,9 @@
 /worker/** text eol=lf
 /UNFINISHED-WORK/owner-progress-20261029.* text eol=lf
 /public/owner-progress.html text eol=lf
+
+# Preserve captured execution bytes, including intentionally failed output.
+/UNFINISHED-WORK/evidence/backpack-readiness-20261030/** -text
+/UNFINISHED-WORK/evidence/backpack-readiness-20261030/**/*.log -diff
+/UNFINISHED-WORK/evidence/backpack-readiness-20261030/*.txt -diff
+/UNFINISHED-WORK/evidence/backpack-readiness-20261030/** whitespace=trailing-space,space-before-tab,cr-at-eol

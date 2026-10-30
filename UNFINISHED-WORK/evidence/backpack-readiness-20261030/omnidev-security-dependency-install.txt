@@ -1,0 +1,76 @@
+✓ Lockfile passes supply-chain policies (verified 45m ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+[WARN] deprecated eslint@9.39.4: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Progress: resolved 24, reused 4, downloaded 0, added 0
+Progress: resolved 26, reused 18, downloaded 0, added 0
+Progress: resolved 27, reused 23, downloaded 0, added 0
+Progress: resolved 27, reused 25, downloaded 0, added 0
+Progress: resolved 34, reused 32, downloaded 1, added 0
+Progress: resolved 38, reused 34, downloaded 1, added 0
+Progress: resolved 42, reused 39, downloaded 2, added 0
+Progress: resolved 43, reused 40, downloaded 2, added 0
+Progress: resolved 44, reused 41, downloaded 2, added 0
+Progress: resolved 117, reused 67, downloaded 2, added 0
+Progress: resolved 171, reused 103, downloaded 2, added 0
+Progress: resolved 194, reused 185, downloaded 2, added 0
+Progress: resolved 205, reused 199, downloaded 3, added 0
+Progress: resolved 209, reused 203, downloaded 3, added 0
+Progress: resolved 217, reused 204, downloaded 3, added 0
+Progress: resolved 220, reused 206, downloaded 3, added 0
+Progress: resolved 223, reused 207, downloaded 4, added 0
+Progress: resolved 268, reused 234, downloaded 5, added 0
+Progress: resolved 300, reused 262, downloaded 5, added 0
+Progress: resolved 337, reused 272, downloaded 5, added 0
+Progress: resolved 386, reused 298, downloaded 5, added 0
+Progress: resolved 453, reused 349, downloaded 5, added 0
+Progress: resolved 454, reused 349, downloaded 5, added 0
+Progress: resolved 456, reused 349, downloaded 5, added 0
+Progress: resolved 467, reused 350, downloaded 5, added 0
+Progress: resolved 472, reused 351, downloaded 5, added 0
+Progress: resolved 472, reused 351, downloaded 6, added 0
+Progress: resolved 477, reused 351, downloaded 6, added 0
+Progress: resolved 481, reused 352, downloaded 6, added 0
+[WARN] Request took 11694ms: https://registry.npmjs.org/@typescript-eslint%2Futils
+Progress: resolved 482, reused 352, downloaded 6, added 0
+Progress: resolved 482, reused 353, downloaded 6, added 0
+Progress: resolved 482, reused 353, downloaded 7, added 0
+[WARN] Request took 17886ms: https://registry.npmjs.org/@typescript-eslint%2Fparser
+Progress: resolved 483, reused 353, downloaded 7, added 0
+Progress: resolved 483, reused 354, downloaded 7, added 0
+[WARN] Request took 23027ms: https://registry.npmjs.org/@typescript-eslint%2Ftypescript-estree
+Progress: resolved 484, reused 354, downloaded 7, added 0
+[WARN] Request took 23585ms: https://registry.npmjs.org/@typescript-eslint%2Feslint-plugin
+Progress: resolved 489, reused 355, downloaded 7, added 0
+Progress: resolved 581, reused 387, downloaded 7, added 0
+Progress: resolved 596, reused 404, downloaded 7, added 0
+Progress: resolved 649, reused 433, downloaded 7, added 0
+Progress: resolved 672, reused 462, downloaded 11, added 0
+Progress: resolved 680, reused 470, downloaded 11, added 0
+Progress: resolved 681, reused 470, downloaded 11, added 0
+Progress: resolved 684, reused 473, downloaded 11, added 0
+Progress: resolved 786, reused 528, downloaded 11, added 0
+Progress: resolved 809, reused 573, downloaded 15, added 0
+Progress: resolved 827, reused 591, downloaded 16, added 0
+Progress: resolved 870, reused 634, downloaded 16, added 0
+[WARN] 2 deprecated subdependencies found: @esbuild-kit/core-utils@3.3.2, @esbuild-kit/esm-loader@2.6.5
+Packages: +11 -8
++++++++++++--------
+Progress: resolved 870, reused 634, downloaded 16, added 1
+Progress: resolved 870, reused 634, downloaded 16, added 7
+Progress: resolved 870, reused 634, downloaded 16, added 8
+Progress: resolved 870, reused 634, downloaded 16, added 10
+Progress: resolved 870, reused 634, downloaded 17, added 10
+Progress: resolved 870, reused 634, downloaded 17, added 11
+Progress: resolved 870, reused 634, downloaded 17, added 11, done
+
+dependencies:
+- next 16.3.4
++ next 16.4.1
+- zod 3.25.76
++ zod 4.6.6 (4.6.7 is available)
+
+devDependencies:
+- eslint-config-next 16.3.4
++ eslint-config-next 16.4.1
+
+Done in 1m 34.7s using pnpm v11.25.0

@@ -1,0 +1,9 @@
+file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/companion/engine/update.mjs:13
+ let pending=0;try{pending=JSON.parse(await readFile(join(home,'pending.json'),'utf8')).sequence;}catch{}const r=validateRelease(envelope,key,Math.max(pointer.sequence,pending));if(r.files.find(f=>f.path==='engine/public-key.pem').content!==key)throw Error('Trust key replacement rejected');const path=join(home,'releases',String(r.sequence));await mkdir(path,{recursive:true});
+                                                                                                                                                                                                                                                           ^
+
+Error: Trust key replacement rejected
+    at stageRelease (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/companion/engine/update.mjs:13:252)
+    at async file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/engine-update.mjs:3:181
+
+Node.js v24.21.0

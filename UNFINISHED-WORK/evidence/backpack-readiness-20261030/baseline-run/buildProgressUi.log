@@ -1,0 +1,12 @@
+✔ progress screen loads the saved board with a named isolated frame and no-store fetch (134.6758ms)
+✔ HTML mentioning 441, incomplete registers and malformed provenance never appear as a saved board (994.433ms)
+✔ failed or incorrect board reads expose a retry instead of a stale successful frame (269.8842ms)
+✔ a board request is canceled on navigation and a late reply cannot display it (34.5938ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1457.3873

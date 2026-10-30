@@ -1,0 +1,1 @@
+PASS source switch creates idempotent fresh job without carrying stale evidence; deletion requires exact confirmation, refuses active jobs, distinguishes disconnect/snapshot/project and cleans linked records

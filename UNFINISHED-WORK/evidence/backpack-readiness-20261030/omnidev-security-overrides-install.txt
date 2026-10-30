@@ -1,0 +1,25 @@
+✓ Lockfile passes supply-chain policies (verified 55s ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+[WARN] deprecated eslint@9.39.4: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Progress: resolved 40, reused 18, downloaded 0, added 0
+Progress: resolved 44, reused 38, downloaded 0, added 0
+Progress: resolved 123, reused 61, downloaded 0, added 0
+Progress: resolved 199, reused 86, downloaded 0, added 0
+Progress: resolved 221, reused 107, downloaded 0, added 0
+Progress: resolved 319, reused 148, downloaded 0, added 0
+Progress: resolved 470, reused 201, downloaded 0, added 0
+Progress: resolved 610, reused 242, downloaded 1, added 0
+Progress: resolved 659, reused 357, downloaded 1, added 0
+Progress: resolved 796, reused 501, downloaded 1, added 0
+Progress: resolved 849, reused 641, downloaded 11, added 0
+[WARN] 2 deprecated subdependencies found: @esbuild-kit/core-utils@3.3.2, @esbuild-kit/esm-loader@2.6.5
+Progress: resolved 849, reused 641, downloaded 13, added 0
+Packages: +19 -15
++++++++++++++++++++---------------
+Progress: resolved 849, reused 641, downloaded 13, added 16
+Progress: resolved 849, reused 641, downloaded 13, added 17
+Progress: resolved 849, reused 641, downloaded 13, added 18
+Progress: resolved 849, reused 641, downloaded 13, added 19
+Progress: resolved 849, reused 641, downloaded 13, added 19, done
+
+Done in 46.2s using pnpm v11.25.0

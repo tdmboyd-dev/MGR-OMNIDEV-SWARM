@@ -1,0 +1,53 @@
+✖ patched image dependencies still produce an actual PNG through the framework OG dependency (6.1039ms)
+✖ patched compiler still generates and checks a real SQLite migration without contacting a database (1413.3487ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1575.9824
+
+✖ failing tests:
+
+test at tests\toolchain-security.test.mjs:13:1
+✖ patched image dependencies still produce an actual PNG through the framework OG dependency (6.1039ms)
+  Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: Package subpath './package.json' is not defined by "exports" in C:\Users\cool\Documents\Codex\2026-10-29\i-x20\work\trilogy\MGR-OMNIDEV-SWARM\node_modules\vinext\package.json
+      at exportsNotFound (node:internal/modules/esm/resolve:315:10)
+      at packageExportsResolve (node:internal/modules/esm/resolve:663:9)
+      at resolveExports (node:internal/modules/cjs/loader:754:36)
+      at Module._findPath (node:internal/modules/cjs/loader:821:31)
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1557:27)
+      at wrapResolveFilename (node:internal/modules/cjs/loader:1118:27)
+      at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)
+      at require.resolve (node:internal/modules/helpers:175:31)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/toolchain-security.test.mjs:14:47)
+      at Test.runInAsyncScope (node:async_hooks:227:14) {
+    code: 'ERR_PACKAGE_PATH_NOT_EXPORTED'
+  }
+
+test at tests\toolchain-security.test.mjs:24:1
+✖ patched compiler still generates and checks a real SQLite migration without contacting a database (1413.3487ms)
+  AssertionError [ERR_ASSERTION]: Reading config file 'C:\Users\cool\AppData\Local\Temp\mgr-security-drizzle-RGoD4d\config.cjs'
+  Error  No schema files found for path config ['C:\Users\cool\Documents\Codex\2026-10-29\i-x20\work\trilogy\MGR-OMNIDEV-SWARM\db\schema.ts']
+  Error  If path represents a file - please make sure to use .ts or other extension in the path
+  
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/toolchain-security.test.mjs:32:48)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

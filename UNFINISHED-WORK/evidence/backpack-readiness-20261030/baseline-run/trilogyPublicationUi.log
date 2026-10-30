@@ -1,0 +1,27 @@
+✔ preview renders the exact repository, tested commit, base, changed paths and escaped source text (11.1941ms)
+✔ unverified candidates cannot start the owner publication flow (2.2185ms)
+✔ key validation and explicit preview keep approval separate from publishing (38.2806ms)
+✔ the key travels only in an authorization header and is cleared after success (87.8821ms)
+✔ reopening recovers the saved authorization without silently reapproving (1.6551ms)
+✔ failed publication retains the approval and key for deliberate reconciliation (2.6275ms)
+✔ double invocation while publishing sends one mutation (4.7134ms)
+✔ revoking sends only the selected approval and clears the key (1.3966ms)
+✔ expired approval cannot publish and requires reviewing a new preview (0.9421ms)
+✔ switching jobs clears authority and drops a delayed old preview (3.7121ms)
+✔ losing verified status closes controls and drops late responses (1.0821ms)
+✔ an older response cannot unlock a new request after the same job is reverified (1.7164ms)
+✔ saved provider URLs cannot navigate to an unrelated site (0.8588ms)
+✔ expired uncertain publication can inspect its saved draft without renewing authority (0.9652ms)
+✔ a canceled job can recover an existing attempt but cannot dispatch another publication (0.9814ms)
+✔ failed recovery leaves the original approval visible and sends no publish request (1.3412ms)
+✔ clearing an expired unstarted publication never claims a GitHub draft was saved (1.3277ms)
+✔ revoking an uncertain attempt retains read-only recovery controls (1.0894ms)
+✔ an incomplete successful provider response cannot be displayed as a saved draft (1.2847ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 176.7535

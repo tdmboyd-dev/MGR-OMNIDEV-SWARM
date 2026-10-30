@@ -1,0 +1,20 @@
+✔ decisions list includes prior structured decisions, project scope and revision history (86.6714ms)
+✔ recorded outcomes and corrections retain readable prior and next revisions (8.3878ms)
+✔ stale outcome forms cannot replace a newer observation even when requests are sequential (7.2741ms)
+✔ missing, malformed and wrong revisions or empty outcomes are refused without writes (7.462ms)
+✔ simultaneous decision outcomes produce one durable revision and one audit event (4.8611ms)
+✔ decision audit failure rolls back the outcome instead of losing its history (3.9919ms)
+✔ project-scoped decisions reject stale source and deleted parents without creating orphan records (10.0475ms)
+✔ unknown decision-list scope and cross-origin outcome writes fail safely (4.1999ms)
+✔ historical corrected outcomes remain searchable with their exact decision revision and source context (36.4397ms)
+✔ scoped history search excludes matching other-project and unassigned records without changing stored history (25.8217ms)
+✔ unknown and wrong-kind search scopes are rejected instead of silently appearing to contain no evidence (12.519ms)
+✔ future plan search retains the original version and contract citation after a later source version (23.2838ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 243.3651

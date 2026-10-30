@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-30T07:54:44.558508+00:00",
+  "baseCommit": "b453894362163ca1413c02378935711958db3503",
+  "testedCommit": "3f694401db7c54a140122652c812ce2c36d99ea3",
+  "files": [
+    {
+      "path": "UNFINISHED-WORK/backlog.json",
+      "gitBlobBytesUnchanged": true,
+      "sha256": "a4c03fee4b92ecf9030a0402a1b8fcbca8e475e07a58423147868e0712bed0d9"
+    },
+    {
+      "path": "UNFINISHED-WORK/mgr-174-acceptance-evidence-register.json",
+      "gitBlobBytesUnchanged": true,
+      "sha256": "813336d9d848c947be0cc7033886118d2c04eb0986b5b686c3c2395c31351617"
+    },
+    {
+      "path": "UNFINISHED-WORK/mgr-trilogy-upgrades.json",
+      "gitBlobBytesUnchanged": true,
+      "sha256": "67dd154e99c4e4be18f6b7d594c16732dd3790ac92b4c91a71e624f0eccd8588"
+    }
+  ],
+  "parents": 174,
+  "clauses": 441,
+  "upgrades": 28,
+  "states": {
+    "open": 122,
+    "implemented_unverified": 52
+  },
+  "newIndependentParentCertifications": 0
+}
