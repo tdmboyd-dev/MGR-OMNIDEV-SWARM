@@ -1,3 +1,9 @@
+# Latest inventory and verification
+
+Read `mgr-resumption-20261030.json` and the newest root handoff first. Current runtime `3ad7671` passed 76/76 profiles, including 13 backup cases; the fresh local Trilogy flow passed 14/14. The full inventory is being reconciled across all three repositories and separate branches. Original 174/441/28 denominators and acceptance states are unchanged. Earlier checkpoint descriptions below are retained history.
+
+---
+
 > **Current checkpoint — October 29, 2026:** [The planning/Imprint repair report](mgr-planning-imprint-wave-20261029.md) records the latest tested source. OmniDev passed 58/58 profiles; canonical states are 122 open and 52 implemented_unverified. Eleven local clauses are reproduced; no original parent is independently certified. Start from the existing root HANDOFF and MGR-TRILOGY-HANDOFF. Older checkpoint entries below are history. The owner requests concrete unfinished features, not aggregate shorthand.
 
 # OmniDev Swarm — unfinished work

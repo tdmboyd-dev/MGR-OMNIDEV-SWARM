@@ -1,0 +1,134 @@
+{
+  "schema": "mgr.bounded-source-verification.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-10-30T06:19:39.672Z",
+  "baseCommit": "b453894362163ca1413c02378935711958db3503",
+  "scope": "Saved progress-board structure and count consistency",
+  "runtime": "JavaScript V8 isolate via functions.exec; no operating-system runtime",
+  "sourceBindings": [
+    {
+      "path": "lib/owner-progress-contract.mjs",
+      "gitBlob": "19908c0fa08324b5a4740ba26198de9bff1aa87c"
+    },
+    {
+      "path": "tests/owner-progress-contract.test.mjs",
+      "gitBlob": "14275414620c8a4b2e9bf34aab5c4043a0da07d8"
+    },
+    {
+      "path": "components/build-progress.tsx",
+      "gitBlob": "5992660c9bfb17497bbca82d3450b3a821a42463"
+    },
+    {
+      "path": "tests/build-progress-ui.test.mjs",
+      "gitBlob": "25717a31fc31d27a582abb34716340920927ef6a"
+    }
+  ],
+  "baselineBindings": [
+    {
+      "path": "components/build-progress.tsx",
+      "gitBlob": "8389bece34338349eb056b191505155bc0c2619c"
+    },
+    {
+      "path": "public/owner-progress.html",
+      "gitBlob": "f2a9b5f15ff8251b1a7c2ee9fb1a1acb90dee627"
+    }
+  ],
+  "executed": {
+    "groups": 10,
+    "passed": 10,
+    "failed": 0,
+    "results": [
+      {
+        "name": "the committed board and its complete data remain valid without mutation",
+        "status": "PASS"
+      },
+      {
+        "name": "missing, duplicated, oversized or truncated board envelopes fail closed",
+        "status": "PASS"
+      },
+      {
+        "name": "all original and upgrade identities stay unique and separately counted",
+        "status": "PASS"
+      },
+      {
+        "name": "displayed counts must agree with the detailed records",
+        "status": "PASS"
+      },
+      {
+        "name": "each clause retains its parent and complete renderer data",
+        "status": "PASS"
+      },
+      {
+        "name": "missing arrays and stale completion references cannot enter the renderer",
+        "status": "PASS"
+      },
+      {
+        "name": "evidence and source references must resolve to the provided maps",
+        "status": "PASS"
+      },
+      {
+        "name": "local pass totals and source identity remain internally consistent",
+        "status": "PASS"
+      },
+      {
+        "name": "valid failed and blocked local profiles do not hide the board",
+        "status": "PASS"
+      },
+      {
+        "name": "invalid top-level payloads return false instead of throwing",
+        "status": "PASS"
+      }
+    ],
+    "variants": [
+      {
+        "name": "duplicate upgrade identity",
+        "beforeAccepted": true,
+        "afterAccepted": false
+      },
+      {
+        "name": "forged fully accepted total",
+        "beforeAccepted": true,
+        "afterAccepted": false
+      },
+      {
+        "name": "missing renderer actions",
+        "beforeAccepted": true,
+        "afterAccepted": false
+      },
+      {
+        "name": "invalid completion reference",
+        "beforeAccepted": true,
+        "afterAccepted": false
+      },
+      {
+        "name": "corrupt last test total",
+        "beforeAccepted": true,
+        "afterAccepted": false
+      }
+    ]
+  },
+  "checksQualification": "10 test callback groups; 46 malformed-data mutations are nested cases, not extra test groups.",
+  "method": "Execute the complete dependency-free helper after removing export keywords; execute the actual new test callbacks after removing imports and supplying fetched saved HTML and strict Object.is assertions. The preserved adapter also executes the old guard with only TypeScript annotations removed for before/after comparison.",
+  "notExecuted": [
+    "Node native test runner",
+    "React component tests",
+    "TypeScript compilation",
+    "Production build",
+    "Real browser/mobile/keyboard interaction",
+    "Complete app verification",
+    "Deployment"
+  ],
+  "pendingCommands": [
+    "node tests/owner-progress-contract.test.mjs",
+    "node tests/build-progress-ui.test.mjs",
+    "pnpm verify:full"
+  ],
+  "canonicalAcceptancePromotions": 0,
+  "previousFullRunUnchanged": true,
+  "limitations": [
+    "Structural consistency is not cryptographic provenance or independent acceptance.",
+    "The execution environment is unavailable; passing pure code does not establish the complete application works.",
+    "The five additional native component cases and new full-verification profile are committed for the next permitted runtime check."
+  ]
+}

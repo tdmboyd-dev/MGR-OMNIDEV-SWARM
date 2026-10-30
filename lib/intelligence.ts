@@ -97,16 +97,48 @@ export async function decisionOutcome(p:any){
   guardedInsert(event,guard)
  ]);return next;
 }
-export async function exportBackup(){const r:any=await db().prepare("SELECT json_object('records',json((SELECT COALESCE(json_group_array(json_object('id',id,'kind',kind,'title',title,'project_id',project_id,'status',status,'data',data,'created_at',created_at,'updated_at',updated_at)),'[]') FROM records)),'jobs',json((SELECT COALESCE(json_group_array(json_object('id',id,'project_id',project_id,'objective',objective,'mode',mode,'status',status,'phase',phase,'payload',payload,'result',result,'attempts',attempts,'created_at',created_at,'updated_at',updated_at)),'[]') FROM jobs))) AS snapshot").first();const snapshot=JSON.parse(r.snapshot);return {format:'omnidev-owner-snapshot',version:1,exportedAt:new Date().toISOString(),scope:'Workspace records and jobs. Excludes credentials, sessions, provider settings and external resources.',snapshot,digest:await fingerprint(snapshot)};}
+const BACKUP_MAX_BYTES=10_000_000;
+const BACKUP_ROW_MAX_BYTES=1_800_000;
+const BACKUP_CHUNK_BYTES=256_000;
+const backupBytes=(value:string)=>new TextEncoder().encode(value).byteLength;
+// In Unicode mode this range matches lone surrogate code points, while a
+// well-formed pair (including emoji) is one code point outside the range.
+const backupText=(value:unknown)=>typeof value==='string'&&!/[\uD800-\uDFFF]/u.test(value);
+
+export async function exportBackup(){
+ // One SELECT observes records and jobs together. Return separate JSON rows so
+ // a large archive does not exceed D1's 2 MB limit for a single aggregate value.
+ // The extra row in each collection detects overflow instead of hiding it.
+ const result=await db().prepare(`
+  SELECT 'record' AS entity,json_object('id',id,'kind',kind,'title',title,'project_id',project_id,'status',status,'data',data,'created_at',created_at,'updated_at',updated_at) AS value
+  FROM (SELECT * FROM records ORDER BY id LIMIT 10001)
+  UNION ALL
+  SELECT 'job' AS entity,json_object('id',id,'project_id',project_id,'objective',objective,'mode',mode,'status',status,'phase',phase,'payload',payload,'result',result,'attempts',attempts,'created_at',created_at,'updated_at',updated_at) AS value
+  FROM (SELECT * FROM jobs ORDER BY id LIMIT 10001)
+ `).all();
+ const snapshot:{records:any[];jobs:any[]}={records:[],jobs:[]};
+ let totalBytes=0;
+ for(const row of result.results as {entity:string;value:string}[]){
+  totalBytes+=backupBytes(row.value);
+  if(totalBytes>BACKUP_MAX_BYTES)throw new Error('Backup exceeds the 10 MB archive limit');
+  const collection=row.entity==='record'?snapshot.records:snapshot.jobs;
+  collection.push(JSON.parse(row.value));
+  if(collection.length>10000)throw new Error('Backup exceeds the 10,000 records or 10,000 jobs limit');
+ }
+ const backup={format:'omnidev-owner-snapshot',version:1,exportedAt:new Date().toISOString(),scope:'Workspace records and jobs. Excludes credentials, sessions, provider settings and external resources.',snapshot,digest:await fingerprint(snapshot)};
+ await validateBackup(backup);
+ return backup;
+}
 export async function validateBackup(p:any){
- if(!p||p.format!=='omnidev-owner-snapshot'||p.version!==1||!p.snapshot||!Array.isArray(p.snapshot.records)||!Array.isArray(p.snapshot.jobs)||p.snapshot.records.length>10000||p.snapshot.jobs.length>10000||JSON.stringify(p).length>10000000)throw new Error('Invalid or oversized backup');
+ if(!p||p.format!=='omnidev-owner-snapshot'||p.version!==1||!p.snapshot||!Array.isArray(p.snapshot.records)||!Array.isArray(p.snapshot.jobs)||p.snapshot.records.length>10000||p.snapshot.jobs.length>10000||backupBytes(JSON.stringify(p))>BACKUP_MAX_BYTES)throw new Error('Invalid or oversized backup');
  if(p.digest!==await fingerprint(p.snapshot))throw new Error('Backup integrity mismatch');
  const object=(value:string,label:string)=>{const parsed=JSON.parse(value);if(!parsed||typeof parsed!=='object'||Array.isArray(parsed))throw new Error('Invalid '+label+' object');return parsed;};
- const identity=(value:unknown)=>typeof value==='string'&&value.trim().length>0&&value.length<=200;
+ const identity=(value:unknown)=>typeof value==='string'&&backupText(value)&&value.trim().length>0&&value.length<=200;
  const records=new Map<string,any>();
  for(const r of p.snapshot.records){
   if(!r||!identity(r.id)||records.has(r.id))throw new Error('Duplicate or invalid record identity');
-  for(const k of ['kind','title','project_id','status','data','created_at','updated_at'])if(typeof r[k]!=='string')throw new Error('Invalid record '+k);
+  for(const k of ['kind','title','project_id','status','data','created_at','updated_at'])if(!backupText(r[k]))throw new Error('Invalid record '+k+' text');
+  if(backupBytes(JSON.stringify(r))+2>BACKUP_ROW_MAX_BYTES)throw new Error('Backup record exceeds the safe database row limit');
   object(r.data,'record data');records.set(r.id,r);
  }
  for(const r of records.values()){
@@ -120,7 +152,8 @@ export async function validateBackup(p:any){
  for(const j of p.snapshot.jobs){
   if(!j||!identity(j.id)||jobs.has(j.id)||records.get(j.project_id)?.kind!=='project')throw new Error('Invalid job project reference');
   jobs.add(j.id);
-  for(const k of ['objective','mode','status','phase','payload','result','created_at','updated_at'])if(typeof j[k]!=='string')throw new Error('Invalid job '+k);
+  for(const k of ['objective','mode','status','phase','payload','result','created_at','updated_at'])if(!backupText(j[k]))throw new Error('Invalid job '+k+' text');
+  if(backupBytes(JSON.stringify(j))+2>BACKUP_ROW_MAX_BYTES)throw new Error('Backup job exceeds the safe database row limit');
   const attempts=typeof j.attempts==='number'?String(j.attempts):j.attempts;
   if(typeof attempts!=='string'||!/^\d+$/.test(attempts)||!Number.isSafeInteger(Number(attempts)))throw new Error('Invalid job retry attempts');
   const payload=object(j.payload,'job payload');object(j.result,'job result');
@@ -128,4 +161,48 @@ export async function validateBackup(p:any){
  }
  return {valid:true,records:records.size,jobs:jobs.size,digest:p.digest,scope:'Integrity, shape and project-reference validation only. Restore is available only into an empty workspace; not production disaster-recovery qualification.'};
 }
-export async function restoreBackup(p:any){await validateBackup(p);const token=crypto.randomUUID(),now=new Date().toISOString();const ops=[db().prepare("INSERT OR IGNORE INTO runtime_settings(id,data,updated_at) SELECT 'restore-lock',?,? WHERE NOT EXISTS (SELECT 1 FROM records) AND NOT EXISTS (SELECT 1 FROM jobs)").bind(token,now)];const guard="EXISTS (SELECT 1 FROM runtime_settings WHERE id='restore-lock' AND data=?)";for(const r of p.snapshot.records)ops.push(db().prepare('INSERT INTO records(id,kind,title,project_id,status,data,created_at,updated_at) SELECT ?,?,?,?,?,?,?,? WHERE '+guard).bind(r.id,r.kind,r.title,r.project_id,r.status,r.data,r.created_at,r.updated_at,token));for(const j of p.snapshot.jobs)ops.push(db().prepare('INSERT INTO jobs(id,project_id,objective,mode,status,phase,payload,result,attempts,created_at,updated_at) SELECT ?,?,?,?,?,?,?,?,?,?,? WHERE '+guard).bind(j.id,j.project_id,j.objective,j.mode,'canceled',j.phase,j.payload,j.result,String(j.attempts),j.created_at,j.updated_at,token));ops.push(db().prepare("DELETE FROM runtime_settings WHERE id='restore-lock' AND data=?").bind(token));if(ops.length>500)throw new Error('Restore supports at most 498 records/jobs per transactional batch; use a qualified migration for larger archives');const result=await db().batch(ops);if(!result[0].meta.changes)throw new Error('Restore refuses to overwrite a nonempty workspace');return {restored:true,records:p.snapshot.records.length,jobs:p.snapshot.jobs.length,resumed:false,scope:'Active imported jobs canceled; credentials and authority must be reconnected'};}
+function backupChunks(rows:any[]):string[]{
+ const chunks:string[]=[];let current:string[]=[],bytes=2;
+ for(const row of rows){
+  const encoded=JSON.stringify(row),size=backupBytes(encoded);
+  if(size+2>BACKUP_ROW_MAX_BYTES)throw new Error('Backup row exceeds the safe database row limit');
+  if(current.length&&(current.length>=250||bytes+size+1>BACKUP_CHUNK_BYTES)){
+   chunks.push('['+current.join(',')+']');current=[];bytes=2;
+  }
+  bytes+=size+(current.length?1:0);current.push(encoded);
+ }
+ if(current.length)chunks.push('['+current.join(',')+']');
+ return chunks;
+}
+
+export async function restoreBackup(input:any){
+ // Freeze caller-owned values before the first await; validate and insert the
+ // same bytes even if a direct caller later changes its object.
+ const encoded=JSON.stringify(input);
+ if(!encoded||backupBytes(encoded)>BACKUP_MAX_BYTES)throw new Error('Invalid or oversized backup');
+ const p=JSON.parse(encoded);await validateBackup(p);
+ const recordChunks=backupChunks(p.snapshot.records),jobChunks=backupChunks(p.snapshot.jobs);
+ const token=crypto.randomUUID(),now=new Date().toISOString();
+ const guard="EXISTS (SELECT 1 FROM runtime_settings WHERE id='restore-lock' AND data=?)";
+ const ops=[db().prepare("INSERT OR IGNORE INTO runtime_settings(id,data,updated_at) SELECT 'restore-lock',?,? WHERE NOT EXISTS (SELECT 1 FROM records) AND NOT EXISTS (SELECT 1 FROM jobs)").bind(token,now)];
+ for(const chunk of recordChunks)ops.push(db().prepare(`
+  INSERT INTO records(id,kind,title,project_id,status,data,created_at,updated_at)
+  SELECT json_extract(value,'$.id'),json_extract(value,'$.kind'),json_extract(value,'$.title'),json_extract(value,'$.project_id'),json_extract(value,'$.status'),json_extract(value,'$.data'),json_extract(value,'$.created_at'),json_extract(value,'$.updated_at')
+  FROM json_each(?) WHERE ${guard}
+ `).bind(chunk,token));
+ for(const chunk of jobChunks)ops.push(db().prepare(`
+  INSERT INTO jobs(id,project_id,objective,mode,status,phase,payload,result,attempts,created_at,updated_at)
+  SELECT json_extract(value,'$.id'),json_extract(value,'$.project_id'),json_extract(value,'$.objective'),json_extract(value,'$.mode'),'canceled',json_extract(value,'$.phase'),json_extract(value,'$.payload'),json_extract(value,'$.result'),CAST(json_extract(value,'$.attempts') AS TEXT),json_extract(value,'$.created_at'),json_extract(value,'$.updated_at')
+  FROM json_each(?) WHERE ${guard}
+ `).bind(chunk,token));
+ // A missing row must fail inside the transaction. A deliberately NULL data
+ // value violates the existing NOT NULL constraint and rolls back every chunk.
+ ops.push(db().prepare(`INSERT INTO runtime_settings(id,data,updated_at)
+  SELECT ?,NULL,? WHERE ${guard} AND
+  ((SELECT COUNT(*) FROM records)<>? OR (SELECT COUNT(*) FROM jobs)<>?)
+ `).bind('restore-integrity:'+token,now,token,p.snapshot.records.length,p.snapshot.jobs.length));
+ ops.push(db().prepare("DELETE FROM runtime_settings WHERE id='restore-lock' AND data=?").bind(token));
+ const result=await db().batch(ops);
+ if(!result[0].meta.changes)throw new Error('Restore refuses to overwrite a nonempty workspace');
+ return {restored:true,records:p.snapshot.records.length,jobs:p.snapshot.jobs.length,resumed:false,scope:'Active imported jobs canceled; credentials and authority must be reconnected'};
+}

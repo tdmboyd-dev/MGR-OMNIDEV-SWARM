@@ -1,0 +1,17 @@
+{
+  "schema": "mgr.recovered-verification-archive.v1",
+  "qualification": "Recovered previous-session execution; not a new test run",
+  "sourceCommit": "12dd7b6f1130505ebe9f832a76980ad32bb13b31",
+  "summary": {
+    "passedProfiles": 75,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 75,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "archive": "recovered-full-75.tar.gz",
+  "sha256": "21145e9b60fd311019b30d666934e02dbec718b33f969e5d89d6a26b0d666cd8",
+  "outputHashesRechecked": 75,
+  "outputHashMismatches": 0
+}

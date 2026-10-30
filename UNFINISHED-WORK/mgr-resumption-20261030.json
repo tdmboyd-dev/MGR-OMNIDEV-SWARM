@@ -1,0 +1,162 @@
+{
+  "schema": "mgr.trilogy.resumption.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-10-30T07:45:29.271863+00:00",
+  "sourceCommit": "3ad76710266e7e0181578924075db6b5ea07172d",
+  "sourceTree": "4e02554103a5a4f1ba011cbdbb8480baeb56eca7",
+  "fullVerification": {
+    "report": "UNFINISHED-WORK/evidence/resumption-20261030/final/report.json",
+    "passedProfiles": 76,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 76
+  },
+  "qualification": "Actual local code and route regression; not independently certified parent acceptance, hosted provider qualification, browser acceptance or deployment.",
+  "fullAcceptancePromotions": 0,
+  "conservedScope": {
+    "originalParents": 174,
+    "acceptanceClauses": 441,
+    "separateUpgrades": 28
+  },
+  "ownerProgress": {
+    "completed": [
+      {
+        "title": "Restore the full bounded workspace backup",
+        "observed": "13 focused cases cover 10,000 records plus 10,000 jobs, atomic rollback, concurrent restore admission, canceled restored jobs, UTF-8 limits, valid near-10-MB API requests, caller mutation and malformed Unicode refusal.",
+        "taskIds": [
+          "DATA-03"
+        ],
+        "evidence": [
+          {
+            "kind": "executed-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/resumption-20261030/final/backupCapacity.log",
+            "sha256": "0448c1d48a2e37dc4b6cc5f9a33a967530f4134119936321b35c6570962e3a4f",
+            "sourceRevision": "3ad76710266e7e0181578924075db6b5ea07172d"
+          }
+        ],
+        "remaining": [
+          "Hosted D1 performance, protected scheduled backups, recovery objectives, vault recovery and credential reauthorization remain to qualify."
+        ]
+      },
+      {
+        "title": "Refuse malformed progress evidence before rendering",
+        "observed": "Evidence path/label validation and the exact embedded Markdown payload check prevent malformed data from crashing the progress view or its download. Existing unavailable references stay visible.",
+        "taskIds": [
+          "UX-01",
+          "UX-03"
+        ],
+        "evidence": [
+          {
+            "kind": "executed-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/resumption-20261030/final/ownerProgressContract.log",
+            "sha256": "751f97f996d84c715ff24ef25767c5ec98280a004085ae7367202d5681eb7bca",
+            "sourceRevision": "3ad76710266e7e0181578924075db6b5ea07172d"
+          },
+          {
+            "kind": "executed-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/resumption-20261030/final/buildProgressUi.log",
+            "sha256": "38ab919d50e94187647a6a78018227ea5608eeab0d3800b247e4c7fb5e6c4b44",
+            "sourceRevision": "3ad76710266e7e0181578924075db6b5ea07172d"
+          }
+        ],
+        "remaining": [
+          "Actual browser, mobile, keyboard and screen-reader journeys remain unqualified."
+        ]
+      },
+      {
+        "title": "Keep publication responses bound to the reviewed action",
+        "observed": "Recovered validation rejects mismatched job, authorization, preview, candidate and draft state before the interface reports a successful save.",
+        "taskIds": [
+          "DEV-02",
+          "UX-03"
+        ],
+        "evidence": [
+          {
+            "kind": "executed-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/resumption-20261030/final/trilogyPublicationResponse.log",
+            "sha256": "e7cb02ed555146f9919a15ab3b091bbecafbab02ceefcad24ef674209bc2ee5e",
+            "sourceRevision": "3ad76710266e7e0181578924075db6b5ea07172d"
+          }
+        ],
+        "remaining": [
+          "Live in-product GitHub draft creation and revoked-account recovery remain to qualify."
+        ]
+      },
+      {
+        "title": "Verify the current source and the three-product local flow",
+        "observed": "All 76 source-bound verification profiles pass, including build and type checks. The fresh local three-product flow passes 14 checks using actual Git, SQLite and HTTP with explicit fixture signing/provider boundaries.",
+        "taskIds": [
+          "QA-02",
+          "REL-01",
+          "RUN-03"
+        ],
+        "evidence": [
+          {
+            "kind": "executed-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/resumption-20261030/final/report.json",
+            "sha256": "fa728f5abaed1806902ec6d8bb3c4e7c4a92c6f333d6b06daf74c53e0d8c0276",
+            "sourceRevision": "3ad76710266e7e0181578924075db6b5ea07172d"
+          },
+          {
+            "kind": "executed-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/resumption-20261030/integration-summary.json",
+            "sha256": "672bf2fcb49c4fe98ac4f3762b83084400a6a98db139b3ba6ec12cd9b81003f8",
+            "sourceRevision": "3ad76710266e7e0181578924075db6b5ea07172d"
+          }
+        ],
+        "remaining": [
+          "Other GitHub branches contain additional unintegrated work. Reconcile those branches before treating current-source checks as coverage of all Trilogy implementations.",
+          "Hosted identities, production signer custody, physical worker qualification, browser acceptance and full original requirement acceptance remain separate."
+        ]
+      }
+    ],
+    "taskUpdates": [
+      {
+        "id": "DATA-03",
+        "currentState": "The bounded version-1 archive now restores its declared maximum 10,000 records and 10,000 jobs atomically. All 13 focused cases pass inside the fresh 76-profile full run.",
+        "evidence": [
+          {
+            "kind": "executed-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/resumption-20261030/final/backupCapacity.log",
+            "sha256": "0448c1d48a2e37dc4b6cc5f9a33a967530f4134119936321b35c6570962e3a4f",
+            "sourceRevision": "3ad76710266e7e0181578924075db6b5ea07172d"
+          }
+        ],
+        "remainingActions": [
+          "Qualify the bounded archive on hosted D1 against actual execution time, memory and storage constraints.",
+          "Complete protected scheduled backups, chosen recovery-time and recovery-point objectives, tested vault recovery and credential reauthorization.",
+          "Design and prove an explicit migration/export flow if data must exceed the documented per-archive or per-row bounds."
+        ]
+      }
+    ]
+  },
+  "githubSourcePublication": {
+    "status": "pending-this-wave-readback",
+    "lastConfirmedDevelopmentCommit": "b453894362163ca1413c02378935711958db3503"
+  },
+  "sideBranchDiscovery": {
+    "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+    "branch": "repair/completion-2026-10-28",
+    "commit": "0cbea3f363d4b036f16a1228df3518cd179a716f",
+    "status": "separate source; Windows/native implementation and historical evidence need reconciliation with active tested source",
+    "liveHostProbePerformed": false
+  },
+  "clauseMapping": [
+    {
+      "criterionId": "DATA-03/AC-01",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "3ad76710266e7e0181578924075db6b5ea07172d",
+      "observed": "The former 498-row restore ceiling is superseded by the current implementation: up to 10,000 records plus 10,000 jobs restore atomically within the 10,000,000-byte archive contract. All 13 focused cases pass, including rollback, concurrent admission, large rows, near-limit API envelopes and malformed Unicode refusal.",
+      "remaining": "Real hosted disaster recovery, full protected artifact/vault restoration and agreed recovery objectives remain outside this bounded local archive proof. Historical 498-row observations are retained as earlier evidence only.",
+      "evidence": [
+        {
+          "kind": "executed-local-evidence",
+          "path": "UNFINISHED-WORK/evidence/resumption-20261030/final/backupCapacity.log",
+          "sha256": "0448c1d48a2e37dc4b6cc5f9a33a967530f4134119936321b35c6570962e3a4f",
+          "sourceRevision": "3ad76710266e7e0181578924075db6b5ea07172d"
+        }
+      ]
+    }
+  ]
+}

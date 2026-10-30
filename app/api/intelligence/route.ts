@@ -1,4 +1,19 @@
 import {intelligenceGraph,searchIntelligence,listDecisions,saveDecision,decisionOutcome,exportBackup,validateBackup,restoreBackup} from '@/lib/intelligence';
 export const dynamic='force-dynamic';
 export async function GET(request:Request){try{const u=new URL(request.url),action=u.searchParams.get('action');const result=action==='backup'?await exportBackup():action==='decisions'?await listDecisions(u.searchParams.get('projectId')||''):action==='search'?await searchIntelligence(u.searchParams.get('query')||'',u.searchParams.get('projectId')||''):await intelligenceGraph(u.searchParams.get('projectId')||'');return Response.json(result,{headers:{'Cache-Control':'no-store',...(action==='backup'?{'Content-Disposition':'attachment; filename="omnidev-workspace-backup.json"'}:{})}})}catch(e:any){return Response.json({error:e.message},{status:400})}}
-export async function POST(request:Request){try{if(request.headers.get('origin')&&request.headers.get('origin')!==new URL(request.url).origin)return Response.json({error:'Cross-origin request refused'},{status:403});const raw=await request.text();if(raw.length>10000000)throw new Error('Input exceeds 10 MB');const p=JSON.parse(raw);let result;if(p.action==='decision')result=await saveDecision(p);else if(p.action==='outcome')result=await decisionOutcome(p);else if(p.action==='validateBackup')result=await validateBackup(p.backup);else if(p.action==='restoreBackup')result=await restoreBackup(p.backup);else throw new Error('Unknown intelligence action');return Response.json({result},{headers:{'Cache-Control':'no-store'}})}catch(e:any){return Response.json({error:e.message},{status:400})}}
+export async function POST(request:Request){
+ try{
+  if(request.headers.get('origin')&&request.headers.get('origin')!==new URL(request.url).origin)return Response.json({error:'Cross-origin request refused'},{status:403});
+  const raw=await request.text();
+  // A valid 10 MB archive needs room for the JSON action/backup wrapper. The
+  // archive validator still enforces its separate, exact UTF-8 byte cap.
+  if(new TextEncoder().encode(raw).byteLength>10_065_536)throw new Error('Input exceeds the backup transport limit');
+  const p=JSON.parse(raw);let result;
+  if(p.action==='decision')result=await saveDecision(p);
+  else if(p.action==='outcome')result=await decisionOutcome(p);
+  else if(p.action==='validateBackup')result=await validateBackup(p.backup);
+  else if(p.action==='restoreBackup')result=await restoreBackup(p.backup);
+  else throw new Error('Unknown intelligence action');
+  return Response.json({result},{headers:{'Cache-Control':'no-store'}});
+ }catch(e:any){return Response.json({error:e.message},{status:400});}
+}

@@ -1,0 +1,122 @@
+✖ DATA-03 restores 1,600 records/jobs atomically and preserves text without restarting jobs (25.25967ms)
+✖ DATA-03 a failure in a later job chunk rolls back records, jobs and admission together (11.517243ms)
+✔ DATA-03 silently skipped rows cannot produce a successful partial restore (11.747184ms)
+✖ DATA-03 concurrent large restores have one winner and preserve existing settings (16.083649ms)
+✖ DATA-03 export and restore cover the declared 10,000 records plus 10,000 jobs (195.218723ms)
+✖ DATA-03 export refuses record overflow instead of producing a truncated restorable archive (61.957037ms)
+✖ DATA-03 oversized UTF-8 archives and individual rows fail before any write (223.072444ms)
+✖ DATA-03 the real API restores a large archive and refuses cross-origin restore (32.988993ms)
+✖ DATA-03 malformed late records and nonempty targets never write a partial prefix (16.352857ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 1
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 602.46359
+
+✖ failing tests:
+
+test at tests/backup-capacity.mjs:42:1
+✖ DATA-03 restores 1,600 records/jobs atomically and preserves text without restarting jobs (25.25967ms)
+  Error: Restore supports at most 498 records/jobs per transactional batch; use a qualified migration for larger archives
+      at Module.restoreBackup (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/.test-runtime/intelligence.mjs:206:11)
+      at async TestContext.<anonymous> (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/tests/backup-capacity.mjs:44:15)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/backup-capacity.mjs:58:1
+✖ DATA-03 a failure in a later job chunk rolls back records, jobs and admission together (11.517243ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /late restore failure/. Input:
+  
+  'Error: Restore supports at most 498 records/jobs per transactional batch; use a qualified migration for larger archives'
+  
+      at async TestContext.<anonymous> (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/tests/backup-capacity.mjs:61:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Restore supports at most 498 records/jobs per transactional batch; use a qualified migration for larger archives
+        at Module.restoreBackup (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/.test-runtime/intelligence.mjs:206:11)
+        at async waitForActual (node:assert:646:5)
+        at async strict.rejects (node:assert:769:25)
+        at async TestContext.<anonymous> (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/tests/backup-capacity.mjs:61:2)
+        at async Test.run (node:internal/test_runner/test:1409:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:974:7),
+    expected: /late restore failure/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/backup-capacity.mjs:74:1
+✖ DATA-03 concurrent large restores have one winner and preserve existing settings (16.083649ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/tests/backup-capacity.mjs:78:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/backup-capacity.mjs:84:1
+✖ DATA-03 export and restore cover the declared 10,000 records plus 10,000 jobs (195.218723ms)
+  Error: Restore supports at most 498 records/jobs per transactional batch; use a qualified migration for larger archives
+      at Module.restoreBackup (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/.test-runtime/intelligence.mjs:206:11)
+      at async TestContext.<anonymous> (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/tests/backup-capacity.mjs:87:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/backup-capacity.mjs:95:1
+✖ DATA-03 export refuses record overflow instead of producing a truncated restorable archive (61.957037ms)
+  Error: Restore supports at most 498 records/jobs per transactional batch; use a qualified migration for larger archives
+      at Module.restoreBackup (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/.test-runtime/intelligence.mjs:206:11)
+      at async TestContext.<anonymous> (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/tests/backup-capacity.mjs:96:38)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/backup-capacity.mjs:101:1
+✖ DATA-03 oversized UTF-8 archives and individual rows fail before any write (223.072444ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/tests/backup-capacity.mjs:104:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /oversized|10 MB|limit/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/backup-capacity.mjs:110:1
+✖ DATA-03 the real API restores a large archive and refuses cross-origin restore (32.988993ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  400 !== 200
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/tests/backup-capacity.mjs:114:77)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 400,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/backup-capacity.mjs:121:1
+✖ DATA-03 malformed late records and nonempty targets never write a partial prefix (16.352857ms)
+  Error: Restore supports at most 498 records/jobs per transactional batch; use a qualified migration for larger archives
+      at Module.restoreBackup (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/.test-runtime/intelligence.mjs:206:11)
+      at async TestContext.<anonymous> (file:///workspace/scratch/bfade1ee99d9/repos/omnidev/tests/backup-capacity.mjs:124:30)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

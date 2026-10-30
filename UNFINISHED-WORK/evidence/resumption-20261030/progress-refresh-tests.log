@@ -1,0 +1,24 @@
+✔ progress screen loads the saved board with a named isolated frame and no-store fetch (47.824408ms)
+✔ HTML mentioning 441, incomplete registers and malformed provenance never appear as a saved board (626.737563ms)
+✔ failed or incorrect board reads expose a retry instead of a stale successful frame (46.682043ms)
+✔ a board request is canceled on navigation and a late reply cannot display it (12.621794ms)
+✔ the committed board and its complete data remain valid without mutation (21.960473ms)
+✔ missing, duplicated, oversized or truncated board envelopes fail closed (7.827505ms)
+✔ all original and upgrade identities stay unique and separately counted (115.911418ms)
+✔ displayed counts must agree with the detailed records (163.738498ms)
+✔ each clause retains its parent and complete renderer data (91.496385ms)
+✔ missing arrays and stale completion references cannot enter the renderer (108.223503ms)
+✔ evidence and source references must resolve to the provided maps (84.736199ms)
+✔ referenced evidence must provide renderable labels without hiding restricted or unavailable proof (124.444505ms)
+✔ the markdown download requires one nonempty string payload (31.685344ms)
+✔ local pass totals and source identity remain internally consistent (101.985074ms)
+✔ valid failed and blocked local profiles do not hide the board (17.218882ms)
+✔ invalid top-level payloads return false instead of throwing (0.306784ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1121.90665

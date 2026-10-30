@@ -1,3 +1,17 @@
+# Current source and full-inventory audit — October 30, 2026
+
+Current tested runtime: `3ad76710266e7e0181578924075db6b5ea07172d` (tree `4e02554103a5a4f1ba011cbdbb8480baeb56eca7`). **76/76 full local profiles pass**, including build/typecheck and all **13** bounded-backup cases. Original raw output hashes were rechecked with zero mismatches. `UNFINISHED-WORK/evidence/resumption-20261030/final/report.json` preserves exact source attribution; the earlier 76-profile run and recovered 75-profile run remain separate.
+
+The backup now restores up to 10,000 records plus 10,000 jobs in one transaction, refuses partial results, preserves canceled jobs and handles the actual near-10-MB request envelope. Progress evidence and embedded-download validation prevent a malformed response from crashing the view. The recovered publication-state checks remain in the full run.
+
+A new clean three-product local flow passed **14/14 checks**. Public summary: `UNFINISHED-WORK/evidence/resumption-20261030/integration-summary.json`. It uses actual local Git/SQLite/HTTP and fixture signing/provider boundaries; private companion source manifests remain in the private owning repository. No new browser or connected-device probe was attempted.
+
+The owner requested a full built-versus-remaining inventory. The native GitHub sweep found additional code on separate branches, including OmniDev `repair/completion-2026-10-28` at `0cbea3f363d4b036f16a1228df3518cd179a716f`. Current active-source tests do not cover those branch implementations. Reconcile source and original receipts before merging or declaring those capabilities missing. Current main remains `d27dd5b3f09102a0ae220f605d463c1949f62191`; this wave has not yet received a new remote save/readback, main merge or deployment.
+
+All **174 original parents / 441 exact clauses / 28 separate upgrades** remain intact; recorded parent states remain **122 open / 52 implemented_unverified / zero independently certified full parents**. An open task can already contain working code. The latest additive source/evidence overlay is `UNFINISHED-WORK/mgr-resumption-20261030.json`. Full product completion is not measured by local test pass rate.
+
+---
+
 # Confirmed source publication — October 30, 2026
 
 **All three reviewed source trees are saved on their authorized GitHub development branches and read back.** The owner explicitly asked to bring the GitHub approval back after the earlier rejection; the native connection then completed these saves. The earlier rejection and stopped-write notes below remain historical facts and no longer describe the current source-publication state.
