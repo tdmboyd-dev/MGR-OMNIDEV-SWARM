@@ -9,6 +9,7 @@ export const FIXTURE_PROFILES = Object.freeze(Object.fromEntries(Object.entries(
  prepare:['tests/prepare.mjs'],
  connectorPreview:['tests/connector-preview.test.mjs'],
  toolchainSecurity:['tests/toolchain-security.test.mjs'],
+ companionMemory:['tests/companion-memory.test.mjs'],
  trilogyLink:['tests/trilogy-job-link.test.mjs'],
  trilogyPublication:['tests/trilogy-publication.test.mjs'],
  trilogyPublicationUi:['tests/trilogy-publication-ui.test.mjs'],
