@@ -1,2 +1,7 @@
 # Keep the signed updater trust anchor byte-identical on Windows.
 /companion/engine/public-key.pem text eol=lf
+
+# Reproducible worker archive and generated board bytes across checkouts.
+/worker/** text eol=lf
+/UNFINISHED-WORK/owner-progress-20261029.* text eol=lf
+/public/owner-progress.html text eol=lf
