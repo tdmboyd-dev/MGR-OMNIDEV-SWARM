@@ -1,3 +1,44 @@
+# MGR Trilogy — first-read agent instructions
+
+## Current verified local source and stopped publication — October 30, 2026
+
+Read the newest `HANDOFF.md`, `MGR-TRILOGY-HANDOFF.md`, `COMMANDER-HANDOFF.md` and `UNFINISHED-WORK/mgr-completion-20261030.json` before resuming. Exact runtime `8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec` passed **73/73** full local profiles; the initial **72/73** failure and all raw outputs remain in `UNFINISHED-WORK/evidence/completion-20261030/`. Current publication/progress features are built and locally tested, not remotely published or deployed. A clean actual local integration passed 14 checks with explicit fixture provider/signing boundaries.
+
+The native GitHub blob write returned `isError: true` / "user rejected MCP tool call". Further GitHub mutations stopped; last confirmed public development source is `68dce7592244d664bca09548e40ebb1265114305`. Do not reissue the rejected action through another path. Preserve local history/recovery artifacts; any resumed publication needs a supported newly permitted flow and exact readback. Browser URL-policy rejection means actual GUI/mobile/keyboard acceptance is unverified; HTTP/component tests are not browser proof. The prior declined connected-device probe is still declined.
+
+Keep all 174 parents / 441 clauses / 28 separate upgrades, 122 open / 52 implemented_unverified and zero independently certified parents unchanged. The progress overlay records current scoped results without changing canonical acceptance. Public evidence must not contain companion source manifests. Later documentation/derived-board commits do not relabel the original runtime receipts as a different execution.
+
+
+Read [00-MGR-TRILOGY-COMMANDER.md](00-MGR-TRILOGY-COMMANDER.md) first. It is Time Boyd's standing instruction for the entire build and every resumed session, not a one-wave prompt.
+
+Then read [01-UNIVERSAL-BEAST-BUILD-SYSTEM.md](01-UNIVERSAL-BEAST-BUILD-SYSTEM.md), MGR Beast Pack, [COMMANDER-HANDOFF.md](COMMANDER-HANDOFF.md), this repository's existing `HANDOFF.md` where present, and OmniDev's existing `MGR-TRILOGY-HANDOFF.md`. Inspect the current branch, source, tests, architecture, plans and original acceptance records before changes. The commander handoff names the active development branches: do not mistake an older default-branch application for the newest working source.
+
+## Execute the work
+
+Find the existing implementation, reproduce what is wrong or unproven, repair or complete it, run meaningful positive and failure tests, verify the actual result, update the owning handoff and the trilogy handoff, save to GitHub, and read the save back. Continue the next actionable item instead of stopping at an arbitrary checkpoint. A genuine external blocker parks that item, not every independent task.
+
+Use plain English with Time. Give brief factual updates during long work, not a narration of every edit. Name actual unfinished functions and user actions, not only task counts or broad categories. Charts must separate feature completion, local tests, integration and production readiness; unknown is not a made-up percentage.
+
+## Keep the products connected without duplication
+
+- OmniDev owns objectives, projects, accounts, jobs, model budgets and owner decisions. Reuse its existing worker runner and capacity-limited fleet; do not build another scheduler merely to claim ten agents.
+- Code Monster owns pinned source inventory, candidate Git changes, the evidence ledger, Imprint and its Slot Machine selector. VampBite derives from authoritative evidence, not a second editable history.
+- OmniSight owns read-only, permission-scoped views. A display cannot grant execution or release authority. DevMapGod is a workflow across these products, not a fourth repository.
+
+Preserve original requirement IDs and exact acceptance wording, including OmniDev's 174 parents, 441 clauses and 28 separate upgrades. An open record is not proof that its code is absent. Source presence and passing fixture tests are not proof of full acceptance.
+
+## Authority and safety
+
+The owner authorizes routine build, repair, testing, commits, branches and merges for the Trilogy. Older blanket review-branch-only instructions do not require another chat permission request. Still check the precise target and tested changes, preserve concurrent edits, obey branch protection and tool-enforced permissions, retain secret/spend/destructive-action boundaries, and never retry a specifically declined action through another route. No force-push or evidence fabrication to make progress look green.
+
+Keep archived evidence immutable. Remove superseded active code only after proving the replacement; do not delete history to improve totals. Say exactly what was inspected and executed. Chat claims without recoverable source and receipts remain unverified. No unattended operation is implied without an actual running authorized service.
+
+## Required save evidence
+
+Record changed files, executed commands, results and scope, source revision, outstanding named actions and exact blockers. For each GitHub save, retain its commit and read back the affected file/tree/reference. Run the owning project's relevant checks; documentation-only changes do not establish a fresh runtime or browser pass. Maintain a clean restart path in the current handoffs.
+
+---
+
 # MGR OmniDev — coding agent rules
 
 Read `HANDOFF.md` and `MGR-TRILOGY-HANDOFF.md` before any source mutation. Their **newest dated sections** supersede older historical entries.

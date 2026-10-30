@@ -1,0 +1,77 @@
+{
+  "schema": "mgr.progress-resume-verification.v1",
+  "baseCommit": "68dce7592244d664bca09548e40ebb1265114305",
+  "sourceState": "dirty-working-tree-files-bound-below",
+  "passedCases": 14,
+  "failedCases": 0,
+  "skippedCases": 0,
+  "command": "node --test --test-isolation=none --test-reporter=tap tests/owner-progress.test.mjs tests/build-progress-ui.test.mjs",
+  "log": "focused-tests-final.log",
+  "logSha256": "af9efe72932111e67ee0940e0f539d9d2678a90310a505bd89417042ceb79fbf",
+  "generatedArtifactCheck": "passed",
+  "changes": [
+    "Structured completeness and immutable revision validation before displaying the board",
+    "Embedded user-requested exports permitted while origin isolation is preserved",
+    "Displayed evidence date follows the actual latest recorded timestamp in America/Chicago",
+    "Recovered stale generated view rebuilt from committed canonical inputs"
+  ],
+  "files": [
+    {
+      "path": "components/build-progress.tsx",
+      "bytes": 4139,
+      "sha256": "7184cca9766a68cc7ba7c3f94326c4a259ee9c4c971c83831a039ff5561d9a09"
+    },
+    {
+      "path": "app/progress/page.tsx",
+      "bytes": 255,
+      "sha256": "c34b67230a960c328da4d19adf2e446ff911590388ebacc4e43be6db0f0b7bb5"
+    },
+    {
+      "path": "scripts/build-owner-progress.mjs",
+      "bytes": 46834,
+      "sha256": "2f14deb1d2f0ec22bb1c4c4f183b366aa358ffbecd8a360373dc964f0bf373c8"
+    },
+    {
+      "path": "scripts/owner-progress-evidence.mjs",
+      "bytes": 6187,
+      "sha256": "6e2be594dd8ab62638b33a8ddb70667bc9304c18d962303ecda26a32c2c7fe07"
+    },
+    {
+      "path": "tests/build-progress-ui.test.mjs",
+      "bytes": 5633,
+      "sha256": "8585053777e24f2fda39af0838ba7524f6b6489a77e1b5f8069b69aeb48f7444"
+    },
+    {
+      "path": "tests/owner-progress.test.mjs",
+      "bytes": 12171,
+      "sha256": "713e1c9c925668753ea04c14164be517fd9c42c8a40bcdd057bc131433c3231b"
+    },
+    {
+      "path": "public/owner-progress.html",
+      "bytes": 1412895,
+      "sha256": "3bb015697a53cf4b43e9c7ee849d18f3425091f36f9c2acf89d1e869844cc3d6"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.json",
+      "bytes": 934978,
+      "sha256": "a2050f9e8cd214e2a1f41e65574e4dff273bfaa41a097be5ad1f7468e2f2f6e2"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.md",
+      "bytes": 607625,
+      "sha256": "e14fc47cce355b4535e86e7caac4cbc1c9793cb27c5ebad4af82dfe47e1d10e4"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.svg",
+      "bytes": 2642,
+      "sha256": "d815e8eb0d753341102ad8e1982cdf113c5ca3d7b41ae8efba47e850752efaee"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.html",
+      "bytes": 1412895,
+      "sha256": "3bb015697a53cf4b43e9c7ee849d18f3425091f36f9c2acf89d1e869844cc3d6"
+    }
+  ],
+  "scope": "Local executable component harness, actual generated filter script, committed-source generator and output-hash checks. HTTP responses are separately recorded; no actual browser verification is claimed.",
+  "browserLimitation": "browser-limitation.json"
+}

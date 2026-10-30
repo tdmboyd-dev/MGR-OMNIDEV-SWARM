@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @import "tw-animate-css";
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 :root{--background:#0c1110;--foreground:#e7ece8;--card:#121916;--card-foreground:#e7ece8;--popover:#18211c;--popover-foreground:#e7ece8;--primary:#c9f58c;--primary-foreground:#172113;--secondary:#1b241f;--secondary-foreground:#d3ded7;--muted:#1c2620;--muted-foreground:#95a399;--accent:#202d23;--accent-foreground:#d6edce;--destructive:#f89494;--border:#29342d;--input:#344139;--ring:#b7da89;--radius:.6rem;--chart-1:#c9f58c;--chart-2:#80c9b9;--chart-3:#b1a3dc;--chart-4:#e6b671;--chart-5:#ed9494;--sidebar:#101612;--sidebar-foreground:#a9b6ab;--sidebar-primary:#c9f58c;--sidebar-primary-foreground:#142211;--sidebar-accent:#24301c;--sidebar-accent-foreground:#d3f3a5;--sidebar-border:#273129;--sidebar-ring:#b7da89}
@@ -61,3 +62,12 @@
 .job-list-tools{display:flex;gap:16px;flex-wrap:wrap;padding:20px;background:#1b2327;border:1px solid #526064;border-radius:12px}.job-list-tools .field{flex:1 1 240px;margin:0}.runtime-job-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));align-items:stretch}.runtime-job{border-radius:16px;display:flex;flex-direction:column;gap:12px;background:#1b2527;border-color:#4d6060}.runtime-job h3{margin:8px 0;font-size:18px;color:#f2f3eb;overflow-wrap:anywhere}.runtime-job p{display:block;color:#c9d1cf;margin:0}.runtime-job small{color:#b1c3bc;overflow-wrap:anywhere}.runtime-job footer{margin-top:auto;flex-wrap:wrap;color:#c3d0c9;font-size:12px}.runtime-job .job-card-actions{justify-content:flex-start;flex-wrap:wrap;gap:8px;padding-top:6px}.job-card-actions button{min-height:42px}.runtime-detail{scroll-padding-top:110px}.job-progress-header{position:sticky;top:-24px;z-index:5;background:#17221c;padding:18px 0;border-bottom:1px solid #637360;display:flex;flex-wrap:wrap;gap:12px}.job-progress-header>div{flex:1 1 220px}.job-progress-header small{display:block;overflow-wrap:anywhere}.job-move-controls{padding:20px;border:1px solid #50634d;border-radius:12px;margin:20px 0;gap:12px}.runtime-detail .modal-actions{gap:12px}.runtime-detail .review-run-settings{gap:16px}.capability-gaps details{margin:14px 0;line-height:1.6}.capability-gaps details summary{cursor:pointer;padding:12px;border:1px solid #52614d;border-radius:8px}.runtime-workspace .field input,.runtime-workspace .field select{min-height:44px}
 @media(max-width:650px){.runtime-command{padding:20px}.runtime-command h2{font-size:24px}.runtime-command-stats{margin-left:0}.active-job-row{padding:16px}.job-progress-header{top:-16px}.job-card-actions button{flex:1 1 auto}}
 .live-job-evidence{padding:20px;border:1px solid #71658f;border-radius:12px;background:#201f2a;margin:20px 0;min-height:120px}.live-job-evidence h3{margin-bottom:12px}.live-job-evidence p{line-height:1.6;color:#dedee7;margin:10px 0}.live-job-evidence details summary{cursor:pointer;padding:12px 0}
+
+.build-progress-view { min-width: 0; width: 100%; }
+.build-progress-heading { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding: 1.25rem; margin-bottom: 1rem; }
+.build-progress-heading h2 { margin: 0 0 .5rem; }
+.build-progress-heading p { max-width: 52rem; }
+.build-progress-frame { display: block; width: 100%; min-height: 76vh; border: 1px solid #33383b; border-radius: 1rem; background: #101416; }
+.progress-page { max-width: 1600px; margin: 0 auto; padding: 1.5rem; }
+.progress-page > a { display: inline-flex; margin-bottom: 1rem; }
+@media (max-width: 640px) { .build-progress-heading { align-items: stretch; flex-direction: column; } .progress-page { padding: .75rem; } .build-progress-frame { min-height: 82vh; } }

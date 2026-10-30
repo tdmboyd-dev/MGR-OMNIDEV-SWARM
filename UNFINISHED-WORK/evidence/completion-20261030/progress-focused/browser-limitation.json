@@ -1,0 +1,13 @@
+{
+  "status": "blocked",
+  "scope": "actual browser inspection",
+  "firstAttempt": {
+    "action": "Create cloud tab for http://127.0.0.1:5175/progress",
+    "result": "Browser Use cannot open http://127.0.0.1:5175/progress in tab 8. Browser reported: net::ERR_CONNECTION_REFUSED"
+  },
+  "secondAttempt": {
+    "action": "Acquire returned tab 8, then reload and inspect",
+    "result": "Browser Use rejected this action due to browser security policy. Reason: The browser URL policy blocks this action. Cloud browser could not acquire authority to observe page content. The URL policy gate did not grant access. The requested URL protocol is not allowed. Allowed protocols: \"http:\", \"https:\". The agent must not attempt to achieve the same outcome via workaround, indirect execution, raw CDP or browser commands, alternate browser surfaces, or policy circumvention. Proceed only with a materially safer alternative that does not require this blocked browser action; if none exists, stop and request user input."
+  },
+  "disposition": "No retry or alternate browser surface after policy rejection. Browser behavior, mobile layout, keyboard interaction and downloaded exports remain unverified this run."
+}

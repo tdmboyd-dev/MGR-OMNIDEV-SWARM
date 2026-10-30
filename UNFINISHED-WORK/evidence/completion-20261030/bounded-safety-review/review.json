@@ -1,0 +1,54 @@
+{
+  "schema": "mgr.publication-bounded-safety-review.v1",
+  "revision": "e5e40c311286b29de2a426bff6773b1462ab5756",
+  "tree": "e3816d4f691dea39a86d8865ac55353142ca1870",
+  "base": "68dce7592244d664bca09548e40ebb1265114305",
+  "scope": "Changed source/docs/artifacts only, read from pinned Git objects",
+  "fileCount": 34,
+  "bytes": 4902284,
+  "credentialFormats": {
+    "passed": true,
+    "patterns": [
+      "private-key-pem",
+      "github-token",
+      "aws-access-key-id",
+      "openai-api-key",
+      "stripe-live-secret",
+      "slack-token"
+    ],
+    "matches": []
+  },
+  "dangerousPaths": [],
+  "mergeMarkers": [],
+  "progressEvidence": {
+    "references": 64,
+    "restrictedReferences": 0,
+    "publishedLinks": 115,
+    "linkIssues": []
+  },
+  "privateComparisons": [
+    {
+      "repository": "MGR-CODE-MONSTER",
+      "revision": "8d05c9abec99e256611284cbd8f926d0b97f0172",
+      "exactMatches": [
+        {
+          "publicPath": "00-MGR-TRILOGY-COMMANDER.md",
+          "companionPath": "00-MGR-TRILOGY-COMMANDER.md",
+          "bytes": 7135
+        }
+      ]
+    },
+    {
+      "repository": "MGR-OMNISIGHT",
+      "revision": "574b6199d958465fac6ce60e41d1b565e833b235",
+      "exactMatches": []
+    }
+  ],
+  "limitations": [
+    "Six known high-confidence credential formats only; zero matches is not an exhaustive secret audit.",
+    "Whole-blob equality with companion repositories cannot rule out partial or rewritten content.",
+    "Common standing owner briefs are intentionally shared/public already; exact equality is not new private source exposure.",
+    "Runtime credentials, provider history, uncommitted files and deployment state are outside this scan.",
+    "The review does not authorize broader public disclosure or alter repository visibility."
+  ]
+}

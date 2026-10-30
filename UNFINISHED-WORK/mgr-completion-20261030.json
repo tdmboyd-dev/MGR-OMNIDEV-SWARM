@@ -1,0 +1,573 @@
+{
+  "schema": "mgr.completion-wave.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-10-30T05:34:28.000Z",
+  "sourceCommit": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec",
+  "sourceTree": "b34c32d6fae0f022287e402fa71acfdb39aa4723",
+  "fullVerification": {
+    "report": "UNFINISHED-WORK/evidence/completion-20261030/run/report.json",
+    "passedProfiles": 73,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 73
+  },
+  "initialVerification": {
+    "report": "UNFINISHED-WORK/evidence/completion-20261030/initial-run/report.json",
+    "sourceCommit": "e5e40c311286b29de2a426bff6773b1462ab5756",
+    "passedProfiles": 72,
+    "failedProfiles": 1,
+    "totalProfiles": 73
+  },
+  "qualification": "executed-local-regression-not-live-provider-or-release-certification",
+  "fullAcceptancePromotions": 0,
+  "conservedScope": {
+    "originalParents": 174,
+    "acceptanceClauses": 441,
+    "separateUpgrades": 28,
+    "recordedStates": {
+      "open": 122,
+      "implemented_unverified": 52
+    },
+    "independentlyCertifiedParents": 0
+  },
+  "githubSourcePublication": {
+    "state": "NOT_COMPLETED",
+    "lastConfirmedPublicDevelopmentRef": "68dce7592244d664bca09548e40ebb1265114305",
+    "attemptedAction": "GitHub create_blob for owner-progress HTML",
+    "toolResult": {
+      "isError": true,
+      "message": "user rejected MCP tool call"
+    },
+    "disposition": "No further GitHub mutations in this run. No completed publication or branch advance is claimed. Local history and recovery artifacts are retained."
+  },
+  "integrationSummary": "UNFINISHED-WORK/evidence/completion-20261030/integration-summary.json",
+  "browserLimitation": "UNFINISHED-WORK/evidence/completion-20261030/progress-focused/browser-limitation.json",
+  "clauseMapping": [
+    {
+      "criterionId": "DEV-02/AC-01",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec",
+      "observed": "Actual local Git, SQLite and three-product HTTP work reaches the exact tested candidate; the explicitly simulated GitHub boundary creates one draft.",
+      "remaining": "The acceptance requires a real provider branch/tests/draft flow. Live GitHub, deployed identity, permissions and CI evidence remain unqualified.",
+      "evidence": [
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublication.log",
+          "sha256": "0ea5269c9d85c706fcdf2a72431d2c1b1683b291303fa2676273b70342af9abc",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+          "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationRecovery.log",
+          "sha256": "2cbb8f6a80dce53e5a05c0a0cdd23d9bc018217d1b99168c5bbb4ca56f3e353b",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "scoped-local-evidence",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/integration-summary.json",
+          "sha256": "be57c96dfd3e1538be867dc507e4f91da5ed64fc17aa816fb7d5730b9faa80d9",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        }
+      ]
+    },
+    {
+      "criterionId": "DEV-02/AC-02",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec",
+      "observed": "Lost branch/draft responses, duplicate clicks, stale/expired/revoked approval, conflicting branch identity and restart recovery are exercised locally without overwriting unrelated work.",
+      "remaining": "Reproduce the same retry guarantees against real GitHub and operating worker failures.",
+      "evidence": [
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublication.log",
+          "sha256": "0ea5269c9d85c706fcdf2a72431d2c1b1683b291303fa2676273b70342af9abc",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+          "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationRecovery.log",
+          "sha256": "2cbb8f6a80dce53e5a05c0a0cdd23d9bc018217d1b99168c5bbb4ca56f3e353b",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "scoped-local-evidence",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/integration-summary.json",
+          "sha256": "be57c96dfd3e1538be867dc507e4f91da5ed64fc17aa816fb7d5730b9faa80d9",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        }
+      ]
+    },
+    {
+      "criterionId": "RUN-03/AC-02",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec",
+      "observed": "Completed publication releases capacity atomically; canceled-before-dispatch cleanup validates exact saved identity and refuses mismatched reservations.",
+      "remaining": "Real distributed worker/provider crash qualification and remaining retention, fairness and budget requirements remain.",
+      "evidence": [
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationRecovery.log",
+          "sha256": "2cbb8f6a80dce53e5a05c0a0cdd23d9bc018217d1b99168c5bbb4ca56f3e353b",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        }
+      ]
+    },
+    {
+      "criterionId": "UX-01/AC-02",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec",
+      "observed": "Component tests reject incomplete saved-draft success responses and present unstarted cleanup as no draft created. The board validates its complete structured scope before display.",
+      "remaining": "Actual browser/assistive and deployed journeys have not been inspected in this run.",
+      "evidence": [
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+          "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/buildProgressUi.log",
+          "sha256": "1d7872d2992e97fc0221c1f644bfa8c17ba5ac08d6be81f2eb6f0c165f8f47d6",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "scoped-local-evidence",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/progress-focused/browser-limitation.json",
+          "sha256": "1ddb1746d5f60632ed5e29405dc47a60daa2f93e4d76b01474100fab3b83f6b7"
+        }
+      ]
+    },
+    {
+      "criterionId": "UX-03/AC-01",
+      "status": "ADDITIONAL_SCOPED_LOCAL_EVIDENCE",
+      "sourceCommit": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec",
+      "observed": "The progress surface derives exact original requirements and evidence from committed Git objects, preserving separate scopes and source-linked actions. The publication surface calls its owner-scoped API actions.",
+      "remaining": "Other advanced surfaces and full user/browser usability acceptance remain.",
+      "evidence": [
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/ownerProgress.log",
+          "sha256": "b46d935b22286ecf202eec5489b854d5516966c0f3b51f63dedde41d3180a186",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/buildProgressUi.log",
+          "sha256": "1d7872d2992e97fc0221c1f644bfa8c17ba5ac08d6be81f2eb6f0c165f8f47d6",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/ownerProgressArtifact.log",
+          "sha256": "69e05916f898efc3d3eb35dc256c22be2c37c69f0be5d2fbb9ceeb966e7598f4",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        },
+        {
+          "kind": "executed-local-profile-output",
+          "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+          "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+          "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+        }
+      ]
+    }
+  ],
+  "ownerProgress": {
+    "completed": [
+      {
+        "title": "Review, approve and publish the exact tested candidate",
+        "observed": "The app reconstructs the exact tested Git commit, binds owner approval to it, rechecks authority before each write and preserves one draft through local recovery tests. GitHub provider responses are fixtures.",
+        "taskIds": [
+          "DEV-02",
+          "UX-01",
+          "UX-03"
+        ],
+        "evidence": [
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublication.log",
+            "sha256": "0ea5269c9d85c706fcdf2a72431d2c1b1683b291303fa2676273b70342af9abc",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+            "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationRecovery.log",
+            "sha256": "2cbb8f6a80dce53e5a05c0a0cdd23d9bc018217d1b99168c5bbb4ca56f3e353b",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/integration-summary.json",
+            "sha256": "be57c96dfd3e1538be867dc507e4f91da5ed64fc17aa816fb7d5730b9faa80d9",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          }
+        ],
+        "remaining": [
+          "Real GitHub publication through the product, deployed owner identity and browser journeys still require proof."
+        ]
+      },
+      {
+        "title": "Unfinished saves no longer strand a work slot",
+        "observed": "An expired or revoked approval that never dispatched can be retired without GitHub writes. Confirmed saves release the matching reservation atomically; uncertain external outcomes retain recovery controls.",
+        "taskIds": [
+          "RUN-03",
+          "DEV-02"
+        ],
+        "evidence": [
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationRecovery.log",
+            "sha256": "2cbb8f6a80dce53e5a05c0a0cdd23d9bc018217d1b99168c5bbb4ca56f3e353b",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+            "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          }
+        ],
+        "remaining": [
+          "Qualification on real worker hosts and actual provider interruptions remains separate."
+        ]
+      },
+      {
+        "title": "Every original item has a searchable, downloadable progress view",
+        "observed": "All 174 original requirements, 441 exact acceptance clauses and 28 separate upgrades survive regeneration. Tests cover filtering, evidence integrity, failed reads, valid dates and malformed-board rejection. Embedded exports are enabled without origin access.",
+        "taskIds": [
+          "UX-01",
+          "UX-02",
+          "UX-03"
+        ],
+        "evidence": [
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/ownerProgress.log",
+            "sha256": "b46d935b22286ecf202eec5489b854d5516966c0f3b51f63dedde41d3180a186",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/buildProgressUi.log",
+            "sha256": "1d7872d2992e97fc0221c1f644bfa8c17ba5ac08d6be81f2eb6f0c165f8f47d6",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/ownerProgressArtifact.log",
+            "sha256": "69e05916f898efc3d3eb35dc256c22be2c37c69f0be5d2fbb9ceeb966e7598f4",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          }
+        ],
+        "remaining": [
+          "Actual responsive, keyboard, screen-reader and browser download behavior remains unverified after the browser policy block."
+        ]
+      },
+      {
+        "title": "The repaired source passes all 73 local verification profiles",
+        "observed": "The initial full run retained its TypeScript failure. The context type guard was repaired and a new complete source-bound run passed all 73 profiles, including TypeScript and build.",
+        "taskIds": [
+          "QA-02",
+          "REL-01"
+        ],
+        "evidence": [
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/report.json",
+            "sha256": "3b2f37395cb64aa6a67a9cac9049020e1fa15bd7facbf44f113186c9cd90ecc0",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/initial-run/report.json",
+            "sha256": "c11d014c67c173a54044a17ce4cf3d9bdd8bab73bb3de66577bdcf34faf5cdc3",
+            "sourceRevision": "e5e40c311286b29de2a426bff6773b1462ab5756"
+          }
+        ],
+        "remaining": [
+          "Local passing profiles do not certify a whole original requirement or a production release."
+        ]
+      },
+      {
+        "title": "A real local three-product job retains its exact tested result",
+        "observed": "Fourteen checks passed using actual local Git, SQLite and HTTP. The explicitly simulated GitHub provider created one draft; retry added no provider writes. The public summary excludes private source manifests.",
+        "taskIds": [
+          "RUN-03",
+          "DEV-02",
+          "QA-02"
+        ],
+        "evidence": [
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/integration-summary.json",
+            "sha256": "be57c96dfd3e1538be867dc507e4f91da5ed64fc17aa816fb7d5730b9faa80d9",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          }
+        ],
+        "remaining": [
+          "Actual GitHub, Docker isolation and independent production signing remain unqualified."
+        ]
+      }
+    ],
+    "taskUpdates": [
+      {
+        "id": "DEV-02",
+        "currentState": "Exact tested Git candidate publication is implemented and passes local GitHub-fixture tests. The three-product flow preserves one draft and adds no writes on retry. No live GitHub publication through the product is claimed.",
+        "evidence": [
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublication.log",
+            "sha256": "0ea5269c9d85c706fcdf2a72431d2c1b1683b291303fa2676273b70342af9abc",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+            "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationRecovery.log",
+            "sha256": "2cbb8f6a80dce53e5a05c0a0cdd23d9bc018217d1b99168c5bbb4ca56f3e353b",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/integration-summary.json",
+            "sha256": "be57c96dfd3e1538be867dc507e4f91da5ed64fc17aa816fb7d5730b9faa80d9",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          }
+        ],
+        "remainingActions": [
+          "Ingest actual CI status and artifacts tied to the candidate commit.",
+          "Qualify GitHub App permissions, branch protection, organization/private repo scope and draft-PR delivery.",
+          "Run the implemented partial/duplicate-write recovery against actual GitHub, including moved, closed or modified branches; local fixtures already reject mismatched state without overwriting owner work."
+        ]
+      },
+      {
+        "id": "RUN-03",
+        "currentState": "Local publishing recovery now releases completed reservations atomically and retires expired or revoked approvals that never dispatched. Concurrent/repeated clicks preserve one operation in the executed fixtures.",
+        "evidence": [
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublication.log",
+            "sha256": "0ea5269c9d85c706fcdf2a72431d2c1b1683b291303fa2676273b70342af9abc",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+            "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationRecovery.log",
+            "sha256": "2cbb8f6a80dce53e5a05c0a0cdd23d9bc018217d1b99168c5bbb4ca56f3e353b",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          }
+        ],
+        "remainingActions": [
+          "Complete fair queueing, backpressure, artifact/job retention and per-project budgets.",
+          "Qualify cancellation during real provider requests, multi-host process death, long-lease heartbeat behavior and external-effect recovery.",
+          "Reproduce the locally verified publication idempotency and crash/retry paths against real provider failures and qualified worker hosts."
+        ]
+      },
+      {
+        "id": "UX-01",
+        "currentState": "The shipped publication screen separates review, approval and draft creation; incomplete success responses, revoked approvals and unstarted cleanup retain truthful states in executable component tests.",
+        "evidence": [
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+            "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/progress-focused/browser-limitation.json",
+            "sha256": "1ddb1746d5f60632ed5e29405dc47a60daa2f93e4d76b01474100fab3b83f6b7"
+          }
+        ],
+        "remainingActions": [
+          "Run the real information/navigation and interrupted-work journeys, including GitHub registration, installation, sign-in and import return.",
+          "Verify labels and statuses distinguish configured capability, proposal, execution and verified result.",
+          "Complete real user review of loading, error and recovery states; current obsolete imports and note/decision labels were cleaned up."
+        ]
+      },
+      {
+        "id": "UX-02",
+        "currentState": "The progress and publication components have labeled controls and isolated progress content. Actual browser/mobile/keyboard verification was blocked by the browser URL policy, so no GUI acceptance is recorded.",
+        "evidence": [
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/buildProgressUi.log",
+            "sha256": "1d7872d2992e97fc0221c1f644bfa8c17ba5ac08d6be81f2eb6f0c165f8f47d6",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+            "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/progress-focused/browser-limitation.json",
+            "sha256": "1ddb1746d5f60632ed5e29405dc47a60daa2f93e4d76b01474100fab3b83f6b7"
+          }
+        ],
+        "remainingActions": [
+          "Test keyboard navigation, focus return, dialogs, selects and screen-reader announcements in a real browser.",
+          "Measure contrast, readable typography, reduced motion, 200% zoom and mobile/tablet/narrow layouts.",
+          "Provide accessible graph alternatives and meaningful status announcements."
+        ]
+      },
+      {
+        "id": "UX-03",
+        "currentState": "The exact-work progress board and candidate-publication screen are implemented. The board preserves all 174 originals, 441 exact clauses and 28 upgrades, and exposes original wording, source, evidence and remaining actions.",
+        "evidence": [
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/ownerProgress.log",
+            "sha256": "b46d935b22286ecf202eec5489b854d5516966c0f3b51f63dedde41d3180a186",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/buildProgressUi.log",
+            "sha256": "1d7872d2992e97fc0221c1f644bfa8c17ba5ac08d6be81f2eb6f0c165f8f47d6",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/ownerProgressArtifact.log",
+            "sha256": "69e05916f898efc3d3eb35dc256c22be2c37c69f0be5d2fbb9ceeb966e7598f4",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "executed-local-profile-output",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/trilogyPublicationUi.log",
+            "sha256": "46b46e5fb9a8348e0f520bd008ad8d37b1250a099b3b7cab8d9a0b7e82076590",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          }
+        ],
+        "remainingActions": [
+          "Build remaining advanced surfaces for swarm lineage/tool approvals, worker health, connection sync, incidents and deployment plans.",
+          "Extend semantic graph search, timeline, twin comparisons, executive evidence and innovation experiments.",
+          "Qualify actual popup, focus and responsive journeys; planning/decision/history surfaces already connect to persisted backend actions."
+        ]
+      },
+      {
+        "id": "QA-01",
+        "currentState": "The actual local /progress route and exact generated HTML returned HTTP 200. This is local HTTP proof only; hosted and browser journeys remain unverified.",
+        "evidence": [
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/progress-focused/http-verification-final.json",
+            "sha256": "c53a1994751a189518f3d49f33d73cfbfebfa589341ae66b4386abcc31bd913e"
+          },
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/progress-focused/browser-limitation.json",
+            "sha256": "1ddb1746d5f60632ed5e29405dc47a60daa2f93e4d76b01474100fab3b83f6b7"
+          }
+        ],
+        "remainingActions": [
+          "Run actual deployed routes and D1 migration/read-back under the real owner access boundary.",
+          "Exercise browser import, consent return, generation, review, PR, repair, rollback and export journeys.",
+          "Test real network/provider failures, loading, stale data and keyboard recovery."
+        ]
+      },
+      {
+        "id": "QA-02",
+        "currentState": "All 73 full local command profiles passed at the exact new runtime source, including meaningful publication/recovery failure cases and TypeScript/build. These are local platform tests, not general application or isolated-host acceptance.",
+        "evidence": [
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/report.json",
+            "sha256": "3b2f37395cb64aa6a67a9cac9049020e1fa15bd7facbf44f113186c9cd90ecc0",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          }
+        ],
+        "remainingActions": [
+          "Discover and run each supported user-project test toolchain inside a qualified isolated worker.",
+          "Capture application behavior, coverage, build, lint and security evidence for exact candidate commits.",
+          "Enforce the appropriate runtime-evidence requirement before apply, draft PR and release; local platform tests already exercise meaningful failures."
+        ]
+      },
+      {
+        "id": "REL-01",
+        "currentState": "Current source, failed and successful full runs, publication contracts, startup rules and execution limitations are documented together; old evidence and original statuses remain intact.",
+        "evidence": [
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/run/report.json",
+            "sha256": "3b2f37395cb64aa6a67a9cac9049020e1fa15bd7facbf44f113186c9cd90ecc0",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/initial-run/report.json",
+            "sha256": "c11d014c67c173a54044a17ce4cf3d9bdd8bab73bb3de66577bdcf34faf5cdc3",
+            "sourceRevision": "e5e40c311286b29de2a426bff6773b1462ab5756"
+          },
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/execution-limits.json",
+            "sha256": "aea678450e486392cbbd0fccc6bcb5219bb0ca29221602c21f5f312f457fbcf3",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          }
+        ],
+        "remainingActions": [
+          "Complete setup/upgrade/runbook/API documentation for the actual shipped capability set.",
+          "Define supported versions, schema migration and release validation policies.",
+          "Keep local, hosted, provider and worker evidence distinct; consolidate current source pins without erasing history."
+        ]
+      },
+      {
+        "id": "REL-02",
+        "currentState": "This new wave is committed locally and preserved with exact source/test evidence. GitHub source publication was not completed: the native blob write was rejected, and further GitHub mutations stopped.",
+        "evidence": [
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/execution-limits.json",
+            "sha256": "aea678450e486392cbbd0fccc6bcb5219bb0ca29221602c21f5f312f457fbcf3",
+            "sourceRevision": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec"
+          },
+          {
+            "kind": "scoped-local-evidence",
+            "path": "UNFINISHED-WORK/evidence/completion-20261030/bounded-safety-review/review.json",
+            "sha256": "400417371c4726f2d07c8c812638a6aa4c7f9d7e7529e3807d9a9b86ee568916",
+            "sourceRevision": "e5e40c311286b29de2a426bff6773b1462ab5756"
+          }
+        ],
+        "remainingActions": [
+          "Resume source publication only through a supported newly permitted GitHub write flow; then read back exact branch/commit/tree identities. The latest confirmed development source remains 68dce7592244d664bca09548e40ebb1265114305.",
+          "Review any new evidence/document additions before public upload; the retained source review recognized six credential formats and does not prove all possible secrets absent.",
+          "Preserve private companion source boundaries and normal branch ancestry; never force-push recovered history."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+✔ over-budget execution retains a bounded failure report that the actual job store accepts (140.986809ms)
+✔ timeout after 20 KB retains its reason inside the report allowance (15082.219631ms)
+✔ failure truncation preserves complete UTF-8 characters and the failure reason (94.70637ms)
+✔ overflow inside a three-byte character preserves the output-limit cause without replacement text (92.579127ms)
+✔ the real trilogy signing guard retains a three-byte overflow failure without issuing a signature (160.968949ms)
+✔ actual malformed UTF-8 remains a failure and cannot receive a trilogy signature (156.225036ms)
+✔ successful output at the byte limit remains exactly unchanged (105.388989ms)
+✔ an ordinary failed command preserves its exact output when no truncation reason is needed (106.554785ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15946.63659

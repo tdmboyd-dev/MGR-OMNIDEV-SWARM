@@ -1,0 +1,50 @@
+{
+  "schema": "mgr.trilogy.local-integration-public-summary.v1",
+  "passed": true,
+  "checkCount": 14,
+  "checks": [
+    "actual imported project and native candidate reach review",
+    "owner authorization binds exact source, plan and command",
+    "live viewer reads the actual authorized job before candidate staging",
+    "actual staged Git candidate flows through OmniDev into the read-only viewer",
+    "the existing worker assignment retains its exact generic job correlation link",
+    "altered worker correlation rejects; exact signed local output returns through the existing worker route",
+    "real candidate snapshot test output is admitted by Code Monster",
+    "OmniDev refuses altered runner output without upgrading its saved job",
+    "live full-scope view shows exact pending-owner proof; scoped view withholds it",
+    "producer restart replays the same candidate and five durable events",
+    "owner publication creates a fixture draft for the exact Code Monster candidate that was tested",
+    "publication retry and reconciliation preserve one draft, worker evidence and pending-owner viewer truth",
+    "changed project source and actual owner revocation remove access without cached evidence",
+    "candidate work never changes source HEAD or source worktree"
+  ],
+  "source": {
+    "omnidev": {
+      "commit": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec",
+      "tree": "b34c32d6fae0f022287e402fa71acfdb39aa4723",
+      "dirty": false
+    },
+    "codeMonster": {
+      "commit": "dd0c7f9caf0cee6fe173d94f25b8f9596789a6c0",
+      "tree": "f68ac8cf03c308cca4445a11b5733e05f360a6f2",
+      "dirty": false
+    },
+    "omnisight": {
+      "commit": "e73ec742b06f9c6deb40d964045e3f172f904063",
+      "tree": "75fc6c085ec00dfff1b05e47d30d11232849d078",
+      "dirty": false
+    }
+  },
+  "publication": {
+    "providerBoundary": "Simulated GitHub boundary with real local Git objects. No live GitHub calls or hosted provider qualification.",
+    "state": "published",
+    "draftCount": 1,
+    "visibleProviderWrites": 2,
+    "retryAddedWrites": 0,
+    "merged": false,
+    "released": false
+  },
+  "qualification": "Actual local OmniDev SQLite/API, Code Monster candidate Git/ledger/receipt and OmniSight HTTP reader. Disposable local signer and service credentials. Optional GitHub publication and Docker admission metadata are explicit fixtures. Snapshot-integrity tests only; not live GitHub provider acceptance, Docker isolation, application behavior, independent production signing, browser accessibility, merge or release.",
+  "rawReceiptSha256": "80aa4d366bc404c50796201c0b762e8a1c4d23a8003bf4a77565d72b902a8c1f",
+  "rawReceiptLocation": "Retained in private OmniSight evidence; source-file manifests and full private receipt are deliberately not included in the public OmniDev repository."
+}

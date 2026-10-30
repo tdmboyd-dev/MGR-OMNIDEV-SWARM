@@ -8,6 +8,12 @@ import {pathToFileURL} from 'node:url';
 export const FIXTURE_PROFILES = Object.freeze(Object.fromEntries(Object.entries({
  prepare:['tests/prepare.mjs'],
  trilogyLink:['tests/trilogy-job-link.test.mjs'],
+ trilogyPublication:['tests/trilogy-publication.test.mjs'],
+ trilogyPublicationUi:['tests/trilogy-publication-ui.test.mjs'],
+ trilogyPublicationRecovery:['tests/trilogy-publication-recovery.test.mjs'],
+ ownerProgress:['tests/owner-progress.test.mjs'],
+ buildProgressUi:['tests/build-progress-ui.test.mjs'],
+ ownerProgressArtifact:['scripts/build-owner-progress.mjs','--check'],
  workerReportTransport:['tests/worker-report-transport.test.mjs'],
  workerFailureOutput:['tests/worker-failure-output.test.mjs'],
  typecheck:['node_modules/typescript/bin/tsc','--noEmit','--incremental','false','--diagnostics'],

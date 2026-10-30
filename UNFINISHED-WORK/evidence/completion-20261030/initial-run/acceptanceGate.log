@@ -1,0 +1,29 @@
+✔ all original criteria plus separately bound owner grant becomes eligible without mutation (7.026667ms)
+✔ missing signed receipts cannot approve parent (0.783148ms)
+✔ unverified or changed original criterion cannot be bypassed (1.4498ms)
+✔ register evidence must describe the current exact source revision (0.972402ms)
+✔ unregistered, revoked, unqualified and out-of-scope signers are rejected (1.866296ms)
+✔ zero criteria never become a fully accepted parent (0.358869ms)
+✔ one signed receipt cannot be reused across duplicated or unrelated criterion identities (0.541634ms)
+✔ duplicate receipts and extra unrelated receipts fail closed (1.485224ms)
+✔ duplicate parent records cannot hide conflicting source-of-truth states (1.091452ms)
+✔ duplicate trust identities cannot override a revoked key by array ordering (0.615826ms)
+✔ missing, fixture, simulated and unknown environment labels cannot qualify (4.336191ms)
+✔ partial source coverage cannot qualify even with valid signatures (0.769968ms)
+✔ runner and owner cannot share a signing key even under different identities (1.054275ms)
+✔ runner and owner cannot share an identity even under different keys (1.505173ms)
+✔ a valid replacement receipt after owner review requires a new matching grant (1.954178ms)
+✔ owner identity must match trusted configuration, not merely a signed arbitrary name (1.358824ms)
+✔ legacy or unbound owner grants cannot authorize current evidence (4.772096ms)
+✔ changing signed owner grant bytes is rejected (0.942497ms)
+✔ trusted execution digest expectations are enforced during parent assessment (0.441795ms)
+✔ receipt order does not change the reviewed evidence set (1.27013ms)
+✔ malformed structured inputs produce denials, never exceptions or positive results (1.042949ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 43.493408

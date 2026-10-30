@@ -1,0 +1,210 @@
+{
+  "target_repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "file_count": 34,
+  "files": [
+    {
+      "path": "00-MGR-TRILOGY-COMMANDER.md",
+      "bytes": 7135,
+      "sha256": "1ead71ad80973f4c9a017beb972b31d9da88193cf258ffa8311eb3bf9c3a5d74",
+      "gitBlob": "05592e8cabaa28558b8420aa6777a42ea85e3d3f"
+    },
+    {
+      "path": "01-UNIVERSAL-BEAST-BUILD-SYSTEM.md",
+      "bytes": 4831,
+      "sha256": "787b8b2470197c6ab09ad504c6ff992a26ac90d336f2484f73e2cefc75eecc30",
+      "gitBlob": "346e5fa2b731f95ba3bad8a551e317121d05c4e9"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 11871,
+      "sha256": "5d9c3d63b686eeccfe9bd11901faf2d7c035789f53a1a1970980b32eba2e58ad",
+      "gitBlob": "5565def73488aecdc931ca4c3378e5ed14793d14"
+    },
+    {
+      "path": "COMMANDER-HANDOFF.md",
+      "bytes": 4984,
+      "sha256": "de5c472378369bc840b1b99c054542be49f4190c037d21d7e563a4fe14ee71ec",
+      "gitBlob": "e8d4e496f7d29cb69b1878d9eca1d23132ddf686"
+    },
+    {
+      "path": "COMMANDER-INSTALL-RECEIPT.json",
+      "bytes": 2912,
+      "sha256": "37149387baed7d67a2f3c59dc237faf3d38547dd28afa481babeca39a9f1c4b7",
+      "gitBlob": "87a5a7649491cf313b9d47a340061964c6cc6920"
+    },
+    {
+      "path": "TRILOGY-PUBLICATION.md",
+      "bytes": 4620,
+      "sha256": "98c83879013d3301e12a9cd59c1286410e9e01670739ea60885747f9d4935e7f",
+      "gitBlob": "c5e4e48d2d749be8ca674884add6d07f7b8b5b76"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.html",
+      "bytes": 1412895,
+      "sha256": "3bb015697a53cf4b43e9c7ee849d18f3425091f36f9c2acf89d1e869844cc3d6",
+      "gitBlob": "5b3f6779723d70e78cee7ae4a766afc3fd236028"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.json",
+      "bytes": 934978,
+      "sha256": "a2050f9e8cd214e2a1f41e65574e4dff273bfaa41a097be5ad1f7468e2f2f6e2",
+      "gitBlob": "b60aa7e775434c54616f1adc5a0ef53d53ea3de3"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.md",
+      "bytes": 607625,
+      "sha256": "e14fc47cce355b4535e86e7caac4cbc1c9793cb27c5ebad4af82dfe47e1d10e4",
+      "gitBlob": "0355fa317cbc57da6fc1c3404885efeef993b505"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.svg",
+      "bytes": 2642,
+      "sha256": "d815e8eb0d753341102ad8e1982cdf113c5ca3d7b41ae8efba47e850752efaee",
+      "gitBlob": "617704d9b8a736801fdec1381efdafb3557a8f32"
+    },
+    {
+      "path": "app/api/trilogy/route.ts",
+      "bytes": 4320,
+      "sha256": "455b0a8444db2bd69f019d72d21958f20e5e54d24028d0952221d369caeaf1af",
+      "gitBlob": "49e9f43766723ceb64b4f087c6ba1cf285f5e13c"
+    },
+    {
+      "path": "app/globals.css",
+      "bytes": 45088,
+      "sha256": "e4c651c0437a6180f1de61887addd763e0b7ae5fc436e7491a91a9a4425509c8",
+      "gitBlob": "f1b9a810a972815d0697c652d8d51b99c3436efe"
+    },
+    {
+      "path": "app/page.tsx",
+      "bytes": 52443,
+      "sha256": "1dfdda5b1091eff42c6032dbc20a3444e3381d1db00e355c8ac29aa3d16b4138",
+      "gitBlob": "8b3519544ae5a6bc7a177a0aca97b82dfcac6bf2"
+    },
+    {
+      "path": "app/progress/page.tsx",
+      "bytes": 255,
+      "sha256": "c34b67230a960c328da4d19adf2e446ff911590388ebacc4e43be6db0f0b7bb5",
+      "gitBlob": "931d4ec6d41e131dd4f5117980164fb07030b8a6"
+    },
+    {
+      "path": "components/build-progress.tsx",
+      "bytes": 4139,
+      "sha256": "7184cca9766a68cc7ba7c3f94326c4a259ee9c4c971c83831a039ff5561d9a09",
+      "gitBlob": "8389bece34338349eb056b191505155bc0c2619c"
+    },
+    {
+      "path": "components/runtime-workspace.tsx",
+      "bytes": 81757,
+      "sha256": "16c86b46a29919309461d3c5779d97e30e20fdd9bd1951e5c57fdfcf98e89a34",
+      "gitBlob": "5d500bd92c2a57507943bbfb0808839689111b97"
+    },
+    {
+      "path": "components/trilogy-publication.tsx",
+      "bytes": 13150,
+      "sha256": "5732289118791df444789b8167070554e004c535866f1f98f46cfb3f212ad79d",
+      "gitBlob": "cdf3aa86f5be500e990d69c18d0fa0bca2cbb446"
+    },
+    {
+      "path": "lib/jobs.ts",
+      "bytes": 60650,
+      "sha256": "c9f244940415be120715eb7953a125bb1007b4cdd64a212a2a6a783b112d874d",
+      "gitBlob": "bfd07b4bbfe3ace377d91eacb1bb3486a3a216f7"
+    },
+    {
+      "path": "lib/repository.ts",
+      "bytes": 8368,
+      "sha256": "e1cb1ecfa713a28e1673b45c31c47210d39598ce7d8cdd10c9ad6a7f855f5f63",
+      "gitBlob": "89a084b3144138212a901d3519d001178a00cb70"
+    },
+    {
+      "path": "lib/trilogy-jobs.ts",
+      "bytes": 26583,
+      "sha256": "66b0c9665bfac061760ebe70d2ceee2d978876b78a51b30020bfde6887178cb8",
+      "gitBlob": "d5bc12e7db417779329487f6b2124e106e81ecfe"
+    },
+    {
+      "path": "lib/trilogy-publication.ts",
+      "bytes": 29035,
+      "sha256": "190ab69d5bd4c1c4b7b35968a2efc84ed3c051469a35164d1b195299d7bf129c",
+      "gitBlob": "b9ef72d0e9f39907bd70c77ea45c0549a0c7efdb"
+    },
+    {
+      "path": "public/owner-progress.html",
+      "bytes": 1412895,
+      "sha256": "3bb015697a53cf4b43e9c7ee849d18f3425091f36f9c2acf89d1e869844cc3d6",
+      "gitBlob": "5b3f6779723d70e78cee7ae4a766afc3fd236028"
+    },
+    {
+      "path": "scripts/build-owner-progress.mjs",
+      "bytes": 46834,
+      "sha256": "2f14deb1d2f0ec22bb1c4c4f183b366aa358ffbecd8a360373dc964f0bf373c8",
+      "gitBlob": "b91b2888922effd594b3f0c46131b4942c6e8288"
+    },
+    {
+      "path": "scripts/owner-progress-evidence.mjs",
+      "bytes": 6187,
+      "sha256": "6e2be594dd8ab62638b33a8ddb70667bc9304c18d962303ecda26a32c2c7fe07",
+      "gitBlob": "56caf4bf4e24dd33bedc6ec2346ddc25dc1440ea"
+    },
+    {
+      "path": "scripts/run-fixture-evidence.mjs",
+      "bytes": 9510,
+      "sha256": "de3f211191f94cc33690136f8589382f817e819f10c0cd41a2fa052600e6aa13",
+      "gitBlob": "04ac0c3a08197708f7cd91c6f1688f9707473ceb"
+    },
+    {
+      "path": "scripts/run-full-verification.mjs",
+      "bytes": 6735,
+      "sha256": "642dfe02f3a49ce6b0abc358aa172bd9d71de07fdbbf998a96d1555bc05fa3e4",
+      "gitBlob": "0ae76afb4113dd26db39067b978c9d160171a3d8"
+    },
+    {
+      "path": "tests/build-progress-ui.test.mjs",
+      "bytes": 5633,
+      "sha256": "8585053777e24f2fda39af0838ba7524f6b6489a77e1b5f8069b69aeb48f7444",
+      "gitBlob": "2f6c5f8ca955b34d236265833a530778d3c263c9"
+    },
+    {
+      "path": "tests/owner-progress.test.mjs",
+      "bytes": 12171,
+      "sha256": "713e1c9c925668753ea04c14164be517fd9c42c8a40bcdd057bc131433c3231b",
+      "gitBlob": "4db189a42b621e0075f07563c3ad35cbedc1f492"
+    },
+    {
+      "path": "tests/prepare.mjs",
+      "bytes": 4978,
+      "sha256": "725dc7f60d17b717019c5141739fbbbd9734611fa3cf6680b549ea55c25fe27b",
+      "gitBlob": "d2253ea6ed31767a11c13c67d3f2f8dc9179ccea"
+    },
+    {
+      "path": "tests/trilogy-fixture.mjs",
+      "bytes": 7082,
+      "sha256": "df3ead0e0d97aa70b82ee46cff56220b763d5397eb4b86b529443ba42727b266",
+      "gitBlob": "de7d9ab329a6baf3e0566e3584e24b79ea362601"
+    },
+    {
+      "path": "tests/trilogy-publication-fixture.mjs",
+      "bytes": 8885,
+      "sha256": "9c9f0013d275744717460e08259ffc80dec2e25835f489eab0de082282d02b85",
+      "gitBlob": "bffc95197fa6522e4652bd434fed8b8fa81e45fe"
+    },
+    {
+      "path": "tests/trilogy-publication-recovery.test.mjs",
+      "bytes": 19855,
+      "sha256": "37c745c1e3b3bdd18353d469263abc1517b3421038862e2a044eb52915b7d913",
+      "gitBlob": "5f0a65f9963a4d583acf133cdaab2d0880922a8f"
+    },
+    {
+      "path": "tests/trilogy-publication-ui.test.mjs",
+      "bytes": 16419,
+      "sha256": "57fcb1c0f6b24df086d4752afd1fdfa62847afb6bb729ba6c1eb8fa3df542d41",
+      "gitBlob": "433709cc45ce012d79e9fa9d881c958893159046"
+    },
+    {
+      "path": "tests/trilogy-publication.test.mjs",
+      "bytes": 24819,
+      "sha256": "d4bc6e5c3183c6be4d86db1a367e597752e53b66617b5df6c233e2e5fd43ae6d",
+      "gitBlob": "c11984d414c2da45140b574a17f33fedd2399bd4"
+    }
+  ]
+}

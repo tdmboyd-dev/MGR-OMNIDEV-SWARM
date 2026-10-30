@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: progress screen loads the saved board with a named isolated frame and no-store fetch
+ok 1 - progress screen loads the saved board with a named isolated frame and no-store fetch
+  ---
+  duration_ms: 25.169615
+  type: 'test'
+  ...
+# Subtest: HTML mentioning 441, incomplete registers and malformed provenance never appear as a saved board
+ok 2 - HTML mentioning 441, incomplete registers and malformed provenance never appear as a saved board
+  ---
+  duration_ms: 220.031987
+  type: 'test'
+  ...
+# Subtest: failed or incorrect board reads expose a retry instead of a stale successful frame
+ok 3 - failed or incorrect board reads expose a retry instead of a stale successful frame
+  ---
+  duration_ms: 21.363966
+  type: 'test'
+  ...
+# Subtest: a board request is canceled on navigation and a late reply cannot display it
+ok 4 - a board request is canceled on navigation and a late reply cannot display it
+  ---
+  duration_ms: 6.127929
+  type: 'test'
+  ...
+# Subtest: progress totals come from actual unique execution receipts with matching saved output
+ok 5 - progress totals come from actual unique execution receipts with matching saved output
+  ---
+  duration_ms: 1.603249
+  type: 'test'
+  ...
+# Subtest: claimed passing counts and percentages cannot override the executed run
+ok 6 - claimed passing counts and percentages cannot override the executed run
+  ---
+  duration_ms: 1.075466
+  type: 'test'
+  ...
+# Subtest: missing, modified, truncated or wrong-source output cannot become a passing progress receipt
+ok 7 - missing, modified, truncated or wrong-source output cannot become a passing progress receipt
+  ---
+  duration_ms: 0.442715
+  type: 'test'
+  ...
+# Subtest: public evidence exports a bounded reference and excludes arbitrary bodies, credentials and unsafe URLs
+ok 8 - public evidence exports a bounded reference and excludes arbitrary bodies, credentials and unsafe URLs
+  ---
+  duration_ms: 0.440502
+  type: 'test'
+  ...
+# Subtest: private companion references are omitted without leaking their names or source paths
+ok 9 - private companion references are omitted without leaking their names or source paths
+  ---
+  duration_ms: 0.425219
+  type: 'test'
+  ...
+# Subtest: evidence references reject escaping paths on either operating system
+ok 10 - evidence references reject escaping paths on either operating system
+  ---
+  duration_ms: 0.290627
+  type: 'test'
+  ...
+# Subtest: the generated public app view preserves all 441 clauses and ignores uncommitted input edits
+ok 11 - the generated public app view preserves all 441 clauses and ignores uncommitted input edits
+  ---
+  duration_ms: 1633.440439
+  type: 'test'
+  ...
+# Subtest: public source links are withheld when their selected blob differs from the cited public revision
+ok 12 - public source links are withheld when their selected blob differs from the cited public revision
+  ---
+  duration_ms: 857.412165
+  type: 'test'
+  ...
+# Subtest: a newer committed overlay updates the visible evidence date in the owner timezone
+ok 13 - a newer committed overlay updates the visible evidence date in the owner timezone
+  ---
+  duration_ms: 1233.51741
+  type: 'test'
+  ...
+# Subtest: the actual generated filter script searches full acceptance wording and preserves separate scopes
+ok 14 - the actual generated filter script searches full acceptance wording and preserves separate scopes
+  ---
+  duration_ms: 698.160869
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4986.723565

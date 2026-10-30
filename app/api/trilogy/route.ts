@@ -1,4 +1,5 @@
 import {TrilogyError,acceptTrilogyResult,authorizeTrilogy,revokeTrilogy,trilogyAccess,trilogyExecution,trilogyGrant,trilogyStatus} from '@/lib/trilogy-jobs';
+import {previewTrilogyPublication,trilogyPublicationStatus,authorizeTrilogyPublication,revokeTrilogyPublication,publishTrilogyCandidate,reconcileTrilogyPublication} from '@/lib/trilogy-publication';
 export const dynamic='force-dynamic';
 const headers={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'};
 const failure=(error:unknown)=>Response.json({error:error instanceof TrilogyError?error.message:'Trilogy request rejected'},{status:error instanceof TrilogyError?error.status:400,headers});
@@ -15,6 +16,7 @@ export async function GET(request:Request){try{
  if([...url.searchParams.keys()].some(k=>!['action','jobId'].includes(k))||url.searchParams.getAll('jobId').length!==1||url.searchParams.getAll('action').length>1)throw new TrilogyError('Invalid trilogy query');
  if(action==='grant')return Response.json(await trilogyGrant(jobId,await trilogyAccess(request,'bridge')),{headers});
  if(action==='execution')return Response.json(await trilogyExecution(jobId,await trilogyAccess(request,'bridge')),{headers});
+ if(action==='publication')return Response.json(await trilogyPublicationStatus(jobId,await trilogyAccess(request,'owner')),{headers});
  if(action)throw new TrilogyError('Unknown trilogy read');
  return Response.json(await trilogyStatus(jobId,await trilogyAccess(request,'reader')),{headers});
 }catch(error){return failure(error);}}
@@ -22,9 +24,14 @@ export async function POST(request:Request){try{
  if(request.headers.get('origin')&&request.headers.get('origin')!==new URL(request.url).origin)throw new TrilogyError('Cross-origin trilogy request refused',403);
  const p=await readInput(request);
  if(!p||typeof p!=='object'||Array.isArray(p))throw new TrilogyError('Invalid trilogy input');
- const keys=p.action==='authorize'?['action','jobId','plan']:p.action==='revoke'?['action','jobId']:p.action==='result'?['action','jobId','result','receipt','outputBase64']:[];
+ const keys=p.action==='authorize'?['action','jobId','plan']:['revoke','publicationPreview','reconcilePublication'].includes(p.action)?['action','jobId']:p.action==='result'?['action','jobId','result','receipt','outputBase64']:p.action==='authorizePublication'?['action','jobId','expectedPreview']:['publish','revokePublication'].includes(p.action)?['action','jobId','authorizationId']:[];
  if(!keys.length||Object.keys(p).some(k=>!keys.includes(k)))throw new TrilogyError('Unexpected trilogy action or authority fields');
  if(p.action==='authorize')return Response.json(await authorizeTrilogy(p.jobId,p.plan,await trilogyAccess(request,'owner')),{headers});
  if(p.action==='revoke')return Response.json(await revokeTrilogy(p.jobId,await trilogyAccess(request,'owner')),{headers});
+ if(p.action==='publicationPreview')return Response.json(await previewTrilogyPublication(p.jobId,await trilogyAccess(request,'owner')),{headers});
+ if(p.action==='authorizePublication')return Response.json(await authorizeTrilogyPublication(p.jobId,p.expectedPreview,await trilogyAccess(request,'owner')),{headers});
+ if(p.action==='revokePublication')return Response.json(await revokeTrilogyPublication(p.jobId,p.authorizationId,await trilogyAccess(request,'owner')),{headers});
+ if(p.action==='publish')return Response.json(await publishTrilogyCandidate(p.jobId,p.authorizationId,await trilogyAccess(request,'owner')),{headers});
+ if(p.action==='reconcilePublication')return Response.json(await reconcileTrilogyPublication(p.jobId,await trilogyAccess(request,'owner')),{headers});
  return Response.json(await acceptTrilogyResult(p.jobId,p.result,p.receipt,p.outputBase64,await trilogyAccess(request,'bridge')),{headers});
 }catch(error){return failure(error);}}

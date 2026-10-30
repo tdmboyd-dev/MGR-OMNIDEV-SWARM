@@ -1,0 +1,43 @@
+✔ CONN-02: GitLab integration registration stays disconnected and unsupported execution is refused (31.481886ms)
+✔ CONN-03: Bitbucket integration registration stays disconnected and unsupported execution is refused (2.064636ms)
+✔ CONN-04: Azure DevOps integration registration stays disconnected and unsupported execution is refused (1.598375ms)
+✔ CONN-08: AWS integration registration stays disconnected and unsupported execution is refused (1.50184ms)
+✔ CONN-09: Azure integration registration stays disconnected and unsupported execution is refused (1.357743ms)
+✔ CONN-10: Google Cloud integration registration stays disconnected and unsupported execution is refused (2.046269ms)
+✔ CONN-11: Digital Ocean integration registration stays disconnected and unsupported execution is refused (1.1497ms)
+✔ CONN-12: Kubernetes integration registration stays disconnected and unsupported execution is refused (1.386155ms)
+✔ CONN-14: PostgreSQL integration registration stays disconnected and unsupported execution is refused (1.508339ms)
+✔ CONN-15: MySQL integration registration stays disconnected and unsupported execution is refused (1.361248ms)
+✔ CONN-16: SQL Server integration registration stays disconnected and unsupported execution is refused (1.079084ms)
+✔ CONN-17: MariaDB integration registration stays disconnected and unsupported execution is refused (1.352545ms)
+✔ CONN-18: MongoDB integration registration stays disconnected and unsupported execution is refused (1.386226ms)
+✔ CONN-19: Neo4j integration registration stays disconnected and unsupported execution is refused (1.96069ms)
+✔ CONN-20: Redis integration registration stays disconnected and unsupported execution is refused (1.712607ms)
+✔ CONN-21: Firebase integration registration stays disconnected and unsupported execution is refused (1.372485ms)
+✔ CONN-22: Supabase integration registration stays disconnected and unsupported execution is refused (1.666067ms)
+✔ CONN-23: Figma integration registration stays disconnected and unsupported execution is refused (1.277842ms)
+✔ CONN-24: Adobe XD integration registration stays disconnected and unsupported execution is refused (1.678876ms)
+✔ CONN-25: Sketch integration registration stays disconnected and unsupported execution is refused (2.648585ms)
+✔ CONN-26: Blender integration registration stays disconnected and unsupported execution is refused (1.502711ms)
+✔ CONN-27: Maya integration registration stays disconnected and unsupported execution is refused (1.703383ms)
+✔ CONN-28: Cinema4D integration registration stays disconnected and unsupported execution is refused (1.54217ms)
+✔ CONN-29: Notion integration registration stays disconnected and unsupported execution is refused (1.51523ms)
+✔ CONN-30: Confluence integration registration stays disconnected and unsupported execution is refused (2.245858ms)
+✔ CONN-31: Slack integration registration stays disconnected and unsupported execution is refused (1.330622ms)
+✔ CONN-32: Teams integration registration stays disconnected and unsupported execution is refused (1.457392ms)
+✔ CONN-33: Email Systems integration registration stays disconnected and unsupported execution is refused (1.372605ms)
+✔ CONN-34: Internal Documentation integration registration stays disconnected and unsupported execution is refused (1.791446ms)
+✔ CONN-35: APIs integration registration stays disconnected and unsupported execution is refused (1.929383ms)
+✔ CONN-36: Microservices integration registration stays disconnected and unsupported execution is refused (2.006439ms)
+✔ CONN-37: Legacy Systems integration registration stays disconnected and unsupported execution is refused (2.201902ms)
+✔ CONN-38: ERP Systems integration registration stays disconnected and unsupported execution is refused (2.639571ms)
+✔ CONN-39: CRM Systems integration registration stays disconnected and unsupported execution is refused (1.606447ms)
+✔ cross-origin connector registration is rejected without a stored registration or provider call (0.598611ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 97.800703

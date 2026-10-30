@@ -1,0 +1,33 @@
+{
+  "schema": "mgr.completion-execution-limits.v1",
+  "sourceCommit": "8aed90d0f5a6a0924a9966b52a3a05ba0a14ccec",
+  "githubSourcePublication": {
+    "state": "NOT_COMPLETED",
+    "lastConfirmedPublicDevelopmentRef": "68dce7592244d664bca09548e40ebb1265114305",
+    "attemptedAction": "GitHub create_blob for owner-progress HTML",
+    "toolResult": {
+      "isError": true,
+      "message": "user rejected MCP tool call"
+    },
+    "disposition": "No further GitHub mutations in this run. No completed publication or branch advance is claimed. Local history and recovery artifacts are retained."
+  },
+  "browser": {
+    "state": "NOT_VERIFIED",
+    "evidence": "progress-focused/browser-limitation.json",
+    "disposition": "Browser URL-policy rejection stopped the browser path; no workaround or alternate browser surface was attempted. HTTP and component tests are separate evidence."
+  },
+  "production": {
+    "deployed": false,
+    "realDockerIsolationVerified": false,
+    "independentProductionSignerVerified": false,
+    "liveGitHubPublicationThroughProductVerified": false
+  },
+  "initialFullRun": {
+    "sourceCommit": "e5e40c311286b29de2a426bff6773b1462ab5756",
+    "passed": 72,
+    "failed": 1,
+    "failedProfile": "typecheck",
+    "report": "initial-run/report.json",
+    "repair": "Added the explicit returned-context type guard in lib/trilogy-jobs.ts; the complete final run passed at the new runtime commit."
+  }
+}

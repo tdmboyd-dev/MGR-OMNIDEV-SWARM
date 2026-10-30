@@ -14,7 +14,7 @@ export function jobRow(r:any){return {id:r.id,projectId:r.project_id,objective:r
 export function publicJob(job:any){
  if(!job||Array.isArray(job)||!job.payload)return job;const {baseline,...payload}=job.payload;const {appliedFiles,...result}=job.result;
  if(result.externalTests){const {trilogyProof,...visible}=result.externalTests;result.externalTests=visible;}
- if(result.trilogy){const {grant,statusRevision,result:observed}=result.trilogy;result.trilogy={grant:{grantId:grant?.grantId,expiresAt:grant?.expiresAt,revoked:grant?.revoked,permission:grant?.permission},statusRevision,result:observed};}
+ if(result.trilogy){const {grant,statusRevision,result:observed,publication}=result.trilogy;result.trilogy={grant:{grantId:grant?.grantId,expiresAt:grant?.expiresAt,revoked:grant?.revoked,permission:grant?.permission},statusRevision,result:observed,...(publication?{publication:{state:publication.state,revoked:publication.authorization?.revoked,expiresAt:publication.authorization?.expiresAt}}:{})};}
  return {...job,payload,result:{...result,report:combinedReport(result)}};
 }
 export async function jobs(){const r=await db().prepare("SELECT id,project_id,objective,mode,status,phase,json_remove(payload,'$.baseline') AS payload,json_remove(result,'$.appliedFiles') AS result,attempts,lease_token,lease_until,created_at,updated_at FROM jobs ORDER BY created_at DESC LIMIT 100").all();return r.results.map((r:any)=>publicJob(jobRow(r)));}

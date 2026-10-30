@@ -1,0 +1,16 @@
+lib/trilogy-jobs.ts(166,176): error TS18048: 'expectedExposure' is possibly 'undefined'.
+lib/trilogy-jobs.ts(166,200): error TS18048: 'expectedExposure' is possibly 'undefined'.
+Files:             2287
+Lines:           367103
+Identifiers:     422313
+Symbols:         383332
+Types:            65431
+Instantiations:  325202
+Memory used:    609169K
+I/O read:         0.38s
+I/O write:        0.00s
+Parse time:       1.78s
+Bind time:        0.57s
+Check time:       4.27s
+Emit time:        0.00s
+Total time:       6.62s

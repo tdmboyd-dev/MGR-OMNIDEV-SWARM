@@ -1,0 +1,18 @@
+[
+  {
+    "route": "/progress",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 29135,
+    "sha256": "866a267298f6b2117326585383caf18a2b574f6898b048281ad3219db6cfa3e4",
+    "routeHeadingPresent": true
+  },
+  {
+    "route": "/owner-progress.html",
+    "status": 200,
+    "contentType": "text/html;charset=utf-8",
+    "bytes": 1412895,
+    "sha256": "3bb015697a53cf4b43e9c7ee849d18f3425091f36f9c2acf89d1e869844cc3d6",
+    "exactGeneratedBytes": true
+  }
+]

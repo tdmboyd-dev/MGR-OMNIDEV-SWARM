@@ -1,0 +1,70 @@
+{
+  "schema": "mgr.trilogy.commander-install.v1",
+  "scope": "Standing build instructions and plugin continuity only",
+  "ownerBrief": {
+    "path": "00-MGR-TRILOGY-COMMANDER.md",
+    "bytes": 7135,
+    "sha256": "1ead71ad80973f4c9a017beb972b31d9da88193cf258ffa8311eb3bf9c3a5d74",
+    "gitBlob": "05592e8cabaa28558b8420aa6777a42ea85e3d3f"
+  },
+  "repositories": [
+    {
+      "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+      "branch": "main",
+      "briefCommit": "0ba330c974ef387b0cac76511da37cfe40ff0901",
+      "startupCommit": "fd823642dcc83f63ce116e75b2d5a8ada21c2b85",
+      "briefReadBack": true,
+      "startupState": "SAVED",
+      "mainRefReadBack": true
+    },
+    {
+      "repository": "tdmboyd-dev/MGR-CODE-MONSTER",
+      "branch": "main",
+      "briefCommit": "511705d5d6efb29d370269d55bd383c35406dc25",
+      "briefReadBack": true,
+      "startupState": "BLOCKED",
+      "mainRefReadBack": true,
+      "unreferencedPreparedTree": "2f5159b65bbc122e5cf079109a64166910938b1b",
+      "blocker": "Additional create_commit for AGENTS routing and COMMANDER-HANDOFF was blocked by tool safety checks. No branch update for that change occurred."
+    },
+    {
+      "repository": "tdmboyd-dev/MGR-OMNISIGHT",
+      "branch": "main",
+      "briefCommit": "99489827e3076a5d254aa990fde9dbef01ba59ba",
+      "briefReadBack": true,
+      "startupState": "BLOCKED",
+      "mainRefReadBack": true,
+      "unreferencedPreparedTree": "99e0482c289cceec3b6beb6fcd2acd3468589486",
+      "blocker": "Additional create_commit for AGENTS routing and COMMANDER-HANDOFF was blocked by tool safety checks. No branch update for that change occurred."
+    }
+  ],
+  "plugin": {
+    "name": "mgr-beast-pack",
+    "previousVersion": "1.5.2",
+    "version": "1.5.3",
+    "state": "UPDATED_AND_READ_BACK",
+    "additiveSkill": "mgr-trilogy-commander",
+    "originalCoreSkillPreserved": true,
+    "appBindingsPreserved": true,
+    "deletedPaths": []
+  },
+  "verification": {
+    "command": "node --test skills/mgr-trilogy-commander/scripts/check-trilogy-startup.test.mjs",
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "outputSha256": "5cab13aae55605a8ca269c8a82135269eb593967768825ca966daed442f885d4",
+    "qualification": "Executed local read-only startup-check tests; not application tests or browser acceptance"
+  },
+  "summary": {
+    "repositoryBriefsSaved": 3,
+    "repositoryBriefsExpected": 3,
+    "defaultBranchStartupRoutesSaved": 1,
+    "defaultBranchStartupRoutesExpected": 3,
+    "blockedStartupCommits": 2,
+    "applicationFilesChanged": 0,
+    "applicationCompletionAssessed": false,
+    "activeDevelopmentBranchesChanged": false
+  },
+  "recovery": "The interrupted exact-tested-candidate publication controls and progress-screen claims were not recovered or reverified in this instruction update. Preserve the existing source checkpoints and use current application source/tests for continuation."
+}

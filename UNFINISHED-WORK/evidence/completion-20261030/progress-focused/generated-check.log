@@ -1,0 +1,8 @@
+file:///workspace/scratch/dca67d368d2b/trilogy/MGR-OMNIDEV-SWARM/scripts/build-owner-progress.mjs:364
+    if (fs.readFileSync(target, 'utf8') !== content) throw Error('Derived view is stale: ' + relative);
+                                                           ^
+
+Error: Derived view is stale: UNFINISHED-WORK/owner-progress-20261029.json
+    at file:///workspace/scratch/dca67d368d2b/trilogy/MGR-OMNIDEV-SWARM/scripts/build-owner-progress.mjs:364:60
+
+Node.js v24.22.1

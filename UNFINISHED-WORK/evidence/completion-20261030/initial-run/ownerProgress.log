@@ -1,0 +1,18 @@
+✔ progress totals come from actual unique execution receipts with matching saved output (2.141551ms)
+✔ claimed passing counts and percentages cannot override the executed run (1.22972ms)
+✔ missing, modified, truncated or wrong-source output cannot become a passing progress receipt (3.787327ms)
+✔ public evidence exports a bounded reference and excludes arbitrary bodies, credentials and unsafe URLs (0.450949ms)
+✔ private companion references are omitted without leaking their names or source paths (0.401644ms)
+✔ evidence references reject escaping paths on either operating system (0.162936ms)
+✔ the generated public app view preserves all 441 clauses and ignores uncommitted input edits (1545.36436ms)
+✔ public source links are withheld when their selected blob differs from the cited public revision (906.348279ms)
+✔ a newer committed overlay updates the visible evidence date in the owner timezone (1324.182598ms)
+✔ the actual generated filter script searches full acceptance wording and preserves separate scopes (810.683634ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4605.500674

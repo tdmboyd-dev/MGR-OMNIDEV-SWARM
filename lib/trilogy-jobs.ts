@@ -5,7 +5,7 @@ import {applyPatches} from './runtime-contract';
 import {canonical,canonicalHash,decodeBase64,encodeBase64,exact,executionIdentity,hashBytes,snapshotCommand,validHex,validId,validSha,validateRequest,verifyReceipt} from './trilogy-contract';
 
 type Role='owner'|'bridge'|'reader'|'worker';
-type Access={ownerId:string;projectId:string;repositoryId:string;role:Role};
+export type Access={ownerId:string;projectId:string;repositoryId:string;role:Role};
 export class TrilogyError extends Error {status:number;constructor(message:string,status=400){super(message);this.status=status;}}
 const fail=(message:string,status=400):never=>{throw new TrilogyError(message,status);};
 // Check time inside the atomic database statement as well as before dispatch.
@@ -119,6 +119,62 @@ export async function trilogyStatus(jobId:string,access:Access){
  role(access,['owner','reader']);const c=await active(jobId,access);if(c.entry.result?.state==='verified-pending-owner')await proof(c,c.entry.result,c.entry.proof?.receipt,c.entry.proof?.outputBase64,access);
  const latest=await active(jobId,access);if(latest.raw.result!==c.raw.result)fail('Trilogy status changed during observation',409);
  return {contract:'mgr.omnidev.trilogy-status.v1',jobId,projectId:access.projectId,repositoryId:access.repositoryId,ownerId:access.ownerId,grant:{id:c.grant.grantId,expiresAt:c.grant.expiresAt,status:'active'},execution:{host:'unqualified',isolationVerified:false},result:c.entry.result,statusRevision:c.entry.statusRevision,observedAt:new Date().toISOString()};
+}
+
+// Publishing is an owner action over the existing candidate and evidence. It
+// must never create a second job, worker, or weaker verification route.
+export async function trilogyPublicationContext(jobId:string,access:Access){
+ role(access,['owner']);
+ const c=await active(jobId,access);
+ if(c.entry.result?.state!=='verified-pending-owner')fail('Signed candidate verification is required before publication',403);
+ await planMatches(c.entry.plan,c);
+ await validateResult(c.entry.result,c);
+ await proof(c,c.entry.result,c.entry.proof?.receipt,c.entry.proof?.outputBase64,access);
+ await assertCurrent(c,access);
+ return c;
+}
+
+// Status, revocation, and reconciliation of an already-dispatched effect must
+// remain available after an approval expires or a job is canceled. This grants
+// no permission to create GitHub objects, refs, or pull requests.
+export async function trilogyPublicationControlContext(jobId:string,access:Access){
+ role(access,['owner']);if(!validId(jobId))fail('Invalid job identity');
+ const raw:any=await db().prepare('SELECT * FROM jobs WHERE id=? AND project_id=?').bind(jobId,access.projectId).first();
+ if(!raw)fail('Trilogy scope refused',403);
+ const payload=JSON.parse(raw.payload),result=JSON.parse(raw.result),entry=result.trilogy,grant=entry?.grant;
+ if(!grant||grant.actorId!==access.ownerId||grant.permission!=='candidate-only'||grant.request?.jobId!==jobId||grant.request?.projectId!==access.projectId||grant.request?.repositoryId!==access.repositoryId||grant.request?.ownerId!==access.ownerId)fail('Trilogy scope refused',403);
+ const project:any=await db().prepare("SELECT * FROM records WHERE id=? AND kind='project'").bind(access.projectId).first();
+ if(!project)fail('Trilogy project is unavailable',403);
+ return {raw,payload,result,entry,grant,project,data:JSON.parse(project.data),sourceDigest:await fingerprint(payload.baseline)};
+}
+
+export async function saveTrilogyPublication(c:any,publication:any,title:string,checkAuthority=true,expectedExposure?:{status:string;data:string}|null){
+ const now=new Date().toISOString(),entry={...c.entry,publication,statusRevision:c.entry.statusRevision+1};
+ const next=JSON.stringify({...c.result,trilogy:entry,...(publication.state==='published'?{repository:publication.outcome}:{})});
+ const audit=record('memory',title,{type:'TrilogyPublication',jobId:c.raw.id,authorizationId:publication.authorization.id,state:publication.state,attemptId:publication.attemptId,phase:publication.phase,permission:'draft-pr-exact-candidate',merged:false,released:false},c.raw.project_id,'saved');
+ let guard=checkAuthority?" AND status='awaiting review' AND json_extract(result,'$.trilogy.grant.revoked')=0 AND json_extract(result,'$.trilogy.grant.expiresAt')>"+TRILOGY_DATABASE_NOW_MS+" AND ?>"+TRILOGY_DATABASE_NOW_MS+" AND COALESCE((SELECT json_extract(data,'$.stopped') FROM runtime_settings WHERE id='effect-policy'),0)=0":"";
+ if(checkAuthority&&(publication.authorization.revoked!==false||publication.authorization.expiresAt<=Date.now()))fail('Publication approval expired or was revoked',403);
+ const args:any[]=[next,now,c.raw.id,c.raw.project_id,c.raw.status,c.raw.payload,c.raw.result,c.raw.objective,c.project.id,c.project.data];
+ if(checkAuthority)args.push(publication.authorization.expiresAt);
+ const undispatched=publication.state==='canceled-before-dispatch';
+ if(undispatched){
+  if(checkAuthority||expectedExposure===undefined||!['authorized','canceled-before-dispatch'].includes(c.entry.publication?.state)||c.entry.publication.attemptId!==null||publication.attemptId!==null||publication.outcome!==null)fail('Undispatched publication cleanup requires its exact saved state',409);
+  // Admission and the attempt journal are separate durable boundaries. Fence
+  // both before releasing an orphan: a delayed starter or another reservation
+  // must not be mistaken for the same undispatched effect.
+  if(expectedExposure===null){guard+=" AND NOT EXISTS (SELECT 1 FROM records WHERE id=?)";args.push('exposure-pr-'+c.raw.id);}
+  else if(expectedExposure){guard+=" AND EXISTS (SELECT 1 FROM records WHERE id=? AND kind='exposure' AND project_id=? AND status=? AND data=?)";args.push('exposure-pr-'+c.raw.id,c.raw.project_id,expectedExposure.status,expectedExposure.data);}
+  else fail('Undispatched cleanup is missing its reservation observation',409);
+ }
+ const statements=[
+  db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND project_id=? AND status=? AND payload=? AND result=? AND objective=? AND EXISTS (SELECT 1 FROM records WHERE id=? AND kind='project' AND data=?)"+guard).bind(...args),
+  db().prepare("INSERT INTO records(id,kind,title,project_id,status,data,created_at,updated_at) SELECT ?,?,?,?,?,?,?,? WHERE changes()=1 AND EXISTS (SELECT 1 FROM jobs WHERE id=? AND result=?)").bind(audit.id,audit.kind,audit.title,audit.projectId,audit.status,JSON.stringify(audit.data),now,now,c.raw.id,next)
+ ];
+ // Confirmation or undispatched cancellation and capacity release share one
+ // transaction. A process death cannot strand a completed effect's capacity.
+ if(publication.state==='published'||undispatched)statements.push(db().prepare("UPDATE records SET status='released',data=json_set(data,'$.state','released','$.outcome',?),updated_at=? WHERE id=? AND kind='exposure' AND status IN ('active','reconciling','released') AND project_id=? AND json_extract(data,'$.operationId')=? AND json_extract(data,'$.target')=? AND json_extract(data,'$.action')='github-draft-pr' AND json_extract(data,'$.candidateDigest')=? AND json_extract(data,'$.sourceDigest')=? AND EXISTS (SELECT 1 FROM jobs WHERE id=? AND result=?)").bind(publication.state,now,'exposure-pr-'+c.raw.id,c.raw.project_id,c.raw.id,c.raw.project_id,await fingerprint(c.result.candidate.patches),await fingerprint(c.payload.baseline),c.raw.id,next));
+ const updates=await db().batch(statements);
+ if(!updates[0].meta.changes)fail('Job or approval changed during publication update',409);
 }
 // The existing owner workspace action still authorizes a local snapshot apply.
 // This check adds proof requirements; it grants no repository release permission.

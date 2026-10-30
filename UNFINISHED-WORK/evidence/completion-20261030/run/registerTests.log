@@ -1,0 +1,30 @@
+✔ 174 task records and 348 criteria pass preservation without false certifications (4.770507ms)
+✔ rejects parent marked certified with unverified criterion (2.131146ms)
+✔ rejects forged VERIFIED with missing source/test/reviewer receipt (1.784966ms)
+✔ full provenance per criterion makes parent eligible, not automatically approved (1.623262ms)
+✔ exact acceptance text cannot be silently rewritten (1.285133ms)
+✔ duplicate original or registered parent identities are rejected (1.084783ms)
+✔ empty original requirements cannot make 174 parents ready (1.006454ms)
+✔ unknown parent IDs cannot silently replace required original parents (1.514809ms)
+✔ sparse or malformed parent and criterion records fail closed (6.153919ms)
+✔ duplicate criterion identities cannot reuse the same original requirement (1.333116ms)
+✔ blank or meaningless provenance cannot be counted as verified (10.359717ms)
+✔ historic verified proof remains intact when candidate source changes (3.141607ms)
+✔ matching candidate revision has structural readiness but no automatic certification (1.295759ms)
+✔ source readiness is unknown without an explicitly requested current revision (1.627398ms)
+✔ proof from different source revisions cannot make a parent ready (2.151798ms)
+✔ false aggregate counts and unsupported parent states are rejected (8.719529ms)
+✔ completed canonical parent and certified register must remain synchronized (3.712014ms)
+✔ the original verified status and completed_verified alias both require complete certified proof (6.914367ms)
+✔ documented incomplete states remain valid and unsupported supplied backlog states are rejected (16.686645ms)
+✔ recorded status drift is visible rather than silently changing historical source (1.231022ms)
+✔ invalid current source selectors cannot be used for certification (0.252841ms)
+✔ the original 174-task 441-criterion register and REL-02 historical evidence are preserved (20.988307ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 109.075045
