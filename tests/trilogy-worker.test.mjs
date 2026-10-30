@@ -16,7 +16,7 @@ const canonical=value=>JSON.stringify(value,(_key,v)=>v&&typeof v==='object'&&!A
 const before='export const answer = 1;\n',after='export const answer = 2;\n';
 const testSource="import {test} from 'node:test';\nimport assert from 'node:assert/strict';\nimport {answer} from '../src/value.mjs';\ntest('the requested behavior returns two',()=>assert.equal(answer,2));\n";
 const policyNames=['OMNI_TRILOGY_REPOSITORY_ID','OMNI_TRILOGY_REPOSITORY_ROOT','OMNI_TRILOGY_VERIFIER_ID','OMNI_TRILOGY_VERIFIER_PRIVATE_KEY_FILE','OMNI_TRILOGY_VERIFIER_PUBLIC_KEY','OMNI_TRILOGY_VERIFIER_REVOKED','OMNI_TRILOGY_OWNER_TOKEN','OMNI_TRILOGY_BRIDGE_TOKEN','OMNI_TRILOGY_READ_TOKEN','OMNI_WORKER_TOKEN','OMNI_SITE_SERVICE_TOKEN','OMNI_WORKER_IMAGE','OMNI_TRILOGY_VERIFIER_PRIVATE_KEY','DOCKER_HOST','DOCKER_CONTEXT','PATH'];
-const gitEnv=()=>({PATH:process.env.PATH,GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:process.platform==='win32'?'NUL':'/dev/null',GIT_TERMINAL_PROMPT:'0',...(process.env.SystemRoot?{SystemRoot:process.env.SystemRoot}:{})});
+const gitEnv=()=>({PATH:process.env.PATH,GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_TERMINAL_PROMPT:'0',...(process.env.SystemRoot?{SystemRoot:process.env.SystemRoot}:{})});
 const git=(root,...args)=>execFileSync('git',['-C',root,'-c','user.name=Local Trilogy Test','-c','user.email=fixture@example.invalid','-c','commit.gpgsign=false',...args],{encoding:'utf8',env:gitEnv(),stdio:['ignore','pipe','pipe']}).trim();
 const signingPair=()=>generateKeyPairSync('ed25519',{privateKeyEncoding:{type:'pkcs8',format:'pem'},publicKeyEncoding:{type:'spki',format:'pem'}});
 

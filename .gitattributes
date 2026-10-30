@@ -1,0 +1,2 @@
+# Keep the signed updater trust anchor byte-identical on Windows.
+/companion/engine/public-key.pem text eol=lf

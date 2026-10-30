@@ -19,7 +19,7 @@ function canonical(value){
 const plain=value=>JSON.parse(canonical(value));
 const safePath=path=>typeof path==='string'&&path.length>0&&path.length<251&&!/[\\:*?\[\]<>|\x00-\x1f]/.test(path)&&!path.startsWith('/')&&!path.split('/').some(p=>!p||p==='.'||p==='..'||p.toLowerCase()==='.git');
 function git(root,...args){
- const env={PATH:process.env.PATH,GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:process.platform==='win32'?'NUL':'/dev/null',GIT_TERMINAL_PROMPT:'0',GIT_NO_REPLACE_OBJECTS:'1'};
+ const env={PATH:process.env.PATH,GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_TERMINAL_PROMPT:'0',GIT_NO_REPLACE_OBJECTS:'1'};
  if(process.env.SystemRoot)env.SystemRoot=process.env.SystemRoot;
  try{return execFileSync('git',['--no-pager','-C',root,...args],{env,stdio:['ignore','pipe','pipe'],maxBuffer:3_000_000,timeout:5000});}catch{throw Error('Trilogy committed-source verification failed');}
 }
