@@ -1,3 +1,9 @@
+# Capability card addition — October 30, 2026
+
+This isolated `backpack/capability-cards-20261030` branch adds an owner-authored `BACKPACK-CAPABILITY.json` for Backpack 0.4.0 read-only discovery. It describes this component, responsibilities, interfaces and declared dependencies with hashes of implementation references. It remains a draft requiring owner review. Hash equality proves reference freshness only; cards grant no permission, execution, ownership transfer or acceptance. An actual four-repository source/bundled MCP trial read all four cards successfully with zero tasks/runs/profiles and no source mutation. Full proof is in private Backpack `evidence/capability-cards-040/four-repository-trial.json`; private source manifests are not copied here. This wave changes metadata/documentation only; earlier runtime test receipts below are preserved and were not rerun or relabeled. Original 174 parents / 441 clauses / 28 upgrades and canonical states are unchanged. Read the prior runtime handoff below for actual implementation, failures and remaining gates. Separate newer agent branches require reconciliation before any full-product claim.
+
+---
+
 # Published review source and current board — October 30, 2026
 
 The combined runtime and evidence are published in isolated draft PR #2 on the current development branch. Source checkpoint `de006f6611ff802811c052d0d71ed8184c17f0dd`, tree `ad101ddd25ca0db62edbf185de51b8cda12cdc2e`, was read back from GitHub and matches locally. Current board generation uses that exact available source/public pin, all relevant prior overlays, and the new combined overlay. Its saved data reports **79/79** current local profiles with unchanged 174/441/28 scope and zero fully independently accepted parents. The generator check and complete-board response contract passed.

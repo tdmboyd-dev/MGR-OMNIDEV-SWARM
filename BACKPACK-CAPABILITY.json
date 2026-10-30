@@ -1,0 +1,130 @@
+{
+  "schema": "mgr.repo-capability-card.v1",
+  "id": "mgr-omnidev-swarm",
+  "name": "MGR OmniDev Swarm",
+  "purpose": "Manage authorized development jobs and handoffs, including specialist work and Trilogy progress.",
+  "maintainer": "Time Boyd; runtime authorization belongs to the current host and domain owner.",
+  "reviewStatus": "draft-requires-owner-review",
+  "authority": {
+    "owns": [
+      "Development job state and work management"
+    ],
+    "doesNotOwn": [
+      "MGR-ONE decisions, Code Monster canonical source evidence or OmniSight observation"
+    ],
+    "permissionSource": "Current owner-approved host configuration and domain authorization; this card grants nothing."
+  },
+  "useWhen": [
+    "Manage authorized development jobs and handoffs, including specialist work and Trilogy progress."
+  ],
+  "doNotUseWhen": [
+    "A request would transfer another component authority or requires ungranted execution, provider access, spending or production acceptance."
+  ],
+  "inputs": [
+    {
+      "name": "Repository snapshot and job",
+      "description": "An authorized repository snapshot pinned to its commit/tree, a job ID and a reviewed candidate plan."
+    },
+    {
+      "name": "Role-scoped access",
+      "description": "Existing owner, bridge or reader authorization for the exact project/repository/job; no credential values belong in a card."
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Job status and candidate grant",
+      "description": "Domain-owned job status, bounded execution grant and pending verified result; acceptance and publication remain explicit owner actions."
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "application",
+      "kind": "cli",
+      "entrypoint": "pnpm dev",
+      "claimedAvailability": "implemented-local",
+      "permission": "Host authorization required. Read the referenced implementation and operating guide for inputs and effects.",
+      "effects": "execute",
+      "evidenceIds": [
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "name": "trilogy-status",
+      "kind": "http",
+      "entrypoint": "GET /api/trilogy?jobId=JOB_ID",
+      "claimedAvailability": "implemented-local",
+      "permission": "Configured reader access for this job; never assume the endpoint is running.",
+      "effects": "read",
+      "evidenceIds": [
+        "trilogy-route"
+      ]
+    },
+    {
+      "name": "trilogy-actions",
+      "kind": "http",
+      "entrypoint": "POST /api/trilogy",
+      "claimedAvailability": "implemented-local",
+      "permission": "Owner-only authorize/revoke/publication actions; bridge-only result admission. Review the exact action, grant, scope and expiry before use.",
+      "effects": "external",
+      "evidenceIds": [
+        "trilogy-route"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "mgr-code-monster",
+      "relationship": "Intended cooperating component; declaration does not prove a live connection or delegate authority."
+    },
+    {
+      "id": "mgr-omnisight",
+      "relationship": "Intended cooperating component; declaration does not prove a live connection or delegate authority."
+    },
+    {
+      "id": "mgr-backpack",
+      "relationship": "Intended cooperating component; declaration does not prove a live connection or delegate authority."
+    }
+  ],
+  "costs": {
+    "local": "Uses owner hardware, storage and installed dependencies. No measured operating-cost estimate is available.",
+    "external": "External services are optional and separately authorized; no paid calls or price guarantee are included."
+  },
+  "limitations": [
+    "This card is descriptive, untrusted and pending owner review. Source references do not certify behavior.",
+    "Local test evidence is separate from provider, device, signer, owner and production acceptance.",
+    "No universal innovation engine, automatic tool selection, dispatch or Tevin training integration is established by this card."
+  ],
+  "acceptanceRules": [
+    "Inspect current source and applicable domain acceptance rules before acting.",
+    "Require executed checks for the stated scope and preserve failures, skips and unavailable external acceptance.",
+    "Re-read stale or unavailable references; never infer permission from descriptions."
+  ],
+  "businessValue": {
+    "statement": "Make component responsibilities and intended uses inspectable so an owner or host can select a suitable tool without duplicating authority.",
+    "basis": "owner-described-not-validated"
+  },
+  "evidence": [
+    {
+      "id": "source-1",
+      "path": "package.json",
+      "sha256": "a2ae91722da4c58c4b2d8699289e24becf7b4e31651041c4a03c66b7bac23e29",
+      "claimedLevel": "source",
+      "meaning": "Inspected implementation reference; hash equality is freshness, not executed acceptance."
+    },
+    {
+      "id": "source-2",
+      "path": "lib/trilogy-contract.ts",
+      "sha256": "009e486806f06a8fedb149fd5d3a9fad1c11a2465f914e6937ebbae5784f5da4",
+      "claimedLevel": "source",
+      "meaning": "Inspected implementation reference; hash equality is freshness, not executed acceptance."
+    },
+    {
+      "id": "trilogy-route",
+      "path": "app/api/trilogy/route.ts",
+      "sha256": "f1d508e16a06be9104ef4aa1974f2bda358d42c0919178c7dc422c76e4d92cae",
+      "claimedLevel": "source",
+      "meaning": "Actual GET/POST route and action validation; runtime acceptance is separately recorded."
+    }
+  ]
+}
