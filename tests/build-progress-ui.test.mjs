@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import ts from 'typescript';
+import {isCompleteProgressBoard} from '../lib/owner-progress-contract.mjs';
 
 const source=readFileSync(new URL('../components/build-progress.tsx',import.meta.url),'utf8');
 const parsed=ts.createSourceFile('build-progress.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
@@ -24,7 +25,7 @@ function host(responses){
   const useState=initial=>{const i=cursor++;if(!(i in slots))slots[i]=initial;return [slots[i],value=>{if(mounted){slots[i]=typeof value==='function'?value(slots[i]):value;dirty=true;}}];};
   const useEffect=(fn,deps)=>{const i=cursor++;if(!slots[i]||deps.some((v,n)=>v!==slots[i].deps[n]))effects.push(()=>{slots[i]?.cleanup?.();slots[i]={deps,cleanup:fn()};});};
   const fetch=(url,init)=>{requests.push({url,init});const response=responses.shift();return Promise.resolve(typeof response==='function'?response(init):response);};
-  const Component=new Function('h','useState','useEffect','fetch',compiled+'\nreturn BuildProgressView;')(h,useState,useEffect,fetch);
+  const Component=new Function('h','useState','useEffect','fetch','isCompleteProgressBoard',compiled+'\nreturn BuildProgressView;')(h,useState,useEffect,fetch,isCompleteProgressBoard);
   const nodes=n=>Array.isArray(n)?n.flatMap(nodes):!n||typeof n!=='object'?[]:[n,...nodes(n.props?.children)];
   const text=n=>Array.isArray(n)?n.map(text).join(''):n==null||typeof n==='boolean'?'':typeof n!=='object'?String(n):text(n.props?.children);
   async function flush(){for(let i=0;i<30;i++){if(dirty&&mounted){dirty=false;cursor=0;tree=Component();while(effects.length)effects.shift()();}await Promise.resolve();}}
@@ -48,8 +49,16 @@ test('HTML mentioning 441, incomplete registers and malformed provenance never a
     changedBoard(data=>data.tasks[1].acceptance[0].id=data.tasks[0].acceptance[0].id),
     changedBoard(data=>data.tasks[0].acceptance[0].requirement=''),
     changedBoard(data=>data.upgrades.pop()),
+    changedBoard(data=>data.upgrades[1].id=data.upgrades[0].id),
+    changedBoard(data=>data.summaries.fullyAcceptedParents=174),
+    changedBoard(data=>data.tasks[0].pendingActions=null),
+    changedBoard(data=>data.tasks[0].completedHere=[99999]),
+    changedBoard(data=>data.verification.passedProfiles=999),
     changedBoard(data=>data.summaries.acceptanceClauses=440),
     changedBoard(data=>data.sourceSnapshot.commit='main'),
+    changedBoard(data=>{data.evidence[data.completed[0].evidenceIds[0]].path={unexpected:'object'};}),
+    board.replace(/<script id="progress-markdown" type="application\/json">[\s\S]*?<\/script>/,''),
+    board.replace(/(<script id="progress-markdown" type="application\/json">)[\s\S]*?(<\/script>)/,(_,start,end)=>start+'null'+end),
   ];
   for(const html of invalid){
     const view=host([reply(html),reply()]);await view.flush();

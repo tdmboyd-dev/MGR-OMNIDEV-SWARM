@@ -11,3 +11,8 @@
 /UNFINISHED-WORK/evidence/backpack-readiness-20261030/**/*.log -diff
 /UNFINISHED-WORK/evidence/backpack-readiness-20261030/*.txt -diff
 /UNFINISHED-WORK/evidence/backpack-readiness-20261030/** whitespace=trailing-space,space-before-tab,cr-at-eol
+
+# Preserve the other agent's captured failures and full execution receipts.
+/UNFINISHED-WORK/evidence/resumption-20261030/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/UNFINISHED-WORK/evidence/resumption-20261030/**/*.log -diff
+/UNFINISHED-WORK/evidence/resumption-20261030/*.log -diff

@@ -1,0 +1,30 @@
+✔ 174 task records and 348 criteria pass preservation without false certifications (3.98689ms)
+✔ rejects parent marked certified with unverified criterion (1.904113ms)
+✔ rejects forged VERIFIED with missing source/test/reviewer receipt (1.763495ms)
+✔ full provenance per criterion makes parent eligible, not automatically approved (1.542169ms)
+✔ exact acceptance text cannot be silently rewritten (1.376493ms)
+✔ duplicate original or registered parent identities are rejected (1.153354ms)
+✔ empty original requirements cannot make 174 parents ready (1.031263ms)
+✔ unknown parent IDs cannot silently replace required original parents (1.21164ms)
+✔ sparse or malformed parent and criterion records fail closed (6.993477ms)
+✔ duplicate criterion identities cannot reuse the same original requirement (1.449552ms)
+✔ blank or meaningless provenance cannot be counted as verified (10.11255ms)
+✔ historic verified proof remains intact when candidate source changes (2.574379ms)
+✔ matching candidate revision has structural readiness but no automatic certification (1.17794ms)
+✔ source readiness is unknown without an explicitly requested current revision (0.885979ms)
+✔ proof from different source revisions cannot make a parent ready (2.295121ms)
+✔ false aggregate counts and unsupported parent states are rejected (8.073668ms)
+✔ completed canonical parent and certified register must remain synchronized (3.061192ms)
+✔ the original verified status and completed_verified alias both require complete certified proof (6.276413ms)
+✔ documented incomplete states remain valid and unsupported supplied backlog states are rejected (10.47164ms)
+✔ recorded status drift is visible rather than silently changing historical source (0.901782ms)
+✔ invalid current source selectors cannot be used for certification (0.288406ms)
+✔ the original 174-task 441-criterion register and REL-02 historical evidence are preserved (17.364539ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 94.796964

@@ -1,0 +1,40 @@
+{
+  "schema": "mgr.trilogy.verification-preservation.v1",
+  "runs": [
+    {
+      "label": "full",
+      "sourceCommit": "aeb61cc02066e1db383c0dc270f7a11432ad04ce",
+      "summary": {
+        "passedProfiles": 76,
+        "failedProfiles": 0,
+        "blockedProfiles": 0,
+        "totalProfiles": 76,
+        "independentlyCertifiedParents": 0,
+        "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+      },
+      "verifiedOutputHashes": 76,
+      "hashMismatches": [],
+      "archive": "UNFINISHED-WORK/evidence/resumption-20261030/full-76-full.tar.gz",
+      "archiveSha256": "ece5870f483949a9ccf726f765b837f4c17e6a72956bb59f0c92abcbfefa7a37",
+      "report": "UNFINISHED-WORK/evidence/resumption-20261030/full-76-full.json"
+    },
+    {
+      "label": "final",
+      "sourceCommit": "3ad76710266e7e0181578924075db6b5ea07172d",
+      "summary": {
+        "passedProfiles": 76,
+        "failedProfiles": 0,
+        "blockedProfiles": 0,
+        "totalProfiles": 76,
+        "independentlyCertifiedParents": 0,
+        "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+      },
+      "verifiedOutputHashes": 76,
+      "hashMismatches": [],
+      "archive": "UNFINISHED-WORK/evidence/resumption-20261030/full-76-final.tar.gz",
+      "archiveSha256": "eab73ae231c3f187641ccac13b4a6ad77c9f423cb30a845cbf3ce715cf5dacc4",
+      "report": "UNFINISHED-WORK/evidence/resumption-20261030/full-76-final.json"
+    }
+  ],
+  "qualification": "Original raw outputs and source attribution retained unchanged. No full-parent acceptance or deployed qualification."
+}

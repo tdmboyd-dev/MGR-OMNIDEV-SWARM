@@ -1,5 +1,7 @@
 # MGR Trilogy — first-read agent instructions
 
+Start with [00-MGR-TRILOGY-COMMANDER.md](00-MGR-TRILOGY-COMMANDER.md), [01-UNIVERSAL-BEAST-BUILD-SYSTEM.md](01-UNIVERSAL-BEAST-BUILD-SYSTEM.md), MGR Beast Pack and [COMMANDER-HANDOFF.md](COMMANDER-HANDOFF.md). Then read the newest owning and Trilogy handoffs below; older receipts remain historical evidence.
+
 ## Current source save verified after renewed owner instruction — October 30, 2026
 
 The owner explicitly requested the GitHub approval again after the earlier rejected attempt. Native saves then succeeded and all three development-branch commit/tree identities were read back. OmniDev source checkpoint is `3733dde3962e76513952eaafb21d6aa994ef909d`, exact tree `90543f1e70fde1af42b5f3f5ca9beedd9234b453`, matching reviewed local `ec78b626332beee6d9a91abc8c101cbe284232f3`. Companion mappings are in `UNFINISHED-WORK/evidence/completion-20261030/github-source-readback.json`; the additive `UNFINISHED-WORK/mgr-publication-20261030.json` overlay supersedes the previous current-publication blocker while retaining its history. Source saving does not establish deployment or merge into main.

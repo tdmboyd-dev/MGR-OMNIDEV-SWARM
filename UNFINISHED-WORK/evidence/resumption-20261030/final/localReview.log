@@ -1,0 +1,1 @@
+PASS real loopback batch pause and timer prevent later inference calls while retaining completed output

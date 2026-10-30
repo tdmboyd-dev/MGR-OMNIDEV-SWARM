@@ -1,3 +1,9 @@
+# Concurrent source reconciliation — October 30, 2026
+
+The other agent advanced the active OmniDev development branch to `9436130b09e0e089fab4f17045c62c12680a38bf` while this readiness branch was being verified. Both source lanes are now combined on the isolated review branch. Their separate 76-profile and 75-profile receipts remain historical source-specific proof; the combined 78-profile runtime is pending its own full verification and fresh integration. No original task acceptance or default-branch merge is inferred. The detailed dated sections below remain preserved; newest combined receipts take precedence when completed.
+
+---
+
 # Backpack readiness and fresh Windows qualification — October 30, 2026
 
 Current isolated branch: `backpack/trilogy-readiness-20261030`. Tested runtime `3f694401db7c54a140122652c812ce2c36d99ea3` passed **75/75** complete approved local profiles, including TypeScript/build and new real connector/image/migration checks. Baseline **69/73** and initial repair **72/73** failures remain unchanged in `UNFINISHED-WORK/evidence/backpack-readiness-20261030/`. Never relabel older 73-profile Linux evidence as this Windows execution.
@@ -11,6 +17,20 @@ Fresh clean **14/14** local three-product integration passed. Actual Git/SQLite/
 Read [TRILOGY-OPERATIONS-BIBLE.md](TRILOGY-OPERATIONS-BIBLE.md), [the current wave](UNFINISHED-WORK/mgr-backpack-readiness-20261030.json) and [the persistent readiness scorecard](docs/full-build/SCORECARD.md). Existing target Bibles are retained. Canonical **174 parents / 441 clauses / 28 upgrades**, **122 open / 52 implemented_unverified**, zero newly independently accepted parents: byte-for-byte conservation is recorded.
 
 Source publication and draft PR readback are pending this metadata commit's later receipt. No default-branch merge, deployment, real provider, browser acceptance, qualified physical Docker host or canonical Tevin consumer is implied. Previously declined device/browser actions were not retried. Continue independent engineering from the original exact acceptance registers; do not call the whole Trilogy complete.
+
+---
+
+# Current source and full-inventory audit — October 30, 2026
+
+Current tested runtime: `3ad76710266e7e0181578924075db6b5ea07172d` (tree `4e02554103a5a4f1ba011cbdbb8480baeb56eca7`). **76/76 full local profiles pass**, including build/typecheck and all **13** bounded-backup cases. Original raw output hashes were rechecked with zero mismatches. `UNFINISHED-WORK/evidence/resumption-20261030/final/report.json` preserves exact source attribution; the earlier 76-profile run and recovered 75-profile run remain separate.
+
+The backup now restores up to 10,000 records plus 10,000 jobs in one transaction, refuses partial results, preserves canceled jobs and handles the actual near-10-MB request envelope. Progress evidence and embedded-download validation prevent a malformed response from crashing the view. The recovered publication-state checks remain in the full run.
+
+A new clean three-product local flow passed **14/14 checks**. Public summary: `UNFINISHED-WORK/evidence/resumption-20261030/integration-summary.json`. It uses actual local Git/SQLite/HTTP and fixture signing/provider boundaries; private companion source manifests remain in the private owning repository. No new browser or connected-device probe was attempted.
+
+The owner requested a full built-versus-remaining inventory. The native GitHub sweep found additional code on separate branches, including OmniDev `repair/completion-2026-10-28` at `0cbea3f363d4b036f16a1228df3518cd179a716f`. Current active-source tests do not cover those branch implementations. Reconcile source and original receipts before merging or declaring those capabilities missing. Current main remains `d27dd5b3f09102a0ae220f605d463c1949f62191`; this wave has not yet received a new remote save/readback, main merge or deployment.
+
+All **174 original parents / 441 exact clauses / 28 separate upgrades** remain intact; recorded parent states remain **122 open / 52 implemented_unverified / zero independently certified full parents**. An open task can already contain working code. The latest additive source/evidence overlay is `UNFINISHED-WORK/mgr-resumption-20261030.json`. Full product completion is not measured by local test pass rate.
 
 ---
 

@@ -6,6 +6,7 @@ import {pathToFileURL} from 'node:url';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import ts from 'typescript';
+import {isPublicationPreview,isPublicationState,publicationDraftUrl} from '../lib/trilogy-publication-response.mjs';
 
 // Execute the shipped component and its handlers with deterministic request timing.
 // Real browser journeys have a separate receipt; this host is not browser evidence.
@@ -18,6 +19,7 @@ const compiled=ts.transpileModule(body,{compilerOptions:{target:ts.ScriptTarget.
 const require=createRequire(import.meta.url);
 let renderer=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
 for(const name of ['react','react/jsx-runtime'])renderer=renderer.replaceAll(JSON.stringify(name),JSON.stringify(pathToFileURL(require.resolve(name)).href)).replaceAll("'"+name+"'",JSON.stringify(pathToFileURL(require.resolve(name)).href));
+renderer=renderer.replaceAll("'../lib/trilogy-publication-response.mjs'",JSON.stringify(new URL('../lib/trilogy-publication-response.mjs',import.meta.url).href)).replaceAll(JSON.stringify('../lib/trilogy-publication-response.mjs'),JSON.stringify(new URL('../lib/trilogy-publication-response.mjs',import.meta.url).href));
 const {TrilogyPublicationPreview}=await import('data:text/javascript;base64,'+Buffer.from(renderer).toString('base64'));
 
 const token='fixture-owner-approval-key-separate-20261029';
@@ -43,8 +45,8 @@ function host({reply=defaultReply,props={}}={}){
   const useRef=initial=>{const i=cursor++;return slots[i]??={current:initial};};
   const useEffect=(fn,deps)=>{const i=cursor++;if(!same(slots[i]?.deps,deps))effects.push(()=>{slots[i]?.cleanup?.();slots[i]={deps,cleanup:fn()};});};
   const fetch=async(url,init)=>{const request={url:String(url),method:init?.method||'GET',headers:init?.headers,body:init?.body?JSON.parse(init.body):null,redirect:init?.redirect};requests.push(request);return reply(request);};
-  const factory=new Function('h','Fragment','useState','useRef','useEffect','fetch','setInterval','clearInterval',compiled+'\nreturn TrilogyPublication;');
-  const Component=factory(h,'fragment',useState,useRef,useEffect,fetch,fn=>{timers.set(++timerId,fn);return timerId;},id=>timers.delete(id));
+  const factory=new Function('h','Fragment','useState','useRef','useEffect','fetch','setInterval','clearInterval','isPublicationPreview','isPublicationState','publicationDraftUrl',compiled+'\nreturn TrilogyPublication;');
+  const Component=factory(h,'fragment',useState,useRef,useEffect,fetch,fn=>{timers.set(++timerId,fn);return timerId;},id=>timers.delete(id),isPublicationPreview,isPublicationState,publicationDraftUrl);
   const nodes=node=>Array.isArray(node)?node.flatMap(nodes):!node||typeof node!=='object'?[]:[node,...nodes(node.props?.children)];
   const text=node=>Array.isArray(node)?node.map(text).join(''):node==null||typeof node==='boolean'?'':typeof node!=='object'?String(node):text(node.props?.children);
   function render(){cursor=0;dirty=false;tree=Component(current);while(effects.length)effects.shift()();}
@@ -176,4 +178,43 @@ test('an incomplete successful provider response cannot be displayed as a saved 
   assert.equal(v.publishedCount(),0);assert.equal(v.input().props.value,token);
   assert.equal(v.nodes().filter(n=>n.type==='a').length,0);
   v.unmount();
+});
+
+
+test('a malformed saved publication never claims success or feeds invalid preview data to rendering',async()=>{
+  for(const patch of [
+    {outcome:{...published().outcome,draft:false}},
+    {outcome:{...published().outcome,commit:'f'.repeat(40)}},
+    {preview:{...preview,jobId:'job-b'}},
+    {preview:{...preview,changedFiles:null}},
+  ]){
+    const v=host({reply:r=>r.method==='GET'?response({publication:{...published(),...patch}}):defaultReply(r)});
+    await load(v);
+    assert.ok(v.text().includes('saved publication response is incomplete'));
+    assert.ok(!v.text().includes('Saved GitHub draft recovered.'));
+    assert.equal(v.nodes().filter(n=>n.type==='a').length,0);assert.equal(v.publishedCount(),0);
+    assert.equal(v.button('Create GitHub draft'),undefined);v.unmount();
+  }
+});
+
+test('a malformed fresh preview and mismatched approval do not enable a draft',async()=>{
+  const malformed=host({reply:r=>r.body?.action==='publicationPreview'?response({...preview,changedFiles:[null]}):defaultReply(r)});
+  await load(malformed);assert.ok(malformed.text().includes('preview is incomplete'));assert.equal(malformed.button('Approve this version'),undefined);malformed.unmount();
+  const changed=host({reply:r=>r.body?.action==='authorizePublication'?response({...authorization(),preview:{...preview,candidateCommit:'f'.repeat(40)}}):defaultReply(r)});
+  await load(changed);await changed.click('Approve this version');
+  assert.ok(changed.text().includes('does not match the reviewed version'));assert.equal(changed.button('Create GitHub draft'),undefined);assert.equal(changed.publishedCount(),0);changed.unmount();
+});
+
+test('unconfirmed revocation keeps the selected approval and does not announce success',async()=>{
+  const v=host({reply:r=>r.body?.action==='revokePublication'?response({...authorization(),revoked:false}):defaultReply(r)});
+  await load(v);await v.click('Approve this version');await v.click('Revoke approval');
+  assert.ok(v.text().includes('did not confirm revocation'));assert.ok(!v.text().includes('Publication approval revoked.'));
+  assert.equal(v.input().props.value,token);assert.ok(v.button('Create GitHub draft'));v.unmount();
+});
+
+test('GitHub canonical repository capitalization does not hide a confirmed draft',async()=>{
+  const cased={...preview,repositoryId:'Owner/Repo'},result={...published(),preview:cased,revoked:true,expiresAt:Date.now()-1000};
+  const v=host({props:{verified:false,recoverable:true},reply:r=>r.method==='GET'?response({publication:result}):defaultReply(r)});await load(v);
+  assert.ok(v.text().includes('Saved GitHub draft recovered.'));
+  assert.equal(v.nodes().find(n=>n.type==='a').props.href,'https://github.com/Owner/Repo/pull/7');v.unmount();
 });

@@ -1,31 +1,7 @@
 "use client";
 
 import {useEffect, useState} from 'react';
-
-function isCompleteProgressBoard(html: string): boolean {
-  if (html.length > 4000000 || !/^\s*<!doctype html>/i.test(html) || !/<\/html>\s*$/i.test(html)) return false;
-  const encoded = html.match(/<script id="progress-data" type="application\/json">([\s\S]*?)<\/script>/)?.[1];
-  if (!encoded) return false;
-  try {
-    const data = JSON.parse(encoded);
-    if (data?.schema !== 'mgr.owner-progress-view.v1' || data.derivedOnly !== true
-      || !Array.isArray(data.tasks) || data.tasks.length !== 174
-      || !Array.isArray(data.upgrades) || data.upgrades.length !== 28
-      || data.summaries?.originalParents !== 174 || data.summaries?.acceptanceClauses !== 441
-      || data.summaries?.separateUpgrades !== 28
-      || ![data.sourceSnapshot?.commit, data.sourceSnapshot?.tree, data.sourceSnapshot?.publicRef]
-        .every(value => typeof value === 'string' && /^[a-f0-9]{40}$/.test(value))) return false;
-    const clauses = data.tasks.flatMap((task: {id?: unknown; acceptance?: unknown}) => {
-      if (typeof task?.id !== 'string' || !Array.isArray(task.acceptance)) throw new Error('Incomplete task');
-      return task.acceptance;
-    });
-    return new Set(data.tasks.map((task: {id: string}) => task.id)).size === 174
-      && clauses.length === 441
-      && clauses.every((clause: {id?: unknown; requirement?: unknown}) =>
-        typeof clause?.id === 'string' && typeof clause.requirement === 'string' && clause.requirement.trim())
-      && new Set(clauses.map((clause: {id: string}) => clause.id)).size === 441;
-  } catch { return false; }
-}
+import {isCompleteProgressBoard} from '@/lib/owner-progress-contract.mjs';
 
 /** The generated board is a projection of the canonical acceptance register. */
 export function BuildProgressView() {

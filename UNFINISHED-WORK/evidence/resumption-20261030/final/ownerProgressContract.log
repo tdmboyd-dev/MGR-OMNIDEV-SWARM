@@ -1,0 +1,20 @@
+✔ the committed board and its complete data remain valid without mutation (20.654577ms)
+✔ missing, duplicated, oversized or truncated board envelopes fail closed (8.038476ms)
+✔ all original and upgrade identities stay unique and separately counted (105.635508ms)
+✔ displayed counts must agree with the detailed records (155.847371ms)
+✔ each clause retains its parent and complete renderer data (95.84869ms)
+✔ missing arrays and stale completion references cannot enter the renderer (110.164905ms)
+✔ evidence and source references must resolve to the provided maps (72.279921ms)
+✔ referenced evidence must provide renderable labels without hiding restricted or unavailable proof (112.034248ms)
+✔ the markdown download requires one nonempty string payload (25.670507ms)
+✔ local pass totals and source identity remain internally consistent (71.977596ms)
+✔ valid failed and blocked local profiles do not hide the board (14.21983ms)
+✔ invalid top-level payloads return false instead of throwing (0.209359ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 800.010901

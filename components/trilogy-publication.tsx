@@ -1,6 +1,7 @@
 "use client";
 
 import {useEffect, useRef, useState} from 'react';
+import {isPublicationPreview, isPublicationState, publicationDraftUrl} from '../lib/trilogy-publication-response.mjs';
 
 export type PublicationPreview = {
   contract: string;
@@ -25,13 +26,6 @@ type PublicationState = {
   preview?: PublicationPreview;
   outcome?: {url: string; number: number; commit: string; draft: boolean};
 };
-
-function trustedPullRequest(value: PublicationState | null, repositoryId: string | undefined) {
-  const outcome = value?.outcome;
-  if (!outcome || !repositoryId || !Number.isSafeInteger(outcome.number) || outcome.number < 1) return null;
-  const expected = 'https://github.com/' + repositoryId + '/pull/' + outcome.number;
-  return outcome.url === expected ? expected : null;
-}
 
 export function TrilogyPublicationPreview({preview}: {preview: PublicationPreview}) {
   return <section className="publication-preview" aria-label="Exact version to publish">
@@ -116,8 +110,11 @@ export function TrilogyPublication({jobId, verified, recoverable = false, onPubl
     try {
       if (action === 'load' || action === 'refresh') {
         const saved = action === 'refresh' ? {publication: null} : await request();
-        const status = saved.publication;
         if (!current()) return;
+        if (!saved || !Object.prototype.hasOwnProperty.call(saved, 'publication') || (saved.publication !== null && !isPublicationState(saved.publication, jobId))) {
+          throw new Error('The saved publication response is incomplete or does not match this job. Reload before continuing.');
+        }
+        const status = saved.publication;
         if (status?.authorizationId) {
           setPublication(status); setPreview(status.preview || null);
           setNotice(status.state === 'published' ? 'Saved GitHub draft recovered.' : status.state === 'canceled-before-dispatch' ? 'The unstarted publication was cleared. No GitHub draft was created.' : ['publishing', 'uncertain'].includes(status.state) ? 'GitHub has not confirmed this attempt. Recover the saved attempt before starting another.' : 'Saved approval recovered.');
@@ -125,21 +122,28 @@ export function TrilogyPublication({jobId, verified, recoverable = false, onPubl
           if (!verified) {setError('There is no saved publishing attempt for this job.'); return;}
           const next = await request({action: 'publicationPreview', jobId});
           if (!current()) return;
+          if (!isPublicationPreview(next, jobId)) throw new Error('The publication preview is incomplete or belongs to another job.');
           setPreview(next); setPublication(null);
         }
       } else if (action === 'approve') {
         const next = await request({action: 'authorizePublication', jobId, expectedPreview: preview});
         if (!current()) return;
-        setPublication(next); setPreview(next.preview || preview); setNotice('This exact version is approved. You can now create its GitHub draft.');
+        if (!isPublicationState(next, jobId, null, preview) || !['authorized', 'retryable'].includes(next.state) || next.revoked || next.expiresAt <= Date.now()) {
+          throw new Error('The returned approval does not match the reviewed version or is no longer active. Reload before continuing.');
+        }
+        setPublication(next); setPreview(next.preview); setNotice('This exact version is approved. You can now create its GitHub draft.');
       } else if (action === 'publish' || action === 'recover') {
         const next = await request(action === 'recover' ? {action: 'reconcilePublication', jobId} : {action: 'publish', jobId, authorizationId: publication!.authorizationId});
         if (!current()) return;
+        if (!isPublicationState(next, jobId, publication?.authorizationId || null, preview)) {
+          throw new Error('GitHub has not confirmed the exact tested draft. Reload the saved attempt before retrying.');
+        }
         if (action === 'recover' && next.state === 'canceled-before-dispatch' && next.reconciliation === 'not-dispatched' && next.outcome === null) {
           setPublication(next); setAccessKey('');
           setNotice('The unstarted publication was cleared. No GitHub draft was created.');
           return;
         }
-        if (next.state !== 'published' || next.preview?.jobId !== jobId || next.outcome?.draft !== true || next.outcome?.commit !== next.preview?.candidateCommit || !trustedPullRequest(next, next.preview?.repositoryId)) {
+        if (next.state !== 'published') {
           throw new Error('GitHub has not confirmed the exact tested draft. Reload the saved attempt before retrying.');
         }
         setPublication({...publication!, ...next}); setNotice('The exact tested version is saved in a GitHub draft.'); setAccessKey('');
@@ -147,7 +151,10 @@ export function TrilogyPublication({jobId, verified, recoverable = false, onPubl
       } else {
         const next = await request({action: 'revokePublication', jobId, authorizationId: publication!.authorizationId});
         if (!current()) return;
-        setPublication({...publication!, ...next, revoked: true});
+        if (!isPublicationState(next, jobId, publication!.authorizationId, preview) || next.revoked !== true) {
+          throw new Error('The server did not confirm revocation of this approval. Reload its state before continuing.');
+        }
+        setPublication(next);
         setAccessKey(''); setNotice('Publication approval revoked. Any draft already created remains on GitHub.');
       }
     } catch (caught) {
@@ -164,7 +171,7 @@ export function TrilogyPublication({jobId, verified, recoverable = false, onPubl
   const recovering = publication?.state === 'publishing' || publication?.state === 'uncertain';
   const canClearUnstarted = publication?.state === 'authorized' && (expired || revoked || !verified);
   const keyReady = accessKey.length >= 32 && accessKey.length <= 512 && !/\s/.test(accessKey);
-  const draftUrl = trustedPullRequest(publication, preview?.repositoryId);
+  const draftUrl = publicationDraftUrl(publication, preview?.repositoryId);
 
   return <section className="job-move-controls trilogy-publication" aria-label="Publish the tested version">
     <h3>Publish the tested version</h3>
