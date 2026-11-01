@@ -1,0 +1,1 @@
+PASS real supervisor child failure rolls back pointer and quarantines failed release

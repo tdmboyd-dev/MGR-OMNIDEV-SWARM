@@ -1,0 +1,102 @@
+{
+  "at": "2026-11-01T22:17:10.435Z",
+  "omniDevCommit": "e4ae27e7683aab6f4ab80600c884ae37183282b3",
+  "hostSourceHashes": {
+    "scripts/native-backpack-context.mjs": "d3fbb39e089296642d058a2e7844ad6658a91f9f5f8ddebfde8bc356bbfca225",
+    "worker/windows-worker.mjs": "02bb91ac5d6b5636549572b3af0b7321d77b4c060dacc9c2b4c2f4a0e1c28be1",
+    "lib/jobs.ts": "28a85dff98886fb1741fca32b743b9160d8703ef3170b86aabc06477a6616882"
+  },
+  "target": "ikickitz-app",
+  "upstreamCommit": "95b4e34008dd92cb97dad2f676e10ed317d8664f",
+  "oracleBaseCommit": "101c5f0ed9e935b6e70978be3c9f2fb3a605fd5f",
+  "candidateCommit": "c87c76f846bbaa0b0698ddf21df8ef5aff5527ea",
+  "guardPath": "scripts/check-directory-integrity.mjs",
+  "oraclePath": "tests/omni-snapshot.test.mjs",
+  "jobId": "a065753f-c2b1-46ce-9160-c3b9f10e6013",
+  "projectId": "72fbb9a4-cabb-4aa6-8b45-023b1ec18d8b",
+  "passed": true,
+  "checks": [
+    "existing OmniDev job binds actual iKickItz baseline and Imprint candidate",
+    "owner apply refused before actual independent worker proof",
+    "native host workflow reads current Backpack context before exact job and records source-linked outcome without copying canonical jobs",
+    "qualified AppContainer executes unchanged oracle against real candidate",
+    "actual native output, source identities and cleanup persist in existing job"
+  ],
+  "startedAt": "2026-11-01T22:16:45.843Z",
+  "endedAt": "2026-11-01T22:17:10.433Z",
+  "command": {
+    "version": 1,
+    "commandId": "ikickitz-directory-guard-v1",
+    "executable": "node",
+    "args": [
+      "--preserve-symlinks",
+      "--preserve-symlinks-main",
+      "--test",
+      "--test-isolation=none",
+      "tests/omni-snapshot.test.mjs"
+    ],
+    "cwd": ".",
+    "commandSha256": "77476d750d8b0bcaaa448ef4af24e772f3ee8696fdc50d2f149435e6c5fc0163"
+  },
+  "rawOutput": "? canonical valid application layout remains accepted (71.5953ms)\n? canonical server path must be a file, never a directory (72.3735ms)\n? canonical frontend source path must be a directory, never a file (64.3451ms)\n? tests 3\n? suites 0\n? pass 3\n? fail 0\n? cancelled 0\n? skipped 0\n? todo 0\n? duration_ms 247.3375\n",
+  "rawOutputSha256": "72d708b180176067bf3aefc94f7623b2c9dcb0089b9d868fac6d17b5f87757fb",
+  "nativeReceipt": {
+    "hostId": "291039dc-440c-471e-a8ba-fa352c00dd5b",
+    "launcherSha256": "1f313662aee42b31876cbb2228fba4b72cffb7df42e7231b3595f84115174ab9",
+    "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+    "qualificationDigest": "fa75feedb57c79c9860089545e75820ecea5a7d7879ed7390cf09aeea7d612e4",
+    "native": {
+      "profileName": "omni-f2a3727e-e654-45c0-80c9-183bd25a57ad",
+      "packageSid": "S-1-15-2-3753028867-1014905477-2889669181-2525610580-2601595280-1425192101-2963094206",
+      "tokenIsAppContainer": true,
+      "capabilityCount": 0,
+      "jobAssignedAtCreation": true
+    },
+    "cleanup": {
+      "verifiedAbsent": true,
+      "activeProcessesAfter": 0,
+      "profileDeletionHResult": 0,
+      "workspaceAbsent": true
+    }
+  },
+  "assignment": {
+    "id": "f2a3727e-e654-45c0-80c9-183bd25a57ad",
+    "candidateDigest": "95b131e7217ce3ac40d397e0b93f63ded6caeda88bbf0f18d76dcedaa408c3c3",
+    "sourceDigest": "fa95d7a51a5a1f41fe4a65c866c5d66b1573a8d794917c5bcf4a336c9147514e",
+    "testManifestDigest": "7fae807344abb9e0372932278b8d50163b958e94dc26260a203c7b05ecfaf35f",
+    "profile": "snapshot",
+    "expiresAt": 1793571480886,
+    "workerKind": "windows-appcontainer",
+    "hostId": "291039dc-440c-471e-a8ba-fa352c00dd5b",
+    "launcherSha256": "1f313662aee42b31876cbb2228fba4b72cffb7df42e7231b3595f84115174ab9",
+    "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+    "qualificationDigest": "fa75feedb57c79c9860089545e75820ecea5a7d7879ed7390cf09aeea7d612e4",
+    "profileName": "omni-f2a3727e-e654-45c0-80c9-183bd25a57ad",
+    "trilogyLink": {
+      "contract": "mgr.trilogy.job-link.v1",
+      "jobId": "a065753f-c2b1-46ce-9160-c3b9f10e6013",
+      "projectId": "72fbb9a4-cabb-4aa6-8b45-023b1ec18d8b",
+      "assignmentId": "f2a3727e-e654-45c0-80c9-183bd25a57ad",
+      "sourceDigest": "fa95d7a51a5a1f41fe4a65c866c5d66b1573a8d794917c5bcf4a336c9147514e",
+      "candidateDigest": "95b131e7217ce3ac40d397e0b93f63ded6caeda88bbf0f18d76dcedaa408c3c3",
+      "testManifestDigest": "7fae807344abb9e0372932278b8d50163b958e94dc26260a203c7b05ecfaf35f",
+      "linkSha256": "bf54b502edf0ea8405efa404fa5745802403c021813873f25fb681b8992a5083"
+    }
+  },
+  "baselineOracleFailed": true,
+  "oracleUnchanged": true,
+  "actualJobAndAppContainer": true,
+  "backpack": {
+    "project": "ikickitz",
+    "contextSha256": "9d221935150901231c2e434ac7fbcada33333c8cb62c0ec45fbbf8351ab582b5",
+    "sourcePath": "scripts/check-directory-integrity.mjs",
+    "sourceSha256": "ca9dcacc8ccbad5f76cf989f75ff61be35ea4bcd141c3a9ee07c5865415ffe9f",
+    "recorded": true,
+    "canonicalJobOwner": "OmniDev",
+    "trust": "Advisory untrusted context; not execution permission or acceptance.",
+    "memoryKey": "omni-native-a065753f-c2b1-46ce-9160-c3b9f10e6013"
+  },
+  "ownerApplyBeforeProofRefused": true,
+  "appliedToActiveApplication": false,
+  "scope": "Actual native Backpack-context workflow for selected iKickItz guard candidate from Imprint -> existing OmniDev job/SQLite/HTTP -> actual qualified Windows AppContainer. Immutable oracle executes actual guard body with real owned filesystem and controlled Git root; separate real Node/Git cases passed. Local qualification identities only; not live-model, production signer, signed Trilogy worker, whole-app or production acceptance."
+}

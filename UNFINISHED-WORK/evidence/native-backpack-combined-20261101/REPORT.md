@@ -1,0 +1,7 @@
+# Reconciled native Backpack and custody qualification
+
+Sourcee4ae27e passed88/88 full fixed local profiles, zero failed/blocked; all88outputs rehashed and unchanged-source checks passed. This combines native context and exact-job fencing with current native reservation/lifecycle custody. Build, TypeScript and all four newly combined profiles passed. Original174/441/28 acceptance is unchanged.
+
+A separately executed actual AppContainer qualification joba065753f-c2b1-46ce-9160-c3b9f10e6013 passed the unchanged three-test IKICKITZ oracle and recorded its Backpack context/source-linked note. Five real workflow checks passed. The first actual qualification job7f6889db-574e-4a7b-97af-673e3521e1eb was a known failed execution with delivered receipt and verified cleanup. Its failure is preserved, not relabeled. The original worker report omitted actual exit/stop diagnostics; cause cannot be inferred from the saved generic message. That diagnostic gap is the next repair. The subsequent separately identified test job was not an unknown-outcome replay.
+
+These are actual Windows boundary/local HTTP/SQLite/job results under disposable local identities, not permanent Tevin enrollment, independent production signing, Docker or whole-app/product acceptance. No source/command/expiry authority was expanded, and no PC restart occurred. Current native launcher qualification remains at its exact existing hash until any launcher source change is independently requalified. Full setup is docs/NATIVE-BACKPACK-WORKFLOW.md.

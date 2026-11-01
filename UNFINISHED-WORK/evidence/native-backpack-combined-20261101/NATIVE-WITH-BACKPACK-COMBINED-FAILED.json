@@ -1,0 +1,28 @@
+{
+  "classification": "Known failed execution; delivered immutable receipt, cleanup verified; not an unknown outcome and not a passing proof",
+  "jobId": "7f6889db-574e-4a7b-97af-673e3521e1eb",
+  "assignmentId": "bdcad178-d63e-45c3-8738-4d6b49981523",
+  "output": "Native execution failed",
+  "nativeReceipt": {
+    "hostId": "291039dc-440c-471e-a8ba-fa352c00dd5b",
+    "launcherSha256": "1f313662aee42b31876cbb2228fba4b72cffb7df42e7231b3595f84115174ab9",
+    "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+    "qualificationDigest": "fa75feedb57c79c9860089545e75820ecea5a7d7879ed7390cf09aeea7d612e4",
+    "native": {
+      "profileName": "omni-bdcad178-d63e-45c3-8738-4d6b49981523",
+      "packageSid": "S-1-15-2-3319329500-2404674811-1908531087-2383169794-51686016-3624261671-2880572804",
+      "tokenIsAppContainer": true,
+      "capabilityCount": 0,
+      "jobAssignedAtCreation": true
+    },
+    "cleanup": {
+      "verifiedAbsent": true,
+      "activeProcessesAfter": 0,
+      "profileDeletionHResult": 0,
+      "workspaceAbsent": true
+    }
+  },
+  "isolationVerified": false,
+  "reasonLimit": "Existing report omits native ExitCode/StopReason, so cause cannot be established from this receipt. Preserve diagnostic gap rather than invent a timeout.",
+  "newQualificationAllowed": "A separately identified new test job may be created after preserving this known failed receipt; do not replay the failed or unknown original assignment."
+}
