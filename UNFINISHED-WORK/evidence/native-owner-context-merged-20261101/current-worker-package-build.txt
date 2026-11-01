@@ -1,0 +1,1 @@
+{"archiveEntries": 16, "operation": "build", "relativeImports": 8, "sourceCommit": "de659456a232d646f877749ba62e9161a4916213", "sourceFiles": 15, "status": "verified", "zipBytes": 104183, "zipSha256": "096c337fa51ff63006ca49ebf7a52dfd4fa418280f5ba1959f14a6f15c5b2ccc"}
