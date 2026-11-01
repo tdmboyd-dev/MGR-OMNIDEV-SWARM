@@ -1,3 +1,8 @@
+## Native source navigation integration — November 1, 2026
+
+Completed in isolated owning Code Monster, ONE and API branches build/native-source-intelligence-20261101: bound-reference reads and labeled bounded impact, preserving existing compiler/permission/domain ownership. Actual ONE HTTP conversation → SDK/TCP → API → Code Monster Git compiler → saved SQLite/reopen passed 11/11 checks with injected model responses, no live provider or permanent service restart. Each owning HANDOFF.md links its completed-work report. Final commits and adoption checks follow in the receiving evidence; full Trilogy and all research candidates remain open. Task deliverable: C:/Users/cool/Documents/Codex/2026-11-01/this-repo-may-help-you-if/outputs/NATIVE-NAVIGATION-COMPLETED.md. Preserve unrelated active work and the deferred Windows restart.
+---
+
 # Current reconciled source verified — November 1, 2026
 
 Committed runtimed5181b5c015e48f5db3898fdd13f8085c6dcc24b passed83/83 complete fixed profiles, zero failures/blocked. Full final report/logs: UNFINISHED-WORK/evidence/safety-reconciliation-20261101/final-run/. The failed first76/82 run stays under initial-run, unchanged. New source lifetime, portable paths/UTF8, exact intent, pipeline provenance/dedup and worker local-routing checks passed. The worker download was rebuilt from572fb36399b4725d5fd6ded195b6dc75dbcaf06d:9sourcefiles/10entries,37158bytes, SHA256 adb0417e232d7072d1cdf8c5ce74063e0ccdc216647c8cafd6a731011e3cbd8c, actual build/check succeeded.
