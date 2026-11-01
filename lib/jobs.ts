@@ -1,4 +1,4 @@
-import {nativeAssignment,validateNativeReport,nativeCommand,validateNativeOracle} from './worker-policy';
+import {nativeAssignment,validateNativeReport,nativeCommand,validateNativeOracle,nativeScopePolicy} from './worker-policy';
 import {trilogyWorkerBinding,checkTrilogyWorkerProof,assertTrilogySnapshotApply,TRILOGY_DATABASE_NOW_MS} from './trilogy-jobs';
 import {createTrilogyJobLink,verifyTrilogyJobLink} from './trilogy-job-link.mjs';
 import {reviewPlan,combinedReport,expandSwarm} from './review-planner';
@@ -149,12 +149,34 @@ export async function recover(){
 }
 async function digest(value:unknown){const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(value)));return [...new Uint8Array(bytes)].map(x=>x.toString(16).padStart(2,'0')).join('');}
 export async function workerStatus(id:string,kind='docker-isolated'){const j=await get(id);if((j.payload.workerKind||'docker-isolated')!==kind)throw Error('Job belongs to a different worker');return publicJob(j);}
-export async function workerJob(id:string,kind='docker-isolated'){
+/** Read original native job/project custody. No candidate or policy is enrolled. */
+export async function engineeringBinding(id:string,workspaceId:string){
+ const j=await get(id);await assertPipelineRunning(j);
+ if(j.projectId!==workspaceId||j.payload.sourceProjectId&&j.payload.sourceProjectId!==workspaceId||(j.payload.workerKind||'docker-isolated')!=='windows-appcontainer'||j.payload.testProfile==='node-application'||!j.result.candidate||j.result.trilogy)throw Error('Engineering job scope denied');
+ const project:any=await db().prepare("SELECT data FROM records WHERE id=? AND kind='project'").bind(workspaceId).first();if(!project)throw Error('Engineering workspace missing');const data=JSON.parse(project.data);
+ const files=applyPatches(j.payload.baseline,j.result.candidate.patches);validateNativeOracle(j.payload.baseline,files);
+ const binding={sourceDigest:await digest(j.payload.baseline),candidateDigest:await digest(files),testManifestDigest:await digest(nativeCommand)},policy=nativeScopePolicy(binding),workspaceDigest=await digest(data.files),workspaceDataDigest=await digest(data);
+ const latest=await get(id),currentProject:any=await db().prepare("SELECT data FROM records WHERE id=? AND kind='project'").bind(workspaceId).first(),currentPolicy=nativeScopePolicy(binding);
+ if(!currentProject||currentProject.data!==project.data||['projectId','objective','status','mode','attempts'].some(k=>latest[k]!==j[k])||JSON.stringify(latest.payload)!==JSON.stringify(j.payload)||JSON.stringify(latest.result)!==JSON.stringify(j.result)||['hostId','launcherSha256','runtimeSha256','qualificationDigest'].some(k=>currentPolicy[k as keyof typeof currentPolicy]!==policy[k as keyof typeof policy]))throw Error('Engineering job or workspace changed during binding');
+ return {workspaceId:j.projectId,jobId:j.id,...binding,workerKind:'windows-appcontainer',profile:'snapshot',jobState:j.status,currentBindingVerified:workspaceDigest===binding.sourceDigest||j.status==='applied'&&workspaceDigest===binding.candidateDigest,workspaceDataDigest,workspaceRevision:data.revision||0,policyIdentity:{hostId:policy.hostId,launcherSha256:policy.launcherSha256,runtimeSha256:policy.runtimeSha256,qualificationDigest:policy.qualificationDigest}};
+}
+/** verification is an internal authenticated service composition value. The
+ * public worker route never forwards one and cannot claim a reserved job. */
+export async function workerJob(id:string,kind='docker-isolated',verification?:any){
  const j=await get(id);await assertPipelineRunning(j);
  if((j.payload.workerKind||'docker-isolated')!==kind)throw Error('Job belongs to a different worker');
  const native=kind==='windows-appcontainer';if(native&&j.result.trilogy)throw Error('Native executor is not qualified for the Trilogy signed-worker contract');
  if(native&&j.result.workerAssignment)throw Error('Prior native execution requires receipt reconciliation; no redispatch');
- if(native)assertNativeMutationSafe(j);
+ if(verification!==undefined&&!native)throw Error('Native verification admission cannot change worker kind');
+ let nativeProject:any=null;
+ if(native&&verification!==undefined){
+  const keys=(v:any)=>v&&typeof v==='object'&&!Array.isArray(v)?Object.keys(v).sort().join(','):'';
+  if(keys(verification)!=='binding,requestId'||typeof verification.requestId!=='string'||!/^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$/.test(verification.requestId)||keys(verification.binding)!=='candidateDigest,jobId,sourceDigest,testManifestDigest,workspaceDataDigest,workspaceId'||j.result.nativeExecutionUnknown||j.result.verificationOwner?.state!=='reserved'||j.result.verificationOwner.requestId!==verification.requestId)throw Error('Exact native verification ownership required');
+  const bound=await engineeringBinding(id,j.projectId);
+  if(bound.currentBindingVerified!==true||Object.entries(verification.binding).some(([k,v])=>bound[k as keyof typeof bound]!==v))throw Error('Native verification binding changed');
+  nativeProject=await db().prepare("SELECT data FROM records WHERE id=? AND kind='project'").bind(j.projectId).first();
+  if(!nativeProject||await digest(JSON.parse(nativeProject.data))!==bound.workspaceDataDigest)throw Error('Native verification workspace changed');
+ }else if(native)assertNativeMutationSafe(j);
  if(!j.result.checks?.passed)throw Error('Candidate static checks must pass before worker execution');
  if(j.status!=='awaiting review'||j.result.externalTests)throw Error('Candidate is not ready for worker testing or already has a report');
  if(j.result.workerAssignment?.expiresAt>Date.now())throw Error('Execution is already claimed by a worker');
@@ -169,11 +191,12 @@ export async function workerJob(id:string,kind='docker-isolated'){
  const linkedAssignment={...assignment,trilogyLink};
  const old=JSON.stringify(j.result),project:any=trilogy?await db().prepare("SELECT data FROM records WHERE id=? AND kind='project'").bind(j.projectId).first():null;
  if(trilogy&&(!project||trilogy.sourceDigest!==assignment.sourceDigest))throw Error('Trilogy source changed before assignment');
- const guard=trilogy?" AND payload=? AND objective=? AND json_extract(result,'$.trilogy.grant.expiresAt')>? AND ?>"+TRILOGY_DATABASE_NOW_MS+" AND EXISTS (SELECT 1 FROM records WHERE id=? AND data=?) AND COALESCE((SELECT json_extract(data,'$.stopped') FROM runtime_settings WHERE id='effect-policy'),0)=0":native?" AND payload=? AND objective=? AND "+nativeUnheldSql+" AND COALESCE((SELECT json_extract(data,'$.stopped') FROM runtime_settings WHERE id='effect-policy'),0)=0":"";
- const args:any[]=[JSON.stringify({...j.result,workerAssignment:linkedAssignment,externalTests:null,...(native?{nativeExecutionUnknown:true}:{})}),new Date().toISOString(),id,old];if(trilogy)args.push(JSON.stringify(j.payload),j.objective,Date.now(),assignment.expiresAt,j.projectId,project.data);else if(native)args.push(JSON.stringify(j.payload),j.objective);
+ const nativeOwnership=verification===undefined?nativeUnheldSql:"COALESCE(json_extract(result,'$.nativeExecutionUnknown'),0)=0 AND json_extract(result,'$.verificationOwner.requestId')=? AND json_extract(result,'$.verificationOwner.state')='reserved' AND EXISTS (SELECT 1 FROM records WHERE id=? AND kind='project' AND data=?)";
+ const guard=trilogy?" AND payload=? AND objective=? AND json_extract(result,'$.trilogy.grant.expiresAt')>? AND ?>"+TRILOGY_DATABASE_NOW_MS+" AND EXISTS (SELECT 1 FROM records WHERE id=? AND data=?) AND COALESCE((SELECT json_extract(data,'$.stopped') FROM runtime_settings WHERE id='effect-policy'),0)=0":native?" AND payload=? AND objective=? AND "+nativeOwnership+" AND COALESCE((SELECT json_extract(data,'$.stopped') FROM runtime_settings WHERE id='effect-policy'),0)=0":"";
+ const args:any[]=[JSON.stringify({...j.result,workerAssignment:linkedAssignment,externalTests:null,...(native?{nativeExecutionUnknown:true}:{})}),new Date().toISOString(),id,old];if(trilogy)args.push(JSON.stringify(j.payload),j.objective,Date.now(),assignment.expiresAt,j.projectId,project.data);else if(native){nativeScopePolicy(assignment);args.push(JSON.stringify(j.payload),j.objective);if(verification!==undefined)args.push(verification.requestId,j.projectId,nativeProject.data);}
  const update=await db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND status='awaiting review' AND result=?"+guard).bind(...args).run();
  if(!update.meta.changes)throw Error('Candidate changed while assigning execution');
- return {id:j.id,projectId:j.projectId,files,command,profile,timeoutMs:profile==='node-application'?180000:15000,assignment:linkedAssignment,...(trilogy?{trilogy}:{})};
+ return {id:j.id,projectId:j.projectId,files,command,profile,...(native?{workerKind:'windows-appcontainer'}:{}),timeoutMs:profile==='node-application'?180000:15000,assignment:linkedAssignment,...(trilogy?{trilogy}:{})};
 }
 export async function report(id:string,p:any){
  for(let attempt=0;attempt<16;attempt++){
