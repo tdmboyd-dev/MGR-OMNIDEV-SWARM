@@ -165,3 +165,9 @@ Run `node scripts/run-full-verification.mjs <absolute-output-directory-outside-r
 Disconnect prevents new browser dispatch; a call already accepted by the companion/provider may finish and remains saved. Reconnect and inspect that exact saved job before requesting another generation. A late connection/status result cannot reconnect a user who disconnected, and leaving the component invalidates pending connection and dispatch callbacks. Local file selection replaces the previous attempt; wait for reading to finish and resolve errors before importing. Portable path and UTF8 byte budgets apply even on a host where a differently cased or reserved path might otherwise work.
 
 HTTP409 for an enqueue key means its saved full request/source/settings differ or its old record lacks a trustworthy full-intent digest. Inspect the existing job, source and saved outcome first. An exact unchanged current request can reuse its key; a deliberately new request needs a new key after reconciliation. Do not delete a saved job, silently rewrite its intent, or automatically choose another key to replay an uncertain effect. No automatic legacy-job migration occurs.
+
+## Native Windows and campaign observation continuation
+
+The optional native snapshot executor uses the existing job queue and separate explicit host policy; it does not require Docker or restart. See worker/WINDOWS-NATIVE-WORKER.md. It is not qualified for the signed Trilogy worker contract or general application tests.
+
+Code Monster can now export an existing single-cell campaign ledger through export-campaign. OmniSight displays its authenticated read-only snapshot with 100-event pages, cancellation and explicit unverified publisher/signature/current-head limits. Protect raw export envelopes; the viewer serializes only permitted projection fields. See the owning Code Monster handbook and OmniSight CAMPAIGN-EVIDENCE.md. No new brain, ledger or scheduler is created.

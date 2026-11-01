@@ -44,3 +44,7 @@ Focused checks using a simulated Docker CLI do not qualify a real host. Keep the
 ### Portable source and local Docker endpoint policy
 
 The runner independently rejects Windows drive/alternate-stream/reserved names, traversal, secret paths and case aliases before writing any temporary snapshot. Per-file and total budgets count UTF8 bytes. Docker subprocesses receive only required platform/path variables, not OmniDev service/provider credentials. Unqualified named contexts and remote Docker host addresses refuse; the current policy requires the default context with a local Unix socket or local Windows named pipe. A deliberately named local context requires its own future qualification; do not weaken this check just to start a worker. Doctor uses the same environment policy. These source checks are not actual Docker-host qualification; the current owner deferred Windows restart and engine acceptance.
+
+## Optional native Windows snapshot executor
+
+The portable package also includes the AppContainer/Job Object worker and actual host qualifier. It supports only exact owner-approved snapshot tests and requires its own matching private policy. It needs no Docker or restart and does not qualify the Docker application worker. Full setup, limits, credential separation, unknown-outcome recovery and actual local workflow reproduction: [WINDOWS-NATIVE-WORKER.md](WINDOWS-NATIVE-WORKER.md). In a standalone ZIP use the bundled README and owning repository guide; server/config credentials are deliberately excluded.

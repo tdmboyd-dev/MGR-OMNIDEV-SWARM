@@ -30,6 +30,12 @@ SOURCES = tuple(sorted((
     "worker/fleet.mjs",
     "worker/runner.mjs",
     "worker/trilogy-proof.mjs",
+    "worker/WINDOWS-NATIVE-WORKER.md",
+    "worker/windows-appcontainer.mjs",
+    "worker/windows-worker.mjs",
+    "worker/qualify-windows.mjs",
+    "worker/windows/AppContainerHost.cs",
+    "worker/windows/run-appcontainer.ps1",
 )))
 MANIFEST_PATH = "worker/PACKAGE-MANIFEST.json"
 STAMP = (1980, 1, 1, 0, 0, 0)
