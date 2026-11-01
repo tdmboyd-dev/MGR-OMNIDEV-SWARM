@@ -14,7 +14,8 @@ class Statement{
 globalThis.__omniEnv={DB:{prepare:sql=>new Statement(sql),batch:async statements=>{
  sqlite.exec('BEGIN');try{const result=statements.map(s=>({meta:{changes:Number(sqlite.prepare(s.sql).run(...s.args).changes)}}));sqlite.exec('COMMIT');return result;}catch(error){sqlite.exec('ROLLBACK');throw error;}
 }}};
-const {POST,GET,importedSnapshotFiles}=await import('../.test-runtime/route.mjs');
+const {POST,GET}=await import('../.test-runtime/route.mjs');
+const {importedSnapshotFiles}=await import('../.test-runtime/workspace-snapshot.mjs');
 const {candidate,safePath}=await import('../.test-runtime/runtime-contract.mjs');
 const submit=async body=>{const response=await POST(new Request('https://omni.example/api/workspace',{method:'POST',headers:{Origin:'https://omni.example','Content-Type':'application/json'},body:JSON.stringify(body)}));return {status:response.status,body:await response.json()};};
 const unsafe=['C:/outside.ts','source.ts:alternate','a\\b.ts','nul.ts','src/CON','src/Lpt1.txt','src/end.','src/end ','../outside.ts','/root.ts','a//b.ts','a/./b.ts','a\u0000b.ts','a?b.ts','.GIT/config','.env.production'];

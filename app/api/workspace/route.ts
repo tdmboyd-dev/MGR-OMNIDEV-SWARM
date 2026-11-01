@@ -1,4 +1,4 @@
-import {safePath} from '@/lib/runtime-contract';
+import {importedSnapshotFiles,SnapshotImportError} from '@/lib/workspace-snapshot';
 import {boundedRequestText} from '@/lib/request-body';
 import {fileLedger} from '@/lib/file-ledger';
 import {db,list,record,insert} from "@/db/store";
@@ -13,15 +13,6 @@ class InputError extends Error{}
 function check(v:unknown,msg:string):asserts v{if(!v)throw new InputError(msg);}
 function text(v:unknown,max=200){check(typeof v==="string"&&v.trim().length>0&&v.length<=max,"A valid text value is required");return v.trim();}
 function numeric(v:unknown,min:number,max:number){check(typeof v==="number"&&Number.isFinite(v)&&v>=min&&v<=max,"Value is outside the allowed range");return v;}
-function redact(s:string){return s.replace(/((?:api[_-]?key|password|secret)\s*[:=]\s*["'])[^"']+/gi,"$1[REDACTED]").replace(/(?:sk-[a-zA-Z0-9_-]{20,}|ghp_[a-zA-Z0-9]{20,}|AKIA[A-Z0-9]{16})/g,"[REDACTED]");}
-// Share the exact stored representation with trusted candidate enrollment.
-// This is pure validation/normalization, not an import or execution action.
-export function importedSnapshotFiles(files:SourceFile[]):SourceFile[]{
- check(Array.isArray(files)&&files.length>0&&files.length<=300,"Import 1–300 files");
- check(files.every(f=>f&&safePath(f.path)&&typeof f.content==="string"&&new TextEncoder().encode(f.content).byteLength<100000),"Invalid files; each file must be text under 100 KB");
- check(new Set(files.map(f=>f.path.toLowerCase())).size===files.length,"File paths must be unique");
- return files.map(f=>({path:f.path,content:redact(f.content)}));
-}
 async function currentSource(project:RecordItem,existing:RecordItem[],expected:unknown){
  const source=await planningSource(project,existing);
  check(typeof expected==='string'&&expected===source.sourceDigest,'Project or findings changed; reload before saving');return source;
@@ -113,5 +104,5 @@ export async function POST(request:Request){
    ]);out={id:plan.id};
   }else throw new InputError("Unknown action");
   if(ops.length)await db().batch(ops);return Response.json({...out,records:await list()},{headers:{"Cache-Control":"no-store"}});
- }catch(e){if(e instanceof InputError||e instanceof SyntaxError||e instanceof WorkspaceConflict)return Response.json({error:e.message},{status:400});console.error("workspace write failed",e);return Response.json({error:"Could not save the change. Your input has been preserved; please retry."},{status:503});}
+ }catch(e){if(e instanceof InputError||e instanceof SnapshotImportError||e instanceof SyntaxError||e instanceof WorkspaceConflict)return Response.json({error:e.message},{status:400});console.error("workspace write failed",e);return Response.json({error:"Could not save the change. Your input has been preserved; please retry."},{status:503});}
 }
