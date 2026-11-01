@@ -21,7 +21,8 @@ const unsafe=['C:/outside.ts','source.ts:alternate','a\\b.ts','nul.ts','src/CON'
 
 test('shared stored snapshot contract matches actual import redaction and canonical field order',async()=>{
  const source=[{content:'export const value=1;\n',path:'src/value.mjs'},{content:'const password="fixture-value-only";',path:'src/settings.mjs'}],expected=importedSnapshotFiles(source),response=await submit({action:'import',title:'Shared source normalization',files:source});assert.equal(response.status,200);
- const row=sqlite.prepare("SELECT data FROM records WHERE id=?").get(response.body.projectId),stored=JSON.parse(row.data).files;assert.equal(JSON.stringify(stored),JSON.stringify(expected));assert.deepEqual(Object.keys(expected[0]),['path','content']);assert.match(expected[1].content,/REDACTED/);assert.equal(source[1].content.includes('REDACTED'),false);
+ try{const row=sqlite.prepare("SELECT data FROM records WHERE id=?").get(response.body.projectId),stored=JSON.parse(row.data).files;assert.equal(JSON.stringify(stored),JSON.stringify(expected));assert.deepEqual(Object.keys(expected[0]),['path','content']);assert.match(expected[1].content,/REDACTED/);assert.equal(source[1].content.includes('REDACTED'),false);}
+ finally{sqlite.prepare('DELETE FROM records WHERE id=? OR project_id=?').run(response.body.projectId,response.body.projectId);}
 });
 
 test('shared stored snapshot contract retains original count, byte, duplicate and unsafe-path limits',()=>{
