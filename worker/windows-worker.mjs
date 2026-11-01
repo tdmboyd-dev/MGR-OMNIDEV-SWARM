@@ -8,7 +8,8 @@ import {executeNative,loadNativePolicy} from './windows-appcontainer.mjs';
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const idPattern=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
 async function noLinks(path){for(let p=resolve(path);;p=dirname(p)){if((await lstat(p)).isSymbolicLink())throw Error('Receipt path contains a link');if(dirname(p)===p)break;}}
-export async function runOnce(configPath){
+export async function runOnce(configPath,{expectedJobId}={}){
+ if(expectedJobId!==undefined&&!idPattern.test(expectedJobId))throw Error('Exact native job identity required');
  const config=JSON.parse(await readFile(configPath,'utf8')),url=new URL(config.siteUrl);
  if(url.origin!==config.siteUrl||url.username||url.password||!(url.protocol==='https:'||url.protocol==='http:'&&url.hostname==='127.0.0.1')||typeof config.nativeWorkerToken!=='string'||config.nativeWorkerToken.length<32||!config.nativePolicyPath||!config.nativeReceiptRoot)throw Error('Explicit origin, native policy, private token and receipt root required');
  process.env.OMNI_NATIVE_WORKER_POLICY=resolve(config.nativePolicyPath);if(config.nativeWorkerRoot)process.env.OMNI_NATIVE_WORKER_ROOT=resolve(config.nativeWorkerRoot);
@@ -38,7 +39,9 @@ export async function runOnce(configPath){
   }
   for(const name of await readdir(root)){if(!/^active-[a-f0-9-]{36}\.json$/.test(name))continue;const completed=join(root,name.replace('active-','delivered-'));try{const active=await receiptFile(join(root,name)),receipt=await receiptFile(completed);if(active.sha256!==hash(active.body)||receipt.sha256!==hash(receipt.body)||JSON.stringify(receipt.body.identity)!==JSON.stringify(identity)||JSON.stringify(active.body.identity)!==JSON.stringify(identity)||active.body.jobId!==receipt.body.jobId||JSON.stringify(active.body.assignment)!==JSON.stringify(receipt.body.report.assignment)||name!=='active-'+active.body.assignment.id+'.json')throw Error('invalid');await unlink(join(root,name));}catch{throw Error('Prior execution outcome requires reconciliation; no redispatch');}}
   const queue=await api('/api/worker?kind=windows-appcontainer');if(queue.status!==200)throw Error('Native queue is unavailable');const item=queue.value.jobs?.[0];if(!item)return {claimed:0,delivered,scope:'One explicit native snapshot queue cycle'};
+  if(expectedJobId!==undefined&&item.id!==expectedJobId)throw Error('Native queue does not match the host-approved job; no claim dispatched');
   const claim=await api('/api/worker?kind=windows-appcontainer&id='+encodeURIComponent(item.id));if(claim.status!==200)throw Error('Native assignment was not admitted');
+  if(expectedJobId!==undefined&&claim.value.id!==expectedJobId)throw Error('Native claim returned a different job; reconcile before dispatch');
   const activePath=join(root,'active-'+claim.value.assignment.id+'.json');await persist(activePath,{version:1,identity,jobId:item.id,assignment:claim.value.assignment,state:'execution-admitted-outcome-unknown'});
   const report=await executeNative(claim.value);const body={version:1,identity,jobId:item.id,report:{id:item.id,...report}},path=join(root,'pending-'+report.assignment.id+'.json');await persist(path,body);delivered.push(await deliver(path,body));await unlink(activePath);
   return {claimed:1,jobId:item.id,passed:report.passed,delivered,scope:'Actual qualified Windows AppContainer; one approved snapshot, no daemon'};
