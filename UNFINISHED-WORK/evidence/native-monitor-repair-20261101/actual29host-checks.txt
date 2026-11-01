@@ -1,0 +1,30 @@
+PASS uncontained loopback control reachable
+PASS uncontained DNS control resolves
+PASS owned workspace/profile/process cleanup
+PASS OS private read/write denied
+PASS OS read-only source and writable scratch enforced
+PASS parent environment secret excluded
+PASS actual loopback/outbound/DNS denied with positive host controls
+PASS private canary preserved
+PASS actual token and atomic JobObject membership verified
+PASS owned workspace/profile/process cleanup
+PASS immediate-exit output overflow rejected after final drain
+PASS owned workspace/profile/process cleanup
+PASS actual child process tree killed on wall timeout
+PASS owned workspace/profile/process cleanup
+PASS actual allocation fails with 384 MiB configured policy and measured peak below 512 MiB acceptance ceiling
+PASS parent crash probe reached exact assigned process
+PASS owned workspace/profile/process cleanup
+PASS parent death before resume leaves no suspended orphan
+PASS parent crash probe reached exact assigned process
+PASS owned workspace/profile/process cleanup
+PASS parent death after execution leaves no process/profile/workspace
+PASS owned workspace/profile/process cleanup
+PASS actual bounded temporary-file create/delete churn passes 1
+PASS owned workspace/profile/process cleanup
+PASS actual bounded temporary-file create/delete churn passes 2
+PASS owned workspace/profile/process cleanup
+PASS actual bounded temporary-file create/delete churn passes 3
+PASS owned workspace/profile/process cleanup
+PASS monitored write budget stops scratch growth (soft polling limit)
+{"passed":29,"qualificationDigest":"03d4afb60c4624cea566aa6e68372498d4d7684e431a4ff1016dda9b462352b1","path":"C:\\Users\\cool\\Documents\\Codex\\2026-10-29\\i-x20\\work\\native-monitor-final-qualification-20261101\\qualification-receipt.json"}

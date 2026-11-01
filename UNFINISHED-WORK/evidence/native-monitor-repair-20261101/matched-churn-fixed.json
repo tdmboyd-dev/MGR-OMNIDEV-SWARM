@@ -1,0 +1,108 @@
+{
+  "launcherSha256": "3b3398b58ed237b6bb332bb0c747ae61af5d86b5cb8033be32d3d195d3892e51",
+  "source": "Owned ephemeral-file lifecycle probe, not application repair or production acceptance",
+  "results": [
+    {
+      "native": {
+        "Profile": "omni-ea9f5ec8-85fc-41e9-a75f-ee642ddb1499",
+        "PackageSid": "S-1-15-2-2187069613-1242946794-1341322289-1641274763-2344727806-3614131375-2374332010",
+        "ProfileStorage": "C:\\Users\\cool\\AppData\\Local\\Packages\\omni-ea9f5ec8-85fc-41e9-a75f-ee642ddb1499",
+        "Output": "CHURN_COMPLETE=123\n",
+        "StopReason": null,
+        "ProcessId": 5584,
+        "ExitCode": 0,
+        "ActiveProcessesAfter": 0,
+        "TotalProcesses": 2,
+        "WriteBytesObserved": 15763,
+        "ScratchBytesObserved": 128,
+        "PeakJobMemoryBytes": 20873216,
+        "ConfiguredJobMemoryBytes": 402653184,
+        "WritableEntriesObserved": 7,
+        "TokenIsAppContainer": 1,
+        "CapabilityCount": 0,
+        "ProfileDeletionHResult": 0,
+        "WritableErrorHResult": 0,
+        "JobAssignedBeforeResume": true,
+        "JobAssignedAtCreation": true,
+        "CleanupVerified": true
+      },
+      "hostStopped": null,
+      "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+      "cleanup": {
+        "verifiedAbsent": true,
+        "activeProcessesAfter": 0,
+        "profileDeletionHResult": 0,
+        "workspaceAbsent": true
+      },
+      "profileName": "omni-ea9f5ec8-85fc-41e9-a75f-ee642ddb1499"
+    },
+    {
+      "native": {
+        "Profile": "omni-4d0f2635-e6fe-44e3-a5a6-fe95fde39ada",
+        "PackageSid": "S-1-15-2-3460665154-4086408899-3442661943-64020846-616094803-460457290-1490158520",
+        "ProfileStorage": "C:\\Users\\cool\\AppData\\Local\\Packages\\omni-4d0f2635-e6fe-44e3-a5a6-fe95fde39ada",
+        "Output": "CHURN_COMPLETE=355\n",
+        "StopReason": null,
+        "ProcessId": 21316,
+        "ExitCode": 0,
+        "ActiveProcessesAfter": 0,
+        "TotalProcesses": 2,
+        "WriteBytesObserved": 45459,
+        "ScratchBytesObserved": 128,
+        "PeakJobMemoryBytes": 21704704,
+        "ConfiguredJobMemoryBytes": 402653184,
+        "WritableEntriesObserved": 7,
+        "TokenIsAppContainer": 1,
+        "CapabilityCount": 0,
+        "ProfileDeletionHResult": 0,
+        "WritableErrorHResult": 0,
+        "JobAssignedBeforeResume": true,
+        "JobAssignedAtCreation": true,
+        "CleanupVerified": true
+      },
+      "hostStopped": null,
+      "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+      "cleanup": {
+        "verifiedAbsent": true,
+        "activeProcessesAfter": 0,
+        "profileDeletionHResult": 0,
+        "workspaceAbsent": true
+      },
+      "profileName": "omni-4d0f2635-e6fe-44e3-a5a6-fe95fde39ada"
+    },
+    {
+      "native": {
+        "Profile": "omni-e276f14f-ed18-4084-8a5c-4ee859b23e28",
+        "PackageSid": "S-1-15-2-1659528096-1875957044-3884694733-1068821709-3225121745-1802466422-1400063472",
+        "ProfileStorage": "C:\\Users\\cool\\AppData\\Local\\Packages\\omni-e276f14f-ed18-4084-8a5c-4ee859b23e28",
+        "Output": "CHURN_COMPLETE=225\n",
+        "StopReason": null,
+        "ProcessId": 40312,
+        "ExitCode": 0,
+        "ActiveProcessesAfter": 0,
+        "TotalProcesses": 2,
+        "WriteBytesObserved": 28819,
+        "ScratchBytesObserved": 128,
+        "PeakJobMemoryBytes": 21770240,
+        "ConfiguredJobMemoryBytes": 402653184,
+        "WritableEntriesObserved": 7,
+        "TokenIsAppContainer": 1,
+        "CapabilityCount": 0,
+        "ProfileDeletionHResult": 0,
+        "WritableErrorHResult": 0,
+        "JobAssignedBeforeResume": true,
+        "JobAssignedAtCreation": true,
+        "CleanupVerified": true
+      },
+      "hostStopped": null,
+      "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+      "cleanup": {
+        "verifiedAbsent": true,
+        "activeProcessesAfter": 0,
+        "profileDeletionHResult": 0,
+        "workspaceAbsent": true
+      },
+      "profileName": "omni-e276f14f-ed18-4084-8a5c-4ee859b23e28"
+    }
+  ]
+}

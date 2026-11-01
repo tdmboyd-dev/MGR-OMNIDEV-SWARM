@@ -1,0 +1,105 @@
+{
+  "launcherSha256": "1f313662aee42b31876cbb2228fba4b72cffb7df42e7231b3595f84115174ab9",
+  "source": "Owned ephemeral-file lifecycle probe, not application repair or production acceptance",
+  "results": [
+    {
+      "native": {
+        "Profile": "omni-93122f31-3b69-49c8-9134-7040188c3cc7",
+        "PackageSid": "S-1-15-2-4150499448-648924208-4014560362-2088624685-2907907058-3189161527-2736139793",
+        "ProfileStorage": "C:\\Users\\cool\\AppData\\Local\\Packages\\omni-93122f31-3b69-49c8-9134-7040188c3cc7",
+        "Output": "",
+        "StopReason": "writable-tree-policy",
+        "ProcessId": 39716,
+        "ExitCode": 1,
+        "ActiveProcessesAfter": 0,
+        "TotalProcesses": 2,
+        "WriteBytesObserved": 3840,
+        "ScratchBytesObserved": 128,
+        "PeakJobMemoryBytes": 21614592,
+        "ConfiguredJobMemoryBytes": 402653184,
+        "WritableEntriesObserved": 7,
+        "TokenIsAppContainer": 1,
+        "CapabilityCount": 0,
+        "ProfileDeletionHResult": 0,
+        "JobAssignedBeforeResume": true,
+        "JobAssignedAtCreation": true,
+        "CleanupVerified": true
+      },
+      "hostStopped": null,
+      "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+      "cleanup": {
+        "verifiedAbsent": true,
+        "activeProcessesAfter": 0,
+        "profileDeletionHResult": 0,
+        "workspaceAbsent": true
+      },
+      "profileName": "omni-93122f31-3b69-49c8-9134-7040188c3cc7"
+    },
+    {
+      "native": {
+        "Profile": "omni-6be85dca-620a-4ed9-b8e1-2fd7f30dad35",
+        "PackageSid": "S-1-15-2-1453734971-3379034434-2244450886-2078300868-2486418569-2576990752-90118423",
+        "ProfileStorage": "C:\\Users\\cool\\AppData\\Local\\Packages\\omni-6be85dca-620a-4ed9-b8e1-2fd7f30dad35",
+        "Output": "",
+        "StopReason": "writable-tree-policy",
+        "ProcessId": 31496,
+        "ExitCode": 1,
+        "ActiveProcessesAfter": 0,
+        "TotalProcesses": 2,
+        "WriteBytesObserved": 13824,
+        "ScratchBytesObserved": 128,
+        "PeakJobMemoryBytes": 20656128,
+        "ConfiguredJobMemoryBytes": 402653184,
+        "WritableEntriesObserved": 7,
+        "TokenIsAppContainer": 1,
+        "CapabilityCount": 0,
+        "ProfileDeletionHResult": 0,
+        "JobAssignedBeforeResume": true,
+        "JobAssignedAtCreation": true,
+        "CleanupVerified": true
+      },
+      "hostStopped": null,
+      "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+      "cleanup": {
+        "verifiedAbsent": true,
+        "activeProcessesAfter": 0,
+        "profileDeletionHResult": 0,
+        "workspaceAbsent": true
+      },
+      "profileName": "omni-6be85dca-620a-4ed9-b8e1-2fd7f30dad35"
+    },
+    {
+      "native": {
+        "Profile": "omni-d5bd87be-9014-4e7f-a5da-5468dec4d3f7",
+        "PackageSid": "S-1-15-2-574383943-3796763531-1939086473-617445447-2809046556-2576867006-1148008850",
+        "ProfileStorage": "C:\\Users\\cool\\AppData\\Local\\Packages\\omni-d5bd87be-9014-4e7f-a5da-5468dec4d3f7",
+        "Output": "",
+        "StopReason": "writable-tree-policy",
+        "ProcessId": 18472,
+        "ExitCode": 1,
+        "ActiveProcessesAfter": 0,
+        "TotalProcesses": 2,
+        "WriteBytesObserved": 5376,
+        "ScratchBytesObserved": 128,
+        "PeakJobMemoryBytes": 21622784,
+        "ConfiguredJobMemoryBytes": 402653184,
+        "WritableEntriesObserved": 7,
+        "TokenIsAppContainer": 1,
+        "CapabilityCount": 0,
+        "ProfileDeletionHResult": 0,
+        "JobAssignedBeforeResume": true,
+        "JobAssignedAtCreation": true,
+        "CleanupVerified": true
+      },
+      "hostStopped": null,
+      "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+      "cleanup": {
+        "verifiedAbsent": true,
+        "activeProcessesAfter": 0,
+        "profileDeletionHResult": 0,
+        "workspaceAbsent": true
+      },
+      "profileName": "omni-d5bd87be-9014-4e7f-a5da-5468dec4d3f7"
+    }
+  ]
+}

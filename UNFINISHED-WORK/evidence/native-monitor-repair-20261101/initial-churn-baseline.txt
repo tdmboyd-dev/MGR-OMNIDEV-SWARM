@@ -1,0 +1,3 @@
+{"attempt":0,"exitCode":1,"stop":"writable-tree-policy","output":"","cleanup":{"verifiedAbsent":true,"activeProcessesAfter":0,"profileDeletionHResult":0,"workspaceAbsent":true}}
+{"attempt":1,"exitCode":1,"stop":"writable-tree-policy","output":"","cleanup":{"verifiedAbsent":true,"activeProcessesAfter":0,"profileDeletionHResult":0,"workspaceAbsent":true}}
+{"attempt":2,"exitCode":1,"stop":"writable-tree-policy","output":"","cleanup":{"verifiedAbsent":true,"activeProcessesAfter":0,"profileDeletionHResult":0,"workspaceAbsent":true}}
