@@ -1,3 +1,12 @@
+
+## Reviewed recipe source published and adopted — November1,2026
+
+Source e026968af8811c8da202dadc40137b57f7845ae5 is non-force pushed, exactly read back and adopted in canonical Code Monster. Eight canonical Git blobs match. Full frozen290results:284pass/0fail/0cancelled/6explicit Windows privilege skips; post-EOF-format custody16/16, current staged-source repository gates, demo and redacted source scan passed. Original raw execution hashes and exact one-newline publication delta remain in evidence. Eleven earlier already-committed collaborator changes were preserved in source ancestry and published; no peer dirty/index edits were taken and main was not promoted.
+
+The native same-ledger recipe lifecycle gap is repaired at candidate publication and campaign evidence write, through original territory/intent/ledger/Trilogy mechanisms. The current handbook maps all20original Product Bible capability groups and distinguishes six callable source data operations from broader native candidate/campaign/worker functions. This is selected source/native qualification, not a full source audit, CM-IMP-03 outcome-memory/hosted-identity closure, arbitrary-code worker acceptance or permanent Tevin candidate execution. Original174/441/28/product requirements and genuine provider/worker/signing/browser/production gates remain open. Installed Backpack review/profile was not changed or bypassed.
+
+Owning Code Monster evidence: ../MGR-CODE-MONSTER/docs/evidence/recipe-execution-20261101/REPORT.md and publication.json. The earlier provisional publication statements describe the pre-publication checkpoint only. Native guards do not grant a source-read model write/merge/release authority.
+
 ## Modular automation source packet recovery completed — November 1, 2026
 
 All four frozen source trees and exact commit IDs were reconstructed from incremental raw patches and bundles. MGR-EVERYAPP-TSTACK-QUALIFIED-SOURCE.zip was freshly extracted: 46/46 manifest hashes matched (47 total files). Archive SHA-256: b81c56856b90c3759e5a4da2f902b6a6f2cf02ebdba553fedfdca9678521340d. Owning PACKAGE-VERIFICATION.json and SOURCE-RECOVERY.json record the exact frozen commits/bases. This later documentation receipt is outside that already sealed packet; it does not change the qualified runtime.
@@ -38,7 +47,7 @@ Code Monster and both API receiving paths now expose eight bounded read tools; T
 
 ---
 
-# Current approved host procedures and mobile board � November 1, 2026
+# Current approved host procedures and mobile board — November 1, 2026
 
 Backpack owner package0.6.2 is account-updated/read back and installed in Codex. Four source-pinned fixed profiles executed successfully through source and installed compiled MCP, while record writes remain disabled. Concurrent Code Monster hierarchy/automation changes and OmniDev mobile wrapping correctly invalidated approvals; explicit review with35 affected CM contracts,16 board contracts and actual browser3/3 preceded digest-only updates. Both changed procedures succeeded again; all four profiles ready. Expiry remains2026-11-08T13:07:24.167Z. Existing native chat is separately observed0.6.1/read-only; no forced reconnect or Windows restart occurred.
 

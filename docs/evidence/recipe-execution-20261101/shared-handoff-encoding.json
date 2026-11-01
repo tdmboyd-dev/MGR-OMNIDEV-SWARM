@@ -1,0 +1,11 @@
+{
+  "path": "MGR-TRILOGY-HANDOFF.md",
+  "originalCommit": "61adeac768d8bfc5bbfc01a1c22319a4db5c3aca",
+  "originalSha256": "6735cc65a3fd9220efc2d97318fa1bf1bb5057a6e710ce0504d74b67b8a5435f",
+  "legacyWindowsPunctuationBytes": {
+    "0x97": 1
+  },
+  "validUtf8SequencesPreserved": true,
+  "requirementsRemoved": false,
+  "resultUtf8Valid": true
+}
