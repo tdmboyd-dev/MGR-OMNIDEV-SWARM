@@ -50,6 +50,14 @@ test('a second process cannot replace the original live service in the same owne
  const f=await fixture(t),ready=await f.open();assert.equal(ready.ready,true);
  const other=spawn(process.execPath,['tests/fixtures/local-owner-service.mjs'],{cwd:resolve('.'),windowsHide:true,stdio:['pipe','pipe','pipe']});let output='';other.stdout.on('data',b=>output+=b.toString());other.stderr.on('data',()=>{});other.stdin.end(JSON.stringify({config:f.config})+'\n');const code=await new Promise((yes,no)=>{other.once('error',no);other.once('close',yes);});assert.equal(code,1);assert.match(output,/"ready":false/);assert.equal((await f.request(ready.origin,'/api/runtime')).status,200);await f.close();
 });
+
+test('prepared policy changes block direct service startup until original records are reconciled',async t=>{
+ const f=await fixture(t);assert.equal((await f.open()).ready,true);await f.close();
+ const db=new DatabaseSync(join(f.stateRoot,'omnidev.sqlite'));try{db.prepare("INSERT INTO records(id,kind,title,project_id,status,data,created_at,updated_at) VALUES('policy-interruption','native_policy_change','Original pending policy','','prepared','{\"state\":\"prepared\"}','now','now')").run();}finally{db.close();}
+ const refused=await f.open();assert.equal(refused.ready,false);assert.equal(await f.ended,1);
+ const reconcile=new DatabaseSync(join(f.stateRoot,'omnidev.sqlite'));try{assert.equal(reconcile.prepare("SELECT status FROM records WHERE id='policy-interruption'").get().status,'prepared');assert.equal(reconcile.prepare('SELECT count(*) n FROM jobs').get().n,0);reconcile.prepare("UPDATE records SET status='committed',data='{\"state\":\"committed\"}' WHERE id='policy-interruption'").run();}finally{reconcile.close();}
+ assert.equal((await f.open()).ready,true);await f.close();
+});
 test('actual native-policy binding service enforces engineering credential and body budget without native admission',async t=>{
  if(process.platform!=='win32'){t.skip('Actual native policy loader requires Windows; other route/SQLite checks are portable');return;}
  const f=await fixture(t,{engineering:true}),ready=await f.open();assert.equal(ready.ready,true);

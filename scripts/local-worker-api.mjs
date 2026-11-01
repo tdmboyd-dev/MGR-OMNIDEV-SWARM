@@ -49,7 +49,7 @@ export async function startLocalWorkerApi(configInput,{verifyPrivateState}={}){
   const native=await loadNativePolicy();if(JSON.stringify(canonical(native))!==JSON.stringify(canonical(config.workerPolicy)))throw Error('Configured native policy differs from its actual file');
  }
  const existed=existsSync(dbPath);if(existed&&lstatSync(dbPath).isSymbolicLink())throw Error('Database symlink denied');
- if(existed){const inspect=new DatabaseSync(dbPath,{readOnly:true});try{const identity=inspect.prepare('SELECT tenant_id,actor_id FROM omni_local_lab_identity WHERE id=1').get();if(identity?.tenant_id!==config.tenantId||identity?.actor_id!==config.actorId)throw Error('Existing database is not this explicit laboratory identity');}finally{inspect.close();}}
+ if(existed){const inspect=new DatabaseSync(dbPath,{readOnly:true});try{const identity=inspect.prepare('SELECT tenant_id,actor_id FROM omni_local_lab_identity WHERE id=1').get();if(identity?.tenant_id!==config.tenantId||identity?.actor_id!==config.actorId)throw Error('Existing database is not this explicit laboratory identity');if(inspect.prepare("SELECT 1 FROM records WHERE kind='native_policy_change' AND (status NOT IN ('committed','aborted') OR COALESCE(json_extract(data,'$.state'),'unconfirmed')<>status) LIMIT 1").get())throw Error('Original native policy change requires reconciliation');}finally{inspect.close();}}
  let sql,server,engineering,closing;try{
  if(owner){
   ownerLockPath=join(stateRoot,'owner-service.lock');
