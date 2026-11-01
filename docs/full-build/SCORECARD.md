@@ -1,3 +1,15 @@
+# Active four-repository completion — November 1, 2026
+
+The owner rejected the previous Tevin package as a finished delivery. Continue the owning four-repository implementation, integration and manuals on this side. Do not hand unfinished owning-repo work to Tevin's builder. Active isolated branch: `completion/four-repo-20261101`. Original parent acceptance and production gates are not promoted by the following local results.
+
+OmniDev preserved the newer active source history in local merge0fd8f3a; its runtime source did not change in that merge. Prepared 35 test modules with manifest5d9d43501e2f0d40ae90eb5386401f0c75dceb2120c6e423dcfaaf7a84e1c04a. Prior three-product local integration passed14 checks with actual Git/SQLite/HTTP and explicit signer/GitHub/worker-admission fixtures. Code Monster now has a newer object-only candidate implementation, so that prior proof must be rerun.
+
+Backpack remains context/evidence assistance. API-MCP's normal HTTP startup now exposes nine authenticated project-bound read tools, with actual local signed-JWT/JWKS/TCP proof. No canonical OmniDev job, permission or approval is mirrored into Backpack. Account distribution, hosted connection and current Tevin runtime are distinct gates.
+
+Remaining code lane: selectively reconcile `origin/repair/completion-2026-10-28` at0cbea3f, preserving later active workflows; inspect merge-base deltas rather than treating two divergent branch tips as deletions. Its native worker/private lab configuration and actual worker qualification need specific current-source evidence. Reconcile the remaining original requirements and current UI/provider/production gates.
+
+---
+
 # Trilogy readiness scorecard — October 30, 2026
 
 This extends `UNFINISHED-WORK/mgr-evidence-scorecard-20261029.json`; it does not replace the canonical task ledger. Scope: 16 meaningful readiness outcomes, 16 verified within this bounded local-readiness/publication wave; the added outcome conserves and verifies the concurrent published source lane. Whole-product completion is Unassessed. Original full independent parent acceptance remains 0/174.

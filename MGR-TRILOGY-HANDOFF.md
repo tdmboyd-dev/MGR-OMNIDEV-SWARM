@@ -1,3 +1,15 @@
+# Active four-repository completion — November 1, 2026
+
+The owner rejected the previous Tevin package as a finished delivery. Continue the owning four-repository implementation, integration and manuals on this side. Do not hand unfinished owning-repo work to Tevin's builder. Active isolated branch: `completion/four-repo-20261101`. Original parent acceptance and production gates are not promoted by the following local results.
+
+OmniDev preserved the newer active source history in local merge0fd8f3a; its runtime source did not change in that merge. Prepared 35 test modules with manifest5d9d43501e2f0d40ae90eb5386401f0c75dceb2120c6e423dcfaaf7a84e1c04a. Prior three-product local integration passed14 checks with actual Git/SQLite/HTTP and explicit signer/GitHub/worker-admission fixtures. Code Monster now has a newer object-only candidate implementation, so that prior proof must be rerun.
+
+Backpack remains context/evidence assistance. API-MCP's normal HTTP startup now exposes nine authenticated project-bound read tools, with actual local signed-JWT/JWKS/TCP proof. No canonical OmniDev job, permission or approval is mirrored into Backpack. Account distribution, hosted connection and current Tevin runtime are distinct gates.
+
+Remaining code lane: selectively reconcile `origin/repair/completion-2026-10-28` at0cbea3f, preserving later active workflows; inspect merge-base deltas rather than treating two divergent branch tips as deletions. Its native worker/private lab configuration and actual worker qualification need specific current-source evidence. Reconcile the remaining original requirements and current UI/provider/production gates.
+
+---
+
 # Published review source and current board — October 30, 2026
 
 The combined runtime and evidence are published in isolated draft PR #2 on the current development branch. Source checkpoint `de006f6611ff802811c052d0d71ed8184c17f0dd`, tree `ad101ddd25ca0db62edbf185de51b8cda12cdc2e`, was read back from GitHub and matches locally. Current board generation uses that exact available source/public pin, all relevant prior overlays, and the new combined overlay. Its saved data reports **79/79** current local profiles with unchanged 174/441/28 scope and zero fully independently accepted parents. The generator check and complete-board response contract passed.

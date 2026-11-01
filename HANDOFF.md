@@ -1,3 +1,15 @@
+# Active four-repository completion — November 1, 2026
+
+The owner rejected the previous Tevin package as a finished delivery. Continue the owning four-repository implementation, integration and manuals on this side. Do not hand unfinished owning-repo work to Tevin's builder. Active isolated branch: `completion/four-repo-20261101`. Original parent acceptance and production gates are not promoted by the following local results.
+
+OmniDev preserved the newer active source history in local merge0fd8f3a; its runtime source did not change in that merge. Prepared 35 test modules with manifest5d9d43501e2f0d40ae90eb5386401f0c75dceb2120c6e423dcfaaf7a84e1c04a. Prior three-product local integration passed14 checks with actual Git/SQLite/HTTP and explicit signer/GitHub/worker-admission fixtures. Code Monster now has a newer object-only candidate implementation, so that prior proof must be rerun.
+
+Backpack remains context/evidence assistance. API-MCP's normal HTTP startup now exposes nine authenticated project-bound read tools, with actual local signed-JWT/JWKS/TCP proof. No canonical OmniDev job, permission or approval is mirrored into Backpack. Account distribution, hosted connection and current Tevin runtime are distinct gates.
+
+Remaining code lane: selectively reconcile `origin/repair/completion-2026-10-28` at0cbea3f, preserving later active workflows; inspect merge-base deltas rather than treating two divergent branch tips as deletions. Its native worker/private lab configuration and actual worker qualification need specific current-source evidence. Reconcile the remaining original requirements and current UI/provider/production gates.
+
+---
+
 # Capability card addition — October 30, 2026
 
 This isolated `backpack/capability-cards-20261030` branch adds an owner-authored `BACKPACK-CAPABILITY.json` for Backpack 0.4.0 read-only discovery. It describes this component, responsibilities, interfaces and declared dependencies with hashes of implementation references. It remains a draft requiring owner review. Hash equality proves reference freshness only; cards grant no permission, execution, ownership transfer or acceptance. An actual four-repository source/bundled MCP trial read all four cards successfully with zero tasks/runs/profiles and no source mutation. Full proof is in private Backpack `evidence/capability-cards-040/four-repository-trial.json`; private source manifests are not copied here. This wave changes metadata/documentation only; earlier runtime test receipts below are preserved and were not rerun or relabeled. Original 174 parents / 441 clauses / 28 upgrades and canonical states are unchanged. Read the prior runtime handoff below for actual implementation, failures and remaining gates. Separate newer agent branches require reconciliation before any full-product claim.
