@@ -1,0 +1,30 @@
+✔ 174 task records and 348 criteria pass preservation without false certifications (5.2937ms)
+✔ rejects parent marked certified with unverified criterion (5.8494ms)
+✔ rejects forged VERIFIED with missing source/test/reviewer receipt (3.1047ms)
+✔ full provenance per criterion makes parent eligible, not automatically approved (2.3197ms)
+✔ exact acceptance text cannot be silently rewritten (1.9343ms)
+✔ duplicate original or registered parent identities are rejected (1.3355ms)
+✔ empty original requirements cannot make 174 parents ready (2.0773ms)
+✔ unknown parent IDs cannot silently replace required original parents (2.995ms)
+✔ sparse or malformed parent and criterion records fail closed (10.9827ms)
+✔ duplicate criterion identities cannot reuse the same original requirement (1.9596ms)
+✔ blank or meaningless provenance cannot be counted as verified (18.1512ms)
+✔ historic verified proof remains intact when candidate source changes (4.0189ms)
+✔ matching candidate revision has structural readiness but no automatic certification (2.2565ms)
+✔ source readiness is unknown without an explicitly requested current revision (1.456ms)
+✔ proof from different source revisions cannot make a parent ready (4.5719ms)
+✔ false aggregate counts and unsupported parent states are rejected (12.5221ms)
+✔ completed canonical parent and certified register must remain synchronized (4.4544ms)
+✔ the original verified status and completed_verified alias both require complete certified proof (10.0598ms)
+✔ documented incomplete states remain valid and unsupported supplied backlog states are rejected (18.9963ms)
+✔ recorded status drift is visible rather than silently changing historical source (1.4403ms)
+✔ invalid current source selectors cannot be used for certification (0.2588ms)
+✔ the original 174-task 441-criterion register and REL-02 historical evidence are preserved (25.8543ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 154.8758

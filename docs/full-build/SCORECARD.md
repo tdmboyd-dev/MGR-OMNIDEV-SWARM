@@ -126,3 +126,23 @@ Current safety acceptance83/83 local profiles atd5181b5; initial76/82 retained. 
 ## Current source-pinned procedures and mobile board
 
 Runtime f7f8c6b84/84 remains unchanged. Renderer7d0bccd actual browser3/3 and contracts16/16 passed; all84 output hashes reproduce. Fixed Backpack procedures are separately approved/pinned/expiring, not canonical acceptance tasks. Current compiled eight-tool shared edge26/26 with Backpack0.6.2. No whole-product percentage or original parent promotion.
+
+
+## November 1 native Backpack integration
+
+Native context/recording/expected-job fencing9/9 focused, selected actual Windows AppContainer oracle3/3; source8bf8d3e full85/85 fixed local profiles and all85output hashes verified. Current newer-custody reconciliation remains required; do not call the combination88/88 until executed. Setup docs/NATIVE-BACKPACK-WORKFLOW.md, rawsource-bound proof UNFINISHED-WORK/evidence/native-backpack-20261101. Whole original scope remains Unassessed/open.
+
+
+## November 1 reconciled native context and custody
+
+Sourcee4ae27e full88/88 fixed local profiles,0failed/blocked; all88loghashes and source stability checked. Actual second nativejob5checks/3oracle tests passed with Backpack note. First knownfailed nativejob remains failed; saved genericreport omitted exit/stop diagnostics, queued repair. Exact receipts UNFINISHED-WORK/evidence/native-backpack-combined-20261101. Original acceptance and permanent Tevin/provider/production remain open.
+
+
+## November 1 native monitor and diagnostic closure
+
+Native source6b8fef8/worker1e57d9c:16/16 affected profiles and log hashes,10/10 native tests(including9actualmonitorcontractchecks),29/29 realhostqualificationchecks,matchedchurn0/3before-to3/3after,actualgoodjob6checks/3oraclepasses,deliberatelybadjob7checkswith1pass/2failoracleandapplyrefused. The negativejob is not a product pass. Predecessore4ae27e full88/88 remains its own scope. Current proof UNFINISHED-WORK/evidence/native-monitor-repair-20261101. No source/digest-expiry/permission or original-parent acceptance promotion. One old testfixture delete was policy-blocked; exactACLrestored and parked privately.
+
+
+## November1 merged owner/context/native qualification
+
+Currentclean source30c46818c846e30ef924fd752fb63411cb42d393:92/92profilespassed,0failed/blocked,all92hashes/source-stabilityreceipts rechecked. Existingportableworker packagecheckpassed15sources/16entries. Scope100%for92definedlocalprofilecommands only; independentparentpromotions0; wholeproductUnassessed. Sourcepublication/adoption/currentprofile review pending. Evidence UNFINISHED-WORK/evidence/native-owner-context-merged-20261101/REPORT.md.

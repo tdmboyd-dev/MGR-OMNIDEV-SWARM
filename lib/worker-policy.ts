@@ -24,5 +24,12 @@ export function validateNativeReport(assignment:any,report:any){
  const n=report.native,c=report.cleanup;
  if(!n||n.profileName!==assignment.profileName||!(/^S-1-15-2-(?:[0-9]{1,10}-){6}[0-9]{1,10}$/.test(n.packageSid||'')&&n.packageSid.split('-').slice(4).every((v:string)=>Number(v)<=0xffffffff))||n.tokenIsAppContainer!==true||n.capabilityCount!==0||n.jobAssignedAtCreation!==true)throw Error('Native process boundary receipt is incomplete');
  if(!c||c.verifiedAbsent!==true||c.activeProcessesAfter!==0||c.profileDeletionHResult!==0||c.workspaceAbsent!==true)throw Error('Native worker cleanup is unverified');
- return {hostId:assignment.hostId,launcherSha256:assignment.launcherSha256,runtimeSha256:assignment.runtimeSha256,qualificationDigest:assignment.qualificationDigest,native:{profileName:n.profileName,packageSid:n.packageSid,tokenIsAppContainer:true,capabilityCount:0,jobAssignedAtCreation:true},cleanup:{verifiedAbsent:true,activeProcessesAfter:0,profileDeletionHResult:0,workspaceAbsent:true}};
+ let execution;
+ if(n.execution!==undefined){
+  const e=n.execution,keys=['exitCode','stopReason','hostStopReason','outputEmpty'];
+  if(!e||typeof e!=='object'||Array.isArray(e)||Object.keys(e).length!==keys.length+Number(Object.hasOwn(e,'monitorErrorCode'))||keys.some(k=>!Object.hasOwn(e,k))||(e.exitCode!==null&&(!Number.isInteger(e.exitCode)||e.exitCode<0||e.exitCode>0xffffffff))||![null,'timeout','output-limit','write-budget','writable-tree-policy','unrecognized'].includes(e.stopReason)||![null,'cancelled','native-host-timeout','native-host-output-limit','unrecognized'].includes(e.hostStopReason)||typeof e.outputEmpty!=='boolean'||(Object.hasOwn(e,'monitorErrorCode')&&e.monitorErrorCode!==null&&(!Number.isInteger(e.monitorErrorCode)||e.monitorErrorCode< -0x80000000||e.monitorErrorCode>0x7fffffff)))throw Error('Native execution diagnostics are invalid');
+  if(report.passed===true&&(e.exitCode!==0||e.stopReason!==null||e.hostStopReason!==null||e.outputEmpty||e.monitorErrorCode!==null&&e.monitorErrorCode!==undefined))throw Error('Native execution diagnostics contradict a passing report');
+  execution={exitCode:e.exitCode,stopReason:e.stopReason,hostStopReason:e.hostStopReason,outputEmpty:e.outputEmpty,...(Object.hasOwn(e,'monitorErrorCode')?{monitorErrorCode:e.monitorErrorCode}:{})};
+ }
+ return {hostId:assignment.hostId,launcherSha256:assignment.launcherSha256,runtimeSha256:assignment.runtimeSha256,qualificationDigest:assignment.qualificationDigest,native:{profileName:n.profileName,packageSid:n.packageSid,tokenIsAppContainer:true,capabilityCount:0,jobAssignedAtCreation:true,...(execution?{execution}:{})},cleanup:{verifiedAbsent:true,activeProcessesAfter:0,profileDeletionHResult:0,workspaceAbsent:true}};
 }

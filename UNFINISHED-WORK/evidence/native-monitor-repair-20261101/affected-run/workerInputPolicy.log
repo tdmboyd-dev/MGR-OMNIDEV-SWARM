@@ -1,0 +1,11 @@
+✔ worker independently refuses nonportable and ambiguous paths before creating files (3.0455ms)
+✔ worker source budgets measure UTF8 bytes at exact per-file and aggregate boundaries (13.0484ms)
+✔ Docker environment refuses unqualified remote routing and excludes service credentials (0.9884ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 26.2763

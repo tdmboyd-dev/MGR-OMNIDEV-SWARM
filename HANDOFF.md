@@ -4,6 +4,20 @@ Trusted ONE hosting now derives exact native scope through the original stored-s
 
 This supersedes active missing native-scope derivation/stopped-policy migration directions. The normal launcher remains disabled for engineering. Next: connect reviewed Code Monster candidates to the trusted host/job caller, qualify distinct signed worker/command/result, add OmniSight saved observation and controlled permanent activation/update/rollback. Original full product/source/production requirements, deferred lanes, installed source-pinned procedure review and outside boundaries remain. No original parent promotion or fabricated cost/production claim.
 
+# Combined native/context/current owner service qualified — November1,2026
+
+Clean merge30c46818c846e30ef924fd752fb63411cb42d393 passed92/92approved local verification profiles,0failed/blocked; all92outputhashes and source-stability receipts rechecked. This retains the newer owner-service65b04fa/7068e81 and the native monitor/context/diagnostic repairs without discarding either history. Portableworker check passed unchanged15sources/16entries/SHAad5f7f17b3f814bcc6947d1fb90e6feb44b99f5a4352e347e5f0376cdb14502f from6b8fef8. Evidence UNFINISHED-WORK/evidence/native-owner-context-merged-20261101/REPORT.md. Native29hostchecks/positive6/negative7(jobFAILED) and originalowner8/8remain separate actual receipts.
+
+The exact opt-in Tevin/native snapshot owner service is implemented/tested, superseding older missing-binding/lab-only descriptions for that route. Full signed Code Monster worker/plan/oracle/command/signer composition and finite autonomous maintenance/owner-review acceptance remain open. Whole-product completion is Unassessed; no original174/441/28promotion, Docker/restart, provider, production signer or deployment claim. Current source publication/canonical adoption is pending until remote readback.
+
+---
+
+# Native monitor/context and newer owner service reconciliation — November 1, 2026
+
+This merge preserves both current owner-service source65b04fa and the native monitor/context runtime6b8fef8 plus worker1e57d9c and evidence0fca465. No peer history or original job/worker authority is replaced. Monitor evidence: UNFINISHED-WORK/evidence/native-monitor-repair-20261101/REPORT.md (16 affected profiles,10 native tests,29 host checks, matched churn3/3, actual good6/6 and negative-control7/7 with job FAILED). The earlier88/88 predecessor and newer owner91-profile90pass/1typecheck-failure plus8corrected profiles remain separate. Fresh combined qualification is pending; do not relabel those receipts as this merge's result. Current owner-service8/8 journey and its remaining signed Code Monster bridge gates are retained below. No PC restart or Docker qualification occurred.
+
+---
+
 # Protected original engineering service connected to Tevin — November 1, 2026
 
 Current runtime `7068e8111ad52a5ab3b582864437d524c47906d7` reconciles the original engineering metadata adapter with current job/source/oracle/policy custody and protected opt-in owner hosting. Actual disposable Windows ONE HTTP → original SDK/MCP → native AppContainer → accepted report → ONE save → fresh backend/SQLite restart/replay passed **8/8**, one native execution, zero inference/provider calls, no permanent owner database mutation. This supersedes the active missing-binding/lab-only-hosting gap for the exact native snapshot path. Full operating contract: worker/OWNED-ENGINEERING-SERVICE.md.
@@ -13,6 +27,14 @@ An uninterrupted clean 91-profile run at `8dfc9943f3efc9fb2c798f29e3449ca4287a03
 The normal everyday launcher remains opt-in disabled. Native scope derivation and stopped-policy replacement/recovery are now delivered by the current ONE host. Reviewed-candidate caller integration and permanent activation remain engineering; no owner-written hash policy is required. The separate signed Code Monster worker/plan/oracle/command/signer bridge, OmniSight saved observation and finite permanent repair/update activation/reconciliation/rollback remain next. The existing signed command is not the qualified Windows command; do not relabel a host report into independent signer evidence. Full original174parents/441clauses/28upgrades and thirteen-repository source/production/cost/quality acceptance remain open. No original parent promotion, global Codex/model-account change, new service install or production signer is inferred.
 
 Rollback preserves original records/jobs/accepted reports/policy and unknown reservations. Unconfirmed process/journal custody retains the original service for reconciliation. No blind replay, forced teardown or policy deletion is authorized by this delivery. Current Chrome owner unlock/download is still unverified and separate from the real backend journey.
+
+---
+
+# Native Backpack context reconciled with current custody - November 1, 2026
+
+The new context-before-job/source-linked-note adapter and optional expected-job fence are now merged with current runtimeee24e16/c5293a5 custody and lifecycle protection, preserving both changes. Existing verifier discovers88profiles, including all three custody additions and nativeBackpackContext. Pre-merge context source8bf8d3e passed85/85 and its85logs were rehashed; canonical custody source independently had87/87. Neither result is an88-profile combined pass. Fresh combined qualification is next. Worker download rebuilt/check-verified fromd81ff860a98cd0ccd4a95057c608a0a14ab57f28,15sources/16entries/97658bytes/SHA25631c257314fd0f1521816b8111acad41b5e374523c3dc6c00d8502a59dd6c0c35.
+
+Read docs/NATIVE-BACKPACK-WORKFLOW.md and UNFINISHED-WORK/evidence/native-backpack-20261101/REPORT.md. The capability card now exposes the existing native context CLI, its reviewed source and manual without enabling ambient execution. Source/worker/hosted/production acceptance stays distinct. Preserve the original174/441/28 and other agent's active permanent Tevin maintenance bridge work; this adapter adds no duplicate scheduler or canonical job store.
 
 ---
 
@@ -506,3 +528,8 @@ A stricter Ed25519 acceptance receipt verifier prototype exists in `scripts/veri
 ## 2026-10-29 authoritative full-verification implementation
 See `UNFINISHED-WORK/FULL-VERIFICATION-WORKFLOW.md` before promoting any original task. Added source binding/receipt checks (`scripts/verify-acceptance-receipt.mjs`) and separate independent-runner + signed human eligibility gate (`scripts/acceptance-promotion-gate.mjs`). **11/11 focused tests passed**: 4 cryptographic receipt tests, 4 task-promotion tests, 3 connector-capability tests. TypeScript `tsc --noEmit` passed. These are pure validation and eligibility components; live protected signing key registry/real worker qualification and authenticated owner actions remain unimplemented. Do NOT promote any parent merely on local test signatures. The 174/441 acceptance validator still reads valid, 1 original criterion verified, 0 fully certified parents.
 Formerly 66 missing-source links: 16 candidate links and six partial integration links found via GitHub readback; canonical source links now **130 of 174**, with **44 still unlinked**. 34 of the remaining 44 are integration catalog-only requests; `lib/connector-qualification.ts` distinguishes 34 catalog entries from five partial adapters among 39 listed connectors and refuses live-positive claims without provider proof. `UNFINISHED-WORK/mgr-44-unlinked-source-gaps-20261029.json` enumerates exactly the remaining 44. The 22 newer links are provisional, not acceptance or implementation-complete. Canonical statuses remain 126 open and 48 implemented_unverified. `UNFINISHED-WORK/mgr-evidence-scorecard-20261029.json` was refreshed. Always preserve the distinction between source location and behavior proof.
+
+
+## November 1 native Backpack workflow integration
+
+Backpack now composes with the existing Windows native queue through `scripts/run-native-with-backpack.mjs`; see [configuration, operation and limits](docs/NATIVE-BACKPACK-WORKFLOW.md). Nine focused checks and an actual selected IKICKITZ native job passed. The optional expected-job fence refuses another queued job before claim. No duplicate job store, new enrollment authority or automatic acceptance was introduced. Full 85-profile regression and rebuilt worker archive are required for this source checkpoint; their results must be read from the new run, not inherited from historical 84-profile evidence.

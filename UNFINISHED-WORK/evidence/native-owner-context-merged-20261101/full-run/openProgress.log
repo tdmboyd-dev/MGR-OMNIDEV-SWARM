@@ -1,0 +1,1 @@
+PASS progress restores job, resumes paused work, and avoids duplicate work or disconnected starts

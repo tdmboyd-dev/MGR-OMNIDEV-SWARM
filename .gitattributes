@@ -33,10 +33,25 @@
 /UNFINISHED-WORK/evidence/native-completion-20261101/**/*.log -diff
 /UNFINISHED-WORK/evidence/native-completion-20261101/*.txt -diff
 
+# Portable native context host scripts and contracts.
+/scripts/native-backpack-context.mjs text eol=lf
+/scripts/run-native-with-backpack.mjs text eol=lf
+/tests/native-backpack-context.test.mjs text eol=lf
 # Preserve and independently scan the exact native-custody execution captures.
 /UNFINISHED-WORK/evidence/native-verification-custody-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /UNFINISHED-WORK/evidence/native-verification-custody-20261101/**/*.log -diff
 /UNFINISHED-WORK/evidence/native-verification-custody-20261101/*.txt -diff
+/docs/NATIVE-BACKPACK-WORKFLOW.md text eol=lf
+
+# Capability references use explicit portable checkout bytes.
+/package.json text eol=lf
+/lib/trilogy-contract.ts text eol=lf
+/app/api/trilogy/route.ts text eol=lf
+/worker/windows-appcontainer.mjs text eol=lf
+/lib/worker-policy.ts text eol=lf
+/worker/WINDOWS-NATIVE-WORKER.md text eol=lf
+/tests/native-monitor-contract.ps1 text eol=lf
+
 
 /UNFINISHED-WORK/evidence/owned-engineering-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /UNFINISHED-WORK/evidence/owned-engineering-20261101/**/*.log -diff
@@ -45,3 +60,13 @@
 /UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/**/*.log -diff
 /UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/*.log -diff
+
+# Capability references retain exact committed bytes on Windows.
+/package.json text eol=lf
+/lib/trilogy-contract.ts text eol=lf
+/app/api/trilogy/route.ts text eol=lf
+/worker/windows-appcontainer.mjs text eol=lf
+/lib/worker-policy.ts text eol=lf
+/worker/WINDOWS-NATIVE-WORKER.md text eol=lf
+/scripts/native-backpack-context.mjs text eol=lf
+/docs/NATIVE-BACKPACK-WORKFLOW.md text eol=lf

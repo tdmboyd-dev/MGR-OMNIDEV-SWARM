@@ -1,0 +1,40 @@
+✔ non-trilogy jobs receive no trilogy signature capability (3.4091ms)
+✔ a real failing baseline and passing candidate produce a valid exact-command Ed25519 receipt (11621.9465ms)
+✔ arbitrary candidate commit labels and noncandidate branch refs are refused (2648.8277ms)
+✔ candidate with additional unapproved committed changes is refused (5000.071ms)
+✔ an updated file cannot gain executable permission outside the approved byte-only plan (4316.9649ms)
+✔ created files must use the candidate writer regular-file mode (4325.3033ms)
+✔ merge-parent candidates are refused even when their tree matches the proposal (1737.8301ms)
+✔ tampered candidate contents and before/after hashes are refused (3014.1562ms)
+✔ every changed plan file must be included in the executed snapshot (1091.7602ms)
+✔ source HEAD and candidate ref drift are rejected again before signing (3419.4923ms)
+✔ command changes are refused even after assignment hashes are recomputed (1674.283ms)
+✔ unmatched assignment and expired grant or assignment are refused (2041.461ms)
+✔ owner identity cannot be the verifier and revoked verifier cannot start (1902.9536ms)
+✔ wrong repository configuration or public signing key is refused (1951.9405ms)
+✔ verifier revocation and public-key rotation during execution stop signing (1998.4667ms)
+✔ same-path private-key replacement during execution stops signing (1640.1755ms)
+﹣ protected key permissions cannot become public during execution (0.246ms) # POSIX private-mode fixture; Windows key ACL qualification remains separate
+✔ key files in the candidate repository and symlink keys are refused (1270.4019ms)
+ℹ Symlink creation not asserted on Windows without owner-approved symlink privileges
+✔ relative, oversized and non-Ed25519 key files are refused (1679.429ms)
+✔ a failed process receives no successful receipt (2786.0531ms)
+✔ truthy values cannot replace the observed passed boolean (2742.5029ms)
+✔ empty, oversized, non-string and malformed Unicode output cannot be signed (2116.1421ms)
+✔ failed cleanup, wrong exit status and invalid observation times cannot be signed (3317.1501ms)
+✔ timestamps must be canonical ISO instants before a receipt is generated (3720.9758ms)
+✔ grant expiry during execution prevents signing even after successful process output (2667.9861ms)
+✔ Docker command environment contains no verifier keys or control credentials (1731.201ms)
+﹣ simulated Docker CLI: runner executes real Node tests and signs only after cleanup readback (0.4835ms) # POSIX CLI fixture; real Windows Docker remains separate
+﹣ simulated Docker CLI: invalid candidate binding prevents any Docker dispatch (0.2475ms) # POSIX CLI fixture
+﹣ simulated Docker CLI: unverified cleanup blocks a successful receipt (0.2141ms) # POSIX CLI fixture
+﹣ simulated Docker CLI: non-UTF8 bytes fail execution and receive no receipt (0.2636ms) # POSIX CLI fixture
+﹣ simulated Docker CLI: empty output is not converted into a successful signed test (0.2015ms) # POSIX CLI fixture
+ℹ tests 31
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 6
+ℹ todo 0
+ℹ duration_ms 70447.3221

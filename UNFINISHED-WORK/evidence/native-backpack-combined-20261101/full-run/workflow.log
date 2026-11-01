@@ -1,0 +1,15 @@
+✔ full workflow saves exact log bytes and an inspectable source-bound report (1721.6901ms)
+✔ compiled-runtime suites cannot reuse stale ignored output without preparing first (1.159ms)
+✔ zero criteria, duplicate profiles and arbitrary commands never produce a green report (0.9775ms)
+✔ failed checks preserve logs and later independent checks still run (2500.4067ms)
+✔ changing generated modules cannot pass even when committed source is unchanged (2789.2355ms)
+✔ failed preparation blocks dependent suites instead of executing stale compiled code (1500.3255ms)
+✔ a silent no-op prepare cannot certify previously generated files as fresh (1716.3776ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10244.2575

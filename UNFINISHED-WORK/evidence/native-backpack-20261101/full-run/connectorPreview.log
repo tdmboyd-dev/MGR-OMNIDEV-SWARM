@@ -1,0 +1,12 @@
+✔ actual preview binding preserves JSON record arguments after the schema-library migration (105.4111ms)
+✔ array arguments and extra authority fields cannot dispatch the preview tool (13.4573ms)
+✔ the fixed host call budget and closed binding prevent further dispatch (5.4244ms)
+✔ preview grants remain read-only and driver result records retain their payload (10.3242ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 158.6474

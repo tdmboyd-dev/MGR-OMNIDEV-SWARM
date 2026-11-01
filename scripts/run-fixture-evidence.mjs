@@ -12,6 +12,7 @@ export const FIXTURE_PROFILES = Object.freeze(Object.fromEntries(Object.entries(
  snapshotPaths:['tests/snapshot-paths.mjs'],
  workerInputPolicy:['tests/worker-input-policy.test.mjs'],
  nativeWorker:['tests/native-worker-contract.mjs'],
+ nativeBackpackContext:['tests/native-backpack-context.test.mjs'],
  nativeVerificationCustody:['tests/native-verification-custody.mjs'],
  jobDecisionRaces:['tests/job-decision-races.mjs'],
  engineeringOwnership:['tests/engineering-job-ownership.mjs'],

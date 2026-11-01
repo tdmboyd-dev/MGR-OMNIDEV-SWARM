@@ -1,0 +1,52 @@
+✔ an expired native assignment cannot be reissued or appear in the native queue (62.5296ms)
+✔ native enrollment is absent by default, malformed policy/nonce deny, and missing policy never writes an assignment (6ms)
+✔ native credentials cannot use Docker scope, model/audit/recovery actions, or another worker report identity (6.2632ms)
+✔ native report rejects changed host/runtime/qualification/profile and incomplete process/cleanup proof (2.012ms)
+✔ native source/candidate/command allowlists, immutable oracle and distinct credentials are enforced (1.2761ms)
+InvalidOperation: C:\Users\cool\Documents\Codex\2026-10-29\i-x20\work\trilogy\MGR-OMNIDEV-CONTEXT-20261101\tests\native-monitor-contract.ps1:30
+Line |
+  30 |   if($value['bytes']-ne49-or$value['count']-ne4){throw "Monitor byte/c .
+     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot index into a null array.
+✔ model output cannot weaken the native test oracle before candidate persistence (4.9902ms)
+✔ native empty output retains bounded exit and stop diagnostics and cannot pass (1.2696ms)
+✔ native acknowledgment requires the same diagnostic values without depending on object key order (0.3646ms)
+✔ native report persists validated diagnostics and refuses malformed or contradictory success claims (1.2652ms)
+✖ actual Windows monitor preserves missing-entry handling, denial, reparse and entry limits (2829.8031ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3156.4382
+
+✖ failing tests:
+
+test at tests\native-worker-contract.mjs:106:1
+✖ actual Windows monitor preserves missing-entry handling, denial, reparse and entry limits (2829.8031ms)
+  Error: Command failed: pwsh.exe -NoProfile -NonInteractive -File tests/native-monitor-contract.ps1
+  InvalidOperation: C:\Users\cool\Documents\Codex\2026-10-29\i-x20\work\trilogy\MGR-OMNIDEV-CONTEXT-20261101\tests\native-monitor-contract.ps1:30
+  Line |
+    30 |   if($value['bytes']-ne49-or$value['count']-ne4){throw "Monitor byte/c .
+       |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       | Cannot index into a null array.
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-CONTEXT-20261101/tests/native-worker-contract.mjs:107:13)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12) {
+    status: 1,
+    signal: null,
+    output: [ null, '', `InvalidOperation: C:\\Users\\cool\\Documents\\Codex\\2026-10-29\\i-x20\\work\\trilogy\\MGR-OMNIDEV-CONTEXT-20261101\\tests\\native-monitor-contract.ps1:30\r\nLine |\r\n  30 |   if($value['bytes']-ne49-or$value['count']-ne4){throw "Monitor byte/c .\r\n     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n     | Cannot index into a null array.\r\n` ],
+    pid: 37396,
+    stdout: '',
+    stderr: `InvalidOperation: C:\\Users\\cool\\Documents\\Codex\\2026-10-29\\i-x20\\work\\trilogy\\MGR-OMNIDEV-CONTEXT-20261101\\tests\\native-monitor-contract.ps1:30\r\nLine |\r\n  30 |   if($value['bytes']-ne49-or$value['count']-ne4){throw "Monitor byte/c .\r\n     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n     | Cannot index into a null array.\r\n`
+  }

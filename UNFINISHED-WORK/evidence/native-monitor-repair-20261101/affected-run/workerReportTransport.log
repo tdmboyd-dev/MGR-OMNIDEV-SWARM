@@ -1,0 +1,21 @@
+✔ the worker route accepts the complete signed 20 KB output after JSON escaping (106.3611ms)
+✔ worst-case six-byte JSON escaping fits without increasing the decoded output allowance (23.7855ms)
+✔ chunk boundaries inside valid multi-byte UTF-8 preserve the exact signed output (22.0219ms)
+✔ signed decoded output over 20 KB is still refused even when its body fits (32.7768ms)
+✔ the existing ordinary worker report remains compatible at its allowed output limit (8.3768ms)
+✔ ordinary oversized decoded output is still refused before storage (8.4132ms)
+✔ an oversized chunked body is canceled before the remaining body is read or stored (15.741ms)
+✔ wire-body limits count UTF-8 bytes instead of JavaScript string characters (14.0093ms)
+✔ malformed UTF-8 cannot be silently replaced and saved as ordinary worker output (7.1181ms)
+✔ truncated JSON is refused without changing any job evidence (13.2333ms)
+✔ a failed stream cannot leave a partially accepted execution report (16.9487ms)
+✔ unauthorized report requests are rejected without consuming their body (14.7963ms)
+✔ the larger transport envelope still refuses altered signed test output (18.3029ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 313.4452

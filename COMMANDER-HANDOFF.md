@@ -4,6 +4,14 @@ Trusted ONE hosting now derives exact native scope through the original stored-s
 
 This supersedes active missing native-scope derivation/stopped-policy migration directions. The normal launcher remains disabled for engineering. Next: connect reviewed Code Monster candidates to the trusted host/job caller, qualify distinct signed worker/command/result, add OmniSight saved observation and controlled permanent activation/update/rollback. Original full product/source/production requirements, deferred lanes, installed source-pinned procedure review and outside boundaries remain. No original parent promotion or fabricated cost/production claim.
 
+# Combined native/context/current owner service qualified — November1,2026
+
+Clean merge30c46818c846e30ef924fd752fb63411cb42d393 passed92/92approved local verification profiles,0failed/blocked; all92outputhashes and source-stability receipts rechecked. This retains the newer owner-service65b04fa/7068e81 and the native monitor/context/diagnostic repairs without discarding either history. Portableworker check passed unchanged15sources/16entries/SHAad5f7f17b3f814bcc6947d1fb90e6feb44b99f5a4352e347e5f0376cdb14502f from6b8fef8. Evidence UNFINISHED-WORK/evidence/native-owner-context-merged-20261101/REPORT.md. Native29hostchecks/positive6/negative7(jobFAILED) and originalowner8/8remain separate actual receipts.
+
+The exact opt-in Tevin/native snapshot owner service is implemented/tested, superseding older missing-binding/lab-only descriptions for that route. Full signed Code Monster worker/plan/oracle/command/signer composition and finite autonomous maintenance/owner-review acceptance remain open. Whole-product completion is Unassessed; no original174/441/28promotion, Docker/restart, provider, production signer or deployment claim. Current source publication/canonical adoption is pending until remote readback.
+
+---
+
 # Protected original engineering service connected to Tevin — November 1, 2026
 
 Current runtime `7068e8111ad52a5ab3b582864437d524c47906d7` reconciles the original engineering metadata adapter with current job/source/oracle/policy custody and protected opt-in owner hosting. Actual disposable Windows ONE HTTP → original SDK/MCP → native AppContainer → accepted report → ONE save → fresh backend/SQLite restart/replay passed **8/8**, one native execution, zero inference/provider calls, no permanent owner database mutation. This supersedes the active missing-binding/lab-only-hosting gap for the exact native snapshot path. Full operating contract: worker/OWNED-ENGINEERING-SERVICE.md.

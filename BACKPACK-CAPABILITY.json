@@ -83,6 +83,18 @@
         "native-policy",
         "native-manual"
       ]
+    },
+    {
+      "name": "native-backpack-context",
+      "kind": "cli",
+      "entrypoint": "node scripts/run-native-with-backpack.mjs --config C:/private/workflow.json",
+      "claimedAvailability": "implemented-local",
+      "permission": "Trusted owner host configuration, existing enrolled Backpack project, exact existing authorized native job and qualified worker policy required; no command, root, expiry or acceptance grant.",
+      "effects": "execute",
+      "evidenceIds": [
+        "native-context-source",
+        "native-context-manual"
+      ]
     }
   ],
   "dependencies": [
@@ -121,44 +133,58 @@
     {
       "id": "source-1",
       "path": "package.json",
-      "sha256": "a2ae91722da4c58c4b2d8699289e24becf7b4e31651041c4a03c66b7bac23e29",
+      "sha256": "4a0438fa3ed63456d73cf74f2651a466b6d88831a29cc196dfb113b0db7fe3b2",
       "claimedLevel": "source",
       "meaning": "Inspected implementation reference; hash equality is freshness, not executed acceptance."
     },
     {
       "id": "source-2",
       "path": "lib/trilogy-contract.ts",
-      "sha256": "009e486806f06a8fedb149fd5d3a9fad1c11a2465f914e6937ebbae5784f5da4",
+      "sha256": "198a5fdcd1a02a9f48f538563a7416e82fefab13d28c6bcd6d283d1761cc139e",
       "claimedLevel": "source",
       "meaning": "Inspected implementation reference; hash equality is freshness, not executed acceptance."
     },
     {
       "id": "trilogy-route",
       "path": "app/api/trilogy/route.ts",
-      "sha256": "f1d508e16a06be9104ef4aa1974f2bda358d42c0919178c7dc422c76e4d92cae",
+      "sha256": "455b0a8444db2bd69f019d72d21958f20e5e54d24028d0952221d369caeaf1af",
       "claimedLevel": "source",
       "meaning": "Actual GET/POST route and action validation; runtime acceptance is separately recorded."
     },
     {
       "id": "native-boundary",
       "path": "worker/windows-appcontainer.mjs",
-      "sha256": "f83db914fe1005fd50e7354e8a2ad4028b667f0302fcd268c4d4531bfac5d06a",
+      "sha256": "60026e725806603f8a717bc0952fa8ec2417ff71a244dd19c77db4452aa01efd",
       "claimedLevel": "source",
       "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
     },
     {
       "id": "native-policy",
       "path": "lib/worker-policy.ts",
-      "sha256": "07a852815560708e8fd382069386aa13962e8493cb23d5663893ea9a52c68672",
+      "sha256": "fd518dcde5bb9a944d4bfd692ffd2cecd4a9e1a3780c6aed8a246629dbbc37b9",
       "claimedLevel": "source",
       "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
     },
     {
       "id": "native-manual",
       "path": "worker/WINDOWS-NATIVE-WORKER.md",
-      "sha256": "eaa8c21207f0244a57a4a67b82e43fb98e0814343f15cc28cd6df4a9efdfbfd6",
+      "sha256": "0152ee78817051829ba6b4df8b4b81c27ec3b97b00996319c42af245845f2c79",
       "claimedLevel": "source",
       "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
+    },
+    {
+      "id": "native-context-source",
+      "path": "scripts/native-backpack-context.mjs",
+      "sha256": "d3fbb39e089296642d058a2e7844ad6658a91f9f5f8ddebfde8bc356bbfca225",
+      "claimedLevel": "source",
+      "meaning": "Original native host composition and operator guide; source freshness is not independent production or full product acceptance."
+    },
+    {
+      "id": "native-context-manual",
+      "path": "docs/NATIVE-BACKPACK-WORKFLOW.md",
+      "sha256": "b38b9c8b5748f2a24ca02d67b2f79e851daf144423db91963db8c0cf7c2494e3",
+      "claimedLevel": "source",
+      "meaning": "Original native host composition and operator guide; source freshness is not independent production or full product acceptance."
     }
   ]
 }
