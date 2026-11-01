@@ -1,3 +1,15 @@
+# Current approved host procedures and mobile board — November 1, 2026
+
+Backpack owner package0.6.2 is account-updated/read back and installed in Codex. Four source-pinned fixed profiles executed successfully through source and installed compiled MCP, while record writes remain disabled. Concurrent Code Monster hierarchy/automation changes and OmniDev mobile wrapping correctly invalidated approvals; explicit review with35 affected CM contracts,16 board contracts and actual browser3/3 preceded digest-only updates. Both changed procedures succeeded again; all four profiles ready. Expiry remains2026-11-08T13:07:24.167Z. Existing native chat is separately observed0.6.1/read-only; no forced reconnect or Windows restart occurred.
+
+The owner board renderer7d0bccd now wraps long evidence tokens at390px. Desktop/mobile actual headless Chrome3/3,16/16 affected contracts and reproducibility passed. The full uninterrupted84/84 source proof remains bound to runtimef7f8c6b, before this renderer-only change; it is not relabeled. Raw mobile output/captures: UNFINISHED-WORK/evidence/native-completion-20261101.
+
+Current normal compiled API with Backpack0.6.2 and Code Monster's eight source tools passed26/26 local TCP/JWKS/JWT/SQLite/Git checks, including nonempty hierarchy/automation projection and revocation. Other AI's newer source hierarchy and enrolled Tevin consumer evidence remain separately source-bound in its owning handoffs. Current fresh snapshot workflow passed10/10 and persisted/reopened Backpack evidence through7 protocol reads without mirrored jobs/tasks; it is a different scope from earlier14-check workflows.
+
+No original174/441/28 acceptance promotion, default merge, production signer/provider claim or Docker restart. Current permanent Tevin/hosted/production qualification and broad original scope remain open. See Backpack docs/OWNER-HOST-QUICKSTART.md for exact profile task/check calls and the old-instance diagnosis.
+
+---
+
 # Native Windows and complete current local regression â€” November 1, 2026
 
 Runtimef7f8c6b3302b7abb69e1fbf347f87fa667d42415 passed an uninterrupted84/84 fixed local profile run in an immutable clean checkout, zero failures/blocked. Exact output is UNFINISHED-WORK/evidence/native-completion-20261101/final-run. The earlier81/84 run was blocked by another owner's AI additive handoff edit; the three blocked profiles separately passed against identical source/prepared bytes, then the complete immutable run passed. Both earlier records remain preserved.

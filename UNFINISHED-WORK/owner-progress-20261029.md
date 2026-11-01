@@ -11,7 +11,7 @@ This is a derived view of **174 original requirements, 441 exact acceptance clau
 | Original requirements fully accepted | 0/174 | 0.0% | Every original acceptance condition is satisfied. |
 | Last verified local test groups passed | 84/84 | 100.0% | Test pass rate; not product completion. |
 
-Source snapshot: `0c4e74ca75915e9ea0e5f746d52be106f88c9a2e`. Latest full local report: test receipt (public link unavailable).
+Source snapshot: `7d0bccd1fd4546de2509cdc9abdd5d001b6b35af`. Latest full local report: test receipt (public link unavailable).
 
 ## Completed behavior and saved proof
 

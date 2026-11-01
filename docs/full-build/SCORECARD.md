@@ -89,3 +89,8 @@ First safety full run76/82 atfa64ffd retained, six failures repaired: pipeline d
 
 
 Current safety acceptance83/83 local profiles atd5181b5; initial76/82 retained. New local job integration14/14, Backpack persistence7calls, normal+compiled shared-edge21checks each, rebuilt/check worker ZIP9sources/10entries. Exact reports under UNFINISHED-WORK/evidence/safety-reconciliation-20261101. No original parent promotion, Docker restart, hosted/currentTevin or production claim.
+
+
+## Current source-pinned procedures and mobile board
+
+Runtime f7f8c6b84/84 remains unchanged. Renderer7d0bccd actual browser3/3 and contracts16/16 passed; all84 output hashes reproduce. Fixed Backpack procedures are separately approved/pinned/expiring, not canonical acceptance tasks. Current compiled eight-tool shared edge26/26 with Backpack0.6.2. No whole-product percentage or original parent promotion.
