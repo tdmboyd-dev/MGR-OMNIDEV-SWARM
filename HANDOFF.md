@@ -1,3 +1,11 @@
+# Combined native/context/current owner service qualified — November1,2026
+
+Clean merge30c46818c846e30ef924fd752fb63411cb42d393 passed92/92approved local verification profiles,0failed/blocked; all92outputhashes and source-stability receipts rechecked. This retains the newer owner-service65b04fa/7068e81 and the native monitor/context/diagnostic repairs without discarding either history. Portableworker check passed unchanged15sources/16entries/SHAad5f7f17b3f814bcc6947d1fb90e6feb44b99f5a4352e347e5f0376cdb14502f from6b8fef8. Evidence UNFINISHED-WORK/evidence/native-owner-context-merged-20261101/REPORT.md. Native29hostchecks/positive6/negative7(jobFAILED) and originalowner8/8remain separate actual receipts.
+
+The exact opt-in Tevin/native snapshot owner service is implemented/tested, superseding older missing-binding/lab-only descriptions for that route. Full signed Code Monster worker/plan/oracle/command/signer composition and finite autonomous maintenance/owner-review acceptance remain open. Whole-product completion is Unassessed; no original174/441/28promotion, Docker/restart, provider, production signer or deployment claim. Current source publication/canonical adoption is pending until remote readback.
+
+---
+
 # Native monitor/context and newer owner service reconciliation — November 1, 2026
 
 This merge preserves both current owner-service source65b04fa and the native monitor/context runtime6b8fef8 plus worker1e57d9c and evidence0fca465. No peer history or original job/worker authority is replaced. Monitor evidence: UNFINISHED-WORK/evidence/native-monitor-repair-20261101/REPORT.md (16 affected profiles,10 native tests,29 host checks, matched churn3/3, actual good6/6 and negative-control7/7 with job FAILED). The earlier88/88 predecessor and newer owner91-profile90pass/1typecheck-failure plus8corrected profiles remain separate. Fresh combined qualification is pending; do not relabel those receipts as this merge's result. Current owner-service8/8 journey and its remaining signed Code Monster bridge gates are retained below. No PC restart or Docker qualification occurred.

@@ -168,7 +168,7 @@
     {
       "id": "native-manual",
       "path": "worker/WINDOWS-NATIVE-WORKER.md",
-      "sha256": "d1683e6ee5a6791cff3d637a1d7d74d9e01132b0e48a708578b7bcd866302258",
+      "sha256": "0152ee78817051829ba6b4df8b4b81c27ec3b97b00996319c42af245845f2c79",
       "claimedLevel": "source",
       "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
     },
@@ -182,7 +182,7 @@
     {
       "id": "native-context-manual",
       "path": "docs/NATIVE-BACKPACK-WORKFLOW.md",
-      "sha256": "2fe4a2a8fab9449d0c02132707b075a10cbb85e5d386472fedc2f31b548314a5",
+      "sha256": "b38b9c8b5748f2a24ca02d67b2f79e851daf144423db91963db8c0cf7c2494e3",
       "claimedLevel": "source",
       "meaning": "Original native host composition and operator guide; source freshness is not independent production or full product acceptance."
     }
