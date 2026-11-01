@@ -1,3 +1,17 @@
+# Current durable-completion verification — November 1, 2026
+
+Committed runtime7a7c5e124b7faac8501fd80a567e7163e2977c49 passed **80/80 complete allowlisted local profiles**, zero failures/blocked; prepared module digest stayed unchanged. Exact full report/logs: UNFINISHED-WORK/evidence/durable-completion-20261101/. Earlier74/80 and72/80 failures remain in private Backpack evidence and are not relabeled as passing.
+
+Fresh current three-product integration passed14/14 using actual Git/SQLite/HTTP, exact candidate/receipt identity, restart and scoped revocation. Source revisions are pinned in the private complete proof; this public repository contains only integration-summary.json. Signing/GitHub/Docker admission remain explicit fixtures. Backpack0.6.0 then persisted/reopened linked evidence in7 protocol calls with no mirrored jobs/tasks/runs.
+
+OmniSight's current combined suite passed130/130 after selective OS07 campaign snapshot reconciliation; its older flat-list prototype is superseded by newer bounded hierarchical pagination. Code Monster0.3.1 object-only candidates passed227 with6 explicit Windows skips,0 failures of233 results. Backpack0.6.0 passed124/124,44 syntax; actual account update and installed runtime readback are verified separately. These counts describe different scopes, not an additive product score.
+
+After renewed explicit owner authorization, Docker's missing HKLM64 InstallLocation was restored and read back. The normal launcher reaches its Dashboard after the owner selected Skip. It reports Virtual Machine Platform not enabled / Engine stopped. Earlier elevated feature check reports Enabled; WSL installation explicitly says changes take effect only after reboot, and HypervisorPresent is false. No automatic restart was requested. Save/publish current work before owner-chosen reboot; qualify actual engine/images/worker afterward. Do not call installation or CLI version a running engine.
+
+Remaining: selectively reconcile the older native worker/job/receipt/UI lane without overwriting newer atomic state; qualify hosted/browser/current Tevin, actual Docker and original parent acceptance. Original174/441/28 register and existing states remain unchanged. The owner rejected interim Tevin transfer as final completion; keep this owning work here.
+
+---
+
 # Durable companion ownership repair — November 1, 2026
 
 A deterministic actual-HTTP regression proved that a job-status GET could read running state, await account IO, then overwrite a newly saved completed result as interrupted. GET now rereads after observing inactivity, revalidates account identity, and derives an interrupted response without writing job memory. Saved outcomes survive concurrent status reads.

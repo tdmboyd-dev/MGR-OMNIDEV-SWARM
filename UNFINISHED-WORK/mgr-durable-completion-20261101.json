@@ -1,0 +1,34 @@
+{
+  "schema": "mgr.durable-completion-wave.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-11-01T08:01:10.836Z",
+  "sourceCommit": "7a7c5e124b7faac8501fd80a567e7163e2977c49",
+  "sourceTree": "de91cf09ab46ebee29f55cc2e0c7dc7055d5620c",
+  "fullVerification": {
+    "report": "UNFINISHED-WORK/evidence/durable-completion-20261101/report.json",
+    "passedProfiles": 80,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 80
+  },
+  "qualification": "executed-local-regression-not-live-provider-or-release-certification",
+  "fullAcceptancePromotions": 0,
+  "canonicalScopeUnchanged": true,
+  "ownerProgress": {
+    "completed": [
+      {
+        "title": "Durable companion completion and current local integration",
+        "observed": "Reproduced and repaired status-read overwrite and asynchronous ownership failures. Current committed source passed80/80 fixed profiles; fresh actual local three-product Git/SQLite/HTTP integration passed14 checks. Backpack0.6.0 persisted and reopened source-linked evidence through7 protocol calls without mirrored canonical jobs.",
+        "evidence": [
+          "UNFINISHED-WORK/evidence/durable-completion-20261101/report.json",
+          "UNFINISHED-WORK/evidence/durable-completion-20261101/integration-summary.json"
+        ],
+        "remaining": [
+          "Docker is installed and its missing launcher registration was restored after renewed owner authorization, but the engine is stopped awaiting effective Windows virtualization/restart. No container/worker qualification.",
+          "Hosted OAuth/browser/current Tevin, original independent acceptance, remaining older native lane reconciliation and broader product obligations remain open."
+        ]
+      }
+    ]
+  }
+}

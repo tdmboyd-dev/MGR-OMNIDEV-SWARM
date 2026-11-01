@@ -59,3 +59,8 @@ Published source checkpoint `de006f6611ff802811c052d0d71ed8184c17f0dd` and compa
 ## November 1 companion ownership repair
 
 Bounded repair acceptance: companion regression 9/9, Trilogy jobs 33/33, fixture recorder 10/10; five additional focused commands passed. Earlier full runs remain 74/80 and 72/80 at their own source commits. Repaired clean-source 80-profile run pending; no whole-product percentage is inferred. Shared handoff documents the failure, repair, timing budgets and remaining host/provider/parent gates.
+
+
+## Current durable-completion execution
+
+80/80 fixed local profiles passed at7a7c5e1; fresh local integration14/14; Backpack evidence reopen7 calls. Exact public report/outputs and sanitized integration summary: UNFINISHED-WORK/evidence/durable-completion-20261101. Docker registration repair succeeded after renewed authorization; engine remains stopped pending effective Windows virtualization/restart. Whole original product acceptance remains Unassessed, no canonical parent promotion.

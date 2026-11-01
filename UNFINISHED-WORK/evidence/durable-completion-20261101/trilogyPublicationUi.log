@@ -1,0 +1,31 @@
+✔ preview renders the exact repository, tested commit, base, changed paths and escaped source text (11.2039ms)
+✔ unverified candidates cannot start the owner publication flow (2.0741ms)
+✔ key validation and explicit preview keep approval separate from publishing (34.8393ms)
+✔ the key travels only in an authorization header and is cleared after success (33.0141ms)
+✔ reopening recovers the saved authorization without silently reapproving (2.3429ms)
+✔ failed publication retains the approval and key for deliberate reconciliation (3.1156ms)
+✔ double invocation while publishing sends one mutation (1.6473ms)
+✔ revoking sends only the selected approval and clears the key (1.4675ms)
+✔ expired approval cannot publish and requires reviewing a new preview (1.0928ms)
+✔ switching jobs clears authority and drops a delayed old preview (1.2132ms)
+✔ losing verified status closes controls and drops late responses (0.9126ms)
+✔ an older response cannot unlock a new request after the same job is reverified (1.4096ms)
+✔ saved provider URLs cannot navigate to an unrelated site (1.034ms)
+✔ expired uncertain publication can inspect its saved draft without renewing authority (1.2927ms)
+✔ a canceled job can recover an existing attempt but cannot dispatch another publication (1.3412ms)
+✔ failed recovery leaves the original approval visible and sends no publish request (0.9999ms)
+✔ clearing an expired unstarted publication never claims a GitHub draft was saved (1.058ms)
+✔ revoking an uncertain attempt retains read-only recovery controls (1.0292ms)
+✔ an incomplete successful provider response cannot be displayed as a saved draft (1.2556ms)
+✔ a malformed saved publication never claims success or feeds invalid preview data to rendering (5.9586ms)
+✔ a malformed fresh preview and mismatched approval do not enable a draft (1.4993ms)
+✔ unconfirmed revocation keeps the selected approval and does not announce success (1.2428ms)
+✔ GitHub canonical repository capitalization does not hide a confirmed draft (0.6526ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124.1848
