@@ -1,0 +1,200 @@
+✖ held reserved job refuses decisions, movement and candidate replacement (4.3871ms)
+✖ held executing job refuses decisions, movement and candidate replacement (0.9157ms)
+✖ held unknown job refuses decisions, movement and candidate replacement (0.8995ms)
+✖ only exact verification request can cancel its queued reservation (0.955ms)
+✔ settled receipt with explicit false flag keeps ordinary lifecycle compatibility (1.8011ms)
+✖ lease recovery skips reserved and uncertain jobs without removing evidence (14.2404ms)
+✖ native claim refuses concurrent payload at its final SQLite update (5.2769ms)
+✖ native claim refuses concurrent objective at its final SQLite update (1.4723ms)
+✖ native claim refuses concurrent stop at its final SQLite update (1.2888ms)
+✔ unheld approved native claim retains original job correlation link and records uncertainty (1.9861ms)
+✖ project clearSnapshot refuses to remove a held verification source (1.9554ms)
+✖ project disconnect refuses to remove a held verification source (0.7367ms)
+✖ project delete refuses to remove a held verification source (2.1957ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 2
+ℹ fail 11
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 213.8348
+
+✖ failing tests:
+
+test at tests\native-verification-custody.mjs:30:55
+✖ held reserved job refuses decisions, movement and candidate replacement (4.3871ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:33:69)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /ownership is held/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\native-verification-custody.mjs:30:55
+✖ held executing job refuses decisions, movement and candidate replacement (0.9157ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:33:69)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /ownership is held/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\native-verification-custody.mjs:30:55
+✖ held unknown job refuses decisions, movement and candidate replacement (0.8995ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:33:69)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /ownership is held/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\native-verification-custody.mjs:40:1
+✖ only exact verification request can cancel its queued reservation (0.955ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:42:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /ownership is held/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\native-verification-custody.mjs:53:1
+✖ lease recovery skips reserved and uncertain jobs without removing evidence (14.2404ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+      attempts: '1',
+      created_at: 'now',
+      id: 'recover-reserved',
+  +   lease_token: null,
+  +   lease_until: null,
+  -   lease_token: 'lease',
+  -   lease_until: '2000-01-01T00:00:00.000Z',
+      mode: 'account',
+      objective: 'preserve native verification',
+      payload: '{"workerKind":"windows-appcontainer","testProfile":"snapshot","baseline":[{"path":"tests/omni-snapshot.test.mjs","content":"// immutable owner oracle\\n"}]}',
+      phase: 'review',
+      project_id: 'project-recover-reserved',
+  +   result: '{"checks":{"passed":true},"candidate":{"patches":[],"experts":[]},"verificationOwner":{"requestId":"request","state":"reserved"},"recovery":{"id":"b679d51f-3c1f-4f62-a5c7-ca87c5419791","at":"2026-11-01T21:22:24.899Z","from":"running","outcome":"queued","attempts":1,"expiredAt":"2000-01-01T00:00:00.000Z","previousRecoveryId":null,"previousError":null}}',
+  +   status: 'queued',
+  +   updated_at: '2026-11-01T21:22:24.899Z'
+  -   result: '{"checks":{"passed":true},"candidate":{"patches":[],"experts":[]},"verificationOwner":{"requestId":"request","state":"reserved"}}',
+  -   status: 'running',
+  -   updated_at: 'now'
+    }
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:55:77)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { id: 'recover-reserved', project_id: 'project-recover-reserved', objective: 'preserve native verification', mode: 'account', status: 'queued', phase: 'review', payload: '{"workerKind":"windows-appcontainer","testProfile":"snapshot","baseline":[{"path":"tests/omni-snapshot.test.mjs","content":"// immutable owner oracle\\n"}]}', result: '{"checks":{"passed":true},"candidate":{"patches":[],"experts":[]},"verificationOwner":{"requestId":"request","state":"reserved"},"recovery":{"id":"b679d51f-3c1f-4f62-a5c7-ca87c5419791","at":"2026-11-01T21:22:24.899Z","from":"running","outcome":"queued","attempts":1,"expiredAt":"2000-01-01T00:00:00.000Z","previousRecoveryId":null,"previousError":null}}', attempts: '1', lease_token: null, lease_until: null, created_at: 'now', updated_at: '2026-11-01T21:22:24.899Z' },
+    expected: { id: 'recover-reserved', project_id: 'project-recover-reserved', objective: 'preserve native verification', mode: 'account', status: 'running', phase: 'review', payload: '{"workerKind":"windows-appcontainer","testProfile":"snapshot","baseline":[{"path":"tests/omni-snapshot.test.mjs","content":"// immutable owner oracle\\n"}]}', result: '{"checks":{"passed":true},"candidate":{"patches":[],"experts":[]},"verificationOwner":{"requestId":"request","state":"reserved"}}', attempts: '1', lease_token: 'lease', lease_until: '2000-01-01T00:00:00.000Z', created_at: 'now', updated_at: 'now' },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\native-verification-custody.mjs:60:52
+✖ native claim refuses concurrent payload at its final SQLite update (5.2769ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:68:6)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Candidate changed while assigning/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\native-verification-custody.mjs:60:52
+✖ native claim refuses concurrent objective at its final SQLite update (1.4723ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:68:6)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Candidate changed while assigning/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\native-verification-custody.mjs:60:52
+✖ native claim refuses concurrent stop at its final SQLite update (1.2888ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:68:6)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Candidate changed while assigning/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\native-verification-custody.mjs:76:64
+✖ project clearSnapshot refuses to remove a held verification source (1.9554ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:80:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Finish or cancel active jobs/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\native-verification-custody.mjs:76:64
+✖ project disconnect refuses to remove a held verification source (0.7367ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:80:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Finish or cancel active jobs/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\native-verification-custody.mjs:76:64
+✖ project delete refuses to remove a held verification source (2.1957ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/native-verification-custody.mjs:80:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Finish or cancel active jobs/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

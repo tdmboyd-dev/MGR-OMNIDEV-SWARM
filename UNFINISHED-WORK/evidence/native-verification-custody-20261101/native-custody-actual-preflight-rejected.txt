@@ -1,0 +1,8 @@
+file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/scripts/verify-native-workflow.mjs:15
+if(qualificationDigest!==createHash('sha256').update(JSON.stringify(unsigned)).digest('hex')||qualification.checks?.length!==23||qualification.launcherSha256!==await nativeLauncherDigest()||qualification.runtimeSha256!==await nativeRuntimeDigest())throw Error('Qualification source/runtime mismatch');
+                                                                                                                                                                                                                                                              ^
+
+Error: Qualification source/runtime mismatch
+    at file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/scripts/verify-native-workflow.mjs:15:255
+
+Node.js v24.21.0

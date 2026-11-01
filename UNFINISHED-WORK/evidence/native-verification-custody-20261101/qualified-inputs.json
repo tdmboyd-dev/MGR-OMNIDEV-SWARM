@@ -1,0 +1,32 @@
+{
+  "sourceCommit": "ee24e165f8c90c07efbbb8c1abb38986c741588a",
+  "inputs": {
+    "lib/jobs.ts": {
+      "gitBlob": "0b087e1dd3cfe1146148ab59954aede84d27423d",
+      "sha256": "ea095accc44544a345e3cb52612f1b00f39a6b1c3eba5eb0b1319681dcb9bce6"
+    },
+    "scripts/run-fixture-evidence.mjs": {
+      "gitBlob": "d56ce78e5fe5be9adfff0bf6f58a42f0fbbf0558",
+      "sha256": "a3cc72a85fdaa189f10be76f1947c029561f5f63df8315df8fc505622d46ce61"
+    },
+    "scripts/run-full-verification.mjs": {
+      "gitBlob": "f217acc4351f20be0f8285db1973928cd6a5418d",
+      "sha256": "785bb0ea1e73100bb5497f39c60e46a023a4fea2082f288dd38b0e5afd9be150"
+    },
+    "tests/job-decision-races.mjs": {
+      "gitBlob": "eb6117964a924804404aa0fe267d7cb0e48983a7",
+      "sha256": "387fbb2160b08ebb15d7ed23bc11339eca7f53acc9f19021978d5e6ff180a1a1"
+    },
+    "tests/engineering-job-ownership.mjs": {
+      "gitBlob": "6a87382951be45c141054ab3d30e3da05ab4e1ca",
+      "sha256": "b082630b04c3e7bb9ee8ebbefad16b387948fffc5de39a8728b94441c8fccf47"
+    },
+    "tests/native-verification-custody.mjs": {
+      "gitBlob": "f9536305491a48e4ed4deea1558a4d29092fc959",
+      "sha256": "b772589fdf2021bacef99d1b828e4a852a59f4ddd810be6f897059038369d2e7"
+    }
+  },
+  "fullOutputHashesRecomputed": true,
+  "privateOwnerConfigurationChanged": false,
+  "actualPermanentOwnerEngineeringAccepted": false
+}

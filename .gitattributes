@@ -37,3 +37,7 @@
 /scripts/native-backpack-context.mjs text eol=lf
 /scripts/run-native-with-backpack.mjs text eol=lf
 /tests/native-backpack-context.test.mjs text eol=lf
+# Preserve and independently scan the exact native-custody execution captures.
+/UNFINISHED-WORK/evidence/native-verification-custody-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/UNFINISHED-WORK/evidence/native-verification-custody-20261101/**/*.log -diff
+/UNFINISHED-WORK/evidence/native-verification-custody-20261101/*.txt -diff

@@ -1,0 +1,27 @@
+{"passed":3,"scope":"Production handlers + actual SQLite controlled concurrent reservations; no native execution"}
+✔ tests\engineering-job-ownership.mjs (315.8832ms)
+✔ cancel denies stale decision after concurrent terminal transition (5.5947ms)
+✔ reject denies stale decision after concurrent terminal transition (0.8626ms)
+✔ retry denies stale decision after concurrent terminal transition (0.6972ms)
+✔ normal cancel/reject/retry persist the requested state and terminal cancellation stays denied (2.2001ms)
+✔ retry cannot exceed attempt cap after same-status concurrent failure (2.2475ms)
+✔ RUN-03 exhausted recovery preserves candidate, reviews and test output with an audit event (25.9721ms)
+✔ RUN-03 retry recovery is auditable, preserves attempts and executes the queued work (19.0277ms)
+✔ RUN-03 concurrent recovery and repeated requests record exactly one recovery (9.4173ms)
+✔ RUN-03 recovery cannot overwrite a newer completed worker result (11.2171ms)
+✔ RUN-03 audit persistence failure rolls recovery back atomically (11.1956ms)
+✔ RUN-03 healthy leases and terminal jobs are not recovered (6.0983ms)
+✔ an expired native assignment cannot be reissued or appear in the native queue (68.0443ms)
+✔ native enrollment is absent by default, malformed policy/nonce deny, and missing policy never writes an assignment (4.7281ms)
+✔ native credentials cannot use Docker scope, model/audit/recovery actions, or another worker report identity (12.5677ms)
+✔ native report rejects changed host/runtime/qualification/profile and incomplete process/cleanup proof (3.5288ms)
+✔ native source/candidate/command allowlists, immutable oracle and distinct credentials are enforced (1.7862ms)
+✔ model output cannot weaken the native test oracle before candidate persistence (6.083ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 404.2378

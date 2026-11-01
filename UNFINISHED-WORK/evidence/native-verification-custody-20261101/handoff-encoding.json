@@ -1,0 +1,12 @@
+[
+  {
+    "path": "HANDOFF.md",
+    "originalCommit": "ee24e165f8c90c07efbbb8c1abb38986c741588a",
+    "originalSha256": "d2005f4ccd270c8550f89226020920b3735e81bd7fe3bca7af1aeea89117e018",
+    "legacyWindowsPunctuationBytes": {
+      "0x97": 1
+    },
+    "validUtf8Preserved": true,
+    "requirementsRemoved": false
+  }
+]

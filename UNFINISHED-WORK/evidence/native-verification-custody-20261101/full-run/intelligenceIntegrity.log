@@ -1,0 +1,18 @@
+✔ GRAPH-01 deletion does not resurrect stale integration participants or edges (18.4365ms)
+✔ GRAPH-01 integration participants use current project identity after a rename (5.0819ms)
+✔ DATA-03 complete backup restores into a fresh store without execution authority (28.6397ms)
+✔ DATA-03 rejects jobs whose project reference is a memory record (14.6803ms)
+✔ DATA-03 rejects dangling project links before a restore writes anything (10.1397ms)
+✔ DATA-03 rejects null or array record data and job payloads (33.8142ms)
+✔ DATA-03 rejects malformed job retry counters and empty record identities (59.8856ms)
+✔ DATA-03 concurrent restoration has one winner and no duplicated effects (13.5519ms)
+✔ DATA-03 delete removes its audit children without touching another project (8.6751ms)
+✔ DATA-03 clearSnapshot removes its audit children without touching another project (7.1549ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 214.5424
