@@ -14,10 +14,19 @@ class Statement{
 globalThis.__omniEnv={DB:{prepare:sql=>new Statement(sql),batch:async statements=>{
  sqlite.exec('BEGIN');try{const result=statements.map(s=>({meta:{changes:Number(sqlite.prepare(s.sql).run(...s.args).changes)}}));sqlite.exec('COMMIT');return result;}catch(error){sqlite.exec('ROLLBACK');throw error;}
 }}};
-const {POST,GET}=await import('../.test-runtime/route.mjs');
+const {POST,GET,importedSnapshotFiles}=await import('../.test-runtime/route.mjs');
 const {candidate,safePath}=await import('../.test-runtime/runtime-contract.mjs');
 const submit=async body=>{const response=await POST(new Request('https://omni.example/api/workspace',{method:'POST',headers:{Origin:'https://omni.example','Content-Type':'application/json'},body:JSON.stringify(body)}));return {status:response.status,body:await response.json()};};
 const unsafe=['C:/outside.ts','source.ts:alternate','a\\b.ts','nul.ts','src/CON','src/Lpt1.txt','src/end.','src/end ','../outside.ts','/root.ts','a//b.ts','a/./b.ts','a\u0000b.ts','a?b.ts','.GIT/config','.env.production'];
+
+test('shared stored snapshot contract matches actual import redaction and canonical field order',async()=>{
+ const source=[{content:'export const value=1;\n',path:'src/value.mjs'},{content:'const password="fixture-value-only";',path:'src/settings.mjs'}],expected=importedSnapshotFiles(source),response=await submit({action:'import',title:'Shared source normalization',files:source});assert.equal(response.status,200);
+ const row=sqlite.prepare("SELECT data FROM records WHERE id=?").get(response.body.projectId),stored=JSON.parse(row.data).files;assert.equal(JSON.stringify(stored),JSON.stringify(expected));assert.deepEqual(Object.keys(expected[0]),['path','content']);assert.match(expected[1].content,/REDACTED/);assert.equal(source[1].content.includes('REDACTED'),false);
+});
+
+test('shared stored snapshot contract retains original count, byte, duplicate and unsafe-path limits',()=>{
+ for(const input of [[],Array.from({length:301},(_,i)=>({path:'src/'+i+'.mjs',content:''})),[{path:'x',content:'x'.repeat(100000)}],[{path:'X',content:''},{path:'x',content:''}],[{path:'../outside',content:''}]])assert.throws(()=>importedSnapshotFiles(input));
+});
 test('unsafe import and candidate paths are rejected before SQLite writes',async()=>{
  for(const path of unsafe){assert.equal(safePath(path),false,path);const result=await submit({action:'import',title:'Unsafe',files:[{path,content:'fixture'}]});assert.equal(result.status,400,path);
   assert.throws(()=>candidate({summary:'fixture',patches:[{path,before:null,after:'fixture'}]},[]),/unsafe patch path/,path);

@@ -14,6 +14,14 @@ function check(v:unknown,msg:string):asserts v{if(!v)throw new InputError(msg);}
 function text(v:unknown,max=200){check(typeof v==="string"&&v.trim().length>0&&v.length<=max,"A valid text value is required");return v.trim();}
 function numeric(v:unknown,min:number,max:number){check(typeof v==="number"&&Number.isFinite(v)&&v>=min&&v<=max,"Value is outside the allowed range");return v;}
 function redact(s:string){return s.replace(/((?:api[_-]?key|password|secret)\s*[:=]\s*["'])[^"']+/gi,"$1[REDACTED]").replace(/(?:sk-[a-zA-Z0-9_-]{20,}|ghp_[a-zA-Z0-9]{20,}|AKIA[A-Z0-9]{16})/g,"[REDACTED]");}
+// Share the exact stored representation with trusted candidate enrollment.
+// This is pure validation/normalization, not an import or execution action.
+export function importedSnapshotFiles(files:SourceFile[]):SourceFile[]{
+ check(Array.isArray(files)&&files.length>0&&files.length<=300,"Import 1–300 files");
+ check(files.every(f=>f&&safePath(f.path)&&typeof f.content==="string"&&new TextEncoder().encode(f.content).byteLength<100000),"Invalid files; each file must be text under 100 KB");
+ check(new Set(files.map(f=>f.path.toLowerCase())).size===files.length,"File paths must be unique");
+ return files.map(f=>({path:f.path,content:redact(f.content)}));
+}
 async function currentSource(project:RecordItem,existing:RecordItem[],expected:unknown){
  const source=await planningSource(project,existing);
  check(typeof expected==='string'&&expected===source.sourceDigest,'Project or findings changed; reload before saving');return source;
@@ -31,10 +39,8 @@ export async function POST(request:Request){
   }else if(p.action==="import"||p.action==="example"||(p.action==="github"||p.action==="githubAccount")){
    let snapshot:any=null; if(p.action==="github"||p.action==="githubAccount"){try{snapshot=await githubSnapshot(text(p.location,500),p.action==="githubAccount");}catch(e:any){throw new InputError(e.message)}}
    const files:SourceFile[]=p.action==="example"?exampleFiles:snapshot?snapshot.files:p.files;const name=p.action==="example"?"Atlas Commerce":snapshot?snapshot.title:text(p.title);
-   check(Array.isArray(files)&&files.length>0&&files.length<=300,"Import 1–300 files");
-   check(files.every(f=>f&&safePath(f.path)&&typeof f.content==="string"&&new TextEncoder().encode(f.content).byteLength<100000),"Invalid files; each file must be text under 100 KB");
-   check(new Set(files.map(f=>f.path.toLowerCase())).size===files.length,"File paths must be unique");
-   const result=analyze(files);const project=record("project",name,{source:p.action==="example"?"Example dataset":snapshot?snapshot.authenticated?"Authorized GitHub snapshot":"Public GitHub snapshot":"Imported snapshot",origin:snapshot?{url:snapshot.url,ref:snapshot.ref,commit:snapshot.commit,tree:snapshot.tree,partial:snapshot.partial,coverage:snapshot.coverage}:null,fileLedger:await fileLedger(files.map(f=>({path:f.path,content:redact(f.content)}))),files:files.map(f=>({path:f.path,content:redact(f.content)})),analysis:result,scanCount:1},"","analyzed");ops.push(insert(project));
+   const storedFiles=importedSnapshotFiles(files);
+   const result=analyze(files);const project=record("project",name,{source:p.action==="example"?"Example dataset":snapshot?snapshot.authenticated?"Authorized GitHub snapshot":"Public GitHub snapshot":"Imported snapshot",origin:snapshot?{url:snapshot.url,ref:snapshot.ref,commit:snapshot.commit,tree:snapshot.tree,partial:snapshot.partial,coverage:snapshot.coverage}:null,fileLedger:await fileLedger(storedFiles),files:storedFiles,analysis:result,scanCount:1},"","analyzed");ops.push(insert(project));
    for(const f of result.findings)ops.push(insert(record("finding",f.title,f,project.id,"open")));
    audit("Snapshot analyzed: "+name,{content:files.length+" files mapped; "+result.findings.length+" rule-based findings. "+result.scope},project.id);out={projectId:project.id};
   }else if(p.action==="spawn"){
