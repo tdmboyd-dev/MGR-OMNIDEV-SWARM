@@ -70,6 +70,19 @@
       "evidenceIds": [
         "trilogy-route"
       ]
+    },
+    {
+      "name": "native-snapshot-worker",
+      "kind": "cli",
+      "entrypoint": "node worker/windows-worker.mjs --config PRIVATE_CONFIG --once",
+      "claimedAvailability": "implemented-local",
+      "permission": "Distinct private native worker credential, matching actual Windows host/runtime qualification, exact approved source/candidate/command digests and unchanged owner test oracle. Not arbitrary application or signed Trilogy worker qualification.",
+      "effects": "execute",
+      "evidenceIds": [
+        "native-boundary",
+        "native-policy",
+        "native-manual"
+      ]
     }
   ],
   "dependencies": [
@@ -125,6 +138,27 @@
       "sha256": "f1d508e16a06be9104ef4aa1974f2bda358d42c0919178c7dc422c76e4d92cae",
       "claimedLevel": "source",
       "meaning": "Actual GET/POST route and action validation; runtime acceptance is separately recorded."
+    },
+    {
+      "id": "native-boundary",
+      "path": "worker/windows-appcontainer.mjs",
+      "sha256": "f83db914fe1005fd50e7354e8a2ad4028b667f0302fcd268c4d4531bfac5d06a",
+      "claimedLevel": "source",
+      "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
+    },
+    {
+      "id": "native-policy",
+      "path": "lib/worker-policy.ts",
+      "sha256": "07a852815560708e8fd382069386aa13962e8493cb23d5663893ea9a52c68672",
+      "claimedLevel": "source",
+      "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
+    },
+    {
+      "id": "native-manual",
+      "path": "worker/WINDOWS-NATIVE-WORKER.md",
+      "sha256": "eaa8c21207f0244a57a4a67b82e43fb98e0814343f15cc28cd6df4a9efdfbfd6",
+      "claimedLevel": "source",
+      "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
     }
   ]
 }

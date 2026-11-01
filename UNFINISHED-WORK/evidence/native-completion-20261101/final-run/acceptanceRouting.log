@@ -1,0 +1,11 @@
+✔ routes criteria without auto-certifying (4.2689ms)
+✔ rejects forged verified status (1.1159ms)
+✔ rejects changed number of original acceptance clauses (1.1471ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31.6783

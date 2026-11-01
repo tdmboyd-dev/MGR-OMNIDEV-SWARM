@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-01T13:00:37.696Z",
+  "sourceCommit": "f7f8c6b3302b7abb69e1fbf347f87fa667d42415",
+  "actualHostChecks": 23,
+  "qualificationDigest": "fa75feedb57c79c9860089545e75820ecea5a7d7879ed7390cf09aeea7d612e4",
+  "actualOwnerWorkflowChecks": 6,
+  "scope": "Actual Windows AppContainer and existing job/SQLite/HTTP/report/owner paths on owned fixture source. No model, external repo, production signer, Docker or broad application-worker qualification.",
+  "limits": {
+    "profile": "Owner-controlled bounded snapshot Node tests only",
+    "configuredJobMemoryBytes": 402653184,
+    "measuredPeakAcceptanceCeilingBytes": 536870912,
+    "memoryAccountingNote": "Windows peak accounting exceeded the prior nominal 512 MiB setting in an actual allocation-failure probe; conservative 384 MiB configuration now retains headroom. No exact RSS ceiling claim.",
+    "activeProcesses": 16,
+    "cpuHardCapPercent": 20,
+    "wallTimeMs": 15000,
+    "outputBytes": 20000,
+    "writeBudgetBytes": 8388608,
+    "writeBudgetKind": "25 ms monitored guard; not an OS hard disk quota; polling overshoot is recorded",
+    "scratchAndProfileStorageMonitored": true,
+    "noDockerEquivalence": true,
+    "noIndependentRemoteAttestation": true
+  },
+  "rawEvidence": "Private owner receipt retained; no credentials, configuration or companion raw source manifests published"
+}

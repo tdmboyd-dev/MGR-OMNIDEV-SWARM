@@ -1,0 +1,15 @@
+✔ actual source picker fences older selection, invalid replacement and cancelled reads (160.4338ms)
+✔ actual engine status and reconnect cannot undo an explicit disconnect (69.8351ms)
+✔ actual engine unmount fences late reconnect and clears the deferred launcher (52.9584ms)
+✔ actual runtime late connection cannot reenable a disconnected engine or start model work (41.9497ms)
+✔ actual runtime local mutation gateway rejects disconnect or unmount before any new model dispatch (41.1989ms)
+✔ actual automatic review connection cannot undo disconnect, pause or unmount during its await (204.0673ms)
+✔ actual generation fences disconnect, reconnect and unmount across source and cached-result awaits (190.9967ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 779.3054

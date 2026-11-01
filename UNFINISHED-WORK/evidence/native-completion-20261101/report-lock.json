@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-01T12:21:35.760Z",
+  "passed": 3,
+  "checks": [
+    "real Windows read handle prevents replacement",
+    "bounded rename retry succeeds after reader closes",
+    "exact final JSON readback"
+  ],
+  "elapsedMs": 1037,
+  "scope": "Owned report-file replacement only; no verification/effect command rerun"
+}

@@ -1,0 +1,1 @@
+PASS moves retain candidate/baseline/evidence, migrate linked records atomically, preserve original apply/rollback targets, and refuse active workers or missing destinations

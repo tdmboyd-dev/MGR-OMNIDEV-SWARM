@@ -1,0 +1,36 @@
+PASS Initialize Omni Core and 47 master swarms
+PASS Initialization repeat does not duplicate swarms
+PASS Import example persists six source files with provenance
+PASS Analysis extracts entities and relationships
+PASS SQL concatenation produces security evidence
+PASS Missing tests and alt text are detected
+PASS Child specialist persists under a parent
+PASS Second-level child specialist works
+PASS Unknown parent is rejected
+PASS Mission produces a persisted reviewable plan
+PASS Approval records a decision without claiming execution
+PASS Repeated approval fails intentionally
+PASS Manual finding disposition and audit persist
+PASS Invalid finding status is rejected
+PASS Global memory saves the decision
+PASS Empty memory title is rejected
+PASS System registration does not invent a connected state
+PASS Capacity model computes and persists the scenario
+PASS Zero capacity simulation is rejected
+PASS Overload scenario is flagged
+PASS Four future planning horizons persist
+PASS Detected credential assignment is redacted before storage
+PASS Duplicate file paths are rejected
+PASS Cross-origin mutation is rejected
+PASS Malformed JSON is rejected
+PASS Rescan updates snapshot analysis without duplicating findings
+PASS Covered baseline does not generate missing-presence findings
+PASS GitHub adapter imports an HTTP snapshot with provenance (stubbed network)
+PASS GitHub adapter rejects arbitrary server URLs
+PASS GitHub rate limit is a recoverable error
+PASS Workspace read-back returns durable records without caching
+{
+  "passed": 31,
+  "failed": 0,
+  "verification": "SQLite-backed route acceptance; GitHub network stubbed; no browser or deployed-runtime test"
+}

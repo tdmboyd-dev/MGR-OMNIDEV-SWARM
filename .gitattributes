@@ -28,3 +28,7 @@
 # Nested raw captures are binary diffs; preserve their exact whitespace/bytes.
 /UNFINISHED-WORK/evidence/safety-reconciliation-20261101/**/*.log -diff
 /UNFINISHED-WORK/evidence/safety-reconciliation-20261101/*.log -diff
+
+/UNFINISHED-WORK/evidence/native-completion-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/UNFINISHED-WORK/evidence/native-completion-20261101/**/*.log -diff
+/UNFINISHED-WORK/evidence/native-completion-20261101/*.txt -diff

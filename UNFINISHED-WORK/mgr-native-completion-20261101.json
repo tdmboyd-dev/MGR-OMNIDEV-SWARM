@@ -1,0 +1,44 @@
+{
+  "schema": "mgr.native-completion-wave.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-11-01T13:00:37.696Z",
+  "sourceCommit": "f7f8c6b3302b7abb69e1fbf347f87fa667d42415",
+  "fullVerification": {
+    "report": "UNFINISHED-WORK/evidence/native-completion-20261101/final-run/report.json",
+    "passedProfiles": 84,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 84,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "qualification": "executed-local-regression-not-live-provider-or-release-certification",
+  "fullAcceptancePromotions": 0,
+  "canonicalScopeUnchanged": true,
+  "ownerProgress": {
+    "completed": [
+      {
+        "title": "Qualified native Windows snapshot execution on the existing queue",
+        "observed": "Complete immutable-source84/84 profile run passed with zero failure/blocked. Actual Windows AppContainer23 host checks and six owner/job/HTTP/SQLite/execution/receipt/recovery/apply/rollback checks passed without Docker or restarting. Exact approved source/candidate/oracle, separate credentials and no redispatch of unknown assignments are enforced.",
+        "evidence": [
+          "UNFINISHED-WORK/evidence/native-completion-20261101/final-run/report.json",
+          "UNFINISHED-WORK/evidence/native-completion-20261101/native-host-summary.json"
+        ],
+        "remaining": [
+          "Native mode is not general application or signed Trilogy worker qualification. Docker/container and original independent parent acceptance remain separate."
+        ]
+      },
+      {
+        "title": "Campaign viewer and six source tools joined under existing owners",
+        "observed": "OmniSight134/134 and actual export/local HTTP/headless Chrome9/9 passed. Combined Code Monster241 passed, zero failed, six explicit Windows skips of247. Normal and compiled shared API24/24 with six source tools plus nine Backpack reads; full API165/165 passed.",
+        "evidence": [
+          "UNFINISHED-WORK/evidence/native-completion-20261101/shared-edge-summary.json"
+        ],
+        "remaining": [
+          "Publisher/signature/current external ledger authenticity, hosted/live-provider/production acceptance remain open. No original parent is promoted."
+        ]
+      }
+    ]
+  }
+}

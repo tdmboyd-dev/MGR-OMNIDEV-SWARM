@@ -1,3 +1,23 @@
+# Native Windows and complete current local regression — November 1, 2026
+
+Runtimef7f8c6b3302b7abb69e1fbf347f87fa667d42415 passed an uninterrupted84/84 fixed local profile run in an immutable clean checkout, zero failures/blocked. Exact output is UNFINISHED-WORK/evidence/native-completion-20261101/final-run. The earlier81/84 run was blocked by another owner's AI additive handoff edit; the three blocked profiles separately passed against identical source/prepared bytes, then the complete immutable run passed. Both earlier records remain preserved.
+
+The native Windows snapshot executor passed actual23 OS host checks and six real existing owner/job/HTTP/SQLite/AppContainer/report/receipt-recovery/apply/rollback checks without Docker or restarting. Separate credentials, immutable owner oracle, exact approved digests, durable unknown assignment and no silent replay are enforced. The portable worker archive now contains15 source files/16 entries,96369bytes, SHA256290cce5d7c2b0528117468579243ea4454ca6cda6bb8f722b2c658f392f5c499. Full setup and recovery: worker/WINDOWS-NATIVE-WORKER.md. Isolation metadata remains an authenticated local host claim; no independent attestation, general application or signed Trilogy worker qualification is asserted.
+
+Actual campaign exporter/viewer and source-navigation integration are now implemented locally: OmniSight134/134 plus real local producer/HTTP/headless Chrome9/9; combined Code Monster241 passed, zero failed, six explicit Windows skips of247. Normal and compiled shared HTTP each passed24/24 with six Code Monster source tools and nine Backpack context reads; full owning API165/165. Those are distinct denominators/source scopes, not a whole-product percentage. The separate owner's Tevin source consumer proof retains its injected-model and exact-source boundaries.
+
+A real Windows file lock exposed report replacement refusal. Bounded retry now affects only the owned report rename; an actual locked-file regression passed3/3. No verification command or domain effect is retried by that repair. New cards retain descriptive review status and do not enable execution themselves.
+
+Owner defers restart; no action is required now. Original174/441/28 scope and existing acceptance states are unchanged. Docker/combined-container, production signer/provider/hosted/current permanent Tevin and broader original requirements remain separate. Preserve the other AI's source-navigation notice below and all prior failures.
+
+---
+
+## Completed and canonically adopted native navigation — November 1, 2026
+
+Code Monster bound references/labeled bounded impact, API source admission/SDK methods and Tevin paged repository_read consumer are committed in their owning canonical repos. Code/delivery: code-monster 0232107002ea36e31f3c9ab8dc334f4a55cfd8b3 / 023611414cdf36fc2835b912c78bb7b72bd7b175; one 0ff26293621252d1b9c6784dd461e9fd96f1724d / ca11b6ffa41fdbff34d947b0386aa7aa2be163d7; api 2206b63ae688322bf9ae9b8fdc76c72decfbc581 / 77d45d8085855f63e575bbd80d1c38c52bee903d. Actual canonical HTTP/conversation/SQLite → SDK/TCP → API → Git compiler passed13/13 named checks with injected model/local identity. API297/297; ONE34/34+build; CM237pass/6explicit Windows skips, joined19/19, latestcampaign4/4. Exact source scopes, canonical-preservation evidence and remaining work are in each owning HANDOFF/report/VERIFICATION.json and the task outputs/SOURCE-DELIVERY.json. Other lanes' uncommitted work is preserved. No permanent service restart, live inference, remote push or production claim. Other research candidates, languages/mutation/design and full products remain open.
+
+---
+
 ## Native source navigation integration — November 1, 2026
 
 Completed in isolated owning Code Monster, ONE and API branches build/native-source-intelligence-20261101: bound-reference reads and labeled bounded impact, preserving existing compiler/permission/domain ownership. Actual ONE HTTP conversation → SDK/TCP → API → Code Monster Git compiler → saved SQLite/reopen passed 11/11 checks with injected model responses, no live provider or permanent service restart. Each owning HANDOFF.md links its completed-work report. Final commits and adoption checks follow in the receiving evidence; full Trilogy and all research candidates remain open. Task deliverable: C:/Users/cool/Documents/Codex/2026-11-01/this-repo-may-help-you-if/outputs/NATIVE-NAVIGATION-COMPLETED.md. Preserve unrelated active work and the deferred Windows restart.

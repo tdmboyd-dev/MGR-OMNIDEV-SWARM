@@ -1,3 +1,17 @@
+# Native Windows and complete current local regression — November 1, 2026
+
+Runtimef7f8c6b3302b7abb69e1fbf347f87fa667d42415 passed an uninterrupted84/84 fixed local profile run in an immutable clean checkout, zero failures/blocked. Exact output is UNFINISHED-WORK/evidence/native-completion-20261101/final-run. The earlier81/84 run was blocked by another owner's AI additive handoff edit; the three blocked profiles separately passed against identical source/prepared bytes, then the complete immutable run passed. Both earlier records remain preserved.
+
+The native Windows snapshot executor passed actual23 OS host checks and six real existing owner/job/HTTP/SQLite/AppContainer/report/receipt-recovery/apply/rollback checks without Docker or restarting. Separate credentials, immutable owner oracle, exact approved digests, durable unknown assignment and no silent replay are enforced. The portable worker archive now contains15 source files/16 entries,96369bytes, SHA256290cce5d7c2b0528117468579243ea4454ca6cda6bb8f722b2c658f392f5c499. Full setup and recovery: worker/WINDOWS-NATIVE-WORKER.md. Isolation metadata remains an authenticated local host claim; no independent attestation, general application or signed Trilogy worker qualification is asserted.
+
+Actual campaign exporter/viewer and source-navigation integration are now implemented locally: OmniSight134/134 plus real local producer/HTTP/headless Chrome9/9; combined Code Monster241 passed, zero failed, six explicit Windows skips of247. Normal and compiled shared HTTP each passed24/24 with six Code Monster source tools and nine Backpack context reads; full owning API165/165. Those are distinct denominators/source scopes, not a whole-product percentage. The separate owner's Tevin source consumer proof retains its injected-model and exact-source boundaries.
+
+A real Windows file lock exposed report replacement refusal. Bounded retry now affects only the owned report rename; an actual locked-file regression passed3/3. No verification command or domain effect is retried by that repair. New cards retain descriptive review status and do not enable execution themselves.
+
+Owner defers restart; no action is required now. Original174/441/28 scope and existing acceptance states are unchanged. Docker/combined-container, production signer/provider/hosted/current permanent Tevin and broader original requirements remain separate. Preserve the other AI's source-navigation notice below and all prior failures.
+
+---
+
 # Observed background completion — November 1, 2026
 
 The first current clean-source full run finished74/80 profiles: three publication/progress profiles timed out at120seconds; parallel/localReview/companion failed their completion assertions. All raw failed outputs remain in the parent continuation receipts. This is not an80/80 passing result.
