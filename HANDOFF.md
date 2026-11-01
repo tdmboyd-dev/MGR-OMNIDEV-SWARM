@@ -1,3 +1,13 @@
+# Observed background completion — November 1, 2026
+
+The first current clean-source full run finished74/80 profiles: three publication/progress profiles timed out at120seconds; parallel/localReview/companion failed their completion assertions. All raw failed outputs remain in the parent continuation receipts. This is not an80/80 passing result.
+
+Parallel and paused-review tests used100–150ms sleeps to assume asynchronous filesystem completion. They now poll the actual job state with a bounded10-second test watchdog and fail on failed/recovery-required/cancelled outcomes. Resume still proves exactly eight calls with peak concurrency four; pause and expired deadlines still prohibit later inference. Companion completion uses the same observable guard and reports actual saved errors. Its42-check diagnostic and all three focused repaired profiles passed locally. No product deadline, authorization fence, model call, persistence retry or effect-replay rule changed.
+
+Next: clean-source rerun with the already supported180-second fixture budget, preserving the120-second failures and explicit source IDs. Native branch conflicts, actual Docker engine/worker, deployed OAuth/browser and original parent gates remain separate work.
+
+---
+
 # Streamed request repair — November 1, 2026
 
 Selectively reconciled the bounded request reader from the older repair lane, preserving the current workspace storage/planning and decisions/backup wrapper behavior. Workspace imports now refuse above2,199,999 actual UTF-8 bytes; intelligence's transport preserves its10,065,536-byte wrapper budget and independent archive validation. Oversized streams are canceled before full text/JSON allocation, malformed UTF-8 refuses, and origin checks precede body reads. Worker report limits remain independently enforced.
