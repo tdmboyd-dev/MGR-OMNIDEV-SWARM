@@ -1,3 +1,4 @@
+import {safePath} from '@/lib/runtime-contract';
 import {boundedRequestText} from '@/lib/request-body';
 import {fileLedger} from '@/lib/file-ledger';
 import {db,list,record,insert} from "@/db/store";
@@ -31,8 +32,8 @@ export async function POST(request:Request){
    let snapshot:any=null; if(p.action==="github"||p.action==="githubAccount"){try{snapshot=await githubSnapshot(text(p.location,500),p.action==="githubAccount");}catch(e:any){throw new InputError(e.message)}}
    const files:SourceFile[]=p.action==="example"?exampleFiles:snapshot?snapshot.files:p.files;const name=p.action==="example"?"Atlas Commerce":snapshot?snapshot.title:text(p.title);
    check(Array.isArray(files)&&files.length>0&&files.length<=300,"Import 1–300 files");
-   check(files.every(f=>typeof f.path==="string"&&f.path.length<300&&typeof f.content==="string"&&f.content.length<100000),"Invalid files; each file must be text under 100 KB");
-   check(new Set(files.map(f=>f.path)).size===files.length,"File paths must be unique");
+   check(files.every(f=>f&&safePath(f.path)&&typeof f.content==="string"&&new TextEncoder().encode(f.content).byteLength<100000),"Invalid files; each file must be text under 100 KB");
+   check(new Set(files.map(f=>f.path.toLowerCase())).size===files.length,"File paths must be unique");
    const result=analyze(files);const project=record("project",name,{source:p.action==="example"?"Example dataset":snapshot?snapshot.authenticated?"Authorized GitHub snapshot":"Public GitHub snapshot":"Imported snapshot",origin:snapshot?{url:snapshot.url,ref:snapshot.ref,commit:snapshot.commit,tree:snapshot.tree,partial:snapshot.partial,coverage:snapshot.coverage}:null,fileLedger:await fileLedger(files.map(f=>({path:f.path,content:redact(f.content)}))),files:files.map(f=>({path:f.path,content:redact(f.content)})),analysis:result,scanCount:1},"","analyzed");ops.push(insert(project));
    for(const f of result.findings)ops.push(insert(record("finding",f.title,f,project.id,"open")));
    audit("Snapshot analyzed: "+name,{content:files.length+" files mapped; "+result.findings.length+" rule-based findings. "+result.scope},project.id);out={projectId:project.id};

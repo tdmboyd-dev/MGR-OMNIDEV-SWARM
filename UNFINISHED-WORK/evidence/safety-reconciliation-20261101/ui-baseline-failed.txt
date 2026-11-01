@@ -1,0 +1,140 @@
+✖ actual source picker fences older selection, invalid replacement and cancelled reads (81.6848ms)
+✖ actual engine status and reconnect cannot undo an explicit disconnect (26.4592ms)
+✖ actual engine unmount fences late reconnect and clears the deferred launcher (15.4492ms)
+✖ actual runtime late connection cannot reenable a disconnected engine or start model work (16.8405ms)
+✖ actual runtime local mutation gateway rejects disconnect or unmount before any new model dispatch (13.715ms)
+✖ actual automatic review connection cannot undo disconnect, pause or unmount during its await (46.5183ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 734.2747
+
+✖ failing tests:
+
+test at tests\ui-lifecycle-integrity.mjs:9:1
+✖ actual source picker fences older selection, invalid replacement and cancelled reads (81.6848ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/ui-lifecycle-integrity.mjs:12:105)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\ui-lifecycle-integrity.mjs:23:1
+✖ actual engine status and reconnect cannot undo an explicit disconnect (26.4592ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'connected'
+  - 'offline'
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/ui-lifecycle-integrity.mjs:24:182)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'connected',
+    expected: 'offline',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\ui-lifecycle-integrity.mjs:27:1
+✖ actual engine unmount fences late reconnect and clears the deferred launcher (15.4492ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/ui-lifecycle-integrity.mjs:28:60)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\ui-lifecycle-integrity.mjs:35:1
+✖ actual runtime late connection cannot reenable a disconnected engine or start model work (16.8405ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/ui-lifecycle-integrity.mjs:37:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\ui-lifecycle-integrity.mjs:40:1
+✖ actual runtime local mutation gateway rejects disconnect or unmount before any new model dispatch (13.715ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Engine disconnected/. Input:
+  
+  "TypeError: Cannot read properties of null (reading 'session')"
+  
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/ui-lifecycle-integrity.mjs:42:63)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: TypeError: Cannot read properties of null (reading 'session')
+        at Object.localApi (evalmachine.<anonymous>:1:182)
+        at file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/ui-lifecycle-integrity.mjs:42:98
+        at waitForActual (node:assert:632:21)
+        at strict.rejects (node:assert:769:31)
+        at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/ui-lifecycle-integrity.mjs:42:76)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19)
+        at Test.run (node:internal/test_runner/test:1467:12),
+    expected: /Engine disconnected/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\ui-lifecycle-integrity.mjs:46:1
+✖ actual automatic review connection cannot undo disconnect, pause or unmount during its await (46.5183ms)
+  AssertionError [ERR_ASSERTION]: disconnect cannot emit a connected event
+  + actual - expected
+  
+  + [
+  +   'omnidev-engine-connected'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/ui-lifecycle-integrity.mjs:56:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ 'omnidev-engine-connected' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

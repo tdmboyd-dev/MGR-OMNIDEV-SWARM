@@ -1,0 +1,17 @@
+✔ unsafe import and candidate paths are rejected before SQLite writes (87.8617ms)
+✔ case aliases, malformed files and action objects are denied without writes (1.7251ms)
+✔ UTF8 byte budget rejects oversized individual source without pretending codepoints are bytes (1.3765ms)
+✔ valid portable snapshot persists with exact content readback and SHA256 ledger (11.7239ms)
+✔ GitHub snapshot selection and full-audit classification exclude case aliases of secret paths (1.834ms)
+✔ full enqueue intent is durable, exact concurrent replay shares one job, changed settings/source conflict (15.9539ms)
+✔ candidate budgets measure actual UTF8 bytes for each patch and their sum (6.4241ms)
+✔ actual runtime and agent routes cancel byte-oversized streams before allocation or writes (3.6969ms)
+✔ runtime and agent cross-origin denial occurs before reading request body (0.6481ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 291.667

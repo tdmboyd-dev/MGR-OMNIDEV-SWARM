@@ -1,3 +1,17 @@
+# Source safety reconciliation; restart deferred — November 1, 2026
+
+The owner explicitly cannot restart while other AI work is active. Keep Docker host/container qualification parked and continue independent owning source/integration work. Do not schedule a restart or repeat the restart request during this source cycle.
+
+Selectively reconciled older UI connection, source-path, UTF8 and enqueue-intent repairs while preserving current atomic companion persistence, planning/decisions, Trilogy jobs/publication and bounded request readers. A late status/reconnect response cannot undo disconnect; unmount clears the deferred launcher. File selection uses a current attempt and clears superseded/invalid input, preserves a title typed during reading, and blocks submission while reading or invalid. Runtime generation and automatic specialist review check current connection lifetime across awaits and before new dispatch/submission. Explicit stop/disconnect retains already-dispatched work; it does not fabricate cancellation of provider effects.
+
+Portable path validation now refuses drive/alternate-stream/control/reserved-device/traversal/secret paths and case aliases before source import or candidate admission. Case variants of secret/generated GitHub paths are excluded. Candidate/import limits measure actual UTF8 bytes. Runtime and agent POST routes stream through boundedRequestText and cancel over-limit streams before full-body allocation; origin rejection remains before reads. Current workspace transactional writes and independent transport wrapper budgets are preserved.
+
+Enqueue keys now bind the canonical full logical request, source baseline, settings and trusted seed. Exact concurrent replay shares one durable job; changed source/settings conflict with HTTP409. A legacy saved job without the request digest refuses ambiguous key reuse rather than guessing or replaying work. Existing jobs are not migrated or deleted. See TRILOGY-OPERATIONS-BIBLE.md for recovery.
+
+Current focused verification:7/7 actual-source UI lifetime tests (transpiled source in a controlled VM; not browser acceptance) and9/9 real route/SQLite/path/intent/stream tests. Earlier safety baseline1/7 retained with failures; earlier UI baseline failures retained separately. The no-emit TypeScript check passed. Both suites are registered, making82 fixed full-verification profiles. The earlier80/80 remains exact proof for7a7c5e1; it is not relabeled as this changed source. Next: clean committed82-profile verification, fresh actual three-product integration and current publication/readback. No original parent acceptance or production claim.
+
+---
+
 # Current durable-completion verification — November 1, 2026
 
 Committed runtime7a7c5e124b7faac8501fd80a567e7163e2977c49 passed **80/80 complete allowlisted local profiles**, zero failures/blocked; prepared module digest stayed unchanged. Exact full report/logs: UNFINISHED-WORK/evidence/durable-completion-20261101/. Earlier74/80 and72/80 failures remain in private Backpack evidence and are not relabeled as passing.

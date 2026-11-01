@@ -1,0 +1,88 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {DatabaseSync} from 'node:sqlite';
+import {readFileSync} from 'node:fs';
+const sqlite=new DatabaseSync(':memory:');
+for(const path of ['drizzle/0000_orange_phalanx.sql','drizzle/0001_modern_hammerhead.sql'])sqlite.exec(readFileSync(path,'utf8'));
+class Statement{
+ constructor(sql,args=[]){this.sql=sql;this.args=args;}
+ bind(...args){return new Statement(this.sql,args);}
+ async all(){return {results:sqlite.prepare(this.sql).all(...this.args)};}
+ async first(){return sqlite.prepare(this.sql).get(...this.args)??null;}
+ async run(){return {meta:{changes:Number(sqlite.prepare(this.sql).run(...this.args).changes)}};}
+}
+globalThis.__omniEnv={DB:{prepare:sql=>new Statement(sql),batch:async statements=>{
+ sqlite.exec('BEGIN');try{const result=statements.map(s=>({meta:{changes:Number(sqlite.prepare(s.sql).run(...s.args).changes)}}));sqlite.exec('COMMIT');return result;}catch(error){sqlite.exec('ROLLBACK');throw error;}
+}}};
+const {POST,GET}=await import('../.test-runtime/route.mjs');
+const {candidate,safePath}=await import('../.test-runtime/runtime-contract.mjs');
+const submit=async body=>{const response=await POST(new Request('https://omni.example/api/workspace',{method:'POST',headers:{Origin:'https://omni.example','Content-Type':'application/json'},body:JSON.stringify(body)}));return {status:response.status,body:await response.json()};};
+const unsafe=['C:/outside.ts','source.ts:alternate','a\\b.ts','nul.ts','src/CON','src/Lpt1.txt','src/end.','src/end ','../outside.ts','/root.ts','a//b.ts','a/./b.ts','a\u0000b.ts','a?b.ts','.GIT/config','.env.production'];
+test('unsafe import and candidate paths are rejected before SQLite writes',async()=>{
+ for(const path of unsafe){assert.equal(safePath(path),false,path);const result=await submit({action:'import',title:'Unsafe',files:[{path,content:'fixture'}]});assert.equal(result.status,400,path);
+  assert.throws(()=>candidate({summary:'fixture',patches:[{path,before:null,after:'fixture'}]},[]),/unsafe patch path/,path);
+ }
+ assert.equal(sqlite.prepare('SELECT COUNT(*) n FROM records').get().n,0);
+});
+test('case aliases, malformed files and action objects are denied without writes',async()=>{
+ for(const files of [[{path:'src/Foo.ts',content:'a'},{path:'src/foo.ts',content:'b'}],[null]]){
+  assert.equal((await submit({action:'import',title:'Fixture',files})).status,400);
+ }
+ assert.equal((await submit(null)).status,400);assert.equal((await submit([])).status,400);
+ assert.throws(()=>candidate({summary:'case',patches:[{path:'src/foo.ts',before:null,after:'new'}]},[{path:'src/Foo.ts',content:'old'}]),/unsafe patch path/);
+ assert.equal(sqlite.prepare('SELECT COUNT(*) n FROM records').get().n,0);
+});
+test('UTF8 byte budget rejects oversized individual source without pretending codepoints are bytes',async()=>{
+ const result=await submit({action:'import',title:'Oversized',files:[{path:'src/unicode.ts',content:'😀'.repeat(25000)}]});assert.equal(result.status,400);assert.equal(sqlite.prepare('SELECT COUNT(*) n FROM records').get().n,0);
+});
+test('valid portable snapshot persists with exact content readback and SHA256 ledger',async()=>{
+ const content='export const answer = 42;';const result=await submit({action:'import',title:'Portable fixture',files:[{path:'src/answer.ts',content}]});assert.equal(result.status,200);
+ const response=await GET();const project=(await response.json()).records.find(r=>r.id===result.body.projectId);assert.equal(project.data.files[0].content,content);assert.match(project.data.fileLedger[0].contentDigest,/^[0-9a-f]{64}$/);assert.equal(project.data.fileLedger[0].runtimeVerified,false);
+});
+
+const {classification}=await import('../.test-runtime/repo-audit.mjs');
+const {selectSnapshotFiles}=await import('../.test-runtime/github-selection.mjs');
+test('GitHub snapshot selection and full-audit classification exclude case aliases of secret paths',()=>{
+ for(const path of ['.ENV.json','src/.ENV.production.json','src/ID_RSA','src/ID_ED25519'])assert.equal(classification(path,20,'100644'),'secret-file',path);
+ assert.equal(classification('.GIT/config.json',20,'100644'),'generated-or-dependency');
+ const blobs=['.ENV.json','src/.ENV.production.json','.GIT/config.json','src/safe.ts'].map(path=>({path,type:'blob',size:20}));assert.deepEqual(selectSnapshotFiles(blobs).map(x=>x.path),['src/safe.ts']);
+});
+const {enqueue}=await import('../.test-runtime/jobs.mjs');
+const runtime=await import('../.test-runtime/runtime-route.mjs');
+test('full enqueue intent is durable, exact concurrent replay shares one job, changed settings/source conflict',async()=>{
+ const row=sqlite.prepare("SELECT * FROM records WHERE kind='project' LIMIT 1").get();const projectId=row.id;
+ const request={projectId,mode:'native',objective:'Bounded fixture repair',idempotencyKey:'full-intent',automaticReview:true,runControl:{mode:'all',minutes:30,callLimit:100}};
+ const results=await Promise.all(Array.from({length:4},()=>enqueue(request)));assert.equal(new Set(results.map(j=>j.id)).size,1);const saved=results[0];assert.match(saved.payload.enqueueRequestDigest,/^[0-9a-f]{64}$/);
+ for(const change of [{brainId:'different'},{specialistId:'testing'},{testProfile:'node-application'},{automaticReview:false},{automaticRepair:true},{reviewBudget:2},{recommendSpecialists:true},{kind:'heal'},{runControl:{callLimit:2,minutes:30,mode:'calls'}}])await assert.rejects(enqueue({...request,...change}),error=>error.statusCode===409);
+ assert.equal((await enqueue({...request,runControl:{callLimit:100,minutes:30,mode:'all'}})).id,saved.id,'JSON key order is not a different intent');
+ const changed=await runtime.POST(new Request('https://omni.example/api/runtime',{method:'POST',headers:{Origin:'https://omni.example','Content-Type':'application/json'},body:JSON.stringify({...request,action:'enqueue',automaticReview:false})}));assert.equal(changed.status,409);
+ const data=JSON.parse(row.data);data.files[0].content+='\nchanged';sqlite.prepare('UPDATE records SET data=? WHERE id=?').run(JSON.stringify(data),projectId);await assert.rejects(enqueue(request),error=>error.statusCode===409);
+ sqlite.prepare('UPDATE records SET data=? WHERE id=?').run(row.data,projectId);const payload=JSON.parse(sqlite.prepare('SELECT payload FROM jobs WHERE id=?').get(saved.id).payload);delete payload.enqueueRequestDigest;sqlite.prepare('UPDATE jobs SET payload=? WHERE id=?').run(JSON.stringify(payload),saved.id);await assert.rejects(enqueue(request),error=>error.statusCode===409);
+ assert.equal(sqlite.prepare('SELECT COUNT(*) n FROM jobs').get().n,1);
+});
+
+test('candidate budgets measure actual UTF8 bytes for each patch and their sum',()=>{
+ assert.throws(()=>candidate({summary:'bytes',patches:[{path:'large.ts',before:null,after:'😀'.repeat(25001)}]},[]),/unsafe patch/);
+ const patches=Array.from({length:6},(_,i)=>({path:`part${i}.ts`,before:null,after:'😀'.repeat(22500)}));assert.throws(()=>candidate({summary:'total bytes',patches},[]),/patch budget/);
+ assert.equal(candidate({summary:'boundary',patches:[{path:'ok.ts',before:null,after:'😀'.repeat(25000)}]},[]).patches.length,1);
+});
+
+
+const agents=await import('../.test-runtime/agents-route.mjs');
+test('actual runtime and agent routes cancel byte-oversized streams before allocation or writes',async()=>{
+ const before=sqlite.prepare('SELECT COUNT(*) n FROM records').get().n;
+ for(const [handler,limit]of [[runtime.POST,600000],[agents.POST,50000]]){
+  let pulls=0,cancelled=false;const chunk=new TextEncoder().encode('😀'.repeat(16384));
+  const stream=new ReadableStream({pull(controller){pulls++;controller.enqueue(chunk);},cancel(){cancelled=true;}});
+  const request=new Request('https://omni.example/api/action',{method:'POST',headers:{Origin:'https://omni.example'},body:stream,duplex:'half'});
+  request.text=async()=>{throw Error('Whole-body buffering is forbidden in this test');};
+  const response=await handler(request);assert.equal(response.status,400);assert(cancelled,'oversized stream is cancelled');assert(pulls<=Math.ceil(limit/chunk.length)+2,'bounded stream read count');
+  assert.equal(sqlite.prepare('SELECT COUNT(*) n FROM records').get().n,before);
+ }
+});
+test('runtime and agent cross-origin denial occurs before reading request body',async()=>{
+ for(const handler of [runtime.POST,agents.POST]){
+  const request={url:'https://omni.example/api/action',headers:new Headers({Origin:'https://other.example'}),get body(){throw Error('Forbidden body read');}};
+  assert.equal((await handler(request)).status,403);
+ }
+});

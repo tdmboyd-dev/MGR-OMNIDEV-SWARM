@@ -1,0 +1,125 @@
+✖ unsafe import and candidate paths are rejected before SQLite writes (4.1571ms)
+✖ case aliases, malformed files and action objects are denied without writes (83.1525ms)
+✖ UTF8 byte budget rejects oversized individual source without pretending codepoints are bytes (51.8062ms)
+✔ valid portable snapshot persists with exact content readback and SHA256 ledger (13.2088ms)
+✖ GitHub snapshot selection and full-audit classification exclude case aliases of secret paths (0.7636ms)
+✖ full enqueue intent is durable, exact concurrent replay shares one job, changed settings/source conflict (8.6008ms)
+✖ candidate budgets measure actual UTF8 bytes for each patch and their sum (0.9347ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 1
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 348.3325
+
+✖ failing tests:
+
+test at tests\snapshot-paths.mjs:21:1
+✖ unsafe import and candidate paths are rejected before SQLite writes (4.1571ms)
+  AssertionError [ERR_ASSERTION]: C:/outside.ts
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/snapshot-paths.mjs:22:35)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\snapshot-paths.mjs:27:1
+✖ case aliases, malformed files and action objects are denied without writes (83.1525ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/snapshot-paths.mjs:29:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\snapshot-paths.mjs:35:1
+✖ UTF8 byte budget rejects oversized individual source without pretending codepoints are bytes (51.8062ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/snapshot-paths.mjs:36:131)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\snapshot-paths.mjs:45:1
+✖ GitHub snapshot selection and full-audit classification exclude case aliases of secret paths (0.7636ms)
+  AssertionError [ERR_ASSERTION]: .ENV.json
+  + actual - expected
+  
+  + 'queued'
+  - 'secret-file'
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/snapshot-paths.mjs:46:98)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'queued',
+    expected: 'secret-file',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\snapshot-paths.mjs:52:1
+✖ full enqueue intent is durable, exact concurrent replay shares one job, changed settings/source conflict (8.6008ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/snapshot-paths.mjs:55:160)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /^[0-9a-f]{64}$/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\snapshot-paths.mjs:64:1
+✖ candidate budgets measure actual UTF8 bytes for each patch and their sum (0.9347ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/snapshot-paths.mjs:65:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /unsafe patch/,
+    operator: 'throws',
+    diff: 'simple'
+  }
