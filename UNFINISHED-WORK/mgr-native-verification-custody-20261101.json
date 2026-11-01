@@ -1,0 +1,35 @@
+{
+  "schema": "mgr.native-verification-custody.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-11-01T21:35:16.173Z",
+  "sourceCommit": "ee24e165f8c90c07efbbb8c1abb38986c741588a",
+  "fullVerification": {
+    "report": "UNFINISHED-WORK/evidence/native-verification-custody-20261101/full-run/report.json",
+    "passedProfiles": 87,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 87,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "qualification": "executed-local-regression-not-live-provider-or-release-certification",
+  "fullAcceptancePromotions": 0,
+  "canonicalScopeUnchanged": true,
+  "ownerProgress": {
+    "completed": [
+      {
+        "title": "Verification reservations and job decisions retain current custody",
+        "observed": "Full 87/87 local profiles passed. Original SQLite failures repaired without replacing newer worker/Trilogy/recovery code. Actual Windows fixture job/report/receipt recovery/apply/rollback6/6 passed; no model or external repository operation.",
+        "evidence": [
+          "UNFINISHED-WORK/evidence/native-verification-custody-20261101/REPORT.md",
+          "UNFINISHED-WORK/evidence/native-verification-custody-20261101/full-run/report.json",
+          "UNFINISHED-WORK/evidence/native-verification-custody-20261101/native-custody-actual-workflow.json"
+        ],
+        "remaining": [
+          "Permanent Tevin maintenance adapter and signed candidate-to-worker bridge remain separate; full product and production acceptance is open."
+        ]
+      }
+    ]
+  }
+}

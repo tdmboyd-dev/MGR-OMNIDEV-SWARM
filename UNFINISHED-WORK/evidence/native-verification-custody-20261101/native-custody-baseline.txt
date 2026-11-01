@@ -1,0 +1,91 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing expected rejection.
+    at async file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/engineering-job-ownership.mjs:10:412 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: /Concurrent change/,
+  operator: 'rejects',
+  diff: 'simple'
+}
+
+Node.js v24.21.0
+✖ tests\engineering-job-ownership.mjs (379.3719ms)
+✖ cancel denies stale decision after concurrent terminal transition (6.8035ms)
+✖ reject denies stale decision after concurrent terminal transition (0.8677ms)
+✖ retry denies stale decision after concurrent terminal transition (0.9024ms)
+✔ normal cancel/reject/retry persist the requested state and terminal cancellation stays denied (4.3127ms)
+✖ retry cannot exceed attempt cap after same-status concurrent failure (1.1255ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 1
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 393.3998
+
+✖ failing tests:
+
+test at tests\engineering-job-ownership.mjs:1:1
+✖ tests\engineering-job-ownership.mjs (379.3719ms)
+  'test failed'
+
+test at tests\job-decision-races.mjs:19:2
+✖ cancel denies stale decision after concurrent terminal transition (6.8035ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/job-decision-races.mjs:21:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Job changed/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\job-decision-races.mjs:19:2
+✖ reject denies stale decision after concurrent terminal transition (0.8677ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/job-decision-races.mjs:21:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Job changed/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\job-decision-races.mjs:19:2
+✖ retry denies stale decision after concurrent terminal transition (0.9024ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/job-decision-races.mjs:21:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Job changed/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\job-decision-races.mjs:30:1
+✖ retry cannot exceed attempt cap after same-status concurrent failure (1.1255ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-verification-custody/tests/job-decision-races.mjs:33:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Job changed/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

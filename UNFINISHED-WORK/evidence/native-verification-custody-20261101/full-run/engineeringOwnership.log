@@ -1,0 +1,1 @@
+{"passed":3,"scope":"Production handlers + actual SQLite controlled concurrent reservations; no native execution"}
