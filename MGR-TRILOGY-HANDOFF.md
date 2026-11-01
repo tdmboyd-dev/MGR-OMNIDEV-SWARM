@@ -1,3 +1,17 @@
+# Durable companion ownership repair — November 1, 2026
+
+A deterministic actual-HTTP regression proved that a job-status GET could read running state, await account IO, then overwrite a newly saved completed result as interrupted. GET now rereads after observing inactivity, revalidates account identity, and derives an interrupted response without writing job memory. Saved outcomes survive concurrent status reads.
+
+Background admission now holds the existing operation lock through durable completion, all in-flight consumers, accepted append writes and queued-job parking. An early persistence failure cannot release another still-running consumer or permit overlapping model dispatch. Initial admission is durable before HTTP 202. Pending recovery bytes and fresh-process replay denial remain enforced. Temporary generation cleanup validates its actual temporary-directory boundary.
+
+Focused current-source verification passed: 9/9 companion persistence/ownership regressions, 33/33 Trilogy job and expiry checks, 10/10 fixture recorder checks, plus parallel, local-review, companion (42 checks) and pipeline commands. Full runs at earlier source commits remain failed: 74/80 and 72/80; they are not repaired-run proof. The latter found a real stale-read race and tests relying on elapsed sleep rather than durable completion.
+
+The next clean-source run covers 80 fixed allowlisted profiles. On Windows only, four Git-heavy whole-suite watchdogs (trilogyPublication, trilogyPublicationRecovery, ownerProgress, trilogyWorker) use 600 seconds; other profiles retain 120 seconds. This is a bounded test-runner budget, not a production/model/approval deadline change. Receipts distinguish child execution from source-readback time. Timeout cleanup closes the owned child tree before process closure and never kills a stale PID after closure. A descendant-output regression verifies cleanup.
+
+Full repaired-source verification is pending. Docker engine qualification is blocked by host setup/restart; the latest Windows administrator prompt was canceled and its registry restoration was not run. Do not retry that action without renewed owner authorization. Browser/provider/Tevin and original acceptance gates remain separate and unverified. No canonical parent status is promoted.
+
+---
+
 # Observed background completion — November 1, 2026
 
 The first current clean-source full run finished74/80 profiles: three publication/progress profiles timed out at120seconds; parallel/localReview/companion failed their completion assertions. All raw failed outputs remain in the parent continuation receipts. This is not an80/80 passing result.

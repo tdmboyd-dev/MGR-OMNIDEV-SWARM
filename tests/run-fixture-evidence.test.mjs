@@ -37,7 +37,13 @@ test('a zero exit that modifies source fails source-binding verification',async(
 });
 test('timeouts wait for termination even when the child ignores SIGTERM',async()=>{
  await fixture("process.on('SIGTERM',()=>{});setInterval(()=>{},20);",async cwd=>{
-  const result=await runFixtureEvidence({profile:'cleanup',cwd,timeoutMs:200});assert.equal(result.passed,false);assert.equal(result.reason,'timeout');assert.equal(result.processClosed,true);assert.ok(result.durationMs<6000);
+  const result=await runFixtureEvidence({profile:'cleanup',cwd,timeoutMs:200});assert.equal(result.passed,false);assert.equal(result.reason,'timeout');assert.equal(result.processClosed,true);assert.ok(result.executionDurationMs<6000);assert.ok(result.durationMs>=result.executionDurationMs);assert.equal(result.timeoutMs,200);
+ });
+});
+
+test('timeout closes the owned descendant output before reporting process closure',async()=>{
+ await fixture("import {spawn} from 'node:child_process';spawn(process.execPath,['-e',\"console.log('owned descendant ready');setInterval(()=>{},20)\"],{stdio:['ignore',process.stdout,process.stderr]});process.on('SIGTERM',()=>{});setInterval(()=>{},20);",async cwd=>{
+  const result=await runFixtureEvidence({profile:'cleanup',cwd,timeoutMs:2000});assert.equal(result.passed,false);assert.equal(result.reason,'timeout');assert.equal(result.processClosed,true);assert.match(Buffer.from(result.outputBase64,'base64').toString(),/owned descendant ready/);
  });
 });
 test('output limits cannot be converted to success by a zero exit',async()=>{

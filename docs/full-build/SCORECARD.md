@@ -54,3 +54,8 @@ This extends `UNFINISHED-WORK/mgr-evidence-scorecard-20261029.json`; it does not
 Current combined runtime proof: 79/79 profiles at `064b64463cec5684ee6835bebf0da0911ef9a540`. Earlier 75/75 readiness proof remains at `3f694401db7c54a140122652c812ce2c36d99ea3`. Baseline 69/73 and repaired-source 72/73 failures are retained. The all-blocked harness attempt was an index-normalization setup error, not a passing product run. Local suite passes do not certify live providers, actual Docker, independent production keys, browser/accessibility or original full acceptance.
 
 Published source checkpoint `de006f6611ff802811c052d0d71ed8184c17f0dd` and companion/documentation heads were read back with matching GitHub trees. The final board/metadata leaf is bound by the external delivery receipt; the derived board retains its explicit committed input pin. Further engineering remains in the original canonical registers; none is silently marked complete.
+
+
+## November 1 companion ownership repair
+
+Bounded repair acceptance: companion regression 9/9, Trilogy jobs 33/33, fixture recorder 10/10; five additional focused commands passed. Earlier full runs remain 74/80 and 72/80 at their own source commits. Repaired clean-source 80-profile run pending; no whole-product percentage is inferred. Shared handoff documents the failure, repair, timing budgets and remaining host/provider/parent gates.

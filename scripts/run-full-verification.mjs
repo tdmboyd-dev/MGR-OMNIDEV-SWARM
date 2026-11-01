@@ -21,7 +21,7 @@ export async function preparedModuleManifest(root){
 async function saveReport(path,value){
  const temporary=path+'.partial';await writeFile(temporary,JSON.stringify(value,null,2)+'\n');await rename(temporary,path);
 }
-export async function runFullVerification({cwd=process.cwd(),profiles=Object.keys(FIXTURE_PROFILES),outputDir=resolve(cwd,'outputs/full-verification'),timeoutMs=120_000,onProgress=()=>{}}={}){
+export async function runFullVerification({cwd=process.cwd(),profiles=Object.keys(FIXTURE_PROFILES),outputDir=resolve(cwd,'outputs/full-verification'),timeoutMs,onProgress=()=>{}}={}){
  if(!Array.isArray(profiles)||!profiles.length||new Set(profiles).size!==profiles.length||profiles.some(name=>!Object.hasOwn(FIXTURE_PROFILES,name)))throw TypeError('nonempty unique approved profiles required');
  if(profiles.some(name=>preparedProfiles.has(name))&&(profiles[0]!=='prepare'))throw Error('prepare must run first for compiled runtime tests');
  const root=resolve(cwd),output=resolve(outputDir),within=relative(root,output);
@@ -41,7 +41,10 @@ export async function runFullVerification({cwd=process.cwd(),profiles=Object.key
   }else{
    try{
     if(prepared){const current=await preparedModuleManifest(root);if(current?.sha256!==prepared.sha256)throw Error('prepared modules changed since pinned preparation');}
-    receipt=await runFixtureEvidence({profile,cwd:root,timeoutMs});
+    // These suites contain many real Git repositories/processes. Their Windows
+    // whole-suite budget is distinct from product/model/approval deadlines.
+    const budget=timeoutMs??(process.platform==='win32'&&['trilogyPublication','trilogyPublicationRecovery','ownerProgress','trilogyWorker'].includes(profile)?600_000:120_000);
+    receipt=await runFixtureEvidence({profile,cwd:root,timeoutMs:budget});
     if(report.sourceCommit===null)report.sourceCommit=receipt.sourceCommit;
     if(receipt.sourceCommit!==report.sourceCommit){receipt.passed=false;receipt.reason='source revision changed between suites';sourceInvalid=true;}
     if(!receipt.sourceUnchanged)sourceInvalid=true;

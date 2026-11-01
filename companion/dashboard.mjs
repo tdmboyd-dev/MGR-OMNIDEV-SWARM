@@ -3,9 +3,9 @@ import {jobMemory} from './job-memory.mjs';
 // OmniDev owner-local browser companion. MIT licensed.
 import {createServer} from 'node:http';
 import {randomBytes,randomUUID} from 'node:crypto';
-import {readFile,writeFile,mkdir,mkdtemp,rm,rename} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,mkdtemp,rm,rename,realpath,lstat} from 'node:fs/promises';
 import {homedir,tmpdir} from 'node:os';
-import {join,dirname} from 'node:path';
+import {join,dirname,basename} from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {execFile} from 'node:child_process';
 import {promisify} from 'node:util';
@@ -15,15 +15,41 @@ export const siteOrigin='https://omnidev-swarm.rainytetra1.chatgpt.site';
 const siteOrigins=[siteOrigin,'https://omnidev.mgrreign.com'];
 export function validRequest(r){return r?.format==='omnidev-account-request'&&typeof r.jobId==='string'&&r.jobId.length<=150&&typeof r.sourceDigest==='string'&&/^[a-f0-9]{64}$/.test(r.sourceDigest)&&typeof r.objective==='string'&&Array.isArray(r.files)&&Buffer.byteLength(JSON.stringify(r))<=2500000;}
 async function defaultExecute(args){try{const r=await exec(process.execPath,[join(root,'chatgpt.mjs'),...args],{timeout:generationTimeoutMs+120000,maxBuffer:1000000,windowsHide:true});return r.stdout;}catch(e){const known=String(e.stderr||'').trim();throw Error(known||'Companion could not complete this operation.');}}
+async function removeGenerationFolder(folder){
+ const actual=await realpath(folder),parent=await realpath(tmpdir());
+ if(dirname(actual)!==parent||!/^omnidev-(job|review)-[A-Za-z0-9]+$/.test(basename(actual))||(await lstat(folder)).isSymbolicLink())throw Error('Generation cleanup boundary changed; preserve the temporary directory for review');
+ await rm(actual,{recursive:true,force:false,maxRetries:3,retryDelay:100});
+}
 export async function createDashboard({port=8765,execute=defaultExecute,memoryFactory=jobMemory,stateDir=process.env.OMNI_COMPANION_STATE||join(homedir(),'.config','omnidev-companion')}={}){
  const session=randomBytes(32).toString('hex'),html=await readFile(join(root,'dashboard.html'),'utf8');let running=false,catalog=[],lastUse=Date.now();const memory=await memoryFactory(join(stateDir,'jobs'));const active=new Set();const executing=new Set();const batchControls=new Map();let queueState=null;
  async function locked(fn){if(running){const e=Error('Another companion operation is running. Wait for it to finish.');e.status=409;throw e;}running=true;try{return await fn()}finally{running=false;}}
+ function background(fn){
+  let resolveAdmission,rejectAdmission;
+  const admitted=new Promise((resolve,reject)=>{resolveAdmission=resolve;rejectAdmission=reject;});
+  const work=locked(async()=>{let accepted=false;try{await fn(value=>{accepted=true;resolveAdmission(value);});if(!accepted)throw Error('Background operation ended without durable admission');}catch(error){if(!accepted)rejectAdmission(error);throw error;}});
+  void work.catch(error=>{rejectAdmission(error);console.error('Local background work failed; inspect saved or pending state before retrying.');});
+  return admitted;
+ }
  async function configure(settings){const model=catalog.find(m=>m.id===settings.model);if(!model||!model.reasoning.includes(settings.effort)||!['chat','work','codex'].includes(settings.profile))throw Error('Choose an available model, supported reasoning level and profile.');const account=JSON.parse(await readFile(join(stateDir,'account.json'),'utf8'));const p={subject:account.subject,...settings};const temp=join(stateDir,'preferences.'+randomUUID());await writeFile(temp,JSON.stringify(p),{mode:0o600,flag:'wx'});await rename(temp,join(stateDir,'preferences.json'));return p;}
  const server=createServer(async(req,res)=>{const reply=(status,data)=>{res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(data));};try{
  const address=server.address(),origin='http://127.0.0.1:'+address.port;if(req.headers.host!==new URL(origin).host)return reply(403,{error:'Invalid local host.'});const path=new URL(req.url,origin).pathname;if(path==='/engine-health'&&req.method==='GET'&&!req.headers.origin){let sequence=0;try{sequence=JSON.parse(await readFile(join(process.env.OMNI_ENGINE_HOME||root,'current.json'),'utf8')).sequence;}catch{}return reply(200,{sequence,idle:!running&&!active.size&&Date.now()-lastUse>60000});}if(req.method==='POST')lastUse=Date.now();const allowedOrigin=siteOrigins.includes(req.headers.origin)||req.headers.origin===origin;if(siteOrigins.includes(req.headers.origin)){res.setHeader('Access-Control-Allow-Origin',req.headers.origin);res.setHeader('Vary','Origin');}if(req.method==='OPTIONS'){if(!allowedOrigin)return reply(403,{error:'Untrusted origin.'});res.setHeader('Access-Control-Allow-Methods','GET, POST, OPTIONS');res.setHeader('Access-Control-Allow-Headers','Content-Type, X-Omni-Session, X-Omni-Client');res.writeHead(204);return res.end();}if(req.method==='POST'&&path==='/connect'){if(!siteOrigins.includes(req.headers.origin)||req.headers['x-omni-client']!=='omnidev-site')return reply(403,{error:'Connection must start inside OmniDev.'});return reply(200,{session});}
  if(req.method==='GET'&&path==='/'){res.writeHead(200,{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','Referrer-Policy':'no-referrer','Content-Security-Policy':"default-src 'none'; script-src 'nonce-"+session+"'; style-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"});return res.end(html.replaceAll('__SESSION__',session));}
  if(req.headers['x-omni-session']!==session||req.headers.origin&&!allowedOrigin)return reply(403,{error:'Local session required.'});
- if(req.method==='GET'&&path.startsWith('/jobs/')){const id=decodeURIComponent(path.slice(6));const job=await memory.get(id);if(!job)return reply(404,{error:'Local job not found'});const account=JSON.parse(await readFile(join(stateDir,'account.json'),'utf8'));if(job.subject!==account.subject)return reply(403,{error:'Local job belongs to another account'});if(['running','queued'].includes(job.status)&&!active.has(id)){job.status='interrupted';job.error='Local engine restarted before completion. Start explicitly to retry.';await memory.save(job);}const {subject,...publicJob}=job;return reply(200,publicJob);}
+ if(req.method==='GET'&&path.startsWith('/jobs/')){
+  const id=decodeURIComponent(path.slice(6));let job=await memory.get(id);
+  if(!job)return reply(404,{error:'Local job not found'});
+  const account=JSON.parse(await readFile(join(stateDir,'account.json'),'utf8'));
+  if(job.subject!==account.subject)return reply(403,{error:'Local job belongs to another account'});
+  if(['running','queued'].includes(job.status)&&!active.has(id)){
+   // A generation may have completed while this request awaited account IO.
+   // Reread after observing inactivity, and never overwrite saved outcome in GET.
+   job=await memory.get(id);if(!job)return reply(404,{error:'Local job not found'});
+   const currentAccount=JSON.parse(await readFile(join(stateDir,'account.json'),'utf8'));
+   if(currentAccount.subject!==account.subject||job.subject!==currentAccount.subject)return reply(403,{error:'Local job belongs to another account'});
+   if(['running','queued'].includes(job.status)&&!active.has(id))job={...job,status:'interrupted',error:'This engine process owns no active operation for this job. Previous outcome is unconfirmed; reconcile it before explicitly retrying.'};
+  }
+  const {subject,...publicJob}=job;return reply(200,publicJob);
+ }
  if(req.method==='GET'&&path.startsWith('/workboard/')){const parent=decodeURIComponent(path.slice(11)),planId=new URL(req.url,origin).searchParams.get('planId');const account=JSON.parse(await readFile(join(stateDir,'account.json'),'utf8'));const rows=(await memory.list()).filter(j=>j.subject===account.subject&&(j.id===parent||j.parentJobId===parent||j.id.startsWith(parent+'-plan-'))&&(!planId||j.id===parent||j.kind==='repair-generation'||j.id.includes('-plan-'+planId.slice(0,8)+'-')));return reply(200,{connected:true,jobs:rows.map(j=>({id:j.id,status:active.has(j.id)?j.status:['running','queued'].includes(j.status)?'interrupted':j.status,index:j.index,domain:j.domain,kind:j.kind,startedAt:j.startedAt,error:j.error})),observedAt:new Date().toISOString()});}
  if(req.method==='GET'&&path==='/status')return reply(200,{connected:true,running,activeJobs:active.size,runningJobs:executing.size,queuedJobs:active.size-executing.size,parallelReviewSupport:true});
  if(req.method==='GET'&&path==='/state'){const readState=async()=>{if(!catalog.length){catalog=JSON.parse(await execute(['models']));}let preferences=null;try{const p=JSON.parse(await readFile(join(stateDir,'preferences.json'),'utf8')),a=JSON.parse(await readFile(join(stateDir,'account.json'),'utf8'));if(p.subject===a.subject)preferences={model:p.model,effort:p.effort,profile:p.profile||'codex'};}catch{}return {models:catalog,preferences,running,activeJobs:active.size,parallelReviewSupport:true};};const data=running?await readState():await locked(readState);return reply(200,data);}
@@ -37,18 +63,68 @@ export async function createDashboard({port=8765,execute=defaultExecute,memoryFa
  return reply(202,{status:'queued',scope:'Repair generation shares the active review slots and parent run controls'});}finally{target.admissions--;}
  }
  if(path==='/start-reviews'){
- const concurrency=input.concurrency===undefined?1:Number(input.concurrency);if(!Number.isInteger(concurrency)||concurrency<1||concurrency>8)throw Error('Choose 1–8 parallel specialist requests');
- if(!Array.isArray(input.requests)||input.requests.length<1||input.requests.length>48||input.requests.some(r=>!validRequest(r)||r.kind!=='specialist-review')||new Set(input.requests.map(r=>r.jobId)).size!==input.requests.length)throw Error('Invalid bounded specialist plan');
- if(running)return reply(409,{error:'Another local operation is running'});
- const account=JSON.parse(await readFile(join(stateDir,'account.json'),'utf8')), pending=[];const parent=input.requests[0].parentJobId||input.requests[0].jobId;const control={status:'playing',deadline:Number(input.deadline)||null};batchControls.set(parent,control);
- for(const request of input.requests){const prior=await memory.get(request.jobId);if(prior&&(prior.subject!==account.subject||prior.sourceDigest!==request.sourceDigest))throw Error('Local review identity mismatch');if(prior?.status!=='completed')pending.push(request);}
- for(const request of pending){active.add(request.jobId);await memory.save({id:request.jobId,parentJobId:request.parentJobId,index:request.index,domain:request.expert?.domain,kind:request.kind,subject:account.subject,sourceDigest:request.sourceDigest,status:'queued',events:[]});}
- const work=locked(async()=>{await configure(input.settings);let cursor=0;let fatal=false;queueState={parent,admissions:0,insert:request=>pending.splice(cursor,0,request)};async function consume(){while(cursor<pending.length||queueState?.admissions){if(cursor>=pending.length){await new Promise(resolve=>setTimeout(resolve,25));continue;}if(fatal)break;const request=pending[cursor++];if(control.status!=='playing'||control.deadline&&Date.now()>=control.deadline){if(control.status==='playing')control.status='timer-ended';break;}const job={id:request.jobId,parentJobId:request.parentJobId,index:request.index,domain:request.expert?.domain,kind:request.kind,subject:account.subject,sourceDigest:request.sourceDigest,status:'running',startedAt:new Date().toISOString(),events:[]};active.add(job.id);executing.add(job.id);await memory.save(job);const folder=await mkdtemp(join(tmpdir(),'omnidev-review-'));try{const inputPath=join(folder,'request.json'),output=join(folder,'candidate.json');await writeFile(inputPath,JSON.stringify(request),{mode:0o600});await execute(['generate',inputPath,'auto',output]);job.candidate=JSON.parse(await readFile(output,'utf8'));if(job.candidate.jobId!==job.id||job.candidate.sourceDigest!==job.sourceDigest)throw Error('Review output does not match assignment');job.status='completed';}catch(e){job.status='failed';job.error=e.message;}finally{await rm(folder,{recursive:true,force:true});await memory.save(job);active.delete(job.id);executing.delete(job.id);}if(job.status==='failed'&&/429|401|403|rate limit|authorization/i.test(job.error||''))fatal=true;}}await Promise.all(Array.from({length:Math.min(concurrency,pending.length)},()=>consume()));});
- work.catch(()=>{}).finally(async()=>{queueState=null;for(const request of pending){try{const job=await memory.get(request.jobId);if(job?.status==='queued'){job.status=control.status==='playing'?'failed':control.status;job.error=control.status==='playing'?'Specialist plan stopped before this review; retry explicitly':'Review '+control.status+' before this request; no inference was sent';await memory.save(job);}}catch{console.error('Local review persistence requires recovery.');}finally{active.delete(request.jobId);}}}).catch(()=>{console.error('Local review persistence failed; recover retained pending state before retrying.');});return reply(202,{jobs:input.requests.map(r=>({id:r.jobId})),status:'accepted'});
+  const concurrency=input.concurrency===undefined?1:Number(input.concurrency);
+  if(!Number.isInteger(concurrency)||concurrency<1||concurrency>8)throw Error('Choose 1–8 parallel specialist requests');
+  if(!Array.isArray(input.requests)||input.requests.length<1||input.requests.length>48||input.requests.some(r=>!validRequest(r)||r.kind!=='specialist-review')||new Set(input.requests.map(r=>r.jobId)).size!==input.requests.length)throw Error('Invalid bounded specialist plan');
+  const accepted=await background(async accept=>{
+   const account=JSON.parse(await readFile(join(stateDir,'account.json'),'utf8')),pending=[],ownedIds=new Set();
+   const parent=input.requests[0].parentJobId||input.requests[0].jobId,control={status:'playing',deadline:Number(input.deadline)||null};
+   let ownedQueue=null;batchControls.set(parent,control);
+   try{
+    for(const request of input.requests){const prior=await memory.get(request.jobId);if(prior&&(prior.subject!==account.subject||prior.sourceDigest!==request.sourceDigest))throw Error('Local review identity mismatch');if(prior?.status!=='completed')pending.push(request);}
+    const configured=await configure(input.settings);if(configured.subject!==account.subject)throw Error('Local account changed before specialist dispatch');
+    for(const request of pending){active.add(request.jobId);ownedIds.add(request.jobId);await memory.save({id:request.jobId,parentJobId:request.parentJobId,index:request.index,domain:request.expert?.domain,kind:request.kind,subject:account.subject,sourceDigest:request.sourceDigest,status:'queued',events:[]});}
+    accept({jobs:input.requests.map(r=>({id:r.jobId})),status:'accepted'});
+    let cursor=0,fatal=false;
+    ownedQueue={parent,admissions:0,insert:request=>{ownedIds.add(request.jobId);pending.splice(cursor,0,request);}};queueState=ownedQueue;
+    async function consume(){
+     while(cursor<pending.length||ownedQueue.admissions){
+      if(cursor>=pending.length){await new Promise(resolve=>setTimeout(resolve,25));continue;}
+      if(fatal)break;
+      const request=pending[cursor++];
+      if(control.status!=='playing'||control.deadline&&Date.now()>=control.deadline){if(control.status==='playing')control.status='timer-ended';break;}
+      const job={id:request.jobId,parentJobId:request.parentJobId,index:request.index,domain:request.expert?.domain,kind:request.kind,subject:account.subject,sourceDigest:request.sourceDigest,status:'running',startedAt:new Date().toISOString(),events:[]};
+      active.add(job.id);executing.add(job.id);let folder;
+      try{
+       await memory.save(job);folder=await mkdtemp(join(tmpdir(),'omnidev-review-'));
+       try{const inputPath=join(folder,'request.json'),output=join(folder,'candidate.json');await writeFile(inputPath,JSON.stringify(request),{mode:0o600});await execute(['generate',inputPath,'auto',output]);job.candidate=JSON.parse(await readFile(output,'utf8'));if(job.candidate.jobId!==job.id||job.candidate.sourceDigest!==job.sourceDigest)throw Error('Review output does not match assignment');job.status='completed';}
+       finally{await removeGenerationFolder(folder);}
+      }catch(error){job.status='failed';job.error=error.message||'Specialist review failed';if(error.code==='JOB_MEMORY_RECOVERY_REQUIRED')fatal=true;}
+      finally{try{await memory.save(job);}catch(error){fatal=true;throw error;}finally{active.delete(job.id);executing.delete(job.id);}}
+      if(job.status==='failed'&&/429|401|403|rate limit|authorization/i.test(job.error||''))fatal=true;
+     }
+    }
+    const settled=await Promise.allSettled(Array.from({length:Math.min(concurrency,pending.length)},()=>consume()));
+    const failed=settled.find(result=>result.status==='rejected');if(failed)throw failed.reason;
+   }finally{
+    if(queueState===ownedQueue)queueState=null;
+    // Already-admitted append requests retain this same owner while their durable
+    // writes settle. No later batch may clear or replace their active identities.
+    while(ownedQueue?.admissions)await new Promise(resolve=>setTimeout(resolve,20));
+    for(const request of pending){if(!ownedIds.has(request.jobId))continue;try{const job=await memory.get(request.jobId);if(job?.status==='queued'){job.status=control.status==='playing'?'failed':control.status;job.error=control.status==='playing'?'Specialist plan stopped before this review; retry explicitly':'Review '+control.status+' before this request; no inference was sent';await memory.save(job);}}catch{console.error('Local review persistence requires recovery.');}finally{active.delete(request.jobId);executing.delete(request.jobId);}}
+   }
+  });
+  return reply(202,accepted);
  }
- if(path==='/start'){if(!validRequest(input.request))throw Error('Invalid OmniDev account request.');const id=input.request.jobId,account=JSON.parse(await readFile(join(stateDir,'account.json'),'utf8'));const prior=await memory.get(id);if(prior){if(prior.subject!==account.subject||prior.sourceDigest!==input.request.sourceDigest)throw Error('Local job identity mismatch');if(prior.status==='completed'||active.has(id))return reply(200,{id,status:prior.status});}if(running)return reply(409,{error:'Another local operation is running'});const job={id,subject:account.subject,sourceDigest:input.request.sourceDigest,status:'running',startedAt:new Date().toISOString(),events:[{at:new Date().toISOString(),message:'Local engine accepted generation'}]};active.add(id);const work=locked(async()=>{await configure(input.settings);await memory.save(job);const folder=await mkdtemp(join(tmpdir(),'omnidev-job-'));try{const request=join(folder,'request.json'),output=join(folder,'candidate.json');await writeFile(request,JSON.stringify(input.request),{mode:0o600,flag:'wx'});await execute(['generate',request,'auto',output]);const candidate=JSON.parse(await readFile(output,'utf8'));if(candidate.jobId!==id||candidate.sourceDigest!==job.sourceDigest)throw Error('Generated output does not match job');job.candidate=candidate;job.status='completed';job.events.push({at:new Date().toISOString(),message:'Completed candidate stored for return to OmniDev'});}finally{await rm(folder,{recursive:true,force:true});}});work.catch(e=>{job.status='failed';job.error=e.message||'Generation failed';}).finally(async()=>{try{await memory.save(job);}finally{active.delete(id);}}).catch(()=>{console.error('Local job persistence failed; recover retained pending state before retrying.');});return reply(202,{id,status:'running'});}
+ if(path==='/start'){
+  if(!validRequest(input.request))throw Error('Invalid OmniDev account request.');
+  const id=input.request.jobId,account=JSON.parse(await readFile(join(stateDir,'account.json'),'utf8')),prior=await memory.get(id);
+  if(prior){if(prior.subject!==account.subject||prior.sourceDigest!==input.request.sourceDigest)throw Error('Local job identity mismatch');if(prior.status==='completed'||active.has(id))return reply(200,{id,status:prior.status});}
+  const job={id,subject:account.subject,sourceDigest:input.request.sourceDigest,status:'running',startedAt:new Date().toISOString(),events:[{at:new Date().toISOString(),message:'Local engine accepted generation'}]};
+  const accepted=await background(async accept=>{
+   active.add(id);let folder;
+   try{
+    const configured=await configure(input.settings);if(configured.subject!==job.subject)throw Error('Local account changed before generation dispatch');
+    await memory.save(job);accept({id,status:'running'});folder=await mkdtemp(join(tmpdir(),'omnidev-job-'));
+    try{const request=join(folder,'request.json'),output=join(folder,'candidate.json');await writeFile(request,JSON.stringify(input.request),{mode:0o600,flag:'wx'});await execute(['generate',request,'auto',output]);const candidate=JSON.parse(await readFile(output,'utf8'));if(candidate.jobId!==id||candidate.sourceDigest!==job.sourceDigest)throw Error('Generated output does not match job');job.candidate=candidate;job.status='completed';job.events.push({at:new Date().toISOString(),message:'Completed candidate stored for return to OmniDev'});}
+    finally{await removeGenerationFolder(folder);}
+   }catch(error){job.status='failed';job.error=error.message||'Generation failed';throw error;}
+   finally{try{await memory.save(job);}finally{active.delete(id);}}
+  });
+  return reply(202,accepted);
+ }
  if(path==='/engine-update'){if(!process.env.OMNI_ENGINE_HOME)return reply(409,{error:'Install the maintained engine first'});const key=await readFile(join(process.env.OMNI_ENGINE_HOME,'public-key.pem'),'utf8');return reply(200,await stageRelease(input.release,process.env.OMNI_ENGINE_HOME,key));}
- const result=await locked(async()=>{await configure(input.settings);if(path==='/configure')return {saved:true};if(!validRequest(input.request))throw Error('Invalid OmniDev account request.');const folder=await mkdtemp(join(tmpdir(),'omnidev-job-'));try{const request=join(folder,'request.json'),output=join(folder,'candidate.json');await writeFile(request,JSON.stringify(input.request),{mode:0o600,flag:'wx'});await execute(['generate',request,'auto',output]);const candidate=JSON.parse(await readFile(output,'utf8'));if(candidate.jobId!==input.request.jobId||candidate.sourceDigest!==input.request.sourceDigest)throw Error('Generated output does not match this job.');return {candidate};}finally{await rm(folder,{recursive:true,force:true});}});reply(200,result);
+ const result=await locked(async()=>{await configure(input.settings);if(path==='/configure')return {saved:true};if(!validRequest(input.request))throw Error('Invalid OmniDev account request.');const folder=await mkdtemp(join(tmpdir(),'omnidev-job-'));try{const request=join(folder,'request.json'),output=join(folder,'candidate.json');await writeFile(request,JSON.stringify(input.request),{mode:0o600,flag:'wx'});await execute(['generate',request,'auto',output]);const candidate=JSON.parse(await readFile(output,'utf8'));if(candidate.jobId!==input.request.jobId||candidate.sourceDigest!==input.request.sourceDigest)throw Error('Generated output does not match this job.');return {candidate};}finally{await removeGenerationFolder(folder);}});reply(200,result);
  }catch(e){reply(e.status||400,{error:e.message||'Companion operation failed.'});}});
  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(port,'127.0.0.1',resolve)});return {server,session,origin:'http://127.0.0.1:'+server.address().port};
 }

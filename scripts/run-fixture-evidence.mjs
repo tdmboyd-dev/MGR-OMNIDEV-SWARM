@@ -66,7 +66,7 @@ function fixtureEnvironment(){
 export async function runFixtureEvidence({profile,cwd=process.cwd(),timeoutMs=90_000}){
  const args=Object.hasOwn(FIXTURE_PROFILES,profile)?FIXTURE_PROFILES[profile]:null;
  if(!args)throw new TypeError('unknown approved suite');
- if(!Number.isSafeInteger(timeoutMs)||timeoutMs<100||timeoutMs>180_000)throw new TypeError('invalid timeout');
+ if(!Number.isSafeInteger(timeoutMs)||timeoutMs<100||timeoutMs>600_000)throw new TypeError('invalid timeout');
  const root=await realpath(resolve(cwd));
  if(await realpath(git(root,['rev-parse','--show-toplevel']))!==root)throw new Error('repository root required');
  const before=sourceState(root);
@@ -83,6 +83,7 @@ export async function runFixtureEvidence({profile,cwd=process.cwd(),timeoutMs=90
  try{lockfileSha256=hash(await readFile(resolve(root,'pnpm-lock.yaml')));}catch(error){if(error.code!=='ENOENT')throw error;}
  const startedAt=new Date().toISOString(),started=performance.now();
  const result=await new Promise(done=>{
+  const executionStarted=performance.now();
   const child=spawn(process.execPath,args,{cwd:root,shell:false,windowsHide:true,detached:process.platform!=='win32',env:fixtureEnvironment(),stdio:['ignore','pipe','pipe']});
   const chunks=[];
   let capturedBytes=0,totalOutputBytes=0,truncated=false,failure=null,killTimer;
@@ -90,8 +91,11 @@ export async function runFixtureEvidence({profile,cwd=process.cwd(),timeoutMs=90
    if(!child.pid)return;
    try{
     if(process.platform==='win32'){
-     if(signal==='SIGKILL')execFileSync('taskkill',['/PID',String(child.pid),'/T','/F'],{stdio:'ignore',timeout:5000});
-     else child.kill(signal);
+     // Stop the owned tree while its parent PID is live. Killing the parent
+     // first loses descendant ownership; killing by PID after close risks reuse.
+     if(child.exitCode!==null||child.signalCode!==null)return;
+     if(signal==='SIGTERM')execFileSync('taskkill',['/PID',String(child.pid),'/T','/F'],{stdio:'ignore',timeout:5000});
+     else child.kill(signal); // Node retains this child's process handle.
     }else process.kill(-child.pid,signal);
    }catch(error){if(error.code!=='ESRCH')child.kill(signal);}
   };
@@ -107,15 +111,15 @@ export async function runFixtureEvidence({profile,cwd=process.cwd(),timeoutMs=90
   const timer=setTimeout(()=>stop('timeout'),timeoutMs);
   // Sending a signal does not prove termination: wait for closed output streams.
   child.once('close',(exitCode,signal)=>{
-   clearTimeout(timer);clearTimeout(killTimer);if(failure)terminate('SIGKILL');
+   clearTimeout(timer);clearTimeout(killTimer);
    const output=Buffer.concat(chunks);
-   done({exitCode,signal,reason:failure||(exitCode===0?'exited-zero':'exit-failed'),outputSha256:hash(output),outputBase64:output.toString('base64'),capturedBytes,totalOutputBytes,truncated,processClosed:true});
+   done({exitCode,signal,reason:failure||(exitCode===0?'exited-zero':'exit-failed'),executionDurationMs:Math.round(performance.now()-executionStarted),outputSha256:hash(output),outputBase64:output.toString('base64'),capturedBytes,totalOutputBytes,truncated,processClosed:true});
   });
  });
  const after=sourceState(root),sourceUnchanged=before.commit===after.commit&&before.tree===after.tree&&!after.dirty;
  const outputObserved=result.capturedBytes>0;
  return {contract:'mgr.fixture-execution-evidence.v2',profile,sourceCommit:before.commit,sourceTree:before.tree,sourceCommitAfter:after.commit,sourceUnchanged,lockfileSha256,
-  argv:[process.execPath,...args],commandSha256:hash(JSON.stringify(['node',...args])),startedAt,finishedAt:new Date().toISOString(),durationMs:Math.round(performance.now()-started),
+  argv:[process.execPath,...args],commandSha256:hash(JSON.stringify(['node',...args])),timeoutMs,startedAt,finishedAt:new Date().toISOString(),durationMs:Math.round(performance.now()-started),
   runtime:{node:process.version,platform:process.platform,arch:process.arch},...result,
   outputObserved, passed:result.exitCode===0&&!result.truncated&&result.reason==='exited-zero'&&sourceUnchanged&&outputObserved,
   qualification:'local-fixture-only-not-parent-acceptance',signed:false};

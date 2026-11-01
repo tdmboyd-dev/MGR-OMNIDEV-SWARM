@@ -152,10 +152,14 @@ test('grant expiry during signature verification cannot persist verified evidenc
  crypto.subtle.verify=async function(...args){const valid=await verify.apply(this,args);Date.now=()=>pending.grant.expiresAt+1;return valid;};
  try{assert.notEqual((await f.save(signed)).status,200);assert.deepEqual(dbSnapshot(),before);}finally{crypto.subtle.verify=verify;Date.now=now;}
 });
-test('grant expiry while a database write waits is checked by the database clock',async()=>{
- const f=await fixture(),pending=await stages(f);mutateJob(f.job.id,j=>j.result.trilogy.grant.expiresAt=Date.now()+250);const signed=await f.verified(pending),before=dbSnapshot(),batch=environment.DB.batch;let delayed=false;
- environment.DB.batch=async statements=>{if(statements.some(s=>s.sql.includes('UPDATE jobs SET result='))){delayed=true;await new Promise(resolve=>setTimeout(resolve,300));}return batch(statements);};
- assert.notEqual((await f.save(signed)).status,200);assert.ok(delayed);assert.deepEqual(dbSnapshot(),before);
+test('database clock refuses expiry during a write even when application time remains valid',async()=>{
+ const f=await fixture(),pending=await stages(f),signed=await f.verified(pending),clock=Date.now,batch=environment.DB.batch,expiresAt=clock()+2000;let delayed=false;
+ mutateJob(f.job.id,j=>j.result.trilogy.grant.expiresAt=expiresAt);const before=dbSnapshot();
+ // Keep the JS authorization clock valid while the real SQLite clock advances.
+ // The denial must come from the durable-write fence, not a short setup delay.
+ Date.now=()=>expiresAt-1;
+ environment.DB.batch=async statements=>{if(statements.some(s=>s.sql.includes('UPDATE jobs SET result='))){delayed=true;await new Promise(resolve=>setTimeout(resolve,Math.max(0,expiresAt-clock()+50)));assert.ok(clock()>expiresAt);}return batch(statements);};
+ try{assert.notEqual((await f.save(signed)).status,200);assert.ok(delayed);assert.ok(Date.now()<expiresAt);assert.deepEqual(dbSnapshot(),before);}finally{Date.now=clock;environment.DB.batch=batch;}
 });
 test('snapshot application refuses a grant that expires while effect capacity is reserved',async()=>{
  const f=await fixture(),pending=await stages(f);assert.equal((await f.save(await f.verified(pending))).status,200);
