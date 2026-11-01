@@ -47,3 +47,10 @@ Run node tests/prepare.mjs. Point OMNI_NATIVE_QUALIFICATION_RECEIPT at the fresh
 ## Current verification ownership
 
 A reserved or uncertain native verification retains its original job and project source. Ordinary cancel/reject/retry, move, candidate replacement, recovery and project removal cannot displace it. The exact owning verification request may cancel its queued reservation; a running/uncertain effect still requires original receipt/process reconciliation. A completed native receipt records false uncertainty and remains eligible for ordinary owner apply/rollback. Native claim checks current payload/objective and effect-stop policy again at the SQLite write. The optional older engineering metadata/transport service is a separate reconciliation task; this does not enroll it or the signed Trilogy contract in the permanent owner runtime. Current qualification: UNFINISHED-WORK/evidence/native-verification-custody-20261101/REPORT.md.
+
+
+## Native exit and stop diagnostics
+
+New receipts retain native.execution with bounded exitCode (Windows unsigned32-bit integer or null), stopReason, hostStopReason and outputEmpty. Known process/host stop codes are enumerated; arbitrary exception text and host stderr are not copied. A blank or whitespace-only result cannot pass even with exitCode0. Empty-output failures include a bounded diagnostic message; normal nonempty child output is preserved. The server validates and saves these fields, rejects contradictory success claims and the poller checks their saved values before acknowledging delivery. Missing diagnostics on historical legacy receipts stay missing; never invent a past failure cause.
+
+Changing native launcher source invalidates its old policy hash. Rerun the actual owning-host qualification and review the resulting fingerprint before admitting another snapshot. No timeout, memory, write, process, authorization or cleanup boundary was weakened. A failed job with a delivered receipt and verified cleanup is distinct from an unknown outcome. Reconcile the original journal before any new dispatch; this diagnostic repair does not automatically retry jobs.

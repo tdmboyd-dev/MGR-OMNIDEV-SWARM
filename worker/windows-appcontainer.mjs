@@ -71,6 +71,17 @@ export async function runNativeAttempt({files,arguments:args,profileName='omni-'
   throw error;
  }
 }
+// Preserve bounded process diagnostics without copying host errors or stderr.
+export function nativeExecutionSummary(attempt){
+ const value=attempt?.native,exitCode=Number.isInteger(value?.ExitCode)&&value.ExitCode>=0&&value.ExitCode<=0xffffffff?value.ExitCode:null;
+ const reason=(value,allowed)=>value===null||value===undefined||value===''?null:allowed.includes(value)?value:'unrecognized';
+ const stopReason=reason(value?.StopReason,['timeout','output-limit','write-budget','writable-tree-policy']);
+ const hostStopReason=reason(attempt?.hostStopped,['cancelled','native-host-timeout','native-host-output-limit']);
+ const outputEmpty=typeof value?.Output!=='string'||!value.Output.trim();
+ const execution={exitCode,stopReason,hostStopReason,outputEmpty};
+ return {execution,passed:exitCode===0&&stopReason===null&&hostStopReason===null&&!outputEmpty,
+  output:outputEmpty?`Native execution failed: exit=${exitCode===null?'unavailable':'0x'+exitCode.toString(16).padStart(8,'0')}; stop=${stopReason??'none'}; host=${hostStopReason??'none'}; output=empty`:value.Output};
+}
 export async function executeNative(job,{signal}={}){
  const policy=await loadNativePolicy(),base=resolve(process.env.OMNI_NATIVE_WORKER_ROOT||join(tmpdir(),'omnidev-native-worker'));
  if(await stat(join(base,'QUARANTINED.json')).then(()=>true,error=>error.code!=='ENOENT'))throw Error('Native worker host is quarantined');
@@ -83,6 +94,6 @@ export async function executeNative(job,{signal}={}){
  if(digest(job.files)!==assignment.candidateDigest||digest(job.command)!==assignment.testManifestDigest||!hex.test(assignment.sourceDigest||''))throw Error('Native assignment artifact mismatch');
  const attempt=await runNativeAttempt({files:job.files,arguments:job.command.slice(1),profileName:assignment.profileName,base,signal,expiresAt:assignment.expiresAt});
  if(attempt.runtimeSha256!==policy.runtimeSha256||await nativeLauncherDigest()!==policy.launcherSha256)throw Error('Native implementation changed during execution');
- const value=attempt.native;
- return {worker:'windows-appcontainer',passed:!!value&&value.ExitCode===0&&!value.StopReason&&!attempt.hostStopped,output:value?.Output||('Native execution '+(attempt.hostStopped||'failed')),assignment,runtimeSha256:policy.runtimeSha256,launcherSha256:policy.launcherSha256,qualificationDigest:policy.qualificationDigest,native:{profileName:assignment.profileName,packageSid:value?.PackageSid,tokenIsAppContainer:value?.TokenIsAppContainer===1,capabilityCount:value?.CapabilityCount,jobAssignedAtCreation:value?.JobAssignedAtCreation===true},cleanup:attempt.cleanup};
+ const value=attempt.native,summary=nativeExecutionSummary(attempt);
+ return {worker:'windows-appcontainer',passed:summary.passed,output:summary.output,assignment,runtimeSha256:policy.runtimeSha256,launcherSha256:policy.launcherSha256,qualificationDigest:policy.qualificationDigest,native:{profileName:assignment.profileName,packageSid:value?.PackageSid,tokenIsAppContainer:value?.TokenIsAppContainer===1,capabilityCount:value?.CapabilityCount,jobAssignedAtCreation:value?.JobAssignedAtCreation===true,execution:summary.execution},cleanup:attempt.cleanup};
 }

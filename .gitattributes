@@ -42,3 +42,11 @@
 /UNFINISHED-WORK/evidence/native-verification-custody-20261101/**/*.log -diff
 /UNFINISHED-WORK/evidence/native-verification-custody-20261101/*.txt -diff
 /docs/NATIVE-BACKPACK-WORKFLOW.md text eol=lf
+
+# Capability references use explicit portable checkout bytes.
+/package.json text eol=lf
+/lib/trilogy-contract.ts text eol=lf
+/app/api/trilogy/route.ts text eol=lf
+/worker/windows-appcontainer.mjs text eol=lf
+/lib/worker-policy.ts text eol=lf
+/worker/WINDOWS-NATIVE-WORKER.md text eol=lf
