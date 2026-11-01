@@ -1,0 +1,18 @@
+✔ unrecognized commands and inherited property names fail closed (4.8878ms)
+✔ approved fixture records source, exact output and closed-process evidence (1457.2308ms)
+✔ unbounded timeouts refused (0.2949ms)
+✔ dirty or untracked source cannot be attributed to a clean commit (712.6503ms)
+✔ a zero exit that modifies source fails source-binding verification (1097.3424ms)
+✔ timeouts wait for termination even when the child ignores SIGTERM (1635.8369ms)
+✔ timeout closes the owned descendant output before reporting process closure (3386.301ms)
+✔ output limits cannot be converted to success by a zero exit (1499.311ms)
+✔ parent secrets and Node preload options are not forwarded to fixtures (946.2423ms)
+✔ zero-exit test without observed output is not recorded as passing (884.074ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11634.3092

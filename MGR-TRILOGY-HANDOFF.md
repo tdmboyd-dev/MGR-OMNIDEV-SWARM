@@ -1,3 +1,17 @@
+# Current reconciled source verified — November 1, 2026
+
+Committed runtimed5181b5c015e48f5db3898fdd13f8085c6dcc24b passed83/83 complete fixed profiles, zero failures/blocked. Full final report/logs: UNFINISHED-WORK/evidence/safety-reconciliation-20261101/final-run/. The failed first76/82 run stays under initial-run, unchanged. New source lifetime, portable paths/UTF8, exact intent, pipeline provenance/dedup and worker local-routing checks passed. The worker download was rebuilt from572fb36399b4725d5fd6ded195b6dc75dbcaf06d:9sourcefiles/10entries,37158bytes, SHA256 adb0417e232d7072d1cdf8c5ce74063e0ccdc216647c8cafd6a731011e3cbd8c, actual build/check succeeded.
+
+Fresh actual Git/SQLite/HTTP Trilogy job integration passed14/14 against OmniDevd5181b5, Code Monster125b0c8 and OmniSightc371fe1. Backpack0.6.1 then persisted/reopened source-linked evidence through7calls without mirroring canonical jobs/tasks. This public repo retains only sanitized integration summary; private companion source manifests stay private.
+
+The shared API's normal and compiled HTTP processes each passed21checks with Backpack0.6.1 and Code Monster0.3.1: existing nine context reads plus four source tools, real Git/compiler output, original signed synthetic identity, component/project scope, revocation and unchanged source. Current Tevin/deployed TLS/OAuth/account remain unverified. Backpack actual native0.6.0 is now verified; account/installed0.6.1 and source reads are independently verified. Newer Code Monster docs/card metadata do not relabel the earlier runtime proof.
+
+The owner explicitly deferred restart while other AI work is active. No restart is scheduled/requested. Docker/container/worker host acceptance remains parked; source and integration work continued. Optional combined source-service container build/runtime scripts are implemented and syntax checked, not run. Read the newest owning API/Code Monster/Backpack handoffs for those source checkpoints.
+
+Still real work: remaining older native/engineering workflow reconciliation, current Tevin/hosted/account/provider/browser/worker qualification and original174/441/28 independent acceptance. No canonical parent was promoted. This is a verified source/integration checkpoint, not final whole-product completion.
+
+---
+
 # Pipeline dedup repaired; source worker policy reconciled — November 1, 2026
 
 The first source-safety full run completed76/82 at fa64ffd, with six failed profiles and no blocked profiles. All raw outputs are retained under UNFINISHED-WORK/evidence/safety-reconciliation-20261101/initial-run/. Do not relabel it as passing. The real conflict was repeated equal findings from separate reviews reaching enqueue with different review metadata under the same logical key. pipelineStep now deduplicates those findings before enqueue and retains the first admitted provenance. Exact intent binding remains enforced; changed caller intent still returns409. The pipeline fixture proves exactly one durable repair child with original review index after repeated findings.

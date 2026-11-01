@@ -1,0 +1,47 @@
+PASS Local control center serves model, effort and generation controls
+PASS Dashboard cannot be embedded by an unrelated page
+PASS Local account data refuses requests without session token
+PASS Cross-origin local account requests are refused
+PASS Unexpected host / DNS rebinding requests are rejected
+PASS Exact OmniDev origin pairs without OpenAI token disclosure
+PASS Foreign website cannot pair
+PASS Pairing requires explicit client header
+PASS Integrated UI preflight permits only exact Site origin
+PASS Integrated OmniDev UI can load local model settings
+PASS Integrated OmniDev UI can generate and receive matching candidate
+PASS Current account models reach UI without credential disclosure
+PASS Selected model, reasoning and profile persist for owner
+PASS Saved preferences remain tied to authenticated account
+PASS Unavailable models cannot be configured
+PASS Unsupported reasoning cannot be configured
+PASS Malformed job request cannot execute
+PASS Generation returns matching envelope without file handoff
+PASS Returned output excludes account credentials
+PASS Concurrent generation is blocked to avoid duplicate calls and refresh races
+PASS Provider failure returns diagnostic and releases execution lock
+PASS Generation recovers after provider failure
+PASS Cross-site generation is denied before spending
+PASS Background start returns before inference completion
+PASS Job continues after initiating HTTP request ended
+PASS Repeated active-job start returns existing job without duplicate inference
+PASS Completed background output is saved and recoverable
+PASS Workboard recovers completed state without credentials or candidate contents
+PASS Workboard requires an authenticated engine session
+PASS New engine session recovers saved completed output
+PASS Stored local output cannot cross account identities
+PASS Expected popup-origin-nonce message passes bridge
+PASS Foreign origin, window, nonce or effect command fails bridge
+PASS Foreign origin, window, nonce or effect command fails bridge
+PASS Foreign origin, window, nonce or effect command fails bridge
+PASS Foreign origin, window, nonce or effect command fails bridge
+PASS Companion independently checks source origin, opener and nonce
+PASS Rendered dashboard announces readiness only to exact Site origin
+PASS Foreign opener message cannot enable generation
+PASS Trusted handoff loads job but waits for user generation click
+PASS Actual dashboard script returns generated envelope automatically to originating Site
+PASS Dashboard displays Site validation acknowledgement
+{
+  "passed": 42,
+  "failed": 0,
+  "scope": "Real local HTTP, fixture inference subprocess contract and message guards; real Windows popup handoff pending"
+}

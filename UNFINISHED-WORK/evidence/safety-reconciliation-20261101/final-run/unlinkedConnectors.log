@@ -1,0 +1,43 @@
+✔ CONN-02: GitLab integration registration stays disconnected and unsupported execution is refused (51.8788ms)
+✔ CONN-03: Bitbucket integration registration stays disconnected and unsupported execution is refused (3.3508ms)
+✔ CONN-04: Azure DevOps integration registration stays disconnected and unsupported execution is refused (2.3492ms)
+✔ CONN-08: AWS integration registration stays disconnected and unsupported execution is refused (1.5015ms)
+✔ CONN-09: Azure integration registration stays disconnected and unsupported execution is refused (1.9838ms)
+✔ CONN-10: Google Cloud integration registration stays disconnected and unsupported execution is refused (3.2145ms)
+✔ CONN-11: Digital Ocean integration registration stays disconnected and unsupported execution is refused (2.4671ms)
+✔ CONN-12: Kubernetes integration registration stays disconnected and unsupported execution is refused (2.7532ms)
+✔ CONN-14: PostgreSQL integration registration stays disconnected and unsupported execution is refused (1.3062ms)
+✔ CONN-15: MySQL integration registration stays disconnected and unsupported execution is refused (1.6897ms)
+✔ CONN-16: SQL Server integration registration stays disconnected and unsupported execution is refused (1.3896ms)
+✔ CONN-17: MariaDB integration registration stays disconnected and unsupported execution is refused (2.4791ms)
+✔ CONN-18: MongoDB integration registration stays disconnected and unsupported execution is refused (2.1466ms)
+✔ CONN-19: Neo4j integration registration stays disconnected and unsupported execution is refused (2.7726ms)
+✔ CONN-20: Redis integration registration stays disconnected and unsupported execution is refused (2.7556ms)
+✔ CONN-21: Firebase integration registration stays disconnected and unsupported execution is refused (2.9112ms)
+✔ CONN-22: Supabase integration registration stays disconnected and unsupported execution is refused (3.5563ms)
+✔ CONN-23: Figma integration registration stays disconnected and unsupported execution is refused (1.685ms)
+✔ CONN-24: Adobe XD integration registration stays disconnected and unsupported execution is refused (1.7193ms)
+✔ CONN-25: Sketch integration registration stays disconnected and unsupported execution is refused (7.6956ms)
+✔ CONN-26: Blender integration registration stays disconnected and unsupported execution is refused (2.9598ms)
+✔ CONN-27: Maya integration registration stays disconnected and unsupported execution is refused (2.4906ms)
+✔ CONN-28: Cinema4D integration registration stays disconnected and unsupported execution is refused (2.19ms)
+✔ CONN-29: Notion integration registration stays disconnected and unsupported execution is refused (2.485ms)
+✔ CONN-30: Confluence integration registration stays disconnected and unsupported execution is refused (2.7168ms)
+✔ CONN-31: Slack integration registration stays disconnected and unsupported execution is refused (2.552ms)
+✔ CONN-32: Teams integration registration stays disconnected and unsupported execution is refused (3.4456ms)
+✔ CONN-33: Email Systems integration registration stays disconnected and unsupported execution is refused (3.5513ms)
+✔ CONN-34: Internal Documentation integration registration stays disconnected and unsupported execution is refused (2.9614ms)
+✔ CONN-35: APIs integration registration stays disconnected and unsupported execution is refused (4.3831ms)
+✔ CONN-36: Microservices integration registration stays disconnected and unsupported execution is refused (3.3299ms)
+✔ CONN-37: Legacy Systems integration registration stays disconnected and unsupported execution is refused (2.8026ms)
+✔ CONN-38: ERP Systems integration registration stays disconnected and unsupported execution is refused (2.0526ms)
+✔ CONN-39: CRM Systems integration registration stays disconnected and unsupported execution is refused (1.9855ms)
+✔ cross-origin connector registration is rejected without a stored registration or provider call (0.3867ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 158.4369

@@ -1,0 +1,48 @@
+{
+  "schema": "mgr.safety-reconciliation-wave.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-11-01T09:45:52.821Z",
+  "sourceCommit": "d5181b5c015e48f5db3898fdd13f8085c6dcc24b",
+  "fullVerification": {
+    "report": "UNFINISHED-WORK/evidence/safety-reconciliation-20261101/final-run/report.json",
+    "passedProfiles": 83,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 83
+  },
+  "qualification": "executed-local-regression-not-live-provider-or-release-certification",
+  "fullAcceptancePromotions": 0,
+  "canonicalScopeUnchanged": true,
+  "previousFailure": {
+    "report": "UNFINISHED-WORK/evidence/safety-reconciliation-20261101/initial-run/report.json",
+    "passedProfiles": 76,
+    "failedProfiles": 6,
+    "totalProfiles": 82
+  },
+  "ownerProgress": {
+    "completed": [
+      {
+        "title": "Source lifetime, portable input and exact request identity reconciled",
+        "observed": "Current committed source passed83/83 fixed local profiles. Reproduced disconnect/late response, unsafe path/UTF8 and changed-intent failures; preserved original finding provenance while deduplicating one repair child. Rebuilt nine-source/ten-entry worker ZIP with exact source/import/hash verification. Fresh actual local Trilogy integration14/14 plus Backpack0.6.1 evidence persistence/reopen7calls passed.",
+        "evidence": [
+          "UNFINISHED-WORK/evidence/safety-reconciliation-20261101/final-run/report.json",
+          "UNFINISHED-WORK/evidence/safety-reconciliation-20261101/integration-summary.json"
+        ],
+        "remaining": [
+          "Browser/assistive/provider/actual Docker and original independent acceptance remain separate. Owner deferred restart; no host restart is scheduled."
+        ]
+      },
+      {
+        "title": "Existing Code Monster source tools composed on the shared edge",
+        "observed": "Normal and compiled API HTTP startup each passed21local JWKS/JWT/SQLite/Git/compiler checks with Backpack0.6.1 and Code Monster0.3.1. Component scopes/bindings remain independent; no caller root or identity is accepted.",
+        "evidence": [
+          "UNFINISHED-WORK/evidence/safety-reconciliation-20261101/shared-edge-summary.json"
+        ],
+        "remaining": [
+          "Current Tevin and hosted HTTPS/OAuth account acceptance remain unverified; the worker and optional container package require actual host qualification."
+        ]
+      }
+    ]
+  }
+}
