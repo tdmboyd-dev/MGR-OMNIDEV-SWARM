@@ -49,3 +49,6 @@ next-env.d.ts
 /work/
 
 .test-runtime/
+
+# Private Backpack run receipts and local context stores.
+.backpack/
