@@ -1,0 +1,63 @@
+{
+  "checked": true,
+  "derivedOnly": true,
+  "sourceCommit": "90cda3ee1a698ced56324cf398c0cee0de68cbb0",
+  "summaries": {
+    "originalParents": 174,
+    "acceptanceClauses": 441,
+    "separateUpgrades": 28,
+    "recordedParentStates": {
+      "open": 122,
+      "implemented_unverified": 52
+    },
+    "linkedToCommittedSource": 137,
+    "withoutCommittedSourceLink": 37,
+    "sourceReferences": 348,
+    "uniqueSourcePaths": 54,
+    "missingSourceReferences": [],
+    "finalClauseStates": {
+      "UNVERIFIED": 439,
+      "VERIFIED": 1,
+      "BLOCKED": 1
+    },
+    "localClauseStates": {
+      "NOT_RECORDED": 154,
+      "PARTIAL": 194,
+      "VERIFIED": 11,
+      "NOT_REPRODUCED": 82
+    },
+    "fullyAcceptedParents": 0,
+    "recordedUpgradeStates": {
+      "IN_PROGRESS": 1,
+      "TESTED_LOCAL": 1,
+      "PLANNED": 26
+    }
+  },
+  "outputs": [
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.json",
+      "bytes": 1103074,
+      "sha256": "67b79e71aab30c4e9a917e62fbf66093b316580bfcf29fd89947137006b7b77a"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.html",
+      "bytes": 1632163,
+      "sha256": "d70ce8cc2cfe702d515f6e1f5275e2cb35e16fc1a01774663777a4376606cfb9"
+    },
+    {
+      "path": "public/owner-progress.html",
+      "bytes": 1632163,
+      "sha256": "d70ce8cc2cfe702d515f6e1f5275e2cb35e16fc1a01774663777a4376606cfb9"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.md",
+      "bytes": 682585,
+      "sha256": "58c07e0dc65565e3a3927690142352ec57ecc9868750b5e19674c0e63c7bc9b0"
+    },
+    {
+      "path": "UNFINISHED-WORK/owner-progress-20261029.svg",
+      "bytes": 2642,
+      "sha256": "cd05596679189be7c2888e789b1c3c701ba570809464fb473d280947c9373c32"
+    }
+  ]
+}

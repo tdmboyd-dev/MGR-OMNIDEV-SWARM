@@ -69,3 +69,6 @@ Bounded repair acceptance: companion regression 9/9, Trilogy jobs 33/33, fixture
 ## November 1 continued source safety reconciliation
 
 Owner deferred reboot; Docker dependency remains parked. Bounded source checks:7/7 UI lifetime (controlled source VM),9/9 actual route/SQLite/path/intent/byte-stream tests. Reconciled9d628be/685f0c5/100287b connection intent and8b2afdf request binding with later-generation/repair dispatch checks, preserving newer current code. Current82-profile full run pending; prior80/80 stays at7a7c5e1. Browser/provider/container/production and original independent acceptance remain unverified.
+
+
+First safety full run76/82 atfa64ffd retained, six failures repaired: pipeline duplicate-finding intent mismatch; stale409 expectation; lifecycle fixture dependencies. Focused source checks19/19 plus six affected profile commands pass. Worker local routing/path/UTF8 policy reconciled without actual Docker execution. New83-profile clean run and rebuilt worker package pending.

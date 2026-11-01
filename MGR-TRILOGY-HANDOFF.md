@@ -1,3 +1,15 @@
+# Pipeline dedup repaired; source worker policy reconciled — November 1, 2026
+
+The first source-safety full run completed76/82 at fa64ffd, with six failed profiles and no blocked profiles. All raw outputs are retained under UNFINISHED-WORK/evidence/safety-reconciliation-20261101/initial-run/. Do not relabel it as passing. The real conflict was repeated equal findings from separate reviews reaching enqueue with different review metadata under the same logical key. pipelineStep now deduplicates those findings before enqueue and retains the first admitted provenance. Exact intent binding remains enforced; changed caller intent still returns409. The pipeline fixture proves exactly one durable repair child with original review index after repeated findings.
+
+The platform expectation now requires409 for changed intent rather than400; account-autostart and header fixtures provide the newly required lifecycle refs, while actual-source delayed-response tests still exercise disconnect/unmount/reconnect negatives. All six affected profile commands pass after repair. Current combined source-lifetime/path/intent/transport/worker-policy tests passed19/19.
+
+Worker validateFiles independently rejects portable path/secret/case aliases and counts UTF8 bytes, with exact per-file/aggregate boundary tests. Docker subprocess environments exclude service credentials and refuse remote routing/unqualified named contexts; default context plus local Unix socket or local Windows pipe is required. Doctor uses the same policy. This source policy is tested without starting Docker; no actual isolation or engine acceptance follows. The existing Windows cleanup/trilogy/failure-output behavior is preserved.
+
+Three source-safety profiles are now registered, making83 fixed full profiles. Next: commit worker source, rebuild/check the existing nine-source/ten-entry worker download, then run clean83-profile verification and fresh three-product integration. The owner deferred restart; keep host qualification parked and continue independent work. No original174/441/28 acceptance promotion.
+
+---
+
 # Source safety reconciliation; restart deferred — November 1, 2026
 
 The owner explicitly cannot restart while other AI work is active. Keep Docker host/container qualification parked and continue independent owning source/integration work. Do not schedule a restart or repeat the restart request during this source cycle.

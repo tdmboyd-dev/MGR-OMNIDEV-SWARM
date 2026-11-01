@@ -1,0 +1,23 @@
+✔ transient Windows replacement failure preserves the old record until one atomic successful replacement (79.4312ms)
+✔ exhausted Windows replacement remains failed, keeps exact pending bytes and blocks replay after restart (772.5809ms)
+✔ unexpected I/O failure and non-Windows permission failure are not blindly retried (9.3836ms)
+Local background work failed; inspect saved or pending state before retrying.
+✔ actual HTTP companion survives failed completion persistence and refuses a second generation across restart (888.4403ms)
+✔ a held HTTP status read cannot overwrite a later completed generation (65.2116ms)
+✔ interrupted status is a read-only process view and does not rewrite the last durable state (28.0932ms)
+Local background work failed; inspect saved or pending state before retrying.
+✔ background ownership lasts through the final durable completion write (72.9995ms)
+Local background work failed; inspect saved or pending state before retrying.
+✔ pausing a batch retains its owner until queued-state persistence finishes (78.3964ms)
+Local background work failed; inspect saved or pending state before retrying.
+Local review persistence requires recovery.
+Local background work failed; inspect saved or pending state before retrying.
+✔ a failed consumer cannot release the batch while another inference is still owned (99.3942ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2104.1097

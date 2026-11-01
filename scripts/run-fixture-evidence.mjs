@@ -10,6 +10,7 @@ export const FIXTURE_PROFILES = Object.freeze(Object.fromEntries(Object.entries(
  requestBody:['tests/request-body-suite.mjs'],
  uiLifecycle:['tests/ui-lifecycle-integrity.mjs'],
  snapshotPaths:['tests/snapshot-paths.mjs'],
+ workerInputPolicy:['tests/worker-input-policy.test.mjs'],
  connectorPreview:['tests/connector-preview.test.mjs'],
  toolchainSecurity:['tests/toolchain-security.test.mjs'],
  companionMemory:['tests/companion-memory.test.mjs'],

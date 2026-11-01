@@ -1,0 +1,27 @@
+✔ unsafe import and candidate paths are rejected before SQLite writes (105.1412ms)
+✔ case aliases, malformed files and action objects are denied without writes (1.6201ms)
+✔ UTF8 byte budget rejects oversized individual source without pretending codepoints are bytes (1.4494ms)
+✔ valid portable snapshot persists with exact content readback and SHA256 ledger (13.5582ms)
+✔ GitHub snapshot selection and full-audit classification exclude case aliases of secret paths (2.4167ms)
+✔ full enqueue intent is durable, exact concurrent replay shares one job, changed settings/source conflict (13.2949ms)
+✔ candidate budgets measure actual UTF8 bytes for each patch and their sum (5.3522ms)
+✔ actual runtime and agent routes cancel byte-oversized streams before allocation or writes (2.8544ms)
+✔ runtime and agent cross-origin denial occurs before reading request body (0.3974ms)
+✔ actual source picker fences older selection, invalid replacement and cancelled reads (87.5273ms)
+✔ actual engine status and reconnect cannot undo an explicit disconnect (38.4522ms)
+✔ actual engine unmount fences late reconnect and clears the deferred launcher (23.8154ms)
+✔ actual runtime late connection cannot reenable a disconnected engine or start model work (18.3522ms)
+✔ actual runtime local mutation gateway rejects disconnect or unmount before any new model dispatch (15.4191ms)
+✔ actual automatic review connection cannot undo disconnect, pause or unmount during its await (119.2409ms)
+✔ actual generation fences disconnect, reconnect and unmount across source and cached-result awaits (95.3648ms)
+✔ worker independently refuses nonportable and ambiguous paths before creating files (5.6326ms)
+✔ worker source budgets measure UTF8 bytes at exact per-file and aggregate boundaries (14.268ms)
+✔ Docker environment refuses unqualified remote routing and excludes service credentials (1.697ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 963.535

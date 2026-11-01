@@ -1,0 +1,13 @@
+file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/.test-runtime/jobs.mjs:109
+function intentConflict() { return Object.assign(new Error('Idempotency key reused for another intent or legacy intent requires reconciliation'), { statusCode: 409 }); }
+                                                 ^
+
+Error: Idempotency key reused for another intent or legacy intent requires reconciliation
+    at intentConflict (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/.test-runtime/jobs.mjs:109:50)
+    at enqueue (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/.test-runtime/jobs.mjs:119:15)
+    at async Module.pipelineStep (file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/.test-runtime/jobs.mjs:562:21)
+    at async file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/pipeline.mjs:14:255 {
+  statusCode: 409
+}
+
+Node.js v24.21.0

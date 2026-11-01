@@ -39,3 +39,8 @@ The fleet drains a bounded queue, records per-job outcomes, and stops admitting 
 The existing runner now supports the authorized trilogy snapshot job described in [`TRILOGY-JOB-BRIDGE.md`](../UNFINISHED-WORK/TRILOGY-JOB-BRIDGE.md). It verifies the granted Git candidate, exact imported snapshot and command before execution, then signs observed output only after successful execution and cleanup. Configure the trusted repository mirror, registered separate verifier and protected key file outside the candidate checkout. Keys are excluded from the container environment. No new worker fleet or scheduler is introduced.
 
 Focused checks using a simulated Docker CLI do not qualify a real host. Keep the existing host-capacity, pinned-image, permission and independent production-approval requirements above.
+
+
+### Portable source and local Docker endpoint policy
+
+The runner independently rejects Windows drive/alternate-stream/reserved names, traversal, secret paths and case aliases before writing any temporary snapshot. Per-file and total budgets count UTF8 bytes. Docker subprocesses receive only required platform/path variables, not OmniDev service/provider credentials. Unqualified named contexts and remote Docker host addresses refuse; the current policy requires the default context with a local Unix socket or local Windows named pipe. A deliberately named local context requires its own future qualification; do not weaken this check just to start a worker. Doctor uses the same environment policy. These source checks are not actual Docker-host qualification; the current owner deferred Windows restart and engine acceptance.

@@ -1,0 +1,17 @@
+evalmachine.<anonymous>:44
+                    if (!mounted.current)
+                    ^
+
+ReferenceError: mounted is not defined
+    at Object.<anonymous> (evalmachine.<anonymous>:44:21)
+    at step (evalmachine.<anonymous>:32:23)
+    at Object.next (evalmachine.<anonymous>:13:53)
+    at evalmachine.<anonymous>:7:71
+    at new Promise (<anonymous>)
+    at __awaiter (evalmachine.<anonymous>:3:12)
+    at Object.reconnect (evalmachine.<anonymous>:38:12)
+    at file:///C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-OMNIDEV-SWARM/tests/engine-header.mjs:11:15
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+
+Node.js v24.21.0
