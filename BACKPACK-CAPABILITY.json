@@ -154,21 +154,21 @@
     {
       "id": "native-boundary",
       "path": "worker/windows-appcontainer.mjs",
-      "sha256": "22359ca25d3f79750c224f6a164e0ebd7a4cc92901182c6a8e2c6c8631b9d57f",
+      "sha256": "60026e725806603f8a717bc0952fa8ec2417ff71a244dd19c77db4452aa01efd",
       "claimedLevel": "source",
       "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
     },
     {
       "id": "native-policy",
       "path": "lib/worker-policy.ts",
-      "sha256": "6c92ed648e6b63bdc55d40bd2b25dc87932edca0faf5ae1c658595d55acb090f",
+      "sha256": "fd518dcde5bb9a944d4bfd692ffd2cecd4a9e1a3780c6aed8a246629dbbc37b9",
       "claimedLevel": "source",
       "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
     },
     {
       "id": "native-manual",
       "path": "worker/WINDOWS-NATIVE-WORKER.md",
-      "sha256": "85e76fe782d03a3f000dfae64bab3aca2b113faa099c4233ab7d9cf728eba57a",
+      "sha256": "d1683e6ee5a6791cff3d637a1d7d74d9e01132b0e48a708578b7bcd866302258",
       "claimedLevel": "source",
       "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
     },

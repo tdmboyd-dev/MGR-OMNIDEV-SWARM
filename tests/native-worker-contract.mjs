@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
 import {nativeExecutionSummary} from '../worker/windows-appcontainer.mjs';
 import {nativeExecutionMatches} from '../worker/windows-worker.mjs';
 const sql=new DatabaseSync(':memory:');
@@ -73,6 +74,7 @@ test('native empty output retains bounded exit and stop diagnostics and cannot p
  const passing=nativeExecutionSummary({native:{ExitCode:0,Output:'actual test output\n',StopReason:null},hostStopped:null});assert.equal(passing.passed,true);assert.equal(passing.output,'actual test output\n');
  for(const output of ['', '  \n',undefined]){const result=nativeExecutionSummary({native:{ExitCode:0,Output:output}});assert.equal(result.passed,false);assert.equal(result.execution.outputEmpty,true);assert.match(result.output,/exit=0x00000000/);}
  const failed=nativeExecutionSummary({native:{ExitCode:0xc0000005,Output:'',StopReason:'timeout'}});assert.equal(failed.passed,false);assert.match(failed.output,/exit=0xc0000005; stop=timeout/);
+ const monitor=nativeExecutionSummary({native:{ExitCode:1,Output:'',StopReason:'writable-tree-policy',WritableErrorHResult:-2147024891}});assert.equal(monitor.execution.monitorErrorCode,-2147024891);assert.match(monitor.output,/monitor=0x80070005/);
  const stopped=nativeExecutionSummary({native:{ExitCode:0,Output:'partial original output'},hostStopped:'cancelled'});assert.equal(stopped.passed,false);assert.equal(stopped.output,'partial original output');assert.equal(stopped.execution.hostStopReason,'cancelled');
  const unknown=nativeExecutionSummary({native:{ExitCode:'0',StopReason:'PRIVATE_ERROR_MUST_NOT_BE_ECHOED'},hostStopped:'PRIVATE_HOST_MUST_NOT_BE_ECHOED'});assert.equal(unknown.passed,false);assert.equal(unknown.execution.exitCode,null);assert(!unknown.output.includes('PRIVATE_'));assert.equal(unknown.execution.stopReason,'unrecognized');
 });
@@ -82,19 +84,26 @@ test('native acknowledgment requires the same diagnostic values without dependin
  assert(nativeExecutionMatches(original,{outputEmpty:true,hostStopReason:null,stopReason:'timeout',exitCode:1}));assert(nativeExecutionMatches(undefined,undefined));
  assert(!nativeExecutionMatches(original,undefined));assert(!nativeExecutionMatches(undefined,original));assert(!nativeExecutionMatches({},{}));
  for(const [key,value]of Object.entries({exitCode:0,stopReason:null,hostStopReason:'cancelled',outputEmpty:false}))assert(!nativeExecutionMatches(original,{...original,[key]:value}),key);
+ assert(nativeExecutionMatches({...original,monitorErrorCode:-2147024891},{...original,monitorErrorCode:-2147024891}));assert(!nativeExecutionMatches({...original,monitorErrorCode:-2147024891},original));
 });
 
 test('native report persists validated diagnostics and refuses malformed or contradictory success claims',()=>{
  globalThis.__omniEnv.OMNI_WINDOWS_WORKER_POLICY_JSON=JSON.stringify(unitPolicy);
  try{
   const assignment={id:nonce,...nativeAssignment(nonce,scope),...scope,profile:'snapshot',expiresAt:Date.now()+60000};
-  const execution={exitCode:0,stopReason:null,hostStopReason:null,outputEmpty:false};
+  const execution={exitCode:0,stopReason:null,hostStopReason:null,outputEmpty:false,monitorErrorCode:null};
   const native={profileName:assignment.profileName,packageSid:'S-1-15-2-1-2-3-4-5-6-7',tokenIsAppContainer:true,capabilityCount:0,jobAssignedAtCreation:true,execution};
   const report={worker:'windows-appcontainer',assignment,launcherSha256:assignment.launcherSha256,runtimeSha256:assignment.runtimeSha256,qualificationDigest:assignment.qualificationDigest,passed:true,output:'real output',native,cleanup:{verifiedAbsent:true,activeProcessesAfter:0,profileDeletionHResult:0,workspaceAbsent:true}};
   assert.deepEqual(validateNativeReport(assignment,report).native.execution,execution);
+  const historical={exitCode:0,stopReason:null,hostStopReason:null,outputEmpty:false};assert.deepEqual(validateNativeReport(assignment,{...report,native:{...native,execution:historical}}).native.execution,historical);
   const legacy={...native};delete legacy.execution;assert.equal(validateNativeReport(assignment,{...report,native:legacy}).native.execution,undefined);
-  for(const e of [{...execution,exitCode:-1},{...execution,exitCode:0x100000000},{...execution,exitCode:'0'},{...execution,stopReason:'host secret'},{...execution,hostStopReason:'host secret'},{...execution,outputEmpty:'false'},{...execution,extra:true}])assert.throws(()=>validateNativeReport(assignment,{...report,passed:false,native:{...native,execution:e}}),/diagnostics are invalid/);
-  for(const e of [{...execution,exitCode:1},{...execution,exitCode:null},{...execution,stopReason:'timeout'},{...execution,hostStopReason:'cancelled'},{...execution,outputEmpty:true}])assert.throws(()=>validateNativeReport(assignment,{...report,native:{...native,execution:e}}),/contradict/);
+  for(const e of [{...execution,exitCode:-1},{...execution,exitCode:0x100000000},{...execution,exitCode:'0'},{...execution,stopReason:'host secret'},{...execution,hostStopReason:'host secret'},{...execution,outputEmpty:'false'},{...execution,monitorErrorCode:'host secret'},{...execution,monitorErrorCode:0x80000000},{...execution,extra:true}])assert.throws(()=>validateNativeReport(assignment,{...report,passed:false,native:{...native,execution:e}}),/diagnostics are invalid/);
+  for(const e of [{...execution,exitCode:1},{...execution,exitCode:null},{...execution,stopReason:'timeout'},{...execution,hostStopReason:'cancelled'},{...execution,outputEmpty:true},{...execution,monitorErrorCode:-2147024891}])assert.throws(()=>validateNativeReport(assignment,{...report,native:{...native,execution:e}}),/contradict/);
   const failed={exitCode:1,stopReason:'timeout',hostStopReason:null,outputEmpty:true};assert.deepEqual(validateNativeReport(assignment,{...report,passed:false,native:{...native,execution:failed}}).native.execution,failed);
  }finally{delete globalThis.__omniEnv.OMNI_WINDOWS_WORKER_POLICY_JSON;}
+});
+
+test('actual Windows monitor preserves missing-entry handling, denial, reparse and entry limits',{skip:process.platform!=='win32'},()=>{
+ const text=execFileSync('pwsh.exe',['-NoProfile','-NonInteractive','-File','tests/native-monitor-contract.ps1'],{encoding:'utf8',windowsHide:true,timeout:120000});
+ const result=JSON.parse(text.trim());assert.equal(result.passed,9);assert.equal(result.checks.length,9);
 });

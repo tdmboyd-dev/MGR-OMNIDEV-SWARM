@@ -78,9 +78,10 @@ export function nativeExecutionSummary(attempt){
  const stopReason=reason(value?.StopReason,['timeout','output-limit','write-budget','writable-tree-policy']);
  const hostStopReason=reason(attempt?.hostStopped,['cancelled','native-host-timeout','native-host-output-limit']);
  const outputEmpty=typeof value?.Output!=='string'||!value.Output.trim();
- const execution={exitCode,stopReason,hostStopReason,outputEmpty};
- return {execution,passed:exitCode===0&&stopReason===null&&hostStopReason===null&&!outputEmpty,
-  output:outputEmpty?`Native execution failed: exit=${exitCode===null?'unavailable':'0x'+exitCode.toString(16).padStart(8,'0')}; stop=${stopReason??'none'}; host=${hostStopReason??'none'}; output=empty`:value.Output};
+ const monitorErrorCode=Number.isInteger(value?.WritableErrorHResult)&&value.WritableErrorHResult>=-0x80000000&&value.WritableErrorHResult<=0x7fffffff&&value.WritableErrorHResult!==0?value.WritableErrorHResult:null;
+ const execution={exitCode,stopReason,hostStopReason,outputEmpty,monitorErrorCode};
+ return {execution,passed:exitCode===0&&stopReason===null&&hostStopReason===null&&monitorErrorCode===null&&!outputEmpty,
+  output:outputEmpty?`Native execution failed: exit=${exitCode===null?'unavailable':'0x'+exitCode.toString(16).padStart(8,'0')}; stop=${stopReason??'none'}; host=${hostStopReason??'none'}; monitor=${monitorErrorCode===null?'none':'0x'+(monitorErrorCode>>>0).toString(16).padStart(8,'0')}; output=empty`:value.Output};
 }
 export async function executeNative(job,{signal}={}){
  const policy=await loadNativePolicy(),base=resolve(process.env.OMNI_NATIVE_WORKER_ROOT||join(tmpdir(),'omnidev-native-worker'));

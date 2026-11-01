@@ -9,7 +9,7 @@ const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex
 const idPattern=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
 export function nativeExecutionMatches(left,right){
  if(left===undefined&&right===undefined)return true;
- return !!left&&!!right&&['exitCode','stopReason','hostStopReason','outputEmpty'].every(key=>Object.hasOwn(left,key)&&Object.hasOwn(right,key)&&left[key]===right[key]);
+ return !!left&&!!right&&['exitCode','stopReason','hostStopReason','outputEmpty'].every(key=>Object.hasOwn(left,key)&&Object.hasOwn(right,key)&&left[key]===right[key])&&left.monitorErrorCode===right.monitorErrorCode;
 }
 async function noLinks(path){for(let p=resolve(path);;p=dirname(p)){if((await lstat(p)).isSymbolicLink())throw Error('Receipt path contains a link');if(dirname(p)===p)break;}}
 export async function runOnce(configPath,{expectedJobId}={}){

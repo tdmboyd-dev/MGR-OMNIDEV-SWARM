@@ -54,7 +54,7 @@ public static class OmniAppContainerHost {
  public sealed class Outcome {
   public string Profile,PackageSid,ProfileStorage,Output,StopReason; public uint ProcessId,ExitCode,ActiveProcessesAfter,TotalProcesses;
   public ulong WriteBytesObserved,ScratchBytesObserved,PeakJobMemoryBytes,ConfiguredJobMemoryBytes;public int WritableEntriesObserved;
-  public int TokenIsAppContainer,CapabilityCount,ProfileDeletionHResult;
+  public int TokenIsAppContainer,CapabilityCount,ProfileDeletionHResult,WritableErrorHResult;
   public bool JobAssignedBeforeResume,JobAssignedAtCreation,CleanupVerified;
  }
  static void Check(bool success,string operation){if(!success)throw new Win32Exception(Marshal.GetLastWin32Error(),operation);}
@@ -68,7 +68,38 @@ public static class OmniAppContainerHost {
   for(DirectoryInfo parent=new DirectoryInfo(root);parent!=null;parent=parent.Parent)if((parent.Attributes&FileAttributes.ReparsePoint)!=0)throw new InvalidOperationException("Reparse ancestor denied");
   foreach(string path in Directory.EnumerateFileSystemEntries(root,"*",SearchOption.AllDirectories))if((File.GetAttributes(path)&FileAttributes.ReparsePoint)!=0)throw new InvalidOperationException("Reparse entry denied");
  }
- static long MeasureWritable(string directory,ref int count){long total=0;if(!Directory.Exists(directory))return 0;foreach(string path in Directory.EnumerateFileSystemEntries(directory)){if(++count>4096)throw new InvalidOperationException("Writable entry budget exceeded");var attributes=File.GetAttributes(path);if((attributes&FileAttributes.ReparsePoint)!=0)throw new InvalidOperationException("Writable reparse entry denied");if((attributes&FileAttributes.Directory)!=0)total+=MeasureWritable(path,ref count);else total+=new FileInfo(path).Length;}return total;}
+ static long MeasureWritable(string directory,ref int count,bool allowMissing=false){
+  System.Collections.Generic.List<FileSystemInfo> entries;
+  for(int retry=0;;retry++){
+   try{
+    var rootAttributes=File.GetAttributes(directory);
+    if((rootAttributes&FileAttributes.ReparsePoint)!=0)throw new InvalidOperationException("Writable reparse directory denied");
+    if((rootAttributes&FileAttributes.Directory)==0)throw new InvalidOperationException("Writable directory changed type");
+    entries=new System.Collections.Generic.List<FileSystemInfo>();
+    // Enumeration supplies cached attributes and length together, avoiding a
+    // second pathname lookup while the child deletes temporary files.
+    foreach(var entry in new DirectoryInfo(directory).EnumerateFileSystemInfos()){
+     if(++count>4096)throw new InvalidOperationException("Writable entry budget exceeded");
+     entries.Add(entry);
+    }
+    break;
+   }catch(FileNotFoundException)when(allowMissing){return 0;}
+    catch(DirectoryNotFoundException)when(allowMissing){return 0;}
+    // A directory marked for deletion can briefly return Access Denied on
+    // Windows. Retry only nested enumeration twice; persistent denial stops.
+    catch(UnauthorizedAccessException)when(allowMissing&&retry<2){Thread.Sleep(1);}
+  }
+  long total=0;
+  foreach(var entry in entries){
+   var attributes=entry.Attributes;
+   if((attributes&FileAttributes.ReparsePoint)!=0)throw new InvalidOperationException("Writable reparse entry denied");
+   if((attributes&FileAttributes.Directory)!=0)total+=MeasureWritable(entry.FullName,ref count,true);
+   else total+=((FileInfo)entry).Length;
+  }
+  // Top-level roots, persistent access errors, reparse points and entry limits
+  // remain strict. Independent JobObject I/O accounting still counts writes.
+  return total;
+ }
  static void Grant(string path,string owner,string sid,bool writable){
   // Replace ACLs only on this newly-created attempt tree. No broad package groups.
   string rights=writable?"FA":"GRGX";
@@ -122,7 +153,7 @@ public static class OmniAppContainerHost {
    File.WriteAllText(ownedRoot+".host-state.json",System.Text.Json.JsonSerializer.Serialize(new{profileName=profile,processId=pi.pid,profileCreated=true,profileStorage=result.ProfileStorage,jobAssignedAtCreation=result.JobAssignedAtCreation,packageSid=result.PackageSid,tokenIsAppContainer=result.TokenIsAppContainer,capabilityCount=result.CapabilityCount}));
    if(probeBeforeResumeMs>0)Thread.Sleep(probeBeforeResumeMs);
    Check(ResumeThread(pi.thread)!=uint.MaxValue,"ResumeContainedThread");var clock=Stopwatch.StartNew();
-   while(WaitForSingleObject(pi.process,25)==0x102){try{int entries=0;long bytes=MeasureWritable(scratch,ref entries)+MeasureWritable(result.ProfileStorage,ref entries);result.ScratchBytesObserved=Math.Max(result.ScratchBytesObserved,(ulong)bytes);result.WritableEntriesObserved=Math.Max(result.WritableEntriesObserved,entries);if(bytes>8L*1024*1024){result.StopReason="write-budget";break;}}catch{result.StopReason="writable-tree-policy";break;}ACCOUNTING_IO io;Check(QueryIo(job,8,out io,(uint)Marshal.SizeOf<ACCOUNTING_IO>(),IntPtr.Zero),"ReadJobIoBudget");result.WriteBytesObserved=io.io.e;if(io.io.e>8UL*1024*1024){result.StopReason="write-budget";break;}if(Volatile.Read(ref exceeded)!=0){result.StopReason="output-limit";break;}if(clock.ElapsedMilliseconds>=timeoutMs){result.StopReason="timeout";break;}}
+   while(WaitForSingleObject(pi.process,25)==0x102){try{int entries=0;long bytes=MeasureWritable(scratch,ref entries)+MeasureWritable(result.ProfileStorage,ref entries);result.ScratchBytesObserved=Math.Max(result.ScratchBytesObserved,(ulong)bytes);result.WritableEntriesObserved=Math.Max(result.WritableEntriesObserved,entries);if(bytes>8L*1024*1024){result.StopReason="write-budget";break;}}catch(Exception error){result.WritableErrorHResult=error.HResult;result.StopReason="writable-tree-policy";break;}ACCOUNTING_IO io;Check(QueryIo(job,8,out io,(uint)Marshal.SizeOf<ACCOUNTING_IO>(),IntPtr.Zero),"ReadJobIoBudget");result.WriteBytesObserved=io.io.e;if(io.io.e>8UL*1024*1024){result.StopReason="write-budget";break;}if(Volatile.Read(ref exceeded)!=0){result.StopReason="output-limit";break;}if(clock.ElapsedMilliseconds>=timeoutMs){result.StopReason="timeout";break;}}
    if(Volatile.Read(ref exceeded)!=0)result.StopReason="output-limit";
    Check(TerminateJobObject(job,1),"TerminateOwnedJobTree");WaitForSingleObject(pi.process,5000);Check(GetExitCodeProcess(pi.process,out result.ExitCode),"ReadExitStatus");
    ACCOUNTING state=new ACCOUNTING();for(int retry=0;retry<200;retry++){Check(QueryInformationJobObject(job,1,out state,(uint)Marshal.SizeOf<ACCOUNTING>(),IntPtr.Zero),"ReadJobAccounting");if(state.active==0)break;Thread.Sleep(25);}result.ActiveProcessesAfter=state.active;result.TotalProcesses=state.total;

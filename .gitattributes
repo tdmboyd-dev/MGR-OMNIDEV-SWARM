@@ -50,3 +50,4 @@
 /worker/windows-appcontainer.mjs text eol=lf
 /lib/worker-policy.ts text eol=lf
 /worker/WINDOWS-NATIVE-WORKER.md text eol=lf
+/tests/native-monitor-contract.ps1 text eol=lf
