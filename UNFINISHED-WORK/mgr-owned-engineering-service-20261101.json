@@ -1,0 +1,37 @@
+{
+  "schema": "mgr.owned-engineering-service.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-11-01T22:45:35.794Z",
+  "sourceCommit": "7068e8111ad52a5ab3b582864437d524c47906d7",
+  "qualification": "real-local-owner-native-journey-and-byte-identical-runtime-qualification-not-production",
+  "fullAcceptancePromotions": 0,
+  "canonicalScopeUnchanged": true,
+  "fullVerification": {
+    "report": "UNFINISHED-WORK/evidence/owned-engineering-20261101/type-fix-run/report.json",
+    "passedProfiles": 8,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 8,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "ownerProgress": {
+    "completed": [
+      {
+        "title": "Original engineering service reaches Tevin approval, native report and restart/replay",
+        "observed": "Actual protected Windows owner journey8/8; original91-profile run90pass/1type failure, current correction8/8 and all37runtime modules identical. Full product/production unassessed.",
+        "evidence": [
+          "UNFINISHED-WORK/evidence/owned-engineering-20261101/REPORT.md",
+          "UNFINISHED-WORK/evidence/owned-engineering-20261101/NATIVE-RESULT.json",
+          "UNFINISHED-WORK/evidence/owned-engineering-20261101/RUNTIME-EQUIVALENCE.json"
+        ],
+        "remaining": [
+          "Trusted candidate/scope enrollment, safe policy migration and permanent maintenance activation/rollback",
+          "Independent signed Code Monster candidate and OmniSight observation contracts",
+          "Full original source/product/production and measured cost/quality acceptance"
+        ]
+      }
+    ]
+  }
+}

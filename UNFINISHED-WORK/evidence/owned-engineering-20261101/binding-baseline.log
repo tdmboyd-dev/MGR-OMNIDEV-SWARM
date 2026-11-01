@@ -1,0 +1,161 @@
+✖ current native binding uses original candidate, immutable oracle, workspace and enrolled policy (7.7521ms)
+✖ binding distinguishes changed workspace from a valid applied candidate (0.7848ms)
+✖ binding refuses a changed job during its asynchronous observation (1.3693ms)
+✖ reserved verification admits only its exact internal request and current bound source (1.2666ms)
+✖ internal verification claim refuses substituted workspaceId (1.5257ms)
+✖ internal verification claim refuses substituted jobId (5.7296ms)
+✖ internal verification claim refuses substituted sourceDigest (0.6723ms)
+✖ internal verification claim refuses substituted candidateDigest (0.7265ms)
+✖ internal verification claim refuses substituted testManifestDigest (4.496ms)
+✖ internal verification claim refuses substituted workspaceDataDigest (1.637ms)
+✖ project edit immediately before claim SQL cannot retain an obsolete assignment (0.7987ms)
+✖ internal admission cannot waive an unreserved job or unknown execution (0.679ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 0
+ℹ fail 12
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 464.5175
+
+✖ failing tests:
+
+test at tests\engineering-current-binding.mjs:33:1
+✖ current native binding uses original candidate, immutable oracle, workspace and enrolled policy (7.7521ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:34:39)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at tests\engineering-current-binding.mjs:38:1
+✖ binding distinguishes changed workspace from a valid applied candidate (0.7848ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:39:154)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests\engineering-current-binding.mjs:42:1
+✖ binding refuses a changed job during its asynchronous observation (1.3693ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:43:147)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests\engineering-current-binding.mjs:45:1
+✖ reserved verification admits only its exact internal request and current bound source (1.2666ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at admission (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:32:46)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:46:34)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests\engineering-current-binding.mjs:50:120
+✖ internal verification claim refuses substituted workspaceId (1.5257ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at admission (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:32:46)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:51:34)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests\engineering-current-binding.mjs:50:120
+✖ internal verification claim refuses substituted jobId (5.7296ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at admission (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:32:46)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:51:34)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests\engineering-current-binding.mjs:50:120
+✖ internal verification claim refuses substituted sourceDigest (0.6723ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at admission (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:32:46)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:51:34)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests\engineering-current-binding.mjs:50:120
+✖ internal verification claim refuses substituted candidateDigest (0.7265ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at admission (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:32:46)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:51:34)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests\engineering-current-binding.mjs:50:120
+✖ internal verification claim refuses substituted testManifestDigest (4.496ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at admission (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:32:46)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:51:34)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests\engineering-current-binding.mjs:50:120
+✖ internal verification claim refuses substituted workspaceDataDigest (1.637ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at admission (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:32:46)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:51:34)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests\engineering-current-binding.mjs:53:1
+✖ project edit immediately before claim SQL cannot retain an obsolete assignment (0.7987ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at admission (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:32:46)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:54:34)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests\engineering-current-binding.mjs:56:1
+✖ internal admission cannot waive an unreserved job or unknown execution (0.679ms)
+  TypeError: jobs.engineeringBinding is not a function
+      at admission (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:32:46)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/engineering-current-binding.mjs:57:46)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

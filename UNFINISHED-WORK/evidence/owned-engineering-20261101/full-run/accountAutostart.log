@@ -1,0 +1,3 @@
+PASS saved account settings automatically start one inference and stage candidate with actual progress milestones
+PASS missing preferences open settings without spending on an arbitrary model
+PASS an active local run rejects another start

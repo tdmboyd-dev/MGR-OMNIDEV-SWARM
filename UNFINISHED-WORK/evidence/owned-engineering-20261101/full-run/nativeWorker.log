@@ -1,0 +1,14 @@
+✔ an expired native assignment cannot be reissued or appear in the native queue (94.9192ms)
+✔ native enrollment is absent by default, malformed policy/nonce deny, and missing policy never writes an assignment (3.6147ms)
+✔ native credentials cannot use Docker scope, model/audit/recovery actions, or another worker report identity (48.5275ms)
+✔ native report rejects changed host/runtime/qualification/profile and incomplete process/cleanup proof (8.3113ms)
+✔ native source/candidate/command allowlists, immutable oracle and distinct credentials are enforced (2.9387ms)
+✔ model output cannot weaken the native test oracle before candidate persistence (20.149ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 193.9479

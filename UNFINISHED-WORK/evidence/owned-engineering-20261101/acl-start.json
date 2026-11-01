@@ -1,0 +1,11 @@
+{
+  "scope": "Actual disposable owner HTTP -> original SDK/MCP -> protected OmniDev SQLite/service -> exact-qualified Windows AppContainer -> original report/ONE save -> fresh-process restart/replay. Injected model only; no provider, permanent owner database, production signer or signed Trilogy worker.",
+  "checks": [],
+  "newInferenceCalls": 0,
+  "actualPrivateWindowsPermissions": true,
+  "permanentOwnerDatabaseTouched": false,
+  "startErrorCode": "owner-omnidev-private-config-permissions-required",
+  "passed": false,
+  "error": "owned-connection-qualification-failed",
+  "failedFixturePreserved": true
+}

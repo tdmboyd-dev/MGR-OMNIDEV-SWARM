@@ -51,3 +51,8 @@
 /lib/worker-policy.ts text eol=lf
 /worker/WINDOWS-NATIVE-WORKER.md text eol=lf
 /tests/native-monitor-contract.ps1 text eol=lf
+
+
+/UNFINISHED-WORK/evidence/owned-engineering-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/UNFINISHED-WORK/evidence/owned-engineering-20261101/**/*.log -diff
+/UNFINISHED-WORK/evidence/owned-engineering-20261101/*.log -diff
