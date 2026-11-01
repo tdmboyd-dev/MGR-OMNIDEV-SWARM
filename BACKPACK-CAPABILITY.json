@@ -83,6 +83,18 @@
         "native-policy",
         "native-manual"
       ]
+    },
+    {
+      "name": "native-backpack-context",
+      "kind": "cli",
+      "entrypoint": "node scripts/run-native-with-backpack.mjs --config C:/private/workflow.json",
+      "claimedAvailability": "implemented-local",
+      "permission": "Trusted owner host configuration, existing enrolled Backpack project, exact existing authorized native job and qualified worker policy required; no command, root, expiry or acceptance grant.",
+      "effects": "execute",
+      "evidenceIds": [
+        "native-context-source",
+        "native-context-manual"
+      ]
     }
   ],
   "dependencies": [
@@ -149,16 +161,30 @@
     {
       "id": "native-policy",
       "path": "lib/worker-policy.ts",
-      "sha256": "07a852815560708e8fd382069386aa13962e8493cb23d5663893ea9a52c68672",
+      "sha256": "d44aafdadfa5f20c5c7542d85bb24a8baad8dda8f35465ee733676a30cef06ca",
       "claimedLevel": "source",
       "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
     },
     {
       "id": "native-manual",
       "path": "worker/WINDOWS-NATIVE-WORKER.md",
-      "sha256": "eaa8c21207f0244a57a4a67b82e43fb98e0814343f15cc28cd6df4a9efdfbfd6",
+      "sha256": "1b1db7b6d872575b5ec4649311350bb5cc0e8cbfac96343e0afc921f0e0e82de",
       "claimedLevel": "source",
       "meaning": "Freshness of inspected source; current actual host/workflow qualification is recorded separately."
+    },
+    {
+      "id": "native-context-source",
+      "path": "scripts/native-backpack-context.mjs",
+      "sha256": "d3fbb39e089296642d058a2e7844ad6658a91f9f5f8ddebfde8bc356bbfca225",
+      "claimedLevel": "source",
+      "meaning": "Original native host composition and operator guide; source freshness is not independent production or full product acceptance."
+    },
+    {
+      "id": "native-context-manual",
+      "path": "docs/NATIVE-BACKPACK-WORKFLOW.md",
+      "sha256": "2fe4a2a8fab9449d0c02132707b075a10cbb85e5d386472fedc2f31b548314a5",
+      "claimedLevel": "source",
+      "meaning": "Original native host composition and operator guide; source freshness is not independent production or full product acceptance."
     }
   ]
 }

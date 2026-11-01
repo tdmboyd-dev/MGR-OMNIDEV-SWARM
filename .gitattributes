@@ -41,3 +41,4 @@
 /UNFINISHED-WORK/evidence/native-verification-custody-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /UNFINISHED-WORK/evidence/native-verification-custody-20261101/**/*.log -diff
 /UNFINISHED-WORK/evidence/native-verification-custody-20261101/*.txt -diff
+/docs/NATIVE-BACKPACK-WORKFLOW.md text eol=lf

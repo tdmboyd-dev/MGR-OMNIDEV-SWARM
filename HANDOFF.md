@@ -1,3 +1,11 @@
+# Native Backpack context reconciled with current custody - November 1, 2026
+
+The new context-before-job/source-linked-note adapter and optional expected-job fence are now merged with current runtimeee24e16/c5293a5 custody and lifecycle protection, preserving both changes. Existing verifier discovers88profiles, including all three custody additions and nativeBackpackContext. Pre-merge context source8bf8d3e passed85/85 and its85logs were rehashed; canonical custody source independently had87/87. Neither result is an88-profile combined pass. Fresh combined qualification is next. Worker download rebuilt/check-verified fromd81ff860a98cd0ccd4a95057c608a0a14ab57f28,15sources/16entries/97658bytes/SHA25631c257314fd0f1521816b8111acad41b5e374523c3dc6c00d8502a59dd6c0c35.
+
+Read docs/NATIVE-BACKPACK-WORKFLOW.md and UNFINISHED-WORK/evidence/native-backpack-20261101/REPORT.md. The capability card now exposes the existing native context CLI, its reviewed source and manual without enabling ambient execution. Source/worker/hosted/production acceptance stays distinct. Preserve the original174/441/28 and other agent's active permanent Tevin maintenance bridge work; this adapter adds no duplicate scheduler or canonical job store.
+
+---
+
 # Verification ownership and job lifecycle repair — November 1, 2026
 
 The current completion branch omitted several protections already present on the older repair branch. Actual SQLite baseline failures reproduced stale cancel/reject/retry/attempt-cap and rollback decisions, held/unknown verification mutation, recovery/source removal and native-claim races. Original baseline logs remain in UNFINISHED-WORK/evidence/native-verification-custody-20261101/. Selected adaptation preserves newer signed Trilogy, worker correlation, native oracle/policy, receipts, source retention and atomic audited recovery; no wholesale branch replacement.
