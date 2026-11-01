@@ -9,9 +9,9 @@ This is a derived view of **174 original requirements, 441 exact acceptance clau
 | Requirements with committed source | 137/174 | 78.7% | Code location verified; not full acceptance. |
 | Recorded implemented, acceptance open | 52/174 | 29.9% | Existing implementation still needs its complete proof. |
 | Original requirements fully accepted | 0/174 | 0.0% | Every original acceptance condition is satisfied. |
-| Last verified local test groups passed | 79/79 | 100.0% | Test pass rate; not product completion. |
+| Last verified local test groups passed | 80/80 | 100.0% | Test pass rate; not product completion. |
 
-Source snapshot: `de006f6611ff802811c052d0d71ed8184c17f0dd`. Latest full local report: [test receipt](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/UNFINISHED-WORK/evidence/backpack-readiness-20261030/combined-run/report.json).
+Source snapshot: `90cda3ee1a698ced56324cf398c0cee0de68cbb0`. Latest full local report: [test receipt](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/UNFINISHED-WORK/evidence/durable-completion-20261101/report.json).
 
 ## Completed behavior and saved proof
 
@@ -177,6 +177,18 @@ Related original IDs: .
 - Evidence: UNFINISHED-WORK/evidence/backpack-readiness-20261030/integration-combined-summary.json
 - Remaining qualification: No default-branch merge, live provider, physical Docker, browser/assistive or independently certified original-parent acceptance is implied.
 
+### Durable companion completion and current local integration
+
+Reproduced and repaired status-read overwrite and asynchronous ownership failures. Current committed source passed80/80 fixed profiles; fresh actual local three-product Git/SQLite/HTTP integration passed14 checks. Backpack0.6.0 persisted and reopened source-linked evidence through7 protocol calls without mirrored canonical jobs.
+
+Related original IDs: .
+
+- Evidence: UNFINISHED-WORK/mgr-durable-completion-20261101.json
+- Evidence: UNFINISHED-WORK/evidence/durable-completion-20261101/report.json
+- Evidence: UNFINISHED-WORK/evidence/durable-completion-20261101/integration-summary.json
+- Remaining qualification: Docker is installed and its missing launcher registration was restored after renewed owner authorization, but the engine is stopped awaiting effective Windows virtualization/restart. No container/worker qualification.
+- Remaining qualification: Hosted OAuth/browser/current Tevin, original independent acceptance, remaining older native lane reconciliation and broader product obligations remain open.
+
 ### Worker results survive the trip back to the app
 
 Valid escaped output fits the bounded HTTP request; failure diagnostics remain inside the output allowance.
@@ -253,7 +265,7 @@ Earlier implementation note: GitHub identity tdmboyd-dev and imported TIME snaps
 
 Dependencies: None recorded.
 
-Source: [lib/github-account.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/github-account.ts), [lib/repository.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/repository.ts).
+Source: [lib/github-account.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/github-account.ts), [lib/repository.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/repository.ts).
 
 ### AUTH-02 — Implement approved ChatGPT plan access
 
@@ -305,7 +317,7 @@ Earlier implementation note: Owner verified live local account model catalog, GP
 
 Dependencies: None recorded.
 
-Source: [lib/providers.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/providers.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [components/runtime-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/runtime-workspace.tsx), [companion/chatgpt.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/companion/chatgpt.mjs).
+Source: [lib/providers.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/providers.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [components/runtime-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/runtime-workspace.tsx), [companion/chatgpt.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/companion/chatgpt.mjs).
 
 Additional audit BP-02: Account-first UI can be mistaken for approved hosted model usage or live GitHub write integration.
 
@@ -359,7 +371,7 @@ Earlier implementation note: A common account interface exists; Claude, Gemini a
 
 Dependencies: AUTH-02.
 
-Source: [lib/providers.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/providers.ts), [lib/github-account.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/github-account.ts).
+Source: [lib/providers.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/providers.ts), [lib/github-account.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/github-account.ts).
 
 ### AUTH-04 — Unify connection lifecycle and policies
 
@@ -415,7 +427,7 @@ Earlier implementation note: System catalog registrations and GitHub account set
 
 Dependencies: AUTH-01.
 
-Source: [db/schema.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/db/schema.ts), [lib/github-account.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/github-account.ts).
+Source: [db/schema.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/db/schema.ts), [lib/github-account.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/github-account.ts).
 
 Additional audit BP-07: “Consent pending” does not fully specify delayed admin approvals, organizational ownership transfer or partner installation handoff.
 
@@ -464,7 +476,7 @@ Earlier implementation note: Portable Docker runner and authenticated worker API
 
 Dependencies: None recorded.
 
-Source: [worker/runner.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/worker/runner.mjs), [worker/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/worker/README.md), [app/api/worker/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/worker/route.ts).
+Source: [worker/runner.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/worker/runner.mjs), [worker/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/worker/README.md), [app/api/worker/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/worker/route.ts).
 
 ### RUN-02 — Turn swarm definitions into executable specialists
 
@@ -513,7 +525,7 @@ Earlier implementation note: Persistent job-agent identities, lifecycle, bounded
 
 Dependencies: AUTH-02, RUN-01.
 
-Source: [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/catalog.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/catalog.ts), [lib/agent-os.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/agent-os.ts), [app/api/agents/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/agents/route.ts).
+Source: [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/catalog.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/catalog.ts), [lib/agent-os.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/agent-os.ts), [app/api/agents/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/agents/route.ts).
 
 Additional audit AK-08: topology optimization can violate accountability during a live handoff
 
@@ -605,7 +617,7 @@ Earlier remaining-action wording (retained history; superseded by the scoped upd
 
 Dependencies: RUN-01.
 
-Source: [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/repository.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/repository.ts), [lib/control-plane.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/control-plane.ts).
+Source: [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/repository.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/repository.ts), [lib/control-plane.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/control-plane.ts).
 
 ### DEV-01 — Build general code generation and refactoring
 
@@ -663,7 +675,7 @@ Earlier implementation note: Supported snapshot edits, stale baselines, unsafe p
 
 Dependencies: AUTH-02, RUN-01, QA-02.
 
-Source: [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/analyzer.ts).
+Source: [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/analyzer.ts).
 
 ### DEV-02 — Complete repository delivery and CI evidence
 
@@ -746,7 +758,7 @@ Earlier remaining-action wording (retained history; superseded by the scoped upd
 
 Dependencies: AUTH-01, RUN-01, QA-02.
 
-Source: [lib/repository.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/repository.ts), [lib/github.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/github.ts).
+Source: [lib/repository.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/repository.ts), [lib/github.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/github.ts).
 
 ### DEV-03 — Generate delivery, migration and infrastructure artifacts
 
@@ -788,7 +800,7 @@ Earlier implementation note: No specialized CI/CD, schema migration or infrastru
 
 Dependencies: DEV-01, OPS-03.
 
-Source: [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/agent-os.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/agent-os.ts).
+Source: [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/agent-os.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/agent-os.ts).
 
 ### GRAPH-01 — Build a unified typed intelligence graph
 
@@ -837,7 +849,7 @@ Earlier implementation note: Unified ownership/provenance graph API covers persi
 
 Dependencies: DATA-01, INT-01.
 
-Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/analyzer.ts), [db/schema.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/db/schema.ts), [lib/intelligence.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/intelligence.ts).
+Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/analyzer.ts), [db/schema.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/db/schema.ts), [lib/intelligence.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/intelligence.ts).
 
 Additional audit AK-13: identity merge and split need downstream revision semantics
 
@@ -889,7 +901,7 @@ Earlier implementation note: Regex extraction does not establish full function/m
 
 Dependencies: GRAPH-01.
 
-Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/analyzer.ts).
+Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/analyzer.ts).
 
 ### GAP-01 — Expand the missing-things engine
 
@@ -944,7 +956,7 @@ Earlier implementation note: Rescans preserve manual dispositions and reconcile 
 
 Dependencies: GRAPH-02, BIZ-01.
 
-Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/analyzer.ts), [lib/repo-audit.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/repo-audit.ts), [lib/workspace-planning.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/workspace-planning.ts), [lib/workspace-scope.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/workspace-scope.ts), [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/workspace/route.ts).
+Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/analyzer.ts), [lib/repo-audit.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/repo-audit.ts), [lib/workspace-planning.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/workspace-planning.ts), [lib/workspace-scope.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/workspace-scope.ts), [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/workspace/route.ts).
 
 ### DATA-01 — Expand persistence and artifact storage
 
@@ -996,7 +1008,7 @@ Earlier implementation note: D1 stores records, snapshots, jobs and encrypted se
 
 Dependencies: None recorded.
 
-Source: [db/store.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/db/store.ts), [db/schema.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/db/schema.ts).
+Source: [db/store.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/db/store.ts), [db/schema.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/db/schema.ts).
 
 Additional audit SI-07: Reference SQL has service-level obligations that cannot be mistaken for database guarantees
 
@@ -1059,7 +1071,7 @@ Earlier implementation note: Project-scoped lexical retrieval, structured decisi
 
 Dependencies: DATA-01, SEC-02.
 
-Source: [lib/intelligence.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/intelligence.ts), [app/api/intelligence/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/intelligence/route.ts), [lib/workspace-storage.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/workspace-storage.ts), [components/intelligence-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/intelligence-workspace.tsx), [components/decision-record.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/decision-record.tsx).
+Source: [lib/intelligence.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/intelligence.ts), [app/api/intelligence/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/intelligence/route.ts), [lib/workspace-storage.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/workspace-storage.ts), [components/intelligence-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/intelligence-workspace.tsx), [components/decision-record.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/decision-record.tsx).
 
 Additional audit AK-16: decision memory needs authority expiration and reversal effects
 
@@ -1142,7 +1154,7 @@ Earlier remaining-action wording (retained history; superseded by the scoped upd
 
 Dependencies: None recorded.
 
-Source: [lib/intelligence.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/intelligence.ts), [tests/platform.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/platform.mjs).
+Source: [lib/intelligence.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/intelligence.ts), [tests/platform.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/platform.mjs).
 
 ### SEC-01 — Build real security intelligence
 
@@ -1185,7 +1197,7 @@ Earlier implementation note: Security signals are heuristic; no live vulnerabili
 
 Dependencies: RUN-01, GRAPH-02.
 
-Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/analyzer.ts), [lib/agent-os.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/agent-os.ts).
+Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/analyzer.ts), [lib/agent-os.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/agent-os.ts).
 
 ### SEC-02 — Implement authorization beyond a single owner
 
@@ -1228,7 +1240,7 @@ Earlier implementation note: Owner-private Sites gateway is the access boundary.
 
 Dependencies: None recorded.
 
-Source: [lib/control-plane.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/control-plane.ts).
+Source: [lib/control-plane.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/control-plane.ts).
 
 Additional audit AK-14: authorization-sensitive ranking needs side-channel qualification
 
@@ -1314,7 +1326,7 @@ Earlier implementation note: AES-GCM storage and several secret redaction patter
 
 Dependencies: None recorded.
 
-Source: [lib/providers.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/providers.ts), [lib/github-account.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/github-account.ts).
+Source: [lib/providers.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/providers.ts), [lib/github-account.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/github-account.ts).
 
 ### QA-01 — Verify hosted end-to-end behavior
 
@@ -1369,7 +1381,7 @@ Earlier remaining-action wording (retained history; superseded by the scoped upd
 
 Dependencies: None recorded.
 
-Source: [tests/acceptance.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/acceptance.mjs).
+Source: [tests/acceptance.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/acceptance.mjs).
 
 ### QA-02 — Test actual application behavior
 
@@ -1452,7 +1464,7 @@ Earlier remaining-action wording (retained history; superseded by the scoped upd
 
 Dependencies: RUN-01.
 
-Source: [tests/runtime.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/runtime.mjs).
+Source: [tests/runtime.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/runtime.mjs).
 
 ### QA-03 — Add performance, resilience and evaluation suites
 
@@ -1504,7 +1516,7 @@ Earlier implementation note: No production load, chaos, agent-quality or busines
 
 Dependencies: QA-02, DATA-01.
 
-Source: [tests/integration-fleet.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/integration-fleet.mjs).
+Source: [tests/integration-fleet.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/integration-fleet.mjs).
 
 Additional audit AK-07: fairness policy needs starvation and incident-abuse bounds
 
@@ -1584,7 +1596,7 @@ Earlier implementation note: No live target telemetry or production incident str
 
 Dependencies: INT-01.
 
-Source: [lib/control-plane.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/control-plane.ts).
+Source: [lib/control-plane.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/control-plane.ts).
 
 ### OPS-02 — Build production diagnosis and repair loop
 
@@ -1632,7 +1644,7 @@ Earlier implementation note: Self-healing currently repairs stored snapshot docu
 
 Dependencies: OPS-01, OPS-03, TWIN-01, QA-02.
 
-Source: [companion/engine/supervisor.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/companion/engine/supervisor.mjs).
+Source: [companion/engine/supervisor.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/companion/engine/supervisor.mjs).
 
 ### OPS-03 — Add deployment and rollback adapters
 
@@ -1674,7 +1686,7 @@ Earlier implementation note: No production deployment adapter or authorized depl
 
 Dependencies: RUN-01, AUTH-04.
 
-Source: [companion/engine/update.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/companion/engine/update.mjs).
+Source: [companion/engine/update.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/companion/engine/update.mjs).
 
 ### OPS-04 — Operate OmniDev itself reliably
 
@@ -1716,7 +1728,7 @@ Earlier implementation note: Sites publication succeeds, but platform SLOs, aler
 
 Dependencies: RUN-01, DATA-03.
 
-Source: [worker/runner.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/worker/runner.mjs).
+Source: [worker/runner.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/worker/runner.mjs).
 
 ### TWIN-01 — Build project digital twins
 
@@ -1768,7 +1780,7 @@ Earlier implementation note: Current twin is an illustrative queueing/capacity s
 
 Dependencies: RUN-01, GRAPH-02, OPS-01, DATA-01.
 
-Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/analyzer.ts), [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/workspace/route.ts), [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/page.tsx).
+Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/analyzer.ts), [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/workspace/route.ts), [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/page.tsx).
 
 ### TWIN-02 — Add cost and revenue impact models
 
@@ -1820,7 +1832,7 @@ Earlier implementation note: No real billing, unit economics or revenue model is
 
 Dependencies: TWIN-01, BIZ-01.
 
-Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/analyzer.ts), [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/workspace/route.ts), [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/page.tsx), [lib/workspace-planning.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/workspace-planning.ts).
+Source: [lib/analyzer.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/analyzer.ts), [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/workspace/route.ts), [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/page.tsx), [lib/workspace-planning.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/workspace-planning.ts).
 
 ### FUT-01 — Replace future-state templates with evaluated plans
 
@@ -1872,7 +1884,7 @@ Earlier implementation note: Versioned evidence-based V2/V3/V5/V10 planning and 
 
 Dependencies: GRAPH-02, TWIN-01, BIZ-01.
 
-Source: [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/workspace/route.ts), [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/page.tsx), [lib/workspace-planning.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/workspace-planning.ts), [lib/workspace-storage.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/workspace-storage.ts), [components/planning-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/planning-workspace.tsx).
+Source: [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/workspace/route.ts), [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/page.tsx), [lib/workspace-planning.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/workspace-planning.ts), [lib/workspace-storage.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/workspace-storage.ts), [components/planning-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/planning-workspace.tsx).
 
 Additional audit AK-22: future exploration needs falsifiability and no hindsight rewriting
 
@@ -1985,7 +1997,7 @@ Earlier implementation note: Existing V10 future plans cite project source snaps
 
 Dependencies: BIZ-01, FUT-01.
 
-Source: [lib/workspace-planning.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/workspace-planning.ts), [components/planning-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/planning-workspace.tsx), [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/workspace/route.ts), [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/page.tsx), [lib/intelligence.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/intelligence.ts).
+Source: [lib/workspace-planning.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/workspace-planning.ts), [components/planning-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/planning-workspace.tsx), [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/workspace/route.ts), [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/page.tsx), [lib/intelligence.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/intelligence.ts).
 
 Additional audit BP-14: Large generated invention volumes may create value claims with no buyer, novelty or execution path.
 
@@ -2043,7 +2055,7 @@ Earlier implementation note: All fourteen original executive dimensions now rend
 
 Dependencies: SEC-01, QA-03, BIZ-01, OPS-01.
 
-Source: [lib/executive-scorecard.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/executive-scorecard.ts), [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/page.tsx), [tests/executive-scorecard.test.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/executive-scorecard.test.mjs), [components/executive-scorecard.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/executive-scorecard.tsx).
+Source: [lib/executive-scorecard.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/executive-scorecard.ts), [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/page.tsx), [tests/executive-scorecard.test.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/executive-scorecard.test.mjs), [components/executive-scorecard.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/executive-scorecard.tsx).
 
 ### UX-01 — Audit the existing interface and journeys
 
@@ -2122,7 +2134,7 @@ Earlier remaining-action wording (retained history; superseded by the scoped upd
 
 Dependencies: None recorded.
 
-Source: [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/page.tsx), [components/runtime-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/runtime-workspace.tsx), [app/globals.css](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/globals.css).
+Source: [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/page.tsx), [components/runtime-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/runtime-workspace.tsx), [app/globals.css](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/globals.css).
 
 Additional audit BP-06: Seventeen screen families may become navigation scope before the first workflow is usable.
 
@@ -2199,7 +2211,7 @@ Earlier remaining-action wording (retained history; superseded by the scoped upd
 
 Dependencies: UX-01.
 
-Source: [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/page.tsx), [app/globals.css](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/globals.css), [components/ui/sheet.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/ui/sheet.tsx), [components/ui/dialog.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/ui/dialog.tsx).
+Source: [app/page.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/page.tsx), [app/globals.css](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/globals.css), [components/ui/sheet.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/ui/sheet.tsx), [components/ui/dialog.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/ui/dialog.tsx).
 
 Additional audit BP-12: Standards and token contrast do not prove live authentication, graph/table parity or high-impact review accessibility.
 
@@ -2284,7 +2296,7 @@ Earlier remaining-action wording (retained history; superseded by the scoped upd
 
 Dependencies: UX-01, GRAPH-01, OPS-02, TWIN-01.
 
-Source: [components/intelligence-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/intelligence-workspace.tsx), [components/runtime-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/runtime-workspace.tsx), [components/planning-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/planning-workspace.tsx), [components/decision-record.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/decision-record.tsx).
+Source: [components/intelligence-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/intelligence-workspace.tsx), [components/runtime-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/runtime-workspace.tsx), [components/planning-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/planning-workspace.tsx), [components/decision-record.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/decision-record.tsx).
 
 ### LEGAL-01 — Implement scoped compliance and legal auditing
 
@@ -2377,7 +2389,7 @@ Earlier implementation note: Catalog registrations do not connect systems; only 
 
 Dependencies: AUTH-04, DATA-01.
 
-Source: [lib/integration-engineering.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/integration-engineering.ts).
+Source: [lib/integration-engineering.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/integration-engineering.ts).
 
 ### REL-01 — Prepare release documentation and operating evidence
 
@@ -2440,7 +2452,7 @@ Earlier remaining-action wording (retained history; superseded by the scoped upd
 
 Dependencies: QA-01, OPS-04.
 
-Source: [README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/README.md), [worker/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/worker/README.md), [companion/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/companion/README.md), [architecture/STATUS.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/architecture/STATUS.md), [scripts/engine/release.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/scripts/engine/release.mjs), [scripts/install-pnpm.sh](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/scripts/install-pnpm.sh).
+Source: [README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/README.md), [worker/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/worker/README.md), [companion/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/companion/README.md), [architecture/STATUS.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/architecture/STATUS.md), [scripts/engine/release.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/scripts/engine/release.mjs), [scripts/install-pnpm.sh](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/scripts/install-pnpm.sh).
 
 ### REL-02 — Copy the project to the requested GitHub destination
 
@@ -2497,7 +2509,7 @@ Earlier remaining-action wording (retained history; superseded by the scoped upd
 
 Dependencies: None recorded.
 
-Source: [SOURCE-IMPORT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/SOURCE-IMPORT.md), [UNFINISHED-WORK/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/UNFINISHED-WORK/README.md), [worker/runner.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/worker/runner.mjs).
+Source: [SOURCE-IMPORT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/SOURCE-IMPORT.md), [UNFINISHED-WORK/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/UNFINISHED-WORK/README.md), [worker/runner.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/worker/runner.mjs).
 
 ### REL-03 — Resolve the unused Vercel experiment
 
@@ -2600,7 +2612,7 @@ Earlier implementation note: Bounded snapshot ingestion and OAuth adapter implem
 
 Dependencies: INT-01.
 
-Source: [lib/github-account.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/github-account.ts).
+Source: [lib/github-account.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/github-account.ts).
 
 ### CONN-02 — GitLab integration
 
@@ -2854,7 +2866,7 @@ Earlier implementation note: Manual text snapshots supported; dedicated live bri
 
 Dependencies: INT-01.
 
-Source: [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/workspace/route.ts).
+Source: [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/workspace/route.ts).
 
 ### CONN-06 — Local Directories integration
 
@@ -2904,7 +2916,7 @@ Earlier implementation note: Manual text snapshots supported; dedicated live bri
 
 Dependencies: INT-01.
 
-Source: [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/workspace/route.ts).
+Source: [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/workspace/route.ts).
 
 ### CONN-07 — Monorepos integration
 
@@ -2954,7 +2966,7 @@ Earlier implementation note: Manual text snapshots supported; dedicated live bri
 
 Dependencies: INT-01.
 
-Source: [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/workspace/route.ts).
+Source: [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/workspace/route.ts).
 
 ### CONN-08 — AWS integration
 
@@ -3344,7 +3356,7 @@ Earlier implementation note: Docker test runner implemented; ecosystem discovery
 
 Dependencies: INT-01.
 
-Source: [worker/runner.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/worker/runner.mjs).
+Source: [worker/runner.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/worker/runner.mjs).
 
 ### CONN-14 — PostgreSQL integration
 
@@ -5176,7 +5188,7 @@ Earlier implementation note: Verified against source: bounded Security specialis
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-02 — Backend executable specialist
 
@@ -5240,7 +5252,7 @@ Earlier implementation note: Verified against source: bounded Backend specialist
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-03 — Frontend executable specialist
 
@@ -5304,7 +5316,7 @@ Earlier implementation note: Verified against source: bounded Frontend specialis
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-04 — DevOps executable specialist
 
@@ -5368,7 +5380,7 @@ Earlier implementation note: Verified against source: bounded DevOps specialist 
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-05 — Cloud executable specialist
 
@@ -5432,7 +5444,7 @@ Earlier implementation note: Verified against source: bounded Cloud specialist e
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-06 — Infrastructure executable specialist
 
@@ -5496,7 +5508,7 @@ Earlier implementation note: Verified against source: bounded Infrastructure spe
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-07 — Databases executable specialist
 
@@ -5560,7 +5572,7 @@ Earlier implementation note: Verified against source: bounded Databases speciali
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-08 — AI Development executable specialist
 
@@ -5624,7 +5636,7 @@ Earlier implementation note: Verified against source: bounded AI Development spe
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-09 — Machine Learning executable specialist
 
@@ -5688,7 +5700,7 @@ Earlier implementation note: Verified against source: bounded Machine Learning s
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-10 — LLM Engineering executable specialist
 
@@ -5752,7 +5764,7 @@ Earlier implementation note: Verified against source: bounded LLM Engineering sp
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-11 — RAG Systems executable specialist
 
@@ -5816,7 +5828,7 @@ Earlier implementation note: Verified against source: bounded RAG Systems specia
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-12 — Vector Databases executable specialist
 
@@ -5880,7 +5892,7 @@ Earlier implementation note: Verified against source: bounded Vector Databases s
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-13 — 3D Development executable specialist
 
@@ -5944,7 +5956,7 @@ Earlier implementation note: Verified against source: bounded 3D Development spe
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-14 — Blender executable specialist
 
@@ -6008,7 +6020,7 @@ Earlier implementation note: Verified against source: bounded Blender specialist
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-15 — Maya executable specialist
 
@@ -6072,7 +6084,7 @@ Earlier implementation note: Verified against source: bounded Maya specialist ex
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-16 — Unity executable specialist
 
@@ -6136,7 +6148,7 @@ Earlier implementation note: Verified against source: bounded Unity specialist e
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-17 — Unreal Engine executable specialist
 
@@ -6200,7 +6212,7 @@ Earlier implementation note: Verified against source: bounded Unreal Engine spec
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-18 — Game Development executable specialist
 
@@ -6264,7 +6276,7 @@ Earlier implementation note: Verified against source: bounded Game Development s
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-19 — Mobile Development executable specialist
 
@@ -6328,7 +6340,7 @@ Earlier implementation note: Verified against source: bounded Mobile Development
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-20 — Testing executable specialist
 
@@ -6392,7 +6404,7 @@ Earlier implementation note: Verified against source: bounded Testing specialist
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-21 — QA executable specialist
 
@@ -6456,7 +6468,7 @@ Earlier implementation note: Verified against source: bounded QA specialist exis
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-22 — Automation executable specialist
 
@@ -6520,7 +6532,7 @@ Earlier implementation note: Verified against source: bounded Automation special
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-23 — UI Design executable specialist
 
@@ -6584,7 +6596,7 @@ Earlier implementation note: Verified against source: bounded UI Design speciali
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-24 — UX Design executable specialist
 
@@ -6648,7 +6660,7 @@ Earlier implementation note: Verified against source: bounded UX Design speciali
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-25 — Accessibility executable specialist
 
@@ -6712,7 +6724,7 @@ Earlier implementation note: Verified against source: bounded Accessibility spec
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-26 — Compliance executable specialist
 
@@ -6776,7 +6788,7 @@ Earlier implementation note: Verified against source: bounded Compliance special
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-27 — Legal Auditing executable specialist
 
@@ -6840,7 +6852,7 @@ Earlier implementation note: Verified against source: bounded Legal Auditing spe
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-28 — Documentation executable specialist
 
@@ -6904,7 +6916,7 @@ Earlier implementation note: Verified against source: bounded Documentation spec
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-29 — Research executable specialist
 
@@ -6968,7 +6980,7 @@ Earlier implementation note: Verified against source: bounded Research specialis
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-30 — Business Intelligence executable specialist
 
@@ -7032,7 +7044,7 @@ Earlier implementation note: Verified against source: bounded Business Intellige
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-31 — Product Management executable specialist
 
@@ -7096,7 +7108,7 @@ Earlier implementation note: Verified against source: bounded Product Management
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-32 — Customer Analytics executable specialist
 
@@ -7160,7 +7172,7 @@ Earlier implementation note: Verified against source: bounded Customer Analytics
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-33 — Revenue Optimization executable specialist
 
@@ -7224,7 +7236,7 @@ Earlier implementation note: Verified against source: bounded Revenue Optimizati
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-34 — Competitive Analysis executable specialist
 
@@ -7288,7 +7300,7 @@ Earlier implementation note: Verified against source: bounded Competitive Analys
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-35 — Innovation Discovery executable specialist
 
@@ -7352,7 +7364,7 @@ Earlier implementation note: Verified against source: bounded Innovation Discove
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-36 — Future Prediction executable specialist
 
@@ -7416,7 +7428,7 @@ Earlier implementation note: Verified against source: bounded Future Prediction 
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-37 — Architecture executable specialist
 
@@ -7480,7 +7492,7 @@ Earlier implementation note: Verified against source: bounded Architecture speci
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-38 — Code Quality executable specialist
 
@@ -7544,7 +7556,7 @@ Earlier implementation note: Verified against source: bounded Code Quality speci
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-39 — Performance executable specialist
 
@@ -7608,7 +7620,7 @@ Earlier implementation note: Verified against source: bounded Performance specia
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-40 — Scalability executable specialist
 
@@ -7672,7 +7684,7 @@ Earlier implementation note: Verified against source: bounded Scalability specia
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-41 — Reliability executable specialist
 
@@ -7736,7 +7748,7 @@ Earlier implementation note: Verified against source: bounded Reliability specia
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-42 — Observability executable specialist
 
@@ -7800,7 +7812,7 @@ Earlier implementation note: Verified against source: bounded Observability spec
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-43 — Networking executable specialist
 
@@ -7864,7 +7876,7 @@ Earlier implementation note: Verified against source: bounded Networking special
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-44 — Cyber Defense executable specialist
 
@@ -7928,7 +7940,7 @@ Earlier implementation note: Verified against source: bounded Cyber Defense spec
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-45 — Penetration Testing executable specialist
 
@@ -7992,7 +8004,7 @@ Earlier implementation note: Verified against source: bounded Penetration Testin
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-46 — Open Source Analysis executable specialist
 
@@ -8056,7 +8068,7 @@ Earlier implementation note: Verified against source: bounded Open Source Analys
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### DOM-47 — Dependency Intelligence executable specialist
 
@@ -8120,7 +8132,7 @@ Earlier implementation note: Verified against source: bounded Dependency Intelli
 
 Dependencies: RUN-02, INT-01, QA-03.
 
-Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/tests/specialist-areas.mjs).
+Source: [lib/specialists.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/specialists.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/brains.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/brains.ts), [tests/specialist-areas.mjs](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/tests/specialist-areas.mjs).
 
 ### AUD-01 — Capability certification envelope
 
@@ -8162,7 +8174,7 @@ Earlier implementation note: A platform can look universal while supporting only
 
 Dependencies: QA-03, INT-01.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit AK-09: marketplace skill inheritance must not imply verified competence
 
@@ -8236,7 +8248,7 @@ Earlier implementation note: A signed report can still be signed by the same com
 
 Dependencies: RUN-01, RUN-03.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit AK-17: release fixture booleans are not verifiable attestations
 
@@ -8298,7 +8310,7 @@ Earlier implementation note: Deleting a source can leave summaries, vectors, cac
 
 Dependencies: DATA-02, DATA-03.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit AK-02: global pattern admission is stronger than the propagation reference guard
 
@@ -8371,7 +8383,7 @@ Earlier implementation note: Policy, KMS and directory services can become mutua
 
 Dependencies: DATA-03, OPS-04.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit SI-08: Recovery is a multi-store and external-effect workflow
 
@@ -8423,7 +8435,7 @@ Earlier implementation note: Millions of agents can manufacture consensus throug
 
 Dependencies: RUN-02, QA-03.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit AK-06: review independence is necessary but lacks an enforceable dependency model
 
@@ -8485,7 +8497,7 @@ Earlier implementation note: Autonomous mistakes can leave no person responsible
 
 Dependencies: SEC-02, UX-01.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 ### AUD-07 — Supply-chain build provenance
 
@@ -8527,7 +8539,7 @@ Earlier implementation note: Package scripts and mutable images can subvert perf
 
 Dependencies: RUN-01, SEC-03.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 ### AUD-08 — Support and incident access
 
@@ -8569,7 +8581,7 @@ Earlier implementation note: Enterprise isolation can be bypassed by support too
 
 Dependencies: SEC-02, SEC-03.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 ### AUD-09 — Independent economy and demand model
 
@@ -8611,7 +8623,7 @@ Earlier implementation note: ARR targets can hide free-user inference, failed-ru
 
 Dependencies: BIZ-01.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit BP-01: Overage revenue was counted without incremental overage jobs. Forecast margin and financing confidence were overstated.
 
@@ -8659,7 +8671,7 @@ Earlier implementation note: Feature count does not show a reason to switch from
 
 Dependencies: QA-02, DEV-02.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit BP-05: Market hypotheses lack comparative outcome and paid cohort evidence.
 
@@ -8713,7 +8725,7 @@ Earlier implementation note: A popular but incorrect lesson can propagate global
 
 Dependencies: AUD-03, AUD-05.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit AK-12: derivation invalidation can become a graph-wide denial-of-service
 
@@ -8776,7 +8788,7 @@ Earlier implementation note: Parent and child workflows in separate regions can 
 
 Dependencies: RUN-03, DATA-01.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit AK-03: credits cannot fund actual exploration independently of money
 
@@ -8849,7 +8861,7 @@ Earlier implementation note: A global quorum can violate residency or block inde
 
 Dependencies: DATA-01, OPS-04.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit SI-06: Placement consensus must fit residency and failure domains
 
@@ -8903,7 +8915,7 @@ Earlier implementation note: Offline enterprise or desktop features can imply st
 
 Dependencies: SEC-02, AUD-13.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 ### AUD-15 — Licensed content and export feasibility
 
@@ -8945,7 +8957,7 @@ Earlier implementation note: 3D/CAD datasets, proprietary sources and market fee
 
 Dependencies: INT-01, LEGAL-01.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 ### AUD-16 — Long-lived compatibility and ownership succession
 
@@ -8987,7 +8999,7 @@ Earlier implementation note: Decades of jobs can outlive vendors, signatures and
 
 Dependencies: DATA-03, REL-01.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 ### AUD-17 — Customer concentration and provider collapse
 
@@ -9029,7 +9041,7 @@ Earlier implementation note: One model, cloud, customer or marketplace publisher
 
 Dependencies: AUD-09, AUTH-03.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 ### AUD-18 — Experiment interference and causal claims
 
@@ -9071,7 +9083,7 @@ Earlier implementation note: Concurrent repairs and business experiments confoun
 
 Dependencies: TWIN-01, BIZ-01.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 ### AUD-19 — Operational readiness of the company
 
@@ -9124,7 +9136,7 @@ Earlier implementation note: A technical platform still fails without support, p
 
 Dependencies: REL-01, LEGAL-01.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md).
 
 Additional audit SI-10: Enterprise compliance and support are operating systems, not swarm names
 
@@ -9200,7 +9212,7 @@ Earlier implementation note: No design is future-proof against AGI or paradigm s
 
 Dependencies: FUT-01, BIZ-02.
 
-Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md), [lib/workspace-planning.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/workspace-planning.ts), [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/app/api/workspace/route.ts), [components/planning-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/components/planning-workspace.tsx).
+Source: [BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/00-FINAL-OMNISCIENT-AUDIT.md), [lib/workspace-planning.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/workspace-planning.ts), [app/api/workspace/route.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/app/api/workspace/route.ts), [components/planning-workspace.tsx](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/components/planning-workspace.tsx).
 
 Additional audit AK-23: civilization metrics must reward user outcomes rather than organizational expansion
 
@@ -9250,7 +9262,7 @@ Earlier implementation note: Final audit identified a missing or incomplete cont
 
 Dependencies: SEC-02, AUD-07, AUD-09.
 
-Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/README.md).
+Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/README.md).
 
 Additional audit BP-10: Early marketplace storefront can outpace pack quality, rights and liquidity.
 
@@ -9296,7 +9308,7 @@ Earlier implementation note: Final audit identified a missing or incomplete cont
 
 Dependencies: AUTH-02, AUD-12.
 
-Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/README.md).
+Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/README.md).
 
 Additional audit BP-03: Retail-value allowances, expected monthly jobs and provider/BYO-account charges are not one entitlement contract.
 
@@ -9342,7 +9354,7 @@ Earlier implementation note: Final audit identified a missing or incomplete cont
 
 Dependencies: DATA-01, RUN-02.
 
-Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/README.md).
+Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/README.md).
 
 Additional audit AK-01: lifecycle table, diagram and learning execution disagree
 
@@ -9414,7 +9426,7 @@ Earlier implementation note: Final audit identified a missing or incomplete cont
 
 Dependencies: QA-02, AUD-02.
 
-Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/README.md).
+Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/README.md).
 
 Additional audit SI-03: Snapshot apply can proceed with no external test result
 
@@ -9464,7 +9476,7 @@ Earlier implementation note: Final audit identified a missing or incomplete cont
 
 Dependencies: RUN-03.
 
-Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/README.md).
+Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/README.md).
 
 Additional audit SI-04: Active-job count is not atomic admission or financial reservation
 
@@ -9514,7 +9526,7 @@ Earlier implementation note: Final audit identified a missing or incomplete cont
 
 Dependencies: RUN-01.
 
-Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/README.md).
+Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/README.md).
 
 Additional audit SI-05: Docker cleanup and image identity require stronger guarantees
 
@@ -9564,7 +9576,7 @@ Earlier implementation note: Final audit identified a missing or incomplete cont
 
 Dependencies: OPS-02, AUD-18.
 
-Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/README.md).
+Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/README.md).
 
 Additional audit AK-20: evolution rollback is not sufficient for delayed or irreversible harm
 
@@ -9614,7 +9626,7 @@ Earlier implementation note: Final audit identified a missing or incomplete cont
 
 Dependencies: AUD-09, AUD-10.
 
-Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/README.md).
+Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/README.md).
 
 Additional audit BP-04: Seed envelopes and six-month budgets can be read as enough capital for the five-year expansion. Even corrected Base exhausts assumed cash before annual profitability.
 
@@ -9660,7 +9672,7 @@ Earlier implementation note: Final audit identified a missing or incomplete cont
 
 Dependencies: SEC-03, AUD-16.
 
-Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/README.md).
+Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/README.md).
 
 ### AUD-30 — Correction, withdrawal and cost-liability UI
 
@@ -9700,7 +9712,7 @@ Earlier implementation note: Final audit identified a missing or incomplete cont
 
 Dependencies: UX-02, AUD-03, AUD-22.
 
-Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/BUILD-BIBLE/README.md).
+Source: [BUILD-BIBLE/README.md](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/BUILD-BIBLE/README.md).
 
 ### V2-01 — Systemic Risk and Accountability Plane
 
@@ -9742,7 +9754,7 @@ Earlier implementation note: Single-owner single-cell exposure admission integra
 
 Dependencies: AUD-12, AUD-13, AUD-02.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json), [lib/control-plane.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/control-plane.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts), [lib/repository.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/repository.ts).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json), [lib/control-plane.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/control-plane.ts), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts), [lib/repository.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/repository.ts).
 
 ### V2-02 — Intent and Commitment Registry
 
@@ -9784,7 +9796,7 @@ Earlier implementation note: Jobs preserve objective commitments and immutable s
 
 Dependencies: AUD-24.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/jobs.ts).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json), [lib/jobs.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/jobs.ts).
 
 ### V2-03 — Rights and Responsibility Registry
 
@@ -9826,7 +9838,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: AUD-03, LEGAL-01.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-04 — Cross-Company Collaboration Rooms
 
@@ -9868,7 +9880,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: SEC-02, V2-03.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-05 — Marketplace Integrity and Dispute System
 
@@ -9910,7 +9922,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: AUD-21, V2-03.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-06 — Enterprise Assurance Passport
 
@@ -9952,7 +9964,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: AUD-19, REL-01.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-07 — Coordinated Change Admission
 
@@ -9994,7 +10006,7 @@ Earlier implementation note: Same-target and shared-recipe admission enforced tr
 
 Dependencies: RUN-03, V2-01.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json), [lib/control-plane.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/control-plane.ts).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json), [lib/control-plane.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/control-plane.ts).
 
 ### V2-08 — Business-Invariant Recovery Gate
 
@@ -10036,7 +10048,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: AUD-04, AUD-27.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-09 — Product Complexity Budget
 
@@ -10078,7 +10090,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: AUD-10, AUD-28.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-10 — Customer Outcome Laboratory
 
@@ -10120,7 +10132,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: AUD-10, AUD-18.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-11 — Supplier Exit and Substitution Contract
 
@@ -10162,7 +10174,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: AUD-17, AUD-16.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-12 — Workforce Knowledge Continuity
 
@@ -10204,7 +10216,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: V2-03, AUD-19.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-13 — Acquisition Assimilation Protocol
 
@@ -10246,7 +10258,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: V2-03, SEC-02.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-14 — Interoperability Assurance Network
 
@@ -10288,7 +10300,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: AUD-23, AUD-21.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-15 — Vertical and Physical-World Safety Gate
 
@@ -10330,7 +10342,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: V2-09, QA-03, LEGAL-01.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-16 — Governance Integrity and Recovery
 
@@ -10372,7 +10384,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: SEC-03, V2-01.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-17 — Sovereign Deployment Acceptance Profile
 
@@ -10414,7 +10426,7 @@ Earlier implementation note: V2 upgrade contract specified; runtime integration 
 
 Dependencies: AUD-13, V2-06.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json).
 
 ### V2-18 — Customer Continuity and Orderly Exit
 
@@ -10456,7 +10468,7 @@ Earlier implementation note: Portable owner data export and non-overwriting rest
 
 Dependencies: V2-03, V2-11, AUD-19.
 
-Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/COMPLETION-AUDIT/upgrade-contracts.json), [lib/intelligence.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/de006f6611ff802811c052d0d71ed8184c17f0dd/lib/intelligence.ts).
+Source: [COMPLETION-AUDIT/upgrade-contracts.json](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/COMPLETION-AUDIT/upgrade-contracts.json), [lib/intelligence.ts](https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/90cda3ee1a698ced56324cf398c0cee0de68cbb0/lib/intelligence.ts).
 
 ## Separate 28 additive upgrades
 
@@ -10765,6 +10777,7 @@ The recorded upgrade state is preserved; it is not a claim that all underlying i
 - UNFINISHED-WORK/mgr-resumption-20261030.json: SHA-256 `51bf62ec77dae80df6d313d53ed06fa920fecbcc78ef4ae1fdd66cb322ed203a`.
 - UNFINISHED-WORK/mgr-backpack-readiness-20261030.json: SHA-256 `f99c047241cd74ad2f2317c9574cb3907dcb1fdff7adb02e25e9ecf536633474`.
 - UNFINISHED-WORK/mgr-backpack-combined-20261030.json: SHA-256 `ff65c80f69ba4d3a1a7463a403a961f24f56d80fe645a7cae6b74ebf2d5e3d7d`.
+- UNFINISHED-WORK/mgr-durable-completion-20261101.json: SHA-256 `5f07c07dfadd19fc72de8a37af968b1739051b9c3d1ec146e511d6c32f325107`.
 - UNFINISHED-WORK/evidence/completion-20261030/run/report.json: SHA-256 `3b2f37395cb64aa6a67a9cac9049020e1fa15bd7facbf44f113186c9cd90ecc0`.
 - UNFINISHED-WORK/evidence/completion-20261030/run/prepare.log: SHA-256 `75bcbe09e22b68ef6f6fec04ac5ea16ffbb5482b886db3369645031daae30ed0`.
 - UNFINISHED-WORK/evidence/completion-20261030/run/trilogyLink.log: SHA-256 `f125e9b9806b0782701aff2f69e3299154ae800a02ad9c3f3867b4e475c258d5`.
@@ -11072,3 +11085,84 @@ The recorded upgrade state is preserved; it is not a claim that all underlying i
 - UNFINISHED-WORK/evidence/backpack-readiness-20261030/combined-run/trilogyJobs.log: SHA-256 `f44cc009eeca4b8005745dbdee85222227d490f9964c5019082de7e44b7ce7b6`.
 - UNFINISHED-WORK/evidence/backpack-readiness-20261030/combined-run/trilogyWorker.log: SHA-256 `6787aacdb5883516b88a34910e8d63db9470237171da84ff831ed7ee49903045`.
 - UNFINISHED-WORK/evidence/backpack-readiness-20261030/combined-run/githubSnapshotPinning.log: SHA-256 `3d0a1daa8c20183da643b5fa2a6e03ea36db2cf965919eacd659a7fc81bcc0b5`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/report.json: SHA-256 `0a4527508d8bf7d9760f4b40c4d153e0dbe76ee6d0d7742b941dc4b71f643cbf`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/prepare.log: SHA-256 `6abb33e2ca2482de7a9d1f48ccba4d2e9a224d73a40269d577b8bd2131c23ca4`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/requestBody.log: SHA-256 `fa7ebf793dcc7a891bd25a54279a61a7c9d2ae957b3fc8f6fe193fd6b134628f`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/connectorPreview.log: SHA-256 `7dd56b633041337f99b751aeac9d0b42e335a5c8a3f815521dbf9bd7388d0105`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/toolchainSecurity.log: SHA-256 `2f500e98a32f5511d56c4b785e3d11b12ec8bb525abad826c6c68835d5cef39d`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/companionMemory.log: SHA-256 `edcfa069835c215f0857bc0f981a0d88f18fb0c78d944246bfc6fc23cac36e3a`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/trilogyLink.log: SHA-256 `78a238d39d000cb5f490cfc5b82b3c3ca81c59b092a8aecb8e07879350eec1b8`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/trilogyPublication.log: SHA-256 `619c8b1beb496263b97acc01a9b99a493b628ca5f4c460233637eaac2e5fec2f`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/trilogyPublicationUi.log: SHA-256 `0f022c5a78b354cb7db6e6d3becfc7364bd66ece595d7a3ec9c468d939cd1eba`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/trilogyPublicationRecovery.log: SHA-256 `e3c98f5a3247c2c49e2f85ab7a998aab77d5baaec421f4c7b40346fcc2c3948b`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/ownerProgress.log: SHA-256 `1705ef1031891229091c216660c7485250f3c03b3fb65df5e4099716c6769180`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/ownerProgressContract.log: SHA-256 `e65eac87d628a5f6333b23f6986eedf16be97056cfea4aaf9a100ca10ea056d1`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/trilogyPublicationResponse.log: SHA-256 `87f59f83578a04870643e96d0c9e0ce397c80fdff0a6918760fa59945c41b0ef`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/buildProgressUi.log: SHA-256 `e04724cc199bf6bc2dee5c382c057d9a7e5e47ab4a67d64f53ddb5a4533f7342`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/ownerProgressArtifact.log: SHA-256 `5520432e6ebf833439972cb77d169d463afc25a928f41a215f17aeef04135dde`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/workerReportTransport.log: SHA-256 `88d193b9d3e3abf19a4ee1fd7fcda74f12a81f522c79b73cf7d21735aaaf1ac3`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/workerFailureOutput.log: SHA-256 `674efdb453927301910c8589bad17059652aedbbe0b2ba98e0382c02d35a480d`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/typecheck.log: SHA-256 `47886c4d1b0a566dee6a4bba8b7d52458bfbbe9606a78baf75ca40cb1d7bdc39`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/build.log: SHA-256 `518f8cdf35a05b9e2ada689fece78559b01ad83989abc41a2beb7f8fe360ab63`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/acceptance.log: SHA-256 `e53e6b5895bd90f6b3bf346e3e8381e8966afd982951eaded6b968b7b0066a61`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/runtime.log: SHA-256 `993d97597cfcba4122b08dd4d7119764b9d19ba27fe279ccd612b432c30caf87`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/integration.log: SHA-256 `6ee751239a497457368241b651f759855bb1bdf2d0123185eeececedfecebf8f`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/supervisor.log: SHA-256 `5cd8732f1a8bb37e0d08887a21c9b59c41bbd1513b6126f4f4aa44256347429b`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/cleanup.log: SHA-256 `08de3321a17332b3c36e533eb97d7e3e35034bdcd08cdbb764f59ec147f36a0c`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/specialists.log: SHA-256 `1003b34c1f123532dc383fee87f367f019a3a6e2f90623e7a6ae486c58dbe7cb`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/parallel.log: SHA-256 `c106a79cfe3263a86623b5e128874b441db953ec04a6672eda5727b1786e9535`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/automatic.log: SHA-256 `c9d3775e17d8a08c3f8afdbf381572aa5c78b8869305f6e989c26b8ea4a1c1d1`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/jobs.log: SHA-256 `393b33a78a49dce76ca5bea091dfee5065dbc37f66a39fbccc9fcbc3935c5d93`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/project.log: SHA-256 `32b7495b0979e84b3679c784c4891523e658e7f0feb58cdbc88be6b99ab91887`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/pipeline.log: SHA-256 `dce5ea5dbd205c36347af1bf096b0d4255e9a85a3cc72b700b9e0d78ce8b75d2`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/review.log: SHA-256 `57c67fccc40e9c5b982239a4f05be5e2af7293fdb0c2c674daa46460a52ad410`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/generation.log: SHA-256 `3cc54d648b24890e64eef74eab3057d5c4808c68463644d6588aee99186a7d27`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/platform.log: SHA-256 `509f42a7c890cb05acfcea912ef010649f5941fa81c746c8f5a6e386acffcc03`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/brains.log: SHA-256 `4555e11b08fb8056ab7e4358ad418129816e6519afa688b428032720f6262080`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/accountAutostart.log: SHA-256 `c67813bee00a4da154573f828bcbd364a2f4a4a331f2b39f44126fb5393df4e7`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/companion.log: SHA-256 `3002d58e630b318c79438d08803f693498dda2419c1c373a1248e4d3035208c4`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/engineHeader.log: SHA-256 `ef166139b55b35e0b8aac8bda9106f737d984839620ff8960eca179420c7ffb4`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/engineUpdate.log: SHA-256 `9ed19ececcbc6caa13e3090fe61a4da9dac3e89d4b36472803449e53894cc362`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/fileLedger.log: SHA-256 `e2286631e3bcab4564a81c203dce592e29daa7430d09f4e5370af369587e1dcd`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/jobPresentation.log: SHA-256 `e6b8e166d075af9261ff863a172bb6ad30617a386fcaafe7a6be32193d9164f7`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/localReview.log: SHA-256 `f2441f01f39efedf05e654d42b4aef56b868259f1d8cd6aaa8fc06760999876b`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/openProgress.log: SHA-256 `d38b964047acfad0083220f37e5e78bf228e7c53bb9c8148f9c391dfd284d5b6`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/pipelineEngine.log: SHA-256 `4f44a680075280d40a50b0e05680eda37b27869bfcd114fbaa778316a90b93cb`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/repoCompletion.log: SHA-256 `3846445740cc83c3b336e017e5a827ec92d8dff355d34340dda7ce34f024504a`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/reviewPlanner.log: SHA-256 `aefdd975003a6976592df81b1dffc5a5fffa5f2ebbf458108be0c8d934096787`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/specialistBackground.log: SHA-256 `641105d6ae97a7602581274ede2d2832b0b310a9ab544a8db9a8c81f74e2e06d`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/specialistsLedger.log: SHA-256 `a68d61b27574eac16304a2f64852e252f615e16d6c0c69222b22612f7b07eaeb`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/swarmSpawning.log: SHA-256 `a675936907d813ec679668f160471d26a009b1e8b5bc70d4ff4418606ebac6d8`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/audit174.log: SHA-256 `f4137fa2c2b6b8d558781e1be3182a4fb0baba94e57095925e671a5c19154676`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/acceptanceGate.log: SHA-256 `d6e45e58d04c6d0625f984051e97306ae1112ab376e3dd6898b6e2459a6940e7`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/connectorQualification.log: SHA-256 `2d5e6d9c88c10cd73116824637c002beab24cc188092627840c33a8511ff12d0`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/publicKey.log: SHA-256 `d63d74858643ed392f6991efc3fcf30f26e24f073287424089a112f8332beff3`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/portableCleanup.log: SHA-256 `adb6eafbf4d0e2d97e97dd37bc139fb8d93e643b40be81003c9e7b11371a6a1c`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/fleet.log: SHA-256 `1e2dbb4ae956e2786c5149d49610f0b555990183fe0997d26e798d24704c14bd`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/committedSource.log: SHA-256 `035777d3539b1e49aa45fbc657a56ac102fb97c5818d9fb1178626b99118422b`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/sourceReferences.log: SHA-256 `76af83d7a51238ae0b4ffaf6312f68c34d706e88ca7a272ef1062317006eb7df`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/acceptanceRouting.log: SHA-256 `613a4b17be06420e50e4fef016afc0192b68a0ccb786cfa287a1cd3f8d7c175c`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/fixtureRecorder.log: SHA-256 `f8ad7ad2f9a123f2767716be640fdfa662a47e462d6b892df542778a3640b84f`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/secretScan.log: SHA-256 `7b63b8cf1621b9d8d779c3fe606bde81e163476dbc3f614423627997bfb7e651`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/waveSelection.log: SHA-256 `0e49e9be26123397fbb0dcc4d743e6bc06f5340156c6f1330633501b06ca9dcc`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/registerTests.log: SHA-256 `21d3a41904a367bca2546fe9d5af758090d67b498a89aa4dbf00448dd2d1d9c7`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/signedReceipt.log: SHA-256 `eb1212503ef2b84b7ebd78c41f8222b69a04ef1c3a900194042f678fc768119d`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/sourceImport.log: SHA-256 `d6a22f0087ad9fc3af1705dbe8733cc0c184f0bb509b47e4d524e46169dc566b`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/register.log: SHA-256 `3e907cd587c2afc6867b43a96eefdd41b90ab1770aa8b283b9d04b93d1f7bc9b`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/executive.log: SHA-256 `6f426684a4831790dcde5524fb65e9bbfbcd47bf6be2be1fa03a5e452b025cdd`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/intelligenceIntegrity.log: SHA-256 `9231816426d8f378391ba7bd987f24f5589796e5cefe172a8ae87ffc6e797398`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/backupCapacity.log: SHA-256 `c9f733decaa3d650002879ba2076ff10c99929d232056ce2c663f045a992541d`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/jobRecovery.log: SHA-256 `29178f921f834bf91fe8ca30ff4d04208de31235a102f85f239be3205be6fd61`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/providerRace.log: SHA-256 `99e89831b8df772f092014db33e26ce241c9a8a8d6d9e51f4aed25ff3f989f5f`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/unlinkedConnectors.log: SHA-256 `a6ed288b2ba9974ee1c150d3e59206737a6cf8deb614320c5eee394f13eb703b`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/workflow.log: SHA-256 `dfa3ac0953c1d7bb17f99d281e6baf1c49e8f3b3c3a83b5cae099cda81f71491`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/workspacePlanning.log: SHA-256 `fa1c4415001b12e2e8f2a3d0ce6486fb1a3afa702a7386a82a88984c4a7b522b`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/decisionOutcomes.log: SHA-256 `f3c46a36468602cc098a2f828e666eed3c8439c73ea4e38b39d84bd51a0a9c28`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/planningUi.log: SHA-256 `d214a20b14efca0eede9ff29c27be712f8b65a27045f5fd58a6e7310ec286445`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/gapEvaluation.log: SHA-256 `9f6f72d504ca76881586d6569ea64732471948b6ae401bf4e2738a0aade249e6`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/securityGapEvaluation.log: SHA-256 `292f818b36e81bb18dfe816947484c0ed8d777d669a4399c3890bd03e9e08b55`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/securityGapReconciliation.log: SHA-256 `61b26ae47db4a9b54eb5cdf99c8bfd33548f20785af1ac78641474dce2afc882`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/runtimeProjectScope.log: SHA-256 `ef10612a89a17df739a7904bf6543a653ae3d5166db073032179a1e36e5b8243`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/trilogyJobs.log: SHA-256 `7d9e82757b1fea0fb35ffacec85ffbb9cb6793061917d05435b16f40f2e525d0`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/trilogyWorker.log: SHA-256 `d2ffb63cdff3623c4e687d87f8d7e6eb08ed57eb60ca875f8fbca8eac1f6d440`.
+- UNFINISHED-WORK/evidence/durable-completion-20261101/githubSnapshotPinning.log: SHA-256 `579edf2541ebe4552040fac3b846ca6c1808ea134c75b486ea2a340e5cb9de38`.
