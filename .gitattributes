@@ -16,3 +16,7 @@
 /UNFINISHED-WORK/evidence/resumption-20261030/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /UNFINISHED-WORK/evidence/resumption-20261030/**/*.log -diff
 /UNFINISHED-WORK/evidence/resumption-20261030/*.log -diff
+
+# Preserve November 1 executed receipts exactly, including native CRLF output.
+/UNFINISHED-WORK/evidence/durable-completion-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/UNFINISHED-WORK/evidence/durable-completion-20261101/*.log -diff
