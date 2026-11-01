@@ -18,8 +18,14 @@ export async function preparedModuleManifest(root){
  }
  return {files,sha256:hash(JSON.stringify(files))};
 }
-async function saveReport(path,value){
- const temporary=path+'.partial';await writeFile(temporary,JSON.stringify(value,null,2)+'\n');await rename(temporary,path);
+export async function saveReport(path,value){
+ const temporary=path+'.partial';await writeFile(temporary,JSON.stringify(value,null,2)+'\n');
+ // A Windows progress reader or scanner can briefly deny replacement. Retry
+ // only this owned report rename; never rerun a verification/effect command.
+ for(let attempt=0;;attempt++)try{await rename(temporary,path);return;}catch(error){
+  if(!['EPERM','EACCES','EBUSY'].includes(error.code)||attempt>=19)throw error;
+  await new Promise(done=>setTimeout(done,100));
+ }
 }
 export async function runFullVerification({cwd=process.cwd(),profiles=Object.keys(FIXTURE_PROFILES),outputDir=resolve(cwd,'outputs/full-verification'),timeoutMs,onProgress=()=>{}}={}){
  if(!Array.isArray(profiles)||!profiles.length||new Set(profiles).size!==profiles.length||profiles.some(name=>!Object.hasOwn(FIXTURE_PROFILES,name)))throw TypeError('nonempty unique approved profiles required');
