@@ -1,0 +1,31 @@
+{
+  "schema": "mgr.trilogy.inventory-publication.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "branch": "mgr/code-monster-omnisight-20261028",
+  "priorRemote": "b453894362163ca1413c02378935711958db3503",
+  "localCommit": "bc490abe2c07b74a80ddeba67158721ad84ab1ef",
+  "localTree": "bdece2dadc332ddbf20761d73d94566eb917107c",
+  "remoteCommit": "9436130b09e0e089fab4f17045c62c12680a38bf",
+  "remoteTree": "bdece2dadc332ddbf20761d73d94566eb917107c",
+  "exactTreeMatch": true,
+  "branchReadBack": true,
+  "commitTreeReadBack": true,
+  "mainMerged": false,
+  "deployed": false,
+  "recordedAt": "2026-10-30T07:57:49.431Z",
+  "testedRuntime": "3ad76710266e7e0181578924075db6b5ea07172d",
+  "fullLocalProfiles": {
+    "passed": 76,
+    "total": 76
+  },
+  "freshLocalIntegration": {
+    "passed": 14,
+    "total": 14
+  },
+  "progressRefresh": {
+    "passed": 16,
+    "total": 16,
+    "deterministicGeneratorCheck": true
+  },
+  "qualification": "Source save on the development branch only. Separate branch implementations remain unintegrated; full original acceptance, hosted/live-provider, browser and production-worker qualification remain open."
+}
