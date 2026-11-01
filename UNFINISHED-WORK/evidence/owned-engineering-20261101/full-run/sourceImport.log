@@ -1,0 +1,11 @@
+✔ valid byte-for-byte source manifest matches pinned Git data (2172.1741ms)
+✔ tampered manifest hash is rejected as incomplete transfer (1636.1806ms)
+✔ manifest cannot include credential-like paths (1132.8593ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4957.0917

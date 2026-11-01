@@ -1,0 +1,20 @@
+✔ preview validation accepts the current contract and rejects malformed render inputs (3.2758ms)
+✔ expired and revoked saved attempts remain inspectable without granting authority (0.8788ms)
+✔ state validation refuses incomplete approval and foreign preview identities (0.9352ms)
+✔ published links require the same tested draft and accept GitHub repository capitalization (0.7851ms)
+✔ matching preview comparison tolerates key order and rejects all changed server preview fields (0.8388ms)
+✔ load never announces a recovered draft for a non-draft, different candidate or broken preview (2.9758ms)
+✔ load distinguishes a missing status response from a valid no-approval response (2.2464ms)
+✔ fresh malformed previews never enable approval or enter render state (2.0928ms)
+✔ approve refuses a substituted preview or inactive authorization response (1.5059ms)
+✔ revoke requires confirmation of the selected approval before clearing the key (1.7212ms)
+✔ publish and recovery cannot replace the saved authorization or reviewed candidate (1.1512ms)
+✔ confirmed mixed-case draft, expired read-only recovery and unstarted cleanup retain their intended results (1.2844ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 41.6488

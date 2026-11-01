@@ -1,0 +1,8 @@
+{"profile":"prepare","passed":false,"blocked":true,"reason":"source changes not committed (tracked or untracked files)"}
+{"profile":"engineeringBinding","passed":false,"blocked":true,"reason":"preparation failed"}
+{"profile":"engineeringMetadata","passed":false,"blocked":true,"reason":"preparation failed"}
+{"profile":"ownerLocalService","passed":false,"blocked":true,"reason":"preparation failed"}
+{"profile":"nodeRuntimePreparation","passed":false,"blocked":true,"reason":"source changes not committed (tracked or untracked files)"}
+{"profile":"typecheck","passed":false,"blocked":true,"reason":"source changes not committed (tracked or untracked files)"}
+{"profile":"workflow","passed":false,"blocked":true,"reason":"source changes not committed (tracked or untracked files)"}
+{"passedProfiles":0,"failedProfiles":0,"blockedProfiles":7,"totalProfiles":7,"independentlyCertifiedParents":0,"countingNote":"Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."}

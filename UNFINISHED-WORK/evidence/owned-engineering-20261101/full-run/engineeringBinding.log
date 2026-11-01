@@ -1,0 +1,20 @@
+✔ current native binding uses original candidate, immutable oracle, workspace and enrolled policy (34.3846ms)
+✔ binding distinguishes changed workspace from a valid applied candidate (6.7973ms)
+✔ binding refuses a changed job during its asynchronous observation (2.1045ms)
+✔ reserved verification admits only its exact internal request and current bound source (7.9556ms)
+✔ internal verification claim refuses substituted workspaceId (3.6136ms)
+✔ internal verification claim refuses substituted jobId (8.1265ms)
+✔ internal verification claim refuses substituted sourceDigest (4.1483ms)
+✔ internal verification claim refuses substituted candidateDigest (5.1536ms)
+✔ internal verification claim refuses substituted testManifestDigest (3.9944ms)
+✔ internal verification claim refuses substituted workspaceDataDigest (2.8404ms)
+✔ project edit immediately before claim SQL cannot retain an obsolete assignment (11.1254ms)
+✔ internal admission cannot waive an unreserved job or unknown execution (4.2045ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 115.3799

@@ -1,0 +1,41 @@
+✔ simulation rejects dangling, wrong-kind and aggregate project references without corrupting backups (56.5868ms)
+✔ simulation records owner assumptions and the actual selected snapshot; a workspace scenario stays unassigned (12.6544ms)
+✔ stale simulation context and project deletion during admission cannot create an orphan record (9.3818ms)
+✔ rescan reconciles stale and new findings, preserves manual dispositions and does not duplicate current signals (12.3398ms)
+✔ rescan reopens a signal that returns after snapshot resolution without reopening a manual acceptance (12.3657ms)
+✔ rescan refuses a stale source or finding disposition and keeps the newer source unchanged (9.3487ms)
+✔ rescan compare-and-swap detects a disposition changed after reading but before its transaction (5.5963ms)
+workspace write failed Error: audit failure
+    at file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/workspace-fixture.mjs:18:85
+    at Array.map (<anonymous>)
+    at Object.batch (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/workspace-fixture.mjs:18:33)
+    at admittedWrite (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/.test-runtime/workspace-storage.mjs:34:31)
+    at Module.POST (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/.test-runtime/route.mjs:126:19)
+    at async post (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/workspace-fixture.mjs:31:18)
+    at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omnidev-owned-engineering/tests/workspace-planning.mjs:88:17)
+    at async Test.run (node:internal/test_runner/test:1409:7)
+    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+  code: 'ERR_SQLITE_ERROR',
+  errcode: 1811,
+  errstr: 'constraint failed'
+}
+✔ rescan audit failure rolls back project and finding changes together (8.7559ms)
+✔ each future horizon cites the selected snapshot, explicit unknowns, a measurable milestone and a reversible experiment (25.3169ms)
+✔ different projects produce different cited horizons while accepted and resolved findings retain their dispositions (17.1503ms)
+✔ partial snapshots preserve coverage unknowns and cannot imply measured health or market opportunity (8.72ms)
+✔ repeated and concurrent generation for the same evidence returns one immutable plan and one audit record (12.8476ms)
+✔ future generation requires a current source commitment and refuses stale sources or missing project scope (6.7895ms)
+✔ changed evidence creates a linked plan version while preserving the previous contract and outcomes (11.1217ms)
+✔ future evaluations append to an immutable plan and preserve the source actually observed (10.9651ms)
+✔ future evaluation rejects missing or stale revision, wrong contract, wrong horizon and unsupported success claims without writes (16.6328ms)
+✔ concurrent outcomes have one winner and cannot overwrite or duplicate its history (10.713ms)
+✔ recommendations prioritize confirmed current dispositions by severity, retain reasons and exclude accepted or resolved signals (6.0219ms)
+✔ All projects never supplies an implicit action target; security statistics and rows share exactly the same scope (8.0253ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 272.9723
