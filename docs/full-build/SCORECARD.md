@@ -1,3 +1,11 @@
+# Streamed request repair — November 1, 2026
+
+Selectively reconciled the bounded request reader from the older repair lane, preserving the current workspace storage/planning and decisions/backup wrapper behavior. Workspace imports now refuse above2,199,999 actual UTF-8 bytes; intelligence's transport preserves its10,065,536-byte wrapper budget and independent archive validation. Oversized streams are canceled before full text/JSON allocation, malformed UTF-8 refuses, and origin checks precede body reads. Worker report limits remain independently enforced.
+
+Focused helper plus actual workspace/intelligence routes passed7/7. The reader is registered as the new requestBody verification profile, bringing the declared profile count to80. Full clean-source verification is next; do not claim it passed yet. The earlier attempt correctly refused uncommitted source and is retained as blocked, not executed tests. Native worker/job/receipt/companion conflicts in the older lane remain unmerged; the isolated trial was aborted without touching current source.
+
+---
+
 # Active four-repository completion — November 1, 2026
 
 The owner rejected the previous Tevin package as a finished delivery. Continue the owning four-repository implementation, integration and manuals on this side. Do not hand unfinished owning-repo work to Tevin's builder. Active isolated branch: `completion/four-repo-20261101`. Original parent acceptance and production gates are not promoted by the following local results.

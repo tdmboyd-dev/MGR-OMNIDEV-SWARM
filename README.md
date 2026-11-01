@@ -74,3 +74,7 @@ Run `pnpm verify:full` from a clean committed checkout after installing the pinn
 ## Current Trilogy operator guide
 
 [TRILOGY-OPERATIONS-BIBLE.md](TRILOGY-OPERATIONS-BIBLE.md) covers current product roles, Windows installation, source inspection, the three-product job flow, recovery and optional Backpack placement. [Current readiness proof](UNFINISHED-WORK/mgr-backpack-readiness-20261030.json) and [scorecard](docs/full-build/SCORECARD.md) distinguish local verification from full product and production acceptance. The source repository is public at this checkpoint; private service/companion data must remain private.
+
+### Request limits
+
+Workspace imports are bounded while streaming at2,199,999 UTF-8 bytes. Backup transport allows10,065,536 bytes for the action wrapper; archive validation keeps its own limit. Oversized or malformed input is refused before storage access. Run the requestBody profile after prepare to verify the reader and actual API refusal paths.
