@@ -1,0 +1,29 @@
+✖ prepared policy changes block direct service startup until original records are reconciled (5171.28ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5382.7179
+
+✖ failing tests:
+
+test at tests\local-owner-service.mjs:54:1
+✖ prepared policy changes block direct service startup until original records are reconciled (5171.28ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omni-native-enrollment/tests/local-owner-service.mjs:57:38)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,72 @@
+✔ shared stored snapshot contract matches actual import redaction and canonical field order (138.979ms)
+✔ shared stored snapshot contract retains original count, byte, duplicate and unsafe-path limits (1.1319ms)
+✖ unsafe import and candidate paths are rejected before SQLite writes (18.7007ms)
+✖ case aliases, malformed files and action objects are denied without writes (3.7092ms)
+✖ UTF8 byte budget rejects oversized individual source without pretending codepoints are bytes (3.5866ms)
+✔ valid portable snapshot persists with exact content readback and SHA256 ledger (4.5657ms)
+✔ GitHub snapshot selection and full-audit classification exclude case aliases of secret paths (1.8555ms)
+✔ full enqueue intent is durable, exact concurrent replay shares one job, changed settings/source conflict (29.4285ms)
+✔ candidate budgets measure actual UTF8 bytes for each patch and their sum (8.9211ms)
+✔ actual runtime and agent routes cancel byte-oversized streams before allocation or writes (4.9029ms)
+✔ runtime and agent cross-origin denial occurs before reading request body (0.6299ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 8
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 237.5862
+
+✖ failing tests:
+
+test at tests\snapshot-paths.mjs:30:1
+✖ unsafe import and candidate paths are rejected before SQLite writes (18.7007ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  7 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omni-native-enrollment/tests/snapshot-paths.mjs:34:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 7,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\snapshot-paths.mjs:36:1
+✖ case aliases, malformed files and action objects are denied without writes (3.7092ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  7 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omni-native-enrollment/tests/snapshot-paths.mjs:42:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 7,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\snapshot-paths.mjs:44:1
+✖ UTF8 byte budget rejects oversized individual source without pretending codepoints are bytes (3.5866ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  7 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/omni-native-enrollment/tests/snapshot-paths.mjs:45:163)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 7,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

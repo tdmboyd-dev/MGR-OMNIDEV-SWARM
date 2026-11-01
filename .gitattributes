@@ -41,3 +41,7 @@
 /UNFINISHED-WORK/evidence/owned-engineering-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /UNFINISHED-WORK/evidence/owned-engineering-20261101/**/*.log -diff
 /UNFINISHED-WORK/evidence/owned-engineering-20261101/*.log -diff
+
+/UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/**/*.log -diff
+/UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/*.log -diff

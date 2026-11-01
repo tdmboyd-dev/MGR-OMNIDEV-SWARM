@@ -1,0 +1,15 @@
+✔ stream bytes are bounded before full string allocation and oversized stream is canceled (79.1976ms)
+✔ untrusted Content-Length cannot bypass actual stream byte limit and early oversized hint avoids consuming body (4.6674ms)
+✔ split UTF8 codepoints decode exactly, malformed UTF8 is denied and byte boundary is inclusive (3.6074ms)
+✔ workspace refuses an oversized stream before touching storage and cancels the reader (5.3316ms)
+✔ workspace rejects malformed UTF-8 and cross-origin access before reading storage (1.6995ms)
+✔ intelligence refuses an oversized stream before touching storage and cancels the reader (1.1562ms)
+✔ intelligence rejects malformed UTF-8 and cross-origin access before reading storage (1.1314ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 113.3053

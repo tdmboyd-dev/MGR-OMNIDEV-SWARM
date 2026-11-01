@@ -1,0 +1,146 @@
+{
+  "direct-start-baseline.log": {
+    "bytes": 1070,
+    "sha256": "0350dfbfd9e64953dc0d32aef43f08675fd13daaf9b1cabe2bdcab12dfb5b9bf"
+  },
+  "NATIVE-RESULT.json": {
+    "bytes": 3484,
+    "sha256": "a6c0b1fcb224d906ed50613e4b1ed56cf0ee8b218602e2949723d5b75798b181"
+  },
+  "QUALIFICATION.json": {
+    "bytes": 4063,
+    "sha256": "3667f8d92fd7e2a3355cf27165f3c047316b1f714f7f0d2ee204816f04bf2fce"
+  },
+  "REPORT.md": {
+    "bytes": 6233,
+    "sha256": "b01552365f3b65f11e97c438252d48000627a1494f6364da8e14e4f1b5656f86"
+  },
+  "admission-run/ownerLocalService.log": {
+    "bytes": 926,
+    "sha256": "6ee73fe9e924e183b520899434daa4e14a8e67d1d5d6a33d31e708234e90014c"
+  },
+  "admission-run/prepare.log": {
+    "bytes": 107,
+    "sha256": "de0bfdc1eed0a713c96c7b06b1e4e8fdf2b1ac90e5be9aea18b3c69f30822dfc"
+  },
+  "admission-run/report.json": {
+    "bytes": 10573,
+    "sha256": "eed043933715e56e9a831cdd711783c94caed0b231f7bc4c45cd55de6f743494"
+  },
+  "import-fixture-fixed-run/engineeringBinding.log": {
+    "bytes": 1137,
+    "sha256": "38a1fe91d5fff5ca78c6c43e706d33bbf3473edb42cdb61cd6df52c5e536c182"
+  },
+  "import-fixture-fixed-run/ownerLocalService.log": {
+    "bytes": 816,
+    "sha256": "f7cc6dd3a213ef62f0ac2c3ac3db3ce59fcf8fb2ea4b76dcc7fd9f852d951bed"
+  },
+  "import-fixture-fixed-run/prepare.log": {
+    "bytes": 107,
+    "sha256": "03ad4d3fd97b5cb8bd5178f8724f004f0c6b0f738e4eeda4f22e9e92f588445f"
+  },
+  "import-fixture-fixed-run/report.json": {
+    "bytes": 19102,
+    "sha256": "1b98ebd0eae203e9dd43b28dde7a60235ac1f7197c5e79afa2f4629a93af2abd"
+  },
+  "import-fixture-fixed-run/requestBody.log": {
+    "bytes": 849,
+    "sha256": "ee86acd0784c4fcfd8e0fa2cd38e2d0ff9dccf35355bd3f3b43af8c3cce69a23"
+  },
+  "import-fixture-fixed-run/runtime.log": {
+    "bytes": 5349,
+    "sha256": "993d97597cfcba4122b08dd4d7119764b9d19ba27fe279ccd612b432c30caf87"
+  },
+  "import-fixture-fixed-run/snapshotPaths.log": {
+    "bytes": 1218,
+    "sha256": "43b11456f47cbe033d453845f82b4ca65fc3ee77ab8fb436c283fc2ee92b5165"
+  },
+  "import-fixture-fixed-run/typecheck.log": {
+    "bytes": 350,
+    "sha256": "158604961cc0a42153485e55104f0c2831e00a03f27fb65fb94040747cdb3b08"
+  },
+  "import-fixture-fixed-run/workspacePlanning.log": {
+    "bytes": 3614,
+    "sha256": "77cea75dd5104157d7034a88ed7095b7814ccbe1c14c8d30aee77d30628740c4"
+  },
+  "initial-import-run/engineeringBinding.log": {
+    "bytes": 1136,
+    "sha256": "d379b374872ff181cd2ac2f4672d05ea1c4c8e5686b5f2f566ec4a060f2a6201"
+  },
+  "initial-import-run/ownerLocalService.log": {
+    "bytes": 818,
+    "sha256": "359aa9826302f0da46e76ee4b943d2042639614d3374af56fddffc8cf57a9983"
+  },
+  "initial-import-run/prepare.log": {
+    "bytes": 107,
+    "sha256": "03ad4d3fd97b5cb8bd5178f8724f004f0c6b0f738e4eeda4f22e9e92f588445f"
+  },
+  "initial-import-run/report.json": {
+    "bytes": 19106,
+    "sha256": "20347fffba772af4ca9af801d0d0b849d77c1b30787cff969af282157cb75fd7"
+  },
+  "initial-import-run/requestBody.log": {
+    "bytes": 850,
+    "sha256": "94e7fcdb8f876e62f703309cca868c69000f3bf2acfefdb00c063b79ce2a6c58"
+  },
+  "initial-import-run/runtime.log": {
+    "bytes": 5349,
+    "sha256": "993d97597cfcba4122b08dd4d7119764b9d19ba27fe279ccd612b432c30caf87"
+  },
+  "initial-import-run/snapshotPaths.log": {
+    "bytes": 3263,
+    "sha256": "9a1b7e59613ca233a60e942a8d7b88a7ec3280580f8b45479d748cc25f41a67a"
+  },
+  "initial-import-run/typecheck.log": {
+    "bytes": 350,
+    "sha256": "8b0d8d0dabc2a870569dd647bfbfbea9105286f0015232b9777b027d7452270a"
+  },
+  "initial-import-run/workspacePlanning.log": {
+    "bytes": 3617,
+    "sha256": "ada5731b54c174c9877db7b58944a820b0c333c082ef8dff6ecbdd8df481246c"
+  },
+  "shared-import-run/build.log": {
+    "bytes": 2333,
+    "sha256": "575518e5341f90140123f6a41dc88f3813174a82f9438ea8939a7b3ef94ca279"
+  },
+  "shared-import-run/engineeringBinding.log": {
+    "bytes": 1140,
+    "sha256": "a390638014cc4c70274c3d2c582688cd54d15d9867ea1bf76cb33d445501adc8"
+  },
+  "shared-import-run/nodeRuntimePreparation.log": {
+    "bytes": 336,
+    "sha256": "91af61749f62c588460619cedf16250b00065fc587bf57a9b93f3a9a7ef1fe62"
+  },
+  "shared-import-run/ownerLocalService.log": {
+    "bytes": 818,
+    "sha256": "b0162f71eb5e9f524e6697686f91995dc26221bb0e8858e37c030afa706f0aca"
+  },
+  "shared-import-run/prepare.log": {
+    "bytes": 107,
+    "sha256": "de0bfdc1eed0a713c96c7b06b1e4e8fdf2b1ac90e5be9aea18b3c69f30822dfc"
+  },
+  "shared-import-run/report.json": {
+    "bytes": 22197,
+    "sha256": "b15ffeccf1eb9795cb2b9f01a6ccafb3f7cf63bb20bf723dd2134f88fa4d56df"
+  },
+  "shared-import-run/requestBody.log": {
+    "bytes": 849,
+    "sha256": "2f60763adae6bc3db555bec2975c98ca6bca2440c380ae9edf33ddcbf2efe94a"
+  },
+  "shared-import-run/runtime.log": {
+    "bytes": 5349,
+    "sha256": "993d97597cfcba4122b08dd4d7119764b9d19ba27fe279ccd612b432c30caf87"
+  },
+  "shared-import-run/snapshotPaths.log": {
+    "bytes": 1218,
+    "sha256": "17b441701106e4df01b72924d6ce38c9d892806b7415674b7f30d5cb1a919ba4"
+  },
+  "shared-import-run/typecheck.log": {
+    "bytes": 350,
+    "sha256": "31694b6ff41cc8eaea4a43e7eaaf6928e0516bad1a547cfbf35a43f33b88efa3"
+  },
+  "shared-import-run/workspacePlanning.log": {
+    "bytes": 3623,
+    "sha256": "df9f1dc23428e1cc9d527730d534f49fd8e0766a3b74cd458cc84edcab901aa5"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "recordedAt": "2026-11-01T23:35:24.101116+00:00",
+  "ownerProductSource": "33cd46463b299d15b94fd3f10700368771ddd10b",
+  "ownerFixtureCorrection": "61f26c6ddc670aff7f7756de4c2b275c9b2addf8",
+  "owningSnapshotNormalizerSource": "941107c2ed7df456bdc3a8a2ab4dd1ceec522d21",
+  "owningServiceAdmissionSource": "90ba1350e61a46f01096ac64962ac6406b244330",
+  "finalNativeTrial": {
+    "passedChecks": 14,
+    "totalChecks": 14,
+    "nativeWindowsExecutions": 2,
+    "inferenceProviderCalls": 0,
+    "permanentOwnerDatabaseTouched": false,
+    "rawInputObjectKeysReversed": true,
+    "historicalReportBytesRetainedAndCurrentnessFalse": true
+  },
+  "retainedEarlierTrials": [
+    {
+      "checks": 13,
+      "executions": 2
+    },
+    {
+      "checks": 14,
+      "executions": 2
+    }
+  ],
+  "otherVerification": {
+    "oneJoinedDiagnostic": {
+      "passed": 47,
+      "failed": 1,
+      "total": 48,
+      "failure": "test fixture explicit owning-root path used noncanonical separators; production direct-path check retained"
+    },
+    "correctedPolicyAndActualWriterCrashTests": {
+      "passed": 19,
+      "failed": 0,
+      "total": 19
+    },
+    "owningSharedImportProfiles": {
+      "source": "941107c2ed7df456bdc3a8a2ab4dd1ceec522d21",
+      "passed": 10,
+      "failed": 0,
+      "total": 10
+    },
+    "owningCurrentAdmissionProfiles": {
+      "source": "90ba1350e61a46f01096ac64962ac6406b244330",
+      "passed": 2,
+      "failed": 0,
+      "total": 2
+    },
+    "actualPolicyWriterProcessInterruptions": 2,
+    "initialImportDiagnostic": "7/8 commands; new successful import fixture left seven rows before original zero-write checks. Isolated only that fixture; original rejection assertions unchanged."
+  },
+  "counting": "Scopes overlap. Do not add these into one unique-test total or relabel predecessor/native reports as later whole-source runs.",
+  "permanentEngineeringEnabled": false,
+  "productionVerified": false,
+  "newOriginalParentClosures": 0,
+  "fullThirteenRepositorySourceProductProductionScope": "Unassessed",
+  "inputs": [
+    {
+      "repo": "omni-native-enrollment",
+      "sourceCommit": "90ba1350e61a46f01096ac64962ac6406b244330",
+      "path": "app/api/workspace/route.ts",
+      "gitBlob": "bdb8caf78f16a387c90079cc3cf2a5e40a672a60",
+      "gitSha256": "fc98090cd9a3bec2789c332d2b7dbd021ea9ca7e80a28894162147eed2d0b22b",
+      "workingSha256": "9ee969eafd6535e369be1ea13fe4eb494f59dde8d217f616d1783737df9ecb9f",
+      "committedSourceMatchesWithOnlyCRLFNormalization": true
+    },
+    {
+      "repo": "omni-native-enrollment",
+      "sourceCommit": "90ba1350e61a46f01096ac64962ac6406b244330",
+      "path": "lib/workspace-snapshot.ts",
+      "gitBlob": "a6014c3d9af63c4c62ac23e2cd32be7f05b36e8f",
+      "gitSha256": "88b5c25c01e21872f34b54bde44acf729c300419fecdcbaa6ff99c006c6c0d45",
+      "workingSha256": "88b5c25c01e21872f34b54bde44acf729c300419fecdcbaa6ff99c006c6c0d45",
+      "committedSourceMatchesWithOnlyCRLFNormalization": true
+    },
+    {
+      "repo": "omni-native-enrollment",
+      "sourceCommit": "90ba1350e61a46f01096ac64962ac6406b244330",
+      "path": "scripts/prepare-node-runtime.mjs",
+      "gitBlob": "79fc06fc3d4d774a31128ced6ce0c053faa979e5",
+      "gitSha256": "3c3f3780e919d39f1312f77fb01cb9fa35bd729f52d17fdb710ab1da8ae25561",
+      "workingSha256": "83778e03d23691ae83c926cd3e0cb1f058fc4163687da0a56810f2201ee7e2f0",
+      "committedSourceMatchesWithOnlyCRLFNormalization": true
+    },
+    {
+      "repo": "omni-native-enrollment",
+      "sourceCommit": "90ba1350e61a46f01096ac64962ac6406b244330",
+      "path": "scripts/local-worker-api.mjs",
+      "gitBlob": "fcb4aa9227799ba2e0a4721714b54ea216ee0d2e",
+      "gitSha256": "222a53ae550e7723f097f8d6b592cd4e7b1481f6f5a8fe582f610e34cb14eb8e",
+      "workingSha256": "9ab97a52e40d6dfc6e57ce6799e2127db91ef837586387a449dd2cee09ee7956",
+      "committedSourceMatchesWithOnlyCRLFNormalization": true
+    }
+  ],
+  "companionPerFileSourceManifestsWithheld": true
+}

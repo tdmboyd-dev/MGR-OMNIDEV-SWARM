@@ -1,0 +1,10 @@
+✔ versioned runtime reuses exact bytes and rejects modified cached executable without replacing it (9087.9467ms)
+✔ versioned runtime separates trusted host environment and rejects unlisted snapshot data (6505.7261ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15616.4986

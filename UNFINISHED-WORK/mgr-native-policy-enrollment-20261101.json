@@ -1,0 +1,36 @@
+{
+  "schema": "mgr.native-policy-enrollment.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-11-01T23:39:19.412441+00:00",
+  "sourceCommit": "90ba1350e61a46f01096ac64962ac6406b244330",
+  "fullAcceptancePromotions": 0,
+  "canonicalScopeUnchanged": true,
+  "fullVerification": {
+    "report": "UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/admission-run/report.json",
+    "passedProfiles": 2,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 2,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "ownerProgress": {
+    "completed": [
+      {
+        "title": "Native candidate scopes and stopped policy changes preserve original reports",
+        "observed": "ONE derives scope through the owning stored-source/candidate/oracle contract. Actual two-candidate Windows approval/report/restart/historical-download14/14; actual writer interruption2/2; producer prior shared import/build10profiles and current admission2profiles are separate source-bound scopes. No whole91-profile or full-product claim.",
+        "evidence": [
+          "UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/REPORT.md",
+          "UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/NATIVE-RESULT.json",
+          "UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/admission-run/report.json"
+        ],
+        "remaining": [
+          "Reviewed Code Monster candidate to trusted host/job caller and distinct signed result",
+          "OmniSight saved observation and controlled permanent activation/update/rollback",
+          "Original full product/source/production and measured cost/quality acceptance"
+        ]
+      }
+    ]
+  }
+}
