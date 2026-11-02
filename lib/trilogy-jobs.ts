@@ -1,8 +1,9 @@
+import {applicationRecipe} from '../worker/application-profile.mjs';
 import {env} from 'cloudflare:workers';
 import {db,record} from '@/db/store';
 import {fingerprint} from './control-plane';
 import {applyPatches} from './runtime-contract';
-import {canonical,canonicalHash,decodeBase64,encodeBase64,exact,executionIdentity,hashBytes,snapshotCommand,validHex,validId,validSha,validateRequest,verifyReceipt} from './trilogy-contract';
+import {canonical,canonicalHash,decodeBase64,encodeBase64,exact,executionIdentity,hashBytes,trilogyCommand,validHex,validId,validSha,validateRequest,verifyReceipt} from './trilogy-contract';
 
 type Role='owner'|'bridge'|'reader'|'worker';
 export type Access={ownerId:string;projectId:string;repositoryId:string;role:Role};
@@ -40,12 +41,18 @@ async function context(jobId:string,access:Access,allowRevoked=false){
  if(!allowRevoked){const policy:any=await db().prepare("SELECT data FROM runtime_settings WHERE id='effect-policy'").first();if(policy&&JSON.parse(policy.data).stopped===true)fail('Owner effect policy is stopped',403);}
  return {raw,payload,result,project,data,sourceDigest};
 }
+async function selectedCommand(c:any){
+ const profile=c.payload.testProfile;
+ if(!['snapshot','node-application'].includes(profile)||profile==='node-application'&&c.payload.workerKind!=='docker-isolated')fail('Unregistered Trilogy execution profile',403);
+ if(profile==='node-application')applicationRecipe(applyPatches(c.payload.baseline,c.result.candidate.patches));
+ return trilogyCommand(profile);
+}
 async function active(jobId:string,access:Access){
  const c=await context(jobId,access),entry=c.result.trilogy,g=entry?.grant;
  if(!g||g.revoked!==false||g.expiresAt<=Date.now()||g.actorId!==access.ownerId||g.permission!=='candidate-only')fail('Trilogy grant is unavailable, expired or revoked',403);
  validateRequest(g.request);
  if(g.sourceDigest!==c.sourceDigest||g.requestSha256!==await canonicalHash(g.request)||g.request.jobId!==jobId||g.request.projectId!==access.projectId||g.request.repositoryId!==access.repositoryId||g.request.ownerId!==access.ownerId||g.request.baseCommit!==c.data.origin.commit||entry.candidateDigest!==await fingerprint(c.result.candidate))fail('Trilogy grant no longer matches the current job',403);
- const command=await snapshotCommand();if(g.request.commandId!==command.commandId||g.request.commandSha256!==command.commandSha256)fail('Approved trilogy command changed',403);
+ const command=await selectedCommand(c);if(g.request.commandId!==command.commandId||g.request.commandSha256!==command.commandSha256)fail('Approved trilogy command changed',403);
  await assertCurrent(c,access);
  return {...c,entry,grant:g,command};
 }
@@ -74,10 +81,10 @@ async function planMatches(plan:any,c:any){
  applyPatches(c.payload.baseline,patches);
 }
 export async function authorizeTrilogy(jobId:string,plan:any,access:Access){
- role(access,['owner']);const c=await context(jobId,access);if(c.payload.testProfile!=='snapshot')fail('This trilogy bridge supports the existing snapshot profile only');await planMatches(plan,c);
+ role(access,['owner']);const c=await context(jobId,access);await selectedCommand(c);await planMatches(plan,c);
  if(c.result.workerAssignment?.expiresAt>Date.now()||c.result.externalTests)fail('Authorize trilogy before worker assignment or execution');
  if(c.result.trilogy){const current=await active(jobId,access);if(current.grant.request.planSha256!==plan.planSha256)fail('Use a fresh job for a different proposal');return {grant:current.grant,command:current.command};}
- const command=await snapshotCommand(),request={contract:'mgr.trilogy.job.v1',jobId,projectId:access.projectId,repositoryId:access.repositoryId,ownerId:access.ownerId,baseCommit:c.data.origin.commit,planSha256:plan.planSha256,candidateRef:'refs/heads/mgr/candidates/'+crypto.randomUUID(),commandId:command.commandId,commandSha256:command.commandSha256};
+ const command=await selectedCommand(c),request={contract:'mgr.trilogy.job.v1',jobId,projectId:access.projectId,repositoryId:access.repositoryId,ownerId:access.ownerId,baseCommit:c.data.origin.commit,planSha256:plan.planSha256,candidateRef:'refs/heads/mgr/candidates/'+crypto.randomUUID(),commandId:command.commandId,commandSha256:command.commandSha256};
  validateRequest(request);const grant={grantId:crypto.randomUUID(),requestSha256:await canonicalHash(request),request,actorId:access.ownerId,expiresAt:Date.now()+15*60*1000,revoked:false,sourceDigest:c.sourceDigest,permission:'candidate-only'};
  await store(c,{grant,plan,candidateDigest:await fingerprint(c.result.candidate),statusRevision:1,result:null,proof:null},'Trilogy candidate-only grant recorded');return {grant,command};
 }
@@ -198,4 +205,4 @@ export async function checkTrilogyWorkerProof(jobId:string,p:any,assignment:any,
  const current=await verifier({...scope(),role:'worker'});if(current.signerId!==trusted.signerId||current.pem!==trusted.pem)fail('Worker verifier registration changed',409);
  if(p.trilogySignerId!==trusted.signerId)fail('Worker signer identity mismatch');return {receipt:p.trilogyReceipt,outputBase64:encodeBase64(output),signerId:trusted.signerId,...checked};
 }
-export async function trilogyExecution(jobId:string,access:Access){role(access,['bridge']);const c=await active(jobId,access);const saved=c.result.externalTests?.trilogyProof;if(!saved)return {available:false};const binding=await trilogyWorkerBinding(jobId,true);await checkTrilogyWorkerProof(jobId,{passed:true,output:new TextDecoder('utf-8',{fatal:true}).decode(decodeBase64(saved.outputBase64)),trilogyReceipt:saved.receipt,trilogySignerId:saved.signerId},c.result.workerAssignment,true);await assertCurrent(c,access);return {available:true,request:binding.request,receipt:saved.receipt,outputBase64:saved.outputBase64,scope:'Imported candidate snapshot profile; Docker isolation is not independently certified'};}
+export async function trilogyExecution(jobId:string,access:Access){role(access,['bridge']);const c=await active(jobId,access);const saved=c.result.externalTests?.trilogyProof;if(!saved)return {available:false};const binding=await trilogyWorkerBinding(jobId,true);await checkTrilogyWorkerProof(jobId,{passed:true,output:new TextDecoder('utf-8',{fatal:true}).decode(decodeBase64(saved.outputBase64)),trilogyReceipt:saved.receipt,trilogySignerId:saved.signerId},c.result.workerAssignment,true);await assertCurrent(c,access);return {available:true,request:binding.request,receipt:saved.receipt,outputBase64:saved.outputBase64,scope:c.payload.testProfile==='node-application'?'Imported candidate application bundle; Docker isolation is not independently certified':'Imported candidate snapshot profile; Docker isolation is not independently certified'};}

@@ -1,5 +1,6 @@
 // Fixed recipes only. Application scripts execute inside the constrained container.
 export const applicationCommand=Object.freeze(['sh','-ec','mkdir /tmp/app; cp -R /source/. /tmp/app/; cd /tmp/app; npm ci --offline --ignore-scripts --cache=/opt/omni-npm-cache; node -e \'const p=require("./package.json"); for(const s of ["typecheck","build","test"]) if(p.scripts?.[s]) { const r=require("child_process").spawnSync("npm",["run",s],{stdio:"inherit",env:{...process.env,CI:"true"}}); if(r.status!==0)process.exit(r.status||1); }\'']);
+export function applicationCommandSpec(){return Object.freeze({version:1,commandId:'omni-node-application-v1',executable:applicationCommand[0],args:Object.freeze(applicationCommand.slice(1)),cwd:'.'});}
 export function applicationRecipe(files){
  const manifest=files.find(f=>f.path==='package.json'),lock=files.find(f=>f.path==='package-lock.json');
  if(!manifest||!lock)throw Error('Application testing requires package.json and package-lock.json; import a runnable source bundle');

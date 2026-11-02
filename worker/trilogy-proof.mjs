@@ -1,3 +1,4 @@
+import {applicationCommandSpec,applicationRecipe} from './application-profile.mjs';
 import {createHash,createPrivateKey,createPublicKey,sign} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {constants} from 'node:fs';
@@ -58,9 +59,11 @@ export async function trilogyExecutionGuard(job){
  const binding=plain(job.trilogy),request=binding.request,assignment=plain(job.assignment),files=plain(job.files);
  if(!exact(binding,['request','requestSha256','grantId','grantExpiresAt','stagedAt','candidateCommit','sourceDigest','files','command','identity']))throw Error('Invalid trilogy worker binding');
  if(!exact(request,['contract','jobId','projectId','repositoryId','ownerId','baseCommit','planSha256','candidateRef','commandId','commandSha256'])||request.contract!=='mgr.trilogy.job.v1'||!['jobId','projectId','repositoryId','ownerId','commandId'].every(k=>typeof request[k]==='string'&&id.test(request[k]))||!sha.test(request.baseCommit)||!sha.test(binding.candidateCommit)||!hex.test(request.planSha256)||!ref.test(request.candidateRef)||job.id!==request.jobId)throw Error('Invalid trilogy worker request');
- const spec={version:1,commandId:'omni-snapshot-v1',executable:'node',args:['--test','tests/omni-snapshot.test.mjs'],cwd:'.'},command={...spec,commandSha256:hash(JSON.stringify(spec))};
+ if(!['snapshot','node-application'].includes(job.profile))throw Error('Unregistered Trilogy execution profile');
+ const spec=job.profile==='node-application'?applicationCommandSpec():{version:1,commandId:'omni-snapshot-v1',executable:'node',args:['--test','tests/omni-snapshot.test.mjs'],cwd:'.'},command={...spec,commandSha256:hash(JSON.stringify(spec))};
+ if(job.profile==='node-application')applicationRecipe(files);
  const campaignId='trilogy:'+hash(canonical({jobId:request.jobId,ownerId:request.ownerId,projectId:request.projectId,repositoryId:request.repositoryId}));
- if(job.profile!=='snapshot'||canonical(job.command)!==canonical(['node',...spec.args])||canonical(binding.command)!==canonical(command)||request.commandId!==command.commandId||request.commandSha256!==command.commandSha256||binding.requestSha256!==hash(canonical(request))||canonical(binding.identity)!==canonical({campaignId,taskId:request.jobId,agentId:'trilogy-code-monster'}))throw Error('Trilogy command or request binding changed');
+ if(canonical(job.command)!==canonical([spec.executable,...spec.args])||canonical(binding.command)!==canonical(command)||request.commandId!==command.commandId||request.commandSha256!==command.commandSha256||binding.requestSha256!==hash(canonical(request))||canonical(binding.identity)!==canonical({campaignId,taskId:request.jobId,agentId:'trilogy-code-monster'}))throw Error('Trilogy command or request binding changed');
  if(binding.request.repositoryId!==process.env.OMNI_TRILOGY_REPOSITORY_ID||!process.env.OMNI_TRILOGY_REPOSITORY_ROOT)throw Error('Configure the approved trilogy repository on this worker');
  if(assignment.trilogyBindingDigest!==hash(JSON.stringify(job.trilogy))||assignment.candidateDigest!==hash(JSON.stringify(job.files))||binding.sourceDigest!==assignment.sourceDigest||assignment.testManifestDigest!==hash(JSON.stringify(job.command)))throw Error('Trilogy worker assignment mismatch');
  if(!Number.isSafeInteger(binding.grantExpiresAt)||!Number.isSafeInteger(assignment.expiresAt)||Math.min(binding.grantExpiresAt,assignment.expiresAt)<=Date.now()||!Number.isFinite(Date.parse(binding.stagedAt))||Date.parse(binding.stagedAt)>Date.now())throw Error('Trilogy worker grant is not current');

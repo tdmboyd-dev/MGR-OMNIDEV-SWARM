@@ -114,9 +114,9 @@ export async function startLocalWorkerApi(configInput,{verifyPrivateState,verify
     const {boundedRequestText}=await import(pathToFileURL(join(output,'request-body.mjs')));const raw=await boundedRequestText(request,url.pathname==='/api/workspace'?2199999:600000);const body=JSON.parse(raw);
     if(url.pathname==='/api/workspace'&&body?.action!=='import'&&!(trilogy&&body?.action==='github'&&[trilogy.scope.repositoryId,'https://github.com/'+trilogy.scope.repositoryId].includes(body.location)))return send(403,'Local workspace source operation is outside configured scope');
     if(url.pathname==='/api/runtime'){
-     const boundedAccount=body?.mode==='account'&&body.testProfile==='snapshot'&&body.automaticReview!==true&&body.automaticRepair!==true;
-     const nativeAdmission=boundedAccount&&body.workerKind==='windows-appcontainer';
-     const trilogyAdmission=boundedAccount&&trilogy&&body.projectId===trilogy.scope.projectId&&body.workerKind==='docker-isolated';
+     const boundedAccount=body?.mode==='account'&&body.automaticReview!==true&&body.automaticRepair!==true;
+     const nativeAdmission=boundedAccount&&body.workerKind==='windows-appcontainer'&&body.testProfile==='snapshot';
+     const trilogyAdmission=boundedAccount&&trilogy&&body.projectId===trilogy.scope.projectId&&body.workerKind==='docker-isolated'&&['snapshot','node-application'].includes(body.testProfile);
      if(!allowedRuntime.has(body?.action)||body?.action==='enqueue'&&!nativeAdmission&&!trilogyAdmission)return send(403,'Local runtime operation is outside configured scope');
     }
     request=new Request(url,{method:'POST',headers:req.headers,body:raw});

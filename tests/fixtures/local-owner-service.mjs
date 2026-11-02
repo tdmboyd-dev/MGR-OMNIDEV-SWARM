@@ -1,3 +1,4 @@
+import {createHash} from 'node:crypto';
 // Protocol fixture only. Private-permission callback is deliberately synthetic;
 // actual Windows permission and native execution acceptance run separately.
 import {startLocalWorkerApi} from '../../scripts/local-worker-api.mjs';
@@ -8,13 +9,13 @@ process.stdin.on('data',async chunk=>{
  const index=buffer.indexOf('\n');if(index<0||started)return;started=true;
  try{const request=JSON.parse(buffer.slice(0,index));buffer='';
  if(request.githubFixture){
-  const content=request.githubFixture.content??'export const value=1;\n';
+  const fixtureCommit=request.githubFixture.commit??'a'.repeat(40),fixtureTree=request.githubFixture.tree??'b'.repeat(40),content=request.githubFixture.content??'export const value=1;\n',files=request.githubFixture.files??[{path:'src/value.js',content}];
   globalThis.fetch=async input=>{
    const url=String(input),base='https://api.github.com/repos/fixture/project';
    if(url===base)return Response.json({default_branch:'main'});
-   if(url===base+'/commits/main')return Response.json({sha:'a'.repeat(40),commit:{tree:{sha:'b'.repeat(40)}}});
-   if(url===base+'/git/trees/'+'b'.repeat(40)+'?recursive=1')return Response.json({tree:[{path:'src/value.js',type:'blob',size:Buffer.byteLength(content),sha:'c'.repeat(40)}],truncated:false});
-   if(url==='https://raw.githubusercontent.com/fixture/project/'+'a'.repeat(40)+'/src/value.js')return new Response(content);
+   if(url===base+'/commits/main')return Response.json({sha:fixtureCommit,commit:{tree:{sha:fixtureTree}}});
+   if(url===base+'/git/trees/'+fixtureTree+'?recursive=1')return Response.json({tree:files.map(file=>({path:file.path,type:'blob',mode:'100644',size:Buffer.byteLength(file.content),sha:createHash('sha1').update('blob '+Buffer.byteLength(file.content)+'\0').update(file.content).digest('hex')})),truncated:false});
+   for(const file of files)if(url==='https://raw.githubusercontent.com/fixture/project/'+fixtureCommit+'/'+file.path.split('/').map(encodeURIComponent).join('/'))return new Response(file.content);
    throw Error('fixture refuses any unregistered external HTTP');
   };
  }

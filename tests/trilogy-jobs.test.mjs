@@ -186,3 +186,22 @@ test('API refuses cross-origin, unexpected authority fields, ambiguous reads and
  const response=await route.GET(new Request('https://omni.example/api/trilogy?jobId=a&jobId=b',{headers:{Authorization:'Bearer '+f.tokens.reader}}));assert.equal(response.status,400);
  const large=await route.POST(new Request('https://omni.example/api/trilogy',{method:'POST',headers:{Authorization:'Bearer '+f.tokens.owner},body:' '.repeat(256001)}));assert.equal(large.status,413);
 });
+
+
+test('original authority registers the existing real application argv and assignment instead of the snapshot oracle',async()=>{
+ const f=await fixture({testProfile:'node-application'}),granted=await f.authorize();assert.equal(granted.status,200);
+ assert.equal(granted.data.command.commandId,'omni-node-application-v1');assert.equal(granted.data.command.executable,'sh');
+ const pending=await stages(f),assignment=await jobs.workerJob(f.job.id);assert.equal(assignment.profile,'node-application');
+ assert.deepEqual(assignment.command,[granted.data.command.executable,...granted.data.command.args]);assert.equal(assignment.trilogy.command.commandSha256,granted.data.command.commandSha256);
+ assert.equal(pending.request.commandSha256,granted.data.command.commandSha256);assert.equal(assignment.assignment.testManifestDigest,hash(JSON.stringify(assignment.command)));
+});
+
+
+for(const mutation of ['snapshot','unregistered','native-worker'])test('application grant refuses changed execution profile '+mutation,async()=>{
+ const f=await fixture({testProfile:'node-application'});assert.equal((await f.authorize()).status,200);
+ mutateJob(f.job.id,j=>{if(mutation==='native-worker')j.payload.workerKind='windows-appcontainer';else j.payload.testProfile=mutation;});
+ const before=dbSnapshot();assert.equal((await get(f.job.id,f.tokens.bridge,'grant')).status,403);assert.deepEqual(dbSnapshot(),before);
+});
+for(const options of [{applicationTestScript:'echo no test specified'},{omitApplicationLock:true}])test('application grant refuses a candidate without a runnable declared test recipe '+JSON.stringify(options),async()=>{
+ const f=await fixture({testProfile:'node-application',...options}),before=dbSnapshot();assert.equal((await f.authorize()).status,400);assert.deepEqual(dbSnapshot(),before);
+});

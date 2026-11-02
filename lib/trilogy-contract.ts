@@ -1,3 +1,4 @@
+import {applicationCommandSpec} from '../worker/application-profile.mjs';
 // Versioned cross-product data contract. This module grants no authority.
 const ID=/^[A-Za-z0-9][A-Za-z0-9._:/-]{0,99}$/;
 const SHA=/^[a-f0-9]{40}(?:[a-f0-9]{24})?$/;
@@ -26,6 +27,7 @@ export function validateRequest(request:any){
 }
 export async function executionIdentity(request:any){validateRequest(request);const id=await canonicalHash({jobId:request.jobId,ownerId:request.ownerId,projectId:request.projectId,repositoryId:request.repositoryId});return {campaignId:'trilogy:'+id,taskId:request.jobId,agentId:'trilogy-code-monster'};}
 export async function snapshotCommand(){const spec={version:1,commandId:'omni-snapshot-v1',executable:'node',args:['--test','tests/omni-snapshot.test.mjs'],cwd:'.'};return {...spec,commandSha256:await hashBytes(JSON.stringify(spec))};}
+export async function trilogyCommand(profile:string){if(profile==='snapshot')return snapshotCommand();if(profile!=='node-application')throw Error('Unregistered Trilogy execution profile');const spec=applicationCommandSpec();return {...spec,commandSha256:await hashBytes(JSON.stringify(spec))};}
 export function decodeBase64(value:unknown,maxBytes=20000){if(typeof value!=='string'||value.length>Math.ceil(maxBytes/3)*4||! /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(value))throw Error('Invalid bounded base64');const raw=atob(value);if(raw.length>maxBytes||btoa(raw)!==value)throw Error('Invalid base64 encoding');return Uint8Array.from(raw,c=>c.charCodeAt(0));}
 export function encodeBase64(value:Uint8Array){let text='';for(const byte of value)text+=String.fromCharCode(byte);return btoa(text);}
 export async function publicKey(pem:string){const encoded=pem.match(/^-----BEGIN PUBLIC KEY-----\s+([A-Za-z0-9+/=\s]+)-----END PUBLIC KEY-----\s*$/)?.[1].replace(/\s/g,'');if(!encoded)throw Error('Trusted verifier public key required');const der=decodeBase64(encoded,1024);const key=await crypto.subtle.importKey('spki',der as BufferSource,{name:'Ed25519'},false,['verify']);return {key,keySha256:await hashBytes(der)};}

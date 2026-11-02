@@ -12,7 +12,7 @@ const digest=value=>hash(JSON.stringify(value));
 const hex=/^[a-f0-9]{64}$/;
 const uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
 const snapshotCommand=['node','--preserve-symlinks','--preserve-symlinks-main','--test','--test-isolation=none','tests/omni-snapshot.test.mjs'];
-const launcherPaths=['windows-appcontainer.mjs','windows/AppContainerHost.cs','windows/run-appcontainer.ps1','runner.mjs','fleet.mjs'];
+const launcherPaths=['windows-appcontainer.mjs','windows/AppContainerHost.cs','windows/run-appcontainer.ps1','runner.mjs','fleet.mjs','application-profile.mjs','trilogy-proof.mjs'];
 export async function nativeLauncherDigest(){
  const materials=await Promise.all(launcherPaths.map(async path=>({path,sha256:hash(await readFile(join(here,path)))})));
  return digest(materials);

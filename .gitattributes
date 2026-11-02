@@ -84,3 +84,6 @@ UNFINISHED-WORK/evidence/backpack-070-current-owner-20261101/*.log -diff
 /worker/runner.mjs text eol=lf
 
 /UNFINISHED-WORK/evidence/owner-trilogy-authority-20261102/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+
+/worker/trilogy-proof.mjs text eol=lf
+/UNFINISHED-WORK/evidence/registered-application-20261102/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

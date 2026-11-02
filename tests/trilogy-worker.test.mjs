@@ -5,6 +5,7 @@ import {createHash,generateKeyPairSync,verify,randomUUID} from 'node:crypto';
 import {mkdtemp,mkdir,writeFile,readFile,rm,chmod,symlink} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join,dirname,delimiter} from 'node:path';
+import {applicationCommand} from '../worker/application-profile.mjs';
 import {trilogyExecutionGuard} from '../worker/trilogy-proof.mjs';
 import {dockerEnvironment,dockerArgs,execute} from '../worker/runner.mjs';
 
@@ -26,20 +27,21 @@ function rebind(job){
   job.trilogy.identity={campaignId:'trilogy:'+hash(canonical({jobId:request.jobId,ownerId:request.ownerId,projectId:request.projectId,repositoryId:request.repositoryId})),taskId:request.jobId,agentId:'trilogy-code-monster'};
   job.assignment.trilogyBindingDigest=jsonHash(job.trilogy);job.assignment.candidateDigest=jsonHash(job.files);job.assignment.testManifestDigest=jsonHash(job.command);return job;
 }
-async function fixture(t){
+async function fixture(t,{application=false}={}){
   const parent=await mkdtemp(join(tmpdir(),'omni-trilogy-worker-')),root=join(parent,'repository'),keyPath=join(parent,'verifier.pem');
   const saved=Object.fromEntries(policyNames.map(name=>[name,process.env[name]]));
   t.after(async()=>{for(const [name,value] of Object.entries(saved)){if(value===undefined)delete process.env[name];else process.env[name]=value;}await rm(parent,{recursive:true,force:true});});
   await mkdir(join(root,'src'),{recursive:true});await mkdir(join(root,'tests'),{recursive:true});git(root,'init','-q');
-  await writeFile(join(root,'src/value.mjs'),before);await writeFile(join(root,'tests/omni-snapshot.test.mjs'),testSource);git(root,'add','.');git(root,'commit','-qm','Baseline with the demonstrated behavior bug');
+  const contextFiles=application?[{path:'package.json',content:JSON.stringify({name:'fixture',version:'1.0.0',scripts:{test:'node --test tests/application.test.mjs'}})},{path:'package-lock.json',content:JSON.stringify({name:'fixture',version:'1.0.0',lockfileVersion:3,packages:{'':{name:'fixture',version:'1.0.0'}}})},{path:'tests/application.test.mjs',content:testSource}]:[{path:'tests/omni-snapshot.test.mjs',content:testSource}];
+  await writeFile(join(root,'src/value.mjs'),before);for(const file of contextFiles)await writeFile(join(root,file.path),file.content);git(root,'add','.');git(root,'commit','-qm','Baseline with the demonstrated behavior bug');
   const base=git(root,'rev-parse','HEAD');await writeFile(join(root,'src/value.mjs'),after);git(root,'add','.');git(root,'commit','-qm','Candidate fixes the requested behavior');
   const candidate=git(root,'rev-parse','HEAD'),candidateRef='refs/heads/mgr/candidates/'+randomUUID();git(root,'update-ref',candidateRef,candidate);git(root,'checkout','-q','--detach',base);
   const keys=signingPair();await writeFile(keyPath,keys.privateKey,{mode:0o600});
   Object.assign(process.env,{OMNI_TRILOGY_REPOSITORY_ID:'fixture/project',OMNI_TRILOGY_REPOSITORY_ROOT:root,OMNI_TRILOGY_VERIFIER_ID:'fixture-independent-runner',OMNI_TRILOGY_VERIFIER_PRIVATE_KEY_FILE:keyPath,OMNI_TRILOGY_VERIFIER_PUBLIC_KEY:keys.publicKey,OMNI_WORKER_IMAGE:'node@sha256:'+'a'.repeat(64)});delete process.env.OMNI_TRILOGY_VERIFIER_REVOKED;delete process.env.DOCKER_HOST;delete process.env.DOCKER_CONTEXT;
-  const spec={version:1,commandId:'omni-snapshot-v1',executable:'node',args:['--test','tests/omni-snapshot.test.mjs'],cwd:'.'},command={...spec,commandSha256:jsonHash(spec)};
+  const spec=application?{version:1,commandId:'omni-node-application-v1',executable:applicationCommand[0],args:applicationCommand.slice(1),cwd:'.'}:{version:1,commandId:'omni-snapshot-v1',executable:'node',args:['--test','tests/omni-snapshot.test.mjs'],cwd:'.'},command={...spec,commandSha256:jsonHash(spec)};
   const request={contract:'mgr.trilogy.job.v1',jobId:'job-fixture',projectId:'project-fixture',repositoryId:'fixture/project',ownerId:'fixture-owner',baseCommit:base,planSha256:'b'.repeat(64),candidateRef,commandId:command.commandId,commandSha256:command.commandSha256};
-  const sourceFiles=[{path:'src/value.mjs',content:before},{path:'tests/omni-snapshot.test.mjs',content:testSource}],files=[{path:'src/value.mjs',content:after},{path:'tests/omni-snapshot.test.mjs',content:testSource}],expires=Date.now()+120000;
-  const job={id:request.jobId,profile:'snapshot',command:['node',...spec.args],files,trilogy:{request,requestSha256:'',grantId:randomUUID(),grantExpiresAt:expires,stagedAt:new Date(Date.now()-5000).toISOString(),candidateCommit:candidate,sourceDigest:jsonHash(sourceFiles),files:[{path:'src/value.mjs',operation:'update',beforeHash:hash(before),afterHash:hash(after)}],command,identity:{}},assignment:{id:randomUUID(),sourceDigest:jsonHash(sourceFiles),candidateDigest:'',testManifestDigest:'',trilogyBindingDigest:'',expiresAt:expires}};
+  const sourceFiles=[{path:'src/value.mjs',content:before},...contextFiles],files=[{path:'src/value.mjs',content:after},...contextFiles],expires=Date.now()+120000;
+  const job={id:request.jobId,profile:application?'node-application':'snapshot',command:[spec.executable,...spec.args],files,trilogy:{request,requestSha256:'',grantId:randomUUID(),grantExpiresAt:expires,stagedAt:new Date(Date.now()-5000).toISOString(),candidateCommit:candidate,sourceDigest:jsonHash(sourceFiles),files:[{path:'src/value.mjs',operation:'update',beforeHash:hash(before),afterHash:hash(after)}],command,identity:{}},assignment:{id:randomUUID(),sourceDigest:jsonHash(sourceFiles),candidateDigest:'',testManifestDigest:'',trilogyBindingDigest:'',expiresAt:expires}};
   rebind(job);
   return {parent,root,keyPath,keys,base,candidate,candidateRef,job,async snapshot(){const dir=join(parent,'executed-snapshot');await mkdir(dir);for(const f of job.files){const path=join(dir,f.path);await mkdir(dirname(path),{recursive:true});await writeFile(path,f.content);}return dir;}};
 }
@@ -197,4 +199,18 @@ test('simulated Docker CLI: non-UTF8 bytes fail execution and receive no receipt
 test('simulated Docker CLI: empty output is not converted into a successful signed test',async t=>{
   if(process.platform==='win32'){t.skip('POSIX CLI fixture');return;}
   const f=await fixture(t);await simulatedDocker(f,'empty');await assert.rejects(()=>execute(f.job),/execution|output|successful/i);
+});
+
+
+test('registered application command passes original Git binding before execution without requiring a snapshot oracle',async t=>{
+ const f=await fixture(t,{application:true});assert.equal(f.job.files.some(file=>file.path==='tests/omni-snapshot.test.mjs'),false);
+ assert.equal(typeof await trilogyExecutionGuard(f.job),'function');
+});
+
+
+test('application worker rejects profile and command substitutions even after caller digests are recomputed',async t=>{
+ const f=await fixture(t,{application:true});
+ for(const profile of ['snapshot','unregistered']){const job=structuredClone(f.job);job.profile=profile;rebind(job);await refusal(job);}
+ const job=structuredClone(f.job),spec={version:1,commandId:'omni-node-application-v1',executable:'sh',args:['-ec','printf substituted'],cwd:'.'};
+ job.command=[spec.executable,...spec.args];job.trilogy.command={...spec,commandSha256:jsonHash(spec)};job.trilogy.request.commandSha256=job.trilogy.command.commandSha256;rebind(job);await refusal(job);
 });

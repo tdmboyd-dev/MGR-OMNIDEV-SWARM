@@ -56,7 +56,7 @@ const {selectSnapshotFiles}=await import('../.test-runtime/github-selection.mjs'
 test('GitHub snapshot selection and full-audit classification exclude case aliases of secret paths',()=>{
  for(const path of ['.ENV.json','src/.ENV.production.json','src/ID_RSA','src/ID_ED25519'])assert.equal(classification(path,20,'100644'),'secret-file',path);
  assert.equal(classification('.GIT/config.json',20,'100644'),'generated-or-dependency');
- const blobs=['.ENV.json','src/.ENV.production.json','.GIT/config.json','src/safe.ts'].map(path=>({path,type:'blob',size:20}));assert.deepEqual(selectSnapshotFiles(blobs).map(x=>x.path),['src/safe.ts']);
+ const blobs=['.ENV.json','src/.ENV.production.json','.GIT/config.json','src/safe.ts'].map(path=>({path,type:'blob',mode:'100644',size:20,sha:'a'.repeat(40)}));assert.deepEqual(selectSnapshotFiles(blobs).map(x=>x.path),['src/safe.ts']);
 });
 const {enqueue}=await import('../.test-runtime/jobs.mjs');
 const runtime=await import('../.test-runtime/runtime-route.mjs');
