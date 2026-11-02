@@ -1,0 +1,36 @@
+{
+  "sourceCommit": "fe1c0f466317163f335d7859497b5eca505190f8",
+  "runs": [
+    {
+      "directory": "initial-full",
+      "summary": {
+        "passedProfiles": 94,
+        "failedProfiles": 1,
+        "blockedProfiles": 0,
+        "totalProfiles": 95,
+        "independentlyCertifiedParents": 0,
+        "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+      },
+      "outputHashesVerified": 95,
+      "sourceStable": true
+    },
+    {
+      "directory": "typecheck-recheck",
+      "summary": {
+        "passedProfiles": 2,
+        "failedProfiles": 0,
+        "blockedProfiles": 0,
+        "totalProfiles": 2,
+        "independentlyCertifiedParents": 0,
+        "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+      },
+      "outputHashesVerified": 2,
+      "sourceStable": true
+    }
+  ],
+  "distinctProfilesWithPassingReceiptsAfterRerun": 95,
+  "initialFullRunRetainsFailure": true,
+  "typecheckFailureCause": "Temporary partial source-scan copy under ignored outputs was included by the existing compiler glob. The copy was moved outside the repository; same-source clean targeted preparation/typecheck passed. No compiler exclusions or source were changed.",
+  "compiledRuntimeSourceUnchanged": true,
+  "wholeProductAcceptance": "Unassessed"
+}

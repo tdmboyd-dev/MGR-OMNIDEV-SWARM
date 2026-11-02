@@ -1,3 +1,9 @@
+## Application assignments match actual worker argv — November 2, 2026 UTC
+
+Runtimefe1c0f4 repairs actual application command identity, immutable shared recipe, fixed-map compilation and exact argument validation. Actual Docker argv is unchanged. Initial full94/95passed with1temporary scan-copy compiler failure retained; same-source preparation/typecheck2/2passed after relocating that copy, so all95distinct profiles have passing receipts. All97output hashes/source receipts rechecked. [Owning source, original failure and limits](UNFINISHED-WORK/evidence/application-command-identity-20261102/REPORT.md).
+
+Changed runner fingerprint requires matching new native qualification before launch; older29-check receipt cannot certify this revision. No actual AppContainer/Docker job, inference, permanent setup change or automatic activation occurred. Next: original owner/job/grant connection in the protected local service, exact pinned import, registered real application signed command/worker, qualification and permanent journey. Preserve original requirements and all source-specific prior receipts.
+
 ## Current original reviewed source checked at native dispatch — November 2, 2026
 
 Runtime97782ea requires current original source/owner/recipe checks before a linked job is claimed and again before native launch. The original engineering record now distinguishes not-started from started, allowing atomic definite refusal/cancellation without clearing genuinely unknown or started execution. Full94/94 local profiles passed; all94 output hashes/source receipts rechecked. Later test-only0786de4 retains identical runtime and passes3/3 targeted profiles, including19 service controls. [Owning report and failed-before/fixed-after receiving scope](UNFINISHED-WORK/evidence/native-source-recheck-20261102/REPORT.md).

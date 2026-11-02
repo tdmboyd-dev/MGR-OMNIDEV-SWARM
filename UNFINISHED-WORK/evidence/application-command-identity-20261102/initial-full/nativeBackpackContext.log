@@ -1,0 +1,17 @@
+﹣ required Backpack context precedes the exact job and source-linked note reopens without copied jobs (1.2645ms) # Optional reviewed Backpack SDK peer is not installed; this integration is unverified here.
+﹣ missing enrollment and excluded source refuse before the worker is called (0.2392ms) # Optional reviewed Backpack SDK peer is not installed; this integration is unverified here.
+﹣ source drift after execution preserves actual job result but refuses a current-source note (0.1809ms) # Optional reviewed Backpack SDK peer is not installed; this integration is unverified here.
+﹣ record-off keeps the existing store unchanged and does not turn context into authority (0.3092ms) # Optional reviewed Backpack SDK peer is not installed; this integration is unverified here.
+﹣ unknown native outcome never triggers another execution or manufactures passing memory (0.3699ms) # Optional reviewed Backpack SDK peer is not installed; this integration is unverified here.
+﹣ foreign worker result cannot be associated with the configured project/job (0.1051ms) # Optional reviewed Backpack SDK peer is not installed; this integration is unverified here.
+✔ malformed job identity rejects before native policy load or network (1.749ms)
+✔ a different queued native job is refused before any claim or sandbox dispatch (435.8789ms)
+﹣ a claimed job without a boolean execution verdict cannot manufacture a host verification (0.2968ms) # Optional reviewed Backpack SDK peer is not installed; this integration is unverified here.
+ℹ tests 9
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 7
+ℹ todo 0
+ℹ duration_ms 456.6011

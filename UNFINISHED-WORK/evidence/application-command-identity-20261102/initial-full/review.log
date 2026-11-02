@@ -1,0 +1,1 @@
+PASS all-mode exceeds 48 planned calls, pause/stop/timer prevent new starts while preserving in-flight receipts, explicit call counts work, and findings create idempotent fix jobs without pretending to apply them

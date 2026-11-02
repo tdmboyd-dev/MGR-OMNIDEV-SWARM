@@ -1,0 +1,18 @@
+✔ an expired native assignment cannot be reissued or appear in the native queue (38.9002ms)
+✔ native enrollment is absent by default, malformed policy/nonce deny, and missing policy never writes an assignment (2.1738ms)
+✔ native credentials cannot use Docker scope, model/audit/recovery actions, or another worker report identity (5.2828ms)
+✔ native report rejects changed host/runtime/qualification/profile and incomplete process/cleanup proof (1.2705ms)
+✔ native source/candidate/command allowlists, immutable oracle and distinct credentials are enforced (0.7009ms)
+✔ model output cannot weaken the native test oracle before candidate persistence (1.9864ms)
+✔ native empty output retains bounded exit and stop diagnostics and cannot pass (0.7408ms)
+✔ native acknowledgment requires the same diagnostic values without depending on object key order (0.2676ms)
+✔ native report persists validated diagnostics and refuses malformed or contradictory success claims (0.9964ms)
+✔ actual Windows monitor preserves missing-entry handling, denial, reparse and entry limits (7342.2404ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7401.7047

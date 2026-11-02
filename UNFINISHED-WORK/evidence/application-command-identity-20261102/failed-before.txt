@@ -1,0 +1,57 @@
+✖ application assignment command is the exact argv launched in the constrained container (2.9096ms)
+✖ application command cannot be mutated between assignment and execution (0.3688ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 132.6894
+
+✖ failing tests:
+
+test at tests\application-command-identity.mjs:5:1
+✖ application assignment command is the exact argv launched in the constrained container (2.9096ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'sh',
+  +   '-ec',
+  +   `mkdir /tmp/app; cp -R /source/. /tmp/app/; cd /tmp/app; npm ci --offline --ignore-scripts --cache=/opt/omni-npm-cache; node -e 'const p=require("./package.json"); for(const s of ["typecheck","build","test"]) if(p.scripts?.[s]) { const r=require("child_process").spawnSync("npm",["run",s],{stdio:"inherit",env:{...process.env,CI:"true"}}); if(r.status!==0)process.exit(r.status||1); }'`
+  -   'npm',
+  -   'run',
+  -   'omni:verify'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/tests/application-command-identity.mjs:7:28)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'sh', '-ec', `mkdir /tmp/app; cp -R /source/. /tmp/app/; cd /tmp/app; npm ci --offline --ignore-scripts --cache=/opt/omni-npm-cache; node -e 'const p=require("./package.json"); for(const s of ["typecheck","build","test"]) if(p.scripts?.[s]) { const r=require("child_process").spawnSync("npm",["run",s],{stdio:"inherit",env:{...process.env,CI:"true"}}); if(r.status!==0)process.exit(r.status||1); }'` ],
+    expected: [ 'npm', 'run', 'omni:verify' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\application-command-identity.mjs:12:1
+✖ application command cannot be mutated between assignment and execution (0.3688ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/tests/application-command-identity.mjs:13:57)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }

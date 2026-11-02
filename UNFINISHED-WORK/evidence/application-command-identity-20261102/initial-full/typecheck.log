@@ -1,0 +1,32 @@
+outputs/application-command-scan-20261102/lib/jobs.ts(2,40): error TS2307: Cannot find module './reviewed-native-source' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(3,106): error TS2307: Cannot find module './worker-policy' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(4,111): error TS2307: Cannot find module './trilogy-jobs' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(5,57): error TS2307: Cannot find module './trilogy-job-link.mjs' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(6,53): error TS2307: Cannot find module './review-planner' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(7,56): error TS2307: Cannot find module './specialists' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(8,26): error TS2307: Cannot find module './file-ledger' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(9,28): error TS2307: Cannot find module './brains' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(10,35): error TS2307: Cannot find module './agent-os' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(11,59): error TS2307: Cannot find module './control-plane' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(13,23): error TS2307: Cannot find module './analyzer' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(14,66): error TS2307: Cannot find module './runtime-contract' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(15,50): error TS2307: Cannot find module './providers' or its corresponding type declarations.
+outputs/application-command-scan-20261102/lib/jobs.ts(92,170): error TS7006: Parameter 'f' implicitly has an 'any' type.
+outputs/application-command-scan-20261102/lib/jobs.ts(93,75): error TS7006: Parameter 'f' implicitly has an 'any' type.
+outputs/application-command-scan-20261102/lib/jobs.ts(93,116): error TS7006: Parameter 'f' implicitly has an 'any' type.
+outputs/application-command-scan-20261102/lib/jobs.ts(96,60): error TS18046: 'f' is of type 'unknown'.
+outputs/application-command-scan-20261102/lib/jobs.ts(270,236): error TS7006: Parameter 's' implicitly has an 'any' type.
+Files:             2319
+Lines:           368938
+Identifiers:     430534
+Symbols:         387144
+Types:            66741
+Instantiations:  325744
+Memory used:    578132K
+I/O read:         1.86s
+I/O write:        0.00s
+Parse time:       4.73s
+Bind time:        0.63s
+Check time:       6.16s
+Emit time:        0.00s
+Total time:      11.52s

@@ -1,0 +1,16 @@
+{
+  "schema": "mgr.application-command-identity.v1",
+  "sourceCommit": "fe1c0f466317163f335d7859497b5eca505190f8",
+  "previousSource": "702ad30082aad09b6a428de04d5d953758aedee5",
+  "actualContainerArgvUnchanged": true,
+  "containerArgvSha256": "59453c3155c5292e76a740a9ca6647d81738832a9078a15f10b21c0da3ec9ca0",
+  "assignmentNowMatchesActualArgv": true,
+  "oldAssignmentMatchesActualArgv": false,
+  "workerLauncherSha256": "46834e3b12622af72c91c62e2a61a4b34a1c5079d95dd02fe29b7e06ab67d8e7",
+  "previousNativeQualificationReusable": false,
+  "reason": "runner.mjs is in the original native launcher fingerprint; this change requires a matching native qualification before any native launch. No old receipt relabeled.",
+  "nativeExecutions": 0,
+  "dockerContainersStarted": 0,
+  "providerCalls": 0,
+  "permanentOwnerChanges": false
+}
