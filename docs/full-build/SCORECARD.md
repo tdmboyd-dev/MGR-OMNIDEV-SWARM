@@ -1,3 +1,9 @@
+## Current original reviewed source checked at native dispatch — November 2, 2026
+
+Runtime97782ea requires current original source/owner/recipe checks before a linked job is claimed and again before native launch. The original engineering record now distinguishes not-started from started, allowing atomic definite refusal/cancellation without clearing genuinely unknown or started execution. Full94/94 local profiles passed; all94 output hashes/source receipts rechecked. Later test-only0786de4 retains identical runtime and passes3/3 targeted profiles, including19 service controls. [Owning report and failed-before/fixed-after receiving scope](../../UNFINISHED-WORK/evidence/native-source-recheck-20261102/REPORT.md).
+
+The selected original CM/ONE/native dispatch integration now has actual positive, withdrawal, queued restart and timeout proof. This supersedes missing dispatch-time source revalidation for that fixture-authorized route. The permanent original authorizer/caller, independent signed worker, qualification-epoch migration and controlled activation/update/recovery/rollback remain unfinished. Normal automatic engineering remains disabled; all original requirements are preserved.
+
 ## Durable original reviewed source association — November 2, 2026
 
 Runtime7750fd7 stores exact CM request/base/plan/candidate/recipe/snapshot provenance on the original native job, verification record and accepted report. Immutable replay and fresh SQLite lookup are implemented without duplicating source bodies, jobs or authority. Full93/93 approved local profiles passed,0failed/blocked; all93 output hashes and stable-source receipts rechecked. Actual combined ONE/API/MCP/Windows/report/save/reopen/replay10/10 passed, one execution,0inference, permanent owner DB untouched and original signed candidate unchanged. [Owning proof and limits](../../UNFINISHED-WORK/evidence/reviewed-native-origin-20261102/REPORT.md).

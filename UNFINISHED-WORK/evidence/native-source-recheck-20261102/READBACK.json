@@ -1,0 +1,14 @@
+{
+  "fullSourceCommit": "97782eabe161291574f6a3b0b4faf04f4c7c434e",
+  "passedProfiles": 94,
+  "failedProfiles": 0,
+  "blockedProfiles": 0,
+  "savedOutputsRehashed": 94,
+  "sourceStabilityReceiptsChecked": 94,
+  "latestTestOnlyCommit": "0786de4",
+  "runtimeFilesUnchangedAfterFull": true,
+  "latestTargetedProfiles": 3,
+  "sourceCheckCases": 17,
+  "latestEngineeringMetadataCases": 19,
+  "independentParentClosures": 0
+}

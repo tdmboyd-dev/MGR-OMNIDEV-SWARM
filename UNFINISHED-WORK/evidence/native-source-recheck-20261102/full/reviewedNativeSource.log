@@ -1,0 +1,27 @@
+✔ original job persists source lineage without code or approval transfer and replay is read-only (16.9821ms)
+✔ fresh SQLite reopen and canonical report serialization retain the original association (93.617ms)
+✔ source attachment refuses producer checksum with no job write (3.6977ms)
+✔ source attachment refuses request digest with no job write (4.5449ms)
+✔ source attachment refuses baseline bytes with no job write (6.1316ms)
+✔ source attachment refuses candidate bytes with no job write (3.4134ms)
+✔ source attachment refuses oracle manifest with no job write (4.2856ms)
+✔ source attachment refuses claimed transferred signature with no job write (6.9153ms)
+✔ source attachment refuses missing review with no job write (4.3991ms)
+✔ source attachment refuses non-versioned recipe with no job write (3.5008ms)
+✔ source attachment refuses unknown binding data with no job write (3.2704ms)
+✔ an existing job cannot silently change its immutable source receipt (7.4816ms)
+✔ pending approval prevents retrospective source attachment (5.0199ms)
+✔ native assignment prevents retrospective source attachment (4.7193ms)
+✔ accepted tests prevents retrospective source attachment (5.3944ms)
+✔ workspace changes at final SQL cannot attach obsolete source provenance (5.3314ms)
+✔ job mutation while asynchronous checks run cannot attach stale provenance (5.7518ms)
+✔ metadata tamper, foreign actor, alternate job and non-string identifiers refuse lookup (6.883ms)
+✔ changed native candidate invalidates the current source link rather than reusing its provenance (6.282ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 208.8898
