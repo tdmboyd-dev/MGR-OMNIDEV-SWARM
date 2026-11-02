@@ -1,0 +1,35 @@
+{
+  "schema": "mgr.native-owner-final-join.v1",
+  "repository": "tdmboyd-dev/MGR-OMNIDEV-SWARM",
+  "visibility": "public",
+  "recordedAt": "2026-11-02T00:17:23.499281+00:00",
+  "sourceCommit": "82ca5c8d1ddbb1260c89e48990359128440c0931",
+  "fullAcceptancePromotions": 0,
+  "canonicalScopeUnchanged": true,
+  "fullVerification": {
+    "report": "UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/combined-full/report.json",
+    "passedProfiles": 92,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 92,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "ownerProgress": {
+    "completed": [
+      {
+        "title": "Joined native scope enrollment, monitor repair and restart/replay verified",
+        "observed": "Current combined source passed92/92local profiles with complete unchanged-source outputs. Separate original ONE two-candidate actual native journey14/14; no inference or permanent owner DB mutation. Existing host29checkreceipt reused after exact current source/runtime hash match.",
+        "evidence": [
+          "UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/JOINED-QUALIFICATION.json",
+          "UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/combined-full/report.json"
+        ],
+        "remaining": [
+          "Permanent reviewed-candidate caller, controlled activation/update/rollback",
+          "Qualification epoch migration and production signer/command",
+          "Original full source, provider/device and production acceptance"
+        ]
+      }
+    ]
+  }
+}
