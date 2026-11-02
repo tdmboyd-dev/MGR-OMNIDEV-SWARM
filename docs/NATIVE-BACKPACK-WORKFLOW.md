@@ -1,3 +1,9 @@
+## Current Backpack0.8.0 consumer check
+
+Source0.8.0 adds automatically validated capability catalogs and explicit nextOffset readers. The original host adapter consumes only the bounded root summary plus exact catalog totals; a128interface catalog stays inside its unchanged128KiB context admission. Read additional interfaces/evidence/dependencies through backpack_capability_page or the typed SDK; never treat omitted summary entries as missing features. Optional catalog metadata remains descriptive, not a job or execution grant. Same-connection profile refresh belongs to the local MCP server; this direct SDK adapter opens current configuration at the start of each invocation.
+
+Current10/10consumer tests include actual last catalog page, record:false/no duplicate ledger/task/run, all original failures and wrong-job preclaim refusal. Worker callbacks in this qualification are fixtures; prior actual native receipts below retain their original source/host scope. Actual native/source/expiry approval must still be current. No PC restart or Docker probe occurred. See ../UNFINISHED-WORK/evidence/backpack-080-catalog-context-20261102/REPORT.md.
+
 # Backpack inside the existing native OmniDev workflow
 
 Backpack supplies project context and source-linked outcome notes. OmniDev retains the one canonical job, claim, worker journal and execution receipt. Code Monster retains candidate/recipe authority; VampBite projects its campaign ledger; OmniSight displays permitted history. This is a host integration, with no additional scheduler or job database.

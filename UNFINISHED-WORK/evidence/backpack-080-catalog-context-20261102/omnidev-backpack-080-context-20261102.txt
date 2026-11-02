@@ -1,0 +1,18 @@
+✔ required Backpack context precedes the exact job and source-linked note reopens without copied jobs (1783.7833ms)
+✔ complete Backpack capability catalog reaches the original host context as counts and pages without duplicate jobs (1509.6472ms)
+✔ missing enrollment and excluded source refuse before the worker is called (154.3429ms)
+✔ source drift after execution preserves actual job result but refuses a current-source note (246.2897ms)
+✔ record-off keeps the existing store unchanged and does not turn context into authority (328.5653ms)
+✔ unknown native outcome never triggers another execution or manufactures passing memory (207.8459ms)
+✔ foreign worker result cannot be associated with the configured project/job (214.4903ms)
+✔ malformed job identity rejects before native policy load or network (1.2159ms)
+✔ a different queued native job is refused before any claim or sandbox dispatch (3243.9388ms)
+✔ a claimed job without a boolean execution verdict cannot manufacture a host verification (173.1639ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8693.002

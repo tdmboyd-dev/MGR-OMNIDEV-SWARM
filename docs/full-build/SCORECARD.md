@@ -1,3 +1,9 @@
+## Backpack0.8.0 complete catalog context verified — November 2, 2026
+
+The existing native context adapter passed10/10tests, zero failures/skips, using actual Backpack0.8SDK/SQLite and128interface catalog. Complete counts and the last capability page are reachable without copying the canonical job, expanding the context payload or granting execution. Worker callbacks remain fixtures and the wrong-queued-job preflight stops before claim; no new native/container/inference job ran. Evidence UNFINISHED-WORK/evidence/backpack-080-catalog-context-20261102. This is distinct from the peer's source-specific96profile and later9profile scopes. No native qualification was repinned and no PC restart occurred.
+
+Code Monster owns complete committed census/automation/semantic automatic batches; OmniSight consumes complete census JSONL through existing authenticated navigation; Backpack owns context/cards/evidence; OmniDev retains the original job/approval/worker. Its basic GitHub snapshot still has bounded selected context and is not complete project transport. Use the current complete-source how-to and preserve that remaining engineering scope.
+
 ## Current original reviewed source checked at native dispatch — November 2, 2026
 
 Runtime97782ea requires current original source/owner/recipe checks before a linked job is claimed and again before native launch. The original engineering record now distinguishes not-started from started, allowing atomic definite refusal/cancellation without clearing genuinely unknown or started execution. Full94/94 local profiles passed; all94 output hashes/source receipts rechecked. Later test-only0786de4 retains identical runtime and passes3/3 targeted profiles, including19 service controls. [Owning report and failed-before/fixed-after receiving scope](../../UNFINISHED-WORK/evidence/native-source-recheck-20261102/REPORT.md).

@@ -1,0 +1,10 @@
+{
+  "scope": "Original native context adapter with actual Backpack0.8SDK/SQLite/catalog; worker callback is a non-executing fixture and wrong-job route stops before claim",
+  "files": [
+    {
+      "path": "omnidev-backpack-080-context-20261102.txt",
+      "bytes": 1167,
+      "sha256": "d3a4ecab6a5d714d9b995661d5a9773d7e0f5e8549d65ac449dafaa4ff280574"
+    }
+  ]
+}

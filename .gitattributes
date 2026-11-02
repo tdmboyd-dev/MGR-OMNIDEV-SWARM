@@ -89,3 +89,5 @@ UNFINISHED-WORK/evidence/backpack-070-current-owner-20261101/*.log -diff
 /UNFINISHED-WORK/evidence/registered-application-20261102/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 
 /UNFINISHED-WORK/evidence/docker-endpoint-20261102/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+
+/UNFINISHED-WORK/evidence/backpack-080-catalog-context-20261102/** -text -diff
