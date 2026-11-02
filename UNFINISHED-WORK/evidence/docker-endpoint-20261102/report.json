@@ -1,0 +1,581 @@
+{
+  "schema": "mgr.full-verification.v1",
+  "startedAt": "2026-11-02T09:01:30.274Z",
+  "sourceCommit": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+  "requestedProfiles": [
+    "prepare",
+    "workerInputPolicy",
+    "nativeLauncherClosure",
+    "applicationCommandIdentity",
+    "cleanup",
+    "nativeWorker",
+    "trilogyWorker",
+    "workerFailureOutput",
+    "workerReportTransport"
+  ],
+  "completed": true,
+  "qualification": "executed-local-regression-not-live-provider-or-release-certification",
+  "runs": [
+    {
+      "contract": "mgr.fixture-execution-evidence.v2",
+      "profile": "prepare",
+      "sourceCommit": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceTree": "cbcbc5254950f0ce3d6712766ac2a5d95c48e4d0",
+      "sourceCommitAfter": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceUnchanged": true,
+      "lockfileSha256": "90e8da23814f727d84b2fec470c1e646d3302ece62c1df6923d947cc3680c9c2",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/prepare.mjs"
+      ],
+      "commandSha256": "10dcd34431fea8941910118aa54a78194e9b75e4a2ccaa95b701c6ef9026df85",
+      "timeoutMs": 120000,
+      "startedAt": "2026-11-02T09:01:31.639Z",
+      "finishedAt": "2026-11-02T09:01:35.317Z",
+      "durationMs": 3677,
+      "runtime": {
+        "node": "v24.21.0",
+        "platform": "win32",
+        "arch": "x64"
+      },
+      "exitCode": 0,
+      "signal": null,
+      "reason": "exited-zero",
+      "executionDurationMs": 3061,
+      "outputSha256": "9882c370d0b33d1dfade355e8542bbaee7d6a3d15da9030fdbe8ec3c5458c171",
+      "capturedBytes": 107,
+      "totalOutputBytes": 107,
+      "truncated": false,
+      "processClosed": true,
+      "outputObserved": true,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false,
+      "outputFile": "prepare.log"
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v2",
+      "profile": "workerInputPolicy",
+      "sourceCommit": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceTree": "cbcbc5254950f0ce3d6712766ac2a5d95c48e4d0",
+      "sourceCommitAfter": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceUnchanged": true,
+      "lockfileSha256": "90e8da23814f727d84b2fec470c1e646d3302ece62c1df6923d947cc3680c9c2",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/worker-input-policy.test.mjs"
+      ],
+      "commandSha256": "8fad24401550da1b9cc19ade12ed8d1622e1e483ec8bc7aa84c938f93b8cf98e",
+      "timeoutMs": 120000,
+      "startedAt": "2026-11-02T09:01:36.376Z",
+      "finishedAt": "2026-11-02T09:01:37.563Z",
+      "durationMs": 1187,
+      "runtime": {
+        "node": "v24.21.0",
+        "platform": "win32",
+        "arch": "x64"
+      },
+      "exitCode": 0,
+      "signal": null,
+      "reason": "exited-zero",
+      "executionDurationMs": 516,
+      "outputSha256": "cce003ac63abe0ee587c643d5d0768465e4d71a9919e999e70288c102fb33ccc",
+      "capturedBytes": 702,
+      "totalOutputBytes": 702,
+      "truncated": false,
+      "processClosed": true,
+      "outputObserved": true,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false,
+      "preparedModulesUnchanged": true,
+      "outputFile": "workerInputPolicy.log"
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v2",
+      "profile": "nativeLauncherClosure",
+      "sourceCommit": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceTree": "cbcbc5254950f0ce3d6712766ac2a5d95c48e4d0",
+      "sourceCommitAfter": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceUnchanged": true,
+      "lockfileSha256": "90e8da23814f727d84b2fec470c1e646d3302ece62c1df6923d947cc3680c9c2",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/native-launcher-closure.mjs"
+      ],
+      "commandSha256": "f5974c1669d3114922a92a0ebcdfd246d6c4c00a2cb1b87417898c905bc8e30f",
+      "timeoutMs": 120000,
+      "startedAt": "2026-11-02T09:01:38.789Z",
+      "finishedAt": "2026-11-02T09:01:39.730Z",
+      "durationMs": 942,
+      "runtime": {
+        "node": "v24.21.0",
+        "platform": "win32",
+        "arch": "x64"
+      },
+      "exitCode": 0,
+      "signal": null,
+      "reason": "exited-zero",
+      "executionDurationMs": 464,
+      "outputSha256": "5a121f9f3db5c1c283f7d634c8b5ece3ff969f7f838d31c2eca6b168fbb89568",
+      "capturedBytes": 224,
+      "totalOutputBytes": 224,
+      "truncated": false,
+      "processClosed": true,
+      "outputObserved": true,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false,
+      "preparedModulesUnchanged": true,
+      "outputFile": "nativeLauncherClosure.log"
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v2",
+      "profile": "applicationCommandIdentity",
+      "sourceCommit": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceTree": "cbcbc5254950f0ce3d6712766ac2a5d95c48e4d0",
+      "sourceCommitAfter": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceUnchanged": true,
+      "lockfileSha256": "90e8da23814f727d84b2fec470c1e646d3302ece62c1df6923d947cc3680c9c2",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/application-command-identity.mjs"
+      ],
+      "commandSha256": "1f397643780778c60074c917fb89dec11c23fca7819018222ccb360523ba8d26",
+      "timeoutMs": 120000,
+      "startedAt": "2026-11-02T09:01:40.524Z",
+      "finishedAt": "2026-11-02T09:01:41.192Z",
+      "durationMs": 668,
+      "runtime": {
+        "node": "v24.21.0",
+        "platform": "win32",
+        "arch": "x64"
+      },
+      "exitCode": 0,
+      "signal": null,
+      "reason": "exited-zero",
+      "executionDurationMs": 252,
+      "outputSha256": "ac897d4ce93c64d28aad81f842ea76a5c0eb47bd8ea456298f12ce907de65e6e",
+      "capturedBytes": 740,
+      "totalOutputBytes": 740,
+      "truncated": false,
+      "processClosed": true,
+      "outputObserved": true,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false,
+      "preparedModulesUnchanged": true,
+      "outputFile": "applicationCommandIdentity.log"
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v2",
+      "profile": "cleanup",
+      "sourceCommit": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceTree": "cbcbc5254950f0ce3d6712766ac2a5d95c48e4d0",
+      "sourceCommitAfter": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceUnchanged": true,
+      "lockfileSha256": "90e8da23814f727d84b2fec470c1e646d3302ece62c1df6923d947cc3680c9c2",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/worker-cleanup.mjs"
+      ],
+      "commandSha256": "6cefdac21625337822acbcd3a823217d6cea67ed3f1c54b4cf13f92d725762fd",
+      "timeoutMs": 120000,
+      "startedAt": "2026-11-02T09:01:42.227Z",
+      "finishedAt": "2026-11-02T09:01:42.987Z",
+      "durationMs": 760,
+      "runtime": {
+        "node": "v24.21.0",
+        "platform": "win32",
+        "arch": "x64"
+      },
+      "exitCode": 0,
+      "signal": null,
+      "reason": "exited-zero",
+      "executionDurationMs": 278,
+      "outputSha256": "08de3321a17332b3c36e533eb97d7e3e35034bdcd08cdbb764f59ec147f36a0c",
+      "capturedBytes": 91,
+      "totalOutputBytes": 91,
+      "truncated": false,
+      "processClosed": true,
+      "outputObserved": true,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false,
+      "preparedModulesUnchanged": true,
+      "outputFile": "cleanup.log"
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v2",
+      "profile": "nativeWorker",
+      "sourceCommit": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceTree": "cbcbc5254950f0ce3d6712766ac2a5d95c48e4d0",
+      "sourceCommitAfter": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceUnchanged": true,
+      "lockfileSha256": "90e8da23814f727d84b2fec470c1e646d3302ece62c1df6923d947cc3680c9c2",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/native-worker-contract.mjs"
+      ],
+      "commandSha256": "4a08dcfd3499fdbcbd97f0b65c2c05b90c5bca0d768e1e15347a36f484bb06fc",
+      "timeoutMs": 120000,
+      "startedAt": "2026-11-02T09:01:43.868Z",
+      "finishedAt": "2026-11-02T09:01:58.684Z",
+      "durationMs": 14816,
+      "runtime": {
+        "node": "v24.21.0",
+        "platform": "win32",
+        "arch": "x64"
+      },
+      "exitCode": 0,
+      "signal": null,
+      "reason": "exited-zero",
+      "executionDurationMs": 14109,
+      "outputSha256": "1268eb43b81baa7d68e3a3bbc98cd99055507bcf6f2b8a2e1e5872acae977326",
+      "capturedBytes": 1215,
+      "totalOutputBytes": 1215,
+      "truncated": false,
+      "processClosed": true,
+      "outputObserved": true,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false,
+      "preparedModulesUnchanged": true,
+      "outputFile": "nativeWorker.log"
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v2",
+      "profile": "trilogyWorker",
+      "sourceCommit": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceTree": "cbcbc5254950f0ce3d6712766ac2a5d95c48e4d0",
+      "sourceCommitAfter": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceUnchanged": true,
+      "lockfileSha256": "90e8da23814f727d84b2fec470c1e646d3302ece62c1df6923d947cc3680c9c2",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/trilogy-worker.test.mjs"
+      ],
+      "commandSha256": "4c0e723c921db73a10253ab3192f13a306e63cf72c6b4cd70e63761ba7c77045",
+      "timeoutMs": 600000,
+      "startedAt": "2026-11-02T09:01:59.901Z",
+      "finishedAt": "2026-11-02T09:03:41.164Z",
+      "durationMs": 101262,
+      "runtime": {
+        "node": "v24.21.0",
+        "platform": "win32",
+        "arch": "x64"
+      },
+      "exitCode": 0,
+      "signal": null,
+      "reason": "exited-zero",
+      "executionDurationMs": 100958,
+      "outputSha256": "a1b5ebfb80ee88734ee69a5ecb9c10ace0cd60479ee9e11bdd4ffe7e8ca3fef3",
+      "capturedBytes": 3412,
+      "totalOutputBytes": 3412,
+      "truncated": false,
+      "processClosed": true,
+      "outputObserved": true,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false,
+      "preparedModulesUnchanged": true,
+      "outputFile": "trilogyWorker.log"
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v2",
+      "profile": "workerFailureOutput",
+      "sourceCommit": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceTree": "cbcbc5254950f0ce3d6712766ac2a5d95c48e4d0",
+      "sourceCommitAfter": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceUnchanged": true,
+      "lockfileSha256": "90e8da23814f727d84b2fec470c1e646d3302ece62c1df6923d947cc3680c9c2",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/worker-failure-output.test.mjs"
+      ],
+      "commandSha256": "d1d0c3a0419bafd931e7cc6176ddb91439d88454deb3bc8c9dc0c2688fca36f2",
+      "timeoutMs": 120000,
+      "startedAt": "2026-11-02T09:03:41.958Z",
+      "finishedAt": "2026-11-02T09:03:42.917Z",
+      "durationMs": 959,
+      "runtime": {
+        "node": "v24.21.0",
+        "platform": "win32",
+        "arch": "x64"
+      },
+      "exitCode": 0,
+      "signal": null,
+      "reason": "exited-zero",
+      "executionDurationMs": 540,
+      "outputSha256": "a407bcc056ad896694a865ba0089462543757e00710e91e3899846c19011419d",
+      "capturedBytes": 1444,
+      "totalOutputBytes": 1444,
+      "truncated": false,
+      "processClosed": true,
+      "outputObserved": true,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false,
+      "preparedModulesUnchanged": true,
+      "outputFile": "workerFailureOutput.log"
+    },
+    {
+      "contract": "mgr.fixture-execution-evidence.v2",
+      "profile": "workerReportTransport",
+      "sourceCommit": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceTree": "cbcbc5254950f0ce3d6712766ac2a5d95c48e4d0",
+      "sourceCommitAfter": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+      "sourceUnchanged": true,
+      "lockfileSha256": "90e8da23814f727d84b2fec470c1e646d3302ece62c1df6923d947cc3680c9c2",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/worker-report-transport.test.mjs"
+      ],
+      "commandSha256": "6b77fd63f02dc94bf8135360856156d3f79dbfe22c8136ebc4d9bbb50041f016",
+      "timeoutMs": 120000,
+      "startedAt": "2026-11-02T09:03:43.766Z",
+      "finishedAt": "2026-11-02T09:03:45.494Z",
+      "durationMs": 1728,
+      "runtime": {
+        "node": "v24.21.0",
+        "platform": "win32",
+        "arch": "x64"
+      },
+      "exitCode": 0,
+      "signal": null,
+      "reason": "exited-zero",
+      "executionDurationMs": 1345,
+      "outputSha256": "83468f22860ab2d18d5df8b2652d8d546e8de9dd3ca51374c54be949303ddcf7",
+      "capturedBytes": 1297,
+      "totalOutputBytes": 1297,
+      "truncated": false,
+      "processClosed": true,
+      "outputObserved": true,
+      "passed": true,
+      "qualification": "local-fixture-only-not-parent-acceptance",
+      "signed": false,
+      "preparedModulesUnchanged": true,
+      "outputFile": "workerReportTransport.log"
+    }
+  ],
+  "preparedModules": {
+    "files": [
+      {
+        "path": ".test-runtime/account-route.mjs",
+        "bytes": 4476,
+        "sha256": "36b6729290d8c6fefb1e0b485f05a68026b7453975718e3ee49c9f94b61b67ec"
+      },
+      {
+        "path": ".test-runtime/agent-os.mjs",
+        "bytes": 8199,
+        "sha256": "97041788a059741ea896f3abc769f31d69d28ab7a4a3e7746232260361087322"
+      },
+      {
+        "path": ".test-runtime/agents-route.mjs",
+        "bytes": 1473,
+        "sha256": "90e7c906719d25727ad62d2f762b1bd562152a405bd61d7d705d8105f7fbf046"
+      },
+      {
+        "path": ".test-runtime/analyzer.mjs",
+        "bytes": 9291,
+        "sha256": "3b367c2cf3213b272515eca1cf0c546f27cd7cc71e877c808fdaab56e99a9c62"
+      },
+      {
+        "path": ".test-runtime/application-profile.mjs",
+        "bytes": 2120,
+        "sha256": "e4900fcf83b7afef667b6d1afd462413ca1368ce75ba7c2e152ddd7ef0be6c21"
+      },
+      {
+        "path": ".test-runtime/brains.mjs",
+        "bytes": 2226,
+        "sha256": "a3ce785633a7e0fb6e53a79ac8c0c4896b5071706ef395bd05a7292b6126e249"
+      },
+      {
+        "path": ".test-runtime/catalog.mjs",
+        "bytes": 2970,
+        "sha256": "8ccee65050156d8e067d84ff9249df9a209b6e2e24c8994ef21565a8b360d655"
+      },
+      {
+        "path": ".test-runtime/control-plane.mjs",
+        "bytes": 4373,
+        "sha256": "51a48fa6e66bad9a2465b42706c9970f55cdaf9fa59689521f9259196d6cbe9e"
+      },
+      {
+        "path": ".test-runtime/file-ledger.mjs",
+        "bytes": 1489,
+        "sha256": "8ac3a4619f62badc8f37caeb625ffb5feccca13940f4f2e5ae9e40270ccaf0c7"
+      },
+      {
+        "path": ".test-runtime/github-account.mjs",
+        "bytes": 6583,
+        "sha256": "0b78a33bb8aaff468c48e4c40dd4b85cbd8d5242cdf3ce1341c2fc718b7a0f03"
+      },
+      {
+        "path": ".test-runtime/github-selection.mjs",
+        "bytes": 1494,
+        "sha256": "7d34ca95988c4b4a7d9ebea82e19d4eaafcb798a4f60c4a58287d33801f78d3c"
+      },
+      {
+        "path": ".test-runtime/github.mjs",
+        "bytes": 6647,
+        "sha256": "cba512835a01620abf8b71a7f97b01d5c22ace3bc5a1289396cad7e08209a2da"
+      },
+      {
+        "path": ".test-runtime/integration-engineering.mjs",
+        "bytes": 9070,
+        "sha256": "96e284a13af1aaf1effc25cb3e8f16318c1edab9d64e516760a6fbeb2390fbc1"
+      },
+      {
+        "path": ".test-runtime/intelligence-route.mjs",
+        "bytes": 2302,
+        "sha256": "2d77a8793b714345a1f06304a38b4160f7745a07e2d7a27693b0012da29b94ed"
+      },
+      {
+        "path": ".test-runtime/intelligence.mjs",
+        "bytes": 21254,
+        "sha256": "4b26f574b6b1894429de3615e19e3e23300ade518efe6d184821b8a20a747818"
+      },
+      {
+        "path": ".test-runtime/job-presentation.mjs",
+        "bytes": 4056,
+        "sha256": "ab34e9461f924468a908f031031c8eec29111d279354dad2f0b72a45be93f1f7"
+      },
+      {
+        "path": ".test-runtime/jobs.mjs",
+        "bytes": 82481,
+        "sha256": "bf80e986d3281b5cf199947ca93c9053ca6a96efa144c179d25a622505ccb1be"
+      },
+      {
+        "path": ".test-runtime/providers.mjs",
+        "bytes": 6489,
+        "sha256": "cde2fb5be0b08f5d5d69e7cdc42136b2fd00136175c7ffc4265801423fb5b782"
+      },
+      {
+        "path": ".test-runtime/repo-audit.mjs",
+        "bytes": 7412,
+        "sha256": "16a86789a35223b55aa3f490888c7e13fbcbe0f98e3f8ed537d9e3f9ab8c8325"
+      },
+      {
+        "path": ".test-runtime/repository.mjs",
+        "bytes": 9434,
+        "sha256": "74bc57268c391d6010fceb642ee127613ef0c53a1d31a88321eb2b24852a17e8"
+      },
+      {
+        "path": ".test-runtime/request-body.mjs",
+        "bytes": 1342,
+        "sha256": "14cc4958031ec2f4baa6c32bd7a46b7d8c1e2def033dcf3fabc4558d44fff622"
+      },
+      {
+        "path": ".test-runtime/review-planner.mjs",
+        "bytes": 6764,
+        "sha256": "d8e21f50b5e0d17ec645b9f49bb1eaea1938c0349ac3c63ac37460b5d5e077fd"
+      },
+      {
+        "path": ".test-runtime/reviewed-native-source.mjs",
+        "bytes": 4816,
+        "sha256": "0a1ffa7429d4335f1e99fed046cb644816e2634cd83008c85bff7caafed36d48"
+      },
+      {
+        "path": ".test-runtime/route.mjs",
+        "bytes": 16960,
+        "sha256": "98bff4b2453befd8c76a879d781f3d389ff1b3489dfc564a3551edcc4180e154"
+      },
+      {
+        "path": ".test-runtime/runtime-contract.mjs",
+        "bytes": 7188,
+        "sha256": "73dcd4b7f7e3a34151d4290a2e35341b36cb7f7816d2941348478ac521ad8166"
+      },
+      {
+        "path": ".test-runtime/runtime-route.mjs",
+        "bytes": 7371,
+        "sha256": "03c35f319246b29b7c4ac5552e11e95d935fb07e0a2d40c59b43f139471b0262"
+      },
+      {
+        "path": ".test-runtime/snapshot-security.mjs",
+        "bytes": 13581,
+        "sha256": "25ab7aa861ab378de54467364f329e56d4996feb49e1ee71e602ada8b3fc1574"
+      },
+      {
+        "path": ".test-runtime/specialists.mjs",
+        "bytes": 6102,
+        "sha256": "15aa42e431463464a107771aef5e0f0472dad71387c9797f1b104815f582a8d5"
+      },
+      {
+        "path": ".test-runtime/store.mjs",
+        "bytes": 1044,
+        "sha256": "6b9f75c7698b4de9d1824ee0d5b0f3af210e645efa5ac9a64b4c57de1ac68ffc"
+      },
+      {
+        "path": ".test-runtime/trilogy-contract.mjs",
+        "bytes": 7418,
+        "sha256": "1c16881f3626a9d7bb5e044eda3ed053e0d6d4a12aa103f41742430cf0e27d2b"
+      },
+      {
+        "path": ".test-runtime/trilogy-job-link.mjs",
+        "bytes": 2384,
+        "sha256": "3b35a2a693efe15f15092ea3f3a497fa7433231e06b61023ce5ae93ad7101a06"
+      },
+      {
+        "path": ".test-runtime/trilogy-jobs.mjs",
+        "bytes": 29831,
+        "sha256": "731271f448e2bd4413c43012fb37d8bcd00262c7717164a5c95274503c7e7879"
+      },
+      {
+        "path": ".test-runtime/trilogy-publication.mjs",
+        "bytes": 32616,
+        "sha256": "78d6259ad9d846de6a30a441647c1e6871d4edef6cf0a258f9c113ca4fabed49"
+      },
+      {
+        "path": ".test-runtime/trilogy-route.mjs",
+        "bytes": 5174,
+        "sha256": "e74f872efe826ae6891f1c36fc7845f27e08b94271158f1a9242ab14661a399c"
+      },
+      {
+        "path": ".test-runtime/worker-policy.mjs",
+        "bytes": 6127,
+        "sha256": "eb19b296a828b4669c66ae6ab0c0ed8203518f226a8fe4ba7178fbc18619ad92"
+      },
+      {
+        "path": ".test-runtime/worker-route.mjs",
+        "bytes": 8107,
+        "sha256": "74bea45bca26b1517e2e17bc687295f2a4eb3ac1cb612f0f9436a1b3887ba84d"
+      },
+      {
+        "path": ".test-runtime/workspace-planning.mjs",
+        "bytes": 13244,
+        "sha256": "94dedfcf84d279d7a3d2120852d1429dc57953d03c2152f08a93e194016e4bc9"
+      },
+      {
+        "path": ".test-runtime/workspace-scope.mjs",
+        "bytes": 852,
+        "sha256": "e51835f46a5c711f672c3e32491da43bd82caf0cf88c5056881c991aa2dba43b"
+      },
+      {
+        "path": ".test-runtime/workspace-snapshot.mjs",
+        "bytes": 1491,
+        "sha256": "3d51bffa1ebccfa5e8d6f250fb6d12b2b01e88ab140d6f52e7091d108a331c18"
+      },
+      {
+        "path": ".test-runtime/workspace-storage.mjs",
+        "bytes": 3045,
+        "sha256": "f20a1738efcfac682f4bdcefbe67824bcb4fa339bc47ede1bf2afebf51c01a3e"
+      }
+    ],
+    "sha256": "ef24c77db5503ded9943fc9bc5d0f67055f5c2140463184750bafcc36b3a19e8"
+  },
+  "limitations": [
+    "External provider HTTP and Docker in fixture suites remain simulated.",
+    "Passing local suites never promotes canonical parents automatically.",
+    "Dependencies use the pinned lockfile; this process is not an independent isolated signer."
+  ],
+  "summary": {
+    "passedProfiles": 9,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 9,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "finishedAt": "2026-11-02T09:03:45.562Z",
+  "localRegressionPassed": true
+}

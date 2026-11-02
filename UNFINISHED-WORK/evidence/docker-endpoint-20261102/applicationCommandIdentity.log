@@ -1,0 +1,15 @@
+✔ application assignment command is the exact argv launched in the constrained container (5.6117ms)
+✔ application command cannot be mutated between assignment and execution (0.902ms)
+✔ obsolete application alias is refused before any worker process starts (3.765ms)
+✔ application argument boundaries is refused before any worker process starts (0.4098ms)
+✔ snapshot argument boundaries is refused before any worker process starts (0.3223ms)
+✔ application added argument is refused before any worker process starts (0.2781ms)
+✔ application non-string argument is refused before any worker process starts (0.3164ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31.6253

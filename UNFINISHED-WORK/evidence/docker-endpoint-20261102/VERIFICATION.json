@@ -1,0 +1,110 @@
+{
+  "runtime": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+  "profiles": {
+    "passedProfiles": 9,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 9,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "allNineOutputsAndSourceReceiptsVerified": true,
+  "nestedScopes": [
+    {
+      "profile": "prepare",
+      "counts": {}
+    },
+    {
+      "profile": "workerInputPolicy",
+      "counts": {
+        "tests": 5,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 1
+      }
+    },
+    {
+      "profile": "nativeLauncherClosure",
+      "counts": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "profile": "applicationCommandIdentity",
+      "counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "profile": "cleanup",
+      "counts": {}
+    },
+    {
+      "profile": "nativeWorker",
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "profile": "trilogyWorker",
+      "counts": {
+        "tests": 33,
+        "pass": 27,
+        "fail": 0,
+        "skipped": 6
+      }
+    },
+    {
+      "profile": "workerFailureOutput",
+      "counts": {
+        "tests": 8,
+        "pass": 0,
+        "fail": 0,
+        "skipped": 8
+      }
+    },
+    {
+      "profile": "workerReportTransport",
+      "counts": {
+        "tests": 13,
+        "pass": 13,
+        "fail": 0,
+        "skipped": 0
+      }
+    }
+  ],
+  "actualInstalledCli": {
+    "runtime": "dde4d3354370f121ab3f0fab18f7c59b7bb878e0",
+    "tests": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0
+    },
+    "selectedSourceInputs": 145,
+    "sourceUnchanged": true,
+    "dockerCliSha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa",
+    "nativeLauncherDigest": "ac77f026161f7532a02deeba12639912c21fa75186a7a33ef8256b48b55bbfc3",
+    "actualInstalledCliRoutingVerified": true,
+    "metadataDaemon": "owned named-pipe HTTP fixture only",
+    "realDockerEngineVerified": false,
+    "containersStarted": 0,
+    "nativeWorkerLaunched": false,
+    "permanentOwnerStateChanged": false,
+    "rawBytes": 612,
+    "rawSha256": "453691c5bca0556b0792efe95a9eafbcd0ea057392e3791b0aedeaa6554515b3",
+    "primaryReference": "https://docs.docker.com/reference/cli/docker/#environment-variables"
+  },
+  "priorFull96Source": "15410fecf9a66d9a86f420968cf0ad58f583bf39",
+  "priorFull96NotReexecutedOrPromoted": true,
+  "wholeProductAcceptance": "Unassessed"
+}

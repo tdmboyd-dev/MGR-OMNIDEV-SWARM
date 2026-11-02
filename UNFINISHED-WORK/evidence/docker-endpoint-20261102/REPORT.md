@@ -1,0 +1,17 @@
+# Explicit local Docker endpoint repair — November 2, 2026
+
+## Reproduced defect and repair
+
+worker/runner.mjs dockerEnvironment() accepted a local DOCKER_HOST but always emitted DOCKER_CONTEXT=default. Docker documents that the context environment variable overrides the host variable: https://docs.docker.com/reference/cli/docker/#environment-variables. A failing regression reproduced the forced default despite an explicit local Unix socket or Windows pipe. The runner now emits only the configured local host when present, otherwise the existing default context. Non-default named contexts and remote daemon endpoints remain refused. Execution, removal and absence readback use this same environment factory. No new network/command permission, model input or worker enrollment was introduced.
+
+The exact installed Docker CLI was then invoked with version against an owned Windows named-pipe HTTP fixture. Its randomized version marker and observed ping/version-only paths prove it reached that selected pipe, not the real engine. All5direct checks passed with0skips at clean sourcedde4d3354370f121ab3f0fab18f7c59b7bb878e0;145selected worker/test/script inputs stayed unchanged and the CLI binary SHA-256 is recorded. This is actual CLI routing acceptance against a simulated metadata daemon. No real Docker engine, container, application, image pull, AppContainer workload, provider, permanent owner setup or production action was used.
+
+## Source-specific verification
+
+Nine affected approved profiles passed,0failed/blocked: prepare, workerInputPolicy, nativeLauncherClosure, applicationCommandIdentity, cleanup, nativeWorker, trilogyWorker, workerFailureOutput and workerReportTransport. Every captured output's byte count/SHA-256 and before/after source receipt was rechecked. The profile runner intentionally strips optional test environment variables: its installed-CLI test is explicitly skipped there; the separately recorded actual installed-CLI run supplies the path and passed5/5. Existing platform skips remain explicit in VERIFICATION.json. Do not sum overlapping profiles or reinterpret these as a new96-profile full run. The earlier full96/96 belongs to15410fe, not this changed source. Failed-before and exact raw outputs remain beside this report.
+
+The seven-material native launcher digest is now ac77f026161f7532a02deeba12639912c21fa75186a7a33ef8256b48b55bbfc3. Saved qualifications for earlier runner bytes are not reusable; no qualification or native policy was repinned. The actual Docker engine's readiness remains Unverified after the previous bounded version timeout. This routing repair supersedes the active instruction merely to investigate precedence, not the need to qualify a real selected engine/worker.
+
+## Remaining original delivery
+
+Complete committed-project byte intake and supported dependency/artifact transport using existing Code Monster Git/batch readers, connect the normal original owner caller/shared application adapter, qualify the actual worker/independent signer and verify real action/result/save/restart/replay/cancellation/update/rollback. Keep original jobs, grants, ledgers and source/approval rechecks. No arbitrary commands, duplicate authority or automatic permanent activation. Preserve all original174parents/441clauses/28upgrades and the broader13-repository/ONE requirements. Extra physical-budget hardening explicitly deferred by the work order remains deferred.

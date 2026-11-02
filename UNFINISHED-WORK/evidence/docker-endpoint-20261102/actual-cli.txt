@@ -1,0 +1,13 @@
+✔ worker independently refuses nonportable and ambiguous paths before creating files (4.0678ms)
+✔ worker source budgets measure UTF8 bytes at exact per-file and aggregate boundaries (21.765ms)
+✔ Docker environment refuses unqualified remote routing and excludes service credentials (1.9943ms)
+✔ an explicit local Docker endpoint is not overridden by a forced default context (2.3631ms)
+✔ installed Docker CLI reaches only the explicitly selected owned Windows metadata pipe (2685.7522ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3198.7858

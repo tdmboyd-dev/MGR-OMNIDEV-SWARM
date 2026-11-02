@@ -1,3 +1,7 @@
+## Current local daemon selection — November 2, 2026
+
+An explicit allowed local DOCKER_HOST is passed without DOCKER_CONTEXT, because context selection overrides that endpoint. Without a host override, the worker uses default context. Other named contexts and remote hosts still refuse. Both execution and cleanup/readback use this same environment. Actual installed CLI selection was verified against an owned Windows metadata-only pipe; real engine/container acceptance remains open. See ../UNFINISHED-WORK/evidence/docker-endpoint-20261102/REPORT.md. Changed runner bytes require matching native qualification; no existing policy is silently repinned.
+
 # Isolated execution worker
 
 This runner downloads a candidate snapshot and executes a fixed Node snapshot-test command in a disposable Docker container. It never executes project code directly on the host. No-network, read-only filesystem, non-root user, dropped capabilities, CPU/memory/process limits, timeout, fixed command, and bounded output are enforced.
