@@ -1,3 +1,9 @@
+## Tevin full-root source-window receiving — November 2, 2026
+
+Original Code Monster windows now reach ONE through APIde86abf bounded continuation/symbol offsets and ONE5379266 durable source/index-bound read receipts. Normal registered-root HTTP/MCP traversal exhausted current eligible JS/TS windows: Backpack56/1window, CM100/1, OmniDev300/2, OmniSight46/1,0unindexable selected files or omitted export projections. Tevin no longer silently restricts OmniDev semantic reads to lib. ONE39affected checks,1actual shared HTTP fixture and27owner HTTP conversation/save/reopen observations pass with injected model/fixture-principal boundaries. Owning evidence: ONE and API evidence/source-windows-2026-11-02. This is static source access, not full-code audit or execution packaging.
+
+Missing source-window forwarding/lib-only consumer selection is superseded. Preserve original reader/grants/jobs/source checks, all174parents/441clauses/28upgrades and other agents' work. Normal engineering caller/application adapter, complete executable project transport, actual worker/signer and whole-product production acceptance remain open. Unsupported languages/excluded paths and unresolved cross-window relationships remain explicit.
+
 ## Backpack0.8.0 complete catalog context verified — November 2, 2026
 
 The existing native context adapter passed10/10tests, zero failures/skips, using actual Backpack0.8SDK/SQLite and128interface catalog. Complete counts and the last capability page are reachable without copying the canonical job, expanding the context payload or granting execution. Worker callbacks remain fixtures and the wrong-queued-job preflight stops before claim; no new native/container/inference job ran. Evidence UNFINISHED-WORK/evidence/backpack-080-catalog-context-20261102. This is distinct from the peer's source-specific96profile and later9profile scopes. No native qualification was repinned and no PC restart occurred.
