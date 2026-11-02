@@ -19,7 +19,7 @@ function direct(path){
  path=resolve(path);for(let p=path;;p=dirname(p)){if(existsSync(p)&&(lstatSync(p).isSymbolicLink()||realpathSync(p)!==p))throw Error('Local state path identity denied');if(dirname(p)===p)break;}return path;
 }
 function regular(path,limit){const s=lstatSync(path);if(!s.isFile()||s.isSymbolicLink()||s.nlink!==1||s.size>limit||realpathSync(path)!==path)throw Error('Local service file identity denied');return path;}
-export async function startLocalWorkerApi(configInput,{verifyPrivateState}={}){
+export async function startLocalWorkerApi(configInput,{verifyPrivateState,verifyReviewedSource}={}){
  if(started)throw Error('Use a fresh process for each local adapter instance');started=true;
  const configPath=typeof configInput==='string'?direct(configInput):null;
  if(configPath)regular(configPath,16384);
@@ -65,7 +65,7 @@ export async function startLocalWorkerApi(configInput,{verifyPrivateState}={}){
  const prepared=prepareNodeRuntime({root:repo,outputDir:runtimeParent,environmentGlobal:'__omniNodeLocalEnv',versioned:true}),output=prepared.outputDir;
  const workspace=await import(pathToFileURL(join(output,'route.mjs'))),runtime=await import(pathToFileURL(join(output,'runtime-route.mjs'))),worker=await import(pathToFileURL(join(output,'worker-route.mjs')));
  if(config.engineeringToken&&(typeof config.engineeringToken!=='string'||config.engineeringToken.length<32||same(config.engineeringToken,config.ownerToken)||same(config.engineeringToken,config.nativeWorkerToken)))throw Error('Engineering credential must be distinct');
- const jobs=await import(pathToFileURL(join(output,'jobs.mjs')));engineering=config.engineeringToken?new EngineeringVerifications(sql,config,jobs):null;
+ const jobs=await import(pathToFileURL(join(output,'jobs.mjs')));engineering=config.engineeringToken?new EngineeringVerifications(sql,config,jobs,{verifyReviewedSource}):null;
  const allowedRuntime=new Set(['enqueue','submitAccountCandidate','cancel','apply','rollback']);let origin;
  let ready=false;server=createServer({maxHeaderSize:16384},async(req,res)=>{
   let principal='denied',status=500;const send=(code,message)=>{status=code;res.writeHead(code,{'Content-Type':'application/json','Cache-Control':'no-store'});res.end(JSON.stringify({error:message}));};
