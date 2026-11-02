@@ -1,0 +1,87 @@
+✖ Node module source and npm lockfiles are eligible committed input (238.4606ms)
+✖ Git blob identity rejects changed returned bytes before workspace persistence (70.1152ms)
+✖ pinned source preserves BOM and decomposed Unicode byte content (7.7523ms)
+✖ invalid UTF8 bytes are refused rather than silently repaired (4.5853ms)
+✖ symbolic Git source is not fetched as a regular source file (3.475ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1099.147
+
+✖ failing tests:
+
+test at tests\github-snapshot-pinning.test.mjs:40:1
+✖ Node module source and npm lockfiles are eligible committed input (238.4606ms)
+  Error: No supported text source files found. Import a local snapshot instead.
+      at githubSnapshot (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/.test-runtime/github.mjs:23:15)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/tests/github-snapshot-pinning.test.mjs:42:52)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests\github-snapshot-pinning.test.mjs:45:1
+✖ Git blob identity rejects changed returned bytes before workspace persistence (70.1152ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/tests/github-snapshot-pinning.test.mjs:47:110)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\github-snapshot-pinning.test.mjs:49:1
+✖ pinned source preserves BOM and decomposed Unicode byte content (7.7523ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'export const café="é";\r\n'
+  - '﻿export const café="é";\r\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/tests/github-snapshot-pinning.test.mjs:50:139)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'export const café="é";\r\n',
+    expected: '﻿export const café="é";\r\n',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\github-snapshot-pinning.test.mjs:52:1
+✖ invalid UTF8 bytes are refused rather than silently repaired (4.5853ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/tests/github-snapshot-pinning.test.mjs:53:52)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests\github-snapshot-pinning.test.mjs:55:1
+✖ symbolic Git source is not fetched as a regular source file (3.475ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/tests/github-snapshot-pinning.test.mjs:56:39)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }

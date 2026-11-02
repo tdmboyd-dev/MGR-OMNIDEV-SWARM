@@ -1,0 +1,37 @@
+✖ original authority registers the existing real application argv and assignment instead of the snapshot oracle (165.471ms)
+✖ registered application command passes original Git binding before execution without requiring a snapshot oracle (2086.1663ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2471.1434
+
+✖ failing tests:
+
+test at tests\trilogy-jobs.test.mjs:191:1
+✖ original authority registers the existing real application argv and assignment instead of the snapshot oracle (165.471ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  400 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/tests/trilogy-jobs.test.mjs:192:93)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 400,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\trilogy-worker.test.mjs:205:1
+✖ registered application command passes original Git binding before execution without requiring a snapshot oracle (2086.1663ms)
+  Error: Trilogy command or request binding changed
+      at trilogyExecutionGuard (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/worker/trilogy-proof.mjs:63:387)
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/Omni-reviewed-origin/tests/trilogy-worker.test.mjs:207:28)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)

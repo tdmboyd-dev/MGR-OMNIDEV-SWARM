@@ -1,0 +1,18 @@
+{
+  "runtime": "15410fecf9a66d9a86f420968cf0ad58f583bf39",
+  "fullRegression": {
+    "passedProfiles": 96,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 96,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "outputHashesAndSourceReceiptsChecked": 96,
+  "registeredCommand": "omni-node-application-v1",
+  "legacySnapshotCommandUnchanged": true,
+  "nativeLauncherNowIncludesImportedRecipeAndProof": true,
+  "liveWorkerQualificationRequired": true,
+  "normalOwnerStateChanged": false,
+  "wholeProductAcceptance": "Unassessed"
+}

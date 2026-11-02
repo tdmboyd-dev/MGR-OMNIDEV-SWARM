@@ -1,0 +1,21 @@
+✔ branch lookup is resolved once and inventory plus every file use its immutable commit/tree (42.2477ms)
+✔ missing or malformed commit/tree identity prevents any source-file download (2.8054ms)
+✔ one failed pinned file prevents returning a mixed or incomplete success (1.7163ms)
+✔ workspace records the exact import commit and tree for later job grants (9.044ms)
+✔ Node module source and npm lockfiles are eligible committed input (5.4805ms)
+✔ Git blob identity rejects changed returned bytes before workspace persistence (1.8183ms)
+✔ pinned source preserves BOM and decomposed Unicode byte content (0.7213ms)
+✔ invalid UTF8 bytes are refused rather than silently repaired (0.9821ms)
+✔ symbolic Git source is not fetched as a regular source file (0.6728ms)
+✔ source response streams stop at the byte budget instead of reading the complete body (2.0617ms)
+✔ portable aliases and unknown file modes are not silently selected (0.6401ms)
+✔ authenticated blob reads verify exact metadata content and UTF8 without using raw-content origin (9.257ms)
+✔ an empty-chunk stream cannot spin forever under a zero byte count (5.154ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.4676

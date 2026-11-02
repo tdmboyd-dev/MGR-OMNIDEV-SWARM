@@ -1,0 +1,20 @@
+✔ owner service uses protected-root callback, original route storage and source-pinned runtime across restart (7474.7511ms)
+✔ owner mode refuses absent host permission verification and a denied private root before database creation (1372.7235ms)
+✔ owner service denies wrong credentials, cross-origin and foreign principals without admitting model work (2903.5179ms)
+✔ a second process cannot replace the original live service in the same owner root (3951.1519ms)
+✔ prepared policy changes block direct service startup until original records are reconciled (7077.0192ms)
+✔ actual native-policy binding service enforces engineering credential and body budget without native admission (5246.5846ms)
+✔ native receiver decodes identifiers once and body reads recover literal dot segments (4392.3011ms)
+✔ configured original Trilogy route reaches its own scope checks without native-worker authority (3835.8081ms)
+✔ Trilogy startup refuses shared credentials before database creation (1102.0792ms)
+✔ original HTTP import job authority stage restart replay and revoke persist in the SAME owner database (13473.684ms)
+✔ startup Trilogy scope and credentials are exact bounded owner-only data (1.9302ms)
+✔ original HTTP npm source import and registered application authority share one job without execution (6911.2815ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 57761.1158

@@ -1,0 +1,21 @@
+✔ held reserved job refuses decisions, movement and candidate replacement (9.4746ms)
+✔ held executing job refuses decisions, movement and candidate replacement (2.1189ms)
+✔ held unknown job refuses decisions, movement and candidate replacement (2.115ms)
+✔ only exact verification request can cancel its queued reservation (3.2911ms)
+✔ settled receipt with explicit false flag keeps ordinary lifecycle compatibility (1.8057ms)
+✔ lease recovery skips reserved and uncertain jobs without removing evidence (29.8844ms)
+✔ native claim refuses concurrent payload at its final SQLite update (7.2403ms)
+✔ native claim refuses concurrent objective at its final SQLite update (8.1536ms)
+✔ native claim refuses concurrent stop at its final SQLite update (4.7049ms)
+✔ unheld approved native claim retains original job correlation link and records uncertainty (1.9847ms)
+✔ project clearSnapshot refuses to remove a held verification source (1.5439ms)
+✔ project disconnect refuses to remove a held verification source (7.6244ms)
+✔ project delete refuses to remove a held verification source (1.1933ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 97.0081

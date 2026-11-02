@@ -1,3 +1,9 @@
+## Registered real application command and verified Git bytes — November 2, 2026
+
+Runtime15410fe registers the EXISTING application recipe through original authority/current grant/assignment/independent-worker checks; snapshot remains compatible. Full96/96local profiles passed,0failed/blocked; all96output hashes/source receipts checked. Source selection includes Node module formats/npm lock and verifies Git blob byte identity with strict bounded UTF8/BOM preservation. Native fingerprint now includes both imported worker helpers; changed seven-material launcher requires matching qualification. No live execution/inference/production signature or original parent promotion. [Owning proof and original failures](UNFINISHED-WORK/evidence/registered-application-20261102/REPORT.md).
+
+ONE original-domain-authority→CM real Git candidate→OmniSight read-only→saved ONE history/reopen/revoke passed17with provider/permission/owner fixture boundaries,0execution/signature. The missing application command registration and per-file source-byte checks are superseded; whole-project intake, normal caller, actual worker/signer/host and whole original production scope remain. Do not claim100bounded files as full MGR source or native report as independent app verification.
+
 ## Original authority controls reach protected local owner service — November 2, 2026
 
 Runtime8c699ab exposes the ORIGINAL Trilogy grant/stage/status/revoke routes under exact fixed scope/distinct role credentials, selected public source/account-snapshot job admission and exact-source refusal. Full95/95local profiles passed,0failed/blocked; all95output hashes/byte/source receipts rechecked. Original HTTP/import/job/SQL/restart/replay/revocation test creates one job and3original transactional audits; GitHub, candidate commit and permission callback remain fixtures. [Owning report and original failures](UNFINISHED-WORK/evidence/owner-trilogy-authority-20261102/REPORT.md).
