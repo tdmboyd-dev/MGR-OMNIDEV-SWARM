@@ -13,7 +13,17 @@ function boundedFailureOutput(output,reason){
  const prefix=new TextDecoder('utf-8',{fatal:true}).decode(Buffer.from(output,'utf8').subarray(0,remaining),{stream:true});
  return prefix+suffix;
 }
-export function dockerEnvironment(){const e={};for(const name of ['PATH','HOME','USERPROFILE','SystemRoot','WINDIR','TEMP','TMP','ComSpec','PATHEXT'])if(process.env[name])e[name]=process.env[name];if(process.env.DOCKER_CONTEXT&&process.env.DOCKER_CONTEXT!=='default')throw Error('Named Docker contexts are unqualified; select the default local daemon');e.DOCKER_CONTEXT='default';if(process.env.DOCKER_HOST){if(!/^(unix:\/\/\/|npipe:\/\/\/\/\.\/pipe\/)/.test(process.env.DOCKER_HOST))throw Error('Use a local Docker socket, not a remote daemon');e.DOCKER_HOST=process.env.DOCKER_HOST;}return e;}
+export function dockerEnvironment(){
+ const e={};for(const name of ['PATH','HOME','USERPROFILE','SystemRoot','WINDIR','TEMP','TMP','ComSpec','PATHEXT'])if(process.env[name])e[name]=process.env[name];
+ if(process.env.DOCKER_CONTEXT&&process.env.DOCKER_CONTEXT!=='default')throw Error('Named Docker contexts are unqualified; select the default local daemon');
+ if(process.env.DOCKER_HOST){
+  if(!/^(unix:\/\/\/|npipe:\/\/\/\/\.\/pipe\/)/.test(process.env.DOCKER_HOST))throw Error('Use a local Docker socket, not a remote daemon');
+  // Docker gives DOCKER_CONTEXT precedence over DOCKER_HOST. Keep run,
+  // removal and readback on the explicitly selected local endpoint.
+  e.DOCKER_HOST=process.env.DOCKER_HOST;
+ }else e.DOCKER_CONTEXT='default';
+ return e;
+}
 export function validateFiles(files){if(!Array.isArray(files)||files.length>320)throw new Error('Invalid file set');let total=0;const names=new Set();for(const f of files){if(!f||typeof f!=='object'||typeof f.path!=='string'||!f.path||f.path.length>250||f.path.startsWith('/')||f.path.includes('\\')||/[<>:\x00-\x1f"|?*]/.test(f.path)||f.path.split('/').some(x=>/[. ]$/.test(x)||/^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(x))||f.path.split('/').some(x=>!x||x==='.'||x==='..')||/(^|\/)(\.git|\.env[^/]*|id_rsa|id_ed25519)(\/|$)/i.test(f.path)||names.has(f.path.toLowerCase())||typeof f.content!=='string'||Buffer.byteLength(f.content,'utf8')>100000)throw new Error('Unsafe source file');names.add(f.path.toLowerCase());total+=Buffer.byteLength(f.content,'utf8');}if(total>2500000)throw new Error('Source exceeds budget');}
 export function dockerArgs(dir,name,image='node:22-alpine'){return ['run','--rm','--name',name,'--pull=never','--network=none','--read-only','--cap-drop=ALL','--security-opt=no-new-privileges','--pids-limit=64','--memory=256m','--memory-swap=256m','--cpus=1','--user=65534:65534','--tmpfs=/tmp:rw,noexec,nosuid,size=16m','--mount',`type=bind,src=${dir},dst=/app,readonly`,'--workdir=/app',image,'node','--test','tests/omni-snapshot.test.mjs'];}
 export async function cleanupContainer(name,{runCommand=null}={}){
