@@ -1,0 +1,10 @@
+{
+  "sourceCommit": "7750fd7a6daeffec1ec6a496e65568e67969fe72",
+  "profilesVerified": 93,
+  "outputBytesAndHashesVerified": 93,
+  "unchangedSourceReceiptsVerified": 93,
+  "failedProfiles": 0,
+  "blockedProfiles": 0,
+  "newOriginalParentClosures": 0,
+  "scope": "Original approved local profiles; overlapping nested assertions, not whole product or production acceptance"
+}

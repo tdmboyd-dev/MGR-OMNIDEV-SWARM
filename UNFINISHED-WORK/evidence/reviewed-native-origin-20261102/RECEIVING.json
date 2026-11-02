@@ -1,0 +1,15 @@
+{
+  "owningReport": "MGR-ONE/evidence/reviewed-native-origin-2026-11-02/REPORT.md",
+  "checks": 10,
+  "passed": true,
+  "artifact": {
+    "sha256": "dbb68faa953f492e25dbbc19d3bd1f8339f19eb3716f8c53080d7e2bf996c585",
+    "bytes": 7463,
+    "assignmentId": "97f07f25-cb6a-464b-942a-c7e2ef60bd25"
+  },
+  "executions": 1,
+  "inference": 0,
+  "permanentOwnerDatabaseTouched": false,
+  "originalSignedCandidateStateUnchanged": true,
+  "scope": "Bounded receiving metadata; original raw report remains in ONE private acceptance storage; public projection is explicitly labelled"
+}

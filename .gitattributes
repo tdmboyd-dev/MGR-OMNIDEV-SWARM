@@ -74,3 +74,5 @@
 # Preserve the exact current-owner execution logs.
 UNFINISHED-WORK/evidence/backpack-070-current-owner-20261101/** -text
 UNFINISHED-WORK/evidence/backpack-070-current-owner-20261101/*.log -diff
+
+/UNFINISHED-WORK/evidence/reviewed-native-origin-20261102/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
