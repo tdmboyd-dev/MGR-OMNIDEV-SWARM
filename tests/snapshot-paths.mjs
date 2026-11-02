@@ -97,3 +97,18 @@ test('runtime and agent cross-origin denial occurs before reading request body',
   assert.equal((await handler(request)).status,403);
  }
 });
+
+
+test('exact reviewed import refuses redaction and unknown mode without creating records',async()=>{
+ const before=sqlite.prepare('SELECT COUNT(*) n FROM records').get().n;
+ for(const input of [{sourceIdentity:'unknown',content:'export const value=1;'}, {sourceIdentity:'exact-reviewed-git',content:'export const password="example-value";'}]){
+  const r=await submit({action:'import',title:'Exact source refusal',sourceIdentity:input.sourceIdentity,files:[{path:'src/value.js',content:input.content}]});assert.equal(r.status,400);
+  assert.equal(sqlite.prepare('SELECT COUNT(*) n FROM records').get().n,before);
+ }
+});
+test('exact reviewed import preserves Unicode BOM and CRLF while ordinary imports retain redaction',async()=>{
+ const content='\ufeffexport const café="e\u0301";\r\n',r=await submit({action:'import',title:'Exact source',sourceIdentity:'exact-reviewed-git',files:[{path:'src/value.js',content}]});assert.equal(r.status,200);
+ const stored=JSON.parse(sqlite.prepare('SELECT data FROM records WHERE id=?').get(r.body.projectId).data);assert.equal(stored.files[0].content,content);
+ const ordinary=await submit({action:'import',title:'Ordinary source',files:[{path:'src/value.js',content:'export const password="example-value";'}]});assert.equal(ordinary.status,200);
+ assert.match(sqlite.prepare('SELECT data FROM records WHERE id=?').get(ordinary.body.projectId).data,/REDACTED/);
+});

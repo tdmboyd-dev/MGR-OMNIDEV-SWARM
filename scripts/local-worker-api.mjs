@@ -7,6 +7,7 @@ import {resolve,dirname,basename,sep,join,isAbsolute} from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {createHash,timingSafeEqual} from 'node:crypto';
 import {Readable} from 'node:stream';
+import {localTrilogyPolicy} from './local-trilogy-policy.mjs';
 import {EngineeringVerifications,canonical} from './engineering-verifications.mjs';
 import {prepareNodeRuntime} from './prepare-node-runtime.mjs';
 import {loadNativePolicy} from '../worker/windows-appcontainer.mjs';
@@ -26,6 +27,7 @@ export async function startLocalWorkerApi(configInput,{verifyPrivateState,verify
  const config=configPath?JSON.parse(readFileSync(configPath,'utf8')):JSON.parse(JSON.stringify(configInput)),owner=config.deployment==='owner';
  if(![undefined,'laboratory','owner'].includes(config.deployment)||!Number.isSafeInteger(config.port??0)||(config.port??0)<0||(config.port??0)>65535||![config.tenantId,config.actorId].every(x=>typeof x==='string'&&/^[A-Za-z0-9_.:-]{1,128}$/.test(x)))throw Error('Explicit fixed identity and local port required');
  if(typeof config.ownerToken!=='string'||config.ownerToken.length<32||typeof config.nativeWorkerToken!=='string'||config.nativeWorkerToken.length<32||same(config.ownerToken,config.nativeWorkerToken)||typeof config.tenantId!=='string'||!config.tenantId||typeof config.actorId!=='string'||!config.actorId)throw Error('Explicit distinct private credentials and fixed identity required');
+ const trilogy=localTrilogyPolicy(config);
  let dbPath,stateRoot,ownerLock,ownerLockPath;
  if(owner){
   if(typeof verifyPrivateState!=='function')throw Error('Trusted owner private-state verification required');
@@ -60,11 +62,12 @@ export async function startLocalWorkerApi(configInput,{verifyPrivateState,verify
  if(!existed){sql.exec('BEGIN');try{for(const file of ['drizzle/0000_orange_phalanx.sql','drizzle/0001_modern_hammerhead.sql'])sql.exec(readFileSync(join(repo,file),'utf8'));sql.exec('CREATE TABLE omni_local_lab_identity(id INTEGER PRIMARY KEY CHECK(id=1),tenant_id TEXT NOT NULL,actor_id TEXT NOT NULL); CREATE TABLE omni_local_http_audit(id INTEGER PRIMARY KEY,at TEXT NOT NULL,principal TEXT NOT NULL,method TEXT NOT NULL,path TEXT NOT NULL,status INTEGER NOT NULL);');sql.prepare('INSERT INTO omni_local_lab_identity VALUES(1,?,?)').run(config.tenantId,config.actorId);sql.exec('COMMIT');}catch(error){sql.exec('ROLLBACK');sql.close();throw error;}}
  class Statement{constructor(query,args=[]){this.query=query;this.args=args;}bind(...args){return new Statement(this.query,args);}async first(){return sql.prepare(this.query).get(...this.args)??null;}async all(){return {results:sql.prepare(this.query).all(...this.args)};}async run(){return {meta:{changes:Number(sql.prepare(this.query).run(...this.args).changes)}};}}
  const db={prepare:query=>new Statement(query),batch:async statements=>{sql.exec('BEGIN');try{const results=statements.map(s=>({meta:{changes:Number(sql.prepare(s.query).run(...s.args).changes)}}));sql.exec('COMMIT');return results;}catch(error){sql.exec('ROLLBACK');throw error;}}};
- globalThis.__omniNodeLocalEnv={DB:db,OMNI_WINDOWS_WORKER_TOKEN:config.nativeWorkerToken,...(config.workerPolicy?{OMNI_WINDOWS_WORKER_POLICY_JSON:JSON.stringify(config.workerPolicy)}:{})};
+ globalThis.__omniNodeLocalEnv={DB:db,OMNI_WINDOWS_WORKER_TOKEN:config.nativeWorkerToken,...(trilogy?{OMNI_TRILOGY_SCOPE:JSON.stringify(trilogy.scope),OMNI_TRILOGY_OWNER_TOKEN:trilogy.ownerToken,OMNI_TRILOGY_BRIDGE_TOKEN:trilogy.bridgeToken,OMNI_TRILOGY_READ_TOKEN:trilogy.readToken,OMNI_TRILOGY_READ_JOB_ID:trilogy.readJobId}:{}),...(config.workerPolicy?{OMNI_WINDOWS_WORKER_POLICY_JSON:JSON.stringify(config.workerPolicy)}:{})};
  const runtimeParent=direct(join(stateRoot,'node-runtimes'));if(!existsSync(runtimeParent))mkdirSync(runtimeParent);if(owner)await verifyPrivateState('directory',runtimeParent);
  const prepared=prepareNodeRuntime({root:repo,outputDir:runtimeParent,environmentGlobal:'__omniNodeLocalEnv',versioned:true}),output=prepared.outputDir;
  const workspace=await import(pathToFileURL(join(output,'route.mjs'))),runtime=await import(pathToFileURL(join(output,'runtime-route.mjs'))),worker=await import(pathToFileURL(join(output,'worker-route.mjs')));
  if(config.engineeringToken&&(typeof config.engineeringToken!=='string'||config.engineeringToken.length<32||same(config.engineeringToken,config.ownerToken)||same(config.engineeringToken,config.nativeWorkerToken)))throw Error('Engineering credential must be distinct');
+ const trilogyRoute=trilogy?await import(pathToFileURL(join(output,'trilogy-route.mjs'))):null;
  const jobs=await import(pathToFileURL(join(output,'jobs.mjs')));engineering=config.engineeringToken?new EngineeringVerifications(sql,config,jobs,{verifyReviewedSource}):null;
  const allowedRuntime=new Set(['enqueue','submitAccountCandidate','cancel','apply','rollback']);let origin;
  let ready=false;server=createServer({maxHeaderSize:16384},async(req,res)=>{
@@ -76,6 +79,7 @@ export async function startLocalWorkerApi(configInput,{verifyPrivateState,verify
    if(req.headers.origin&&req.headers.origin!==origin)return send(403,'Cross-origin request denied');
    const url=new URL(req.url,origin),credential=req.headers.authorization?.replace(/^Bearer /,'');
    if(url.pathname.startsWith('/v1/engineering/')){if(!engineering||!same(credential,config.engineeringToken))return send(401,'Engineering credential required');if(req.headers['x-tenant-id']!==config.tenantId||req.headers['x-actor-id']!==config.actorId)return send(403,'Configured engineering identity denied');principal='engineering';}
+   else if(url.pathname==='/api/trilogy'){if(!trilogy)return send(404,'Route unavailable');const role=['owner','bridge','read'].find(role=>same(credential,trilogy[role+'Token']));if(!role)return send(401,'Trilogy credential required');principal='trilogy-'+role;}
    else if(url.pathname==='/api/worker'){if(!same(credential,config.nativeWorkerToken))return send(401,'Native worker credential required');principal='native-worker';}
    else{if(!same(credential,config.ownerToken))return send(401,'Owner credential required');if(req.headers['x-tenant-id']!==config.tenantId||req.headers['x-actor-id']!==config.actorId)return send(403,'Configured owner identity denied');principal='owner';}
    if(!['GET','POST'].includes(req.method))return send(405,'Method denied');
@@ -98,13 +102,26 @@ export async function startLocalWorkerApi(configInput,{verifyPrivateState,verify
     else return send(404,'Engineering operation unavailable');
     status=200;res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store'});res.end(JSON.stringify(value));return;
    }
+   if(principal.startsWith('trilogy-')){
+    if(req.method==='GET'&&!['','grant','execution'].includes(url.searchParams.get('action')??''))return send(403,'Local Trilogy publication is unavailable');
+    if(req.method==='POST'){
+     const {boundedRequestText}=await import(pathToFileURL(join(output,'request-body.mjs'))),raw=await boundedRequestText(request,256000),body=JSON.parse(raw);
+     if(!['authorize','revoke','result'].includes(body?.action))return send(403,'Local Trilogy publication is unavailable');
+     request=new Request(url,{method:'POST',headers:req.headers,body:raw});
+    }
+   }
    if(principal==='owner'&&req.method==='POST'){
     const {boundedRequestText}=await import(pathToFileURL(join(output,'request-body.mjs')));const raw=await boundedRequestText(request,url.pathname==='/api/workspace'?2199999:600000);const body=JSON.parse(raw);
-    if(url.pathname==='/api/workspace'&&body?.action!=='import')return send(403,'Laboratory workspace allows source import only');
-    if(url.pathname==='/api/runtime'&&(!allowedRuntime.has(body?.action)||body.action==='enqueue'&&(body.mode!=='account'||body.workerKind!=='windows-appcontainer'||body.testProfile!=='snapshot'||body.automaticReview===true||body.automaticRepair===true)))return send(403,'Laboratory allows explicit native snapshot jobs without model dispatch');
+    if(url.pathname==='/api/workspace'&&body?.action!=='import'&&!(trilogy&&body?.action==='github'&&[trilogy.scope.repositoryId,'https://github.com/'+trilogy.scope.repositoryId].includes(body.location)))return send(403,'Local workspace source operation is outside configured scope');
+    if(url.pathname==='/api/runtime'){
+     const boundedAccount=body?.mode==='account'&&body.testProfile==='snapshot'&&body.automaticReview!==true&&body.automaticRepair!==true;
+     const nativeAdmission=boundedAccount&&body.workerKind==='windows-appcontainer';
+     const trilogyAdmission=boundedAccount&&trilogy&&body.projectId===trilogy.scope.projectId&&body.workerKind==='docker-isolated';
+     if(!allowedRuntime.has(body?.action)||body?.action==='enqueue'&&!nativeAdmission&&!trilogyAdmission)return send(403,'Local runtime operation is outside configured scope');
+    }
     request=new Request(url,{method:'POST',headers:req.headers,body:raw});
    }
-   const route=url.pathname==='/api/workspace'?workspace:url.pathname==='/api/runtime'?runtime:url.pathname==='/api/worker'?worker:null;if(!route)return send(404,'Route unavailable');
+   const route=url.pathname==='/api/workspace'?workspace:url.pathname==='/api/runtime'?runtime:url.pathname==='/api/worker'?worker:url.pathname==='/api/trilogy'?trilogyRoute:null;if(!route)return send(404,'Route unavailable');
    const response=await route[req.method](request);status=response.status;res.writeHead(status,Object.fromEntries(response.headers));res.end(Buffer.from(await response.arrayBuffer()));
   }catch(error){if(!res.headersSent)send([400,403,404,409,503].includes(error.statusCode)?error.statusCode:400,'Local adapter request rejected');else res.destroy();}
   finally{try{sql.prepare('INSERT INTO omni_local_http_audit(at,principal,method,path,status) VALUES(?,?,?,?,?)').run(new Date().toISOString(),principal,req.method,req.url?.split('?')[0]||'',status);}catch{}}

@@ -30,7 +30,7 @@ export async function POST(request:Request){
   }else if(p.action==="import"||p.action==="example"||(p.action==="github"||p.action==="githubAccount")){
    let snapshot:any=null; if(p.action==="github"||p.action==="githubAccount"){try{snapshot=await githubSnapshot(text(p.location,500),p.action==="githubAccount");}catch(e:any){throw new InputError(e.message)}}
    const files:SourceFile[]=p.action==="example"?exampleFiles:snapshot?snapshot.files:p.files;const name=p.action==="example"?"Atlas Commerce":snapshot?snapshot.title:text(p.title);
-   const storedFiles=importedSnapshotFiles(files);
+   const storedFiles=importedSnapshotFiles(files,p.sourceIdentity);
    const result=analyze(files);const project=record("project",name,{source:p.action==="example"?"Example dataset":snapshot?snapshot.authenticated?"Authorized GitHub snapshot":"Public GitHub snapshot":"Imported snapshot",origin:snapshot?{url:snapshot.url,ref:snapshot.ref,commit:snapshot.commit,tree:snapshot.tree,partial:snapshot.partial,coverage:snapshot.coverage}:null,fileLedger:await fileLedger(storedFiles),files:storedFiles,analysis:result,scanCount:1},"","analyzed");ops.push(insert(project));
    for(const f of result.findings)ops.push(insert(record("finding",f.title,f,project.id,"open")));
    audit("Snapshot analyzed: "+name,{content:files.length+" files mapped; "+result.findings.length+" rule-based findings. "+result.scope},project.id);out={projectId:project.id};

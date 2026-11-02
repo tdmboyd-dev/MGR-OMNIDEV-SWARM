@@ -81,3 +81,83 @@ test('native receiver decodes identifiers once and body reads recover literal do
  const inspected=new DatabaseSync(join(f.stateRoot,'omnidev.sqlite'),{readOnly:true});try{assert.equal(inspected.prepare('SELECT count(*) n FROM jobs').get().n,0);}finally{inspected.close();}
  await f.close();
 });
+
+const trilogyConfig=(f,projectId='selected-project',readJobId='selected-job')=>({scope:{ownerId:f.config.actorId,projectId,repositoryId:'fixture/project'},ownerToken:token(),bridgeToken:token(),readToken:token(),readJobId});
+
+test('configured original Trilogy route reaches its own scope checks without native-worker authority',async t=>{
+ const f=await fixture(t),trilogy=trilogyConfig(f),ready=await f.open({trilogy});assert.equal(ready.ready,true);
+ const response=await f.request(ready.origin,'/api/trilogy?jobId=selected-job&action=grant',undefined,trilogy.bridgeToken);
+ assert.equal(response.status,403);assert.match((await response.json()).error,/scope refused/i);
+ assert.equal(response.headers.get('cache-control'),'no-store');
+ assert.equal((await f.request(ready.origin,'/api/trilogy?jobId=selected-job&action=grant',undefined,f.config.ownerToken)).status,401);
+ assert.equal((await f.request(ready.origin,'/api/worker',undefined,trilogy.bridgeToken)).status,401);
+ assert.equal((await f.request(ready.origin,'/api/trilogy',{action:'publish',jobId:'selected-job',authorizationId:'none'},trilogy.ownerToken)).status,403);
+ await f.close();
+});
+
+test('Trilogy startup refuses shared credentials before database creation',async t=>{
+ const f=await fixture(t),trilogy=trilogyConfig(f);trilogy.bridgeToken=f.config.ownerToken;
+ assert.equal((await f.open({trilogy})).ready,false);assert.equal(await f.ended,1);
+ await assert.rejects(readFile(join(f.stateRoot,'omnidev.sqlite')),e=>e.code==='ENOENT');
+});
+
+
+const digest=value=>createHash('sha256').update(typeof value==='string'?value:JSON.stringify(value)).digest('hex');
+const canonicalText=value=>JSON.stringify(value,(_key,v)=>v&&typeof v==='object'&&!Array.isArray(v)?Object.fromEntries(Object.entries(v).sort(([a],[b])=>a<b?-1:a>b?1:0)):v);
+function originalPlan(job){
+ const body={contract:'mgr.imprint.plan.v1',commit:'a'.repeat(40),method:'slot-composition',state:'PROPOSED_NOT_APPLIED',stamp:{id:'LocalTransportFixture',version:1,sha256:'c'.repeat(64)},selection:{contract:'mgr.slot-machine.selection.v1',order:['Content'],decisions:[{slotId:'Content',optionId:'Native',optionSha256:'d'.repeat(64),declaredPreference:0,frozen:false,reason:'Explicit protocol fixture'}],searchSteps:1},proposals:job.result.candidate.patches.map(p=>({path:p.path,operation:p.before===null?'create':'update',beforeHash:p.before===null?null:digest(p.before),afterHash:digest(p.after),risk:'verification-required',status:'PROPOSED_NOT_APPLIED'})),requiresTests:true,requiresOwnerApproval:true,confidence:'unassessed',applied:0,verified:0,performance:{speedup:null,benchmarkStatus:'not-measured'}};
+ const planSha256=digest(canonicalText(body));return {...body,id:'IMP-'+planSha256.slice(0,24),planSha256};
+}
+
+test('original HTTP import job authority stage restart replay and revoke persist in the SAME owner database',async t=>{
+ const f=await fixture(t),trilogy=trilogyConfig(f);let ready=await f.open({trilogy},{githubFixture:{}});assert.equal(ready.ready,true);
+ for(const location of ['foreign/repo','https://github.com/fixture/project/extra'])assert.equal((await f.request(ready.origin,'/api/workspace',{action:'github',location})).status,403);
+ const imported=await f.request(ready.origin,'/api/workspace',{action:'github',location:'https://github.com/fixture/project',sourceIdentity:'exact-reviewed-git'});assert.equal(imported.status,200);const {projectId}=await imported.json();
+ await f.close();trilogy.scope.projectId=projectId;ready=await f.open({trilogy});assert.equal(ready.ready,true);
+ for(const body of [{mode:'ai'},{projectId:'foreign-project'},{automaticReview:true},{automaticRepair:true},{testProfile:'node-application'}])assert.equal((await f.request(ready.origin,'/api/runtime',{action:'enqueue',mode:'account',workerKind:'docker-isolated',testProfile:'snapshot',projectId,objective:'Exercise original job authority without execution',...body})).status,403);
+ let response=await f.request(ready.origin,'/api/runtime',{action:'enqueue',mode:'account',workerKind:'docker-isolated',testProfile:'snapshot',projectId,objective:'Exercise original job authority without execution'});assert.equal(response.status,200);const jobId=(await response.json()).result.id;
+ response=await f.request(ready.origin,'/api/runtime?action=accountRequest&id='+encodeURIComponent(jobId));assert.equal(response.status,200);const account=await response.json();assert.equal(account.jobId,jobId);assert.equal(account.files[0].content,'export const value=1;\n');
+ response=await f.request(ready.origin,'/api/runtime',{action:'submitAccountCandidate',id:jobId,candidate:{jobId,sourceDigest:account.sourceDigest,candidate:{summary:'A staged fixture change, no execution',patches:[{path:'src/value.js',before:account.files[0].content,after:'export const value=2;\n'}]}}});assert.equal(response.status,200);const job=(await response.json()).result;assert.equal(job.status,'awaiting review');
+ await f.close();trilogy.readJobId=jobId;ready=await f.open({trilogy});assert.equal(ready.ready,true);
+ const plan=originalPlan(job),path='/api/trilogy?jobId='+encodeURIComponent(jobId);
+ for(const credential of [f.config.ownerToken,f.config.nativeWorkerToken,trilogy.bridgeToken,trilogy.readToken])assert.equal((await f.request(ready.origin,'/api/trilogy',{action:'authorize',jobId,plan},credential)).status,401);
+ response=await f.request(ready.origin,'/api/trilogy',{action:'authorize',jobId,plan},trilogy.ownerToken);assert.equal(response.status,200);const granted=await response.json();assert.equal(granted.grant.permission,'candidate-only');
+ response=await f.request(ready.origin,path+'&action=grant',undefined,trilogy.bridgeToken);assert.equal(response.status,200);assert.equal((await response.json()).grant.grantId,granted.grant.grantId);
+ const {contract,...binding}=granted.grant.request,identity='trilogy:'+digest(canonicalText({jobId,ownerId:trilogy.scope.ownerId,projectId,repositoryId:trilogy.scope.repositoryId})),events=['trilogy.job_bound','task.batch_planned','trilogy.candidate_staged'].map((kind,sequence)=>({kind,sequence,hash:digest(kind+sequence)}));
+ const result={contract:'mgr.trilogy.job-result.v1',binding,requestSha256:granted.grant.requestSha256,sourceDigest:granted.grant.sourceDigest,state:'candidate-pending-independent-verification',candidateCommit:'e'.repeat(40),files:plan.proposals.map(({path,operation,beforeHash,afterHash})=>({path,operation,beforeHash,afterHash})),verification:null,evidence:{streamId:'campaign:'+identity,lastSequence:2,headHash:events.at(-1).hash,eventRefs:events},observedAt:new Date().toISOString(),requiresOwnerApproval:true,merged:false,released:false};
+ for(const credential of [trilogy.ownerToken,trilogy.readToken])assert.equal((await f.request(ready.origin,'/api/trilogy',{action:'result',jobId,result},credential)).status,401);
+ assert.equal((await f.request(ready.origin,'/api/trilogy',{action:'authorize',jobId,plan,executionApproved:true},trilogy.ownerToken)).status,400);
+ assert.equal((await f.request(ready.origin,'/api/trilogy',{action:'result',jobId,oversized:'x'.repeat(256001)},trilogy.bridgeToken)).status,400);
+ response=await f.request(ready.origin,'/api/trilogy',{action:'result',jobId,result},trilogy.bridgeToken);assert.equal(response.status,200);assert.equal((await response.json()).replayed,false);
+ assert.equal((await f.request(ready.origin,path+'&action=execution',undefined,trilogy.bridgeToken)).status,200);
+ for(const action of ['publicationPreview','authorizePublication','publish','revokePublication','reconcilePublication'])assert.equal((await f.request(ready.origin,'/api/trilogy',{action,jobId},trilogy.ownerToken)).status,403);
+ assert.equal((await f.request(ready.origin,path+'&action=publication',undefined,trilogy.ownerToken)).status,403);
+ assert.equal((await f.request(ready.origin,path+'&jobId=another',undefined,trilogy.readToken)).status,400);
+ assert.equal((await f.request(ready.origin,'/api/trilogy?jobId=another',undefined,trilogy.readToken)).status,403);
+ assert.equal((await f.request(ready.origin,path,undefined,trilogy.readToken,{origin:'https://foreign.invalid'})).status,403);
+ assert.equal((await f.request(ready.origin,'/api/runtime',{action:'apply',id:jobId})).status,400);
+ await f.close();ready=await f.open({trilogy});assert.equal(ready.ready,true);
+ response=await f.request(ready.origin,path,undefined,trilogy.readToken);assert.equal(response.status,200);const viewed=await response.json();assert.equal(viewed.result.state,result.state);assert.equal(viewed.execution.isolationVerified,false);assert.equal(viewed.execution.host,'unqualified');
+ for(const secret of [trilogy.ownerToken,trilogy.bridgeToken,trilogy.readToken,account.files[0].content])assert.ok(!JSON.stringify(viewed).includes(secret));
+ response=await f.request(ready.origin,'/api/trilogy',{action:'result',jobId,result},trilogy.bridgeToken);assert.equal(response.status,200);assert.equal((await response.json()).replayed,true);
+ assert.equal((await f.request(ready.origin,'/api/trilogy',{action:'revoke',jobId},trilogy.bridgeToken)).status,401);
+ assert.equal((await f.request(ready.origin,'/api/trilogy',{action:'revoke',jobId},trilogy.ownerToken)).status,200);
+ assert.equal((await f.request(ready.origin,path+'&action=grant',undefined,trilogy.bridgeToken)).status,403);
+ await f.close();
+ const db=new DatabaseSync(join(f.stateRoot,'omnidev.sqlite'),{readOnly:true});try{
+  const project=JSON.parse(db.prepare('SELECT data FROM records WHERE id=?').get(projectId).data);assert.equal(project.origin.commit,'a'.repeat(40));assert.equal(project.origin.url,'https://github.com/fixture/project');
+  const saved=JSON.parse(db.prepare('SELECT result FROM jobs WHERE id=?').get(jobId).result);assert.equal(saved.trilogy.grant.revoked,true);assert.deepEqual(saved.trilogy.result,result);assert.equal(saved.externalTests,null);
+  assert.equal(db.prepare('SELECT count(*) n FROM jobs').get().n,1);assert.equal(db.prepare("SELECT count(*) n FROM records WHERE json_extract(data,'$.type')='TrilogyControl'").get().n,3);
+  assert.ok(db.prepare("SELECT count(*) n FROM omni_local_http_audit WHERE principal='trilogy-owner' AND status=200").get().n>=2);
+ }finally{db.close();}
+});
+
+import {localTrilogyPolicy} from '../scripts/local-trilogy-policy.mjs';
+test('startup Trilogy scope and credentials are exact bounded owner-only data',()=>{
+ const config={deployment:'owner',actorId:'owner',ownerToken:token(),nativeWorkerToken:token(),engineeringToken:token()},valid={scope:{ownerId:'owner',projectId:'project',repositoryId:'fixture/project'},ownerToken:token(),bridgeToken:token(),readToken:token(),readJobId:'job'};
+ for(const mutation of [p=>p.scope.ownerId='foreign',p=>p.scope.extra=true,p=>p.readJobId='',p=>p.ownerToken='x'.repeat(513),p=>p.ownerToken='x'.repeat(31),p=>p.bridgeToken=p.readToken,p=>p.bridgeToken=config.nativeWorkerToken,p=>p.readToken=config.engineeringToken,p=>p.scope.repositoryId='https://foreign.invalid',p=>p.publish=true]){
+  const p=structuredClone(valid);mutation(p);assert.throws(()=>localTrilogyPolicy({...config,trilogy:p}));
+ }
+ assert.throws(()=>localTrilogyPolicy({...config,deployment:'laboratory',trilogy:valid}));assert.equal(localTrilogyPolicy(config),null);
+ const selected=localTrilogyPolicy({...config,trilogy:valid});valid.scope.projectId='changed';assert.equal(selected.scope.projectId,'project');assert.ok(Object.isFrozen(selected));assert.ok(Object.isFrozen(selected.scope));
+});
