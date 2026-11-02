@@ -81,11 +81,13 @@ export async function startLocalWorkerApi(configInput,{verifyPrivateState}={}){
    if(!['GET','POST'].includes(req.method))return send(405,'Method denied');
    let request=new Request(url,{method:req.method,headers:req.headers,...(req.method==='POST'?{body:Readable.toWeb(req),duplex:'half'}:{})});
    if(principal==='engineering'){
-    const {boundedRequestText}=await import(pathToFileURL(join(output,'request-body.mjs')));let body;if(req.method==='POST')body=JSON.parse(await boundedRequestText(request,8192));
+    const {boundedRequestText}=await import(pathToFileURL(join(output,'request-body.mjs')));let body;if(req.method==='POST')body=JSON.parse(await boundedRequestText(request,url.pathname==='/v1/engineering/reviewed-source-bind'?2210000:8192));
     const binding=url.pathname.match(/^\/v1\/engineering\/workspaces\/([a-f0-9-]{36})\/jobs\/([a-f0-9-]{36}|request-[a-f0-9]{64})\/binding$/),item=url.pathname.match(/^\/v1\/engineering\/verifications\/([^/]+)(?:\/(cancel|report))?$/);let value;
     const itemId=item?decodeURIComponent(item[1]):null;if(itemId!==null&&!/^[A-Za-z0-9_.:-]{1,128}$/.test(itemId))throw Error('Invalid exact request identity');
     const readIdentity=()=>{if(!body||Array.isArray(body)||Object.keys(body).join(',')!=='requestId'||typeof body.requestId!=='string'||!/^[A-Za-z0-9_.:-]{1,128}$/.test(body.requestId))throw Error('Invalid exact request identity');return body.requestId;};
-    if(binding&&req.method==='GET')value=await engineering.binding(binding[1],binding[2]);
+    if(url.pathname==='/v1/engineering/reviewed-source-bind'&&req.method==='POST')value=await engineering.bindReviewedSource(body);
+    else if(url.pathname==='/v1/engineering/reviewed-source'&&req.method==='POST')value=await engineering.reviewedSource(body);
+    else if(binding&&req.method==='GET')value=await engineering.binding(binding[1],binding[2]);
     else if(url.pathname==='/v1/engineering/verifications'&&req.method==='POST')value=await engineering.admit(body);
     else if(url.pathname==='/v1/engineering/verification-status'&&req.method==='POST')value=await engineering.status(readIdentity());
     else if(url.pathname==='/v1/engineering/verification-report'&&req.method==='POST')value=await engineering.report(readIdentity());

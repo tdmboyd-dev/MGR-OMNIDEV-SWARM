@@ -18,6 +18,7 @@ export const FIXTURE_PROFILES = Object.freeze(Object.fromEntries(Object.entries(
  engineeringOwnership:['tests/engineering-job-ownership.mjs'],
  engineeringBinding:['tests/engineering-current-binding.mjs'],
  engineeringMetadata:['tests/engineering-verifications.mjs'],
+ reviewedNativeSource:['tests/reviewed-native-source.mjs'],
  ownerLocalService:['tests/local-owner-service.mjs'],
  nodeRuntimePreparation:['tests/node-runtime-preparation.mjs'],
  connectorPreview:['tests/connector-preview.test.mjs'],

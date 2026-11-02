@@ -1,3 +1,4 @@
+import {reviewedNativeSourceLink} from './reviewed-native-source';
 import {nativeAssignment,validateNativeReport,nativeCommand,validateNativeOracle,nativeScopePolicy} from './worker-policy';
 import {trilogyWorkerBinding,checkTrilogyWorkerProof,assertTrilogySnapshotApply,TRILOGY_DATABASE_NOW_MS} from './trilogy-jobs';
 import {createTrilogyJobLink,verifyTrilogyJobLink} from './trilogy-job-link.mjs';
@@ -156,9 +157,24 @@ export async function engineeringBinding(id:string,workspaceId:string){
  const project:any=await db().prepare("SELECT data FROM records WHERE id=? AND kind='project'").bind(workspaceId).first();if(!project)throw Error('Engineering workspace missing');const data=JSON.parse(project.data);
  const files=applyPatches(j.payload.baseline,j.result.candidate.patches);validateNativeOracle(j.payload.baseline,files);
  const binding={sourceDigest:await digest(j.payload.baseline),candidateDigest:await digest(files),testManifestDigest:await digest(nativeCommand)},policy=nativeScopePolicy(binding),workspaceDigest=await digest(data.files),workspaceDataDigest=await digest(data);
+ if(j.result.reviewedNativeSource&&(j.result.reviewedNativeSource.workspaceId!==workspaceId||j.result.reviewedNativeSource.jobId!==id||Object.entries(binding).some(([k,v])=>j.result.reviewedNativeSource.nativeBinding?.[k]!==v)))throw Error('Reviewed source no longer matches the current native job');
  const latest=await get(id),currentProject:any=await db().prepare("SELECT data FROM records WHERE id=? AND kind='project'").bind(workspaceId).first(),currentPolicy=nativeScopePolicy(binding);
  if(!currentProject||currentProject.data!==project.data||(['projectId','objective','status','mode','attempts'] as const).some(k=>latest[k]!==j[k])||JSON.stringify(latest.payload)!==JSON.stringify(j.payload)||JSON.stringify(latest.result)!==JSON.stringify(j.result)||['hostId','launcherSha256','runtimeSha256','qualificationDigest'].some(k=>currentPolicy[k as keyof typeof currentPolicy]!==policy[k as keyof typeof policy]))throw Error('Engineering job or workspace changed during binding');
  return {workspaceId:j.projectId,jobId:j.id,...binding,workerKind:'windows-appcontainer',profile:'snapshot',jobState:j.status,currentBindingVerified:workspaceDigest===binding.sourceDigest||j.status==='applied'&&workspaceDigest===binding.candidateDigest,workspaceDataDigest,workspaceRevision:data.revision||0,policyIdentity:{hostId:policy.hostId,launcherSha256:policy.launcherSha256,runtimeSha256:policy.runtimeSha256,qualificationDigest:policy.qualificationDigest}};
+}
+/** Persist source provenance against the ORIGINAL job. This cannot approve or
+ * execute a candidate, transfer CM authority or qualify the signed worker. */
+export async function bindReviewedNativeSource(id:string,workspaceId:string,snapshot:any,principal:{actorId:string;tenantId:string}){
+ const j=await get(id);if(j.projectId!==workspaceId||(j.payload.workerKind||'docker-isolated')!=='windows-appcontainer'||j.payload.testProfile==='node-application'||!j.result.candidate||j.result.trilogy)throw Error('Reviewed native source job scope denied');
+ if(!principal||!['actorId','tenantId'].every(k=>typeof principal[k as keyof typeof principal]==='string'&&/^[A-Za-z0-9_.:-]{1,128}$/.test(principal[k as keyof typeof principal])))throw Error('Reviewed native source principal required');
+ const nativeBinding={sourceDigest:await digest(j.payload.baseline),candidateDigest:await digest(applyPatches(j.payload.baseline,j.result.candidate.patches)),testManifestDigest:await digest(nativeCommand)};
+ const linked=await reviewedNativeSourceLink({snapshot,workspaceId,jobId:id,principal,nativeBinding,baseline:j.payload.baseline,candidate:j.result.candidate});
+ if(j.result.reviewedNativeSource){if(JSON.stringify(canonicalIntent(j.result.reviewedNativeSource))!==JSON.stringify(canonicalIntent(linked)))throw Error('Reviewed native source is already bound to another immutable origin');return JSON.parse(JSON.stringify(j.result.reviewedNativeSource));}
+ assertNativeMutationSafe(j);if(j.status!=='awaiting review'||!j.result.checks?.passed||j.result.externalTests||j.result.workerAssignment||j.result.verificationOwner)throw Error('Reviewed source must bind before native verification admission');
+ const binding=await engineeringBinding(id,workspaceId);if(!binding.currentBindingVerified)throw Error('Reviewed native workspace is no longer current');
+ const project:any=await db().prepare("SELECT data FROM records WHERE id=? AND kind='project'").bind(workspaceId).first();if(!project||await digest(JSON.parse(project.data))!==binding.workspaceDataDigest)throw Error('Reviewed native workspace changed');
+ const updated=await db().prepare("UPDATE jobs SET result=?,updated_at=? WHERE id=? AND project_id=? AND status='awaiting review' AND payload=? AND result=? AND objective=? AND json_extract(result,'$.workerAssignment') IS NULL AND "+nativeUnheldSql+" AND EXISTS (SELECT 1 FROM records WHERE id=? AND kind='project' AND data=?)").bind(JSON.stringify({...j.result,reviewedNativeSource:linked}),new Date().toISOString(),id,workspaceId,JSON.stringify(j.payload),JSON.stringify(j.result),j.objective,workspaceId,project.data).run();
+ if(!updated.meta.changes)throw Error('Reviewed native source changed during binding');return JSON.parse(JSON.stringify(linked));
 }
 /** verification is an internal authenticated service composition value. The
  * public worker route never forwards one and cannot claim a reserved job. */
