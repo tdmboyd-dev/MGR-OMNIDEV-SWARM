@@ -6,6 +6,14 @@ After source review, only the existing OmniDev fixed profile's sourceDigest was 
 
 ---
 
+## Reviewed Code Monster candidate reaches native snapshot host — November 1, 2026
+
+The owning Code Monster bridge now transfers exact staged reviewed Git baseline/patch bytes via trusted SDK `exportNativeSnapshot({request,paths})`. Existing ONE department composition, API/MCP, original OmniDev jobs/current binding/native scope and approved Windows worker handle the same snapshot. Actual disposable HTTP/native/report/save/fresh-process restart/replay passed8/8 with one native execution, zero inference and permanent owner DB untouched. CM original signed-candidate state remained pending independent verification. No new transport contract or executable source change in this receiving repository.
+
+Source boundary: ONE6db7c2d / CM459977db912385dc52aae54a33fbc13f86b58fb0 / OmniDev6e69de5ba60c391445fa3bd665e83cb1abd3bb6b retains runtime82ca5c8d1ddbb1260c89e48990359128440c0931. Reused29-check native qualification is not a fresh OS qualification. Raw native report is owned by ONE evidence/reviewed-native-candidate-2026-11-01/; CM owns source-reader/transport regression. These overlapping scopes are not summed.
+
+Remaining ordinary engineering: persistent original CM request/plan/candidate/snapshot-to-OmniDev-job association, current authority/recipe revalidation while approval is pending/after restart, unchanged reviewed source through native import, distinct independent signed command/signer, qualification-epoch migration and controlled permanent caller/update/reconciliation/rollback. Existing selected OmniSight observation and native scope/policy recovery are already delivered; reuse them. Normal everyday engineering remains disabled; all original requirements and whole-product Unassessed state remain. No second scheduler, permission engine, provider service or raw companion-source manifest is introduced.
+
 ## Current joined native enrollment and monitor delivery — November 1, 2026
 
 Joined producer source82ca5c8d1ddbb1260c89e48990359128440c0931 completed all92/92 approved local verification profiles, zero failed/blocked. All92 saved output byte counts/hashes and unchanged-source receipts were checked. This preserves both the owning snapshot/policy-recovery work and peer native-monitor/Backpack/current-owner-service changes. The separate actual ONE017d36d two-candidate approval → Windows native execution → saved report → fresh restart/replay → historical report download passed14/14, two native executions, zero inference, permanent owner DB untouched. ONE document/conversation/native checks133/133 and qualification/optional-service6/6 remain separate scoped results. Reused29-check host qualification matches current worker/Node hashes; no new OS qualification is claimed. See JOINED-QUALIFICATION.json and combined-full/report.json in UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/.
