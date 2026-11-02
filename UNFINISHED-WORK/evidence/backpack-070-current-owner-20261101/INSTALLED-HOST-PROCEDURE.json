@@ -1,0 +1,30 @@
+{
+  "observedAt": "2026-11-02T02:04:40.197Z",
+  "change": {
+    "id": "omnidev-local-contracts",
+    "project": "omnidev",
+    "previousSourceDigest": "6c6ff63a59c038a28f613dbf85dd1109bc8277e489cdb435c5dadf2de8ace7eb",
+    "sourceDigest": "baae46ce2b6afa03f11a484fc2dc6a5ed479ccf50af046caade2af079471c8ac",
+    "subjects": 204,
+    "expiresAt": "2026-11-08T13:07:24.167Z",
+    "timeoutMs": 300000,
+    "qualifiedReviewCommit": "6e69de5ba60c391445fa3bd665e83cb1abd3bb6b",
+    "actualCanonicalCommit": "6a203d3b0600fc40d2ed87179b8cf1a6e222f5d6",
+    "exactReviewedScopeBytesMatch": true
+  },
+  "rootsCommandsActorStoreExpiriesAndOtherProfilesPreserved": true,
+  "installedVersion": "0.7.0",
+  "result": {
+    "state": "succeeded",
+    "outcome": "pass",
+    "runId": "ad1e3a8b-05a2-45a2-a774-5ec0425c18eb",
+    "receiptSha256": "fd2d647aba6bcb4096fd936964c19353e0606ab1d0013c1e15a34c77aba854b5"
+  },
+  "executedHostChecks": {
+    "passed": 28,
+    "failed": 0,
+    "skipped": 0
+  },
+  "outputSha256": "8f6643d1477028989db992c5a93ddd0d972eb56ddb8dbd721fef99cd9fdb8ea0",
+  "scope": "Existing source-pinned owner procedure through installed compiled Backpack. Selected local contracts, not a new OS qualification, permanent Tevin/native activation, full products or production."
+}

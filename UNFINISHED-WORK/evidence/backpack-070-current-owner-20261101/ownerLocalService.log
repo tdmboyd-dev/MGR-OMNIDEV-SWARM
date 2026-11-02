@@ -1,0 +1,15 @@
+✔ owner service uses protected-root callback, original route storage and source-pinned runtime across restart (4167.6554ms)
+✔ owner mode refuses absent host permission verification and a denied private root before database creation (782.4452ms)
+✔ owner service denies wrong credentials, cross-origin and foreign principals without admitting model work (1457.5888ms)
+✔ a second process cannot replace the original live service in the same owner root (2396.2271ms)
+✔ prepared policy changes block direct service startup until original records are reconciled (4089.8453ms)
+✔ actual native-policy binding service enforces engineering credential and body budget without native admission (2676.9678ms)
+✔ native receiver decodes identifiers once and body reads recover literal dot segments (2979.1854ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18562.5491

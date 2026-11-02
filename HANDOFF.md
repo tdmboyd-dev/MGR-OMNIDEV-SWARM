@@ -1,3 +1,11 @@
+## Current owner source and Backpack 0.7.0 qualification — November 1, 2026
+
+The newer native enrollment/recovery changes remain intact. All 92 saved peer-run output hashes and byte counts were rechecked; runtime Git blobs still match the qualified 82ca5c8 source. Qualified lockfile bytes use CRLF and the canonical checkout uses LF, so exact raw lockfile identity is not claimed. A new isolated review preserved the canonical runtime bytes and passed six selected profiles, including actual Backpack 0.7.0 context SDK compatibility, policy/snapshot/runtime tests and typecheck. All 204 declared host-profile subjects match those review bytes.
+
+After source review, only the existing OmniDev fixed profile's sourceDigest was refreshed. Actual installed 0.7.0 host-check-omnidev/contracts execution passed 28 checks with zero failures/skips; command, root, actor, store, timeout and expiry were preserved. Evidence: UNFINISHED-WORK/evidence/backpack-070-current-owner-20261101. Existing 92-profile and 14-check actual native-owner results remain separately scoped. The full signed Code Monster/native caller, OmniSight saved observation, permanent activation and original product/provider/production gates remain open. No Docker probe or restart occurred.
+
+---
+
 ## Current joined native enrollment and monitor delivery — November 1, 2026
 
 Joined producer source82ca5c8d1ddbb1260c89e48990359128440c0931 completed all92/92 approved local verification profiles, zero failed/blocked. All92 saved output byte counts/hashes and unchanged-source receipts were checked. This preserves both the owning snapshot/policy-recovery work and peer native-monitor/Backpack/current-owner-service changes. The separate actual ONE017d36d two-candidate approval → Windows native execution → saved report → fresh restart/replay → historical report download passed14/14, two native executions, zero inference, permanent owner DB untouched. ONE document/conversation/native checks133/133 and qualification/optional-service6/6 remain separate scoped results. Reused29-check host qualification matches current worker/Node hashes; no new OS qualification is claimed. See JOINED-QUALIFICATION.json and combined-full/report.json in UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/.

@@ -1,0 +1,50 @@
+{
+  "scope": "Current isolated local profiles and existing installed fixed procedure; no private configuration, credentials or production claim.",
+  "files": [
+    {
+      "path": "CURRENT-SOURCE-PROFILES.json",
+      "bytes": 8327,
+      "sha256": "9e52b1ec6f92e9282844ae860319c6865685cc75ba733e5774748502e418c79b"
+    },
+    {
+      "path": "INSTALLED-HOST-PROCEDURE.json",
+      "bytes": 1276,
+      "sha256": "d93d847378173187ced118932219d8d10e0e15ef4d7a5862f0b6250155585df7"
+    },
+    {
+      "path": "nativeBackpackContext.log",
+      "bytes": 1007,
+      "sha256": "87307009a3a1c8dda80f61cfd457a7b6fa686037ae35965d58b4ce4b9fa487db"
+    },
+    {
+      "path": "nodeRuntimePreparation.log",
+      "bytes": 335,
+      "sha256": "624540859355d3353670673501a1abe84216130030406a288ebc06aadf469411"
+    },
+    {
+      "path": "ownerLocalService.log",
+      "bytes": 926,
+      "sha256": "0383937d18085f506c699c17e8ecc1919c98443a6487378b9c81ebbd994ea3c4"
+    },
+    {
+      "path": "prepare.log",
+      "bytes": 107,
+      "sha256": "9af0ead3d58be8a399c805f5feaa1cbb497d0a52758a85689f2c9ae52f956274"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 2077,
+      "sha256": "fdfef75a165e0efd3f66601299888a88f280895d9d85f699abd4f01c12e242f9"
+    },
+    {
+      "path": "snapshotPaths.log",
+      "bytes": 1216,
+      "sha256": "8abe100464c455e27ca0461d8469ba3842f8e69ec46ca065fe1ae5b971816884"
+    },
+    {
+      "path": "typecheck.log",
+      "bytes": 350,
+      "sha256": "48a305338c8d1d15655ab1a7de0074e99cd66f8dfea8e8410dbe92a5ac34f5a5"
+    }
+  ]
+}

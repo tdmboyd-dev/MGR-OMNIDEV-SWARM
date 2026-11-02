@@ -70,3 +70,6 @@
 /worker/WINDOWS-NATIVE-WORKER.md text eol=lf
 /scripts/native-backpack-context.mjs text eol=lf
 /docs/NATIVE-BACKPACK-WORKFLOW.md text eol=lf
+
+# Preserve the exact current-owner execution logs.
+UNFINISHED-WORK/evidence/backpack-070-current-owner-20261101/*.log -text -diff
