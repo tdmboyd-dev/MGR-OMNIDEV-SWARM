@@ -72,4 +72,5 @@
 /docs/NATIVE-BACKPACK-WORKFLOW.md text eol=lf
 
 # Preserve the exact current-owner execution logs.
-UNFINISHED-WORK/evidence/backpack-070-current-owner-20261101/*.log -text -diff
+UNFINISHED-WORK/evidence/backpack-070-current-owner-20261101/** -text
+UNFINISHED-WORK/evidence/backpack-070-current-owner-20261101/*.log -diff
