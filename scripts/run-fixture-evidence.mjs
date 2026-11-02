@@ -50,6 +50,7 @@ export const FIXTURE_PROFILES = Object.freeze(Object.fromEntries(Object.entries(
  engineUpdate:['tests/engine-update.mjs'], fileLedger:['tests/file-ledger-bench.mjs'],
  jobPresentation:['tests/job-presentation.mjs'], localReview:['tests/local-review-controls.mjs'],
  openProgress:['tests/open-progress.mjs'], pipelineEngine:['tests/pipeline-engine.mjs'],
+ applicationCommandIdentity:['tests/application-command-identity.mjs'],
  repoCompletion:['tests/repo-completion.mjs'], reviewPlanner:['tests/review-planner.mjs'],
  specialistBackground:['tests/specialist-background.mjs'], specialistsLedger:['tests/specialists-ledger.mjs'],
  swarmSpawning:['tests/swarm-spawning.mjs'], audit174:['tests/audit-174.test.mjs'],

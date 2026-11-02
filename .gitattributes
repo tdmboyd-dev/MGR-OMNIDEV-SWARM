@@ -78,3 +78,7 @@ UNFINISHED-WORK/evidence/backpack-070-current-owner-20261101/*.log -diff
 /UNFINISHED-WORK/evidence/reviewed-native-origin-20261102/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 
 /UNFINISHED-WORK/evidence/native-source-recheck-20261102/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+
+/UNFINISHED-WORK/evidence/application-command-identity-20261102/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+/worker/application-profile.mjs text eol=lf
+/worker/runner.mjs text eol=lf

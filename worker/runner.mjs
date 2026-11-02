@@ -22,7 +22,8 @@ export async function cleanupContainer(name,{runCommand=null}={}){
 }
 export async function execute(job){
  validateFiles(job.files);const application=job.profile==='node-application';if(application)applicationRecipe(job.files);
- if(!Array.isArray(job.command)||job.command.join(' ')!==(application?applicationCommand.join(' '):'node --test tests/omni-snapshot.test.mjs'))throw Error('Command is outside worker allowlist');
+ const expectedCommand=application?applicationCommand:['node','--test','tests/omni-snapshot.test.mjs'];
+ if(!Array.isArray(job.command)||job.command.length!==expectedCommand.length||job.command.some((argument,index)=>argument!==expectedCommand[index]))throw Error('Command is outside worker allowlist');
  const image=process.env.OMNI_WORKER_IMAGE;
  if(!image||!/@sha256:[a-f0-9]{64}$/.test(image))throw Error('Configure OMNI_WORKER_IMAGE with a pinned SHA-256 image digest');
  if(!job.assignment||typeof job.assignment.id!=='string'||!Number.isFinite(job.assignment.expiresAt)||job.assignment.expiresAt<=Date.now()||!['candidateDigest','sourceDigest','testManifestDigest'].every(k=>/^[a-f0-9]{64}$/.test(job.assignment[k]||'')))throw Error('Invalid or expired execution assignment');

@@ -10,6 +10,9 @@ test('versioned runtime reuses exact bytes and rejects modified cached executabl
  try{
   const options={outputDir:root,environmentGlobal:'__omniNodeLocalEnv',versioned:true};
   const first=prepareNodeRuntime(options),second=prepareNodeRuntime(options);
+  assert.ok(first.inputs.some(row=>row.path==='worker/application-profile.mjs'));
+  assert.match(readFileSync(join(first.outputDir,'jobs.mjs'),'utf8'),/from ['"]\.\/application-profile\.mjs['"]/);
+  assert.match(readFileSync(join(first.outputDir,'application-profile.mjs'),'utf8'),/Object\.freeze/);
   assert.equal(second.outputDir,first.outputDir);assert.equal(second.manifestSha256,first.manifestSha256);
   const target=join(first.outputDir,'jobs.mjs'),original=readFileSync(target,'utf8');
   writeFileSync(target,original+'\n// cache tampering\n');

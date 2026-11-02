@@ -1,3 +1,4 @@
+import {applicationCommand} from '../worker/application-profile.mjs';
 import {reviewedNativeSourceLink} from './reviewed-native-source';
 import {nativeAssignment,validateNativeReport,nativeCommand,validateNativeOracle,nativeScopePolicy} from './worker-policy';
 import {trilogyWorkerBinding,checkTrilogyWorkerProof,assertTrilogySnapshotApply,TRILOGY_DATABASE_NOW_MS} from './trilogy-jobs';
@@ -200,7 +201,7 @@ export async function workerJob(id:string,kind='docker-isolated',verification?:a
  const files=applyPatches(j.payload.baseline,j.result.candidate.patches),profile=j.payload.testProfile==='node-application'?'node-application':'snapshot';
  if(profile==='node-application'){const pkg=files.find((f:any)=>f.path==='package.json'),lock=files.find((f:any)=>f.path==='package-lock.json');if(!pkg||!lock||!JSON.parse(pkg.content).scripts?.test)throw Error('Import runnable application source, package.json and package-lock.json before requesting application tests');}
  if(native){if(profile!=='snapshot')throw Error('Native Windows worker supports snapshot only');validateNativeOracle(j.payload.baseline,files);}
- const command=native?[...nativeCommand]:profile==='node-application'?['npm','run','omni:verify']:['node','--test','tests/omni-snapshot.test.mjs'];
+ const command=native?[...nativeCommand]:profile==='node-application'?[...applicationCommand]:['node','--test','tests/omni-snapshot.test.mjs'];
  const assignment={id:crypto.randomUUID(),candidateDigest:await digest(files),sourceDigest:await digest(j.payload.baseline),testManifestDigest:await digest(command),profile,expiresAt:Math.min(Date.now()+(profile==='node-application'?240000:60000),trilogy?.grantExpiresAt??Number.MAX_SAFE_INTEGER),...(trilogy?{trilogyBindingDigest:await fingerprint(trilogy)}:{})};
  if(native)Object.assign(assignment,nativeAssignment(assignment.id,assignment));
  const trilogyLink=await createTrilogyJobLink({jobId:j.id,projectId:j.projectId,assignmentId:assignment.id,sourceDigest:assignment.sourceDigest,candidateDigest:assignment.candidateDigest,testManifestDigest:assignment.testManifestDigest});
