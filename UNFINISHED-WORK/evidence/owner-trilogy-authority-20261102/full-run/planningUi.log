@@ -1,0 +1,20 @@
+✔ actual plan renderer exposes evidence, original milestones, tradeoffs and uncertainty for all four horizons (25.3848ms)
+✔ aggregate and wrong-project views disable each outcome control and offer the explicit owning project (22.4971ms)
+✔ enabled horizon control passes the exact chosen plan and horizon to the evaluation form (2.3017ms)
+✔ earlier templates remain readable without offering unsupported outcome recording (1.2811ms)
+✔ recorded evaluation preserves the original hypothesis and visibly separates changed source and observation (39.5945ms)
+✔ future screen requires explicit project selection even when other projects exist in records (22.7763ms)
+✔ actual decision renderer shows expected and observed results with readable correction history and escaped input (6.4892ms)
+✔ unevaluated decision shows missing outcome rather than a successful result (1.5644ms)
+✔ search hit renderer identifies the historical revision and separates original from observed source without claiming verification (1.8614ms)
+✔ search hit renderer preserves the cited plan version and original proposal identity (1.2312ms)
+✔ older search results without lineage show missing source context instead of inventing a revision (0.7063ms)
+✔ actual intelligence screen identifies selected or unassigned decision scope and preserves recovery controls (25.5404ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 163.4298

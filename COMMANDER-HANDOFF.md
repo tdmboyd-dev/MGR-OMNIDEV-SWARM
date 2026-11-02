@@ -1,3 +1,9 @@
+## Original authority controls reach protected local owner service — November 2, 2026
+
+Runtime8c699ab exposes the ORIGINAL Trilogy grant/stage/status/revoke routes under exact fixed scope/distinct role credentials, selected public source/account-snapshot job admission and exact-source refusal. Full95/95local profiles passed,0failed/blocked; all95output hashes/byte/source receipts rechecked. Original HTTP/import/job/SQL/restart/replay/revocation test creates one job and3original transactional audits; GitHub, candidate commit and permission callback remain fixtures. [Owning report and original failures](UNFINISHED-WORK/evidence/owner-trilogy-authority-20261102/REPORT.md).
+
+ONE2494606/build/30receiving controls additionally prove real Windows private ACLs/original control child/HTTP/SQLite/close/reopen without enrolling a worker; existing native enrollment cannot be replaced by controls-only startup. This supersedes missing local authority transport, not normal caller/source/CM/signer/worker/production acceptance. Normal activation remains unfinished. Current source selector excludes lockfiles/mjs/cjs and bounded snapshots do not establish full runnable MGR imports. All original requirements and previous source receipts remain preserved.
+
 ## Application assignments match actual worker argv — November 2, 2026 UTC
 
 Runtimefe1c0f4 repairs actual application command identity, immutable shared recipe, fixed-map compilation and exact argument validation. Actual Docker argv is unchanged. Initial full94/95passed with1temporary scan-copy compiler failure retained; same-source preparation/typecheck2/2passed after relocating that copy, so all95distinct profiles have passing receipts. All97output hashes/source receipts rechecked. [Owning source, original failure and limits](UNFINISHED-WORK/evidence/application-command-identity-20261102/REPORT.md).

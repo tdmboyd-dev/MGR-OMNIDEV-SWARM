@@ -1,0 +1,13 @@
+✔ cancel denies stale decision after concurrent terminal transition (3.3927ms)
+✔ reject denies stale decision after concurrent terminal transition (0.4645ms)
+✔ retry denies stale decision after concurrent terminal transition (0.3615ms)
+✔ normal cancel/reject/retry persist the requested state and terminal cancellation stays denied (1.3298ms)
+✔ retry cannot exceed attempt cap after same-status concurrent failure (1.1586ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14.1425

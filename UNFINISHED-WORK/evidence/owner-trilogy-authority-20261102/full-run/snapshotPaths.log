@@ -1,0 +1,21 @@
+✔ shared stored snapshot contract matches actual import redaction and canonical field order (74.1264ms)
+✔ shared stored snapshot contract retains original count, byte, duplicate and unsafe-path limits (0.5588ms)
+✔ unsafe import and candidate paths are rejected before SQLite writes (7.0052ms)
+✔ case aliases, malformed files and action objects are denied without writes (1.1042ms)
+✔ UTF8 byte budget rejects oversized individual source without pretending codepoints are bytes (1.9205ms)
+✔ valid portable snapshot persists with exact content readback and SHA256 ledger (3.3328ms)
+✔ GitHub snapshot selection and full-audit classification exclude case aliases of secret paths (1.0109ms)
+✔ full enqueue intent is durable, exact concurrent replay shares one job, changed settings/source conflict (9.0533ms)
+✔ candidate budgets measure actual UTF8 bytes for each patch and their sum (6.6549ms)
+✔ actual runtime and agent routes cancel byte-oversized streams before allocation or writes (2.4049ms)
+✔ runtime and agent cross-origin denial occurs before reading request body (0.2909ms)
+✔ exact reviewed import refuses redaction and unknown mode without creating records (0.9284ms)
+✔ exact reviewed import preserves Unicode BOM and CRLF while ordinary imports retain redaction (3.5827ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 120.5434

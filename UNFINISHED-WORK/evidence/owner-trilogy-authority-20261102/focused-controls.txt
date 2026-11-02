@@ -1,0 +1,32 @@
+✔ owner service uses protected-root callback, original route storage and source-pinned runtime across restart (2862.6979ms)
+✔ owner mode refuses absent host permission verification and a denied private root before database creation (712.2489ms)
+✔ owner service denies wrong credentials, cross-origin and foreign principals without admitting model work (1614.1376ms)
+✔ a second process cannot replace the original live service in the same owner root (1902.2117ms)
+✔ prepared policy changes block direct service startup until original records are reconciled (3274.3411ms)
+✔ actual native-policy binding service enforces engineering credential and body budget without native admission (2114.7041ms)
+✔ native receiver decodes identifiers once and body reads recover literal dot segments (2557.8199ms)
+✔ configured original Trilogy route reaches its own scope checks without native-worker authority (1515.6228ms)
+✔ Trilogy startup refuses shared credentials before database creation (425.7834ms)
+✔ original HTTP import job authority stage restart replay and revoke persist in the SAME owner database (5618.0801ms)
+✔ startup Trilogy scope and credentials are exact bounded owner-only data (1.385ms)
+✔ shared stored snapshot contract matches actual import redaction and canonical field order (94.2465ms)
+✔ shared stored snapshot contract retains original count, byte, duplicate and unsafe-path limits (1.1485ms)
+✔ unsafe import and candidate paths are rejected before SQLite writes (9.9349ms)
+✔ case aliases, malformed files and action objects are denied without writes (1.0978ms)
+✔ UTF8 byte budget rejects oversized individual source without pretending codepoints are bytes (1.4146ms)
+✔ valid portable snapshot persists with exact content readback and SHA256 ledger (3.5544ms)
+✔ GitHub snapshot selection and full-audit classification exclude case aliases of secret paths (1.1233ms)
+✔ full enqueue intent is durable, exact concurrent replay shares one job, changed settings/source conflict (13.8356ms)
+✔ candidate budgets measure actual UTF8 bytes for each patch and their sum (6.6119ms)
+✔ actual runtime and agent routes cancel byte-oversized streams before allocation or writes (2.426ms)
+✔ runtime and agent cross-origin denial occurs before reading request body (0.3607ms)
+✔ exact reviewed import refuses redaction and unknown mode without creating records (0.9985ms)
+✔ exact reviewed import preserves Unicode BOM and CRLF while ordinary imports retain redaction (4.1347ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 22736.797

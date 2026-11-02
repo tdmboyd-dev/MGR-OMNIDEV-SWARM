@@ -1,0 +1,25 @@
+✔ current observation binds exact saved source and returns an independent copy (2.955ms)
+✔ observation refuses old observation (1.6994ms)
+✔ observation refuses future observation (0.2301ms)
+✔ observation refuses expired authority (0.2002ms)
+✔ observation refuses transferred execution (0.2318ms)
+✔ observation refuses claimed signature (0.1841ms)
+✔ observation refuses withdrawn authority (0.2029ms)
+✔ observation refuses withdrawn recipe (0.332ms)
+✔ observation refuses changed source (0.3002ms)
+✔ observation refuses different request (0.446ms)
+✔ observation refuses different candidate (0.2903ms)
+✔ observation refuses different source scope (0.276ms)
+✔ observation refuses different ledger (0.1644ms)
+✔ observation refuses different snapshot (0.1972ms)
+✔ observation refuses different recipe (0.2179ms)
+✔ observation refuses source metadata tamper (0.2813ms)
+✔ observation refuses unknown fields (0.3367ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19.0336

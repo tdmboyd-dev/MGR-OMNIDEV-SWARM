@@ -1,0 +1,22 @@
+{
+  "sourceCommit": "8c699ab5017fa530a6115091d19df0662fd6f2dd",
+  "fullRegression": {
+    "passedProfiles": 95,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "totalProfiles": 95,
+    "independentlyCertifiedParents": 0,
+    "countingNote": "Profiles are command executions. Nested suites repeat checks; no inflated unique-test total is inferred."
+  },
+  "outputHashesVerified": 95,
+  "sourceReceiptsStable": true,
+  "sourceCommitWasClean": true,
+  "initialMissingRouteAndConfigChecksFailed": 2,
+  "focusChecksPassed": 24,
+  "parentRuntime": "2494606",
+  "parentChecksPassed": 30,
+  "realWindowsAuthorityOnlyChild": true,
+  "realCodeMonsterAndIndependentWorker": false,
+  "permanentOwnerStateChanged": false,
+  "wholeProductAcceptance": "Unassessed"
+}
