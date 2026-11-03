@@ -1,3 +1,9 @@
+## Portable source paths on November 3
+
+The original workspace importer, candidate validation and patch application now reject case aliases in directory components and conflicts between a file and a directory. An HTTP import test verifies refusal before SQLite writes. The prepared original runtime passed 53 focused snapshot and Trilogy job checks, including the registered application grant tests. [Verification and raw output](UNFINISHED-WORK/evidence/native-path-fidelity-20261103/VERIFICATION.json).
+
+This closes path ambiguity in the current text snapshot. Complete executable packages still need file modes, dependency availability, artifact handling, a normal caller and real worker qualification. Preserve the original native oracle and all existing production acceptance criteria.
+
 ## Tevin full-root source-window receiving — November 2, 2026
 
 Original Code Monster windows now reach ONE through APIde86abf bounded continuation/symbol offsets and ONE5379266 durable source/index-bound read receipts. Normal registered-root HTTP/MCP traversal exhausted current eligible JS/TS windows: Backpack56/1window, CM100/1, OmniDev300/2, OmniSight46/1,0unindexable selected files or omitted export projections. Tevin no longer silently restricts OmniDev semantic reads to lib. ONE39affected checks,1actual shared HTTP fixture and27owner HTTP conversation/save/reopen observations pass with injected model/fixture-principal boundaries. Owning evidence: ONE and API evidence/source-windows-2026-11-02. This is static source access, not full-code audit or execution packaging.

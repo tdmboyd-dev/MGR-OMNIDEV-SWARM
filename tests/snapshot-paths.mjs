@@ -16,7 +16,7 @@ globalThis.__omniEnv={DB:{prepare:sql=>new Statement(sql),batch:async statements
 }}};
 const {POST,GET}=await import('../.test-runtime/route.mjs');
 const {importedSnapshotFiles}=await import('../.test-runtime/workspace-snapshot.mjs');
-const {candidate,safePath}=await import('../.test-runtime/runtime-contract.mjs');
+const {candidate,applyPatches,safePath}=await import('../.test-runtime/runtime-contract.mjs');
 const submit=async body=>{const response=await POST(new Request('https://omni.example/api/workspace',{method:'POST',headers:{Origin:'https://omni.example','Content-Type':'application/json'},body:JSON.stringify(body)}));return {status:response.status,body:await response.json()};};
 const unsafe=['C:/outside.ts','source.ts:alternate','a\\b.ts','nul.ts','src/CON','src/Lpt1.txt','src/end.','src/end ','../outside.ts','/root.ts','a//b.ts','a/./b.ts','a\u0000b.ts','a?b.ts','.GIT/config','.env.production'];
 
@@ -45,6 +45,17 @@ test('case aliases, malformed files and action objects are denied without writes
 });
 test('UTF8 byte budget rejects oversized individual source without pretending codepoints are bytes',async()=>{
  const result=await submit({action:'import',title:'Oversized',files:[{path:'src/unicode.ts',content:'😀'.repeat(25000)}]});assert.equal(result.status,400);assert.equal(sqlite.prepare('SELECT COUNT(*) n FROM records').get().n,0);
+});
+test('directory aliases and file-directory conflicts cannot be imported or introduced by a candidate',async()=>{
+ const count=sqlite.prepare('SELECT COUNT(*) n FROM records').get().n;
+ const baseline=[{path:'src/value.ts',content:'old'}];
+ for(const path of ['SRC/extra.ts','src/value.ts/extra.ts','src']){
+  const patches=[{path,before:null,after:'new'}];
+  assert.equal((await submit({action:'import',title:'Portable source',files:[...baseline,{path,content:'new'}]})).status,400);
+  assert.throws(()=>candidate({summary:'Conflict',patches},baseline),/unsafe patch path/);
+  assert.throws(()=>applyPatches(baseline,patches),/unsafe patch path/);
+ }
+ assert.equal(sqlite.prepare('SELECT COUNT(*) n FROM records').get().n,count);
 });
 test('valid portable snapshot persists with exact content readback and SHA256 ledger',async()=>{
  const content='export const answer = 42;';const result=await submit({action:'import',title:'Portable fixture',files:[{path:'src/answer.ts',content}]});assert.equal(result.status,200);

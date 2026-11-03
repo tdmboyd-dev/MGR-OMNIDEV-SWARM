@@ -1,0 +1,26 @@
+{
+  "base": "2f83a8804478871dca203e1aa27cd0a70139ec7b",
+  "passed": 53,
+  "failed": 0,
+  "skipped": 0,
+  "commands": [
+    "node tests/prepare.mjs",
+    "node --test --test-concurrency=1 tests/snapshot-paths.mjs tests/trilogy-jobs.test.mjs"
+  ],
+  "sourceBlobs": [
+    {
+      "path": "lib/runtime-contract.ts",
+      "blob": "c5d710c6d6381b761e40c21bf1aa554e7b207588"
+    },
+    {
+      "path": "lib/workspace-snapshot.ts",
+      "blob": "b3ae14a04d72cc365ab3fa644200f29183211a5d"
+    },
+    {
+      "path": "tests/snapshot-paths.mjs",
+      "blob": "b96dd31137ebf2e013de0808456e4b3ef66cee6e"
+    }
+  ],
+  "outputSha256": "20becb49f9a7bfaaddff2cec840b2fd7b20cbb67b65f6a27dc06730edc6cf110",
+  "scope": "Local owning import, SQLite, candidate and Trilogy application-grant checks. No worker or production execution."
+}
