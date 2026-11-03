@@ -1,3 +1,9 @@
+## Worker path validation on November 3
+
+The Docker and Windows worker entrypoints now reject case-aliased directory components and file/directory collisions before allocating a workspace. The focused suite passed 14 checks. Fresh Windows AppContainer qualification passed 29 checks on the changed launcher, and the isolated native workflow passed six checks through HTTP, SQLite, worker report, replay, apply and rollback. The verifier now admits the current 29-check receipt as well as the previously supported 23-check format, with the existing digest checks. [Qualification](UNFINISHED-WORK/evidence/worker-path-fidelity-20261103/QUALIFICATION.json) · [Workflow](UNFINISHED-WORK/evidence/worker-path-fidelity-20261103/WORKFLOW.json)
+
+Complete executable packaging, the normal selected-job caller, permanent owner activation, and production signer and deployment acceptance remain open. Docker entrypoint input was tested locally. No Docker application workload ran.
+
 ## Portable source paths on November 3
 
 The original workspace importer, candidate validation and patch application now reject case aliases in directory components and conflicts between a file and a directory. An HTTP import test verifies refusal before SQLite writes. The prepared original runtime passed 53 focused snapshot and Trilogy job checks, including the registered application grant tests. [Verification and raw output](UNFINISHED-WORK/evidence/native-path-fidelity-20261103/VERIFICATION.json).

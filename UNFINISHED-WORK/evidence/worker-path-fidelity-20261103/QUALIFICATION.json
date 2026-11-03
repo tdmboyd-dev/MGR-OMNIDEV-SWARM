@@ -1,0 +1,10 @@
+{
+  "platform": "win32",
+  "nodeVersion": "v24.21.0",
+  "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+  "launcherSha256": "9dff3ef2e0dea9b6f85af274246e163f0367f94969a1106b6f2de0694738b178",
+  "qualificationDigest": "d608704bf49c68b6f5fe7f15edf4188b035e1a1dd93a2b2a09c72e75a3754ec0",
+  "rawSha256": "6e0212dac239bf03924c48ac71e06f683ab7ec3b2eb2a2352d7a00d846edfba9",
+  "rawBytes": 35121,
+  "passed": 29
+}

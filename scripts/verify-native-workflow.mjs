@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
-import {readFile,mkdtemp,writeFile,readdir,rm} from 'node:fs/promises';
+import {readFile,mkdtemp,writeFile,readdir,realpath,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
-import {join,resolve} from 'node:path';
+import {basename,dirname,join,resolve} from 'node:path';
 import {createServer} from 'node:http';
 import {once} from 'node:events';
 import {randomBytes,createHash} from 'node:crypto';
@@ -12,8 +12,10 @@ import {runOnce} from '../worker/windows-worker.mjs';
 if(process.platform!=='win32'||!process.env.OMNI_NATIVE_QUALIFICATION_RECEIPT)throw Error('Actual Windows qualification receipt required');
 const qualification=JSON.parse(await readFile(process.env.OMNI_NATIVE_QUALIFICATION_RECEIPT,'utf8'));
 const {qualificationDigest,...unsigned}=qualification;
-if(qualificationDigest!==createHash('sha256').update(JSON.stringify(unsigned)).digest('hex')||qualification.checks?.length!==23||qualification.launcherSha256!==await nativeLauncherDigest()||qualification.runtimeSha256!==await nativeRuntimeDigest())throw Error('Qualification source/runtime mismatch');
-const directory=await mkdtemp(join(tmpdir(),'omni-native-flow-')),sql=new DatabaseSync(join(directory,'lab.sqlite'));
+// The current qualifier includes three churn trials and their cleanup checks.
+if(qualificationDigest!==createHash('sha256').update(JSON.stringify(unsigned)).digest('hex')||!Array.isArray(qualification.checks)||![23,29].includes(qualification.checks.length)||qualification.launcherSha256!==await nativeLauncherDigest()||qualification.runtimeSha256!==await nativeRuntimeDigest())throw Error('Qualification source/runtime mismatch');
+const fixtureParent=await realpath(tmpdir());
+const directory=await mkdtemp(join(fixtureParent,'omni-native-flow-')),sql=new DatabaseSync(join(directory,'lab.sqlite'));
 for(const file of ['drizzle/0000_orange_phalanx.sql','drizzle/0001_modern_hammerhead.sql'])sql.exec(await readFile(file,'utf8'));
 class Statement{constructor(query,args=[]){this.query=query;this.args=args;}bind(...args){return new Statement(this.query,args);}async first(){return sql.prepare(this.query).get(...this.args)??null;}async all(){return {results:sql.prepare(this.query).all(...this.args)};}async run(){return {meta:{changes:Number(sql.prepare(this.query).run(...this.args).changes)}};}}
 const token=randomBytes(32).toString('hex');
@@ -52,5 +54,11 @@ try{
  const output={at:new Date().toISOString(),passed:checks.length,checks,qualificationDigest,scope:'Actual Windows AppContainer and existing job/SQLite/HTTP/report/owner paths on owned fixture source. No model, external repo, production signer, Docker or broad application-worker qualification.'};
  const target=resolve(process.env.OMNI_NATIVE_FLOW_RECEIPT||'../../native-current-workflow-20261101.json');await writeFile(target,JSON.stringify(output,null,2)+'\n');console.log(JSON.stringify(output,null,2));
 }finally{
- if(server){server.closeAllConnections();await new Promise(done=>server.close(done));}sql.close();await rm(directory,{recursive:true,force:true});delete process.env.OMNI_NATIVE_WORKER_POLICY;delete process.env.OMNI_NATIVE_WORKER_ROOT;
+ if(server){server.closeAllConnections();await new Promise(done=>server.close(done));}
+ sql.close();
+ delete process.env.OMNI_NATIVE_WORKER_POLICY;
+ delete process.env.OMNI_NATIVE_WORKER_ROOT;
+ const actual=await realpath(directory);
+ if(actual!==directory||dirname(actual)!==fixtureParent||!basename(actual).startsWith('omni-native-flow-'))throw Error('Native workflow fixture path changed; retained');
+ await rm(actual,{recursive:true,force:true});
 }

@@ -1,6 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validateFiles,dockerEnvironment} from '../worker/runner.mjs';
+import {validateFiles,dockerEnvironment,execute} from '../worker/runner.mjs';
+import {runNativeAttempt} from '../worker/windows-appcontainer.mjs';
+import {existsSync} from 'node:fs';
+import {join} from 'node:path';
+import {tmpdir} from 'node:os';
 import {createServer} from 'node:http';
 import {execFile} from 'node:child_process';
 import {promisify} from 'node:util';
@@ -19,6 +23,20 @@ test('worker source budgets measure UTF8 bytes at exact per-file and aggregate b
  assert.throws(()=>validateFiles([{path:'src/over.ts',content:content+'😀'}]),/Unsafe source/);
  const files=Array.from({length:25},(_,i)=>({path:`src/part${i}.ts`,content}));validateFiles(files);
  assert.throws(()=>validateFiles([...files,{path:'src/extra.ts',content:'x'}]),/Source exceeds budget/);
+});
+test('both worker entrypoints reject ambiguous directory paths before workspace allocation',async()=>{
+ const base=join(tmpdir(),'omni-rejected-path-'+randomUUID());
+ const file={path:'src/value.ts',content:'fixture'};
+ for(const path of ['SRC/extra.ts','src/value.ts/extra.ts','src']){
+  const files=[file,{path,content:'fixture'}];
+  for(const ordered of [files,[...files].reverse()]){
+   assert.throws(()=>validateFiles(ordered),/Unsafe source/);
+   await assert.rejects(execute({files:ordered}),/Unsafe source/);
+   if(process.platform==='win32')await assert.rejects(runNativeAttempt({files:ordered,arguments:[],base}),/Unsafe source/);
+   assert.equal(existsSync(base),false);
+  }
+ }
+ validateFiles([file,{path:'src/extra.ts',content:'fixture'}]);
 });
 test('Docker environment refuses unqualified remote routing and excludes service credentials',()=>{
  const keys=['DOCKER_CONTEXT','DOCKER_HOST','OMNI_TEST_PROVIDER_SECRET'],saved=Object.fromEntries(keys.map(k=>[k,process.env[k]]));

@@ -24,7 +24,27 @@ export function dockerEnvironment(){
  }else e.DOCKER_CONTEXT='default';
  return e;
 }
-export function validateFiles(files){if(!Array.isArray(files)||files.length>320)throw new Error('Invalid file set');let total=0;const names=new Set();for(const f of files){if(!f||typeof f!=='object'||typeof f.path!=='string'||!f.path||f.path.length>250||f.path.startsWith('/')||f.path.includes('\\')||/[<>:\x00-\x1f"|?*]/.test(f.path)||f.path.split('/').some(x=>/[. ]$/.test(x)||/^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(x))||f.path.split('/').some(x=>!x||x==='.'||x==='..')||/(^|\/)(\.git|\.env[^/]*|id_rsa|id_ed25519)(\/|$)/i.test(f.path)||names.has(f.path.toLowerCase())||typeof f.content!=='string'||Buffer.byteLength(f.content,'utf8')>100000)throw new Error('Unsafe source file');names.add(f.path.toLowerCase());total+=Buffer.byteLength(f.content,'utf8');}if(total>2500000)throw new Error('Source exceeds budget');}
+export function validateFiles(files) {
+ if (!Array.isArray(files) || files.length > 320) throw new Error('Invalid file set');
+ const entries = new Map();
+ let total = 0;
+ for (const f of files) {
+  if (!f||typeof f!=='object'||typeof f.path!=='string'||!f.path||f.path.length>250||f.path.startsWith('/')||f.path.includes('\\')||/[<>:\x00-\x1f"|?*]/.test(f.path)||f.path.split('/').some(x=>/[. ]$/.test(x)||/^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(x))||f.path.split('/').some(x=>!x||x==='.'||x==='..')||/(^|\/)(\.git|\.env[^/]*|id_rsa|id_ed25519)(\/|$)/i.test(f.path)||typeof f.content!=='string') throw new Error('Unsafe source file');
+  const bytes = Buffer.byteLength(f.content, 'utf8');
+  if (bytes > 100000) throw new Error('Unsafe source file');
+  total += bytes;
+  const parts = f.path.split('/');
+  for (let length = 1; length <= parts.length; length++) {
+   const spelling = parts.slice(0, length).join('/');
+   const key = spelling.toLowerCase();
+   const file = length === parts.length;
+   const previous = entries.get(key);
+   if (previous && (previous.spelling !== spelling || previous.file || file)) throw new Error('Unsafe source file path conflict');
+   entries.set(key, {spelling, file});
+  }
+ }
+ if (total > 2500000) throw new Error('Source exceeds budget');
+}
 export function dockerArgs(dir,name,image='node:22-alpine'){return ['run','--rm','--name',name,'--pull=never','--network=none','--read-only','--cap-drop=ALL','--security-opt=no-new-privileges','--pids-limit=64','--memory=256m','--memory-swap=256m','--cpus=1','--user=65534:65534','--tmpfs=/tmp:rw,noexec,nosuid,size=16m','--mount',`type=bind,src=${dir},dst=/app,readonly`,'--workdir=/app',image,'node','--test','tests/omni-snapshot.test.mjs'];}
 export async function cleanupContainer(name,{runCommand=null}={}){
  async function command(args){if(runCommand)return await runCommand(args);return await new Promise(resolveResult=>{let output='',done=false;const child=spawn('docker',args,{stdio:['ignore','pipe','pipe'],env:dockerEnvironment()});const finish=result=>{if(!done){done=true;clearTimeout(timer);resolveResult(result)}};const timer=setTimeout(()=>{child.kill('SIGKILL');finish({code:null,output:'cleanup timeout'})},8000);child.stdout.on('data',d=>{output=(output+d).slice(-4000)});child.stderr.on('data',d=>{output=(output+d).slice(-4000)});child.on('error',()=>finish({code:null,output:'Docker unavailable'}));child.on('close',code=>finish({code,output}));});}
