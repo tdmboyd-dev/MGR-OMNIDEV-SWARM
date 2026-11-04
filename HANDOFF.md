@@ -613,3 +613,7 @@ Formerly 66 missing-source links: 16 candidate links and six partial integration
 ## November 1 native Backpack workflow integration
 
 Backpack now composes with the existing Windows native queue through `scripts/run-native-with-backpack.mjs`; see [configuration, operation and limits](docs/NATIVE-BACKPACK-WORKFLOW.md). Nine focused checks and an actual selected IKICKITZ native job passed. The optional expected-job fence refuses another queued job before claim. No duplicate job store, new enrollment authority or automatic acceptance was introduced. Full 85-profile regression and rebuilt worker archive are required for this source checkpoint; their results must be read from the new run, not inherited from historical 84-profile evidence.
+
+## Complete Tevin manual readback
+
+Authenticated local Tevin readback verified all 218 indexed operating documents and 901 pages against Git revision e486015f8127b6d47c14d13b84f975186a111155, with zero jobs. [Pinned verification evidence](https://github.com/tdmboyd-dev/MGR-ONE/blob/8c9338fe85918d8b8487927f6f1c324ef72eebcc/evidence/tool-manual-transport-20261103/OMNIDEV-FULL-TEXT.json). This covers manual delivery. Runtime and production acceptance remain tracked separately.
