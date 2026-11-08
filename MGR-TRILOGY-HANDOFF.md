@@ -275,3 +275,26 @@ The original 174 requirement parents are **126 open + 48 implemented_unverified*
 
 ## Current 2026-10-29 verifier and discovery wave
 OmniDev now includes two read-only cryptographic proof steps: `scripts/verify-acceptance-receipt.mjs` and `scripts/acceptance-promotion-gate.mjs`; a registered independent runner must sign exact original criterion, source revision, command and output, and a distinct authenticated human must sign approval. 11 focused tests passed (4+4+3 connector). This does not imply a qualified hosted signer/worker or user approval has actually been provisioned. Code Monster batch candidates remain `verified-pending-owner` only. OmniSight remains a read-only viewer. OmniDev source discovery is now 130/174 linked (22 new provisional), 44 unlinked; 34 of the latter are catalog-only connector names. Current detailed workflow is `UNFINISHED-WORK/FULL-VERIFICATION-WORKFLOW.md`, remaining list `UNFINISHED-WORK/mgr-44-unlinked-source-gaps-20261029.json`. No historical task auto-closed, no new production release.
+
+
+---
+
+## Shared API/MCP onboarding handoff — 2026-11-08
+
+This additive documentation wave reads active OmniDev `mgr/code-monster-omnisight-20261028` at `ddfbf67e7f2c3132cdacd8845a4611f807a43b76`. Preserve all existing history, original acceptance wording and ownership. See the new 2026-11-08 connector section in each owning handoff on `docs/mgr-connector-handoff-2026-11-08`; these are review branches, not merges into active/main or deployments.
+
+### What resumes where
+- **MGR-API-MCP:** one shared governed external edge. Its own current handoff is maintained with the gateway implementation wave; inspect its exact source/tests before relying on capability registration. Registry discovery is not runtime connectivity.
+- **OmniDev:** reuse existing `app/api/trilogy/route.ts`, `lib/trilogy-jobs.ts`, `lib/trilogy-contract.ts` and publication gates. Start gateway onboarding with least-privilege status reads. Keep owner, bridge and reader authority distinct. Existing worker/fleet remains the sole execution fleet.
+- **Code Monster:** reuse the existing candidate/ledger/lease engine and bounded Trilogy synchronization. A scoped service facade is only needed for genuinely missing remote operations, never to duplicate the already-built bridge. Preserve pinned source, independent evidence and candidate-only state. Consult its private owning handoff for source detail.
+- **OmniSight:** reuse existing read-only job/evidence/paging views, not the older census-only baseline. Hosted identity, revocation and real consumer qualification remain separate work. The display never grants execution/release authority. Consult its private owning handoff for source detail.
+- **iKickItz / MGR Agents and other ecosystem apps:** onboard through narrow product-specific contracts rather than this worker endpoint. Financial/admin/minor-data and external-communication actions must not become generic connector commands. Domain apps retain their own state and artifacts.
+
+### Next shared acceptance
+1. Reconcile actual active branch heads and companion contracts before changing any adapter; old main-only audits omit newer implementation.
+2. Choose the exact first read capability and pin gateway plus service revisions. Translate trusted identity into existing resource-bound roles and keep service destinations operator-configured.
+3. Run a real gateway → OmniDev status → permitted evidence flow, then separately prove any authorized candidate stage/admit flow. Preserve job/source/plan/command hashes and authoritative status revisions.
+4. Test wrong scope, revoked grant, stale source, invalid signer, replay/conflicting payload, unavailable service and timeout reconciliation. Reject unknown state rather than silently promoting it. Keep signing/provider/physical-worker fixtures labeled.
+5. Record hosted OAuth, actual worker, independent signer and real client/browser acceptance only when directly executed. Existing historical local profiles and integration receipts retain their original revisions and limits.
+
+This wave changes documentation only; no new runtime tests, remote providers, service credentials, merge or deployment were executed. Public shared documentation deliberately omits private companion source manifests. No original requirement or parent state is promoted.
