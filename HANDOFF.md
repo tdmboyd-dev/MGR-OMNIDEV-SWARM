@@ -297,3 +297,36 @@ A stricter Ed25519 acceptance receipt verifier prototype exists in `scripts/veri
 ## 2026-10-29 authoritative full-verification implementation
 See `UNFINISHED-WORK/FULL-VERIFICATION-WORKFLOW.md` before promoting any original task. Added source binding/receipt checks (`scripts/verify-acceptance-receipt.mjs`) and separate independent-runner + signed human eligibility gate (`scripts/acceptance-promotion-gate.mjs`). **11/11 focused tests passed**: 4 cryptographic receipt tests, 4 task-promotion tests, 3 connector-capability tests. TypeScript `tsc --noEmit` passed. These are pure validation and eligibility components; live protected signing key registry/real worker qualification and authenticated owner actions remain unimplemented. Do NOT promote any parent merely on local test signatures. The 174/441 acceptance validator still reads valid, 1 original criterion verified, 0 fully certified parents.
 Formerly 66 missing-source links: 16 candidate links and six partial integration links found via GitHub readback; canonical source links now **130 of 174**, with **44 still unlinked**. 34 of the remaining 44 are integration catalog-only requests; `lib/connector-qualification.ts` distinguishes 34 catalog entries from five partial adapters among 39 listed connectors and refuses live-positive claims without provider proof. `UNFINISHED-WORK/mgr-44-unlinked-source-gaps-20261029.json` enumerates exactly the remaining 44. The 22 newer links are provisional, not acceptance or implementation-complete. Canonical statuses remain 126 open and 48 implemented_unverified. `UNFINISHED-WORK/mgr-evidence-scorecard-20261029.json` was refreshed. Always preserve the distinction between source location and behavior proof.
+
+
+---
+
+## MCP/API connector resumption — 2026-11-08
+
+Inspected active development branch `mgr/code-monster-omnisight-20261028` at `ddfbf67e7f2c3132cdacd8845a4611f807a43b76`, not just older `main`. The earlier default-branch-only connector assessment is incomplete for current development. Preserve this handoff, `MGR-TRILOGY-HANDOFF.md`, original 174 parents / 441 clauses / 28 upgrades, and existing acceptance states.
+
+### Verified source and limits
+- `app/api/trilogy/route.ts` already provides read/status, grant, execution and publication reads, plus owner authorization/revocation, bridge result admission and exact-candidate publication operations with distinct owner/reader/bridge checks. Reuse this service boundary.
+- `lib/trilogy-contract.ts` already defines `mgr.trilogy.job.v1`, canonical source/job/project/repository/owner bindings and signed receipt v2 validation. Contract fields grant no authority by themselves.
+- Existing handoff reports 76/76 local profiles and a 14-check local three-product flow with provider/signing/physical-worker fixture limits. Those are historical executions tied to their original source, not reruns in this documentation wave.
+- The existing worker endpoint is an execution surface, not a generic read API: even listing work can advance pipeline preparation. Do not use it as a harmless status probe.
+
+### Product-side work, in order
+1. Reuse the existing `/api/trilogy` reader path for an initial gateway job-status capability. Verify current `trilogyAccess` identity, job/project/repository binding and deployment-specific Sites/service access; do not scrape the owner UI or weaken its boundary.
+2. Define the exact credential audience/least-privilege service identity for external gateway reads. Keep reader, bridge and owner roles separate; never give the gateway owner publication authority merely to read status.
+3. Map gateway context into the existing request contract without accepting caller-controlled authority fields. Preserve authoritative job ID, source/plan/command digests, current grants, expiration/revocation and status revision.
+4. For later approved candidate work, reuse existing jobs, `worker/fleet.mjs` and `worker/runner.mjs`; keep capacity, budget, independent verification and final owner-publication gates. Resolve physical worker and production signer custody with fresh real evidence.
+5. Reconcile additional work on the branches listed in the current inventory before claiming modules absent or merging code; do not rebuild existing capabilities from the old default-branch snapshot.
+
+### Gateway-side work
+Add a narrow typed OmniDev status adapter, then separately governed candidate actions if authorized. Preserve `mgr.trilogy.job.v1` rather than adding a competing job registry. Reconcile timeout via current status before resubmission. Do not conflate accepted result, verified candidate, draft publication and deployment. The shared gateway must not manufacture owner approval or forward owner secrets to workers. Keep public documentation free of private companion source manifests.
+
+### Shared integration boundary
+Use the existing MGR-API-MCP as the governed external API/MCP edge, not a second brain or a new MCP server per product. Product APIs remain authoritative for their own state. Preserve Reign's reasoning/approval intent, OmniDev's jobs, Code Monster's source/candidate/ledger authority and OmniSight's read-only views. Adapters should repair a real transport, identity or lifecycle mismatch, not duplicate domain logic.
+
+Before enabling any capability, agree a versioned descriptor with stable capability ID, exact input/output schema, effect class, scope, timeout, allowed data classes and evidence requirements. Bind actor, tenant and resource scope to verified server identity, not caller-supplied body fields. Use operator-configured service destinations and secret references; never a model-supplied URL or a secret in a handoff. Mutations need an exact approved action/payload hash and stable idempotency key; changed payload with the same key must fail. Preserve authoritative job states and artifact/evidence hashes. Reconcile unknown outcomes before retrying. Registry presence, an HTTP 200 and a job ID are not integration proof.
+
+### Acceptance and restart gate
+Pin source and gateway revisions; run owning regression and real consumer-to-gateway-to-product tests with synthetic data first. Exercise wrong actor/tenant/resource, expired/revoked token, missing scope, malformed/oversize input, unavailable backend, changed source, idempotency conflict and timeout/readback. Verify filtered evidence and redacted errors. Record executed commands, exact outputs, tested SHAs and real service IDs separately from fixtures. Do not label hosted OAuth, remote workers, paid providers, production data access or end-user acceptance complete without their own evidence.
+
+This is a documentation-only handoff update. Source files and historical evidence are preserved; no product tests were rerun, no capability was enabled, no credentials changed, and no merge/deployment/live provider call was performed. Proposed work below is not implementation authorization beyond the owner's current request. Check current permissions before later consequential actions.
