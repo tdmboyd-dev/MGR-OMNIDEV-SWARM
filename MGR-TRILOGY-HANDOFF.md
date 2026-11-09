@@ -1,3 +1,21 @@
+# Trilogy authenticated coding route — November 9, 2026 (additive)
+
+This record supersedes the earlier *"MGR API tool not yet registered"* status while retaining the November 8 chronology and all historical OmniDev evidence below. **Both new source changes are published, merged and read back.**
+
+- **MGR-API-MCP `main`:** [PR #1](https://github.com/tdmboyd-dev/MGR-API-MCP/pull/1) merged at `21279de63e406c1c99bca1ab0beb7d62f04be7f0`, exact tested tree `ce90a01f61b22ba1394c031e13c3e2b067a4b2e0`. Existing OAuth/JWKS and single `/mcp` server conditionally register four Code Monster tools (capabilities, portfolio discovery, code graph search, repair stage). Authenticated actor/tenant/scope and internal HMAC exact-body signature are enforced; a write denies unless independently resolved owner approval matches digest, grant, tenant, actor and expiry. No false green on domain rejection and no blind retry after unknown write outcome. Local `npm run verify` **95/95** tests, TS/artifact/plugin PASS, repo-integrity **201/201**; GitHub CI SUCCESS.
+- **MGR-CODE-MONSTER advanced `mgr/receipt-admission-20261029`:** [PR #7](https://github.com/tdmboyd-dev/MGR-CODE-MONSTER/pull/7) merged at `f2e3852f09c95190d531ac42ca275e1a8992d49f`, tree `a416559cfa553d9228629d8c6c4489082c2f75a7`; all 7 changed file OIDs read back. Added real **loopback-only** `src/rare-service.mjs` with fixed owner tenant/source SHA, pinned graph/portfolio, optional stage-only native literal patch using existing council → lease → Git CAS → ledger → operator-selected verification command. Advanced full suite **222/222** passes, zero fails/skips; GitHub PR and push CI SUCCESS. Existing signed-v2 admission, Imprint, Slot Machine, VampBite, multi-file and Trilogy contracts preserved. Default `main` has not been blindly merged with this stronger development branch.
+- **Actual local cross-repo journey:** official MCP client → test OAuth-bound MGR API → real internal HMAC Code Monster service → trusted *fixture* owner approval → controlled candidate Git write → independently reproduced synthetic baseline test FAIL → candidate worktree test PASS; untouched Git HEAD and valid Code Monster ledger. Script: `MGR-API-MCP/scripts/verify-code-monster-actual-route.mjs`; detailed handoffs: `MGR-API-MCP/docs/CODE-MONSTER-ROUTE-ACCEPTANCE.md` and `MGR-CODE-MONSTER/docs/CODE-MONSTER-RARE-SERVICE.md`.
+- **Truth boundary:** This is genuine **local** transport/code-write acceptance with fixture auth and a synthetic bug. **Not** a hosted Rare/ChatGPT/iPhone login, production OAuth issuer and private runner, durable approval authority, paid model run, v2 signed independent *production* acceptance, or actual MGR repo defect repair. Source inventory covers 14/14 repo metadata; **0/14** full individual production release campaigns certified. Native write stays branch-only and `verification_pending`.
+- **Team ownership:** OmniDev retains scheduler/jobs and signed source receipts; Code Monster owns fenced Git candidate and repair council; the existing MGR API/MCP owns OAuth and service-to-service security; Rare/Tevin call the governed tools only when registered and actually deployed. No queue/task auto-close and no duplicate public Code Monster service.
+
+## Next acceptance gates
+
+1. Real hosted Rare mobile/ChatGPT connection using verified OAuth/JWKS, tenant-scoped internal HTTPS/service mesh and safe key handling/revocation.
+2. Independent durable owner approval resolver plus real model worker(s); separate signed-v2 reproduced bug, pass/regression/security runner with restart/reconciliation and artifact receipts.
+3. One-by-one 14 MGR repository deep audits, confirmed repairs, full release tests, production signoff, and branch-to-main union that preserves advanced signed-v2.
+
+---
+
 # Trilogy integration update — November 8, 2026 (Code Monster)
 
 This additive public handoff records verified Code Monster progress without changing OmniDev ownership, deployment claims, or historical evidence below.
