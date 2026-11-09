@@ -1,3 +1,37 @@
+# Trilogy integration update — November 8, 2026 (Code Monster)
+
+This additive public handoff records verified Code Monster progress without changing OmniDev ownership, deployment claims, or historical evidence below.
+
+## GitHub commits, proof, and branch truth
+
+- **MGR-CODE-MONSTER default `main`**: PR [#5](https://github.com/tdmboyd-dev/MGR-CODE-MONSTER/pull/5) merged at `f37872cd439acdaf9e8459664cef0336075bb6e2`; 58/58 tests passed. This is the smaller default-branch foundation, **not** the full hardened advanced line.
+- **MGR-CODE-MONSTER advanced `mgr/receipt-admission-20261029`**: PR [#6](https://github.com/tdmboyd-dev/MGR-CODE-MONSTER/pull/6) merged at `f4b8e696b6edd052e8fa4c9069f174aa5f11fc30`. Its 193 existing tests passed before integration, and 220/220 tests passed after integrating 27 more, including GitHub's push and PR checks. The two histories have *not* been blindly collapsed into default main.
+- GitHub remote readback confirmed the advanced head plus `src/repair-council.mjs` and `src/verification-receipt.mjs`. Evidence and operating details live in Code Monster `HANDOFF.md`, `AGENTS.md`, `docs/MGR-NATIVE-CODING-ENGINE.md` and `docs/PORTFOLIO-CAMPAIGN-2026-11-08.md` on the advanced branch.
+
+## Exact new capabilities and their limits
+
+1. **Code Monster owns coding execution.** Independent Codex/OpenAI-compatible proposal workers supply suggestions; Code Monster checks source anchors, version drift, approvals and model consensus before writing controlled Git candidate branches. No real paid inference was executed in this integration test.
+2. **Proof stays separate from drafting.** The advanced v2 command policy, signed receipts, original Imprint provenance, DevMapGod multi-file campaigns, slot machine, VampBite and pre-existing worker contracts stay intact. New stage-only proposals require the exact owner-approved verification command hash, return `verification_pending`, and cannot bypass signed promotion.
+3. **Rare connector is internal only.** The HTTP bridge uses tenant, audience, scope, HMAC signature, nonce and freshness checks; loopback tests exercised real candidate-branch staging. Neither public hosted Rare nor MGR API/MCP has been registered, authenticated or deployed end-to-end yet. Do not mark integration live.
+4. **Fast repo understanding is a lexical Git-pinned graph.** It maps references and bounded change impact; it does not yet prove semantic compiler/LSP accuracy for all languages.
+5. **Fourteen repo campaign inventory is metadata only.** Head SHAs and manifests recorded; deep per-repo source audits, independently reproduced defects, confirmed repairs, and release signoffs currently remain **0/14**. Do not inflate OmniDev or Trilogy production scores.
+
+## Contract between teams
+
+- OmniDev remains the durable job queue, budget and multi-agent coordination owner; OmniSight keeps its evidence-bound, read-only visibility. Code Monster is the separate writable code-repair engine, never a shadow replacement for OmniDev scheduling.
+- Rare requests coding jobs via the permissioned MGR API/MCP tool bridge once hosted and verified. The internal Code Monster HMAC verifier is **not** an external app authentication system and must not be treated as one.
+- MGR-ONE/Reign maintains executive ecosystem decisions; MGR Beast Pack, REA and Creative Fabric may coordinate discovery/creative tasks but do not bypass Code Monster signed Git ownership or OmniDev job contracts.
+- Preserve original 174 task evidence, unmapped source gaps, status boards and historical receipts. No task is auto-closed or production-certified from a passing unit suite alone.
+
+## Immediate acceptance gates
+
+1. Real model provider trial: explainable proposal with exact source SHA, candidate branch, observed failed baseline, signed v2 pass/regression/security receipts and no access to production secrets in the model worker.
+2. Deployment trial: actual Rare authentication into MGR API/MCP, exact tool registration, delegated scoped request to hosted Code Monster, durable receipt and audit log; prove denied tenant replay and stale approvals.
+3. Per-repo campaign: discover release checklist, run reproducible builds/tests and independent risk tests, repair only observed failures, bind evidence to commit SHA, then human/regulatory signoff when applicable. Stage 14 repos individually; do not write production claims without evidence.
+4. Carefully reconcile Code Monster advanced branch and default main preserving the signed v2 policy and original advanced capabilities. Inspect branch diff and CI before any final merge.
+
+---
+
 # Current source save confirmed — October 30, 2026
 
 The complete reviewed tree is now saved and read back on GitHub at `9436130b09e0e089fab4f17045c62c12680a38bf`, branch `mgr/code-monster-omnisight-20261028`. Its tree `bdece2dadc332ddbf20761d73d94566eb917107c` exactly matches local checkpoint `bc490abe2c07b74a80ddeba67158721ad84ab1ef`. The source-publication-pending statements below are retained as the earlier chronology and are superseded by this readback. Later documentation-only saves may follow this source checkpoint.
@@ -275,3 +309,4 @@ The original 174 requirement parents are **126 open + 48 implemented_unverified*
 
 ## Current 2026-10-29 verifier and discovery wave
 OmniDev now includes two read-only cryptographic proof steps: `scripts/verify-acceptance-receipt.mjs` and `scripts/acceptance-promotion-gate.mjs`; a registered independent runner must sign exact original criterion, source revision, command and output, and a distinct authenticated human must sign approval. 11 focused tests passed (4+4+3 connector). This does not imply a qualified hosted signer/worker or user approval has actually been provisioned. Code Monster batch candidates remain `verified-pending-owner` only. OmniSight remains a read-only viewer. OmniDev source discovery is now 130/174 linked (22 new provisional), 44 unlinked; 34 of the latter are catalog-only connector names. Current detailed workflow is `UNFINISHED-WORK/FULL-VERIFICATION-WORKFLOW.md`, remaining list `UNFINISHED-WORK/mgr-44-unlinked-source-gaps-20261029.json`. No historical task auto-closed, no new production release.
+
